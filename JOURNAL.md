@@ -19,7 +19,7 @@ Ever since I was a member at Hack Club, I wanted to make this. Originally, I tho
 
 The perfect opportunity came when I came across the new hardware YSWS — Forge. I knew that I had to keep my budget really high. That's why I decided to choose Tier 1 and keep my budget at maximum $700.
 
-## Inspiration
+ ## Inspiration
 
 Now, here’s what inspired me:
 
