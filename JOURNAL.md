@@ -19,8 +19,6 @@ Ever since I was a member at Hack Club, I wanted to make this. Originally, I tho
 
 The perfect opportunity came when I came across the new hardware YSWS — Forge. I knew that I had to keep my budget really high. That's why I decided to choose Tier 1 and keep my budget at maximum $700.
 
- ## Inspiration
-
 Now, here’s what inspired me:
 
 * https://www.youtube.com/shorts/74T0LF2l5Ck  
@@ -38,8 +36,6 @@ This pushed me toward adding a robotic arm.
 * https://www.youtube.com/watch?v=MeRaYVntxMk  
 A really clear explanation of the difference between serial and parallel systems. My robot combines both.
 
-## Research
-
 To get started, I did focused research on the following (only this time is counted): 
 
 * **Kinematics:** Beyond just the general definition, I read articles and watched detailed videos specifically on parallel axis kinematics and kinematically linear systems. https://en.wikipedia.org/wiki/Kinematics https://www.youtube.com/watch?v=3fbmguBgVPA
@@ -52,7 +48,7 @@ To get started, I did focused research on the following (only this time is count
 
 * **Aluminium Extrusions:** I knew nothing beyond 2022 and 4040 aluminium extrusion. So, for the sake of this project, I made a deep dive into JLCMC's Aluminium Extrusion Profiles, and I read their [datasheets](https://drive.google.com/file/d/1X2043j8HutSmY2QTKigUobWLhu9sI9k2/view?usp=sharing).
 
-## Things I Learned
+Things I Learned:
 
 * How ball screws work internally (recirculating ball mechanism and lead mechanics)
 * Differences between NEMA motor sizes and torque ratings
@@ -62,7 +58,7 @@ To get started, I did focused research on the following (only this time is count
 * Why rigidity and repeatability matter more than just “cool movement”
 * How can I make my robotic arm modular
 
-### **Total time spent: 4 hours 54 minutes (4.9 hours)**
+**Total time spent: 4 hours 54 minutes (4.9 hours)**
 
 ---
 
