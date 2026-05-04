@@ -27,6 +27,8 @@ This is the video that first sparked my interest.
 * https://www.youtube.com/watch?v=6EtXycVGJg4  
 This video by Rudmin introduced the original concept.
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1e31c116-bfa6-4f96-a2c2-00662f581cc6" />
+
 * https://www.youtube.com/watch?v=io4S9amExNM  
 Rowan introduces a more complex carriage system. I have literally watched this probably three times in a row, replaying every assembly step just to understand the machine.
 
@@ -58,11 +60,27 @@ Things I Learned:
 * Why rigidity and repeatability matter more than just “cool movement”
 * How can I make my robotic arm modular
 
-**Total time spent: 4 hours 54 minutes (4.9 hours)**
+**Total time spent: 4h 54m**
 
 ---
 
 # 11.04.2026: The First Pitch
+
+I guess it was time for the pitch finally. This was my first pitch out of two. I had made a very rough plan in my mind, went to ChatGPT to get it sanity checked, and then I sat with a paper in my hand and drew what I could think of about the robot. Then, I spent some hours researching about the parts in Google and JLC. I also used a bit of AI to search in unknown websites for the parts. Then, I came up with a very rough estimate of the parts and the BOM. Initially, my target was to spend maximum $500 for the TripTeron and $500 for the 6 DOF robotic arm.
+
+I was so much confused with my plan that I drew up 7 different drawings of the thing I want to make. I have not started modelling yet, so I have no idea about what I am doing. But still I want to pitch, I don't know why. Maybe just because I want to see the reaction on people. Will they react like me to the idea?
+
+After that, the draft of the pitch was ready. I manually searched up everything and wrote the BOM. Then, I pitched it in the #forgery channel, waiting for insights. I saw some suggestions and reactions.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afd7d77b-3889-44e8-b776-08f510aa0ad4" />
+
+Personally, the most frustratirng thing was the fact that I have a pen and a paper with a simple drawing and list of things I have no idea about, and when I search that, there are so many options that I am overwhelmed. I learned about a lot of types of Linear Guides, Rails and NEMA motors.
+
+**A little fast forward:** This project was returned for changes by the reviewer on **14th April, 2026**. I did not make any changes as he said, but my overall plan had changed a lot! So, I re-pitched offically on **30th April, 2026**.
+
+**Please note that I did not use AI for any fields of the pitch. I have only used it to search the sources of my parts (pretty much like Google, but better). Then, manually I visited the sites and made the estimates. Please try to understand.**
+
+**Total time spent: 3h 42m**
 
 ---
 
