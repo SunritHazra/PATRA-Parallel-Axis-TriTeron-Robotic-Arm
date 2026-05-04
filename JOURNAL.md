@@ -117,28 +117,16 @@ I chose to keep the rail at 600 mm and keep the travel length at 500 mm. This ro
 * Secondly, the tripteron will have very less space to move if I scaled the tripteron, and kept the travel length at 500 mm.
 * Thirdly, the tripteron looks quite ugly.
 
-Now, I have two options now:
+Now, I have two things to do now:
 
-1. Scale everything down, including the arm.
-2. Just for the time being, keep everything as it is, and test with 600 mm rail.
-3. Get relieved from the stress by ignoring the rails, and actually working on the carraige.
+1. Scale everything down, including the arm, and use 500 mm rail.
+2. Get relieved from the stress by ignoring the rails, and actually working on the carraige.
 
-But, I chose the third option, for the time being. So, I continued modelling for more hours and this was the result. What I basically did was that unlike Rowan's design, I am going to make the carraige completely independent, so I will add motors seperately to the carraige. For that, I extended the base of the carraige and for that I used extrusions on the frontmost face, and modified the design, maaking it possible to make the rails wide and to let me use ball screw.
+I first, scaled everyhting down, including the arm. I literally spend an hour making ajdusments related to the arm placement, and more importantly, seeing that if I can even make the arm smaller in real life. 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/28d18e54-e5e2-471f-a430-8d8cc5a90f1b" />
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/19ec1236-b435-48a9-bfb8-c7fb5c37ef8a" />
 
-If you want a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, where I have smartly exploited the Fusion Timeline. I'm glad Fusion is parametric.
-
-Well, in this one single day, I did so much (at least for me) due to my dedication and curiosity. I really hope this pays of well.
-
-
-**Total time spent: 6h 22m**
-
----
-
-# 13.04.2026: The Second CAD Session
-
-I chose the second option as I wanted to keep my arm at the exact size of Meca500. For contuinuing the option two, I had to go to JLCMC, and individually choose smaller variants of each part, making sure the usable length remains at 500 mm. And after three hours of endless cadding, this is what I got:
+I really wanted to keep my arm at the exact size of Meca500, I really don't want to do this. For contuinuing the option two, I had to go to JLCMC, and individually choose smaller variants of each part, making sure the usable length remains at 500 mm. And after three hours of endless cadding, this is what I got:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/51f2d2e0-dca3-43d2-9c9e-54db52e20baf" />
 
@@ -146,6 +134,25 @@ It just looks wierd. I have to have a better solution to this! But still, this i
 
 Now, I am really tired after all of this.
 
+I chose the second step, for the time being. I was so disappointed by how it looked, I literally deleted all of the things I imported from JLCMC, to continue fresh. What I basically did was that unlike Rowan's design, I am going to make the carraige completely independent, so I will add motors seperately to the carraige. For that, I extended the base of the carraige and for that I used extrusions on the frontmost face, and modified the design, maaking it possible to make the rails wide and to let me use ball screw. So, I continued modelling for more hours and this was the result. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/28d18e54-e5e2-471f-a430-8d8cc5a90f1b" />
+
+If you want a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, where I have smartly exploited the Fusion Timeline. I'm glad Fusion is parametric.
+
+Well, in this one single day, I did so much (at least for me) due to my dedication and curiosity. I really hope this pays of well.
+
+**Total time spent: 6h 22m**
+
+---
+
+# 13.04.2026: The Second CAD Session
+
+
+
+**Total time spent: 3h 10m**
+
+---
 # [Date]: [Title]
 
 [Content]
@@ -153,3 +160,4 @@ Now, I am really tired after all of this.
 **Total time spent: **
 
 ---
+
