@@ -146,11 +146,42 @@ Well, in this one single day, I did so much (at least for me) due to my dedicati
 
 ---
 
-# 13.04.2026: The Second CAD Session
+# 13.04.2026: The CAD Failure Day
 
+Today I planned to ignore everything that was frustrating. I decided to do something else than the linear rails. I decided to add motions by adding As-Built Joints. First, everything was going by well, but after adding the joints in the X and Y leg, there was a lot of mess! Just look at the mess, there are joints everywhere, but everything is messed up like crazy.
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/492c4516-e10d-4c0a-946f-2e5b47b9d086" />
 
-**Total time spent: 3h 10m**
+But I then thought of dropping this, and I instead scaled the tripteron up by 1.5x. The rail is still 500 mm. I did this because I want to keep the Meca500 at the original size. I also noticed that the two sides of the tripteron were asymmetric, so I used split body and deleted things fom one side, then scaled them
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/93acdf6c-3b9c-457f-8c5d-3f718d41657e" />
+
+You can see that the tripteron barely has any space to move. I know this is really bad, so I am now thinking of making the rail 600 mm. I hope that it would not escalate the costs much. So, I went and actually checked that by making a completely new BOM from scratch on a paper, which took a lot of time.
+
+Now, I again added motions to the legs one by one for each leg, which was quicker than the previous step at arm-to-arm joints, but to the slider, the joints did not make any sense. So, I had to go back the timeline and I had to find at which exact step I scaled the things, then, I also scaled the slider, but that just increased my problems more. After adding more motions to the remaining newly scaled parts, the robot moved as expected. This was probably the only time so far I feel like I did something that actually works.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/667bc22a-e696-4321-8b5e-c26f8a8732b1" />
+
+Continuing my frustrating design journey, I:
+
+* Made the tool head of the tripteron bigger so that the base of the Meca500 fits perfectly on the top, for about 10 minutes
+* Scaled everything down again due to motion conflicts and again scaled up by 1.25 times, then edited the timeline to make it 1.5 times, for about 1.5 hours
+* Tried to make the carraige slider length shorter to ensure that the robot has place to move, for about 40 minutes.
+
+Problems I faced due to the previous actions:
+
+* Tripteron looks bulky and disproportionate, and in other words, ugly.
+* Got frustrated and bored out of my mind at the same time.
+* Found out that the tripteron motions no longer make sense, and I messed up, again!
+
+To fix that, I completely overcame the changes, except the scaling. I deleted all the joints, and I decided to start fresh again. My plan doesn't make any sense anymore at all.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/183ff45a-b18b-4c35-99e1-2a7a8030f256" />
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c7e5950-0ebe-4217-807d-f8d1e3b2d580" />
+
+Now I literally feel like quitting. I have not yet got any response on my pitch. I don't know if this would be approved, but still I am working so much, and even before getting started, I feel like quitting.
+
+**Total time spent: 5h 10m**
 
 ---
 # [Date]: [Title]
