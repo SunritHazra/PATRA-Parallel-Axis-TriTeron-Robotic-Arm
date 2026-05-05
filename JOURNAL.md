@@ -15,7 +15,7 @@ A Random Day in December, 2026, I was scrolling through my YouTube feed. I came 
 
 # Day 1 — 10.04.2026: Planning & Studying
 
-Ever since I was a member at Hack Club, I wanted to make this. Originally, I thought of doing this in Blueprint as two seperate modular projects: TriTeron Robot for $400 and Robotic Arm for $400. But, Blueprint ended even before I could start. So, I chose Fallout. I did not start because I was doing Construct and Stasis, and I also lazy.
+Ever since I was a member at Hack Club, I wanted to make a tripteron robot (which I call a tri-teron). Originally, I thought of doing this project in Blueprint as two seperate modular projects: TriTeron Robot for $400 and Robotic Arm for $400. But, Blueprint ended even before I could start. So, I chose Fallout. But I did not start because I was busy doing Construct and Stasis at the same time, and I also became a little lazy later on.
 
 The perfect opportunity came when I came across the new hardware YSWS — Forge. I knew that I had to keep my budget really high. That's why I decided to choose Tier 1 and keep my budget at maximum $700.
 
@@ -199,7 +199,9 @@ Nontheless, I am thinking of chaning my plan a lot. What if...
 
 It might seem like I am either living in a dream or increasing my budge to like $1200, but actually, I am just trying a different approach. Firstly, I spend absoluetely about an hour and half on scaling up and down my model, trying with different length rails and different linear guides. I imported many models in Fusion and tried each on the robot.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e42032c9-edf6-4551-bc3d-11ecd5e2d130" />
+I manually calculated the rough torue needs for my project, and I can conclude that about 1.1 Nm of torque could do the job. I can either use the best NEMA 17 motors, or the the most decent NEMA 23 motors. JLCMC has a lot of options to choose from, so I did my majority research on JLCMC. I also read some datasheets.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c2d27b79-ea12-4ee8-9492-0111a22336d0" />
 
 To be specific, I added 42CM08 motor model to Fusion to check if I can even fit in two seperate motors on the carraige itself, according to my original plan. I failed horribly. I was horribly wrong. The motors will take up a lot of space, and make the carraige a lot bulkier making my project expensive. I tried placing it where both Rudmin and Rowan did, and only this felt right. I also tested with 600 mm 4040 t-slot rail from JLCMC, but that too felt small for my plan.
 
@@ -215,12 +217,10 @@ I researched on the following:
 * Linear Guides: I found out that to avoid customs, you got to use local brands or companies with branch in India. So, I chose HIWIN for my linear guides and linear rail blocks on MISUMI India, Igus India and HIWIN India. But [Robu.in](https://robu.in/product/mgn15h-linear-guide-rail-1m-2) also offers a really good option.
 
 <img width="1365" height="644" alt="image" src="https://github.com/user-attachments/assets/e1b173d1-539e-4f4c-ae64-032af907a4cf" />
-
   
 * Ball Screw: This one was confusing, as all sites showed very high price. I have researched mostly in [JLCMC](https://jlcmc.com/product/s/B04/BSAF-C7-15/rolled-ball-screw-with-sfar-nut-shaft-diameter-15mm-lead-5-10-16-20mm), and [Robu.in](https://robu.in/?s=ball+screw&post_type=product&dgwt_wcas=1) Anyways, for the ball screws, I am choosing Novo3D or MISUMI.
 
 <img width="1365" height="643" alt="image" src="https://github.com/user-attachments/assets/94d822a2-227d-4ba3-9b91-b816021f0f6d" />
-
   
 * 4040 extrusions: For the [extrusions](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile?srsltid=AfmBOoqKFxp7iACSQkkYpdlSToUPKQh1cB2N3_JJ_hqWzN5CCDY8bWU9) I am choosing Robokits, as it is really cheap. But the problem is that I am not sure if their drawing is correct.
 
@@ -240,11 +240,4 @@ I used the same BOM I made today for re-pitching my idea at Forge on 30th April,
 
 **Total time spent: 4h 45m**
 
-# [Date]: [Title]
-
-[Content]
-
-**Total time spent: **
-
 ---
-
