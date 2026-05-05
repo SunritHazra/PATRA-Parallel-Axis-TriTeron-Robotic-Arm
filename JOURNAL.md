@@ -241,3 +241,86 @@ I used the same BOM I made today for re-pitching my idea at Forge on 30th April,
 **Total time spent: 4h 45m**
 
 ---
+
+# Day 6 — 30.04.2026: The Final Pitch
+
+Today, I [pitched](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1777518863427759?thread_ts=1775931663.812209&cid=C0AQG3VPQDD) my project PATRA for the final time in Forge channel. To do this, I kept the description same as the previous pitch, made very minor changes overall. But the most significant change was with the BOM.
+
+I don't know if this is my fifth or sixth BOM, if I ignore those BOMs I wrote on paper out of frustrtion. Majorly, I chose to keep the rail 600 mmm usable travel. I had to do very less research this time. I researched about 40 minutes on the internet to find the components, and I improved the previous BOM. Now, even at this moment, I am not finalizing the sources from where I will buy, but just for an estimate, I have given example sources. This is just a rough assumption based on the mean prices. So, here's what's finalised for the pitch:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d54c1631-461d-43ca-88dc-c4519b394e03" />
+
+Ball Screw & Supports
+SFU1605 Ball Screw (650 mm) + Nut (C7) – ≈ $70 USD
+Example reference (international, similar spec):
+https://www.vxb.com/products/sfu1605-ball-screw-650mm-cnc-kit
+BK12 + BF12 Ball Screw Support Set – ≈ $20 USD
+Example support units:
+[Link](https://robokits.co.in/mechanical-parts/ball-screw-accessories/bk-bf-support-blocks)
+
+Linear Motion
+MGN12 Linear Rail – 500 mm (2 pcs) – ≈ $45 USD total
+Example rails sold in India:
+[Link](https://www.amazon.in/ReliaBot-Linear-Carriage-Printer-Machine/dp/B07VCLN7KM)
+MGN12 Carriage Block (4 pcs) – ≈ $40 USD total
+Same Indian rail listing provides blocks.
+
+Belt Drive (Light Axes)
+GT2 / HTD 5M Belt (15 mm width, 3 m) – ≈ $25 USD
+HTD belt example (Indian marketplace or Amazon):
+[Link](https://www.amazon.in/Timing-Belt-Gear-Pulley-Printer/dp/B07W4J5PGF)
+HTD 20T Aluminum Pulleys (4 pcs) – ≈ $20 USD
+Example pulleys:
+https://www.amazon.in/Timing-Pulley-Bore-6mm/dp/B08CXZ7VMH
+
+Frame + Structure
+4080 + 4040 Aluminum Extrusion (cut locally) – ≈ $170 USD (combined)
+Sources for Indian extrusion retailers with custom lengths:
+Search on India marketplaces like Indiamart for:
+“2040 T-slot aluminium extrusion all lengths”
+“4040 T-slot aluminium extrusion custom cut”
+Example extrusion supplier:
+https://www.indiamart.com/proddetail/aluminium-t-slot-extrusion-6762050720.html
+Aluminum Plate ~10–12 mm (Custom CNC cut) – ≈ $70 USD
+Local metal supplier or shop near you can cut to size.
+
+Motors
+NEMA 23 Stepper Motor (2 pcs) – ≈ $80 USD
+Example NEMA23 listings in India:
+https://robomart.com/product/stepper-motor-nema23-10kgcm-torque-with-pulley
+NEMA 17 Stepper Motor (3 pcs) – ≈ $60 USD
+Example affordable NEMA17 bundles:
+https://www.amazon.in/Stepper-Motor-17HS19-1684S/dp/B07Q5QDLFK
+
+Drivers & Power
+TB6600 Stepper Drivers (2 pcs) – ≈ $30 USD
+TB6600 driver example:
+https://www.amazon.in/2-Axis-Stepper-Motor-Driver/dp/B01MTOYCRA
+TMC2209 Drivers (3 pcs) – ≈ $30 USD
+TMC2209 driver example (widely in Indian hobby stores):
+https://dc3d.in/shop/voron-v2-4-parts/bigtreetech-tmc2209-v1-3-stepper-motor-driver
+24V 10A Power Supply – ≈ $30 USD
+Example PSU (India):
+https://www.amazon.in/Antratek-Switched-Mode-Power-Supply/dp/B08BWGRYT4
+
+Controller / I/O
+Controller Board (STM32 / GRBL / 32-bit board) – ≈ $30 USD
+Affordable motion control board:
+https://www.amazon.in/NCStudio-Controller-Mach3-USB-Port/dp/B08CHY7CC8
+Limit Switch Set – ≈ $10 USD
+Mechanical limit switches:
+https://www.amazon.in/20-Pack-Micro-Limit-Switch/dp/B08VRWCC5C
+
+Miscellaneous
+Flexible Shaft Couplers (Pack) – ≈ $15 USD
+Example flexible coupler:
+https://www.amazon.in/Flexible-Coupling-Shaft-Connector-12mm/dp/B07D3DB5NJ
+Fasteners, Bearings, Wiring, Cable Ties, Misc Hardware – ≈ $40 USD
+Local hardware store — widely available
+
+Estimated Total
+SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Drive Components~$45Frame & Plates~$240Motors~$140Drivers & Power~$90Controller + I/O~$40Misc Hardware~$40Total≈ $700 USD
+
+**Total time spent: 1h 05m**
+
+---
