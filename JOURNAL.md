@@ -324,3 +324,21 @@ SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Dri
 **Total time spent: 1h 05m**
 
 ---
+
+# Day 8 — 01.05.2026: The Research for Sanity
+
+Yesterday I pitched my project again. For the pitch, I chose components from random websites to get an estimate. Today, I planned to start fresh with finding parts of my projects starting from the very foundation to the top, one by one gradually.
+
+Very peaceful plan, isn't it?
+
+But first, I decided to change my approach. I am thinking that I should totally get rid of the carraige, the ball screw, and the oversized and expensive linear rails and linear blocks. To start fresh, peacefully, I decided to go back to my roots, — Day 0. I clicked on that [legendary video](https://www.youtube.com/shorts/74T0LF2l5Ck) again.
+
+I have something really embarrasing thing to admit: Do you know why I chose the carraige architecture of [Rowan](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) in the first place?
+
+Quite embarrasingly, I wasn't able to spot how there are two completely independed outputs on a single rail through the linear guides on [Rudmin's video](https://www.youtube.com/watch?v=6EtXycVGJg4).
+
+But today, out of nowhere, I understood it. I actually did understand how it works now. You see, the front two Z axis legs are controlled by a belt in the center. There are three belts and now that I spotted the middle one, I finally understand this system.
+
+**Total time spent: 4h 15m**
+
+---
