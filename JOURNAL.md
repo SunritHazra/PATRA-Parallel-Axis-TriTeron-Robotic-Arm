@@ -7,13 +7,13 @@
 
 ---
 
-# Flashback
+# Day 0: Flashback
 
 A Random Day in December, 2026, I was scrolling through my YouTube feed. I came across this [video](https://www.youtube.com/shorts/74T0LF2l5Ck) with Tripteron Robot concept, and immediately my mind was blown up due to the awesomeness and coolness of the robot. I immediately had the idea to add a robotic arm to its head, to make it even cooler and more usable.
 
 ---
 
-# 10.04.2026: Planning & Studying
+# Day 1 — 10.04.2026: Planning & Studying
 
 Ever since I was a member at Hack Club, I wanted to make this. Originally, I thought of doing this in Blueprint as two seperate modular projects: TriTeron Robot for $400 and Robotic Arm for $400. But, Blueprint ended even before I could start. So, I chose Fallout. I did not start because I was doing Construct and Stasis, and I also lazy.
 
@@ -63,11 +63,11 @@ Things I Learned:
 * How can I make my robotic arm modular
 * A little about the LC40 family
 
-**Total time spent: 4h 54m**
+**Total time spent: 5h 54m**
 
 ---
 
-# 11.04.2026: The First Pitch
+# Day 2 — 11.04.2026: The First Pitch
 
 I guess it was time for the pitch finally. This was my first pitch out of two. I had made a very rough plan in my mind, went to ChatGPT to get it sanity checked, and then I sat with a paper in my hand and drew what I could think of about the robot. Then, I spent some hours researching about the parts in Google and JLC. I also used a bit of AI to search in unknown websites for the parts. Then, I came up with a very rough estimate of the parts and the BOM. Initially, my target was to spend maximum $500 for the TripTeron and $500 for the 6 DOF robotic arm.
 
@@ -83,11 +83,11 @@ Personally, the most frustratirng thing was the fact that I have a pen and a pap
 
 **Please note that I did not use AI for any fields of the pitch. I have only used it to search the sources of my parts (pretty much like Google, but better). Then, manually I visited the sites and made the estimates. Please try to understand.**
 
-**Total time spent: 3h 42m**
+**Total time spent: 4h 42m**
 
 ---
 
-# 12.04.2026: Starting to Model
+# Day 3 — 12.04.2026: Starting to Model
 
 I started simple. I clicked on [this](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) video of Rowan, who I definetly an engineer (critiques may argue). I watched it full, tried to understand the carraige this time, specifically, how it moves, and the assembly of the X and Y axis leg and the linear guides, and of course the confusion linear belts. I went to his Patreon and downloaded the Fusion file. Thank god he uses Autodesk Fusion, just like me. I now better understood evrything.
 
@@ -142,11 +142,11 @@ If you want a rough picture of how I did the CAD throughout today, [here](https:
 
 Well, in this one single day, I did so much (at least for me) due to my dedication and curiosity. I really hope this pays of well.
 
-**Total time spent: 6h 22m**
+**Total time spent: 7h 22m**
 
 ---
 
-# 13.04.2026: The CAD Failure Day
+# Day 4 — 13.04.2026: The CAD Failure Day
 
 Today I planned to ignore everything that was frustrating. I decided to do something else than the linear rails. I decided to add motions by adding As-Built Joints. First, everything was going by well, but after adding the joints in the X and Y leg, there was a lot of mess! Just look at the mess, there are joints everywhere, but everything is messed up like crazy.
 
@@ -181,9 +181,30 @@ To fix that, I completely overcame the changes, except the scaling. I deleted al
 
 Now I literally feel like quitting. I have not yet got any response on my pitch. I don't know if this would be approved, but still I am working so much, and even before getting started, I feel like quitting.
 
-**Total time spent: 5h 10m**
+I don't know what now, but I guess I will just wait for the pitch review.
+
+**Total time spent: 5h 40m**
 
 ---
+
+# Day 5 — 14.04.2026: Research After the Pitch Review
+
+I got my first [response](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1776140495172719?thread_ts=1775931663.812209&cid=C0AQG3VPQDD). The reviewer did not actually point out any problem in my project, just very randomly suggested something obvious. But he gave a really good suggestion with the driver and the site selection for ordering. His suggestions helped me think in a different approach.
+
+Nontheless, I am thinking of chaning my plan a lot. What if...
+
+* I used 1 metre rail instead of 500 mm rail?
+* I kept the robotic arm at the original size of Meca500?
+* I made the tripteron 1.75 times bigger than the original design on [Rowan](https://www.youtube.com/@NoEngineerHere)?
+
+It might seem like I am either living in a dream or increasing my budge to like $1200, but actually, I am just trying a different approach.
+
+Today, I decided to only do research on the market price of the tings I need, instead of just researching on what I need.
+
+[to be continued...]
+
+**Total time spent: 2h 30m**
+
 # [Date]: [Title]
 
 [Content]
