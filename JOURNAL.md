@@ -187,7 +187,7 @@ I don't know what now, but I guess I will just wait for the pitch review.
 
 ---
 
-# Day 5 — 14.04.2026: Research After the Pitch Review
+# Day 5 — 14.04.2026: Post-Pitch-Review CAD & Research
 
 I got my first [response](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1776140495172719?thread_ts=1775931663.812209&cid=C0AQG3VPQDD). The reviewer did not actually point out any problem in my project, just very randomly suggested something obvious. But he gave a really good suggestion with the driver and the site selection for ordering. His suggestions helped me think in a different approach.
 
@@ -197,13 +197,48 @@ Nontheless, I am thinking of chaning my plan a lot. What if...
 * I kept the robotic arm at the original size of Meca500?
 * I made the tripteron 1.75 times bigger than the original design on [Rowan](https://www.youtube.com/@NoEngineerHere)?
 
-It might seem like I am either living in a dream or increasing my budge to like $1200, but actually, I am just trying a different approach.
+It might seem like I am either living in a dream or increasing my budge to like $1200, but actually, I am just trying a different approach. Firstly, I spend absoluetely about an hour and half on scaling up and down my model, trying with different length rails and different linear guides. I imported many models in Fusion and tried each on the robot.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e42032c9-edf6-4551-bc3d-11ecd5e2d130" />
+
+To be specific, I added 42CM08 motor model to Fusion to check if I can even fit in two seperate motors on the carraige itself, according to my original plan. I failed horribly. I was horribly wrong. The motors will take up a lot of space, and make the carraige a lot bulkier making my project expensive. I tried placing it where both Rudmin and Rowan did, and only this felt right. I also tested with 600 mm 4040 t-slot rail from JLCMC, but that too felt small for my plan.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/927c9935-bbf2-4ddb-8740-0aa628d0fd2a" />
+
+So, seperate from my previous two BOMs, I made another to make new estimates. The numbers were going up so fast, I paused and thought og trying a completely different approach.
+
 
 Today, I decided to only do research on the market price of the tings I need, instead of just researching on what I need.
 
-[to be continued...]
+I researched on the following:
 
-**Total time spent: 2h 30m**
+* Linear Guides: I found out that to avoid customs, you got to use local brands or companies with branch in India. So, I chose HIWIN for my linear guides and linear rail blocks on MISUMI India, Igus India and HIWIN India. But [Robu.in](https://robu.in/product/mgn15h-linear-guide-rail-1m-2) also offers a really good option.
+
+<img width="1365" height="644" alt="image" src="https://github.com/user-attachments/assets/e1b173d1-539e-4f4c-ae64-032af907a4cf" />
+
+  
+* Ball Screw: This one was confusing, as all sites showed very high price. I have researched mostly in [JLCMC](https://jlcmc.com/product/s/B04/BSAF-C7-15/rolled-ball-screw-with-sfar-nut-shaft-diameter-15mm-lead-5-10-16-20mm), and [Robu.in](https://robu.in/?s=ball+screw&post_type=product&dgwt_wcas=1) Anyways, for the ball screws, I am choosing Novo3D or MISUMI.
+
+<img width="1365" height="643" alt="image" src="https://github.com/user-attachments/assets/94d822a2-227d-4ba3-9b91-b816021f0f6d" />
+
+  
+* 4040 extrusions: For the [extrusions](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile?srsltid=AfmBOoqKFxp7iACSQkkYpdlSToUPKQh1cB2N3_JJ_hqWzN5CCDY8bWU9) I am choosing Robokits, as it is really cheap. But the problem is that I am not sure if their drawing is correct.
+
+<img width="1365" height="575" alt="image" src="https://github.com/user-attachments/assets/2846e072-1fa1-45e1-99d3-64ca3d49b956" />
+
+I started working on my BOM, again. This time, I made two rough seperate BOM. One for parts I am sourcing from India, and other where I am sourcing parts from JLCMC. Then, I added in the shipping costs and estimated customs charges. The result was that I have to source parts only from India.
+
+For instance, here is my JLC cart for only three items:
+
+<img width="802" height="586" alt="image" src="https://github.com/user-attachments/assets/55236b4e-1783-4af0-b474-7656325379a4" />
+
+Just look at the prices of even the cheapest shipping. And then there is additional 35 to 50% customs. I am not doing this from JLCMC.
+
+<img width="252" height="393" alt="image" src="https://github.com/user-attachments/assets/9330b45f-b0b7-40d3-b304-788b8fe47754" />
+
+I used the same BOM I made today for re-pitching my idea at Forge on 30th April, 2026.
+
+**Total time spent: 4h 45m**
 
 # [Date]: [Title]
 
