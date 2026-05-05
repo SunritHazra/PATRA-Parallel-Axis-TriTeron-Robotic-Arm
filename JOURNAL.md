@@ -329,16 +329,47 @@ SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Dri
 
 Yesterday I pitched my project again. For the pitch, I chose components from random websites to get an estimate. Today, I planned to start fresh with finding parts of my projects starting from the very foundation to the top, one by one gradually.
 
-Very peaceful plan, isn't it?
-
-But first, I decided to change my approach. I am thinking that I should totally get rid of the carraige, the ball screw, and the oversized and expensive linear rails and linear blocks. To start fresh, peacefully, I decided to go back to my roots, — Day 0. I clicked on that [legendary video](https://www.youtube.com/shorts/74T0LF2l5Ck) again.
-
+Very peaceful plan, isn't it? To start fresh, peacefully, I decided to go back to my roots, — Day 0. I clicked on that [legendary video](https://www.youtube.com/shorts/74T0LF2l5Ck) again.
+ 
 I have something really embarrasing thing to admit: Do you know why I chose the carraige architecture of [Rowan](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) in the first place?
 
 Quite embarrasingly, I wasn't able to spot how there are two completely independed outputs on a single rail through the linear guides on [Rudmin's video](https://www.youtube.com/watch?v=6EtXycVGJg4).
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/43b30add-53ae-4e89-a968-f8cbf16d96b9" />
+
 But today, out of nowhere, I understood it. I actually did understand how it works now. You see, the front two Z axis legs are controlled by a belt in the center. There are three belts and now that I spotted the middle one, I finally understand this system.
 
-**Total time spent: 4h 15m**
+I have now decided to follow the simple, sleek and minimalist [architecture of Rudmin](https://www.youtube.com/watch?v=6EtXycVGJg4). This means, there will be the following changes in my plan:
+
+* I will use only ball screws for my project, for the main rail, like my original plan.
+* I will completely eradicate the carraige from my project, sorry Rowan.
+* I will use 1 metre aluminium extrusions, which suggest about 900 to 950 mm usable travel.
+
+Overall, this will ensure that my design looks simple, sleek and minimalist, and most importantly cheap.
+
+I started making my BOM again, from scratch. I tried to find the sources of my parts from Indian websites, this time. I ent in this order:
+
+* [4040 T-slot aluminium extrusions](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile) really cheap extrusion from Robokits.
+* [MGN15H Rail](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) from Robu.in.
+* [MGN15H Sliding Block](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) from Robu.in.
+* [SFU1610 Ball Screw 1000mm](https://novo3d.in/ball-screw-sfu1610/) from Novo3D, along with its supports.
+* [TB6600 Stepper Motor Driver](https://robu.in/product/tb6600-stepper-motor-driver-controller-4a-942v-ttl-16-micro-step-cnc-1-axis-upgraded-version-425786-stepper-motor?gclid=CjwKCAjwntHPBhAaEiwA_Xp6RtwUATtWsr6ENAJnefCDD7A_hFCG6G0U4FvI7KcqhoYZApcELbKBxhoCF8cQAvD_BwE&gad_source=1&gbraid=0AAAAADvLFWeX0A7E-QWDpuYY72tUYPPuB&gad_campaignid=20381096599) from Robu.in.
+* [NEMA23 PR57HS51](https://robu.in/product/nema23-pr57hs51-2804-10-1kg-cm-stepper-motor-round-type-shaft)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1db26124-16e5-458f-995f-0c8feac88678" />
+
+But then, I decided to change my approach. The cost went up to $288 really fast. If cost goes up this fast, I wouldn't be able to complete my project within $700. I am thinking that I should totally get rid of the ball screw as well this time.
+
+Thus, I will be using belts. Now, I had to do some research on belts, before I know what do buy. And after checking out some options in JLCMC, and reading those [datasheets](https://jlcmc.com/product/s/C02/CDTM/timing-belts-2gt) I think I know something about the different options and what to actually choose. I asked Google as well, but it was pointless.
+
+Finally, I setteled on HTD 5M Timing Belt, which has 5 mm pitch and is 15 mm thick, or 20 mm thick. Why this? This is because the Robotic Arm will add up signifiacnt mass to the robot, and all the stress will cause the belts to strech, and perform poorly which I don't want.
+
+For now, I eradicated Ball Screws from my BOM and plan both completely, and my price comes down to just about $160.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2467ea2-3b5d-42df-a6ee-9e2d4bbf6254" />
+
+I can't find the source of the belts I need from any website except IndiaMart. I guess I'll have to contact vendors for this.
+
+**Total time spent: 4h 45m**
 
 ---
