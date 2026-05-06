@@ -383,14 +383,7 @@ So, this is what I did: I started from the very foundation, and worked my way up
 
 Okay, now this is the BOM for the Foundation Structure, for now:
 
-Item	Quantity	Cost	Total Cost	Side Note	Link
-Aluminium 2020 T-Slot Profile Extrusion — 1 metre	1	 $4.66 	 $4.66 		https://robu.in/product/easymech-20x20-t-slot-aluminium-extrusion-profile-1000-mm
-Aluminium 4040 T-Slot Profile Extrusion — 1 metre	2	 $13.93 	 $27.85 		https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA
-MGN15H Linear Guide Rail — 1 metre	2	 $21.64 	 $43.28 		https://robu.in/product/mgn15h-linear-guide-rail-1m-2
-NEMA23 PR57HS51	3	 $15.81 	 $47.43 		https://robu.in/product/nema23-pr57hs51-2804-10-1kg-cm-stepper-motor-round-type-shaft
-TB6600 Stepper Motor Driver Controller	3	 $4.21 	 $12.63 		https://robu.in/product/tb6600-stepper-motor-driver-controller-4a-942v-ttl-16-micro-step-cnc-1-axis-upgraded-version-425786-stepper-motor?gclid=CjwKCAjwntHPBhAaEiwA_Xp6RtwUATtWsr6ENAJnefCDD7A_hFCG6G0U4FvI7KcqhoYZApcELbKBxhoCF8cQAvD_BwE&gad_source=1&gbraid=0AAAAADvLFWeX0A7E-QWDpuYY72tUYPPuB&gad_campaignid=20381096599
-MGN15H Sliding Block	4	 $7.18 	 $28.72 		https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
-Total			 $159.91
+<img width="2340" height="132" alt="image" src="https://github.com/user-attachments/assets/52d7d490-c39b-4479-955c-b229921b5a04" />
 
 I will continue with this for the next day, and start modelling again.
 
@@ -402,11 +395,12 @@ Total time spent: 3h 45m
 
 # Day 10 — 03.05.2026: Modelling Based on New Plan
 
+Today I started modelling PATRA again from scratch based on the components that were finalised for the first stage, yesterday.
+
 **Total time spent: 3h 20m**
 
 ---
 
 # Day 11 — 04.05.2026: First Stage Progress
-
 # Day 12 — 05.05.2026: 
 # Day 13 — 06.05.2026: 
