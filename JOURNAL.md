@@ -9,38 +9,35 @@
 
 # Day 0: Flashback
 
-A Random Day in December, 2026, I was scrolling through my YouTube feed. I came across this [video](https://www.youtube.com/shorts/74T0LF2l5Ck) with TriTeron Robot concept, and immediately my mind was blown up due to the awesomeness and coolness of the robot. I immediately had the idea to add a robotic arm to its head, to make it even cooler and more usable.
+A Random Day in December, 2026, I was scrolling through my YouTube feed. I came across this [video](https://www.youtube.com/shorts/74T0LF2l5Ck) with TriTeron Robot concept. The mechanics were immediately impressive — a clean parallel axis system with a movement profile I hadn't seen in a hobbyist build before. The logical extension was obvious: mount a robotic arm on the head, and you get something that combines the workspace coverage of a gantry with the dexterity of a serial arm. I thought that is really cool.
 
 ---
 
 # Day 1 — 10.04.2026: Planning & Studying
 
-Ever since I was a member at Hack Club, I wanted to make a TriTeron robot (which I call a tri-teron). Originally, I thought of doing this project in Blueprint as two separate modular projects: TriTeron Robot for $400 and Robotic Arm for $400. But Blueprint ended even before I could start. So, I chose Fallout. But I did not start because I was busy doing Construct and Stasis at the same time, and I also became a little lazy later on.
+Ever since I was a member at Hack Club, I wanted to make a TriTeron robot. Originally, I thought of doing this project in **Blueprint** as two separate modular projects: **TriTeron Robot** for $400 and **Robotic Arm** for $400. But Blueprint ended even before I could start. So, I chose Fallout. I didn't start there either, partly due to running Construct and Stasis in parallel, and partly because the scope wasn't clearly defined enough.
 
-The perfect opportunity came when I came across the new hardware YSWS — Forge. I knew that I had to keep my budget really high. That's why I decided to choose Tier 1 and keep my budget at maximum $700.
-
-Now, here’s what inspired me:
-
-* https://www.youtube.com/shorts/74T0LF2l5Ck  
-This is the video that first sparked my interest.
-
-* https://www.youtube.com/watch?v=6EtXycVGJg4  
-This video by Rudmin introduced the original concept.
+This is the Tipteron Robot built by Rudmin:
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1e31c116-bfa6-4f96-a2c2-00662f581cc6" />
 
-* https://www.youtube.com/watch?v=io4S9amExNM  
-Rowan introduces a more complex carriage system. I have literally watched this probably three times in a row, replaying every assembly step just to understand the machine.
+The right opportunity came with Forge. The Tier 1 has unlimited budget but I capped the budget at $700, which is was tight but workable.
 
-* https://www.youtube.com/watch?v=3fbmguBgVPA  
-This pushed me toward adding a robotic arm.
+Here's what shaped my thinking, and inspired me:
 
-* https://www.youtube.com/watch?v=MeRaYVntxMk  
-A really clear explanation of the difference between serial and parallel systems. My robot combines both.
+* [This](https://www.youtube.com/shorts/74T0LF2l5Ck) is the video that first sparked my interest.
 
-To get started, I did focused research on the following (only this time is counted): 
+* [This](https://www.youtube.com/watch?v=6EtXycVGJg4) video by Rudmin introduced the original concept.
 
-* **Kinematics:** Beyond just the general definition, I read articles and watched detailed videos specifically on parallel axis kinematics and kinematically linear systems. https://en.wikipedia.org/wiki/Kinematics https://www.youtube.com/watch?v=3fbmguBgVPA
+* [This](https://www.youtube.com/watch?v=io4S9amExNM) video by Not An Engineer introduces the carriage system. I watched this multiple times specifically to understand how the X and Y axes are driven independently on the carraige.
+
+* [This](https://www.youtube.com/watch?v=3fbmguBgVPA) pushed me toward adding a robotic arm, and gave me a ough idea of what style robotic arm I could add.
+
+* [This](https://www.youtube.com/watch?v=MeRaYVntxMk) is a solid breakdown of the differences between serial and parallel systems. PATRA essentially combines both, which is why understanding this distinction matters.
+
+To get started, I did focused research on the following (only this time is counted):
+
+* **Kinematics:** Beyond just the general definition, I read articles and watched detailed videos specifically on parallel axis kinematics and kinematically linear systems. I also explicitly read [this](https://en.wikipedia.org/wiki/Kinematics) Wikipedia page, and watched [this](https://www.youtube.com/watch?v=3fbmguBgVPA).
 
 * **Robotic Arms:** I did a deep dive into 5 DOF and 6 DOF robotic arms, studying their structure, joint arrangements, and torque requirements. I also carefully studied the Meca500 robotic arm as a size and precision reference.
 
@@ -48,9 +45,9 @@ To get started, I did focused research on the following (only this time is count
 
 * **Ball Screws:** This was a completely new concept for me. I learned that ball screws offer higher precision and better load handling compared to belts, but at the cost of speed and higher complexity.
 
-* **Aluminium Extrusions:** I knew nothing beyond 2022 and 4040 aluminium extrusion. So, for the sake of this project, I made a deep dive into JLCMC's Aluminium Extrusion Profiles, and I read their [datasheets](https://drive.google.com/file/d/1X2043j8HutSmY2QTKigUobWLhu9sI9k2/view?usp=sharing).
+* **Aluminium Extrusions:** I knew nothing beyond 2020 and 4040 aluminium extrusion. So, for the sake of this project, I made a deep dive into JLCMC's Aluminium Extrusion Profiles, and I read their [datasheets](https://drive.google.com/file/d/1X2043j8HutSmY2QTKigUobWLhu9sI9k2/view?usp=sharing).
 
-* **Zaber LC40:** Rudmin used [LC40 family](https://www.zaber.com/products/families/LC40) for the TriTeron, which is configurable, belt drive, t-slot profile linear stages. I looked at the prices which were mostly in $2000s and $3000s, and honestly not that shocked.
+* **Zaber LC40:** Rudmin used [LC40 family](https://www.zaber.com/products/families/LC40) for the TriTeron, which is configurable, belt drive, t-slot profile linear stages. Prices were mostly in the $2000–$3000 range, which is consistent with industrial-grade configurable stages.
 
 Things I Learned:
 
@@ -59,7 +56,7 @@ Things I Learned:
 * Trade-offs between belt drives and screw drives
 * The structure of linear actuators
 * The mechanical difference between serial and parallel robotic systems
-* Why rigidity and repeatability matter more than just “cool movement”
+* Why rigidity and repeatability matter more than just "cool movement"
 * How can I make my robotic arm modular
 * A little about the LC40 family
 
@@ -69,17 +66,17 @@ Things I Learned:
 
 # Day 2 — 11.04.2026: The First Pitch
 
-I guess it was time for the pitch finally. This was my first pitch out of two. I had made a very rough plan in my mind, went to ChatGPT to get it sanity checked, and then I sat with a paper in my hand and drew what I could think of about the robot. Then, I spent some hours researching about the parts in Google and JLC. I also used a bit of AI to search in unknown websites for the parts. Then, I came up with a very rough estimate of the parts and the BOM. Initially, my target was to spend maximum $500 for the TriTeron and $500 for the 6 DOF robotic arm.
+Time for the first pitch. I had a rough plan, ran a sanity check on it, sketched it out on paper, and then spent several hours researching parts on Google and JLCMC. I also used AI for sourcing — primarily as a search tool, not for generating content — to find parts on sites I wouldn't have otherwise located. From that, I assembled a rough BOM with an initial target of $500 for the TriTeron and $500 for the 6 DOF arm.
 
-I was so much confused with my plan that I drew up 7 different drawings of the thing I want to make. I have not started modelling yet, so I have no idea about what I am doing. But still I want to pitch, I don't know why. Maybe just because I want to see the reaction on people. Will they react like me to the idea?
+The honest problem at this stage was that without any CAD done, the plan was still too abstract. I drew seven different versions of the thing before settling on what to pitch, which tells you how much I was still working it out. Still, the goal was to get external feedback early rather than spend weeks refining a plan in isolation.
 
-After that, the draft of the pitch was ready. I manually searched up everything and wrote the BOM. Then, I pitched it in the #forgery channel, waiting for insights. I saw some suggestions and reactions.
+After writing the draft and building the BOM manually, I pitched in the #forgery channel.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afd7d77b-3889-44e8-b776-08f510aa0ad4" />
 
-Personally, the most frustrating thing was the fact that I have a pen and a paper with a simple drawing and list of things I have no idea about, and when I search that, there are so many options that I am overwhelmed. I learned about a lot of types of Linear Guides, Rails and NEMA motors.
+The most frustrating part of this phase was the overwhelming number of choices. Linear guides alone had dozens of variants across multiple vendors, with no clear basis for choosing one over another without more context. That changed gradually as I got deeper into datasheets.
 
-**A little fast forward:** This project was returned for changes by the reviewer on **14th April, 2026**. I did not make any changes as he said, but my overall plan had changed a lot! So, I re-pitched officially on **30th April, 2026**.
+**A little fast forward:** This project was returned for changes by the reviewer on **14th April, 2026**. I did not make any changes as he said, but my overall plan had changed significantly by then. So, I re-pitched officially on **30th April, 2026**.
 
 **Please note that I did not use AI for any fields of the pitch. I have only used it to search the sources of my parts (pretty much like Google, but better). Then, manually I visited the sites and made the estimates. Please try to understand.**
 
@@ -89,58 +86,41 @@ Personally, the most frustrating thing was the fact that I have a pen and a pape
 
 # Day 3 — 12.04.2026: Starting to Model
 
-I started simple. I clicked on [this](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) video of Rowan, who I definitely an engineer (critiques may argue). I watched it full, tried to understand the carriage this time, specifically, how it moves, and the assembly of the X and Y axis leg and the linear guides, and of course the confusion linear belts. I went to his Patreon and downloaded the Fusion file. Thank God he uses Autodesk Fusion, just like me. I now better understood everything.
+I started by rewatching [Rowan's video](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) from start to finish, this time specifically tracing the carriage assembly — how it moves, how the X and Y axis legs are attached, and where the belts actually run. He has a Patreon with the Fusion file, which I downloaded and used as a structural reference. Not copied wholesale — just as a baseline to understand what I'd be modifying.
 
-I officially created my project on Fusion, then. And, of course, I totally copied pasted Rowan's model, to modify for my needs. I am of course going to model the thing myself, but with that inspiration. I studied primarily the linear guide on the main rail and the 2040 aluminium extrusion.
+I then created the project in Fusion and imported the relevant reference geometry.
 
-So, here's the plan. Rudmin has used two linear axes for the X, Y and Z (on both), which looks cleaner and minimalist. Rowan made a different approach by adding in a carriage that independently controlled the X and Y axes legs. I thought of going by Rowan's design as it looked cooler, and with that, I am also going to use ball screw for the main axis! I am planning to make it on 1 metre rail!
+The plan at this point: follow Rowan's carriage approach (independently driven X and Y axes), but substitute a ball screw for the main axis, on a 1 metre rail.
 
-Now, to source my parts, I am going to use only JLCMC because there are tons of options, configurations and customization available. 
+I started with the 4040 T-slot aluminium extrusions. I re-read the [datasheets](https://drive.google.com/file/d/1X2043j8HutSmY2QTKigUobWLhu9sI9k2/view?usp=sharing) and downloaded the STEP files for [TXCL-H7-4040E-L1000](https://jlcmc.com/product/s/T01/TXCL/extruded-aluminum-t-slot-40-series(eu)-8mm-slot-width?k=TXCL-H7-4040E-L1000&productModelNumber=TXCL-H7-4040E-L%5B50~6000%2F0.1%5D) from JLCMC — $8.99 each, which is reasonable. Added two to cart.
 
-I started with the 4040 T-slot aluminium extrusions. I read the [datasheets](https://drive.google.com/file/d/1X2043j8HutSmY2QTKigUobWLhu9sI9k2/view?usp=sharing) again for 2 minutes and downloaded the STEP files for [TXCL-H7-4040E-L1000](https://jlcmc.com/product/s/T01/TXCL/extruded-aluminum-t-slot-40-series(eu)-8mm-slot-width?k=TXCL-H7-4040E-L1000&productModelNumber=TXCL-H7-4040E-L%5B50~6000%2F0.1%5D). Just look at the price of that! Just $8.9920. It is so cheap! I added two of them to cart.
+Then the Ball Screw. After reading the datasheet, I settled on BSUF-C7-20-5-L640-F30-P12, added it to cart and downloaded the STEP file.
 
-I then went for the Ball Screw. There were a lot of options, and this time I thoroughly had to read the datasheet this time before making choices. I finally chose BSUF-C7-20-5-L640-F30-P12, and then I added it to cart and downloaded the STEP file.
+Same process for the linear guides — chose E-BMN15H-2-L1000-ZF-C-E20, two of them added and downloaded.
 
-I did the same with the linear guides. I read the datasheet and chose E-BMN15H-2-L1000-ZF-C-E20, added two of them to cart and downloaded the STEP file.
+As a sizing reference, I downloaded the [Meca500 CAD model](https://www.3dfindit.com/en/digitaltwin/meca500-assembled?path=mecademic%2Findustrial20robotic20arms%2Fmeca50020six-axis20robot20arm%2Fmeca50020assembled.prj&mident=%7Bmecademic%2Findustrial20robotic20arms%2Fmeca50020six-axis20robot20arm%2Fmeca50020assembled.prj%7D%2C013+%7BLINEID%3D10%7D++%7BNB%3DMeca500+Assembly+simple%7D%2C%7BORDERNO%3DMeca500+Assembly+simple%7D%2C%7BMOUNTING%3Dany+orientation%7D%2C%7BPAYLOAD%3D0.5+kg+rated+%28max.+1+kg%29%7D%2C%7BREACH%3D260+mm+%28see+diagram+below%29%7D%2C%7BWEIGHT%3D4.5+kg%7D%2C%7BNAME%3DMeca500+Assembly+simple%7D%2C%7BSOURCEURL%3Dhttps%3A%2F%2Fwww.mecademic.com%2Fen%2Fdownloads%7D) from 3Dfindit, and skimmed the [official documentation](https://resources.mecademic.com/en/doc/MC-OM-MECA500/11.1/mc-om-meca500.pdf). This wasn't for replication — it was just useful to have accurate geometry in the assembly to check proportions.
 
-Then, I did a smart move. To have a rough idea about how my PATRA would look, I downloaded the [Meca500-CAD-model](https://www.3dfindit.com/en/digitaltwin/meca500-assembled?path=mecademic%2Findustrial20robotic20arms%2Fmeca50020six-axis20robot20arm%2Fmeca50020assembled.prj&mident=%7Bmecademic%2Findustrial20robotic20arms%2Fmeca50020six-axis20robot20arm%2Fmeca50020assembled.prj%7D%2C013+%7BLINEID%3D10%7D++%7BNB%3DMeca500+Assembly+simple%7D%2C%7BORDERNO%3DMeca500+Assembly+simple%7D%2C%7BMOUNTING%3Dany+orientation%7D%2C%7BPAYLOAD%3D0.5+kg+rated+%28max.+1+kg%29%7D%2C%7BREACH%3D260+mm+%28see+diagram+below%29%7D%2C%7BWEIGHT%3D4.5+kg%7D%2C%7BNAME%3DMeca500+Assembly+simple%7D%2C%7BSOURCEURL%3Dhttps%3A%2F%2Fwww.mecademic.com%2Fen%2Fdownloads%7D) from 3Dfindit. Again, I will model by myself, but this is just an inspiration; for now it is just a reference. But out of curiosity, I read the [official docs](https://resources.mecademic.com/en/doc/MC-OM-MECA500/11.1/mc-om-meca500.pdf) on MC-OM-MECA500 from Mecademic.
-
-I brought it all together and after the work of about half an hour, basically this is how it looks!
+After roughly half an hour of assembly:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ae1e4371-f2ac-4b45-ac44-78ecef0699c0" />
 
-But unfortunately, my excitement was totally killed after looking at the shipping costs. I was totally devastated. It reached more than $200 in shipping alone even in the cheapest options. I am sorry I deleted the cart, so I have no proof, but I learned one really important thing, I just can't use JLCMC for this as there are also customs that I will have to cover, and will make the overall cost a lot high!
+Then came the cost check. Shipping from JLCMC alone was over $200 even on the cheapest option, before customs. At 35–50% customs on top, this approach was clearly unworkable for the budget. Deleted the cart, noted the lesson: source locally wherever possible.
 
-I chose to keep the rail at 600 mm and keep the travel length at 500 mm. This rose a lot of problems:
-
-* Firstly, the TriTeron had to be scaled at least 1.5 times to make sure that the Meca500 remains in a perfect size, with no scaling down.
-* Secondly, the TriTeron will have very less space to move if I scaled the TriTeron, and kept the travel length at 500 mm.
-* Thirdly, the TriTeron looks quite ugly.
-
-Now, I have two things to do now:
-
-1. Scale everything down, including the arm, and use 500 mm rail.
-2. Get relieved from the stress by ignoring the rails, and actually working on the carriage.
-
-I first, scaled everything down, including the arm. I literally spend an hour making adjustments related to the arm placement, and more importantly, seeing that if I can even make the arm smaller in real life. 
+Dropping the 1 metre rail brought its own constraints. With 500 mm usable travel, the TriTeron needed to be scaled up to preserve the arm's proportions — and that scaling introduced two problems. First, the robot looked disproportionate. Second, the available travel was now borderline inadequate for the scaled frame.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/19ec1236-b435-48a9-bfb8-c7fb5c37ef8a" />
 
-I really wanted to keep my arm at the exact size of Meca500, I really don't want to do this. For continuing the option two, I had to go to JLCMC, and individually choose smaller variants of each part, making sure the usable length remains at 500 mm. And after three hours of endless modelling, this is what I got:
+I spent another three hours iterating — trying smaller JLCMC variants, adjusting the usable length to keep costs down:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/51f2d2e0-dca3-43d2-9c9e-54db52e20baf" />
 
-It just looks weird. I have to have a better solution to this! But still, this is quite expensive. But surely this is cheaper than the 1 metre travel length one.
+The proportions weren't working. I took a step back and reconsidered the carriage architecture itself. Instead of following Rowan's design where the motors are remote and belt-driven to the carriage, I tried making the carriage self-contained — motors mounted directly on it, freeing up the rail geometry. This meant extending the carriage base using extrusions on the front face and rethinking the drive path.
 
-Now, I am really tired after all of this.
-
-I chose the second step, for the time being. I was so disappointed by how it looked, I literally deleted all of the things I imported from JLCMC, to continue fresh. What I basically did was that unlike Rowan's design, I am going to make the carriage completely independent, so I will add motors separately to the carriage. For that, I extended the base of the carriage and for that I used extrusions on the frontmost face, and modified the design, making it possible to make the rails wide and to let me use ball screw. So, I continued modelling for more hours and this was the result. 
+After more hours of iteration:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/28d18e54-e5e2-471f-a430-8d8cc5a90f1b" />
 
-If you want a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, where I have smartly exploited the Fusion Timeline. I'm glad Fusion is parametric.
-
-Well, in this one single day, I did so much (at least for me) due to my dedication and curiosity. I really hope this pays of well.
+For a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, exploiting the Fusion Timeline. Fusion being parametric saved a lot of time here.
 
 **Total time spent: 7h 22m**
 
@@ -148,40 +128,34 @@ Well, in this one single day, I did so much (at least for me) due to my dedicati
 
 # Day 4 — 13.04.2026: The CAD Failure Day
 
-Today I planned to ignore everything that was frustrating. I decided to do something else than the linear rails. I decided to add motions by adding As-Built Joints. First, everything was going by well, but after adding the joints in the X and Y leg, there was a lot of mess! Just look at the mess, there are joints everywhere, but everything is messed up like crazy.
+The plan today was to ignore the rail sourcing problem entirely and focus on adding motion using As-Built Joints. The X and Y leg joints went in initially without issue, but the assembly quickly became inconsistent — components were referencing incorrect parent frames and the motion wasn't physically meaningful.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/492c4516-e10d-4c0a-946f-2e5b47b9d086" />
 
-But I then thought of dropping this, and I instead scaled the TriTeron up by 1.5x. The rail is still 500 mm. I did this because I want to keep the Meca500 at the original size. I also noticed that the two sides of the TriTeron were asymmetric, so I used split body and deleted things fom one side, then scaled them
+I dropped the joint work and instead scaled the TriTeron up by 1.5x to better fit the Meca500 at original size. In doing so, I also noticed the two sides of the frame were asymmetric — fixed that with a split body approach, deleting one side and mirroring.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/93acdf6c-3b9c-457f-8c5d-3f718d41657e" />
 
-You can see that the TriTeron barely has any space to move. I know this is really bad, so I am now thinking of making the rail 600 mm. I hope that it would not escalate the costs much. So, I went and actually checked that by making a completely new BOM from scratch on a paper, which took a lot of time.
+At this scale, the travel envelope was clearly insufficient. 600 mm started to look necessary, so I did a rough BOM check on paper to see how much that would push the cost — which took more time than expected.
 
-Now, I again added motions to the legs one by one for each leg, which was quicker than the previous step at arm-to-arm joints, but to the slider, the joints did not make any sense. So, I had to go back the timeline and I had to find at which exact step I scaled the things, then, I also scaled the slider, but that just increased my problems more. After adding more motions to the remaining newly scaled parts, the robot moved as expected. This was probably the only time so far; I feel like I did something that actually works.
+I re-added the joints one leg at a time. This was faster than the first attempt, but the slider joint didn't resolve correctly. I traced the issue back to the scale step in the timeline, found the relevant operation, and scaled the slider to match — which introduced further downstream problems. After fixing those and completing the joint set, the motion was at least physically plausible for the first time.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/667bc22a-e696-4321-8b5e-c26f8a8732b1" />
 
-Continuing my frustrating design journey, I:
+From there, a sequence of smaller adjustments:
 
-* Made the tool head of the TriTeron bigger so that the base of the Meca500 fits perfectly on the top, for about 10 minutes
-* Scaled everything down again due to motion conflicts and again scaled up by 1.25 times, then edited the timeline to make it 1.5 times, for about 1.5 hours
-* Tried to make the carriage slider length shorter to ensure that the robot has place to move, for about 40 minutes.
+* Made the tool head larger so the Meca500 base seats correctly — about 10 minutes.
+* Went back and forth between 1.25x and 1.5x scaling, editing the timeline directly, trying to balance proportions against motion clearance — about 1.5 hours.
+* Attempted to shorten the carriage slider to give the robot more room to move — about 40 minutes.
 
-Problems I faced due to the previous actions:
+The result of all of this: disproportionate geometry, and motion joints that had drifted out of the correct configuration again. The scaling changes had accumulated too many dependencies in the timeline.
 
-* TriTeron looks bulky and disproportionate, and in other words, ugly.
-* Got frustrated and bored out of my mind at the same time.
-* Found out that the TriTeron motions no longer make sense, and I messed up, again!
-
-To fix that, I completely overcame the changes, except the scaling. I deleted all the joints, and I decided to start fresh again. My plan doesn't make any sense anymore at all.
+Decision: delete all joints, reset the motion setup, and re-examine the underlying plan before continuing.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/183ff45a-b18b-4c35-99e1-2a7a8030f256" />
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c7e5950-0ebe-4217-807d-f8d1e3b2d580" />
 
-Now I literally feel like quitting. I have not yet got any response on my pitch. I don't know if this would be approved, but still I am working so much, and even before getting started, I feel like quitting.
-
-I don't know what now, but I guess I will just wait for the pitch review.
+No pitch response yet. Waiting on that before making any major structural decisions on the build.
 
 **Total time spent: 5h 40m**
 
@@ -189,54 +163,49 @@ I don't know what now, but I guess I will just wait for the pitch review.
 
 # Day 5 — 14.04.2026: Post-Pitch-Review CAD & Research
 
-I got my first [response](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1776140495172719?thread_ts=1775931663.812209&cid=C0AQG3VPQDD). The reviewer did not actually point out any problem in my project, just very randomly suggested something obvious. But he gave a really good suggestion with the driver and the site selection for ordering. His suggestions helped me think in a different approach.
+First [pitch response](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1776140495172719?thread_ts=1775931663.812209&cid=C0AQG3VPQDD) came in. The reviewer didn't flag issues with the project concept itself, but pointed out a better driver and an alternative sourcing approach. Both were actually useful — the driver suggestion changed how I was thinking about the control architecture, and the sourcing direction helped clarify what was realistic within budget constraints.
 
-Nonetheless, I am thinking of changing my plan significantly. What if...
+That led me to reconsider the overall scale of the build:
 
-* I used 1 metre rail instead of 500 mm rail?
-* I kept the robotic arm at the original size of Meca500?
-* I made the TriTeron 1.75 times bigger than the original design on [Rowan](https://www.youtube.com/@NoEngineerHere)?
+* Use a 1 metre rail instead of 500 mm?
+* Keep the robotic arm at original Meca500 size?
+* Scale the TriTeron to 1.75x the original Rowan design?
 
-It might seem like I am either living in a dream or increasing my budge to like $1200, but actually, I am just trying a different approach. Firstly, I spend absolutely about an hour and half on scaling up and down my model, trying with different length rails and different linear guides. I imported many models in Fusion and tried each on the robot.
+These changes don't necessarily blow the budget — the question is whether the rail length and proportions can be made to work within the $700 ceiling with Indian-sourced parts. I spent about an hour and a half testing different rail lengths and linear guide models in Fusion, importing actual STEP files to check fit rather than guessing.
 
-I manually calculated the rough torque needs for my project, and I can conclude that about 1.1 Nm of torque could do the job. I can either use the best NEMA 17 motors, or the most decent NEMA 23 motors. JLCMC has a lot of options to choose from, so I did my majority research on JLCMC. I also read some datasheets.
+I also did a rough manual torque calculation for the main axis, which came out to approximately 1.1 Nm. That sits in the range where the best NEMA 17s are marginal and a mid-tier NEMA 23 is more appropriate. JLCMC had a wide selection, so most of the motor research was done there alongside their datasheets.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c2d27b79-ea12-4ee8-9492-0111a22336d0" />
 
-To be specific, I added 42CM08 motor model to Fusion to check if I can even fit in two separate motors on the carriage itself, according to my original plan. I failed horribly. I was horribly wrong. The motors will take up a lot of space, and make the carriage a lot bulkier making my project expensive. I tried placing it where both Rudmin and Rowan did, and only this felt right. I also tested with 600 mm 4040 t-slot rail from JLCMC, but that too felt small for my plan.
+I imported the 42CM08 motor model into Fusion to check spatial feasibility for my original plan — motors mounted directly on the carriage. The result was clear: two NEMA motors on the carriage make it significantly bulkier, and the placement geometry doesn't work cleanly. The approach that both Rudmin and Rowan use, mounting motors off the carriage and transmitting via belt, makes more sense mechanically. Testing with a 600 mm 4040 extrusion also confirmed that it's too short for the scaled design.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/927c9935-bbf2-4ddb-8740-0aa628d0fd2a" />
 
-So, separate from my previous two BOMs, I made another to make new estimates. The numbers were going up so fast, I paused and thought of trying a completely different approach.
+I started yet another BOM — this time separating Indian-sourced components from JLCMC components, and adding shipping and customs estimates to each. The conclusion was unambiguous: JLCMC isn't viable for this project given the import costs. Everything needs to come from Indian vendors.
 
-
-Today, I decided to only do research on the market price of the things I need, instead of just researching on what I need.
-
-I researched on the following:
-
-* Linear Guides: I found out that to avoid customs, you got to use local brands or companies with branch in India. So, I chose HIWIN for my linear guides and linear rail blocks on MISUMI India, Igus India and HIWIN India. But [Robu.in](https://robu.in/product/mgn15h-linear-guide-rail-1m-2) also offers a really good option.
-
-<img width="1365" height="644" alt="image" src="https://github.com/user-attachments/assets/e1b173d1-539e-4f4c-ae64-032af907a4cf" />
-  
-* Ball Screw: This one was confusing, as all sites showed very high price. I have researched mostly in [JLCMC](https://jlcmc.com/product/s/B04/BSAF-C7-15/rolled-ball-screw-with-sfar-nut-shaft-diameter-15mm-lead-5-10-16-20mm), and [Robu.in](https://robu.in/?s=ball+screw&post_type=product&dgwt_wcas=1) Anyways, for the ball screws, I am choosing Novo3D or MISUMI.
-
-<img width="1365" height="643" alt="image" src="https://github.com/user-attachments/assets/94d822a2-227d-4ba3-9b91-b816021f0f6d" />
-  
-* 4040 extrusions: For the [extrusions](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile?srsltid=AfmBOoqKFxp7iACSQkkYpdlSToUPKQh1cB2N3_JJ_hqWzN5CCDY8bWU9) I am choosing Robokits, as it is really cheap. But the problem is that I am not sure if their drawing is correct.
-
-<img width="1365" height="575" alt="image" src="https://github.com/user-attachments/assets/2846e072-1fa1-45e1-99d3-64ca3d49b956" />
-
-I started working on my BOM, again. This time, I made two rough separate BOM. One for parts I am sourcing from India, and other where I am sourcing parts from JLCMC. Then, I added in the shipping costs and estimated customs charges. The result was that I have to source parts only from India.
-
-For instance, here is my JLC cart for only three items:
+Evidence from the JLCMC cart, three items only:
 
 <img width="802" height="586" alt="image" src="https://github.com/user-attachments/assets/55236b4e-1783-4af0-b474-7656325379a4" />
 
-Just look at the prices of even the cheapest shipping. And then there is additional 35 to 50% customs. I am not doing this from JLCMC.
+Cheapest shipping already makes it unworkable, and that's before 35–50% customs:
 
 <img width="252" height="393" alt="image" src="https://github.com/user-attachments/assets/9330b45f-b0b7-40d3-b304-788b8fe47754" />
 
-I used the same BOM I made today for re-pitching my idea at Forge on 30th April, 2026.
+I also did targeted research on the Indian market for the three main structural components:
+
+* **Linear Guides:** HIWIN is available through MISUMI India and HIWIN India. [Robu.in](https://robu.in/product/mgn15h-linear-guide-rail-1m-2) also has a solid option.
+
+<img width="1365" height="644" alt="image" src="https://github.com/user-attachments/assets/e1b173d1-539e-4f4c-ae64-032af907a4cf" />
+
+* **Ball Screw:** Pricing was high across all platforms. Best candidates were Novo3D and MISUMI India, with [JLCMC](https://jlcmc.com/product/s/B04/BSAF-C7-15/rolled-ball-screw-with-sfar-nut-shaft-diameter-15mm-lead-5-10-16-20mm) and [Robu.in](https://robu.in/?s=ball+screw&post_type=product&dgwt_wcas=1) as reference points for price comparison.
+
+<img width="1365" height="643" alt="image" src="https://github.com/user-attachments/assets/94d822a2-227d-4ba3-9b91-b816021f0f6d" />
+
+* **4040 Extrusions:** [Robokits](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile?srsltid=AfmBOoqKFxp7iACSQkkYpdlSToUPKQh1cB2N3_JJ_hqWzN5CCDY8bWU9) is the cheapest option available, though I still need to verify their dimensional drawings against the datasheet before committing.
+
+<img width="1365" height="575" alt="image" src="https://github.com/user-attachments/assets/2846e072-1fa1-45e1-99d3-64ca3d49b956" />
+
+The BOM from today was used directly as the basis for the re-pitch on 30th April.
 
 **Total time spent: 4h 45m**
 
@@ -244,9 +213,9 @@ I used the same BOM I made today for re-pitching my idea at Forge on 30th April,
 
 # Day 6 — 30.04.2026: The Final Pitch
 
-Today, I [pitched](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1777518863427759?thread_ts=1775931663.812209&cid=C0AQG3VPQDD) my project PATRA for the final time in Forge channel. To do this, I kept the description same as the previous pitch, made very minor changes overall. But the most significant change was with the BOM.
+I [re-pitched](https://hackclub.slack.com/archives/C0AQG3VPQDD/p1777518863427759?thread_ts=1775931663.812209&cid=C0AQG3VPQDD) PATRA in the Forge channel. The project description stayed mostly the same; the significant change was the BOM. Rail length was fixed at 600 mm usable travel. About 40 minutes of additional research went into tightening the component list and price estimates.
 
-I don't know if this is my fifth or sixth BOM, if I ignore those BOMs I wrote on paper out of frustration. Majorly, I chose to keep the rail 600 mmm usable travel. I had to do very less research this time. I researched about 40 minutes on the internet to find the components, and I improved the previous BOM. Now, even at this moment, I am not finalizing the sources from where I will buy, but just for an estimate, I have given example sources. This is just a rough assumption based on the mean prices. So, here's what's finalised for the pitch:
+**Worth noting:** the sources listed below are indicative, not finalised — they establish a price baseline using mean market values. The actual sourcing will be determined after approval.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d54c1631-461d-43ca-88dc-c4519b394e03" />
 
@@ -271,104 +240,102 @@ HTD belt example (Indian marketplace or Amazon):
 [Link](https://www.amazon.in/Timing-Belt-Gear-Pulley-Printer/dp/B07W4J5PGF)
 HTD 20T Aluminium Pulleys (4 pcs) – ≈ $20 USD
 Example pulleys:
-https://www.amazon.in/Timing-Pulley-Bore-6mm/dp/B08CXZ7VMH
+[Link](https://www.amazon.in/Timing-Pulley-Bore-6mm/dp/B08CXZ7VMH)
 
 Frame + Structure
 4080 + 4040 Aluminium Extrusion (cut locally) – ≈ $170 USD (combined)
 Sources for Indian extrusion retailers with custom lengths:
 Search on India marketplaces like India Mart for:
-“2040 T-slot aluminium extrusion all lengths”
-“4040 T-slot aluminium extrusion custom cut”
+"2040 T-slot aluminium extrusion all lengths"
+"4040 T-slot aluminium extrusion custom cut"
 Example extrusion supplier:
-https://www.indiamart.com/proddetail/aluminium-t-slot-extrusion-6762050720.html
+[Link](https://www.indiamart.com/proddetail/aluminium-t-slot-extrusion-6762050720.html)
 Aluminium Plate ~10–12 mm (Custom CNC cut) – ≈ $70 USD
 Local metal supplier or shop near you can cut to size.
 
 Motors
 NEMA 23 Stepper Motor (2 pcs) – ≈ $80 USD
 Example NEMA23 listings in India:
-https://robomart.com/product/stepper-motor-nema23-10kgcm-torque-with-pulley
+[Link](https://robomart.com/product/stepper-motor-nema23-10kgcm-torque-with-pulley)
 NEMA 17 Stepper Motor (3 pcs) – ≈ $60 USD
 Example affordable NEMA17 bundles:
-https://www.amazon.in/Stepper-Motor-17HS19-1684S/dp/B07Q5QDLFK
+[Link](https://www.amazon.in/Stepper-Motor-17HS19-1684S/dp/B07Q5QDLFK)
 
 Drivers & Power
 TB6600 Stepper Drivers (2 pcs) – ≈ $30 USD
 TB6600 driver example:
-https://www.amazon.in/2-Axis-Stepper-Motor-Driver/dp/B01MTOYCRA
+[Link](https://www.amazon.in/2-Axis-Stepper-Motor-Driver/dp/B01MTOYCRA)
 TMC2209 Drivers (3 pcs) – ≈ $30 USD
 TMC2209 driver example (widely in Indian hobby stores):
-https://dc3d.in/shop/voron-v2-4-parts/bigtreetech-tmc2209-v1-3-stepper-motor-driver
+[Link](https://dc3d.in/shop/voron-v2-4-parts/bigtreetech-tmc2209-v1-3-stepper-motor-driver)
 24V 10A Power Supply – ≈ $30 USD
 Example PSU (India):
-https://www.amazon.in/Antratek-Switched-Mode-Power-Supply/dp/B08BWGRYT4
+[Link](https://www.amazon.in/Antratek-Switched-Mode-Power-Supply/dp/B08BWGRYT4)
 
 Controller / I/O
 Controller Board (STM32 / GRBL / 32-bit board) – ≈ $30 USD
 Affordable motion control board:
-https://www.amazon.in/NCStudio-Controller-Mach3-USB-Port/dp/B08CHY7CC8
+[Link](https://www.amazon.in/NCStudio-Controller-Mach3-USB-Port/dp/B08CHY7CC8)
 Limit Switch Set – ≈ $10 USD
 Mechanical limit switches:
-https://www.amazon.in/20-Pack-Micro-Limit-Switch/dp/B08VRWCC5C
+[Link](https://www.amazon.in/20-Pack-Micro-Limit-Switch/dp/B08VRWCC5C)
 
 Miscellaneous
 Flexible Shaft Couplers (Pack) – ≈ $15 USD
 Example flexible coupler:
-https://www.amazon.in/Flexible-Coupling-Shaft-Connector-12mm/dp/B07D3DB5NJ
+[Link](https://www.amazon.in/Flexible-Coupling-Shaft-Connector-12mm/dp/B07D3DB5NJ)
 Fasteners, Bearings, Wiring, Cable Ties, Misc Hardware – ≈ $40 USD
 Local hardware store — widely available
 
 Estimated Total
 SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Drive Components~$45Frame & Plates~$240Motors~$140Drivers & Power~$90Controller + I/O~$40Misc Hardware~$40Total≈ $700 USD
 
-**Total time spent: 2h 45m**
+**Total time spent: 3h 45m**
 
 ---
 
 # Day 8 — 01.05.2026: The Research for Sanity
 
-Yesterday I pitched my project again. For the pitch, I chose components from random websites to get an estimate. Today, I planned to start fresh with finding parts of my projects starting from the very foundation to the top, one by one gradually.
+Yesterday I pitched the project again. The BOM was assembled from placeholder sources to establish price ranges — today the goal was to actually commit to real components, working from the structural base upward.
 
-Very peaceful plan, isn't it? To start fresh, peacefully, I decided to go back to my roots, — Day 0. I clicked on that [legendary video](https://www.youtube.com/shorts/74T0LF2l5Ck) again.
- 
-I have something really embarrassing thing to admit: Do you know why I chose the carraige architecture of [Rowan](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) in the first place?
+Going back to first principles, I re-watched the [original TriTeron video](https://www.youtube.com/shorts/74T0LF2l5Ck) to re-anchor the architecture.
 
-Quite embarrassingly, I wasn't able to spot how there are two completely independent outputs on a single rail through the linear guides on [Rudmin's video](https://www.youtube.com/watch?v=6EtXycVGJg4).
+Something worth admitting: the reason I had switched to [Rowan's carriage approach](https://www.youtube.com/watch?v=io4S9amExNM&t=1s) in the first place was that I hadn't correctly understood [Rudmin's drive system](https://www.youtube.com/watch?v=6EtXycVGJg4). Specifically, I missed that there are two independent outputs on a single rail.
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/43b30add-53ae-4e89-a968-f8cbf16d96b9" />
 
-But today, out of nowhere, I understood it. I actually did understand how it works now. You see, the front two Z axis legs are controlled by a belt in the center. There are three belts and now that I spotted the middle one, I finally understand this system.
+Looking at it again: the front two Z-axis legs are controlled by a belt running through the centre. There are three belts total, and once I spotted the middle one, the whole system clicked. The two outputs on a single rail aren't separated by physical distance — they're driven by independent belt loops running in the same channel.
 
-I have now decided to follow the simple, sleek and minimalist [architecture of Rudmin](https://www.youtube.com/watch?v=6EtXycVGJg4). This means, there will be the following changes in my plan:
+With that understood, the simpler Rudmin architecture is clearly preferable. The changes this implies:
 
-* I will use only ball screws for my project, for the main rail, like my original plan.
-* I will completely eradicate the carriage from my project, sorry Rowan.
-* I will use 1 metre aluminium extrusions, which suggest about 900 to 950 mm usable travel.
+* Ball screws for the main rail, as originally planned.
+* Carriage eliminated entirely.
+* 1 metre aluminium extrusions, targeting approximately 900–950 mm usable travel.
 
-Overall, this will ensure that my design looks simple, sleek and minimalist, and most importantly cheap.
+The main benefit here is cost reduction: fewer custom parts, simpler assembly, and less material overall.
 
-I started making my BOM again, from scratch. I tried to find the sources of my parts from Indian websites, this time. I went in this order:
+I rebuilt the BOM from scratch with Indian sources:
 
-* [4040 T-slot aluminium extrusions](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile) really cheap extrusion from Robokits.
-* [MGN15H Rail](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) from Robu.in.
-* [MGN15H Sliding Block](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) from Robu.in.
-* [SFU1610 Ball Screw 1000mm](https://novo3d.in/ball-screw-sfu1610/) from Novo3D, along with its supports.
-* [TB6600 Stepper Motor Driver](https://robu.in/product/tb6600-stepper-motor-driver-controller-4a-942v-ttl-16-micro-step-cnc-1-axis-upgraded-version-425786-stepper-motor?gclid=CjwKCAjwntHPBhAaEiwA_Xp6RtwUATtWsr6ENAJnefCDD7A_hFCG6G0U4FvI7KcqhoYZApcELbKBxhoCF8cQAvD_BwE&gad_source=1&gbraid=0AAAAADvLFWeX0A7E-QWDpuYY72tUYPPuB&gad_campaignid=20381096599) from Robu.in.
-* [NEMA23 PR57HS51](https://robu.in/product/nema23-pr57hs51-2804-10-1kg-cm-stepper-motor-round-type-shaft)
+* [4040 T-slot aluminium extrusions](https://robokits.co.in/mechanical-parts/aluminium-profile-accessories/astro-anodized-heavy-duty-industrial-grade-aluminium-4040-t-slot-profile) — Robokits.
+* [MGN15H Rail](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) — Robu.in.
+* [MGN15H Sliding Block](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) — Robu.in.
+* [SFU1610 Ball Screw 1000mm](https://novo3d.in/ball-screw-sfu1610/) — Novo3D, with supports.
+* [TB6600 Stepper Motor Driver](https://robu.in/product/tb6600-stepper-motor-driver-controller-4a-942v-ttl-16-micro-step-cnc-1-axis-upgraded-version-425786-stepper-motor?gclid=CjwKCAjwntHPBhAaEiwA_Xp6RtwUATtWsr6ENAJnefCDD7A_hFCG6G0U4FvI7KcqhoYZApcELbKBxhoCF8cQAvD_BwE&gad_source=1&gbraid=0AAAAADvLFWeX0A7E-QWDpuYY72tUYPPuB&gad_campaignid=20381096599) — Robu.in.
+* [NEMA23 PR57HS51](https://robu.in/product/nema23-pr57hs51-2804-10-1kg-cm-stepper-motor-round-type-shaft) — Robu.in.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1db26124-16e5-458f-995f-0c8feac88678" />
 
-But then, I decided to change my approach. The cost went up to $288 really fast. If cost goes up this fast, I wouldn't be able to complete my project within $700. I am thinking that I should totally get rid of the ball screw as well this time.
+The BOM hit $288 before accounting for the arm, fasteners, or electronics. With that rate of growth, staying under $700 total isn't feasible if ball screws stay in. The precision advantage of ball screws over belts is real, but it's not justified for this use case — the arm payload is modest, and positioning repeatability isn't the limiting factor at this stage.
 
-Thus, I will be using belts. Now, I had to do some research on belts, before I know what do buy. And after checking out some options in JLCMC, and reading those [datasheets](https://jlcmc.com/product/s/C02/CDTM/timing-belts-2gt) I think I know something about the different options and what to actually choose. I asked Google as well, but it was pointless.
+Decision: drop ball screws, switch to belts.
 
-Finally, I settled on HTD 5M Timing Belt, which has 5 mm pitch and is 15 mm thick, or 20 mm thick. Why this? This is because the Robotic Arm will add up significant mass to the robot, and all the stress will cause the belts to stretch, and perform poorly which I don't want.
+For belt selection, I went through the JLCMC [timing belt datasheets](https://jlcmc.com/product/s/C02/CDTM/timing-belts-2gt) and checked a few options. The arm adds meaningful mass to the head, and under load a GT2 belt will stretch and lose accuracy. HTD 5M (5 mm pitch, 15 or 20 mm width) gives better load capacity and is more appropriate for this application.
 
-For now, I eradicated Ball Screws from my BOM and plan both completely, and my price comes down to just about $160.
+Removing ball screws from the BOM brought the running total down to approximately $160.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2467ea2-3b5d-42df-a6ee-9e2d4bbf6254" />
 
-I can't find the source of the belts I need from any website except IndiaMart. I guess I'll have to contact vendors for this.
+One sourcing gap: HTD 5M belts don't appear to be stocked by any Indian e-commerce site I found. IndiaMart has listings, but they require direct vendor contact. Will need to follow up on that.
 
 **Total time spent: 4h 45m**
 
@@ -380,15 +347,66 @@ Today the pitch was approved finally. Now I am finally sure that I can continue 
 
 I made the following finalised decisions:
 
-* I will make the 
+* I will make the usable rail length 900 to 950 mm.
+* I am absolutely eradicating ball screws from my project, for linear belts.
+* I will keep the arm size at the size of Meca500.
 
-* 
+I now finally had everything nescessary to start modelling my PATRA again, with a clear goal in my mind. But looking at my BOM, and clicking those links, I saw that not a single source I have selected has a 3D model attached with them. That changed the direction of the entire day. Up until this point, sourcing was a cost problem. Now it became a CAD problem. Every link I had carefully collected — Robu, Robokits, Novo3D, Amazon listings — had images, basic specs, sometimes even dimensional drawings. But no STEP files.
+
+And this matters more than it sounds.
+
+So, why didn't I used the part name and dowloaded the model from somewhere else? It is because everytime I visit a site, even though the thing is same, I see in the drawings they are a little different and inconsistent, which is unprofessional and intolerable becuase I don't want to risk the assembly by ordering wrong parts. Even pulley hub thickness varies between sellers.
+
+But the Indian hobby market behaves differently than industrial suppliers: Most sites sell parts. Very few provide CAD. Even fewer provide verified manufacturer datasheets. Many are resellers of unnamed OEM parts.
+
+So I was stuck in between two worlds:
+
+Industrial-grade suppliers
+→ Reliable: OK fine
+→ CAD models: Yes!
+→ Datasheets: Awesome!
+→ Expensive: Not fine
+
+Hobby-market suppliers
+→ Affordable: Only this matters
+→ Available locally: Important!
+→ No CAD: Why?
+→ Ambiguous tolerances: Very unprofessional
+
+So, this is what I did: I started from the very foundation, and worked my way up till I complete the First Stage. Instead of abandoning the plan, I tried systematic verification.
+
+1. **4040 Aluminium Extrusion** from Robokits 4040 T-Slot (Astro Industrial grade): I checked slot width (8 mm vs 10 mm variants), core wall thickness, center bore diameter, and outer corner radius. There is only a 2D drawing image provided. No tolerance specifications. No downloadable 3D model. So, I chose [this](https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA) from 3DPrintronics, instead.
+
+2. **MGN15H Rail & Block** — Candidate: Robu MGN15H Sliding Block. I checked rail height (H dimension), block width (W), mounting hole pitch (C dimension), and mounting hole diameter. Only basic specifications are listed. No full dimensional drawing is available. The official HIWIN datasheet shows precise tolerances and preload classes, but Indian sellers do not specify the actual manufacturer. “MGN15H” is a size class, not a brand guarantee. So, I trusted Robu and decided to use model from JLCMC.
+
+3. **NEMA23 PR57HS51** — Candidate: Robu NEMA23 PR57HS51. Torque is approximately 1.0–1.2 Nm. Body length varies by torque variant. I compared body length, shaft diameter, shaft length, and mounting face standard (47.14 mm square pattern). The mounting pattern is standardized. The body length is not. So, I am also trusting this.
+
+Okay, now this is the BOM for the Foundation Structure, for now:
+
+Item	Quantity	Cost	Total Cost	Side Note	Link
+Aluminium 2020 T-Slot Profile Extrusion — 1 metre	1	 $4.66 	 $4.66 		https://robu.in/product/easymech-20x20-t-slot-aluminium-extrusion-profile-1000-mm
+Aluminium 4040 T-Slot Profile Extrusion — 1 metre	2	 $13.93 	 $27.85 		https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA
+MGN15H Linear Guide Rail — 1 metre	2	 $21.64 	 $43.28 		https://robu.in/product/mgn15h-linear-guide-rail-1m-2
+NEMA23 PR57HS51	3	 $15.81 	 $47.43 		https://robu.in/product/nema23-pr57hs51-2804-10-1kg-cm-stepper-motor-round-type-shaft
+TB6600 Stepper Motor Driver Controller	3	 $4.21 	 $12.63 		https://robu.in/product/tb6600-stepper-motor-driver-controller-4a-942v-ttl-16-micro-step-cnc-1-axis-upgraded-version-425786-stepper-motor?gclid=CjwKCAjwntHPBhAaEiwA_Xp6RtwUATtWsr6ENAJnefCDD7A_hFCG6G0U4FvI7KcqhoYZApcELbKBxhoCF8cQAvD_BwE&gad_source=1&gbraid=0AAAAADvLFWeX0A7E-QWDpuYY72tUYPPuB&gad_campaignid=20381096599
+MGN15H Sliding Block	4	 $7.18 	 $28.72 		https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
+Total			 $159.91
+
+I will continue with this for the next day, and start modelling again.
+
+Total time spent: 3h 45m
 
 **Total time spent: 3h 45m**
 
 ---
 
-# Day 10 — 03.05.2026: 
-# Day 11 — 04.05.2026: 
+# Day 10 — 03.05.2026: Modelling Based on New Plan
+
+**Total time spent: 3h 20m**
+
+---
+
+# Day 11 — 04.05.2026: First Stage Progress
+
 # Day 12 — 05.05.2026: 
 # Day 13 — 06.05.2026: 
