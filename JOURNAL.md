@@ -395,7 +395,13 @@ Total time spent: 3h 45m
 
 # Day 10 — 03.05.2026: Modelling Based on New Plan
 
-Today I started modelling PATRA again from scratch based on the components that were finalised for the first stage, yesterday.
+Today I started modelling PATRA again from scratch based on the components that were finalised for the first stage, yesterday. I wanted to start fresh. I had my parts listed, so I simply went for the 3d models one by one.
+
+* **[Aluminium Extrusion](https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA) from 3DPrintonics:** For the model, I went to JLCMC and chose [TXCL-H7-4040E-L1000](https://jlcmc.com/product/s/T01/TXCL/extruded-aluminum-t-slot-40-series(eu)-8mm-slot-width?k=TXCL-H7-4040E-L1000&productModelNumber=TXCL-H7-4040E-L%5B50~6000%2F0.1%5D), and made sure that the exterior of the profiles match, wven thought the interior dosen't.
+
+* 
+
+
 
 **Total time spent: 3h 20m**
 
