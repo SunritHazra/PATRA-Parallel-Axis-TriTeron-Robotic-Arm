@@ -397,9 +397,27 @@ Total time spent: 3h 45m
 
 Today I started modelling PATRA again from scratch based on the components that were finalised for the first stage, yesterday. I wanted to start fresh. I had my parts listed, so I simply went for the 3d models one by one.
 
-* **[Aluminium Extrusion](https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA) from 3DPrintonics:** For the model, I went to JLCMC and chose [TXCL-H7-4040E-L1000](https://jlcmc.com/product/s/T01/TXCL/extruded-aluminum-t-slot-40-series(eu)-8mm-slot-width?k=TXCL-H7-4040E-L1000&productModelNumber=TXCL-H7-4040E-L%5B50~6000%2F0.1%5D), and made sure that the exterior of the profiles match, wven thought the interior dosen't.
+1. **[4040 Aluminium Extrusion](https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA) from 3DPrintonics:** For the model, I went to JLCMC and chose [TXCL-H7-4040E-L1000](https://jlcmc.com/product/s/T01/TXCL/extruded-aluminum-t-slot-40-series(eu)-8mm-slot-width?k=TXCL-H7-4040E-L1000&productModelNumber=TXCL-H7-4040E-L%5B50~6000%2F0.1%5D), and made sure that the exterior of the profiles match, wven thought the interior dosen't.
 
-* 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e7cef8d2-06e1-49ae-8467-1d2626996399" />
+
+2. **[2020 Aluminium Extrusion](https://robu.in/product/easymech-20x20-t-slot-aluminium-extrusion-profile-1000-mm) from Robu:** For the model, I again went to JLCMC and I chose [TXCJ-H7-2020-L1000](https://jlcmc.com/product/s/T01/TXCJ/extruded-aluminum-t-slot-20-series(eu)?k=TXCJ-H7-2020-L1000&productModelNumber=TXCJ-H7-2020-L%5B50~6000%2F0.1%5D) for the model.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1a07dde-2669-431b-9970-775c29f5b4a0" />
+
+3. **[Linear Rail](https://robu.in/product/mgn15h-linear-guide-rail-1m-2) from Robu:** I sourced the model from JLCMC. I used [E-BMN15H-2-L1000-ZF-C-E20](https://jlcmc.com/product/s/B03/E-BMN/economical-linear-guide-mini-standard-type-7-9-12-15?k=E-BMN15H-2-L1000-ZF-C-E20&productModelNumber=E-BMN15H-2-L%5B70~1800%2F1%5D-ZF-C-E%5B0~39%2F0.5%5D) for reference.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6bf120ce-1bd0-4ff0-b6dc-b1268900974d" />
+
+5. **[Linear Guides](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail) from Robu:** I sourced the model from JLCMC. I used [E-BMN15H-2-L1000-ZF-C-E20](https://jlcmc.com/product/s/B03/E-BMN/economical-linear-guide-mini-standard-type-7-9-12-15?k=E-BMN15H-2-L1000-ZF-C-E20&productModelNumber=E-BMN15H-2-L%5B70~1800%2F1%5D-ZF-C-E%5B0~39%2F0.5%5D) for reference.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/edb5886a-23ee-43a3-bb78-ea120d2b0e70" />
+
+Then I went back to researching about motors I could potentially use, and I tried to gather estimates of my producable torque from PATRA.
+
+I then dived into a little foreseeing the future. I know that CNC machinging is really pivotal to give a robotic look to my PATRA, and no kind of 3D printing could match that feeling. But, CNC is very expensive. I exported a random leg of Rowan's tirpteron to use it for an instant quote. I started searching for cheap CNC services in India.
+
+Here is a what I found:
 
 
 
@@ -407,6 +425,30 @@ Today I started modelling PATRA again from scratch based on the components that 
 
 ---
 
-# Day 11 — 04.05.2026: First Stage Progress
-# Day 12 — 05.05.2026: 
-# Day 13 — 06.05.2026: 
+# Day 12 — 04.05.2026: Research on LC40 Family
+
+**Total time spent: 3h 40m**
+
+---
+
+# Day 13 — 08.05.2026: First Stage Progress
+
+I began by making some changes to my existing model. The changes are as follows:
+
+1. I replaced model of [E-BMN15H-2-L1000-ZF-C-E20](https://jlcmc.com/product/s/B03/E-BMN/economical-linear-guide-mini-standard-type-7-9-12-15?k=E-BMN15H-2-L1000-ZF-C-E20&productModelNumber=E-BMN15H-2-L%5B70~1800%2F1%5D-ZF-C-E%5B0~39%2F0.5%5D) from JLCMC with [MGN15H](https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729) from TraceParts, as I saw that the rail was a little different from what I am buying from Robu.in.
+
+2. I replaced [NEMA23 PR57HS51](https://robu.in/product/nema23-pr57hs51-2804-10-1kg-cm-stepper-motor-round-type-shaft) with [NEMA23 PR57HS76](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) as I realized I needed more torque.
+
+This ensures that my model is accurate and the robot is stronger and more stiffer. The first motor provided 10 Nm torque, but the new one provides 18.9 Nm torque.
+
+I then took a lot of inspiration from the LC4O family specifically, [LC40B-KM02](https://www.zaber.com/products/linear-stages/LC40B-KM02/specs?part=LC40B1000-KM02&srsltid=AfmBOootwqUCUVAZim0fLhepMvoiqAwhXvtNfsj9dF_MdNFuC1e7YDq7)] for my linear rails. I continued with updating my model with the aforementioned changes, and then I added As-built Slider joints and grounded components to parents.
+
+I then started finding the model of NEMA 23 motor which matches length of 76 mm, and after a few minutes of searching, I found [this](https://grabcad.com/library/nema-23-stepper-76mm-1), which matches my needs exactly.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/09f7862c-0b30-4d3f-b97b-9d546d787af9" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7ebeb4bd-72df-41c9-9a42-41edee29db31" />
+
+**Total time spent: 3h 30m**
+
+---
