@@ -60,7 +60,7 @@ Things I Learned:
 * How can I make my robotic arm modular
 * A little about the LC40 family
 
-**Total time spent: 5h 54m**
+**Total time spent: 6h 0m**
 
 ---
 
@@ -80,7 +80,7 @@ The most frustrating part of this phase was the overwhelming number of choices. 
 
 **Please note that I did not use AI for any fields of the pitch. I have only used it to search the sources of my parts (pretty much like Google, but better). Then, manually I visited the sites and made the estimates. Please try to understand.**
 
-**Total time spent: 4h 42m**
+**Total time spent: 4h 52m**
 
 ---
 
@@ -122,7 +122,7 @@ After more hours of iteration:
 
 For a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, exploiting the Fusion Timeline. Fusion being parametric saved a lot of time here.
 
-**Total time spent: 7h 22m**
+**Total time spent: 7h 32m**
 
 ---
 
@@ -157,7 +157,7 @@ Decision: delete all joints, reset the motion setup, and re-examine the underlyi
 
 No pitch response yet. Waiting on that before making any major structural decisions on the build.
 
-**Total time spent: 5h 40m**
+**Total time spent: 5h 50m**
 
 ---
 
@@ -207,7 +207,7 @@ I also did targeted research on the Indian market for the three main structural 
 
 The BOM from today was used directly as the basis for the re-pitch on 30th April.
 
-**Total time spent: 4h 45m**
+**Total time spent: 4h 55m**
 
 ---
 
@@ -290,7 +290,7 @@ Local hardware store — widely available
 Estimated Total
 SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Drive Components~$45Frame & Plates~$240Motors~$140Drivers & Power~$90Controller + I/O~$40Misc Hardware~$40Total≈ $700 USD
 
-**Total time spent: 3h 45m**
+**Total time spent: 3h 55m**
 
 ---
 
@@ -337,7 +337,7 @@ Removing ball screws from the BOM brought the running total down to approximatel
 
 One sourcing gap: HTD 5M belts don't appear to be stocked by any Indian e-commerce site I found. IndiaMart has listings, but they require direct vendor contact. Will need to follow up on that.
 
-**Total time spent: 4h 45m**
+**Total time spent: 4h 55m**
 
 ---
 
@@ -387,7 +387,7 @@ Okay, now this is the BOM for the Foundation Structure, for now:
 
 I will continue with this for the next day, and start modelling again.
 
-Total time spent: 3h 45m
+Total time spent: 3h 55m
 
 **Total time spent: 3h 45m**
 
@@ -415,25 +415,62 @@ Today I started modelling PATRA again from scratch based on the components that 
 
 Then I went back to researching about motors I could potentially use, and I tried to gather estimates of my producable torque from PATRA.
 
-I then dived into a little foreseeing the future. I know that CNC machinging is really pivotal to give a robotic look to my PATRA, and no kind of 3D printing could match that feeling. But, CNC is very expensive. I exported a random leg of Rowan's tirpteron to use it for an instant quote. I started searching for cheap CNC services in India.
-
 Here is a what I found:
 
+Moving mass per axis	~5 kg
+Static torque requirement	~0.49 N·m
+Dynamic/stiff torque requirement	~1.5–1.8 N·m
+Your old motor running torque	~0.7–0.8 N·m
+Recommended motor torque	≥ 1.5–2.0 N·m
+Good motor choice	~18.9 kg·cm (~1.85 N·m)
+Great motor choice	~30.6 kg·cm (~3.0 N·m)
 
+Some important points tobe noted:
 
-**Total time spent: 3h 20m**
+* I took some help from Claude AI to teach me how to even calculate this
+* And also for some research on the constraints, like estimating the moving mass based on a real Meca500 with maximum payload.
+* Then, I myself made some estimates, got it checked through AI again, understood the maths and mistakes
+* Then again tried and then made the final estimates.
+* The Good motor choice is based on [NEMA23 PR57HS76](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft).
+* The Great motor choice is based on [NEMA23 PR57HS112](https://robu.in/product/pro-range-nema23-pr57hs112-3004-03-30-61-kg-cm-hybrid-bipolar-stepper-motor-round-type-shaft).
+
+**Total time spent: 3h 30m**
 
 ---
 
-# Day 12 — 04.05.2026: Research on LC40 Family
+# Day 12 — 04.05.2026: Research on Linear Rail CNC Estimates
 
-**Total time spent: 3h 40m**
+I did some research on the MGN15H I am choosing, and after comparing models, I found out that the profile I sourced from JLCMC and the profile avaiable in HIWIN do not match exactly. The dimensions are a little diffferent as well. I went to Robu.in to check the dimensions, but they didn't match exactly.
+
+This meant that I have to choose my 3D model of MGN15H rail from TraceParts HIWIN.
+
+I found [this](https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729) from TraceParts, and I downloaded it. I will use it in my model the next day.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3ec1d41c-ce74-4d99-8577-02b12531358d" />
+
+I then dived into a little foreseeing the future. I know that CNC machinging is really pivotal to give a robotic look to my PATRA, and no kind of 3D printing could match that feeling. But, CNC is very expensive. I exported a random leg of Rowan's tirpteron to use it for an instant quote. I started searching for cheap CNC services in India.
+
+1. **[Igus](https://iglidur-cnc-designer.igus.tools/result/drawing):** The first one I tried was from Igus. I first thoutght that since they have a branch in India, I can expect their machined parts without any customs, cheaply. But I was astonished to see the amount in Pound Sterling. The cost was 3,139.83 GBP. Looking at the amount I realsed beforehand that this is too much. Just as I converted the 3,139.83 GBP to INR, it came literally 4,04,245.26 INR which is completely crazy.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8c17b34f-da34-4bf3-8174-de8b505bc730" />
+
+2. **[JLCCNC](https://jlccnc.com/cnc-machining-quote):** I have experience from JLCMC. Both of ordering and paying customs, so there was no way I was going to source my parts from JLCMC. But just to see how much it costs, out of curiosity, I uploaded the same model here to see the price. And, as I expected it was a lot cheaper, ye expensive for me. Price was quoted at $54.16.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c11e0e9b-6d01-4784-905c-fd6a0f7b36f5" />
+
+3. **[PCBWay](https://www.pcbway.com/rapid-prototyping/manufacture/?type=1&reffercode=W):** Again, as I expected, the prices were much higher compared to JLCMC. The cheapest possible option with Aluminium 6061 was quoted at $329.46, which is way too much expensive for an arm.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dbc4f73a-2304-47a2-9749-9d6cf7e5e4e5" />
+
+I then made the hard desicion of choosing only 3D printing for all the parts of my project. I would either print in my future printer, or I would choose MJF or SLA printing from local sources if possible.
+
+**Total time spent: 3h 50m**
 
 ---
 
-# Day 13 — 08.05.2026: First Stage Progress
+# Day 13 — 08.05.2026: First Stage Progress — Part 1
 
-I began by making some changes to my existing model. The changes are as follows:
+I began by making some changes to my existing model, as I came accross some problems while continuing my modelling. For making the changes I had to search a lot, in many websites, and download a lot of stuff to import and see it would work. Anyways, the changes are as follows:
 
 1. I replaced model of [E-BMN15H-2-L1000-ZF-C-E20](https://jlcmc.com/product/s/B03/E-BMN/economical-linear-guide-mini-standard-type-7-9-12-15?k=E-BMN15H-2-L1000-ZF-C-E20&productModelNumber=E-BMN15H-2-L%5B70~1800%2F1%5D-ZF-C-E%5B0~39%2F0.5%5D) from JLCMC with [MGN15H](https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729) from TraceParts, as I saw that the rail was a little different from what I am buying from Robu.in.
 
@@ -448,6 +485,14 @@ I then started finding the model of NEMA 23 motor which matches length of 76 mm,
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/09f7862c-0b30-4d3f-b97b-9d546d787af9" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7ebeb4bd-72df-41c9-9a42-41edee29db31" />
+
+**Total time spent: 3h 35m**
+
+---
+
+# Day 13 — 09.05.2026: First Stage Progress — Part 2
+
+
 
 **Total time spent: 3h 30m**
 
