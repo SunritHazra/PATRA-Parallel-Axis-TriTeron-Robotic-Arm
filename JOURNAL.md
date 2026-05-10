@@ -126,7 +126,7 @@ After more hours of iteration:
 
 For a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, exploiting the Fusion Timeline. Fusion being parametric saved a lot of time here.
 
-**Total time spent: 7h 32m**
+**Total time spent: 8h 12m**
 
 ---
 
@@ -494,7 +494,7 @@ I then started finding the model of NEMA 23 motor which matches length of 76 mm,
 
 ---
 
-# Day 13 — 09.05.2026: First Stage Progress — Part 2
+# Day 14 — 09.05.2026: First Stage Progress — Part 2
 
 I continued working on the first stage. Previosly the motors were not aligned. So, thsis time I imported [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and added it to the assembly. Then I added joints and then I duplicated it with joints, and made it symmetrical.
 
@@ -542,6 +542,40 @@ Thus I redrew the sketch and brought it lower, and things improved a bit.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3717f365-194a-48fe-87bc-de2f4361b503" />
 
+It still operlaps. I guess this is all for today, next day I will continue this.
+
 **Total time spent: 3h 30m**
 
 ---
+
+# Day 15 — 10.05.2026: First Stage Progress — Part 3
+
+I picked up exactly where I left off yesterday. The return belt was overlapping with the 4040 extrusion geometry, which was not okay. It meant that I had to continue on one or more than one of the following paths:
+
+1. I eradicate the NEMA23 mounting bracket and make my own mounting bracket, for 3D printing it
+2. I keep the NEMA23 mounting bracket but position it below the 4040 extrusion, making the architecture prone to more bending and atress
+3. I use a pulley with a bigger and possibly unnatural diameter, that must be sourced from either big stores or custom made
+4. I add two more pulleys to position the return belt to the bottom, making the system contain more moving parts
+5. I replace the 4040 t-slot extrusion with 4040 double t-slot extrusion, that has a hollow inside but is more expensive
+
+I first tried path 2 and 5.
+
+* For path 2: I tried repositioning the brackets after supressing the joints, the system seemed to work till I realize that it has become too fragile to take the mass of PATRA, so I dropped it.
+
+* For path 5: I first surfed the internet to look at the prices. After looking at 6 to 7 different websites, I has already realised it is more expensive. [This](https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-6mm?srsltid=AfmBOopm2YIEr6eGFaIxCXIP6218Ygof1mdUS4i0Hx8fKVX-2w-9lQBm) one from 3DPrintonics for example costs 3200 INR per metre, [this](https://www.indiamart.com/proddetail/machifit-4040-double-t-slot-aluminum-extrusion-40x40mm-aluminum-profile-extrusion-frame-based-on-2020-for-cnc-25967776433.html?srsltid=AfmBOoq9RSyFu8JxcKxos3uZti6KXIaZwqFABJFlg8DoPGHpWxLGqibd) from IndiaMART costs 20272 per piece, and [this](https://novo3d.in/aluminium-profile-4040/) from Novo3D costs 2399 INR. Since this was reaching almost double the cost, I had to drop this.
+
+Then I chose path 1 and 3, where I did the following:
+
+Firstly, I removed the [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and then started sketching my Motor Mount/Case, and extruded out components, for path 1.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6b605459-58ce-43a1-9f27-4eda4eea2bff" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b8a2753-0217-4d92-8411-f706a8ac02f6" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/061a2c0c-059f-4b4a-94ee-1a83cfb2d6ba" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/376dea29-f94b-4bc8-9534-7b3bd37bb9b6" />
+
+Secondly, I surfed the internet to find 
+
+**Total time spent: 4h 50m**
