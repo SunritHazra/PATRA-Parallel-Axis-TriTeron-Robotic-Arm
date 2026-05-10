@@ -568,7 +568,19 @@ Then I chose path 1 and 3, where I did the following:
 
 Firstly, I removed the [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and then started sketching my Motor Mount/Case, and extruded out components, for path 1.
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6b605459-58ce-43a1-9f27-4eda4eea2bff" />
 
+g
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b8a2753-0217-4d92-8411-f706a8ac02f6" />
+
+g
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/061a2c0c-059f-4b4a-94ee-1a83cfb2d6ba" />
+
+g
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/376dea29-f94b-4bc8-9534-7b3bd37bb9b6" />
 
 Secondly, I surfed the internet to find 
 
