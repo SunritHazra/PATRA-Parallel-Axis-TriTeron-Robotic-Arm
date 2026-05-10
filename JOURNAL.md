@@ -496,7 +496,51 @@ I then started finding the model of NEMA 23 motor which matches length of 76 mm,
 
 # Day 13 — 09.05.2026: First Stage Progress — Part 2
 
+I continued working on the first stage. Previosly the motors were not aligned. So, thsis time I imported [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and added it to the assembly. Then I added joints and then I duplicated it with joints, and made it symmetrical.
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1be429f0-4029-4d24-aed7-e011c30ab6b9" />
+
+I continued working on the first stage from the point where I had finally fixed the motor alignment issue. Previously, the motors were floating in space without a true structural reference. This time, I decided to anchor everything properly. I imported the [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and placed it onto the 4040 extrusion. Once positioned, I constrained it fully using rigid joints, then duplicated the entire bracket assembly along with its joints and mirrored it to maintain symmetry. That symmetry mattered.
+
+After locking down the brackets, I moved toward the belt architecture. I made a deliberate decision here: instead of an offset belt system, I wanted a stacked belt configuration. That means the belt would pass directly above the linear rail, and specifically above the linear block. Much like the design architecture of Rudmin.
+
+Next I started making sketch for the belt path. I wanted to make a stacked belt architecture rather than an offset belt architecture, which meant that I had to make the belt directly go above the linear rail, above the linear block.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e21f17be-be3d-4bf3-b5af-a4351a50c4ba" />
+
+To calculate the radius needed for the sketch, I calculated the height of the belt from the upper face of 4040 extrusion. So I began calculating the stacked height from the top face of the 4040 extrusion.
+
+The linear rail selected is MGN15H mounted directly on the extrusion. From datasheets and model measurements:
+
+4040 extrusion height: 40 mm
+MGN15 rail height: ~10 mm
+MGN15H carriage block height above rail: ~16 mm
+
+This places the top of the carriage approximately 26 mm above the top face of the extrusion. Since I wanted at least 1.5 mm clearance between the belt and the carriage body, I set the belt centerline at 27.5 mm above the extrusion surface. That dimension became critical. It defines pulley mounting height, motor shaft alignment, and idler spacing.
+
+With a 20T HTD 5M pulley:
+
+Pitch = 5 mm
+Teeth = 20
+Pitch diameter ≈ 31.83 mm
+Effective radius ≈ 15.9 mm
+
+That means the motor shaft center must sit approximately 27.5 mm above the extrusion to maintain belt alignment. The bracket placement now isn’t arbitrary — it’s dictated by pulley geometry. This cascades into spacer requirements between the bracket and extrusion, and potentially washer stacks or a custom motor riser plate.
+
+The return path of the belt is still unresolved. In stacked architecture, the return must pass either:
+
+Below the carriage plate
+Or through a recessed idler channel
+
+In my first attempt, the return belt passes through the extrusion, as you can see, which is not possible.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/06d7271c-2b51-42ac-9e56-7a48c3481b45" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8dc7c24e-bc87-4dfd-af5a-108549bc5b21" />
+
+Thus I redrew the sketch and brought it lower, and things improved a bit.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3717f365-194a-48fe-87bc-de2f4361b503" />
 
 **Total time spent: 3h 30m**
 
