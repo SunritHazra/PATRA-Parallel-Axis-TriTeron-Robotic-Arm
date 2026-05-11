@@ -570,20 +570,33 @@ Firstly, I removed the [NEMA23 mounting bracket aluminum](https://grabcad.com/li
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6b605459-58ce-43a1-9f27-4eda4eea2bff" />
 
-g
+Then I extruded 5 mm from the sketch and checked if it looked like an aliminium bracket, and yes it most certainly did. It actually looks nice.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b8a2753-0217-4d92-8411-f706a8ac02f6" />
 
-g
+Next I copied the wall on the other side and added walls to make it an enclosure.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/061a2c0c-059f-4b4a-94ee-1a83cfb2d6ba" />
 
-g
+I mirrored the component on the other end of the system for the idler.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/376dea29-f94b-4bc8-9534-7b3bd37bb9b6" />
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/760eb93a-cd02-47ef-aa43-ea68cba2b583" />
 
-Secondly, I surfed the internet to find 
+Secondly, I surfed the internet to find the pulley I needed. After checking in both [JLCMC](https://jlcmc.com/product/C03/timing-belt-pulleys) and [MISUMI India](https://in.misumi-ec.com/vona2/mech/M1000000000/M1002000000/M1002030000/), and I realised that MISUMI is more expensive than JLCMC, but wehn we add shipping customs, MISUMI is the smarter choice. Additionally, MISUMI has a lot of configurations available with 3D model.
+
+I chose [this](https://in.misumi-ec.com/vona2/detail/110310532889/?CategorySpec=00000005784%3A%3Aak%2C&list=PageCategory) pulley from MISUMI that costs 1,064.73 INR for now. But there is a problem: The minimum bore diameter available is 10 mm, but I need 6.35 mm, as NEMA23 PR57HS76 has 6.35 mm bore. I will see what I can do make this structurally correct. Anyways, I added it to the BOM, and downloaded the STEP files. I need two of them.
+
+Next, for the idler I am choosing [this](https://in.misumi-ec.com/vona2/detail/110310533069/?CategorySpec=00000005784%3A%3Aak%2C&list=PageCategory) from MISUMI that costs 1,621.82 INR each. I added it to the BOM, and downloaded the STEP files. I need two of them.
+
+
+
 
 **Total time spent: 4h 50m**
 
 ---
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7843fda2-afc5-4a4e-9d00-11b9f5b18972" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d6919113-ca2d-4851-8f12-f6a25b61f894" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/23017fbc-4351-45dc-b2bf-39eed43d4a6b" />
