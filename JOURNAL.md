@@ -566,15 +566,15 @@ I first tried path 2 and 5.
 
 Then I chose path 1 and 3, where I did the following:
 
-Firstly, I removed the [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and then started sketching my Motor Mount/Case, and extruded out components, for path 1.
+Firstly, I removed the [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and then started sketching my Motor Mount/Case, and extruded out components, for path 1. The goal was to reduce unnecessary thickness and directly control the stacked height.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6b605459-58ce-43a1-9f27-4eda4eea2bff" />
 
-Then I extruded 5 mm from the sketch and checked if it looked like an aliminium bracket, and yes it most certainly did. It actually looks nice.
+Then I extruded 5 mm from the sketch and checked if it looked like an aliminium bracket, and yes it most certainly did. It actually looks nice. Five millimetres gives enough wall strength for prototype testing, especially since I will print at 100% infill.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b8a2753-0217-4d92-8411-f706a8ac02f6" />
 
-Next I copied the wall on the other side and added walls to make it an enclosure.
+Next I copied the wall on the other side and added walls to make it an enclosure. This enclosure now supports both the pulley and the idler region while also acting as structural reinforcement.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/061a2c0c-059f-4b4a-94ee-1a83cfb2d6ba" />
 
@@ -582,21 +582,79 @@ I mirrored the component on the other end of the system for the idler.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/760eb93a-cd02-47ef-aa43-ea68cba2b583" />
 
-Secondly, I surfed the internet to find the pulley I needed. After checking in both [JLCMC](https://jlcmc.com/product/C03/timing-belt-pulleys) and [MISUMI India](https://in.misumi-ec.com/vona2/mech/M1000000000/M1002000000/M1002030000/), and I realised that MISUMI is more expensive than JLCMC, but wehn we add shipping customs, MISUMI is the smarter choice. Additionally, MISUMI has a lot of configurations available with 3D model.
+This made a nice looking enclosure than can house beth the idler and the pulley, completing the whole system.
+
+Secondly, I surfed the internet (for a long time) to find the pulley I needed. After checking in both [JLCMC](https://jlcmc.com/product/C03/timing-belt-pulleys) and [MISUMI India](https://in.misumi-ec.com/vona2/mech/M1000000000/M1002000000/M1002030000/), and I realised that MISUMI is more expensive than JLCMC, but when we add shipping and customs, MISUMI is the cheaper and smarter choice. Additionally, MISUMI has a lot of configurations available with 3D model, just like JLCMC.
 
 I chose [this](https://in.misumi-ec.com/vona2/detail/110310532889/?CategorySpec=00000005784%3A%3Aak%2C&list=PageCategory) pulley from MISUMI that costs 1,064.73 INR for now. But there is a problem: The minimum bore diameter available is 10 mm, but I need 6.35 mm, as NEMA23 PR57HS76 has 6.35 mm bore. I will see what I can do make this structurally correct. Anyways, I added it to the BOM, and downloaded the STEP files. I need two of them.
 
 Next, for the idler I am choosing [this](https://in.misumi-ec.com/vona2/detail/110310533069/?CategorySpec=00000005784%3A%3Aak%2C&list=PageCategory) from MISUMI that costs 1,621.82 INR each. I added it to the BOM, and downloaded the STEP files. I need two of them.
 
+I updated the BOM with the nescessary changes.
 
+But after I imported the components in Fusion, I noticed that the diameters are too small for the belt, which meant that the belt could either brush against the linear guides, lower face of the 4040 extrusion, or even worse, that is both. The pitch diameter of HTD5M pulley increases with tooth count, so I kept increasing teeth count to raise the belt path vertically.
 
+So, I kept experimenting with higher and higher teeth count pulleys and idlers, until I was tired.
 
-**Total time spent: 4h 50m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b769cea5-9b0b-4c1e-9a57-bbd19f94de39" />
+
+Everytime I deleted the older ones so that everything stays organised. I even updated the BOM almost everytime.
+
+The next logical thing was to try something else. So I did. I looked for the belt. And after surfing the internet a little and then JLCMC, I found the perfect component from MISUMI, which is [this](https://in.misumi-ec.com/vona2/detail/110310527489?HissuCode=C-HTBN2350H5M-150). It costs 1667 INR, and has MOQ of 2, and I do need two of them.
+
+I immediately added it to the BOM and imported the model in Fusion, only to realise that it was completely useless to import the belt in Fusion. The belt geometry is better controlled parametrically through pulley pitch diameter and center distance rather than solid modelling the flexible body.
+
+**Total time spent: 5h 05m**
 
 ---
 
+# Day 16 — 11.05.2026: First Stage Progress — Part 4
+
+I picked up exctly where I left off yesterday out of tiredness. I thus continued with 30T for the pulley and 28T for the Idler. It didn't fit. The pitch diameter difference caused uneven belt alignment and clearance issues.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7843fda2-afc5-4a4e-9d00-11b9f5b18972" />
+
+Then I tried with 32T for both, and that was the biggest configuration possible in MISUMI. Increasing tooth count increased pitch diameter and therefore belt elevation above the extrusion.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7843fda2-afc5-4a4e-9d00-11b9f5b18972" />
+
+It did work better, but I am not completely satisfied. But I guess that is okay enough. With 32T HTD 5M, pitch diameter is roughly (32 × 5) / π ≈ 50.9 mm, which gives noticeably better clearance than 28T or 30T.
+
+Next I added motions and assembled everything cleanly and strategically. The system was almost ready. Only the enclosure for the pullies and idlers don't have a hole passing through them that will allow the belt the move. That slot needs to be dimensioned carefully to prevent belt rubbing while maintaining enclosure stiffness.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d6919113-ca2d-4851-8f12-f6a25b61f894" />
 
+I then mirrored the whole system. At this point, the first stage belt-driven axis is structurally defined: 1 metre 4040 extrusion, dual MGN15H rails, stacked belt architecture, symmetric pulley housings, and increasing tooth count to solve geometric interference rather than compromising stiffness.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/23017fbc-4351-45dc-b2bf-39eed43d4a6b" />
+
+The system is beginning to look like a machine instead of an experiment, I guess.
+
+Next I updated the BOM with all the nescessary changes for the following confirmed components:
+
+* [Pulley C-HTPA32H5M150-A-N10](https://in.misumi-ec.com/vona2/detail/110310532889?HissuCode=C-HTPA32H5M150-A-N10)
+* [Idler C-AHTFW32-H5M150-12](https://in.misumi-ec.com/vona2/detail/110310533069?HissuCode=C-AHTFW32-H5M150-12)
+* [Belt C-HTBN2350H5M-150](https://in.misumi-ec.com/vona2/detail/110310527489?HissuCode=C-HTBN2350H5M-150)
+
+Next I made a financially smart move. Since the components were getting a lot expensive, I thought of looking for aluminium extrusions from MISUMI, just in case they were cheap.
+
+And yes, they were cheaper than my previous sources. For instance:
+
+* The previous 4040 extrusion was 1060 INR each, but [this](https://in.misumi-ec.com/vona2/detail/110310647549?HissuCode=LCF8-4040-1000) from MISUMI is 840 INR.
+* The previous 2020 extrusion was 469 INR, but [this](https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1000) from MISUMI is 270 INR.
+
+I made all the nescessary changes to my BOM.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/520b13aa-1c0d-40bf-8948-abd0dd6bfb1a" />
+
+<img width="2558" height="177" alt="image" src="https://github.com/user-attachments/assets/3b9d02b1-f401-42bd-8245-92cd46964f41" />
+
+**Total time spent: 4h 10m**
+
+---
+
+# Day 17 — 12.05.2026: First Stage Progress — Part 5
+
+**Total time spent: 0h 00m**
+
+---
