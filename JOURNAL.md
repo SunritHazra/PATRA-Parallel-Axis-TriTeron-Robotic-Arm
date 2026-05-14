@@ -655,6 +655,30 @@ I made all the nescessary changes to my BOM.
 
 # Day 17 — 12.05.2026: First Stage Progress — Part 5
 
-**Total time spent: 0h 00m**
+It was now time to add the holes to the pulley and idler mount so that I can make the belt pass through and clamp, thus completing the tensioning system.
+
+I first made a sketch on the face of the Pulley Mount then, added some clearence. Then I extruded the shape to make the hole in both Pulley and Idler Mounts. It was looking like this after the changes made.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/37b08a2a-0b90-4dc1-ba34-86576ad714a9" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/85ae9d22-ca44-41ac-b40b-6ec78bc119ce" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9277f371-8e86-4bfc-9a9e-6571b7188e84" />
+
+Next I moved to the Linear Block Carraige system that was supposed to be the base of the legs of the robot and also secure the ends of the linear belts. First I made holes in both the Carraige and the belt. I reaised that it is a very poor choice as it will damage the tensioning system.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6f9b8aba-2a50-417b-9652-3d1fb08ed518" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/07d7dbfc-0ad4-4e05-b15f-d4697945e52d" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8b60f254-fc23-45ab-925b-4cdd2400e97a" />
+
+Then I surfed the internet to find a blet clamp for HTD 5M 15 mmm width belt. I found [this](https://www.traceparts.com/en/product/madler-gmbh-fixing-plate-for-timing-belts-made-from-aluminium-profile-htd5m-for-belt-width-15-mm?CatalogPath=MADLER%3AMADLER_NEU.3.3&Product=90-14112023-038068&PartNumber=17339900) from TraceParts, and then I imported it.
+
+**Total time spent: 0h 55m**
 
 ---
+
+# Day 18 — 14.05.2026: First Stage Progress — Part 6
+
+
