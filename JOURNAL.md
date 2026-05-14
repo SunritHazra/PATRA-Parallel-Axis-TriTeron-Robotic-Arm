@@ -683,22 +683,46 @@ Then I surfed the internet to find a blet clamp for HTD 5M 15 mmm width belt. I 
 
 This time I started by looking for the belt clamps. I searched in the internet and found nothing from India. I had high hopes on MISMI, but even though they had other types of Blet Clamps, they did not have HTD 5M belt clamps.
 
-I had the change strategy, so I decided to 3D print the clamp along with the carraiges
+I had the change strategy, so I decided to 3D print the clamp along with the carraigeS. Thus I modified the 3D model I imported the previous day, and positioned it perfectly on top of the MGN15H linear block first. Then I continued shaping it using extrusions and alignments.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c3553f60-bc46-418e-a176-68216480589d" />
 
+I made the holes for screws, it started to look like this. Now next step was to add the upper carraige that was modeled before. I jst need to make some little adjustments to the existing model.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/306069be-f0e5-4b1c-9f2e-b32633772a40" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0fe15352-3f96-408b-b2ae-da1c584ee614" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/161bbe9e-ee2a-43b0-8717-3f21daf11665" />
+This is how it looks with the belt:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7868781e-554a-4602-b6be-3970036fc104" />
 
+But unfortunately, I came across a really annoying problem. The thing was that the numbers related to the positions and the dimensions were not round numbers, but off my ±0.002 mm and even ±0.0005 mm. If you look at the image bellow carefully, you can see the numbers don't make any sense. Additionally, the pulley and idler cases were off by ±0.02 mm. Furthermore the belt profile was ±0.319 mm off.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0fe15352-3f96-408b-b2ae-da1c584ee614" />
+
+But I even put my hands on it in the first place because I use the project tool on new sketches. And when I noticed that the extrusions based on the projected faces were not symmetrical, I knew I had to fix it.
+
+The fact that the numbers were round, and the non-sensible numbers on top, made my head scratch. I realised that Fusion rounds off numbers beyond ±0.000X.
+
+I did get it over with.
+
+Once the profiles and the facail projections were fixed in the sketches, I continued with modifying the carraige. I first positioned it properly, then joined them, after adding holes of the screws.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/161bbe9e-ee2a-43b0-8717-3f21daf11665" />
+
+Next using Cut feature, I integrated the lower belt clamp with the carraige, and joined them.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a0296509-dc15-43cc-b936-eee526fb45e8" />
+
+Next up I copied the carraige to another linear block and then I removed the belt clamp and added clearence for the belt to pass through any interference. This will be one of the Z axis carraiges, and it will be controlled by the central belt system which I am yet to model.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e9dd7fd5-8a76-4d97-b121-9d8107260298" />
 
+Followed by that, I mirrored my components to see how the system looks, though I know that this has to updated soon afterwards.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a9d7cc34-31dc-461f-8708-ded7da177162" />
 
-**Total time spent: 2h 35m**
+Then I made some more changes to the name and hiecarchial structure of the components before signing off.
+
+**Total time spent: 3h 05m**
+
+---
