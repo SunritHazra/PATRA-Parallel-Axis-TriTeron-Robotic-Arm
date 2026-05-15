@@ -726,3 +726,11 @@ Then I made some more changes to the name and hiecarchial structure of the compo
 **Total time spent: 3h 05m**
 
 ---
+
+# Day 19 — 15.05.2026: First Stage Progress — Part 7
+
+I had to know work on the motions that will enable me to see how the system actally works.
+
+**Total time spent: 3h 05m**
+
+---
