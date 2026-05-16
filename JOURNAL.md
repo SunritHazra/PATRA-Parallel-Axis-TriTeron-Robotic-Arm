@@ -729,8 +729,61 @@ Then I made some more changes to the name and hiecarchial structure of the compo
 
 # Day 19 — 15.05.2026: First Stage Progress — Part 7
 
-I had to know work on the motions that will enable me to see how the system actally works. So I started with adding motions to the tensioning system.
+I had to know work on the motions that will enable me to see how the system actally works. So I started with adding motions to the tensioning system, after I watched [this](https://www.youtube.com/watch?v=_inMtaRoYMw) video.
 
-**Total time spent: 3h 05m**
+But after that I realised that I actually don't need that. So, instead I switched focus to somehting more useful. That was continuing with the the Z axis tensioning system. The X and Y axis tensioning system was completed already.
+
+For the system I first extruded out the 2020 aluminium extrusion by 15 mm and then continued by moving the Pulley System.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b2cd11c-3054-4da1-a89f-d006ab2fe5bc" />
+
+Next I can not use 32 toothed this time, instead I need a smaller diamter pulley because of the following reasons:
+
+1. The height has to be lower than the x and Y belts.
+2. The return belt must be closer to the extrusion.
+
+I made one small adjustments mid-way, which was to position the 2020 extrusion vertically centered to the 4040 extrusion. Then I drew a sketch based on my intuitions, and extruded it to make a belt which can be updated later from the sketch.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d8bbe37d-7e83-4c93-ad7e-de5ae203bb6a" />
+
+Followed by that, I searched for pulleys and idlers from MISUMI. I found [this](https://in.misumi-ec.com/vona2/detail/110310532889?HissuCode=C-HTPA14H5M150-A-N8) pulley which has 14 teeth. But the problem came when I searched for an equivalent idler which has 14 teeth, and I found none. So, I used this in the belt just to see.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da01ae3b-6a1f-44d9-b7ff-e0825ea1db69" />
+
+I had tried 20T, 22T but then I also saw there was MOQ of 2, and it was really expensive. After several changes to the confugarations, I chose to use I decided to source my parts from JLCMC instead, which I will do later on.
+
+Bored of what I was doing I started drawing a sketch based on my previous belt that I extruded from the sketch. I tried with 20T as well and even 22T. My attempts were not random but actually structured, based on HTD 5M pulleys:
+
+| Teeth | Pitch Diameter (mm) |
+| ----- | ------------------: |
+| 14    |            22.28 mm |
+| 15    |            23.87 mm |
+| 16    |            25.46 mm |
+| 18    |            28.65 mm |
+| 20    |            31.83 mm |
+| 22    |            35.01 mm |
+| 24    |            38.20 mm |
+| 25    |            39.79 mm |
+| 28    |            44.56 mm |
+| 30    |            47.75 mm |
+| 32    |            50.93 mm |
+
+I had to change the sketch several times by changing the center-to-center slot several times based on the table above. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/470e2050-4b8f-4a0a-99ba-16d01980fe5b" />
+
+**Total time spent: 3h 00m**
+
+---
+
+# Day 20 — 16.05.2026: First Stage Progress— Part 8
+
+I started exactly on the point I ignored the previous day: sourcing the pulleys and idlers from JLCMC. I first began by searching for the exact same parts that I had chosen in MISUMI, and here's what I found:
+
+1. sth
+
+2. g
+
+**Total time spent: 0h 00m**
 
 ---
