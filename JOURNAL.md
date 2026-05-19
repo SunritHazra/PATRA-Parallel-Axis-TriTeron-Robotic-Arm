@@ -772,18 +772,24 @@ I had to change the sketch several times by changing the center-to-center slot s
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/470e2050-4b8f-4a0a-99ba-16d01980fe5b" />
 
-**Total time spent: 3h 00m**
+**Total time spent: 2h 00m**
 
 ---
 
-# Day 20 — 16.05.2026: First Stage Progress— Part 8
+# Day 20 — 16.05.2026: First Stage Progress — Part 8
 
 I started exactly on the point I ignored the previous day: sourcing the pulleys and idlers from JLCMC. I first began by searching for the exact same parts that I had chosen in MISUMI, and here's what I found:
 
-1. sth
+* For the [Pulley C-HTPA32H5M150-A-N10](https://in.misumi-ec.com/vona2/detail/110310532889?HissuCode=C-HTPA32H5M150-A-N10) I found [CBYL-AH1-5GT150-32-A-N-d22](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22) from JLCMC.
+* For the [Idler C-AHTFW32-H5M150-12](https://in.misumi-ec.com/vona2/detail/110310533069?HissuCode=C-AHTFW32-H5M150-12) I found [CBYL-AH1-5GT150-32-A-H-d22](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22) also from JLCMC. I was unable to find idler with teeth, so I am choosing this, with double 625ZZ bearings.
+* For the Z axis pulley and idler, from JLCMC I found [CBYL-AH1-5GT150-18-A-H-d6.35](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d6.35&productModelNumber=CBYL-AH1-5GT150-18-A-H-d6.35) and [CBYL-AH1-5GT150-18-A-H-d16](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16), respectively.
 
-2. g
-
-**Total time spent: 0h 00m**
+**Total time spent: 1h 15m**
 
 ---
+
+# Day 21 — 19.05.2026: First Stage Progress — Part 9
+
+<img width="2383" height="197" alt="image" src="https://github.com/user-attachments/assets/72599af8-f03e-496e-a313-fe883cf7219f" />
+
+**Total time spent: 2h 15m**
