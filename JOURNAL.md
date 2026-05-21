@@ -781,15 +781,61 @@ I had to change the sketch several times by changing the center-to-center slot s
 I started exactly on the point I ignored the previous day: sourcing the pulleys and idlers from JLCMC. I first began by searching for the exact same parts that I had chosen in MISUMI, and here's what I found:
 
 * For the [Pulley C-HTPA32H5M150-A-N10](https://in.misumi-ec.com/vona2/detail/110310532889?HissuCode=C-HTPA32H5M150-A-N10) I found [CBYL-AH1-5GT150-32-A-N-d22](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22) from JLCMC.
+
 * For the [Idler C-AHTFW32-H5M150-12](https://in.misumi-ec.com/vona2/detail/110310533069?HissuCode=C-AHTFW32-H5M150-12) I found [CBYL-AH1-5GT150-32-A-H-d22](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22) also from JLCMC. I was unable to find idler with teeth, so I am choosing this, with double 625ZZ bearings.
+
 * For the Z axis pulley and idler, from JLCMC I found [CBYL-AH1-5GT150-18-A-H-d6.35](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d6.35&productModelNumber=CBYL-AH1-5GT150-18-A-H-d6.35) and [CBYL-AH1-5GT150-18-A-H-d16](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16), respectively.
 
-**Total time spent: 1h 15m**
+But soon I realised that the parts I had sourced are not HTD 5M compatible. This meant that I had to use different belts and probably even different belt clamps. I tried searching for HTD 5M pullyes from JLCMC, but I found none.
+
+Since I was buying from JLCMC, there was a very high chance that I needed to pay customs. If I am ordering only the pulleys, I can choose E-POST and pay about $20 in Shipping and probably $10 more on customs. But still, this option is a lot cheaper than buying pulleys from MISUMI.
+
+I then went on to research about the differences in HTD 5M and GT5 belt. I went through [this](https://www.apexdyna.nl/en/news/the-right-timing-belt) article and I found out that it actually didn't matter too much, but GT5 is actually better for my system as they are smoother. I am even finding cheap pulley for GT5, which means that it is the best option for at least now.
+
+Next I updated the BOM
+
+<img width="2383" height="121" alt="image" src="https://github.com/user-attachments/assets/cd373d89-e0e0-4beb-8f2b-500bea65d69f" />
+
+**Total time spent: 3h 15m**
 
 ---
 
-# Day 21 — 19.05.2026: First Stage Progress — Part 9
+# Day 21 — 20.05.2026: First Stage Progress — Part 9
+
+Now it was the time to import the the pulleyes I had selected, into Fusion.
+
+I first started by creating a new sketch for the belt. I had the estimate for diameter needed for the pulley and idler, which was 27.5 mm. I initially thought of making the case smaller than the existing ones for the X and Y tensioning systems.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b76e0e58-a223-4293-b7c8-ecc51d1bf8a5" />
+
+I then extruded the belt profile symmetrically to have the width of 15 mm (7.5 mm both sides). Followed by that, I inserted the 32 teeth pulley and idlers to replace the existing ones and used align and joints to position them properly. in the tensioning system.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1f74a469-235d-4991-95c8-8ab82079a3c4" />
+
+I then replaced the existing TXCL-H7-4040E-L1000 (model from JLCMC) with LCF8-4040-1000 (model from MISUMI) and the TXCL-H7-2020E-L100 (model from JLCMC) with LCF6-2020-1000, to ensure that I am following the exact profile that I will be physically expecting. Note that the 2020 extrusion will be 1150 mm in length, not 1000 mm. I will update that part later on.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/86ccabac-1fa1-4483-996a-58795552bf0f" />
+
+Next I gave emphasis on reinforcing the existing pulley and idler cases to the aluminium extrusion. I can try adding serews but problem was that the case was split in such a direction that it is hard to add screws. For now, I am just extruding out some part of the case. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1d96865c-0d6d-41f8-9a7c-bdda6a567f4d" />
+
+I then arranged the components in the Browser and added proper materials for the appearence.
+
+Next I updated the BOM.
 
 <img width="2383" height="197" alt="image" src="https://github.com/user-attachments/assets/72599af8-f03e-496e-a313-fe883cf7219f" />
 
-**Total time spent: 2h 15m**
+**Total time spent: 4h 15m**
+
+---
+
+# Day 22 — 21.05.2026: First Stage Progress — Part 10
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e957f3c6-3d3f-46b4-a132-743e3393771a" />
+
+[link](https://grabcad.com/library/gt5-belt-lock-1)
+
+**Total time spent: 3h 35m**
+
+---
