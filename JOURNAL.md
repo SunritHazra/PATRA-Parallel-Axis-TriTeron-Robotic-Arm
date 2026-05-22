@@ -840,11 +840,13 @@ Next I updated the BOM.
 
 ---
 
-# Day 22 — 21.05.2026: First Stage Progress — Part 10
+# Day 23 — 22.05.2026: First Stage Progress — Part 11
 
 I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b605071-5c56-4343-b12e-89baed85f349" />
+
+The First stage is almost complete after all this.
 
 **Total time spent: 5h 52m**
 
