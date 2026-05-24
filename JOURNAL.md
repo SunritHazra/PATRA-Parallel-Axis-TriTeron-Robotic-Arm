@@ -861,7 +861,7 @@ The First stage is almost complete after all this.
 
 ---
 
-# Day 24 — 23.05.2026: TriTeron Robot Module (TRM) Progress — Part 1
+# Day 25 — 24.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
 
 [Lapse](https://lapse.hackclub.com/timelapse/vCOvL9YC8t7R)
 
