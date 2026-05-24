@@ -863,7 +863,17 @@ The First stage is almost complete after all this.
 
 # Day 25 — 24.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
 
+I picked up exatcly where I left off yesterday. As the leg was complete, it was now time to implement that into the assembly.
+
+There are going to be 4 legs in total, each with two connected legs.
+
+* There will be one X axis leg consisting one upper and lower leg
+* There will be one Y axis leg consisting one upper and lower leg
+* There will be two Z axis legs consisting one upper and lower leg, each.
+
 [Lapse](https://lapse.hackclub.com/timelapse/vCOvL9YC8t7R)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/710049cc-3663-446c-ba62-2b513a17f71d" />
 
 **Total time spent: 2h 30m**
 
