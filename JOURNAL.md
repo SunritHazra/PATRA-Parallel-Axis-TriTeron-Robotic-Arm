@@ -377,7 +377,7 @@ Hobby-market suppliers
 → No CAD: Why?
 → Ambiguous tolerances: Very unprofessional
 
-So, this is what I did: I started from the very foundation, and worked my way up till I complete the First Stage. Instead of abandoning the plan, I tried systematic verification.
+So, this is what I did: I started from the very foundation, and worked my way up till I complete the Kinematic Base Module (KBM). Instead of abandoning the plan, I tried systematic verification.
 
 1. **4040 Aluminium Extrusion** from Robokits 4040 T-Slot (Astro Industrial grade): I checked slot width (8 mm vs 10 mm variants), core wall thickness, center bore diameter, and outer corner radius. There is only a 2D drawing image provided. No tolerance specifications. No downloadable 3D model. So, I chose [this](https://www.3dprintronics.com/products/t-slot-aluminium-extrusion-4040-8mm?srsltid=AfmBOorlrQFAR1Xrt53eLpePYovKiCMCeYb2kc3UqxQDkFEoahj_P2o4YdA) from 3DPrintronics, instead.
 
@@ -472,7 +472,7 @@ I then made the hard desicion of choosing only 3D printing for all the parts of 
 
 ---
 
-# Day 13 — 08.05.2026: First Stage Progress — Part 1
+# Day 13 — 08.05.2026: Kinematic Base Module (KBM) Progress — Part 1
 
 I began by making some changes to my existing model, as I came accross some problems while continuing my modelling. For making the changes I had to search a lot, in many websites, and download a lot of stuff to import and see it would work. Anyways, the changes are as follows:
 
@@ -494,7 +494,7 @@ I then started finding the model of NEMA 23 motor which matches length of 76 mm,
 
 ---
 
-# Day 14 — 09.05.2026: First Stage Progress — Part 2
+# Day 14 — 09.05.2026: Kinematic Base Module (KBM) Progress — Part 2
 
 I continued working on the first stage. Previosly the motors were not aligned. So, thsis time I imported [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and added it to the assembly. Then I added joints and then I duplicated it with joints, and made it symmetrical.
 
@@ -548,7 +548,7 @@ It still operlaps. I guess this is all for today, next day I will continue this.
 
 ---
 
-# Day 15 — 10.05.2026: First Stage Progress — Part 3
+# Day 15 — 10.05.2026: Kinematic Base Module (KBM) Progress — Part 3
 
 I picked up exactly where I left off yesterday. The return belt was overlapping with the 4040 extrusion geometry, which was not okay. It meant that I had to continue on one or more than one of the following paths:
 
@@ -608,7 +608,7 @@ I immediately added it to the BOM and imported the model in Fusion, only to real
 
 ---
 
-# Day 16 — 11.05.2026: First Stage Progress — Part 4
+# Day 16 — 11.05.2026: Kinematic Base Module (KBM) Progress — Part 4
 
 I picked up exctly where I left off yesterday out of tiredness. I thus continued with 30T for the pulley and 28T for the Idler. It didn't fit. The pitch diameter difference caused uneven belt alignment and clearance issues.
 
@@ -653,7 +653,7 @@ I made all the nescessary changes to my BOM.
 
 ---
 
-# Day 17 — 12.05.2026: First Stage Progress — Part 5
+# Day 17 — 12.05.2026: Kinematic Base Module (KBM) Progress — Part 5
 
 It was now time to add the holes to the pulley and idler mount so that I can make the belt pass through and clamp, thus completing the tensioning system.
 
@@ -679,7 +679,7 @@ Then I surfed the internet to find a blet clamp for HTD 5M 15 mmm width belt. I 
 
 ---
 
-# Day 18 — 14.05.2026: First Stage Progress — Part 6
+# Day 18 — 14.05.2026: Kinematic Base Module (KBM) Progress — Part 6
 
 This time I started by looking for the belt clamps. I searched in the internet and found nothing from India. I had high hopes on MISMI, but even though they had other types of Blet Clamps, they did not have HTD 5M belt clamps.
 
@@ -727,7 +727,7 @@ Then I made some more changes to the name and hiecarchial structure of the compo
 
 ---
 
-# Day 19 — 15.05.2026: First Stage Progress — Part 7
+# Day 19 — 15.05.2026: Kinematic Base Module (KBM) Progress — Part 7
 
 I had to know work on the motions that will enable me to see how the system actally works. So I started with adding motions to the tensioning system, after I watched [this](https://www.youtube.com/watch?v=_inMtaRoYMw) video.
 
@@ -776,7 +776,7 @@ I had to change the sketch several times by changing the center-to-center slot s
 
 ---
 
-# Day 20 — 16.05.2026: First Stage Progress — Part 8
+# Day 20 — 16.05.2026: Kinematic Base Module (KBM) Progress — Part 8
 
 I started exactly on the point I ignored the previous day: sourcing the pulleys and idlers from JLCMC. I first began by searching for the exact same parts that I had chosen in MISUMI, and here's what I found:
 
@@ -800,7 +800,7 @@ Next I updated the BOM
 
 ---
 
-# Day 21 — 20.05.2026: First Stage Progress — Part 9
+# Day 21 — 20.05.2026: Kinematic Base Module (KBM) Progress — Part 9
 
 Now it was the time to import the the pulleyes I had selected, into Fusion.
 
@@ -830,7 +830,7 @@ Next I updated the BOM.
 
 ---
 
-# Day 22 — 21.05.2026: First Stage Progress — Part 10
+# Day 22 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e957f3c6-3d3f-46b4-a132-743e3393771a" />
 
@@ -840,7 +840,7 @@ Next I updated the BOM.
 
 ---
 
-# Day 23 — 22.05.2026: First Stage Progress — Part 11
+# Day 23 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
 
 I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
 
@@ -849,5 +849,14 @@ I did a lot of stuff today. The first 20 minutes I was going through my BOM, che
 The First stage is almost complete after all this.
 
 **Total time spent: 5h 52m**
+
+---
+
+# Day 24 — 23.05.2026: TriTeron Robot Module (TRM) Progress — Part 1
+
+[Lapse 1](https://lapse.hackclub.com/timelapse/DfNLfUEVeITT)
+[Lapse 2](https://lapse.hackclub.com/timelapse/8V5IIaFo7r2J)
+
+**Total time spent: 3h 50m**
 
 ---
