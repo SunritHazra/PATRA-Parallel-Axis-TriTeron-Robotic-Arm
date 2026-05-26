@@ -804,25 +804,33 @@ Next I updated the BOM
 
 Now it was the time to import the the pulleyes I had selected, into Fusion.
 
-I first started by creating a new sketch for the belt. I had the estimate for diameter needed for the pulley and idler, which was 27.5 mm. I initially thought of making the case smaller than the existing ones for the X and Y tensioning systems.
+I started by creating a new sketch for the belt. I had the estimate for diameter needed for the pulley and idler, which was 27.5 mm. I initially thought of making the case smaller than the existing ones for the X and Y tensioning systems. So small if fact that it will be directly above and below the 2020 aluminium extrusion.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b76e0e58-a223-4293-b7c8-ecc51d1bf8a5" />
 
-I then extruded the belt profile symmetrically to have the width of 15 mm (7.5 mm both sides). Followed by that, I inserted the 32 teeth pulley and idlers to replace the existing ones and used align and joints to position them properly. in the tensioning system.
+I then extruded the belt profile symmetrically to have the width of 15 mm (7.5 mm both sides). Followed by that, I inserted the 32 teeth pulley and idlers to replace the existing ones and used align and joints to position them properly. in the tensioning system. I now had a rough visualisation of how to the belt would look like in the system. I made sure that I am able to later edit the sketch in case I am using different size pulleyes and idelrs.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1f74a469-235d-4991-95c8-8ab82079a3c4" />
 
-I then replaced the existing TXCL-H7-4040E-L1000 (model from JLCMC) with LCF8-4040-1000 (model from MISUMI) and the TXCL-H7-2020E-L100 (model from JLCMC) with LCF6-2020-1000, to ensure that I am following the exact profile that I will be physically expecting. Note that the 2020 extrusion will be 1150 mm in length, not 1000 mm. I will update that part later on.
+Part of the tensioning system was completed. Next step was to updade the aluminum extrusions as I had to find a way to reinforce the pully and idler cases with the aluminium extrusion profiles.
+
+Note that the 2020 extrusion will be 1150 mm in length, not 1000 mm. I will update that part later on, after I confirm the length.
+
+Thus, I replaced the existing **TXCL-H7-4040E-L1000 (model from JLCMC)** with **LCF8-4040-1000 (model from MISUMI)** and the **TXCL-H7-2020E-L100 (model from JLCMC)** with **LCF6-2020-1000 (model from MISUMI)**, to ensure that I am following the exact profile that I will be buying and physically expecting.
+
+I had previously thought that even though 4040 t slots are generic, there will be differences in profile, varying from manufacturer to manufacturer. Just as I thought, after I imported the updated 4040 and 2020 extusions, I saw that the profiles had noticable differences that coul've caused manufaturing and assembly issues.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/86ccabac-1fa1-4483-996a-58795552bf0f" />
 
-Next I gave emphasis on reinforcing the existing pulley and idler cases to the aluminium extrusion. I can try adding serews but problem was that the case was split in such a direction that it is hard to add screws. For now, I am just extruding out some part of the case. 
+Next I gave emphasis on reinforcing the existing pulley and idler cases to the aluminium extrusion, without using just screws. Since I got access to the correct profile, I tried to extrude certain part of the profile to have them seamlessly connected to the aluminium extrusion without relying much on screws.
+
+About adding serews, the major problem was that the case was split in such a direction that it is hard to add screws; the minor problem being that tapping the profiles both sides from MISUMI was quite expensive. I can consider that later on. For now, I am just extruding out some part of the case.
+
+This is how the extrusion looks:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1d96865c-0d6d-41f8-9a7c-bdda6a567f4d" />
 
-I then arranged the components in the Browser and added proper materials for the appearence.
-
-Next I updated the BOM.
+I then arranged the components in the Browser and added proper materials for the appearence, and updated the BOM.
 
 <img width="2383" height="197" alt="image" src="https://github.com/user-attachments/assets/72599af8-f03e-496e-a313-fe883cf7219f" />
 
@@ -832,6 +840,7 @@ Next I updated the BOM.
 
 # Day 22 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
 
+This session was all about 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e957f3c6-3d3f-46b4-a132-743e3393771a" />
 
 [link](https://grabcad.com/library/gt5-belt-lock-1)
@@ -878,3 +887,7 @@ There are going to be 4 legs in total, each with two connected legs.
 **Total time spent: 2h 30m**
 
 ---
+
+# Day 23 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
