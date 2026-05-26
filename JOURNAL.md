@@ -1,16 +1,9 @@
 ---
-Title: PATRA (Parallel Axis TriTeron Robotic Arm)  
+**Title:** PATRA (Parallel Axis TriTeron Robotic Arm)  
 **Author:** Sunrit Hazra  
 **Description:** A Hybrid robot architecture of a kinematically linear 3 DOF parallel axis triteron system and a 6 DOF serial robotic arm.  
 **Created on:** 2026-05-02  
 **Progress (%): 25%**
----
-
----
-title: "The Ultimate Bike Odometer"
-author: "Madhav Garg"
-description: "The best bike odometer you'll ever see"
-created_at: "2026-02-20"
 ---
 
 # Day 0: Flashback
