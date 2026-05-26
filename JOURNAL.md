@@ -840,7 +840,8 @@ I then arranged the components in the Browser and added proper materials for the
 
 # Day 22 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
 
-This session was all about 
+This session was all about adding the final touches to the tensioning systems to ensure that they function properly.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e957f3c6-3d3f-46b4-a132-743e3393771a" />
 
 [link](https://grabcad.com/library/gt5-belt-lock-1)
@@ -888,6 +889,10 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 23 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
+# Day 26 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
+
+**Total time spent: 1h 30m**
+
+---
