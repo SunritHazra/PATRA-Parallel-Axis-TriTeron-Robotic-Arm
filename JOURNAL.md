@@ -1,4 +1,4 @@
----
+<img width="312" height="16" alt="image" src="https://github.com/user-attachments/assets/6b1516f5-41ef-46a8-a2ac-78917a3173f5" />---
 **Title:** PATRA (Parallel Axis TriTeron Robotic Arm)  
 **Author:** Sunrit Hazra  
 **Description:** A Hybrid robot architecture of a kinematically linear 3 DOF parallel axis triteron system and a 6 DOF serial robotic arm.  
@@ -839,19 +839,47 @@ I then arranged the components in the Browser and added proper materials for the
 
 # Day 22 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
 
-This session was all about adding the final touches to the tensioning systems to ensure that they function properly.
+Previously the bare bones tensioning system involving the following:
+
+* [Pulley CBYL-AH1-5GT150-18-A-H-d6.35 (Z)](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d6.35&productModelNumber=CBYL-AH1-5GT150-18-A-H-d6.35): This is the pulley I had selected previously. I changed it to [CBYL-AH1-5GT150-20-A-N-d12](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12) to ensure that I can extend the short motor shaft.
+
+* [Idler CBYL-AH1-5GT150-18-A-H-d16 (Z)](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16): I have not changed this.
+
+* [Belt E-GBN26005GT-150 (Z)](https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150): The length is just an estimate, but the belt itself is finalised so far and compatible with the system.
+
+After that, I realised that there was something wrong with the motor shaft couplings. Thy were overlapping with both the pulley and motor shaft geometry. So, I first fixed that by face offsets and extrusions. I made it compatible with the N-type hole of [CBYL-AH1-5GT150-20-A-N-d12](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12), making it look like this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aadc0fc7-3f9d-492e-887d-75954a79576d" />
+
+After having fixed the Tensioning System X, I mirrored the component to create the Tensioning System Y that is updated.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/faa72841-2548-4188-9ec2-a290a7c6eee3" />
+
+Next I dived into modelling the pulley and idler case, for which I first went through the sketch and edited some parts. I found out that I had to raise the Tensioning System Z a little up to ensure that I can use similar sized case for the pulley and idler as the other tensioning systems. I then also added the [NEMA23 PR57HS76](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) and placed it correctly.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d918ab38-b825-4a4b-9525-4abf49ddd6fb" />
+
+But then I saw that the return belt of the Z axis was completely overlapping with the 2020 extrusion, so I moved it a little up and placed it between the belt of the z axis.
+
+I can now confirm that the tensioning system was completed more than just the bare bones.
+
+Thus, next I moved to making the case for pulley and idler, starting with a solid block, and then making it hollow from the sketch. Then I used split it divide it in two parts, for assembly.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e957f3c6-3d3f-46b4-a132-743e3393771a" />
 
-[link](https://grabcad.com/library/gt5-belt-lock-1)
+I repeated this step for the idler as well using the mirror tool, and then arranged the components in the browser.
 
-**Total time spent: 3h 35m**
+Next step was to add GT5 belt lock so that the system can drive the Z axis. I searched first in TraceParts, then in Printables, then MISUMI, then JLCMC, but didn't find exactly what I was looking for. After a while I found [this](https://grabcad.com/library/gt5-belt-lock-1) in GrabCAD.
+
+I thought that it was okay, and I imported it in Fusion only to realise that it too small for the GT5 belt profile (as if shrunk), and that time was over for today's session.
+
+**Total time spent: 3h 55m**
 
 ---
 
 # Day 23 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
 
-I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
+This session was all about adding the final touches to the tensioning systems to ensure that they function properly. I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b605071-5c56-4343-b12e-89baed85f349" />
 
