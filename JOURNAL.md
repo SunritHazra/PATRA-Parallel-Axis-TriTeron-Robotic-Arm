@@ -1,4 +1,4 @@
-<img width="312" height="16" alt="image" src="https://github.com/user-attachments/assets/6b1516f5-41ef-46a8-a2ac-78917a3173f5" />---
+---
 **Title:** PATRA (Parallel Axis TriTeron Robotic Arm)  
 **Author:** Sunrit Hazra  
 **Description:** A Hybrid robot architecture of a kinematically linear 3 DOF parallel axis triteron system and a 6 DOF serial robotic arm.  
