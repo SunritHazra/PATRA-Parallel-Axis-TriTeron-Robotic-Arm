@@ -916,10 +916,18 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 26 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
+# Day 26 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 3
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
 
 **Total time spent: 1h 30m**
+
+---
+
+# Day 27 — 27.05.2026: TriTeron Robot Module (TRM) Progress — Part 4
+
+[lapse](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
+
+**Total time spent: 1h 40**
 
 ---
