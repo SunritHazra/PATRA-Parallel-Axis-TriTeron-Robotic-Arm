@@ -906,7 +906,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 * There will be one X axis leg consisting one upper and lower leg
 * There will be one Y axis leg consisting one upper and lower leg
-* There will be two Z axis legs consisting one upper and lower leg, each.
+* There will be two Z axis legs consisting one upper and lower leg, each
 
 [Lapse](https://lapse.hackclub.com/timelapse/vCOvL9YC8t7R)
 
@@ -926,9 +926,10 @@ There are going to be 4 legs in total, each with two connected legs.
 
 # Day 25 — 27.05.2026: TriTeron Robot Module (TRM) Progress — Part 4
 
-[lapse](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
+[lapse 1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285)
+[lapse 2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
 
-**Total time spent: 1h 40m**
+**Total time spent: 3h 20m**
 
 ---
 
