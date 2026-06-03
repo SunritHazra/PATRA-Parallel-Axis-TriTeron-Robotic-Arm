@@ -297,7 +297,7 @@ SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Dri
 
 ---
 
-# Day 8 — 01.05.2026: The Research for Sanity
+# Day 7 — 01.05.2026: The Research for Sanity
 
 Yesterday I pitched the project again. The BOM was assembled from placeholder sources to establish price ranges — today the goal was to actually commit to real components, working from the structural base upward.
 
@@ -344,7 +344,7 @@ One sourcing gap: HTD 5M belts don't appear to be stocked by any Indian e-commer
 
 ---
 
-# Day 9 — 02.05.2026: The Post-Pitch-Approval Research
+# Day 8 — 02.05.2026: The Post-Pitch-Approval Research
 
 Today the pitch was approved finally. Now I am finally sure that I can continue working on this project. Thanks a lot, to Souptik Samantha for the pitch approval! I decided to adopt strategy this time, not random guesses.
 
@@ -396,7 +396,7 @@ Total time spent: 3h 55m
 
 ---
 
-# Day 10 — 03.05.2026: Modelling Based on New Plan
+# Day 9 — 03.05.2026: Modelling Based on New Plan
 
 Today I started modelling PATRA again from scratch based on the components that were finalised for the first stage, yesterday. I wanted to start fresh. I had my parts listed, so I simply went for the 3d models one by one.
 
@@ -441,7 +441,7 @@ Some important points tobe noted:
 
 ---
 
-# Day 11 — 04.05.2026: Research on Linear Rail CNC Estimates
+# Day 10 — 04.05.2026: Research on Linear Rail CNC Estimates
 
 I did some research on the MGN15H I am choosing, and after comparing models, I found out that the profile I sourced from JLCMC and the profile avaiable in HIWIN do not match exactly. The dimensions are a little diffferent as well. I went to Robu.in to check the dimensions, but they didn't match exactly.
 
@@ -471,7 +471,7 @@ I then made the hard desicion of choosing only 3D printing for all the parts of 
 
 ---
 
-# Day 12 — 08.05.2026: Kinematic Base Module (KBM) Progress — Part 1
+# Day 11 — 08.05.2026: Kinematic Base Module (KBM) Progress — Part 1
 
 I began by making some changes to my existing model, as I came accross some problems while continuing my modelling. For making the changes I had to search a lot, in many websites, and download a lot of stuff to import and see it would work. Anyways, the changes are as follows:
 
@@ -493,7 +493,7 @@ I then started finding the model of NEMA 23 motor which matches length of 76 mm,
 
 ---
 
-# Day 13 — 09.05.2026: Kinematic Base Module (KBM) Progress — Part 2
+# Day 12 — 09.05.2026: Kinematic Base Module (KBM) Progress — Part 2
 
 I continued working on the first stage. Previosly the motors were not aligned. So, thsis time I imported [NEMA23 mounting bracket aluminum](https://grabcad.com/library/nema-23-stepper-motor-mounting-bracket-1) and added it to the assembly. Then I added joints and then I duplicated it with joints, and made it symmetrical.
 
@@ -547,7 +547,7 @@ It still operlaps. I guess this is all for today, next day I will continue this.
 
 ---
 
-# Day 14 — 10.05.2026: Kinematic Base Module (KBM) Progress — Part 3
+# Day 13 — 10.05.2026: Kinematic Base Module (KBM) Progress — Part 3
 
 I picked up exactly where I left off yesterday. The return belt was overlapping with the 4040 extrusion geometry, which was not okay. It meant that I had to continue on one or more than one of the following paths:
 
@@ -607,7 +607,7 @@ I immediately added it to the BOM and imported the model in Fusion, only to real
 
 ---
 
-# Day 15 — 11.05.2026: Kinematic Base Module (KBM) Progress — Part 4
+# Day 14 — 11.05.2026: Kinematic Base Module (KBM) Progress — Part 4
 
 I picked up exctly where I left off yesterday out of tiredness. I thus continued with 30T for the pulley and 28T for the Idler. It didn't fit. The pitch diameter difference caused uneven belt alignment and clearance issues.
 
@@ -652,7 +652,7 @@ I made all the nescessary changes to my BOM.
 
 ---
 
-# Day 16 — 12.05.2026: Kinematic Base Module (KBM) Progress — Part 5
+# Day 15 — 12.05.2026: Kinematic Base Module (KBM) Progress — Part 5
 
 It was now time to add the holes to the pulley and idler mount so that I can make the belt pass through and clamp, thus completing the tensioning system.
 
@@ -678,7 +678,7 @@ Then I surfed the internet to find a blet clamp for HTD 5M 15 mmm width belt. I 
 
 ---
 
-# Day 17 — 14.05.2026: Kinematic Base Module (KBM) Progress — Part 6
+# Day 16 — 14.05.2026: Kinematic Base Module (KBM) Progress — Part 6
 
 This time I started by looking for the belt clamps. I searched in the internet and found nothing from India. I had high hopes on MISMI, but even though they had other types of Blet Clamps, they did not have HTD 5M belt clamps.
 
@@ -726,7 +726,7 @@ Then I made some more changes to the name and hiecarchial structure of the compo
 
 ---
 
-# Day 18 — 15.05.2026: Kinematic Base Module (KBM) Progress — Part 7
+# Day 17 — 15.05.2026: Kinematic Base Module (KBM) Progress — Part 7
 
 I had to know work on the motions that will enable me to see how the system actally works. So I started with adding motions to the tensioning system, after I watched [this](https://www.youtube.com/watch?v=_inMtaRoYMw) video.
 
@@ -775,7 +775,7 @@ I had to change the sketch several times by changing the center-to-center slot s
 
 ---
 
-# Day 19 — 16.05.2026: Kinematic Base Module (KBM) Progress — Part 8
+# Day 18 — 16.05.2026: Kinematic Base Module (KBM) Progress — Part 8
 
 I started exactly on the point I ignored the previous day: sourcing the pulleys and idlers from JLCMC. I first began by searching for the exact same parts that I had chosen in MISUMI, and here's what I found:
 
@@ -799,7 +799,7 @@ Next I updated the BOM
 
 ---
 
-# Day 20 — 20.05.2026: Kinematic Base Module (KBM) Progress — Part 9
+# Day 19 — 20.05.2026: Kinematic Base Module (KBM) Progress — Part 9
 
 Now it was the time to import the the pulleyes I had selected, into Fusion.
 
@@ -837,7 +837,7 @@ I then arranged the components in the Browser and added proper materials for the
 
 ---
 
-# Day 21 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
+# Day 20 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
 
 Previously the bare bones tensioning system involving the following:
 
@@ -877,7 +877,7 @@ I thought that it was okay, and I imported it in Fusion only to realise that it 
 
 ---
 
-# Day 22 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
+# Day 21 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
 
 This session was all about adding the final touches to the tensioning systems to ensure that they function properly. I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
 
@@ -889,7 +889,7 @@ The First stage is almost complete after all this.
 
 ---
 
-# Day 23 — 23.05.2026: TriTeron Robot Module (TRM) Progress — Part 1
+# Day 22 — 23.05.2026: TriTeron Robot Module (TRM) Progress — Part 1
 
 [Lapse 1](https://lapse.hackclub.com/timelapse/DfNLfUEVeITT)
 [Lapse 2](https://lapse.hackclub.com/timelapse/8V5IIaFo7r2J)
@@ -898,7 +898,7 @@ The First stage is almost complete after all this.
 
 ---
 
-# Day 24 — 24.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
+# Day 23 — 24.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
 
 I picked up exatcly where I left off yesterday. As the leg was complete, it was now time to implement that into the assembly.
 
@@ -916,7 +916,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 25 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 3
+# Day 24 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 3
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
 
@@ -924,7 +924,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 26 — 27.05.2026: TriTeron Robot Module (TRM) Progress — Part 4
+# Day 25 — 27.05.2026: TriTeron Robot Module (TRM) Progress — Part 4
 
 [lapse](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
 
@@ -932,7 +932,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 27 — 28.05.2026: TriTeron Robot Module (TRM) Progress — Part 5
+# Day 26 — 28.05.2026: TriTeron Robot Module (TRM) Progress — Part 5
 
 [lapse](https://lapse.hackclub.com/timelapse/oC5sY39XrQ18)
 
@@ -940,7 +940,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 28 — 30.05.2026: TriTeron Robot Module (TRM) Progress — Part 6
+# Day 27 — 30.05.2026: TriTeron Robot Module (TRM) Progress — Part 6
 
 [lapse](https://lapse.hackclub.com/timelapse/srgx05NYIPdJ)
 
@@ -948,7 +948,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 29 — 31.05.2026: TriTeron Robot Module (TRM) Progress — Part 7
+# Day 28 — 31.05.2026: TriTeron Robot Module (TRM) Progress — Part 7
 
 [lapse](https://lapse.hackclub.com/timelapse/AqGtmyhMh9QV)
 
@@ -956,7 +956,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 30 — 01.06.2026: TriTeron Robot Module (TRM) Progress — Part 8
+# Day 29 — 01.06.2026: TriTeron Robot Module (TRM) Progress — Part 8
 
 [lapse](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
 
@@ -964,7 +964,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 31 — 02.06.2026: TriTeron Robot Module (TRM) Progress — Part 9
+# Day 30 — 02.06.2026: TriTeron Robot Module (TRM) Progress — Part 9
 
 [lapse](https://lapse.hackclub.com/timelapse/_aOokRs_SLGK)
 
@@ -972,7 +972,7 @@ There are going to be 4 legs in total, each with two connected legs.
 
 ---
 
-# Day 32 — 03.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
+# Day 31 — 03.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
 
 [lapse]()
 
