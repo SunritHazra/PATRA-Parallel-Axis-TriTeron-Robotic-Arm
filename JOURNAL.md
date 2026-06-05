@@ -420,17 +420,17 @@ But the Indian hobby market behaves differently than industrial suppliers: Most 
 
 So I was stuck in between two worlds:
 
-Industrial-grade suppliers
-→ Reliable: OK fine
-→ CAD models: Yes!
-→ Datasheets: Awesome!
-→ Expensive: Not fine
+Industrial-grade suppliers  
+→ Reliable: OK fine  
+→ CAD models: Yes!  
+→ Datasheets: Awesome!  
+→ Expensive: Not fine  
 
-Hobby-market suppliers
-→ Affordable: Only this matters
-→ Available locally: Important!
-→ No CAD: Why?
-→ Ambiguous tolerances: Very unprofessional
+Hobby-market suppliers  
+→ Affordable: Only this matters  
+→ Available locally: Important!  
+→ No CAD: Why?  
+→ Ambiguous tolerances: Very unprofessional  
 
 So, this is what I did: I started from the very foundation, and worked my way up till I complete the Kinematic Base Module (KBM). Instead of abandoning the plan, I tried systematic verification.
 
