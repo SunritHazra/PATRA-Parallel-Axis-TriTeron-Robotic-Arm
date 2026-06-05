@@ -983,9 +983,9 @@ There are going to be 4 legs in total, each with two connected legs.
 
 # Day 32 — 04.06.2026: TriTeron Robot Module (TRM) Progress — Part 11
 
-Today, starting my work, before I sat down to work on my project, I updated Fusion. After updating when I opened my file I saw that most of yesterday's progress was gone.
+Today, before I sat down to work on my project, I updated Fusion. After updating when I opened my file I saw that some of yesterday's progress was gone. I was quite astonished at the scene but had nothing to do.
 
-Followed by that, here's what I did before the re-assembly:
+Based on the experience of the previous day, I decided to go with the screw assembly. But here's what I did before the assembly:
 
 1. I first went to Fusion Teams on Chrome and then I deleted old files that were not necessary in the design. It makes sure that all my stuff are updated and old unnecessary designs are excluded.
 
@@ -1014,19 +1014,35 @@ This is how it looked.
 But looking at the assembly, it seemed that the scews are not that sturdy, as not all faces that asre supposed to be tight are making contact. The length of the thread and the extent of it is also concerning. But why was that so. It was because of the following reasons:
 
 * There was a huge gap between the screw head and the smooth shoulder.
-* The neck was narrow, which could've caused the washer to loosened.
+* The shoulder neck was narrow, which could've caused the washer to loosened.
 * The thread length was shorter than the thread length of the nut.
-* There was again concerning amount of gap and narrowing at the threaded part
+* There was a concerning amount of gap and narrowing at the threaded neck
 
 So I made the desicion of chaning the very shoulder screw for which I spent so long to assemble. I got no choice.
 
 I started surfing JLCMC and after looking at several configurations of screws, I could not find something desirable for the assembly.
 
-But then I found this [MSB8-30](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30) screw that seemed perfect for the assembly
+But then I found this [MSB8-30](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30) screw that seemed perfect for the assembly, since it had no narrow points and a decent thread length. I briefly went through the data sheet.
+
+<img width="900" height="1271" alt="image" src="https://github.com/user-attachments/assets/4344263f-def7-4784-a7aa-cfeb2aa381a7" />
+
+But there was one problem. The the length of the smooth shoulder was exactly 30 mm, which mean that the washer to waher max distance was also supposed to be 30 mm, for a perfect fit. The washer is 1.5 mm thick and the 608 bearing is 7 mm thick. But currently, this was 1.5 + 7 + x + 7 + 1.5 = 32 mm, where X is the TriTrron leg's gap between the bearings, which was 15 mm. This meant that I had to reduce the X from both sides by 1 mm, to make the total 30 mm.
+
+Thus, I made the adjustments to all the 24 bearing hubs in the legs, using extrusions and facial offsets. Then I deleted the old rigid joints of the bearings and reassembled them correctly.
+
+This made sure that there is 27 mm of gap between the washers, and since the washers were 1.5 mm thick, the distance between the extreme faces of the wo washers is 30 mm.
+
+This is how it looks now.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0470ebae-430b-425c-98ed-8ca5e5f1259c" />
 
-[lapse](https://lapse.hackclub.com/timelapse/0scjCOx6vKE7)
+The problem was fixed, and the screw was supposed to be a perfect fit.
+
+I added rigid joint for the first washer (after struggling to delete the pre-existing joint), and then for the second, and then the nut.
+
+Yes, it was a perfect fit, but before I could proceed, time was over for today's session.
+
+Here's the lapse of today's session: [PATRA-LPS-11-D32](https://lapse.hackclub.com/timelapse/0scjCOx6vKE7)
 
 **Total time spent: 3h 10m**
 
