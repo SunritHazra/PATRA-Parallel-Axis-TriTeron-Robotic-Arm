@@ -954,3 +954,173 @@ I thought that it was okay, and I imported it in Fusion only to realise that it 
 **Total time spent: 3h 55m**
 
 ---
+
+# Day 21 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
+
+This session was all about adding the final touches to the tensioning systems to ensure that they function properly. I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b605071-5c56-4343-b12e-89baed85f349" />
+
+The First stage is almost complete after all this.
+
+**Total time spent: 5h 52m**
+
+---
+
+# Day 22 — 23.05.2026: TriTeron Robot Module (TRM) Progress — Part 1
+
+[Lapse 1](https://lapse.hackclub.com/timelapse/DfNLfUEVeITT)
+[Lapse 2](https://lapse.hackclub.com/timelapse/8V5IIaFo7r2J)
+
+**Total time spent: 3h 50m**
+
+---
+
+# Day 23 — 24.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
+
+I picked up exatcly where I left off yesterday. As the leg was complete, it was now time to implement that into the assembly.
+
+There are going to be 4 legs in total, each with two connected legs.
+
+* There will be one X axis leg consisting one upper and lower leg
+* There will be one Y axis leg consisting one upper and lower leg
+* There will be two Z axis legs consisting one upper and lower leg, each
+
+[Lapse](https://lapse.hackclub.com/timelapse/vCOvL9YC8t7R)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/710049cc-3663-446c-ba62-2b513a17f71d" />
+
+**Total time spent: 2h 30m**
+
+---
+
+# Day 24 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 3
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
+
+**Total time spent: 1h 30m**
+
+---
+
+# Day 25 — 27.05.2026: TriTeron Robot Module (TRM) Progress — Part 4
+
+[lapse 1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285)
+[lapse 2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
+
+**Total time spent: 3h 20m**
+
+---
+
+# Day 26 — 28.05.2026: TriTeron Robot Module (TRM) Progress — Part 5
+
+[lapse](https://lapse.hackclub.com/timelapse/oC5sY39XrQ18)
+
+**Total time spent: 1h 45m**
+
+---
+
+# Day 27 — 30.05.2026: TriTeron Robot Module (TRM) Progress — Part 6
+
+[lapse](https://lapse.hackclub.com/timelapse/srgx05NYIPdJ)
+
+**Total time spent: 1h 05m**
+
+---
+
+# Day 28 — 31.05.2026: TriTeron Robot Module (TRM) Progress — Part 7
+
+[lapse](https://lapse.hackclub.com/timelapse/AqGtmyhMh9QV)
+
+**Total time spent: 0h 17m**
+
+---
+
+# Day 29 — 01.06.2026: TriTeron Robot Module (TRM) Progress — Part 8
+
+[lapse](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
+
+**Total time spent: 1h 50m**
+
+---
+
+# Day 30 — 02.06.2026: TriTeron Robot Module (TRM) Progress — Part 9
+
+[lapse](https://lapse.hackclub.com/timelapse/_aOokRs_SLGK)
+
+**Total time spent: 1h 02m**
+
+---
+
+# Day 31 — 03.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
+
+[lapse](https://lapse.hackclub.com/timelapse/cPrT8Rbqh_sX)
+
+**Total time spent: 4h 20m**
+
+---
+
+# Day 32 — 04.06.2026: TriTeron Robot Module (TRM) Progress — Part 11
+
+Today, before I sat down to work on my project, I updated Fusion. After updating when I opened my file I saw that some of yesterday's progress was gone. I was quite astonished at the scene but had nothing to do.
+
+Based on the experience of the previous day, I decided to go with the screw assembly. But here's what I did before the assembly:
+
+1. I first went to Fusion Teams on Chrome and then I deleted old files that were not necessary in the design. It makes sure that all my stuff are updated and old unnecessary designs are excluded.
+
+2. Then I went to model the washer again, just like yesterday. I first made a sketch and then I extruded it with the correct dimensions, which I received from the [OnlyScrews data sheet](https://onlyscrews.in/products/m8-washer-ss304). I then duplicaed it to total 28 screws using rectangular pattern.
+
+3. Next imported the [EDLP-S1-B-d8-L30 screw](https://jlcmc.com/product/s/E02/EDLP/iso-7379-gb-t-5281-hex-socket-shoulder-screw-(set-screw)?k=EDLP-S1-B-d8-L35&productModelNumber=EDLP-S1-B-d8-L35) which I had downloaded yesterday. I then duplicaed it to total 12 screws using rectangular pattern.
+
+4. Then I looked for the nut for the screw. I chose this [EMLC-S1-N-M8](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M8&productModelNumber=EMLC-S1-N-M8) from yesterday and duplicated it to total 12 screws using rectangular pattern.
+
+Then I was about to enter into assembling.
+
+1. I first added a rigid joint for the washer.
+2. Then I added the screw.
+3. And then I added the second washer.
+4. Next I added rigid joint for the nut.
+
+This is how it looked.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0dcea9fe-db0c-4654-aa25-50b81b9fa382" />
+
+5. Using the combine tool, I made a hole so that the nut can fit in the z-axis mount.
+6. Made some extrusions using sketch and added clearence for installing the nut.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc5c7303-ead8-401c-8cd4-355c339bbd26" />
+
+But looking at the assembly, it seemed that the scews are not that sturdy, as not all faces that asre supposed to be tight are making contact. The length of the thread and the extent of it is also concerning. But why was that so. It was because of the following reasons:
+
+* There was a huge gap between the screw head and the smooth shoulder.
+* The shoulder neck was narrow, which could've caused the washer to loosened.
+* The thread length was shorter than the thread length of the nut.
+* There was a concerning amount of gap and narrowing at the threaded neck
+
+So I made the desicion of chaning the very shoulder screw for which I spent so long to assemble. I got no choice.
+
+I started surfing JLCMC and after looking at several configurations of screws, I could not find something desirable for the assembly.
+
+But then I found this [MSB8-30](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30) screw that seemed perfect for the assembly, since it had no narrow points and a decent thread length. I briefly went through the data sheet.
+
+<img width="900" height="1271" alt="image" src="https://github.com/user-attachments/assets/4344263f-def7-4784-a7aa-cfeb2aa381a7" />
+
+But there was one problem. The the length of the smooth shoulder was exactly 30 mm, which mean that the washer to waher max distance was also supposed to be 30 mm, for a perfect fit. The washer is 1.5 mm thick and the 608 bearing is 7 mm thick. But currently, this was 1.5 + 7 + x + 7 + 1.5 = 32 mm, where X is the TriTrron leg's gap between the bearings, which was 15 mm. This meant that I had to reduce the X from both sides by 1 mm, to make the total 30 mm.
+
+Thus, I made the adjustments to all the 24 bearing hubs in the legs, using extrusions and facial offsets. Then I deleted the old rigid joints of the bearings and reassembled them correctly.
+
+This made sure that there is 27 mm of gap between the washers, and since the washers were 1.5 mm thick, the distance between the extreme faces of the wo washers is 30 mm.
+
+This is how it looks now.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0470ebae-430b-425c-98ed-8ca5e5f1259c" />
+
+The problem was fixed, and the screw was supposed to be a perfect fit.
+
+I added rigid joint for the first washer (after struggling to delete the pre-existing joint), and then for the second, and then the nut.
+
+Yes, it was a perfect fit, but before I could proceed, time was over for today's session.
+
+Here's the lapse of today's session: [PATRA-LPS-11-D32](https://lapse.hackclub.com/timelapse/0scjCOx6vKE7)
+
+**Total time spent: 3h 30m**
+
