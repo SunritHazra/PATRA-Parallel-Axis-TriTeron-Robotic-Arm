@@ -32,7 +32,7 @@ Here's what shaped my thinking, and inspired me:
 
 * [This](https://www.youtube.com/watch?v=6EtXycVGJg4) video by Rudmin introduced the original concept.
 
-* [This](https://www.youtube.com/watch?v=io4S9amExNM) video by Not An Engineer introduces the carriage system. I watched this multiple times specifically to understand how the X and Y axes are driven independently on the carraige.
+* [This](https://www.youtube.com/watch?v=io4S9amExNM) video by [Not An Engineer](https://www.youtube.com/@NoEngineerHere) introduces the carriage system. I watched this multiple times specifically to understand how the X and Y axes are driven independently on the carraige.
 
 * [This](https://www.youtube.com/watch?v=3fbmguBgVPA) pushed me toward adding a robotic arm, and gave me a ough idea of what style robotic arm I could add.
 
@@ -52,7 +52,7 @@ To get started, I did focused research on the following (only this time is count
 
 * **Zaber LC40:** Rudmin used [LC40 family](https://www.zaber.com/products/families/LC40) for the TriTeron, which is configurable, belt drive, t-slot profile linear stages. Prices were mostly in the $2000–$3000 range, which is consistent with industrial-grade configurable stages.
 
-Things I Learned:
+**Things I Learned:**
 
 * How ball screws work internally (recirculating ball mechanism and lead mechanics)
 * Differences between NEMA motor sizes and torque ratings
@@ -62,6 +62,14 @@ Things I Learned:
 * Why rigidity and repeatability matter more than just "cool movement"
 * How can I make my robotic arm modular
 * A little about the LC40 family
+
+**Summary of today's session (Day 1):**
+
+1. Revisited the origins of the TriTeron concept and reviewed key reference projects and videos.
+2. Selected Forge as the platform for developing PATRA after earlier plans did not materialize.
+3. Conducted focused research on kinematics, robotic arms, belts, ball screws, and aluminium extrusions.
+4. Studied industrial systems such as the Zaber LC40 family to understand professional design approaches.
+5. Built a stronger technical foundation by learning about drive systems, torque requirements, modularity, and parallel robotics.
 
 **Total time spent: 6h 0m**
 
@@ -82,6 +90,14 @@ The most frustrating part of this phase was the overwhelming number of choices. 
 **A little fast forward:** This project was returned for changes by the reviewer on **14th April, 2026**. I did not make any changes as he said, but my overall plan had changed significantly by then. So, I re-pitched officially on **30th April, 2026**.
 
 **Please note that I did not use AI for any fields of the pitch. I have only used it to search the sources of my parts (pretty much like Google, but better). Then, manually I visited the sites and made the estimates. Please try to understand.**
+
+**Summary of today's session (Day 2):**
+
+1. Developed the first formal pitch for PATRA based on preliminary planning and research.
+2. Created multiple design sketches and evaluated different architectural possibilities.
+3. Assembled an initial bill of materials with separate budgets for the TriTeron and robotic arm.
+4. Performed extensive component sourcing and feasibility analysis.
+5. Submitted the project for external review to gather technical feedback and validation.
 
 **Total time spent: 4h 52m**
 
@@ -125,6 +141,14 @@ After more hours of iteration:
 
 For a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, exploiting the Fusion Timeline. Fusion being parametric saved a lot of time here.
 
+**Summary of today's session (Day 3):**
+
+1. Began CAD development by studying Rowan's carriage-based TriTeron architecture.
+2. Imported reference models and established the Fusion 360 project environment.
+3. Planned a hybrid architecture combining carriage mechanisms with ball-screw actuation.
+4. Started modelling the primary structural framework using aluminium extrusions.
+5. Used existing designs as educational references while preparing for future modifications.
+
 **Total time spent: 8h 12m**
 
 ---
@@ -159,6 +183,14 @@ Decision: delete all joints, reset the motion setup, and re-examine the underlyi
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c7e5950-0ebe-4217-807d-f8d1e3b2d580" />
 
 No pitch response yet. Waiting on that before making any major structural decisions on the build.
+
+**Summary of today's session (Day 4):**
+
+1. Experimented with Fusion 360 joints and assembly constraints for motion simulation.
+2. Encountered challenges in achieving correct kinematic relationships between components.
+3. Shifted focus toward refining the structural design rather than motion studies.
+4. Rescaled the mechanism to better fit the intended robotic arm dimensions.
+5. Improved frame symmetry by rebuilding and mirroring major structural elements.
 
 **Total time spent: 5h 50m**
 
@@ -210,6 +242,14 @@ I also did targeted research on the Indian market for the three main structural 
 
 The BOM from today was used directly as the basis for the re-pitch on 30th April.
 
+**Summary of today's session (Day 5):**
+
+1. Reviewed project feedback and reassessed several major design decisions.
+2. Calculated motor torque requirements for the intended payload and motion system.
+3. Evaluated different motor placement strategies and selected remote mounting.
+4. Compared sourcing options from domestic and international suppliers.
+5. Optimized the design around realistic budget and procurement constraints.
+   
 **Total time spent: 4h 55m**
 
 ---
@@ -293,6 +333,14 @@ Local hardware store — widely available
 Estimated Total
 SectionEst. CostBall Screw & Support~$90Linear Motion Rails & Blocks~$85Belt Drive Components~$45Frame & Plates~$240Motors~$140Drivers & Power~$90Controller + I/O~$40Misc Hardware~$40Total≈ $700 USD
 
+**Summary of today's session (Day 6):**
+
+1. Investigated CNC manufacturing options for custom robot components.
+2. Requested and compared quotations from multiple fabrication services.
+3. Analyzed manufacturing costs against overall project budget limitations.
+4. Evaluated the practicality of CNC machining versus additive manufacturing.
+5. Decided to prioritize 3D printing for most custom structural components.
+
 **Total time spent: 3h 55m**
 
 ---
@@ -339,6 +387,14 @@ Removing ball screws from the BOM brought the running total down to approximatel
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2467ea2-3b5d-42df-a6ee-9e2d4bbf6254" />
 
 One sourcing gap: HTD 5M belts don't appear to be stocked by any Indian e-commerce site I found. IndiaMart has listings, but they require direct vendor contact. Will need to follow up on that.
+
+**Summary of today's session (Day 7):**
+
+1. Revisited the original TriTeron mechanism to improve understanding of its operation.
+2. Discovered how multiple belt loops independently drive different axes.
+3. Corrected earlier misconceptions regarding carriage-based motion systems.
+4. Simplified the architecture by moving away from unnecessarily complex mechanisms.
+5. Updated the bill of materials based on the revised design approach.
 
 **Total time spent: 4h 55m**
 
@@ -390,9 +446,15 @@ Okay, now this is the BOM for the Foundation Structure, for now:
 
 I will continue with this for the next day, and start modelling again.
 
-Total time spent: 3h 55m
+**Summary of today's session (Day 8):**
 
-**Total time spent: 3h 45m**
+1. Received approval to continue development and refine the project further.
+2. Finalized important design parameters such as rail dimensions and workspace.
+3. Permanently removed ball screws from the system architecture.
+4. Investigated CAD model availability for selected commercial components.
+5. Began rebuilding the project around verified and practical hardware selections.
+
+**Total time spent: 3h 55m**
 
 ---
 
@@ -437,6 +499,14 @@ Some important points tobe noted:
 * The Good motor choice is based on [NEMA23 PR57HS76](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft).
 * The Great motor choice is based on [NEMA23 PR57HS112](https://robu.in/product/pro-range-nema23-pr57hs112-3004-03-30-61-kg-cm-hybrid-bipolar-stepper-motor-round-type-shaft).
 
+**Summary of today's session (Day 9):**
+
+1. Restarted CAD development using finalized hardware specifications.
+2. Imported accurate models of rails, extrusions, bearings, and structural parts.
+3. Verified compatibility between sourced components and CAD references.
+4. Constructed a more realistic digital representation of the robot platform.
+5. Established a solid foundation for future mechanical integration work.
+
 **Total time spent: 3h 30m**
 
 ---
@@ -466,6 +536,14 @@ I then dived into a little foreseeing the future. I know that CNC machinging is 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dbc4f73a-2304-47a2-9749-9d6cf7e5e4e5" />
 
 I then made the hard desicion of choosing only 3D printing for all the parts of my project. I would either print in my future printer, or I would choose MJF or SLA printing from local sources if possible.
+
+**Summary of today's session (Day 10):**
+
+1. Investigated dimensional discrepancies among linear rail suppliers.
+2. Adopted verified HIWIN references to improve modelling accuracy.
+3. Continued evaluating fabrication methods for custom robot parts.
+4. Compared manufacturing services and their pricing structures.
+5. Improved confidence in future fabrication planning and component selection.
 
 **Total time spent: 3h 50m**
 
