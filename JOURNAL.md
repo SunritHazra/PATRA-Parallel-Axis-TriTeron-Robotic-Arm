@@ -983,9 +983,46 @@ There are going to be 4 legs in total, each with two connected legs.
 
 # Day 32 — 04.06.2026: TriTeron Robot Module (TRM) Progress — Part 11
 
+Today, starting my work, before I sat down to work on my project, I updated Fusion. After updating when I opened my file I saw that most of yesterday's progress was gone.
+
+Followed by that, here's what I did before the re-assembly:
+
+1. I first went to Fusion Teams on Chrome and then I deleted old files that were not necessary in the design. It makes sure that all my stuff are updated and old unnecessary designs are excluded.
+
+2. Then I went to model the washer again, just like yesterday. I first made a sketch and then I extruded it with the correct dimensions, which I received from the [OnlyScrews data sheet](https://onlyscrews.in/products/m8-washer-ss304). I then duplicaed it to total 28 screws using rectangular pattern.
+
+3. Next imported the [EDLP-S1-B-d8-L30 screw](https://jlcmc.com/product/s/E02/EDLP/iso-7379-gb-t-5281-hex-socket-shoulder-screw-(set-screw)?k=EDLP-S1-B-d8-L35&productModelNumber=EDLP-S1-B-d8-L35) which I had downloaded yesterday. I then duplicaed it to total 12 screws using rectangular pattern.
+
+4. Then I looked for the nut for the screw. I chose this [EMLC-S1-N-M8](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M8&productModelNumber=EMLC-S1-N-M8) from yesterday and duplicated it to total 12 screws using rectangular pattern.
+
+Then I was about to enter into assembling.
+
+1. I first added a rigid joint for the washer.
+2. Then I added the screw.
+3. And then I added the second washer.
+4. Next I added rigid joint for the nut.
+
+This is how it looked.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0dcea9fe-db0c-4654-aa25-50b81b9fa382" />
 
+5. Using the combine tool, I made a hole so that the nut can fit in the z-axis mount.
+6. Made some extrusions using sketch and added clearence for installing the nut.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc5c7303-ead8-401c-8cd4-355c339bbd26" />
+
+But looking at the assembly, it seemed that the scews are not that sturdy, as not all faces that asre supposed to be tight are making contact. The length of the thread and the extent of it is also concerning. But why was that so. It was because of the following reasons:
+
+* There was a huge gap between the screw head and the smooth shoulder.
+* The neck was narrow, which could've caused the washer to loosened.
+* The thread length was shorter than the thread length of the nut.
+* There was again concerning amount of gap and narrowing at the threaded part
+
+So I made the desicion of chaning the very shoulder screw for which I spent so long to assemble. I got no choice.
+
+I started surfing JLCMC and after looking at several configurations of screws, I could not find something desirable for the assembly.
+
+But then I found this [MSB8-30](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30) screw that seemed perfect for the assembly
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0470ebae-430b-425c-98ed-8ca5e5f1259c" />
 
