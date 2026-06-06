@@ -1100,7 +1100,7 @@ So I made the desicion of chaning the very shoulder screw for which I spent so l
 
 I started surfing JLCMC and after looking at several configurations of screws, I could not find something desirable for the assembly.
 
-But then I found this [MSB8-30](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30) screw that seemed perfect for the assembly, since it had no narrow points and a decent thread length. I briefly went through the data sheet.
+But then I found this [MSB8-30](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30) screw that seemed perfect for the assembly, since it had no narrow points and a decent thread length. I briefly went through the data sheet, to give it approval.
 
 <img width="900" height="1271" alt="image" src="https://github.com/user-attachments/assets/4344263f-def7-4784-a7aa-cfeb2aa381a7" />
 
@@ -1118,7 +1118,7 @@ The problem was fixed, and the screw was supposed to be a perfect fit.
 
 I added rigid joint for the first washer (after struggling to delete the pre-existing joint), and then for the second, and then the nut.
 
-Yes, it was a perfect fit, but before I could proceed, time was over for today's session.
+Yes, it was a perfect fit, and the fastening system was completed. But before I could proceed, time was over for today's session.
 
 Here's the lapse of today's session: [PATRA-LPS-11-D32](https://lapse.hackclub.com/timelapse/0scjCOx6vKE7)
 
@@ -1128,7 +1128,29 @@ Here's the lapse of today's session: [PATRA-LPS-11-D32](https://lapse.hackclub.c
 
 # Day 33 — 05.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
 
-[lapse](https://lapse.hackclub.com/timelapse/1AzmvcisTlWN)
+I proceeded exactly from where I left off yesterday. In today's session I solved that very bottleneck that was lurking within the whole triteron system's foundation, which was the nut fastening the whole system itself. The fastener was simply upside down, in simple terms.
+
+So, I flipped it, cauing chaos in the whole workspace, I don't know why. The slign simply affects each of the component's copy and changes their orientation upon any chang made to one of the component. In this case, it was the nut.
+
+To start fresh, I made some adjustments back in the timeline, causing the hole to delete itself. Then I did the following:
+
+* Used rigid joint to properly place the nut into position.
+* Used cut tool to re-establish the hole.
+* Used sketch the extrude out the right geometry to fix things.
+
+I then proceeded to repeat the same assembly sequence involving the [MSB8-30 screw](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30), M8 washers, and of course the [EMLC-S1-N-M8 nut](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M8&productModelNumber=EMLC-S1-N-M8), just like yesterday.
+
+But then I noticed a terrible mechanical flaw. The threaded part of the [EMLC-S1-N-M8 nut](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M8&productModelNumber=EMLC-S1-N-M8) was 6 mm in diameter, which meant that it was supposed to be an M6 nut. I was using M8.
+
+So, I went to JLCMC, corrected my confuiguration and downloaded this [EMLC-S1-N-M6 nut](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6), and imported it in my design.
+
+I then adjusted the geometry of the Z Axis mount to perfectly house the M6 nut. I also made sure that there is no friction among the rotating parts. I then split the body of the mount and then mirrored the geometry.
+
+Since I had worked quite a lot on my design, there was a high chance that I was potentially making a mistake. So, I consulted with Gemini and showed it my assembly and it pointed out the issues, and I fixed them, and was completely rest assured of my design's sanity.
+
+I can now copy this new logic to the other mounted joints (including the tool head) and complete the triteron just except for the double joints.
+
+Here's the lapse of today's session: [PATRA-LPS-12-D33](https://lapse.hackclub.com/timelapse/1AzmvcisTlWN)
 
 **Total time spent: 1h 50m**
 
