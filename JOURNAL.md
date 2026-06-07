@@ -1236,8 +1236,10 @@ Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.c
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ebd91876-da58-4df6-a788-8de189a43f8f" />
 
-Here's the lapse of today's session: [PATRA-LPS-14-D35]()
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/162c38a3-4bda-4a03-9bec-28a4b0007b97" />
 
-**Total time spent: 3h 20m**
+Here's the lapse of today's session: [PATRA-LPS-14-D35](https://lapse.hackclub.com/timelapse/kdLlRkzxfTa4)
+
+**Total time spent: 3h 25m**
 
 ---
