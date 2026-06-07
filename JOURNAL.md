@@ -1158,7 +1158,45 @@ Here's the lapse of today's session: [PATRA-LPS-12-D33](https://lapse.hackclub.c
 
 # Day 34 — 06.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
 
-[lapse](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
+Before I could copy the fastening logic from yesterday, I had to name the fastening components logically so that everythings makes sense, and is easy to navigate.
+
+For that, I decided to make two different fastening sets:
+
+* Fastening Set S: Here "S" means single, and they are bascially the joint connected with the mount and the tool head.
+* Fastening Set D: Here "D" means double, and they are basically the elbow joints, that are the joints between the legs themselves.
+
+I belived that this was okay for the time being, and I thought of coming up with a better name later on.
+
+Then I proceeded to follow the exact naming sequence I had used for the Bearings, exactly where the Bearings existed. Here is the logic:
+
+* "Fastener Set" is the core name, for all the fastenser sets that include either, "Fastener Set S" or "Fastener Set D".
+* Then it is followed by either "X", "Y", or "Z" depending on the axis.
+* If it is "X" then, it is followed by either "U", for upper, "L" for lower, "UL" if it was the elbow joint that falls in between.
+* If it is "Y" then, it is followed by either "U", for upper, "L" for lower, "UL" if it was the elbow joint that falls in between.
+* If it is "Z" then, it is followed by either "A" or "B", depnding on the rail their loest joints sit on. Then it is followed by either "U", for upper, "L" for lower, "UL" if it was the elbow joint that falls in between.
+* If the joint is single and I use "U", OR "L" as suffix, then I establish Fastener Set S as the child component.
+* If the joint is double and I use "UL" as suffix, then I establish Fastener Set D as the child component.
+
+There are the following numbers of both type of joints:
+
+* There are 8 single joints.
+* There are 4 double joints.
+
+Note that this session only involves the single joints.
+
+Next part was about completing the Fastener Set S. For that, I edited the [MSB8-30 screw](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30), by adding thread and nice appearence, and redifned the joints as an independent system. I made sure that the washer placement, nut placement and the both placement are interdependent in Fusion assembly and are unified as a Rigid Group.
+
+Then I duplicated the **Fastener Set S** total 8 times using rectangular pattern, and placed them inside the correct component one by one. A clean logic was then established.
+
+Followed by this, it was the time to establish the cuts for the nuts to go in for the other mounts and the tool head. But I noticed asymmetry in placement of the Tool Head, and saw that it was overlapping with one of the legs. I want back in the timeline and fixed the position.
+
+But then again, the cut in the Z Axis Mount disappeared. This was probably my fourth or fifth time modelling this part. But since I knew what to do, I got over with it quickly, mirrored the logic and moved to the Tool Head.
+
+I extruded out a body that followed the exact geometry of the hub for the nut and the screw's thread's end part, and named it "NUTCRAKER" because I didn't want it to disappear into the other Bodies, if I just kept the name default; and also because it is supposed to crack a hole for the nuts to go in, so I think this makes sense.
+
+I aligned NUTCRACKER in the two of the hubs of the Tool Head, and used the Combine Cut tool to carve out the geometry, then I split the body and then mirrored it to make the geometry symmetrical.
+
+Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
 
 **Total time spent: 3h 20m**
 
