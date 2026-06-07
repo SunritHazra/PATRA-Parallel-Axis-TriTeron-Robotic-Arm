@@ -1126,9 +1126,9 @@ Here's the lapse of today's session: [PATRA-LPS-11-D32](https://lapse.hackclub.c
 
 ---
 
-# Day 33 — 05.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
+# Day 33 — 05.06.2026: TriTeron Robot Module (TRM) Progress — Part 12
 
-I proceeded exactly from where I left off yesterday. In today's session I solved that very bottleneck that was lurking within the whole triteron system's foundation, which was the nut fastening the whole system itself. The fastener was simply upside down, in simple terms.
+I proceeded exactly from where I left off yesterday. I started today's session by solving that very bottleneck that was lurking within the whole triteron system's foundation, which was the nut fastening the whole system itself. The fastener was simply upside down, in simple terms.
 
 So, I flipped it, cauing chaos in the whole workspace, I don't know why. The slign simply affects each of the component's copy and changes their orientation upon any chang made to one of the component. In this case, it was the nut.
 
@@ -1136,7 +1136,7 @@ To start fresh, I made some adjustments back in the timeline, causing the hole t
 
 * Used rigid joint to properly place the nut into position.
 * Used cut tool to re-establish the hole.
-* Used sketch the extrude out the right geometry to fix things.
+* Used sketch to extrude out the right geometry to fix things.
 
 I then proceeded to repeat the same assembly sequence involving the [MSB8-30 screw](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30), M8 washers, and of course the [EMLC-S1-N-M8 nut](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M8&productModelNumber=EMLC-S1-N-M8), just like yesterday.
 
@@ -1145,6 +1145,8 @@ But then I noticed a terrible mechanical flaw. The threaded part of the [EMLC-S1
 So, I went to JLCMC, corrected my confuiguration and downloaded this [EMLC-S1-N-M6 nut](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6), and imported it in my design.
 
 I then adjusted the geometry of the Z Axis mount to perfectly house the M6 nut. I also made sure that there is no friction among the rotating parts. I then split the body of the mount and then mirrored the geometry.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/837e92ed-5d3f-47dd-b31c-2ef821414f03" />
 
 Since I had worked quite a lot on my design, there was a high chance that I was potentially making a mistake. So, I consulted with Gemini and showed it my assembly and it pointed out the issues, and I fixed them, and was completely rest assured of my design's sanity.
 
@@ -1156,7 +1158,7 @@ Here's the lapse of today's session: [PATRA-LPS-12-D33](https://lapse.hackclub.c
 
 ---
 
-# Day 34 — 06.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
+# Day 34 — 06.06.2026: TriTeron Robot Module (TRM) Progress — Part 13
 
 Before I could copy the fastening logic from yesterday, I had to name the fastening components logically so that everythings makes sense, and is easy to navigate.
 
@@ -1184,9 +1186,21 @@ There are the following numbers of both type of joints:
 
 Note that this session only involves the single joints.
 
-Next part was about completing the Fastener Set S. For that, I edited the [MSB8-30 screw](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30), by adding thread and nice appearence, and redifned the joints as an independent system. I made sure that the washer placement, nut placement and the both placement are interdependent in Fusion assembly and are unified as a Rigid Group.
+Next part was about completing the **Fastener Set S**. For that, I edited the [MSB8-30 screw](https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30), by adding thread and nice appearence, and redifned the joints as an independent system. I made sure that the washer placement, nut placement and the both placement are interdependent in Fusion assembly and are unified as a Rigid Group.
 
 Then I duplicated the **Fastener Set S** total 8 times using rectangular pattern, and placed them inside the correct component one by one. A clean logic was then established.
+
+Here's how the X axis fasteners were named:
+
+<img width="357" height="510" alt="image" src="https://github.com/user-attachments/assets/d3dafbea-1688-4e54-94d3-1fda8e150912" />
+
+Here's how the Y axis fasteners were named:
+
+<img width="357" height="510" alt="image" src="https://github.com/user-attachments/assets/d02e9428-40ae-457e-83b9-c2e561bb8d59" />
+
+Here's how the Z axis fasteners were named:
+
+<img width="357" height="510" alt="image" src="https://github.com/user-attachments/assets/fec31666-7f32-4a52-8084-133a2707186d" />
 
 Followed by this, it was the time to establish the cuts for the nuts to go in for the other mounts and the tool head. But I noticed asymmetry in placement of the Tool Head, and saw that it was overlapping with one of the legs. I want back in the timeline and fixed the position.
 
@@ -1194,11 +1208,23 @@ But then again, the cut in the Z Axis Mount disappeared. This was probably my fo
 
 I extruded out a body that followed the exact geometry of the hub for the nut and the screw's thread's end part, and named it "NUTCRAKER" because I didn't want it to disappear into the other Bodies, if I just kept the name default; and also because it is supposed to crack a hole for the nuts to go in, so I think this makes sense.
 
-I aligned NUTCRACKER in the two of the hubs of the Tool Head, and used the Combine Cut tool to carve out the geometry, then I split the body and then mirrored it to make the geometry symmetrical.
+I aligned NUTCRACKER in the two of the hubs of the Tool Head, and used the Combine Cut tool to carve out the geometry.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03eb6746-b47f-4576-9a36-a07aae84c1a4" />
+
+Then I split the body and then mirrored it to make the geometry symmetrical.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e2122bb5-3d25-4f25-b764-fb98bf3840ba" />
 
 Then it was the time to work on the X and Y Axis Mounts, which have been floating since their very existence. I used NUTCRAKER this time to align with the last nut and create geometry, not cut. I first extruded a circuar profile from inside the mounts. Then I created a sketch where I made a hexagon and added fillets, then I extruded it inwards and made it a seperate part which I can assemble seperately. I used NUTCRACKER to crack a hole just like the other ones. I mirrored the components, and had them placed correctly. I named the extrusions, "Extensions".
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/45fec21d-1e35-44f9-8ed6-1d156d20a948" />
+
 Next I moved to also work on the double joints, but I wondered how. I did some research and found that I had to use mechanical shims between the rtating components. I did not proceed as the time for today's session was over already.
+
+But, anyways, here's how the tripteron looks like now:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c1db48ba-c4e4-4622-8c12-8fb6650436ea" />
 
 Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
 
