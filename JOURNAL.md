@@ -1196,6 +1196,10 @@ I extruded out a body that followed the exact geometry of the hub for the nut an
 
 I aligned NUTCRACKER in the two of the hubs of the Tool Head, and used the Combine Cut tool to carve out the geometry, then I split the body and then mirrored it to make the geometry symmetrical.
 
+Then it was the time to work on the X and Y Axis Mounts, which have been floating since their very existence. I used NUTCRAKER this time to align with the last nut and create geometry, not cut. I first extruded a circuar profile from inside the mounts. Then I created a sketch where I made a hexagon and added fillets, then I extruded it inwards and made it a seperate part which I can assemble seperately. I used NUTCRACKER to crack a hole just like the other ones. I mirrored the components, and had them placed correctly. I named the extrusions, "Extensions".
+
+Next I moved to also work on the double joints, but I wondered how. I did some research and found that I had to use mechanical shims between the rtating components. I did not proceed as the time for today's session was over already.
+
 Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
 
 **Total time spent: 3h 20m**
