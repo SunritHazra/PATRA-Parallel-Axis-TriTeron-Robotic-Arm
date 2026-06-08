@@ -1234,6 +1234,25 @@ Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.c
 
 # Day 35 — 07.06.2026: TriTeron Robot Module (TRM) Progress — Part 14
 
+I started by fixing all the minor problems from yesterday, which I had ignored knowingly or unknowingly.
+
+So, what waere the problems?
+
+* The internal diameter of NUTCRACKER surrounding the thread was randomized at 3.84 mm radius.
+* The X and Y upper leg was rubbing against the tool head, with zero clearence. I had to make it 1 mm.
+* The distance between the NUTCRACKER hole's deepest point and the surface was not seen consistent.
+
+Here's what I did to fix them:
+
+* Went back in timeline to make the radius from 3.84 mm to 3.5 mm.
+* I took out the extrusion from the axis mount.
+* Then I named it FRICTIONKILLER, you know why.
+* Then I made face offsets in tool head holes.
+* Mirrored the parts, and used Combine tool.
+* Took measurements to see if everything is alright.
+
+Here's what I ended up with:
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ebd91876-da58-4df6-a788-8de189a43f8f" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/162c38a3-4bda-4a03-9bec-28a4b0007b97" />
