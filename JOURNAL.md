@@ -1262,3 +1262,21 @@ Here's the lapse of today's session: [PATRA-LPS-14-D35](https://lapse.hackclub.c
 **Total time spent: 3h 25m**
 
 ---
+
+# Day 36 — 08.06.2026: TriTeron Robot Module (TRM) Progress — Part 15
+
+I started by fixing some structural and mechanical errors that I noticed with the depth of NUTCRACKER.
+
+Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.com/timelapse/1kYZRIteUWKL)
+
+**Total time spent: 0h 45m**
+
+---
+
+# Day 37 — 16.06.2026: Robotic Arm Module (RAM) — Part 1
+
+Here's the lapse of today's session: [PATRA-LPS-16-D37]()
+
+**Total time spent: 0h 00m**
+
+---
