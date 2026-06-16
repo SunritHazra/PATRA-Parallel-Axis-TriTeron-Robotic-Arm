@@ -1273,10 +1273,10 @@ Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.c
 
 ---
 
-# Day 37 — 16.06.2026: Robotic Arm Module (RAM) — Part 1
+# Day 37 — 16.06.2026: Research on the Robotic Arm
 
-Here's the lapse of today's session: [PATRA-LPS-16-D37]()
+Here's the lapse of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
 
-**Total time spent: 0h 00m**
+**Total time spent: 3h 00m**
 
 ---
