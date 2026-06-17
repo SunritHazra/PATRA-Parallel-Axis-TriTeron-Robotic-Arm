@@ -1009,6 +1009,33 @@ Here's the lapse of today's session: [PATRA-LPS-1-D21](https://lapse.hackclub.co
 
 # Day 22 — 23.05.2026: TriTeron Robot Module (TRM) Progress — Part 1
 
+With the Tensioning System mostly done, it was time time to start working on the triteron. As discussed earlier, I will be following Rudmin's design combined with Rowan's. For the Kinematic Base Module (KBM) I followed Rudmin's design, and for the TriTeron I will be following Rowan's design with slight changes in the leg position.
+
+Before I dived into the tripteron part, I thought of first improving certain design features of the Linear Block, using chamfers and drafts. Once it seemed like it looked better than before, it came to me that if I am adding something on the top of the Linear Block Unifier, I had to use flat head screws.
+
+For that, I went to OnlyScrews and started searching for the right screw. I found the perfect screw type needed. For the adjustmesnts, I added chamfers to house the screw heads.
+
+With the thought of starting easy, I chose to work on the front two legs, which are supposd to be the Z axis legs. They will be connected via Z Axis Mount. Thus, I started modelling the Z axis mount, which was supposed to have an angle of 45 degress at the face where the front two Z axis legs were supposed to be attached. For this step I looked at the Rowan's model and Rudmin's video several times.
+
+Once the Z axis mount was roughly done, I shifted focus to the X and Y axis mounts. I was confused with the angles of the joints, so, I relied mostly on the exact angles provided in the model of Rowan's tripteron. For getting the angles right, I even imported the Bearing Mount of Rowan's design in my workspace. But they made almost no sense to me. So I followed Fusion's measurement tool's data about the angles, and I made a circular body that I could use in the future for joining the legs.
+
+Next I thought of modelling the legs, for which I will be following Rowan's design, not Rudmin's. So, first I made holes in the Z axis mount that was supposed to mount the lower part of the two front Z axis legs.
+
+Then, I made a new design, where I started to model the leg, by drawing a sketch. Here's how I did it:
+
+1. I made a center-tocenter slot of 150 mm and 30 mm diameter.
+2. Then I made circles of 15 mm and 25 mm on either center points of the slot.
+3. I drew a line 7.5 mm away from the slot's central line, and made it connect to the circles.
+4. I made some adjustments to manage to add fillets to the point of intersection between the line and the circles.
+
+After the sketch was done, here's how it looked:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/478bc880-ab3f-469c-811a-9e9f799a4f07" />
+
+Next step was the extrude the sketch to achieve the shape needed. Here's how I did it:
+
+1. I first extruded the full sketch.
+
 [Lapse 1](https://lapse.hackclub.com/timelapse/DfNLfUEVeITT)
 [Lapse 2](https://lapse.hackclub.com/timelapse/8V5IIaFo7r2J)
 
