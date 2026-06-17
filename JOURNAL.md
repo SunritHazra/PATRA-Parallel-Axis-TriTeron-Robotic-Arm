@@ -917,7 +917,7 @@ I then arranged the components in the Browser and added proper materials for the
 
 # Day 20 — 21.05.2026: Kinematic Base Module (KBM) Progress — Part 10
 
-Previously the bare bones tensioning system involving the following:
+Previously the bare bones tensioning system involved the following:
 
 * [Pulley CBYL-AH1-5GT150-18-A-H-d6.35 (Z)](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d6.35&productModelNumber=CBYL-AH1-5GT150-18-A-H-d6.35): This is the pulley I had selected previously. I changed it to [CBYL-AH1-5GT150-20-A-N-d12](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12) to ensure that I can extend the short motor shaft.
 
@@ -983,15 +983,27 @@ Then it was time to fix the X and Y belt locks, because they were still HTD 5M c
 3. I created a sketch for the profiles that were excess in the cross-section and them extruded them in and joined.
 4. I mirrored the corrected part and then combined them.
 
-I then fixed the celling of the part above to make sure it thghtly clamps the belt in place.
+I then fixed the celling of the part above to make sure it thghtly clamps the belt in place. With this, the clamping system for both the X and Y tensioning systems was fixed. Now it was time for the Z axis tensioning system that will sit in the middle of the two Z linear blocks.
 
-This session was all about adding the final touches to the tensioning systems to ensure that they function properly. I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
+For that, I duplicated the clamp then positioned it to perfectly align with the belt path of the Z axis tensioning system. But, during that, I found some weird problems with the faces of the belt clamp. So, I had to fix it by making it a solid body extrusions, then using the 8 teeth to cut out the shape of the GT5 tooth. It produced a cleaner and more accurate customized clamping belt that it more reliable. Then I replaced the old messy GT5 clamp with the new clamp, for both the X and Y axis, while keeping the part with the mounting screw hubs almost untouched.
+
+Next part was about to model the part that actually connects the floating belt clamp to the two Z linear blocks. This step was not very strict in terms of design, so I made it look as good as possible. For that I added little fins on either sides of the linear block ends. I copied the design to the X and Y linear blocks as well.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/18da3741-9f52-4d04-862a-2d8d56af0993" />
+
+Since the motor of the Z axis was running two linear blocks, I decided to use [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) instead of [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft/).
+
+With this much progress done today on the parts, it was now time to update the BOM. And so I did.
+
+<img width="2559" height="297" alt="image" src="https://github.com/user-attachments/assets/718dc784-ccae-405c-a248-e06c685a839d" />
+
+But when I paused my lapse, and then came back, I forgot to resume it. I had made more changes to the BOM and fixed some overlapping compoents, troublesome downstream features and timeline errors. The First stage is almost complete after all this.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b605071-5c56-4343-b12e-89baed85f349" />
 
-The First stage is almost complete after all this.
+Here's the lapse of today's session: [PATRA-LPS-1-D21](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3)
 
-**Total time spent: 5h 52m**
+**Total time spent: 5h 55m**
 
 ---
 
@@ -1303,7 +1315,17 @@ Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.c
 
 # Day 37 — 16.06.2026: Research on the Robotic Arm
 
-Here's the lapse of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
+Here's the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
+
+**Total time spent: 3h 00m**
+
+---
+
+# Day 38 — 17.06.2026: Writing Past Missed Journals
+
+Journaled the days #21 and #22
+
+Here's the lapse of today's session: []()
 
 **Total time spent: 3h 00m**
 
