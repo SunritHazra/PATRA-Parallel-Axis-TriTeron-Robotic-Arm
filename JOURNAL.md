@@ -1352,7 +1352,7 @@ Here's the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclu
 
 Journaled the days #21 and #22
 
-Here's the lapse of today's session: []()
+Here's the lapse of today's session: [PATRA-LPS-17-D38](https://lapse.hackclub.com/timelapse/6Sx4q91ksQql)
 
 **Total time spent: 3h 00m**
 
