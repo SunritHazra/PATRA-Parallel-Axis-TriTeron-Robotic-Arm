@@ -957,6 +957,34 @@ I thought that it was okay, and I imported it in Fusion only to realise that it 
 
 # Day 21 — 22.05.2026: Kinematic Base Module (KBM) Progress — Part 11
 
+I started by downloading the [Pulley CBYL-AH1-5GT150-20-A-N-d12 (Z)](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12) and [Idler CBYL-AH1-5GT150-18-A-H-d16 (Z)](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16) from JLCMC, which were the components paired with the [Belt E-GBN26005GT-150 (Z)
+](https://in.misumi-ec.com/vona2/detail/110411276379/?HissuCode=E-GBN26005GT-150) that I had finalized for the Z axis tensioning system. Then I updated the assembly by replacing the comonents.
+
+Since I had replaced the pulleys and idlers, it meant that I had to make sure that the belt fits perfectly with the new components, instead of adapting. So, I visited [this](https://in.misumi-ec.com/vona2/detail/110411276379/) datasheet of GT5 belt from MISUMI, and had a brief look on the dimensions, so that I can match mine existing one with it. I had a look at the 3D preview, but it honestly made no conclusion, so I downloaded the STEP file.
+
+<img width="447" height="163" alt="image" src="https://github.com/user-attachments/assets/7c7fc1eb-e7e2-476b-a30e-eed67d72015a" />
+
+I imported the model in my workspace, positioned it just above that one belt lock which i imported from GrabCAD yesterday. To be specific, it is this one: [GT5 belt lock](https://grabcad.com/library/gt5-belt-lock-1). My eyes kept telling me since yesterday that it was no way GT5. I confirmed it now. Maybe I did make a mistake while choosing the file to download. Anyways, it seemed like I could make my own timing belt. I proceeded to take measurements of the imported model and confirmed if the dimensions actually match with the datasheet.
+
+Once I confirmed that each tooth was absolutely perfect, I used the pattern tool to duplicate a single tooth accross the whole belt. I kept the spacing, or pitch at 5mm. Of course, the last one was not perfectly distanced from the first tooth, but it didn't matter.
+
+The reason I am doing this is becuase of the following reasons:
+
+* I wanted to carve out my own timing belt lock, instead of relying on other models from internet.
+* I wanted to see how the whole belt would look with all the tooth.
+* I wanted to see how well the teeth would line up with the idler and pulley.
+
+I then shifted focus away from the belt, pulleys and idlers of the tensioning system, and instead focused on the pulley case, idler case and the extrusion. So I fixed the length of the 2020 aluminium extrusion to prevent operlapping and the raddii of the point of intersection between the NEMA23 and the pulley and idler case.
+
+Then it was time to fix the X and Y belt locks, because they were still HTD 5M compatible, not GT5 compatible. For that, here is the workflow I adopted:
+
+1. I used extrusion to cut down the belt clamp to half of it's width, making sure I can directly look into the teeth grooves.
+2. I positioned the 8 teeth (with 5 mm pitch) properly by moving it 0.1 mm, since it was off by that margin.
+3. I created a sketch for the profiles that were excess in the cross-section and them extruded them in and joined.
+4. I mirrored the corrected part and then combined them.
+
+I then fixed the celling of the part above to make sure it thghtly clamps the belt in place.
+
 This session was all about adding the final touches to the tensioning systems to ensure that they function properly. I did a lot of stuff today. The first 20 minutes I was going through my BOM, checking compatability of components. Then I started [this](https://lapse.hackclub.com/timelapse/LMIzn1To8zm3) lapse and after it ended, I fixed some overlapping components.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b605071-5c56-4343-b12e-89baed85f349" />
