@@ -1084,7 +1084,7 @@ Here are the lapses of today's session: [PATRA-LPS-2-D22-1](https://lapse.hackcl
 
 # Day 23 — 24.05.2026: TriTeron Robot Module (TRM) Progress — Part 2
 
-I picked up exatcly where I left off yesterday. As the leg was complete, it was now time to implement that into the assembly.
+I picked up exatcly where I left off yesterday. As the leg was complete, and imported into the assembly, I can continue with positioning them properly.
 
 There are going to be 4 legs in total, each with two connected legs.
 
@@ -1092,9 +1092,31 @@ There are going to be 4 legs in total, each with two connected legs.
 * There will be one Y axis leg consisting one upper and lower leg
 * There will be two Z axis legs consisting one upper and lower leg, each
 
-[Lapse](https://lapse.hackclub.com/timelapse/vCOvL9YC8t7R)
+But due to some errors, I went back in the timeline and then restarted from the part where I had just imported the leg into the assembly. After that, I created new components and duplicated the Leg 4 times in one way and 4 more times mirrored. But due to some chaos, I deleted them and instead imported the design as bodies, not components, and copied them like that.
+
+I started with the assembly of front two legs of the Z axis, and used joints to position them into correct place. And for the angles, I follwed the exact angles of Rowan's design provided in the design. For once it felt like I had to learn 3d kinematics algebra. I was actually quite excited for this, but I had a better idea, for the time being.
+
+The plan was to import Rowan's design's legs into the model only to get the angles and align components in place, not to actually use the model.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/be227750-5b7d-4c37-8e2f-d9bb3357811c" />
+
+Once I adjusted the positions and angles, I made sure that the legs made by me follow the poition of Rowan's designed legs as closely as possible.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/858f9eeb-bb7b-45b2-87cf-bb1a1215d179" />
+
+I followed the same sequence for the back legs as well.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ffb5eb4a-4766-4c40-ab22-352ee177ec5c" />
+
+Then I mirrored them.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2c5ec4a8-b8c3-4424-ae79-7cdba3d60a74" />
+
+I was not completely sure about the X and Y legs, but the front two Z axis legs were mostly done. Here's how it looked:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/710049cc-3663-446c-ba62-2b513a17f71d" />
+
+Here are the lapses of today's session: [PATRA-LPS-3-D23](https://lapse.hackclub.com/timelapse/vCOvL9YC8t7R)
 
 **Total time spent: 2h 30m**
 
@@ -1102,13 +1124,40 @@ There are going to be 4 legs in total, each with two connected legs.
 
 # Day 24 — 26.05.2026: TriTeron Robot Module (TRM) Progress — Part 3
 
+I was done with the positioning of the the front two Z axis legs. Now was the time to fix the position of the Z and Y axis legs.
+
+By fixing, this is what I mean:
+
+* The lower end of the X and Y axis legs do not not overlap or touch the ninear block.
+* The elbow of the X and Y legs do not extend much farther out or much in.
+* The elbow height matches the elbow height of the front legs of Z axis.
+* The back legs are positioned similar to [Rudmin's design](https://www.youtube.com/watch?v=6EtXycVGJg4).
+
+Using rotation's and movements, I positioned the X and Y legs properly.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
+
+Then it was the time to work on the X and Y axis mounts, which was quite tricky due to the angles, but with some extrusions I was able to come up with this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/88e2584d-1f0c-46fe-834a-50ec65aee4c2" />
+
+With that done, I started writing past incomplete journals of older days, and added summary for journals of day 1 to 5.
+
+Here's the lapse of today's session: [Well, well, it failed]
 
 **Total time spent: 1h 30m**
 
 ---
 
 # Day 25 — 27.05.2026: TriTeron Robot Module (TRM) Progress — Part 4
+
+Today's session achieved almost nothing except the sketch I made at last. But I am stil writing this all up for the sake of appreciating failures.
+
+
+
+I continued working on the X axis leg mount, but I was not coming up with any ideas about how to connect the legs to the linear blocks. That's when I had a look into Rudmin's design and then I found out exactly what to do.
+
+I made this sketch that will have a extruded out diagonal body that will have hole to connect the lower part of the back legs.
 
 [lapse 1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285)
 [lapse 2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
@@ -1118,6 +1167,18 @@ There are going to be 4 legs in total, each with two connected legs.
 ---
 
 # Day 26 — 28.05.2026: TriTeron Robot Module (TRM) Progress — Part 5
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2000a1ac-f4ae-4ad1-a120-c3650d24d216" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/de70120c-563d-4a19-b3e6-83e6af7c3f87" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c3b6d0aa-948c-47ef-bd13-931dd4d450ab" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c4f8c16a-9a18-4f8e-86f2-ad8038503620" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99717ec1-d8fb-4012-a1c0-712dee0e32f7" />
+
+Head
 
 [lapse](https://lapse.hackclub.com/timelapse/oC5sY39XrQ18)
 
@@ -1381,7 +1442,7 @@ Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.c
 
 # Day 37 — 16.06.2026: Research on the Robotic Arm
 
-Here's the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
+Here are the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
 
 **Total time spent: 3h 00m**
 
@@ -1389,10 +1450,18 @@ Here's the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclu
 
 # Day 38 — 17.06.2026: Writing Past Missed Journals
 
-Journaled the days #21 and #22
+Journaled the days #21 and #22 (partly).
 
 Here's the lapse of today's session: [PATRA-LPS-17-D38](https://lapse.hackclub.com/timelapse/6Sx4q91ksQql)
 
 **Total time spent: 3h 00m**
 
 ---
+
+# Day 39 — 18.06.2026: Writing Past Missed Journals
+
+Journaled the days #22 (full), #23, #24, #25 (partly) and #26 (partly).
+
+Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackclub.com/timelapse/UA4UIbZiE68q), [PATRA-LPS-19-D39-2](https://lapse.hackclub.com/timelapse/aaIH03558pYh) and [PATRA-LPS-19-D39-3]()
+
+**Total time spent: 3h 45m**
