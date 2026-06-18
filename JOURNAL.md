@@ -1034,10 +1034,49 @@ After the sketch was done, here's how it looked:
 
 Next step was the extrude the sketch to achieve the shape needed. Here's how I did it:
 
-1. I first extruded the full sketch.
+1. I first extruded the full sketch, creating a solid body.
+2. I made the 15 mm holes using extrusion cut.
+3. I made the 25 mm diameter 7.5 mm deep hubs for the bearing for the bottom part.
+4. I made the 25 mm diameter 7.5 mm deep hubs for the bearing for the top part.
 
-[Lapse 1](https://lapse.hackclub.com/timelapse/DfNLfUEVeITT)
-[Lapse 2](https://lapse.hackclub.com/timelapse/8V5IIaFo7r2J)
+After this step, here's how it looked:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/caf97c09-089a-4fc3-a060-ef940fc1c394" />
+
+Next step was to create a sketch along the outer flat face of the leg, to add design:
+
+1. I drew a shape where one circle of the extruded slot had only half of its height, and added fillets.
+2. I used offsets to achieve a shape similar to the face itself.
+3. I extended the corners to form trianglular points.
+4. I added fillets in the corners, to make it look better.
+
+Here's how the sketch after completion:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cd156669-c61c-47e5-819d-57a95f0afc3b" />
+
+After I made the extrusion only for the design part, here's how it looks:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5868b29e-e968-491b-8cf3-084f0069687e" />
+
+Next I needed to set up a face that was located along the length of the slot. For this, I copied the component, named it "midref" and extruded in a specific part from the last sketch, achieving this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eeef17e7-e2cd-49db-b783-c39f10407753" />
+
+On that face of the midref, I made this sketch:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ad18c3-2c2f-4b7d-886c-6947e29b667a" />
+
+Using the revolve tool, I revolved the sketch and achieved this shape which I wanted. Then I made a little extrusion to make the pace above the bearing hub flat, which would be in contact with other legs. And I also adjusted the bearing hubs' positions using nothing but extrusions.
+
+Here's what I achieved:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c27b5ead-c0aa-4bfb-b9b9-2533e48c4258" />
+
+The leg was complete. It was then time to integrate that into the assembly. So, I imported two of them and used revolute joints to place them exaclty over the hubs which I made in the Z axis mount. I will later mirror them after one side it finalized. That was all for today. Here's how it looked:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2c66b2a1-0610-49ad-af57-415c9bb4c596" />
+
+Here are the lapses of today's session: [PATRA-LPS-2-D22-1](https://lapse.hackclub.com/timelapse/DfNLfUEVeITT) and [PATRA-LPS-2-D22-2](https://lapse.hackclub.com/timelapse/8V5IIaFo7r2J) (the third lapse showed error and was deleted)
 
 **Total time spent: 3h 50m**
 
