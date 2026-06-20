@@ -1329,7 +1329,17 @@ To this:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/af27709b-435a-452f-80b7-07bc542075e5" />
 
-But then, I wondered that Rudmin's design of upper legs will be better for the system. So, I started modelling a different type of leg.
+But then, I wondered that Rudmin's design of clevis joint for legs will be better for the system. For the two front legs, I noticed that the angle of rotation is not much high, and the legs easily overlap if the angle goes over 30 degrees. Thus, it seemed like I seemed like I needed to use clevis joint.
+
+So, I started modelling a fork of the clevis joint for leg. Starting from this mirrord architecture of the pre-existing leg.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb47c686-c2e4-443b-8419-14740291def6" />
+
+I turned it into this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7bda38c3-2899-46e4-8a9a-075073129543" />
+
+But it is not yet completed. I will complete this the next day.
 
 At last, this is how the triteron looks:
 
@@ -1342,6 +1352,21 @@ Here's the lapse of today's session: [PATRA-LPS-7-D28](https://lapse.hackclub.co
 ---
 
 # Day 29 — 01.06.2026: TriTeron Robot Module (TRM) Progress — Part 8
+
+Today I continued modelling the fork of the clevis joint from the day before, and also modeled the tang of the clevis joint for the leg. But I also dropped the whole idea for using the clevis joint for the front legs.
+
+Using split body, extrusions and facial offsets, I was able to achieve a mechanically sane fork.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/203c00ec-21d5-45c0-9e44-541810209755" />
+
+Then it was time to model the tang.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7143e603-d600-4d8d-9c20-0eed25de1eb4" />
+
+But when I imported them into the workspace and tested the movements, it performed even worse. There were overlapping sections at even lower angles.
+
+Then I got the perfect idea.
+
 
 [lapse](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
 
