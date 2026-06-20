@@ -1133,7 +1133,7 @@ By fixing, this is what I mean:
 * The elbow height matches the elbow height of the front legs of Z axis.
 * The back legs are positioned similar to [Rudmin's design](https://www.youtube.com/watch?v=6EtXycVGJg4).
 
-Using rotation's and movements, I positioned the X and Y legs properly.
+Using rotations and movements, I positioned the X and Y legs properly.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/33c1c2a2-e56b-4d25-aaaf-d6e44f021965" />
 
@@ -1141,7 +1141,7 @@ Then it was the time to work on the X and Y axis mounts, which was quite tricky 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/88e2584d-1f0c-46fe-834a-50ec65aee4c2" />
 
-With that done, I started writing past incomplete journals of older days, and added summary for journals of day 1 to 5.
+With that done, I started writing past incomplete journals of older days, and added summary for journals of days #1 to #10, simply because I was tired.
 
 Here's the lapse of today's session: [Well, well, it failed]
 
@@ -1153,20 +1153,43 @@ Here's the lapse of today's session: [Well, well, it failed]
 
 Today's session achieved almost nothing except the sketch I made at last. But I am stil writing this all up for the sake of appreciating failures.
 
+I was not starting from scratch this time, because I had this body which I don't know what to call or even what exactly to do with. This is what I am talking about:
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0ad9b52f-ca36-4bef-aab7-7935601e8f79" />
+
+I wanted to achieve a carved out geometry that could enclose the losai of the legs. I used the lower leg geometry to cut out a part of the shape and I wanted to make something from it, which I wasn't quite sure of.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ba754a84-7fec-481f-aee6-735917bc60dc" />
+
+But this design was not much promising. Then, I wanted to have a body with chamfered vertex that would be of same angle as the X and Y lower legs' last joint's angle. For that approach, I deleted that part, and I achieved this.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/80a13c4f-c5f1-4fb9-a050-361de76cbd6d" />
+
+But also this was seemingly strange and structurally weak. 
 
 I continued working on the X axis leg mount, but I was not coming up with any ideas about how to connect the legs to the linear blocks. That's when I had a look into Rudmin's design and then I found out exactly what to do.
 
 I made this sketch that will have a extruded out diagonal body that will have hole to connect the lower part of the back legs.
 
-[lapse 1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285)
-[lapse 2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/25f28af6-ed21-44ad-ba67-ad4a61c93ca2" />
+
+The sketch was for creating a body that intercets with the extended mid-point of the lower leg when viewed from top and the linear block's vertical center of mass when viewed from top as well. There was an angle of 56.105 between the linear path and the angle of the lower leg when projected on the floor.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/55de0995-3577-456e-812f-851f899dd5cd" />
+
+I had some problems with positioning the sketch correctly. At times it was 1.5 mm off and the sketch between the lower leg and the linear block didn't line up. But while fixing that my time was over.
+
+Here are the lapses of today's session: [PATRA-LPS-4-D25-1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285) and [PATRA-LPS-4-D25-2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
 
 **Total time spent: 3h 20m**
 
 ---
 
 # Day 26 — 28.05.2026: TriTeron Robot Module (TRM) Progress — Part 5
+
+Last day the sketches didn't line up. Today after fixing the offset, I confirmed if the sketch was correct and if the points are intersecting correctly. The angles lined up and it seemed fine.
+
+Then I followed these steps to achieve the geometry which not only looked better but also was structurally more sturdy and ideal.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2000a1ac-f4ae-4ad1-a120-c3650d24d216" />
 
@@ -1452,6 +1475,14 @@ Here are the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackc
 
 Journaled the days #21 and #22 (partly).
 
+Day #21
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b225f8c6-459e-4f4f-8119-5c0102d72b99" />
+
+Day #22
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/893e5a43-5e4a-4e2a-a2cb-27a4de5a7599" />
+
 Here's the lapse of today's session: [PATRA-LPS-17-D38](https://lapse.hackclub.com/timelapse/6Sx4q91ksQql)
 
 **Total time spent: 3h 00m**
@@ -1462,6 +1493,36 @@ Here's the lapse of today's session: [PATRA-LPS-17-D38](https://lapse.hackclub.c
 
 Journaled the days #22 (full), #23, #24, #25 (partly) and #26 (partly).
 
+Day #22
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6cde43d5-46a1-423a-b3e4-3a570bd38a49" />
+
+Day #23
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da957ffe-f0e9-4b27-bb77-de02ad8ddcc6" />
+
+Day #24
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5cab2b1c-b6e3-4cd2-b64d-f16a70fe80ab" />
+
+Day #25
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b8af7074-8278-4a82-9223-4ac7f6d5f827" />
+
+Day #26
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c04849e2-8456-40a7-afae-205e38184f2c" />
+
 Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackclub.com/timelapse/UA4UIbZiE68q), [PATRA-LPS-19-D39-2](https://lapse.hackclub.com/timelapse/aaIH03558pYh) and [PATRA-LPS-19-D39-3]()
 
 **Total time spent: 3h 45m**
+
+---
+
+# Day 40 — 20.06.2026: Writing Past Missed Journals
+
+Here's the lapse of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackclub.com/timelapse/UA4UIbZiE68q)
+
+**Total time spent: 1h 45m**
+
+---
