@@ -24,6 +24,8 @@ This is the Tipteron Robot built by Rudmin:
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1e31c116-bfa6-4f96-a2c2-00662f581cc6" />
 
+
+
 The right opportunity came with Forge. The Tier 1 has unlimited budget but I capped the budget at $700, which is was tight but workable.
 
 Here's what shaped my thinking, and inspired me:
