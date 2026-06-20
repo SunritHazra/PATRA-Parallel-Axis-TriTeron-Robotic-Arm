@@ -1662,6 +1662,8 @@ Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackc
 
 # Day 40 — 20.06.2026: Writing Past Missed Journals
 
+25 26 27 28 29
+
 Here's the lapse of today's session: [PATRA-LPS-20-40](https://lapse.hackclub.com/timelapse/s45U_LOytKdj)
 
 **Total time spent: 3h 15m**
