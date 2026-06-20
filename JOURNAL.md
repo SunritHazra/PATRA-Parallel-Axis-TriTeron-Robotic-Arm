@@ -1187,21 +1187,44 @@ Here are the lapses of today's session: [PATRA-LPS-4-D25-1](https://lapse.hackcl
 
 # Day 26 — 28.05.2026: TriTeron Robot Module (TRM) Progress — Part 5
 
-Last day the sketches didn't line up. Today after fixing the offset, I confirmed if the sketch was correct and if the points are intersecting correctly. The angles lined up and it seemed fine.
+Last day the sketches didn't line up. Today after fixing the offset, but there were problems with the sketch itself due to the timeline features. So, redrew the setch again, but after fixing the offset of 1.5 mm.
 
-Then I followed these steps to achieve the geometry which not only looked better but also was structurally more sturdy and ideal.
+I then confirmed if the sketch was correct and if the points are intersecting correctly. The angles lined up and it seemed fine. Then I followed these steps to achieve the geometry which not only looked better but also was structurally more sturdy and ideal.
+
+This is the sketch:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2000a1ac-f4ae-4ad1-a120-c3650d24d216" />
 
+I first extruded out a body.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/de70120c-563d-4a19-b3e6-83e6af7c3f87" />
+
+Then I made a hole into it using extrusion from the lower leg profile.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c3b6d0aa-948c-47ef-bd13-931dd4d450ab" />
 
+I added chamfer to make it look better.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c4f8c16a-9a18-4f8e-86f2-ad8038503620" />
+
+I also mirrored it and gave it appearence.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99717ec1-d8fb-4012-a1c0-712dee0e32f7" />
 
-Head
+Then it was time for the Tool Head to be brought into existence. Immediately I did this:
+
+* Started with a simple sube of 100 mm by 100 mm by 100 mm.
+* I moved it up into correct position.
+
+But wait, I had forgotten some things:
+
+1. Arrange the components and establish correct parent-chile component relationships in the Browser. So I did that first.
+2. Convert the Legs, which were bodies, to components.
+3. Apply revolute joints to every point in the leg.
+
+The first two didn't take much time, but the third one took a lot of time to achieve. This was not my first time adding revolute joints to an already-established triteron (even though the tool head was not completed), this took some more time than I had expected.
+
+But yeah, I was indeed able to achieve normal movement in the triteron.
 
 [lapse](https://lapse.hackclub.com/timelapse/oC5sY39XrQ18)
 
@@ -1211,17 +1234,110 @@ Head
 
 # Day 27 — 30.05.2026: TriTeron Robot Module (TRM) Progress — Part 6
 
-[lapse](https://lapse.hackclub.com/timelapse/srgx05NYIPdJ)
+With that joints done on the previous day, I continued with modelling the Tool Head, which I was most concerned, worried and confused for becuase I assemed that it would be very complex to model the tool head, since the very begging. But I logically broke down the workflow into these simple steps in the real time (not pre-planned) and achieved the correct geometry.
 
-**Total time spent: 1h 05m**
+Here's what I did:
+
+1. I moved the leg a little towards the front (towards the direction of the Z axis legs)
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/137222c6-7c54-441a-855f-1a3887d16f1f" />
+
+2. Extruded the back of the cuboid 25 mm, to acheieve a longer body.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/86958251-43a4-488d-b2ac-5f0097d2b904" />
+
+3. Movied it again a little towards the front.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/687e3745-9817-4db2-ac76-21e5ab78d09d" />
+
+4. Using Combine Cut tool, made the upper X, Y and Z legs cut the tool head.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dd9ddc5d-d6ac-48be-a80a-f8854f343165" />
+
+5. Made a new sketch that extends the angle of the front Z axis legs.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3158232d-c217-490e-8d4a-95c7525071e2" />
+
+6. Split the body by extending the highlighted face.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/07474342-290b-4002-81e1-4a62e2fdf411" />
+
+7. Split the body by extending the highlighted face.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/581834c9-2a9c-4622-9fd6-d1e4e18b5529" />
+
+8. Split the body by extending the highlighted face.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/290b43ef-a192-4520-ab33-ec674e93c94d" />
+
+9. Combined the back part with the Tool Head.
+
+    <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99965e64-b227-49a9-8703-4cdd843f144c" />
+
+10. Used chamfers to achieve the design.
+
+    <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a5e7c10d-33c4-4f64-ac98-7277ba489e5f" />
+
+Throughout the workflow, in the first steps, I was working by seeing Rowan's design, but on the later stage, it seemed like I found the pathfor the correct set of stps to achieve the design needed.
+
+There is some difference between this design and the design of Rudmin and Rowan. To be specific, this is a perfect mix of both.
+
+Let me explain Rudmin's Tool Head design:
+
+* Rudmin's design features all the legs in the same level.
+* Rudmin's design is simpler, more straightforward and even has a hole in between.
+
+Let me explain Rowan's Tool Head design:
+
+* Rowan's design features the X and Y axis legs to be raised above the front Z axis legs.
+* Rowan's design has lots of chamfers, fillets, extrusions, and a more detailed design.
+
+Now, let me explain my Tool Head design:
+
+* Just like Rudmin's design, all the legs are present at a similar level, in my Tool Head Design.
+* Just like Rowan's design, the Tool Head is designed in a more complex manner, with fillets, chamfers and extrusions.
+
+With that done, I was testing the movement of the tripteron, or more appropriately, playing with my digitally made triteron and also checking if angles are okay, movements make sense, and if it is flexible enough to bend in different angles.
+
+Here's the lapse of today's session: [PATRA-LPS-6-D27](https://lapse.hackclub.com/timelapse/srgx05NYIPdJ)
+
+**Total time spent: 1h 00m**
 
 ---
 
 # Day 28 — 31.05.2026: TriTeron Robot Module (TRM) Progress — Part 7
 
-[lapse](https://lapse.hackclub.com/timelapse/AqGtmyhMh9QV)
+In today's short session, I added one more design elements to the Tool Head.
 
-**Total time spent: 0h 17m**
+Firstly, I made fillets in 4 sharp edges under the Tool Head.
+
+So, it went from this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1bcce337-590e-4964-99fc-9839c2e9fd54" />
+
+To this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cd5f307a-f0af-4e93-9159-7e22c1a98aa2" />
+
+Secondly, I made extrusions on both left and right of the Tool Head by extruding in a sketch on the sides of the Tool Head, and adding fillets. This made sure it uses less filament, and of course, looks better.
+
+So, it went from this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0baf591d-b81f-4fa3-bc55-b2e9f4af3637" />
+
+To this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/af27709b-435a-452f-80b7-07bc542075e5" />
+
+But then, I wondered that Rudmin's design of upper legs will be better for the system. So, I started modelling a different type of leg.
+
+At last, this is how the triteron looks:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/336a41aa-2f9b-46e7-8f2a-d78c0f5852be" />
+
+Here's the lapse of today's session: [PATRA-LPS-7-D28](https://lapse.hackclub.com/timelapse/AqGtmyhMh9QV)
+
+**Total time spent: 0h 20m**
 
 ---
 
