@@ -1674,7 +1674,7 @@ Day #28
 
 Day #29
 
-Here's the lapse of today's session: [PATRA-LPS-20-40](https://lapse.hackclub.com/timelapse/s45U_LOytKdj)
+Here's the lapse of today's session: [PATRA-LPS-20-D40](https://lapse.hackclub.com/timelapse/s45U_LOytKdj)
 
 **Total time spent: 3h 15m**
 
@@ -1682,7 +1682,7 @@ Here's the lapse of today's session: [PATRA-LPS-20-40](https://lapse.hackclub.co
 
 # Day 41 — 22.06.2026: Writing Past Missed Journals
 
-Here's the lapse of today's session: [PATRA-LPS-21-41](https://lapse.hackclub.com/timelapse/CF6H7YTcu3rX)
+Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.com/timelapse/CF6H7YTcu3rX)
 
 **Total time spent: 0h 30m**
 
@@ -1692,8 +1692,8 @@ Here's the lapse of today's session: [PATRA-LPS-21-41](https://lapse.hackclub.co
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c7d347d-5a53-4090-8d1a-cdf71db3ba13" />
 
-Here's the lapse of today's session: [PATRA-LPS-22-42]()
+Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.com/timelapse/DzR0y5DWGWK2)
 
-**Total time spent: 0h 30m**
+**Total time spent: 5h 30m**
 
 ---
