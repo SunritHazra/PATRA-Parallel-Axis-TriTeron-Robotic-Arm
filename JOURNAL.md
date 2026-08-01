@@ -1367,6 +1367,7 @@ But when I imported them into the workspace and tested the movements, it perform
 
 Then I got the perfect idea.
 
+[...to be continued]
 
 [lapse](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
 
@@ -1646,11 +1647,11 @@ Day #24
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5cab2b1c-b6e3-4cd2-b64d-f16a70fe80ab" />
 
-Day #25
+Day #25 (partly)
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b8af7074-8278-4a82-9223-4ac7f6d5f827" />
 
-Day #26
+Day #26 (partly)
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c04849e2-8456-40a7-afae-205e38184f2c" />
 
@@ -1664,15 +1665,25 @@ Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackc
 
 Journaled the days #25, #26, #27, #28 and #29.
 
-Day #25
+Day #25 (full)
 
-Day #26
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ecab4f52-651e-4555-a02d-88b7f0ed3c90" />
+
+Day #26 (full)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/27905278-d41a-458b-822c-bed72ad944e9" />
 
 Day #27
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/769711db-570e-4386-af94-143d016dbf96" />
+
 Day #28
 
-Day #29
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2a412fc5-98af-4c03-bd14-59c75bf7b070" />
+
+Day #29 (partly)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3aaa10ea-08b0-47b0-953b-8739f1efd238" />
 
 Here's the lapse of today's session: [PATRA-LPS-20-D40](https://lapse.hackclub.com/timelapse/s45U_LOytKdj)
 
@@ -1710,8 +1721,13 @@ Anyways, today I am noting down some of the big decisions I have made in my mind
 
 3. **Stepper Motor Adjustments:** First let's review the stepper motor configuration which was decided earlier: Two [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) for each X & Y axes and one [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) for the Z axis. I then momentarily decided to go for all three [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) without thinking much about anything but the torque. But today, I did some research and then I decided to use closed-loop stepper motors for my system, even if it meant losing torque. I have made the decision of using Two [Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor](https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/) for each X & Y axes and one [Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor](https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/) for the Z axis. This increases the cost but ensures more precise movements.
 
+* studying linear guide using https://www.traceparts.com/en/product/item-industrietechnik-gmbh-linear-unit-gsf-8-40-r10?CatalogPath=ITEM%3A1001374067&Product=30-12112020-084688
+* used https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED for 3 nm motor model
+
+[incomplete]
+
 Here's the lapse of today's session: [PATRA-LPS-23-D43]()
 
-**Total time spent: 0h 00m**
+**Total time spent: 3h 05m**
 
 ---
