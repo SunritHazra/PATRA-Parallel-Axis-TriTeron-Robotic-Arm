@@ -1697,3 +1697,21 @@ Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.c
 **Total time spent: 5h 30m**
 
 ---
+
+# Day 43 — 01.08.2026: Working on the KBM (Kinematic Base Module)
+
+Today was the day I decided to visit my age-long pending project and work on it just to escape late-night **Zeigarnik effects**. I had decided to first complete my other projects, and then continue this project non-stop, but I couldn't. So here I am.
+
+Anyways, today I am noting down some of the big decisions I have made in my mind after the last working day:
+
+1. **Fabricating the KBM & TRM:** I have decided to complete designing, simulating and finalizing the KBM (Kinematic Base Module) and the TRM (TriTeron Robot Module) before I start modelling the RAM (Robotic Arm Module). After doing that, I will submit the project and fabricate the parts. This is because I don't have enough time left before Forge ends, and more importantly, my exams begin that I should be concerned about. One other reason is that I want to be cautious about what I am building. If I build those two parts first, I will have a reality check before modelling the robotic arm as I will understand the PATRA, which is in my CAD right now, better.
+
+2. **Tool Head Modularity:** The decision in the first point raises an obvious question: How will I mount the robotic arm after completion then? To this, I have planned to use two different Tool Heads: One smooth-top-faced tool head will support just the TriTeron and not the arm; and the other will be for supporting the joint one of the robotic arm which I will model later on after designing, fabrication and testing. In both of them the lower part will be the same, with the change only showing in the upper face. This allows modularity, which means I can use either as per my needs. For testing, and operation of the TriTeron solely, the flat head is enough. For the 6 DOF arm, the other one should be fine. This most importantly gives me enough room to think and also save time in the long run.
+
+3. **Stepper Motor Adjustments:** First let's review the stepper motor configuration which was decided earlier: Two [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) for each X & Y axes and one [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) for the Z axis. I then momentarily decided to go for all three [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) without thinking much about anything but the torque. But today, I did some research and then I decided to use closed-loop stepper motors for my system, even if it meant losing torque. I have made the decision of using Two [Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor](https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/) for each X & Y axes and one [Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor](https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/) for the Z axis. This increases the cost but ensures more precise movements.
+
+Here's the lapse of today's session: [PATRA-LPS-23-D43]()
+
+**Total time spent: 0h 00m**
+
+---
