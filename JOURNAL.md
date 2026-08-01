@@ -1726,8 +1726,8 @@ Anyways, today I am noting down some of the big decisions I have made in my mind
 
 [incomplete]
 
-Here's the lapse of today's session: [PATRA-LPS-23-D43]()
+Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.com/timelapse/bNyyjAI7nMCC)
 
-**Total time spent: 3h 05m**
+**Total time spent: 3h 10m**
 
 ---
