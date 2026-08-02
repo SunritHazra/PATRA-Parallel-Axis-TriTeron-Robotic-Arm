@@ -1778,8 +1778,8 @@ https://onlyscrews.in/products/6001-2rs-rubber-sealed-ball-bearing-12x28x8?curre
 
 [incomplete]
 
-Here's the lapse of today's session: [PATRA-LPS-24-D44]()
+Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.com/timelapse/VxiPyruOoxIk)
 
-**Total time spent: 7h 15m**
+**Total time spent: 7h 20m**
 
 ---
