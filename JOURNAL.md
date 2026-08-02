@@ -1695,6 +1695,8 @@ Here's the lapse of today's session: [PATRA-LPS-20-D40](https://lapse.hackclub.c
 
 Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.com/timelapse/CF6H7YTcu3rX)
 
+[incomplete]
+
 **Total time spent: 0h 30m**
 
 ---
@@ -1702,6 +1704,8 @@ Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.c
 # Day 42 — 18.07.2026: Fixing the Broken Dimensions
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c7d347d-5a53-4090-8d1a-cdf71db3ba13" />
+
+[incomplete]
 
 Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.com/timelapse/DzR0y5DWGWK2)
 
@@ -1723,11 +1727,59 @@ Anyways, today I am noting down some of the big decisions I have made in my mind
 
 * studying linear guide using https://www.traceparts.com/en/product/item-industrietechnik-gmbh-linear-unit-gsf-8-40-r10?CatalogPath=ITEM%3A1001374067&Product=30-12112020-084688
 * used https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED for 3 nm motor model
-
+* https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED for 2.3 nm
 [incomplete]
 
 Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.com/timelapse/bNyyjAI7nMCC)
 
 **Total time spent: 3h 10m**
+
+---
+
+# Day 44 — 02.08.2026: Working on the Z Axis Tensioning System
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65aebca3-7c3d-40bd-8b3c-14c42c3d984b" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b4faccc-fc3b-460b-bcff-1b71eebf8d0e" />
+
+<img width="975" height="688" alt="image" src="https://github.com/user-attachments/assets/229f4a75-f8de-41e4-a5f0-61f43c59842a" />
+
+https://www.rtelligentglobal.com/uploads/Rtelligent-T42ST60ST86S-Closed-Loop-Stepper-Driver-User-Manual-V4.1.pdf
+
+Component Category	Item	Quantity	Cost	Total Cost	Side Note	Link
+Kinematic Base Module (KBM)	Aluminium 2020 T-Slot Profile Extrusion — 1 metre LCF6-2020-1000	1	 $2.82 	 $2.82 		https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1000
+	Aluminium 4040 T-Slot Profile Extrusion — 1 metre LCF8-4040-1000	2	 $8.78 	 $17.56 		https://in.misumi-ec.com/vona2/detail/110310647549?HissuCode=LCF8-4040-1000
+	MGN15H Linear Guide Rail — 1 metre	2	 $21.64 	 $43.28 		https://robu.in/product/mgn15h-linear-guide-rail-1m-2
+	Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)	2	 $40.74 	 $81.48 		https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/
+	Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)	1	 $53.95 	 $53.95 		https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/
+	MGN15H Sliding Block	4	 $7.18 	 $28.72 		https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
+	Pulley CBYL-AH1-5GT150-32-A-N-d22 (X & Y)	2	 $3.39 	 $6.78 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22
+	Idler CBYL-AH1-5GT150-32-A-H-d22 (X & Y)	2	 $2.91 	 $5.81 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-H-d22&productModelNumber=CBYL-AH1-5GT150-32-A-H-d22
+	Belt E-GBN23005GT-150 (X & Y)	2	 $12.94 	 $25.88 		https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN23005GT-150
+	Pulley CBYL-AH1-5GT150-20-A-N-d12 (Z)	1	 $2.57 	 $2.57 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12
+	Idler CBYL-AH1-5GT150-18-A-H-d16 (Z)	1	 $1.98 	 $1.98 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16
+	Belt E-GBN26005GT-150 (Z)	1	 $14.54 	 $14.54 		https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150
+	Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)	3	 $35.48 	 $106.44 		https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/
+						
+						
+						
+	Total			 $391.81 		
+<img width="2559" height="282" alt="image" src="https://github.com/user-attachments/assets/1e14cbf6-ea91-434d-b14a-fcc6ad5999b1" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a00e0baf-b493-455b-9580-5af2e81eac26" />
+
+https://onlyscrews.in/products/6001-2rs-rubber-sealed-ball-bearing-12x28x8?currency=INR&country=IN&variant=50982218662201&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=inderans_campaign&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SRD-kNwjXRWwyYJwLecjvJ7G&gclid=CjwKCAjw1bvTBhBbEiwAzbP8L88XPdembQI0erqY38rix0JGeQduw_Pal1aXQlCeZCx5qRt33s1SbhoCfLoQAvD_BwE
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/85d16270-7165-4503-b313-77badff3bb57" />
+
+<img width="900" height="1272" alt="image" src="https://github.com/user-attachments/assets/52bb06ad-70c7-4b37-b142-b6190bdb8bb7" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d32b63e6-7fbb-4bc6-8468-4f519492a1d6" />
+
+[incomplete]
+
+Here's the lapse of today's session: [PATRA-LPS-24-D44]()
+
+**Total time spent: 7h 15m**
 
 ---
