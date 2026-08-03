@@ -1783,3 +1783,25 @@ Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.c
 **Total time spent: 7h 20m**
 
 ---
+
+# Day 45 — 03.08.2026: Working on the Z Axis Tensioning System
+
+https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/ fail
+
+https://jlcmc.com/product/s/C01/CXJL/stainless-steel-high-rigidity-parallel-cut-beam-coupling-screw-fixing-screw-clamping-type
+
+https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult 3 NM
+
+https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult 2.3 NM
+
+misumi ai is crazy good. it comletely obliterated me. what i searched for hours, it found in seconds.
+
+https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10 3 Nm 2.3 Nm both
+
+[incomlete]
+
+Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.com/timelapse/3knULGqZZzTa)
+
+**Total time spent: 4h 35m**
+
+---
