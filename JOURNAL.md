@@ -1784,7 +1784,7 @@ Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.c
 
 ---
 
-# Day 45 — 03.08.2026: 
+# Day 45 — 03.08.2026: IDK
 
 https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/ fail
 
@@ -1798,6 +1798,8 @@ misumi ai is crazy good. it comletely obliterated me. what i searched for hours,
 
 https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10 3 Nm 2.3 Nm both
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1fc6b16c-b004-4e69-a8d4-8bff42b8c651" />
+
 [incomlete]
 
 Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.com/timelapse/3knULGqZZzTa)
@@ -1806,9 +1808,7 @@ Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.c
 
 ---
 
-# Day 45 — 03.08.2026: 
-
-
+# Day 45 — 03.08.2026: IDK
 
 https://in.misumi-ec.com/vona2/detail/110310701639/
 
