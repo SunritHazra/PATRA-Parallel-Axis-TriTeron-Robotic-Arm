@@ -1784,7 +1784,7 @@ Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.c
 
 ---
 
-# Day 45 — 03.08.2026: Working on the Z Axis Tensioning System
+# Day 45 — 03.08.2026: 
 
 https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/ fail
 
@@ -1803,5 +1803,39 @@ https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10 3 
 Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.com/timelapse/3knULGqZZzTa)
 
 **Total time spent: 4h 35m**
+
+---
+
+# Day 45 — 03.08.2026: 
+
+
+
+https://in.misumi-ec.com/vona2/detail/110310701639/
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1fc6b16c-b004-4e69-a8d4-8bff42b8c651" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b8ae59b-f3b1-4c51-8929-9c783716e44f" />
+
+https://jlcmc.com/product/s/B18/BNQ-JHB8/guide-rail-embedded-linear-actuator-base-width-82mm
+
+https://jlcmc.com/product/s/B18/BNQ-JHB8/guide-rail-embedded-linear-actuator-base-width-82mm?_t=1785849904834&spm=overseas-fa-pc.homepage.hint.1&up_spm=Jlcpcb.Loginpage.1003
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8507844b-2ef7-45e4-b34a-4bf21bb1d017" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cb5713ef-7846-4b98-a249-dd2ae959803e" />
+
+https://in.misumi-ec.com/vona2/detail/221004999084/?CategorySpec=00000230674%3A%3Amig00000001861896%2C%0900000230734%3A%3Amig00000001861547%2C%0900000230786%3A%3Amig00000001826448%2C&list=PageCategory the washer 0.5 mm thick
+
+[incomplete]
+
+should i use omega module for the z axis belt clamp?<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b625564-ec6a-498b-89fb-23e91746da52" />
+
+comparison 
+
+https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion-driven/
+
+Here's the lapse of today's session: [PATRA-LPS-26-D46](PATRA-LPS-26-D46)
+
+**Total time spent: 5h 10m**
 
 ---
