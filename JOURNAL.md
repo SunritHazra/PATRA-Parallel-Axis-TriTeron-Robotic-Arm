@@ -1808,7 +1808,7 @@ Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.c
 
 ---
 
-# Day 45 — 04.08.2026: IDK
+# Day 46 — 04.08.2026: IDK
 
 https://in.misumi-ec.com/vona2/detail/110310701639/
 
@@ -1837,5 +1837,21 @@ https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion
 Here's the lapse of today's session: [PATRA-LPS-26-D46](PATRA-LPS-26-D46)
 
 **Total time spent: 5h 10m**
+
+---
+
+# Day 47 — 05.08.2026: IDK
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/361fc7d5-4c85-46fd-a16f-1ec04ccbb204" />
+
+https://in.misumi-ec.com/vona2/detail/110302684350/?KWSearch=aluminium%20extrusions&searchFlow=results2products&list=PageSearchResult
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e36a5e1c-e824-4ac7-b98d-dd3aed8b4998" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9c4e8f8a-34e0-4616-9b10-222f3decfa21" />
+
+Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.com/timelapse/FEMEhu7VLqJm)
+
+**Total time spent: 4h 30m**
 
 ---
