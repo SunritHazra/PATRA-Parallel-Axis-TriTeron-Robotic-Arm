@@ -1858,7 +1858,7 @@ Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.c
 
 ---
 
-# Day 48 — 06.09.2026:
+# Day 48 — 06.08.2026: COOKING
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32caa474-5f12-4dbc-8806-e7989578b1fd" />
 
@@ -1867,3 +1867,39 @@ Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.c
 Here's the lapse of today's session: [PATRA-LPS-28-D48](https://lapse.hackclub.com/timelapse/zMbr23rqtxQw)
 
 **Total time spent: 5h 20m**
+
+---
+
+# Day 49 — 07.08.2026: BAKING
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a57e5d77-c9cb-43b1-b5d5-07717c67d80b" />
+
+The Math Rule for Plastic ThreadsTo secure a structural component directly into 3D printed plastic or resin without it stripping, you must follow the standard engineering formula:\(\text{Thread\ Depth}=\text{Screw\ Diameter}\times 2.5\)
+
+the belt clearances are absolutely insufficient
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0834b834-0b6b-499e-8ccf-d689e3befd0b" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a8aa32b7-6639-495c-b590-5fa4571b067e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b809bd65-4f58-445f-b180-d8ff1e656f27" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ea19be39-7b6c-4282-b39f-5c6708e2ac26" /> z axis 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b686c1fd-7899-4146-9351-d4d98829f3cd" /> x axis
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/035ec80e-dfa1-4e5f-8e8b-fb729fe9269c" /> fixed it!
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2be58f80-7e64-41ae-b32b-52e14bf7bfe3" /> success!
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f6675f64-2de8-449b-b7b7-3751d8c35b42" />
+
+went back and forth the timeline like a billion times...
+
+i solved a problem which i thought would take me 10 minutes in hours.
+
+Here's the lapse of today's session: [PATRA-LPS-29-D49]()
+
+**Total time spent: 4h 50m**
+
+---
