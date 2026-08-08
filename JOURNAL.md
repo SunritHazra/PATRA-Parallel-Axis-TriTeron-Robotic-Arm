@@ -1896,10 +1896,56 @@ the belt clearances are absolutely insufficient
 
 went back and forth the timeline like a billion times...
 
-i solved a problem which i thought would take me 10 minutes in hours.
+i solved a problem which i thought would take me 10 minutes, in hours.
 
-Here's the lapse of today's session: [PATRA-LPS-29-D49]()
+Here's the lapse of today's session: [PATRA-LPS-29-D49](https://lapse.hackclub.com/timelapse/flC0-x5OA8DZ)
 
 **Total time spent: 4h 50m**
+
+---
+
+# Day 49 — 08.08.2026: BOILING
+
+https://jlcmc.com/product/s/T02/TPLH/euro-20-series-connection-accessories-slotted-connector
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ed7d0cbf-6c9e-46b7-b30a-f9b97781a242" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8bba3897-076f-4add-a5a4-7b95df473e7b" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc89c6b5-a315-460b-8256-1cfb31876304" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc5017ee-f22a-4df3-a734-853f341c3663" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1bd79197-d83b-4e7e-a068-7c8e7fbf4ccd" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7a6a9494-d02f-40ae-9af7-204ac8012181" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7916ac7f-6412-4300-b5fc-92d59f7b234e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ddb5e6b0-62d6-405d-a4ee-3a6208c37e6e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e6bb26a7-d8ea-4958-b116-e3b5fc1a7ffb" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b41cdc99-9a77-4524-8584-08e6b3e8733e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e5971a96-96c7-4558-ab30-c0359240476e" />
+
+https://onlyscrews.in/products/m3-nut-ss-304?_pos=1&_sid=938b14185&_ss=r
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ade5e42a-90d7-44a7-bf3e-697bb1763b66" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/238e3d03-8f5a-4893-a087-4c60c9b0cd96" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8068fe00-b347-4018-befa-4a47fa1d21d8" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e6ce7ce4-53a3-4921-aed3-7e950c5c2c58" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d9bc3257-8fb0-4cf4-8372-b8ce1014ae43" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a8e0e243-96a7-414e-8292-aa171405ce78" />
+
+Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.com/timelapse/KziIqj5W50kG)
+
+**Total time spent: 6h 10m**
 
 ---
