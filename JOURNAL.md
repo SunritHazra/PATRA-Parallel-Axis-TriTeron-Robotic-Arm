@@ -1949,3 +1949,23 @@ Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.c
 **Total time spent: 6h 10m**
 
 ---
+
+# Day 49 — 08.08.2026: STEAMING
+
+https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729
+
+i have decided to drill my own holes.
+
+0.00037878
+
+<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/bf0c64ad-b5ce-4aae-aee7-a61f91d83466" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6f2c3f46-9dfd-4ba4-8df7-402e570deb73" /> 71
+
+it failed after all that
+
+Here's the lapse of today's session: [PATRA-LPS-31-D51](https://lapse.hackclub.com/timelapse/jGC2hN65Zw76)
+
+**Total time spent: 7h 40m**
+
+---
