@@ -1969,3 +1969,21 @@ Here's the lapse of today's session: [PATRA-LPS-31-D51](https://lapse.hackclub.c
 **Total time spent: 7h 40m**
 
 ---
+
+# Day 49 — 11.08.2026: SIZZLING
+
+restructured the project in fusion: partition of PATRA modules
+
+i realised i cannot tap the aluminium extrusions using my impact drill. so i will drill a smoorth hole and use grub screw and nut to make a lock nut. since the nut wont fit, i have to make the hole deeper and since the screw must slide in i have to make the hole clearance 3.4 mm. i need to use nut with glue.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/66ca6ff1-bda6-44b3-b026-451f0c846544" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/259ca747-a503-4642-9d0a-ed9275b5686e" />
+
+completed tensioning system X and Y
+
+Here's the lapse of today's session: [PATRA-LPS-32-D52](https://lapse.hackclub.com/timelapse/8NUdodbSSm-M)
+
+**Total time spent: 4h 25m**
+
+---
