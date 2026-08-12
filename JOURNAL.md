@@ -1987,3 +1987,27 @@ Here's the lapse of today's session: [PATRA-LPS-32-D52](https://lapse.hackclub.c
 **Total time spent: 4h 25m**
 
 ---
+
+# Day 49 — 11.08.2026: FRYING
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2724f7c5-6bd8-4b3c-b457-4683daa2af05" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da4c89c0-3495-4ac0-952d-a6c3cd56a753" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/868ed83c-fc60-4a49-bb2a-e27b3c4b4241" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05e2b40a-a2b9-4001-aa3a-3bed7be30f80" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0017fedf-72e4-49a6-82d4-67a2dddbb68a" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9ba2470d-61fc-4234-a897-ee242fd859f7" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1a872747-66d8-407c-b86f-f5c171a52821" />
+
+all belts left to fix length. clamp left to fix and control electronics.
+
+Here's the lapse of today's session: [PATRA-LPS-33-D53](https://lapse.hackclub.com/timelapse/9bSi1olp-o0V)
+
+**Total time spent: 4h 45m**
+
+---
