@@ -2011,3 +2011,23 @@ Here's the lapse of today's session: [PATRA-LPS-33-D53](https://lapse.hackclub.c
 **Total time spent: 4h 45m**
 
 ---
+
+# Day 49 — 14.08.2026: idk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/55785cfb-3407-4669-96c2-12336cc40858" />
+
+https://www.instructables.com/Low-cost-linear-actuator/
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c82ab49e-631b-4d99-8402-b6dd54ed7605" />
+
+LinkMgr.RemoveAll 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/04458dfa-3ff0-4b04-bfa9-6eff7aeaf744" />
+
+triteron lacks symmetry. i need to fix it after i am done with the kbm
+
+Here're the lapses of today's session: [PATRA-LPS-34-D54-1](https://lapse.hackclub.com/timelapse/t8QozcNFFXst) and [PATRA-LPS-34-D54-2](https://lapse.hackclub.com/timelapse/o06ITPcUajZR)
+
+**Total time spent: 1h 45m**
+
+---
