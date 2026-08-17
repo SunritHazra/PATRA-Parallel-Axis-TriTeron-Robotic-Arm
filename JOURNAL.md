@@ -1904,7 +1904,7 @@ Here's the lapse of today's session: [PATRA-LPS-29-D49](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 08.08.2026: BOILING
+# Day 50 — 08.08.2026: BOILING
 
 https://jlcmc.com/product/s/T02/TPLH/euro-20-series-connection-accessories-slotted-connector
 
@@ -1950,7 +1950,7 @@ Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 08.08.2026: STEAMING
+# Day 51 — 08.08.2026: STEAMING
 
 https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729
 
@@ -1970,7 +1970,7 @@ Here's the lapse of today's session: [PATRA-LPS-31-D51](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 11.08.2026: SIZZLING
+# Day 52 — 11.08.2026: SIZZLING
 
 restructured the project in fusion: partition of PATRA modules
 
@@ -1988,7 +1988,7 @@ Here's the lapse of today's session: [PATRA-LPS-32-D52](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 11.08.2026: FRYING
+# Day 53 — 11.08.2026: FRYING
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2724f7c5-6bd8-4b3c-b457-4683daa2af05" />
 
@@ -2012,7 +2012,7 @@ Here's the lapse of today's session: [PATRA-LPS-33-D53](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 14.08.2026: idk
+# Day 54 — 14.08.2026: idk
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/55785cfb-3407-4669-96c2-12336cc40858" />
 
@@ -2029,5 +2029,19 @@ triteron lacks symmetry. i need to fix it after i am done with the kbm
 Here're the lapses of today's session: [PATRA-LPS-34-D54-1](https://lapse.hackclub.com/timelapse/t8QozcNFFXst) and [PATRA-LPS-34-D54-2](https://lapse.hackclub.com/timelapse/o06ITPcUajZR)
 
 **Total time spent: 1h 45m**
+
+---
+
+# Day 55 — 14.08.2026: idk
+
+https://onlyscrews.in/products/m5-nyloc-nuts-mild-steel-with-zinc-plating-dia-5mm
+
+https://fabory.partcommunity.com/3d-cad-models/sso/din-982-prevailing-torque-type-hexagon-nuts-with-non-metallic-insert-high-type-fabory?info=fabory%2F3_nuts%2Fdin_982.prj&cwid=6698
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b699b278-db71-4673-9aac-9c4e83ce6f30" />
+
+Here's the lapses of today's session: [PATRA-LPS-35-D55]()
+
+**Total time spent: 2h 10m**
 
 ---
