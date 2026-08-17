@@ -2040,8 +2040,8 @@ https://fabory.partcommunity.com/3d-cad-models/sso/din-982-prevailing-torque-typ
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b699b278-db71-4673-9aac-9c4e83ce6f30" />
 
-Here's the lapses of today's session: [PATRA-LPS-35-D55]()
+Here's the lapses of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.com/timelapse/kbW8ePVyZFrs)
 
-**Total time spent: 2h 10m**
+**Total time spent: 2h 15m**
 
 ---
