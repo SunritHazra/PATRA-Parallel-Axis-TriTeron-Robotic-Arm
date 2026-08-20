@@ -2032,7 +2032,7 @@ Here're the lapses of today's session: [PATRA-LPS-34-D54-1](https://lapse.hackcl
 
 ---
 
-# Day 55 — 14.08.2026: idk
+# Day 55 — 17.08.2026: idk
 
 https://onlyscrews.in/products/m5-nyloc-nuts-mild-steel-with-zinc-plating-dia-5mm
 
@@ -2043,5 +2043,31 @@ https://fabory.partcommunity.com/3d-cad-models/sso/din-982-prevailing-torque-typ
 Here's the lapses of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.com/timelapse/kbW8ePVyZFrs)
 
 **Total time spent: 2h 15m**
+
+---
+
+# Day 56 — 20.08.2026: idk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e9ea4d68-517d-49fe-b3f1-7fba2c125fd1" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1835e88c-096f-4942-9bb2-0a8c4dfb7453" />
+
+this <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d8f6124-655c-4c4f-a3d8-98685227275a" /> became 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87814527-9410-478f-a008-f21703762987" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3f1f842e-af4f-4d31-95b2-3fa476e4851b" />
+
+https://jlc3dp.com/blog/threaded-inserts-3d-printing
+
+https://au.rs-online.com/web/content/discovery/ideas-and-advice/grub-screw-guide?srsltid=AfmBOopNiwtA8NfJS_XdWebTBMCbxxgH9OgqusFrMrq0L6IpBoOuXclu
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a41f0bb7-25a5-43d6-953b-78166f4f9141" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fbf552c5-fe0a-42d2-a4c4-9fd6d3f35d4e" />
+
+Here's the lapses of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.com/timelapse/N6d0BsuXTSuq)
+
+**Total time spent: 3h 10m**
 
 ---
