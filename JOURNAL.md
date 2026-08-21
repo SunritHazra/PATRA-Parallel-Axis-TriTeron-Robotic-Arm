@@ -2072,12 +2072,30 @@ Here's the lapse of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.c
 
 ---
 
-# Day 57 — 20.08.2026: idk
+# Day 57 — 21.08.2026: idk
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d482092b-f524-4793-951a-8575c80bfa2b" />
 
-Here's the lapse of today's session: [PATRA-LPS-37-D57]()
+working both on the kbm and the trm
 
-**Total time spent: 0h 00m**
+i decided to completely drop the idea of brass inserts to prevent cross threading. instad did this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/31bd0284-db5b-43ca-8062-388948495b8d" /> len 30 + 15 = 45
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a5e0346-94b4-4a38-8b56-ee8711112774" /> len 15 + 10 = 25
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3983920a-dc1f-41a2-8777-08c62c45878b" />
+
+but to make assembly confinient i am adding a m5 screw under the z axis mount
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afd41b27-f286-4777-a932-377e30734ef3" />
+
+i worked on the linear blocks and deleted the chamfers and added teeth to z axis belt
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f92847f-5c26-4fee-9e84-ec0c7698a984" />
+
+Here's the lapse of today's session: [PATRA-LPS-37-D57](https://lapse.hackclub.com/timelapse/leNJNnY3fMNK)
+
+**Total time spent: 3h 30m**
 
 ---
