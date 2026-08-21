@@ -2040,7 +2040,7 @@ https://fabory.partcommunity.com/3d-cad-models/sso/din-982-prevailing-torque-typ
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b699b278-db71-4673-9aac-9c4e83ce6f30" />
 
-Here's the lapses of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.com/timelapse/kbW8ePVyZFrs)
+Here's the lapse of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.com/timelapse/kbW8ePVyZFrs)
 
 **Total time spent: 2h 15m**
 
@@ -2066,8 +2066,18 @@ https://au.rs-online.com/web/content/discovery/ideas-and-advice/grub-screw-guide
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fbf552c5-fe0a-42d2-a4c4-9fd6d3f35d4e" />
 
-Here's the lapses of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.com/timelapse/N6d0BsuXTSuq)
+Here's the lapse of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.com/timelapse/N6d0BsuXTSuq)
 
 **Total time spent: 3h 10m**
+
+---
+
+# Day 57 — 20.08.2026: idk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d482092b-f524-4793-951a-8575c80bfa2b" />
+
+Here's the lapse of today's session: [PATRA-LPS-37-D57]()
+
+**Total time spent: 0h 00m**
 
 ---
