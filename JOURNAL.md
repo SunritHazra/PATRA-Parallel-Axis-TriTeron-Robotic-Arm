@@ -2099,3 +2099,19 @@ Here's the lapse of today's session: [PATRA-LPS-37-D57](https://lapse.hackclub.c
 **Total time spent: 3h 30m**
 
 ---
+
+# Day 58 — 22.08.2026: idk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e22644e8-fe95-4985-867f-94f6155f6d75" />
+
+outer loop length is 2513.935 mm
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/16a0c4f2-65cb-4b70-9113-d05a1d61b92d" />
+
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/cee96fb9-97b5-4dc1-b42c-ad172d23e1a0" />
+
+Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.com/timelapse/CEqqbFVMyiMs)
+
+**Total time spent: 3h 40m**
+
+---
