@@ -12,7 +12,7 @@ A Random Day in December, 2025, I was scrolling through my YouTube feed. I came 
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ff8585a7-c18c-4249-9e0b-f1dbca4265bf" />
 
-**Total time spent: 0h 1m**
+**Total time spent: 0h 1m***
 
 ---
 
