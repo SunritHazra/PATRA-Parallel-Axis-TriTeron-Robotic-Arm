@@ -2139,3 +2139,21 @@ Here's the lapse of today's session: [PATRA-LPS-40-60](https://lapse.hackclub.co
 **Total time spent: 3h 30m**
 
 ---
+
+# Day 61 — 23.08.2026: idk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5c3aa9b0-75b4-4909-b76f-32e72474c9a1" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4d775008-05b5-40d9-9bf0-9aca100c7ed7" />
+
+fixing 0.00037878 mm offsets
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9643e368-d5d8-45d0-bad6-48e6c7a0c321" />
+
+x axis pulley again complete. i have to fix position of connections due to position change by 0.25 mm, mirror to idler and mirror whole system to y. then fix z and then continue on where i left of in day 55.
+
+Here's the lapse of today's session: [PATRA-LPS-41-61](https://lapse.hackclub.com/timelapse/h5Qet2HkMa8K)
+
+**Total time spent: 2h 05m**
+
+---
