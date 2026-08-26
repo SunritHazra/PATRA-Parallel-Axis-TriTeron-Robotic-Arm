@@ -2116,10 +2116,26 @@ Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.c
 
 ---
 
-# Day 58 — 23.08.2026: idk
+# Day 59 — 23.08.2026: idk
 
-Here's the lapse of today's session: [PATRA-LPS-39-D59]()
+Here's the lapse of today's session: [PATRA-LPS-39-D59](https://lapse.hackclub.com/timelapse/ccsG_HzJn3z3)
 
 **Total time spent: 3h 20m**
+
+---
+
+# Day 60 — 23.08.2026: idk
+
+https://in.misumi-ec.com/vona2/detail/110300140370/?list=PageCategory
+
+https://www.phidgets.com/productfiles/TRM4227/TRM4227_0/Documentation/TRM4227_0Mechanical.pdf
+
+lots of stuff iforgot
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/112aee38-9f86-42fa-966e-19b0e4244ed9" />
+
+Here's the lapse of today's session: [PATRA-LPS-40-60](https://lapse.hackclub.com/timelapse/td59cmkmuuk6)
+
+**Total time spent: 3h 30m**
 
 ---
