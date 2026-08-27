@@ -2124,7 +2124,7 @@ Here's the lapse of today's session: [PATRA-LPS-39-D59](https://lapse.hackclub.c
 
 ---
 
-# Day 60 — 23.08.2026: idk
+# Day 60 — 25.08.2026: idk
 
 https://in.misumi-ec.com/vona2/detail/110300140370/?list=PageCategory
 
@@ -2140,7 +2140,7 @@ Here's the lapse of today's session: [PATRA-LPS-40-60](https://lapse.hackclub.co
 
 ---
 
-# Day 61 — 23.08.2026: idk
+# Day 61 — 26.08.2026: idk
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5c3aa9b0-75b4-4909-b76f-32e72474c9a1" />
 
@@ -2155,5 +2155,15 @@ x axis pulley again complete. i have to fix position of connections due to posit
 Here's the lapse of today's session: [PATRA-LPS-41-61](https://lapse.hackclub.com/timelapse/h5Qet2HkMa8K)
 
 **Total time spent: 2h 05m**
+
+---
+
+# Day 62 — 27.08.2026: idk
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-42-62]()
+
+**Total time spent: 0h 00m**
 
 ---
