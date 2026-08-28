@@ -2164,9 +2164,27 @@ https://elitetape.com/tapes-for-anti-friction-applications/
 
 FINALLY MADE A MECHANICALLY SENSIBLE BELT CLAMP DESIGN <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/58d6d72b-ac0d-4ed0-8601-15c53b85fcd3" />
 
-Here's the lapse of today's session: [PATRA-LPS-42-62]()
+Here's the lapse of today's session: [PATRA-LPS-42-62](https://lapse.hackclub.com/timelapse/_ZJzLyDNYPNp)
 
-**Total time spent: 0h 00m**
+**Total time spent: 4h 45m**
 
 ---
 
+# Day 62 — 27.08.2026: idk
+
+i checked if the belt lock i designed yesterday was printable or not. so, 
+
+- 0.00037878
+
+moving the x and y by 0.25 mm apart causes the z axis too to move that much apart.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/566534f3-09c7-498e-b130-598b0a4be5ea" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ec86520-7dd0-405b-904f-0f107b0535af" />
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb41116b-e988-4dbf-8d30-a4b250d4a3a7" />
+
+Here's the lapse of today's session: [PATRA-LPS-43-63](https://lapse.hackclub.com/timelapse/EYsn6-oXwp8n)
+
+**Total time spent: 4h 40m**
+
+---
