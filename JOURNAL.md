@@ -2181,10 +2181,54 @@ moving the x and y by 0.25 mm apart causes the z axis too to move that much apar
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/566534f3-09c7-498e-b130-598b0a4be5ea" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ec86520-7dd0-405b-904f-0f107b0535af" />
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb41116b-e988-4dbf-8d30-a4b250d4a3a7" />
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb41116b-e988-4dbf-8d30-a4b250d4a3a7" />2256.938
 
 Here's the lapse of today's session: [PATRA-LPS-43-63](https://lapse.hackclub.com/timelapse/EYsn6-oXwp8n)
 
 **Total time spent: 4h 40m**
 
 ---
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ef2cb31-8433-4e18-8174-b01951bbbe6d" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3da1e42a-dc7d-432c-9e3b-15676d40ac1c" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d7e74ccf-03ce-4508-b30a-be1b5b9b1d99" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a5466b4-8217-44f1-ae41-230ec3b74bd1" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/583ee793-b448-4548-8ee3-b75ab6efb345" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8e3938d6-c808-421c-9a19-37a8e6fd0d01" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a96bec37-a382-4819-98ea-2f13add993a5" />
+
+fixed asymmetry in the base plate and changed z clamp screw size from m3 to m2
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/94d03611-21e0-442a-a512-db2edf063e16" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fa58e3b7-95ce-4c2f-857d-29c80ed20828" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c6a5c3db-439d-4707-a488-43d181cddb18" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9feabea5-0bb1-4f1e-94f1-75640173d7c1" />
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/b165b081-fb7f-4df2-9fb4-a30353b46a4a" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/769c5f93-f315-4e68-9cae-4a015d26fa13" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c978cd91-e8f8-4ead-936d-0f65363cb2c9" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/20f7fb46-314c-4223-b924-d7eea1c00760" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3dfb058-2dcb-451e-b808-ba501c0d77ed" />1134 became 1135
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5c625372-7819-4272-9c8c-d56ff8e6324c" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/464c10c8-2a5c-4d38-84ee-e48b212eca8f" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3888fa2d-c772-4ec6-805f-54555c65ec72" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/61f023a8-d6f0-4b1d-ab64-4a381d87f827" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/295db8a9-c47f-4fe8-b13e-d9d9cc9aab38" />
