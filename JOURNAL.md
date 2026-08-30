@@ -2251,10 +2251,32 @@ Here's the lapse of today's session: [PATRA-LPS-44-64]()
 
 # Day 65 — 30.08.2026: idk
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4e054cdd-bfaa-4729-834c-0f84c124fe5d" />
 
-Here's the lapse of today's session: [PATRA-LPS-45-65]()
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4089b63d-cedc-41a4-bfdc-369a512a7193" />
 
-**Total time spent: 0h 00m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7af6abe7-c9c6-40cd-ab7b-63d953b41a37" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d9a4029e-3c95-4012-bb50-c567ce74ed24" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/501dd772-5b76-47f7-bec7-0031bd727bf0" />
+
+next is end plate holes
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/633a13cd-c356-4293-b3fb-3624fe6fe2fd" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f8907e7b-f54b-4b71-8ba6-a295c2569dd2" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c074d0b2-73d9-46c4-87a2-d4d907055c5b" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e322d4f-ca63-4bb3-8610-991584892d63" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/de7ee697-6b7c-441a-9f45-b099a7fd837f" />
+
+Here's the lapse of today's session: [PATRA-LPS-45-65](https://lapse.hackclub.com/timelapse/5henxAHdVGoH)
+
+**Total time spent: 3h 15m**
 
 ---
