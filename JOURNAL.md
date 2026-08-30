@@ -2170,7 +2170,7 @@ Here's the lapse of today's session: [PATRA-LPS-42-62](https://lapse.hackclub.co
 
 ---
 
-# Day 62 — 27.08.2026: idk
+# Day 63 — 28.08.2026: idk
 
 i checked if the belt lock i designed yesterday was printable or not. so, 
 
@@ -2188,6 +2188,8 @@ Here's the lapse of today's session: [PATRA-LPS-43-63](https://lapse.hackclub.co
 **Total time spent: 4h 40m**
 
 ---
+
+# Day 64 — 29.08.2026: idk
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ef2cb31-8433-4e18-8174-b01951bbbe6d" />
 
@@ -2232,3 +2234,27 @@ fixed asymmetry in the base plate and changed z clamp screw size from m3 to m2
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/61f023a8-d6f0-4b1d-ab64-4a381d87f827" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/295db8a9-c47f-4fe8-b13e-d9d9cc9aab38" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1710a2cf-074d-4c51-9a36-8fb97f60fc68" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bc933f7a-2b32-4f7f-b8b1-e4aebe6f0634" />
+
+fixed several clearances and made them 0.2 mm from 0.4 and 0.3. added fillets for the ensioning systems
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7e8b484d-3cac-4065-8dbc-05f780bdfde2" />
+
+Here's the lapse of today's session: [PATRA-LPS-44-64]()
+
+**Total time spent: 6h 20m**
+
+---
+
+# Day 65 — 30.08.2026: idk
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-45-65]()
+
+**Total time spent: 0h 00m**
+
+---
