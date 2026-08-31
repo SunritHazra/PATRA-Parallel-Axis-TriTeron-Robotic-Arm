@@ -34,7 +34,7 @@ Here's what shaped my thinking, and inspired me:
 
 * [This](https://www.youtube.com/watch?v=io4S9amExNM) video by [Not An Engineer](https://www.youtube.com/@NoEngineerHere) introduces the carriage system. I watched this multiple times specifically to understand how the X and Y axes are driven independently on the carraige.
 
-* [This](https://www.youtube.com/watch?v=3fbmguBgVPA) pushed me toward adding a robotic arm, and gave me a ough idea of what style robotic arm I could add.
+* [This](https://www.youtube.com/watch?v=3fbmguBgVPA) pushed me toward adding a robotic arm, and gave me a rough idea of what style robotic arm I could add.
 
 * [This](https://www.youtube.com/watch?v=MeRaYVntxMk) is a solid breakdown of the differences between serial and parallel systems. PATRA essentially combines both, which is why understanding this distinction matters.
 
@@ -2283,8 +2283,44 @@ Here's the lapse of today's session: [PATRA-LPS-45-65](https://lapse.hackclub.co
 
 # Day 66 — 31.08.2026: idkk
 
-Here's the lapse of today's session: [PATRA-LPS-46-66]()
+https://www.machinedesign.com/mechanical-motion-systems/linear-motion/article/21834576/how-to-design-a-linear-motion-system
 
-**Total time spent: 0h 00m**
+1
+2
+3
+4
+5
+6 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5cd33405-bd61-458d-a9bf-d73182a85774" />
+7 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f72d7092-bd3a-4c89-b52f-bcbf1907715c" />
+8 
+9
+10 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1dccc36f-fdf6-4703-9b61-e1f12badbc59" />
+11 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d800753-63f4-4c2c-90cb-6adf21710cad" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/638046b6-1eb7-4b91-a038-f78c38cd407e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/890f444b-4278-40e0-b319-3777153857f1" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/923a9d0f-f823-4506-b20e-91e678d73a29" />
+
+https://jlc3dp.com/help/article/3d-printing-design-guideline
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4791a6f6-455b-46f4-87c3-a8997c272d3a" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6a9dbbbe-218e-4390-8451-32d34afdb2c4" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/54bfa464-3fee-4f68-868b-ad645548d230" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/43869b88-8637-4f9e-8abc-4c2a20d88d2c" /> no risk yay
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/866a8b5e-a9e0-4752-a055-a1357be42229" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/636c457b-9c66-43e9-a51c-a019dfdca443" />
+
+oops i forgot to add clearance for the linear block clamps!
+
+Here's the lapse of today's session: [PATRA-LPS-46-66](https://lapse.hackclub.com/timelapse/r_Kl-JPTx5vg)
+
+**Total time spent: 4h 00m**
 
 ---
