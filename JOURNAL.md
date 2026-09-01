@@ -2324,3 +2324,84 @@ Here's the lapse of today's session: [PATRA-LPS-46-66](https://lapse.hackclub.co
 **Total time spent: 4h 00m**
 
 ---
+
+# Day 67 — 01.09.2026: idkkk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/63e7bf58-132c-4b3d-a89d-ecbe750208c5" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d6d76be6-c6f3-4be0-af26-e1c6fc9cbaf0" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ebf9980d-f51b-45fd-968c-795d63d2bce3" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4562ed4b-9d42-426d-85a4-b21ba3928946" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb6c9f94-509c-4f38-aa27-85cd761f7d2e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/efd8acf3-39b2-4127-ae24-260a4bb27f25" /> no risk yay
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/291ecde7-881d-45ad-87d4-4079afefe5a1" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f610c78b-6f24-47b8-8f08-62cdf19eece0" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/71c10bb4-040a-4785-accc-478c865835c4" /> oh no. risk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57c5acc5-2af0-49e4-9a68-7a29c45975e7" /> oh no. risk
+
+bom so far
+
+PATRA: Parallel Axis TriTeron Robotic Arm BOM								
+Component Category		Item	Quantity	Cost		Total Cost	Side Note	Link
+Kinematic Base Module (KBM)	Aluminium Extrusions	Aluminium 2020 T-Slot Profile Extrusion — 1 metre LCF6-2020-1135	2	 $3.22 	 ₹ 306.45 	 $6.44 		https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135
+		Aluminium 4040 T-Slot Profile Extrusion — 1 metre HFS5-4040-1000	2	 $27.28 	 ₹ 2,595.20 	 $54.57 		https://in.misumi-ec.com/vona2/detail/110310647549?HissuCode=LCF8-4040-1000
+	End Plates	End Plate Body	2			 $-   		
+		End Plate Connectors	8			 $-   		
+	Linear Guides	MGN15H Linear Guide Rail 1 m	2	 $28.69 	 ₹ 2,729.00 	 $57.38 		https://robu.in/product/mgn15h-linear-guide-rail-1m-2
+		MGN15H Sliding Block	4	 $7.14 	 ₹ 679.00 	 $28.55 		https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
+		Belt Clamp Bottom (X & Y)	2	 $2.07 		 $4.14 		
+		Belt Clamp Top (X & Y)	2	 $1.47 		 $2.94 		
+		Belt Clamp Bottom (Z)	1	 $2.01 		 $2.01 		
+		Belt Clamp Top (Z)	1	 $3.79 		 $3.79 		
+	Tensioning Systems	Belt E-GBN22505GT-150 (X & Y)	2	 $12.89 	 ₹ 1,225.63 	 $25.77 		https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150
+		Belt E-GBN26005GT-150 (Z)	1	 $14.73 	 ₹ 1,400.77 	 $14.73 		https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150
+		Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)	4	 $3.03 		 $12.12 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12
+		Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)	2	 $3.00 		 $5.99 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12
+		Pulley Case Left (X)	1	 $6.00 		 $6.00 		
+		Pulley Case Left (Y)	1	 $6.00 		 $6.00 		
+		Pulley Case Left (Z)	1	 $6.00 		 $6.00 		
+		Pulley Case Right (X)	1	 $6.00 		 $6.00 		
+		Pulley Case Right (Y)	1	 $6.00 		 $6.00 		
+		Pulley Case Right (Z)	1	 $6.00 		 $6.00 		
+		Idler Case Left (X)	1	 $6.00 		 $6.00 		
+		Idler Case Left (Y)	1	 $6.00 		 $6.00 		
+		Idler Case Left (Z)	1	 $6.00 		 $6.00 		
+		Idler Case Right (X)	1	 $6.00 		 $6.00 		
+		Idler Case Right (Y)	1	 $6.00 		 $6.00 		
+		Idler Case Right (Z)	1	 $6.00 		 $6.00 		
+		Belt Sheilds (X & Y)	4	 $3.07 		 $12.28 		
+		Pulley & Idler Case Coupler (Z)	2	 $1.05 		 $2.10 		
+		Bearing Cover	9	 $0.30 		 $2.70 		
+		6901ZZ Bearing (Pack of 4)	3	 $2.51 	 ₹ 239.00 	 $7.54 		https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/
+		WSX-SUS-M12X18-5 Washer	12	 $2.55 	 ₹ 243.00 	 $30.66 		https://in.misumi-ec.com/vona2/detail/221004999084?HissuCode=WSX-SUS-M12X18-5
+		Pulley Shaft (X, Y & Z)	3	 $1.10 		 $3.30 		
+		Idler Shaft (X, Y & Z)	3	 $1.46 		 $4.38 		
+		PTFE Coated Teflon Tape	1	 $4.21 	 ₹ 400.00 	 $4.21 		https://www.amazon.in/Keiko-adhesive-Release-sealing-purpose/dp/B0DCGGGGGJ?th=1
+	Motors	Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)	2	 $42.88 	 ₹ 4,079.00 	 $85.77 		https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/
+		Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)	1	 $56.76 	 ₹ 5,399.00 	 $56.76 		https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/
+		Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)	3	 $37.31 	 ₹ 3,549.00 	 $111.93 		https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/
+	Fasteners		30	 ₹ -   		 $-   		
+		M3 X 12mm Hex (Allen) CSK SS 304 Screw (Dia. 3mm, Length 12mm)	40	 $0.02 	 ₹ 1.80 	 $0.76 		
+				 $-   		 $-   		
+				 $-   		 $-   		
+				 $-   		 $-   		
+				 $-   		 $-   		
+				 $-   		 $-   		
+	Total					 $612.05 		
+<img width="2817" height="752" alt="image" src="https://github.com/user-attachments/assets/81d182ab-ad73-42ce-b924-18b04dd7f026" />
+
+getting really expensive, i really need to optimize.
+
+Here's the lapse of today's session: [PATRA-LPS-47-67](https://lapse.hackclub.com/timelapse/FNw_Cs9I_1ax)
+
+**Total time spent: 3h 20m**
+
+---
