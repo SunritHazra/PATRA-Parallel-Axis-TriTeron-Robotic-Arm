@@ -2408,3 +2408,21 @@ Here's the lapse of today's session: [PATRA-LPS-47-67](https://lapse.hackclub.co
 **Total time spent: 3h 20m**
 
 ---
+
+# Day 68 — 02.09.2026: idkkk
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b5296af-2f47-47ab-bd88-748a1fb90472" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/227e2567-d009-4843-9684-7ea8b20f0a40" />
+
+https://robu.in/product/sla-3d-printing/
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4af398de-599c-429a-a759-962d874a9bf0" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa3770c9-d536-4aed-9b2e-6c532acfc268" />
+
+Here's the lapse of today's session: [PATRA-LPS-48-68](https://lapse.hackclub.com/timelapse/DT-okZpcwg7Q)
+
+**Total time spent: 2h 10m**
+
+---
