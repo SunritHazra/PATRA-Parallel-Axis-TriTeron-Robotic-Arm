@@ -1610,6 +1610,8 @@ Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.c
 
 # Day 37 — 16.06.2026: Research on the Robotic Arm
 
+[incomplete]
+
 Here are the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
 
 **Total time spent: 3h 00m**
@@ -1704,11 +1706,9 @@ Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.c
 
 ---
 
-# Day 42 — 18.07.2026: Fixing the Broken Dimensions
+# Day 42 — 18.07.2026: Fixing the Broken Dimensions [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c7d347d-5a53-4090-8d1a-cdf71db3ba13" />
-
-[incomplete]
 
 Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.com/timelapse/DzR0y5DWGWK2)
 
@@ -1716,7 +1716,7 @@ Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.c
 
 ---
 
-# Day 43 — 01.08.2026: Working on the KBM (Kinematic Base Module)
+# Day 43 — 01.08.2026: Working on the KBM (Kinematic Base Module) [incomplete]
 
 Today was the day I decided to visit my age-long pending project and work on it just to escape late-night **Zeigarnik effects**. I had decided to first complete my other projects, and then continue this project non-stop, but I couldn't. So here I am.
 
@@ -1731,7 +1731,6 @@ Anyways, today I am noting down some of the big decisions I have made in my mind
 * studying linear guide using https://www.traceparts.com/en/product/item-industrietechnik-gmbh-linear-unit-gsf-8-40-r10?CatalogPath=ITEM%3A1001374067&Product=30-12112020-084688
 * used https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED for 3 nm motor model
 * https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED for 2.3 nm
-[incomplete]
 
 Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.com/timelapse/bNyyjAI7nMCC)
 
@@ -1739,7 +1738,7 @@ Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.c
 
 ---
 
-# Day 44 — 02.08.2026: Working on the Z Axis Tensioning System
+# Day 44 — 02.08.2026: Working on the Z Axis Tensioning System [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65aebca3-7c3d-40bd-8b3c-14c42c3d984b" />
 
@@ -1779,15 +1778,13 @@ https://onlyscrews.in/products/6001-2rs-rubber-sealed-ball-bearing-12x28x8?curre
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d32b63e6-7fbb-4bc6-8468-4f519492a1d6" />
 
-[incomplete]
-
 Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.com/timelapse/VxiPyruOoxIk)
 
 **Total time spent: 7h 20m**
 
 ---
 
-# Day 45 — 03.08.2026: IDK
+# Day 45 — 03.08.2026: IDK [incomplete]
 
 https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/ fail
 
@@ -1803,15 +1800,13 @@ https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10 3 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1fc6b16c-b004-4e69-a8d4-8bff42b8c651" />
 
-[incomlete]
-
 Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.com/timelapse/3knULGqZZzTa)
 
 **Total time spent: 4h 35m**
 
 ---
 
-# Day 46 — 04.08.2026: IDK
+# Day 46 — 04.08.2026: IDK [incomplete]
 
 https://in.misumi-ec.com/vona2/detail/110310701639/
 
@@ -1843,7 +1838,7 @@ Here's the lapse of today's session: [PATRA-LPS-26-D46](PATRA-LPS-26-D46)
 
 ---
 
-# Day 47 — 05.08.2026: IDK
+# Day 47 — 05.08.2026: IDK [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/361fc7d5-4c85-46fd-a16f-1ec04ccbb204" />
 
@@ -1861,7 +1856,7 @@ Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.c
 
 ---
 
-# Day 48 — 06.08.2026: COOKING
+# Day 48 — 06.08.2026: COOKING [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32caa474-5f12-4dbc-8806-e7989578b1fd" />
 
@@ -1873,7 +1868,7 @@ Here's the lapse of today's session: [PATRA-LPS-28-D48](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 07.08.2026: BAKING
+# Day 49 — 07.08.2026: BAKING [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a57e5d77-c9cb-43b1-b5d5-07717c67d80b" />
 
@@ -1907,7 +1902,7 @@ Here's the lapse of today's session: [PATRA-LPS-29-D49](https://lapse.hackclub.c
 
 ---
 
-# Day 50 — 08.08.2026: BOILING
+# Day 50 — 08.08.2026: BOILING [incomplete]
 
 https://jlcmc.com/product/s/T02/TPLH/euro-20-series-connection-accessories-slotted-connector
 
@@ -1953,7 +1948,7 @@ Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.c
 
 ---
 
-# Day 51 — 08.08.2026: STEAMING
+# Day 51 — 08.08.2026: STEAMING [incomplete]
 
 https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729
 
@@ -1973,7 +1968,7 @@ Here's the lapse of today's session: [PATRA-LPS-31-D51](https://lapse.hackclub.c
 
 ---
 
-# Day 52 — 11.08.2026: SIZZLING
+# Day 52 — 11.08.2026: SIZZLING [incomplete]
 
 restructured the project in fusion: partition of PATRA modules
 
@@ -1991,7 +1986,7 @@ Here's the lapse of today's session: [PATRA-LPS-32-D52](https://lapse.hackclub.c
 
 ---
 
-# Day 53 — 11.08.2026: FRYING
+# Day 53 — 11.08.2026: FRYING [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2724f7c5-6bd8-4b3c-b457-4683daa2af05" />
 
@@ -2015,7 +2010,7 @@ Here's the lapse of today's session: [PATRA-LPS-33-D53](https://lapse.hackclub.c
 
 ---
 
-# Day 54 — 14.08.2026: idk
+# Day 54 — 14.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/55785cfb-3407-4669-96c2-12336cc40858" />
 
@@ -2035,7 +2030,7 @@ Here're the lapses of today's session: [PATRA-LPS-34-D54-1](https://lapse.hackcl
 
 ---
 
-# Day 55 — 17.08.2026: idk
+# Day 55 — 17.08.2026: idk [incomplete]
 
 https://onlyscrews.in/products/m5-nyloc-nuts-mild-steel-with-zinc-plating-dia-5mm
 
@@ -2049,7 +2044,7 @@ Here's the lapse of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.c
 
 ---
 
-# Day 56 — 20.08.2026: idk
+# Day 56 — 20.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e9ea4d68-517d-49fe-b3f1-7fba2c125fd1" />
 
@@ -2075,7 +2070,7 @@ Here's the lapse of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.c
 
 ---
 
-# Day 57 — 21.08.2026: idk
+# Day 57 — 21.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d482092b-f524-4793-951a-8575c80bfa2b" />
 
@@ -2103,7 +2098,7 @@ Here's the lapse of today's session: [PATRA-LPS-37-D57](https://lapse.hackclub.c
 
 ---
 
-# Day 58 — 22.08.2026: idk
+# Day 58 — 22.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e22644e8-fe95-4985-867f-94f6155f6d75" />
 
@@ -2119,7 +2114,7 @@ Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.c
 
 ---
 
-# Day 59 — 23.08.2026: idk
+# Day 59 — 23.08.2026: idk [incomplete]
 
 Here's the lapse of today's session: [PATRA-LPS-39-D59](https://lapse.hackclub.com/timelapse/ccsG_HzJn3z3)
 
@@ -2127,7 +2122,7 @@ Here's the lapse of today's session: [PATRA-LPS-39-D59](https://lapse.hackclub.c
 
 ---
 
-# Day 60 — 25.08.2026: idk
+# Day 60 — 25.08.2026: idk [incomplete]
 
 https://in.misumi-ec.com/vona2/detail/110300140370/?list=PageCategory
 
@@ -2143,7 +2138,7 @@ Here's the lapse of today's session: [PATRA-LPS-40-60](https://lapse.hackclub.co
 
 ---
 
-# Day 61 — 26.08.2026: idk
+# Day 61 — 26.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5c3aa9b0-75b4-4909-b76f-32e72474c9a1" />
 
@@ -2161,7 +2156,7 @@ Here's the lapse of today's session: [PATRA-LPS-41-61](https://lapse.hackclub.co
 
 ---
 
-# Day 62 — 27.08.2026: idk
+# Day 62 — 27.08.2026: idk [incomplete]
 
 https://elitetape.com/tapes-for-anti-friction-applications/
 
@@ -2173,7 +2168,7 @@ Here's the lapse of today's session: [PATRA-LPS-42-62](https://lapse.hackclub.co
 
 ---
 
-# Day 63 — 28.08.2026: idk
+# Day 63 — 28.08.2026: idk [incomplete]
 
 i checked if the belt lock i designed yesterday was printable or not. so, 
 
@@ -2192,7 +2187,7 @@ Here's the lapse of today's session: [PATRA-LPS-43-63](https://lapse.hackclub.co
 
 ---
 
-# Day 64 — 29.08.2026: idk
+# Day 64 — 29.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ef2cb31-8433-4e18-8174-b01951bbbe6d" />
 
@@ -2252,7 +2247,7 @@ Here's the lapse of today's session: [PATRA-LPS-44-64]()
 
 ---
 
-# Day 65 — 30.08.2026: idk
+# Day 65 — 30.08.2026: idk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
 
@@ -2284,7 +2279,7 @@ Here's the lapse of today's session: [PATRA-LPS-45-65](https://lapse.hackclub.co
 
 ---
 
-# Day 66 — 31.08.2026: idkk
+# Day 66 — 31.08.2026: idkk [incomplete]
 
 https://www.machinedesign.com/mechanical-motion-systems/linear-motion/article/21834576/how-to-design-a-linear-motion-system
 
@@ -2328,7 +2323,7 @@ Here's the lapse of today's session: [PATRA-LPS-46-66](https://lapse.hackclub.co
 
 ---
 
-# Day 67 — 01.09.2026: idkkk
+# Day 67 — 01.09.2026: idkkk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/63e7bf58-132c-4b3d-a89d-ecbe750208c5" />
 
@@ -2409,7 +2404,7 @@ Here's the lapse of today's session: [PATRA-LPS-47-67](https://lapse.hackclub.co
 
 ---
 
-# Day 68 — 02.09.2026: idkkk
+# Day 68 — 02.09.2026: idkkk [incomplete]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b5296af-2f47-47ab-bd88-748a1fb90472" />
 
@@ -2427,7 +2422,9 @@ Here's the lapse of today's session: [PATRA-LPS-48-68](https://lapse.hackclub.co
 
 ---
 
-# Day 69 — 04.09.2026: idkkkk
+# Day 69 — 04.09.2026: idkkkk [incomplete]
+
+
 
 Here's the lapse of today's session: [PATRA-LPS-49-69]()
 
