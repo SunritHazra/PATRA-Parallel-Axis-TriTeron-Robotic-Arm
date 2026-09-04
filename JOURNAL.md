@@ -2432,18 +2432,6 @@ This meant that I will now have to readjust the clearances as they are being rep
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c026903-2227-4ac1-8419-1b6eb2f6eb5d" />
 
-Here's the lapse of today's session: [PATRA-LPS-49-69]()
-
-**Total time spent: 0h 00m**
-
----
-
-# Day 70 — 05.09.2026: [incomplete]
-
-Nothing was journaled from day 42 to 69.
-
-<img width="290" height="624" alt="image" src="https://github.com/user-attachments/assets/bd056bc7-ac5b-488f-b146-84239a17c1af" />
-
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eff1173d-03b3-4648-8ffd-c164c51a6427" />
 
 https://onlyscrews.in/products/m3-x-5mm-brass-threaded-inserts-dia-3mm-length-5mm
@@ -2464,8 +2452,20 @@ https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
 
 https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20
 
-Here's the lapse of today's session: [PATRA-LPS-50-70](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK)
+Here's the lapse of today's session: [PATRA-LPS-49-69](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK)
 
 **Total time spent: 2h 35m**
+
+---
+
+# Day 70 — 05.09.2026: [incomplete]
+
+Nothing was journaled from day 42 to 69.
+
+<img width="290" height="624" alt="image" src="https://github.com/user-attachments/assets/bd056bc7-ac5b-488f-b146-84239a17c1af" />
+
+Here's the lapse of today's session: [PATRA-LPS-50-70]()
+
+**Total time spent: 0h 00m**
 
 ---
