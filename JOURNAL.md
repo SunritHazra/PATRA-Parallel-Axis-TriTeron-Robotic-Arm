@@ -2406,6 +2406,8 @@ Here's the lapse of today's session: [PATRA-LPS-47-67](https://lapse.hackclub.co
 
 # Day 68 — 02.09.2026: idkkk [incomplete]
 
+The KBM was getting really expensive. But that's not a problem, but the fact the Forge won't pay my customs, was in itself a nightmare. My total cost of imported merchandise from Jialichuang had already reached $XXX. This meant that the total CIF value with included shipping, would have significantly more import duties and GST. Thus landing the digits of the customs amount in a crazy territory.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b5296af-2f47-47ab-bd88-748a1fb90472" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/227e2567-d009-4843-9684-7ea8b20f0a40" />
@@ -2424,10 +2426,46 @@ Here's the lapse of today's session: [PATRA-LPS-48-68](https://lapse.hackclub.co
 
 # Day 69 — 04.09.2026: idkkkk [incomplete]
 
+In order to further reduce the cost of goods being imported from Jialichuang, I have decided to replace all the SLA resin prints with FDM prints ranging from PLA+, PETG to PA.
 
+This meant that I will now have to readjust the clearances as they are being replaced by heat set inserts from cold pressed ones. Even though the inserts themselves are same, I will have to reduce the clearance from +0.2 mm to -0.2 mm. Therefore, 0.2 mm - (-0.2) mm = 0.4 mm. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c026903-2227-4ac1-8419-1b6eb2f6eb5d" />
 
 Here's the lapse of today's session: [PATRA-LPS-49-69]()
 
 **Total time spent: 0h 00m**
+
+---
+
+# Day 70 — 05.09.2026: [incomplete]
+
+Nothing was journaled from day 42 to 69.
+
+<img width="290" height="624" alt="image" src="https://github.com/user-attachments/assets/bd056bc7-ac5b-488f-b146-84239a17c1af" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eff1173d-03b3-4648-8ffd-c164c51a6427" />
+
+https://onlyscrews.in/products/m3-x-5mm-brass-threaded-inserts-dia-3mm-length-5mm
+
+https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d45c192-92d9-40dc-ade5-ba8f7d3a1a20" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87211425-3e41-48ce-8704-028d6cf020f6" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/327ac6a7-bba5-416a-a9ac-1fc9670142ad" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1c8cdce6-da1a-4728-97bb-3ae3c5cae3f8" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8ccf40a1-aa2f-4e6d-bf39-80cb93666d56" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/023288c2-15b8-4cc9-aa49-08c31c06ab55" />
+
+https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20
+
+Here's the lapse of today's session: [PATRA-LPS-50-70](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK)
+
+**Total time spent: 2h 35m**
 
 ---
