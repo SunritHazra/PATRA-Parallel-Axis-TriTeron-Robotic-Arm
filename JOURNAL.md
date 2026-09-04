@@ -2452,9 +2452,110 @@ https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
 
 https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20
 
-Here's the lapse of today's session: [PATRA-LPS-49-69](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK)
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e004ea60-b0db-4da9-a6b3-1b5386536966" />
 
-**Total time spent: 2h 35m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ee16ed2-3c75-40fd-ac11-cd370a1acd38" />
+
+Direct Comparison OverviewFeatureMJF PA12S-HP NylonFDM PA NylonMechanical PropertiesIsotropic (uniform strength across X, Y, Z axes).Anisotropic (weak Z-axis layer adhesion).Dimensional AccuracyHigh precision (±0.3%); holds tight tolerances easily.Poor; prone to shrinking and warping during printing.Surface FinishSmooth, uniform, and slightly granular; excellent for teeth.Layer lines present; requires post-processing for tight fits.
+
+0									
+Component Category		Item		Quantity	Cost		Total Cost	Source	Link
+Kinematic Base Module (KBM)	Aluminium Extrusions	LCF6-2020-1135 Aluminium 2020 T-Slot Profile Extrusion	 Aluminium 	2	 $3.22 	 ₹ 306.45 	 $6.44 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135
+		HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion	 Aluminium 	2	 $27.28 	 ₹ 2,595.20 	 $54.57 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000
+	End Plates	End Plate Body	 FDM PETG 	2			 $-   		
+		End Plate Connectors	 FDM PETG 	8			 $-   		
+	Linear Guides	MGN15H Linear Guide Rail 1 m		2	 $28.69 	 ₹ 2,729.00 	 $57.38 	 Robu 	https://robu.in/product/mgn15h-linear-guide-rail-1m-2
+		MGN15H Sliding Block		4	 $7.14 	 ₹ 679.00 	 $28.55 	 Robu 	https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
+		Belt Clamp Bottom (X & Y)	 MJF PA12S-HP Nylon 	2	 $2.07 		 $4.14 	 JLC3DP 	
+		Belt Clamp Top (X & Y)	 SLA 9600 Resin 	2	 $1.47 		 $2.94 	 JLC3DP 	
+		Belt Clamp Bottom (Z)	 MJF PA12S-HP Nylon 	1	 $2.01 		 $2.01 	 JLC3DP 	
+		Belt Clamp Top (Z)	 SLA 9600 Resin 	1	 $3.79 		 $3.79 	 JLC3DP 	
+	Tensioning Systems	Belt E-GBN22505GT-150 (X & Y)		2	 $12.89 	 ₹ 1,225.63 	 $25.77 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150
+		Belt E-GBN26005GT-150 (Z)		1	 $14.73 	 ₹ 1,400.77 	 $14.73 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150
+		Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)		4	 $3.03 		 $12.12 	 JLCMC 	https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12
+		Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)		2	 $3.00 		 $5.99 	 JLCMC 	https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12
+		Pulley Case Left (X)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Left (Y)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Left (Z)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Right (X)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Right (Y)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Right (Z)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Left (X)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Left (Y)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Left (Z)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Right (X)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Right (Y)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Right (Z)	 FDM PA Nylon 	1			 $-   		
+		Belt Sheilds (X & Y)	 SLA 9600 Resin 	4	 $3.07 		 $12.28 	 JLC3DP 	
+		Pulley & Idler Case Coupler (Z)	 FDM PETG 	2			 $-   		
+		Bearing Cover	 FDM PETG 	9			 $-   		
+		6901ZZ Bearing (Pack of 4)		3	 $2.51 	 ₹ 239.00 	 $7.54 	 Robu 	https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/
+		WSX-SUS-M12X18-5 Washer		12	 $-   		 $-   	 MISUMI 	https://in.misumi-ec.com/vona2/detail/221004999084?HissuCode=WSX-SUS-M12X18-5
+		Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 	
+		Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 	
+		PTFE Coated Teflon Tape		1	 $4.21 	 ₹ 400.00 	 $4.21 	 Amazon 	https://www.amazon.in/Keiko-adhesive-Release-sealing-purpose/dp/B0DCGGGGGJ?th=1
+	Motors	Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)		2	 $42.88 	 ₹ 4,079.00 	 $85.77 	 Robu 	https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/
+		Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)		1	 $56.76 	 ₹ 5,399.00 	 $56.76 	 Robu 	https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/
+	Fasteners	M3 X 12mm High Tensile(12.9) Black oxide Grub Screw (Dia. 3mm, Length 12mm)		30	 ₹ 0.02 	 ₹ 2.00 	 $0.63 	 OnlyScrews 	https://onlyscrews.in/products/m3-x-12mm-high-tensile12-9-black-oxide-grub-screw-dia-3mm-length-12mm
+		M3 X 12mm Hex (Allen) CSK SS 304 Screw (Dia. 3mm, Length 12mm)		25	 $0.02 	 ₹ 1.80 	 $0.47 	 OnlyScrews 	https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20?_pos=1&_sid=1040a6d00&_ss=r
+		Socket Head High Tensile(12.9) Black oxide screw (Dia. 5mm, Length 10mm)		15	 $0.03 	 ₹ 2.40 	 $0.38 	 OnlyScrews 	https://onlyscrews.in/products/m5-x-10mm-hex-allen-socket-head-high-tensile12-9-black-anodized-screw
+		M3 X 5mm 3D Printing Brass Threaded Slant Knurled Inserts (Dia. 3mm, Length 5mm)		40	 $0.05 	 ₹ 4.60 	 $1.93 	 OnlyScrews 	https://onlyscrews.in/products/m3-x-5mm-3d-printing-brass-threaded-inserts-dia-3mm-length-5mm
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+	Total						 $396.08 		
+TriTeron Robot Module (TRM)		MSB8-30 Screw		15	 $0.84 		 $12.60 		https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30
+		EMLC-S1-N-M6 Nut		100	 $0.02 		 $1.65 		https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6
+		SS304 M8 Washer		100	 $0.02 		 $1.90 		https://onlyscrews.in/products/m8-washer-ss304?currency=INR&country=IN&variant=49592314691897&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=Inderans_Campaign&utm_content=Other_than_fasteners_wala_copy&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SS13C7O8clb3n7juN0NJicBD&gclid=Cj0KCQjwrZTRBhDSARIsAHidYff_2voIe-8RPEu9AA21EZff0GSSyk4MWjjptkDVLWuZe4Rjuu5uqCkaAtCuEALw_wcB
+		608ZZ Bearing		25	 $0.65 		 $16.25 		https://robu.in/product/608rs-rubber-sealed-ball-bearing-miniature-bearing-8-x-22-x-7-mm-2pcs/?gad_source=1&gad_campaignid=20387462343&gbraid=0AAAAADvLFWcUP3CknhSW9eUY6CQlfupzk&gclid=Cj0KCQjwrZTRBhDSARIsAHidYfd0S1D73ieG7aGP_yzNHDVsqFkIBv0Nb17ZW9C3qtAqVlHfgalc-asaAqjfEALw_wcB
+									
+									
+	Total						 $32.40 		
+Electronics		Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)		3	 $37.31 	 ₹ 3,549.00 	 $111.93 	 Robu 	https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/
+		Teensy 4.1 Development Board		1	 $37.31 	 ₹ 3,549.00 	 $37.31 	 Robu 	https://robu.in/product/buy-teensy-4-1-development-board/?gad_source=1&gad_campaignid=17413441824&gbraid=0AAAAADvLFWfXLdA6AANHs5Ve4AQK9bfZ8&gclid=Cj0KCQjw2OnUBhC2ARIsACKyfaFzWoNclj3oNfiAD4EIvs_Ez1LKw9-ygCR7iBL90tSr9sch6fNVC1IaAk0PEALw_wcB
+		"Mean Well 	LRS-600-48v"		1	 $39.97 	 ₹ 3,802.00 	 $39.97 		https://www.tradeindia.com/products/lrs-600-48v-meanwell-power-supply-c10893421.html
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+	Total						 $189.21 		
+Shipping, Taxes, and Customs					 misumi 		 $114.11 		
+					 tax 		 $20.54 		
+					 total 		 $134.65 		
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+							 $20.54 		
+Miscellaneous									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+		Total			 $-   				
+Grand Total					 $-   		 $638.23 		
+<img width="3018" height="1458" alt="image" src="https://github.com/user-attachments/assets/b0e52a02-31fa-4f99-9fc7-f26f2f7451c9" />
+
+Here're the lapses of today's session: [PATRA-LPS-49-69-1](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK) and [PATRA-LPS-49-69-2](https://lapse.hackclub.com/timelapse/zQSr7ZLNBH7M)
+
+**Total time spent: 3h 45m**
 
 ---
 
