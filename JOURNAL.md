@@ -1710,6 +1710,24 @@ Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.c
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c7d347d-5a53-4090-8d1a-cdf71db3ba13" />
 
+Throughout the design, there were broken dimensions. There were asymmetrical bodies, off center midpoints, asymmetrical angles and off center components. I was not aware of the asymmetries in existence in the design, so I had decided to fix every dimension one-by-one as I discover them in real time.
+
+1. The first one I fixed was the Tool Head, which had asymmetrical dimensions and off center position. The width of the Tool head was supposed to be 100 mm but it was actually 100.09016915 mm. This made the body asymmetrical and had potential for various issues in future for downstream features for sketches and modifications. In order to fix this, I first split the Tool Head body into two parts using the XZ plane as the splitting tool. Then I extruded out the bigger side by the dimension which was the average of their asymmetry, then moved the wider and thinner side to reach the XZ plane at exact coordinates. Then finally I combined them and adjusted the bodies in the Browser. This was caused most likely due to accidental upstream Capture Positions after having dragged them out of position accidentally.  
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f19d21e-3ccd-4697-8760-e6ba84fcf4d2" />
+
+2. Next was the distance between the Y Upper Leg to the Tool Head lower left back face. It was supposed to be exactly 1 mm but in the design the distance is 0.93620373 mm, unlike the X Upper leg, which had exact 1 mm distance. To fix this, I went back in timeline and tried to find at what point were the distances disrupted. I found the Position Capture feature but it caused various Errors and Warnings downstream (of course).
+
+
+
+
+
+
+
+
+
+
+
 Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.com/timelapse/DzR0y5DWGWK2)
 
 **Total time spent: 5h 30m**
@@ -2681,9 +2699,13 @@ Nothing was journaled from day 42 to 69.
 
 So, it was time for me to journal.
 
-Here's the lapse of today's session: [PATRA-LPS-50-70]()
+With the help of PATRA [OLD] v7 and PATRA [OLD] v8 in my Autodesk Fusion, and [PATRA-LPS-22-D42](https://lapse.hackclub.com/timelapse/DzR0y5DWGWK2), I journaled Day #42 partly.
 
-**Total time spent: 0h 00m**
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/79736694-b48c-4ae8-becc-1df1109990f9" />
+
+Here's the lapse of today's session: [PATRA-LPS-50-70](https://lapse.hackclub.com/timelapse/3X4rEaElD5qQ)
+
+**Total time spent: 3h 45m**
 
 ---
 
