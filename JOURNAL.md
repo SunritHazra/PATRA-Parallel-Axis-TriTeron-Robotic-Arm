@@ -2561,12 +2561,130 @@ Here're the lapses of today's session: [PATRA-LPS-49-69-1](https://lapse.hackclu
 
 # Day 70 — 05.09.2026: [incomplete]
 
+Let's pick up where I left off.
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/83fa5b1b-1ca0-48a9-9017-f441573a8a7f" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/460a0f78-bd26-420e-b05d-a38ccea5ef01" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2dea93fe-6baa-47ae-92e5-499b507210f8" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d2559781-66c2-4b67-a705-e5e6450f2ba5" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3a211d63-1eeb-4086-85c9-9fc652d449be" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4532925-d0a4-4aae-9702-ff27350bd6c1" />
+
+<img width="1024" height="663" alt="1788604893301-039b357a-4560-4843-9b33-af57f98d26be_1" src="https://github.com/user-attachments/assets/f605704d-a8bf-44e2-9374-3423e0b41b9d" />
+
+0									
+Component Category		Item	Material	Quantity	Cost (USD)	 Cost (INR) 	Total Cost	Source	Link
+Kinematic Base Module (KBM)	Aluminium Extrusions	LCF6-2020-1135 Aluminium 2020 T-Slot Profile Extrusion	 Aluminium 	2	 $3.24 	 ₹ 306.45 	 $6.49 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135
+		HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion	 Aluminium 	2	 $27.47 	 ₹ 2,595.20 	 $54.93 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000
+	End Plates	End Plate Body	 FDM PETG 	2			 $-   		
+		End Plate Connectors	 FDM PETG 	8			 $-   		
+	Linear Guides	MGN15H Linear Guide Rail 1 m	 Bearing Steel 	2	 $28.88 	 ₹ 2,729.00 	 $57.76 	 Robu 	https://robu.in/product/mgn15h-linear-guide-rail-1m-2
+		MGN15H Sliding Block	 Bearing Steel 	4	 $7.19 	 ₹ 679.00 	 $28.74 	 Robu 	https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
+		Belt Clamp Bottom (X & Y)	 MJF PA12S-HP Nylon 	2	 $2.07 		 $4.14 	 JLC3DP 	
+		Belt Clamp Top (X & Y)	 SLA 9600 Resin 	2	 $1.47 		 $2.94 	 JLC3DP 	
+		Belt Clamp Bottom (Z)	 MJF PA12S-HP Nylon 	1	 $2.01 		 $2.01 	 JLC3DP 	
+		Belt Clamp Top (Z)	 SLA 9600 Resin 	1	 $3.79 		 $3.79 	 JLC3DP 	
+	Tensioning Systems	Belt E-GBN22505GT-150 (X & Y)	 Rubber Glass Core 	2	 $12.97 	 ₹ 1,225.63 	 $25.94 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150
+		Belt E-GBN26005GT-150 (Z)	 Rubber Glass Core 	1	 $14.82 	 ₹ 1,400.77 	 $14.82 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150
+		Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)	 Aluminum Alloy 	4	 $3.03 		 $12.12 	 JLCMC 	https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12
+		Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)	 Aluminum Alloy 	2	 $3.00 		 $5.99 	 JLCMC 	https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12
+		Pulley Case Left (X)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Left (Y)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Left (Z)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Right (X)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Right (Y)	 FDM PA Nylon 	1			 $-   		
+		Pulley Case Right (Z)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Left (X)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Left (Y)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Left (Z)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Right (X)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Right (Y)	 FDM PA Nylon 	1			 $-   		
+		Idler Case Right (Z)	 FDM PA Nylon 	1			 $-   		
+		Belt Sheilds (X & Y)	 FDM PLA+ 	8			 $-   		
+		Pulley & Idler Case Coupler (Z)	 FDM PETG 	2			 $-   		
+		Bearing Cover	 FDM PETG 	9			 $-   		
+		6901ZZ Bearing (Pack of 4)		3	 $2.53 	 ₹ 239.00 	 $7.59 	 Robu 	https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/
+		WSX-SUS-M12X18-5 Washer	 FDM PETG 	12	 $-   		 $-   		
+		Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 	
+		Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 	
+		PTFE Coated Teflon Tape		1	 $4.23 	 ₹ 400.00 	 $4.23 	 Amazon 	https://www.amazon.in/Keiko-adhesive-Release-sealing-purpose/dp/B0DCGGGGGJ?th=1
+	Motors	Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)		2	 $43.17 	 ₹ 4,079.00 	 $86.34 	 Robu 	https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/
+		Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)		1	 $57.14 	 ₹ 5,399.00 	 $57.14 	 Robu 	https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/
+	Fasteners	M3 X 12mm High Tensile(12.9) Black oxide Grub Screw (Dia. 3mm, Length 12mm)		30	 ₹ 0.02 	 ₹ 2.00 	 $0.63 	 OnlyScrews 	https://onlyscrews.in/products/m3-x-12mm-high-tensile12-9-black-oxide-grub-screw-dia-3mm-length-12mm
+		M3 X 12mm Hex (Allen) CSK SS 304 Screw (Dia. 3mm, Length 12mm)		25	 $0.02 	 ₹ 1.80 	 $0.48 	 OnlyScrews 	https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20?_pos=1&_sid=1040a6d00&_ss=r
+		Socket Head High Tensile(12.9) Black oxide screw (Dia. 5mm, Length 10mm)		15	 $0.03 	 ₹ 2.40 	 $0.38 	 OnlyScrews 	https://onlyscrews.in/products/m5-x-10mm-hex-allen-socket-head-high-tensile12-9-black-anodized-screw
+		M3 X 5mm 3D Printing Brass Threaded Slant Knurled Inserts (Dia. 3mm, Length 5mm)		40	 $0.05 	 ₹ 4.60 	 $1.95 	 OnlyScrews 	https://onlyscrews.in/products/m3-x-5mm-3d-printing-brass-threaded-inserts-dia-3mm-length-5mm
+					 $-   		 $-   	 OnlyScrews 	
+					 $-   		 $-   	 OnlyScrews 	
+					 $-   		 $-   	 OnlyScrews 	
+	Total						 $386.10 	 Budget = $400 	
+TriTeron Robot Module (TRM)		MSB8-30 Screw		15	 $0.84 		 $12.60 		https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30
+		EMLC-S1-N-M6 Nut		100	 $0.02 		 $1.65 		https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6
+		SS304 M8 Washer		100	 $0.02 		 $1.90 		https://onlyscrews.in/products/m8-washer-ss304?currency=INR&country=IN&variant=49592314691897&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=Inderans_Campaign&utm_content=Other_than_fasteners_wala_copy&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SS13C7O8clb3n7juN0NJicBD&gclid=Cj0KCQjwrZTRBhDSARIsAHidYff_2voIe-8RPEu9AA21EZff0GSSyk4MWjjptkDVLWuZe4Rjuu5uqCkaAtCuEALw_wcB
+		608ZZ Bearing		25	 $0.65 		 $16.25 		https://robu.in/product/608rs-rubber-sealed-ball-bearing-miniature-bearing-8-x-22-x-7-mm-2pcs/?gad_source=1&gad_campaignid=20387462343&gbraid=0AAAAADvLFWcUP3CknhSW9eUY6CQlfupzk&gclid=Cj0KCQjwrZTRBhDSARIsAHidYfd0S1D73ieG7aGP_yzNHDVsqFkIBv0Nb17ZW9C3qtAqVlHfgalc-asaAqjfEALw_wcB
+									
+									
+	Total						 $32.40 	 Budget = $200 	
+Electronics		Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)		3	 $37.56 	 ₹ 3,549.00 	 $112.68 	 Robu 	https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/
+		Teensy 4.1 Development Board		1	 $37.56 	 ₹ 3,549.00 	 $37.56 	 Robu 	https://robu.in/product/buy-teensy-4-1-development-board/?gad_source=1&gad_campaignid=17413441824&gbraid=0AAAAADvLFWfXLdA6AANHs5Ve4AQK9bfZ8&gclid=Cj0KCQjw2OnUBhC2ARIsACKyfaFzWoNclj3oNfiAD4EIvs_Ez1LKw9-ygCR7iBL90tSr9sch6fNVC1IaAk0PEALw_wcB
+		"Mean Well 	LRS-600-48v"		1	 $40.24 	 ₹ 3,802.00 	 $40.24 	 Trade India 	https://www.tradeindia.com/products/lrs-600-48v-meanwell-power-supply-c10893421.html
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+					 $-   		 $-   		
+	Total						 $190.48 	 Budget = $350 	
+Shipping, Taxes, and Customs					 misumi 		 $114.78 		
+					 tax 		 $20.66 		
+					 total 		 $135.44 		
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+							 $20.66 	 Budget = $50 	
+Miscellaneous									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+		Total			 $-   				
+Grand Total					 $-   		 $629.64 		
+
+<img width="2959" height="1458" alt="image" src="https://github.com/user-attachments/assets/70275b56-e7da-4222-a422-f5aad281fd6f" />
+
+But then I became tired.
+
 Nothing was journaled from day 42 to 69.
 
 <img width="290" height="624" alt="image" src="https://github.com/user-attachments/assets/bd056bc7-ac5b-488f-b146-84239a17c1af" />
+
+So, it was time for me to journal.
 
 Here's the lapse of today's session: [PATRA-LPS-50-70]()
 
 **Total time spent: 0h 00m**
 
 ---
+
+
