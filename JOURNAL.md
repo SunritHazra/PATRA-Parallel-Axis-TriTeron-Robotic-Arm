@@ -2711,8 +2711,21 @@ Here's the lapse of today's session: [PATRA-LPS-50-70](https://lapse.hackclub.co
 
 # Day 71 — 06.09.2026: [incomplete]
 
-Here's the lapse of today's session: [PATRA-LPS-51-71]()
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03c3bf5d-cc33-444c-8e70-9d92d668f88e" />
 
-**Total time spent: 0h 00m**
+<img width="653" height="461" alt="image" src="https://github.com/user-attachments/assets/982954f4-b0d4-406e-a24a-041b68595337" />
+
+<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/38e6b2ce-d564-4af8-8c35-d15f341d8b34" />
+
+<img width="643" height="456" alt="image" src="https://github.com/user-attachments/assets/01a3cd00-0c63-4d72-a779-3495da876a85" />
+
+<img width="648" height="459" alt="image" src="https://github.com/user-attachments/assets/f5d8898f-4401-41b7-93af-fd6d53b92c1e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
+
+
+Here's the lapse of today's session: [PATRA-LPS-51-71](https://lapse.hackclub.com/timelapse/lAy-izM683f_)
+
+**Total time spent: 3h 05m**
 
 ---
