@@ -4,7 +4,7 @@ Author: Sunrit Hazra
 Description: A Hybrid robot architecture of a kinematically linear 3 DOF parallel axis triteron system and a 6 DOF serial robotic arm.
 Created on: 02-05-2026
 Overall Progress: "63%"
-KBM Progress: "90%"
+KBM Progress: "91%"
 TRM Progress: "61%"
 RAM Progress: "0%"
 ---
