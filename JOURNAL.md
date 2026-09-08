@@ -2583,7 +2583,23 @@ Let's pick up where I left off: Further cutting down the cost of the Kinematic B
 
 The first thing that came to my mind was unnecessary SLA Resin prints. I decided to print every part in PLA, PLA+, PA6/PA-CF, or PETG which are not being printed in MJF PA12S-HP Nylon. MJF PA12S-HP Nylon possesses multidimensional (isotropic) strength. Unlike traditional 3D printing technologies (like FDM) where parts are significantly weaker along the vertical Z-axis (linear or directional strength). Only the small crucial parts like the belt clamps, motor shaft adapters, etcetera, need isotropic strength and thus will be printed in MJF PA12S-HP Nylon. But a point to be noted is that I will still choose SLA resin printing for the Belt Clamp tops, as they are complex to print and need supports, which can cause a not-so-much smooth surface, which is somewhat crucial. Additionally, they are not that expensive.
 
-Then it was time to start eliminating the remaining SLA prints one by one. Here's what I did, in sequence:
+I noticed that there were 4 Belt shields, each 0.5 meter in length, for two 1 meter long Belt Sheild Groups. I further divided them to length 250 mm, so that they are printable in my Elegoo Centauri Carbon using PLA/PETG. I will then apply PTFE Coated Teflon Tape on the surface to prevent belt wear as the clearance is less than 1 mm.
+
+I immediately checked the print cost and print time in Orca Slicer, which came to be $2.34 and 2h41m, respectively. I was just about to print them when I realised I had to toggle the settings for a strong and smooth print. I thought that I could do it later, after the 4040 extrusion arrives, so that I can check the clearances in a shorter stretch of say 100 mm, not 2000 mm, which would be the case if I printed them. 
+
+<img width="1365" height="730" alt="image" src="https://github.com/user-attachments/assets/e839fcf1-6dd1-4204-ae9f-4e3ff29e5f92" />
+
+Then I suddenly remembered that I had to make a drawing. Here is some context:
+
+On 02.09.2026, I had a talk with my school director. I told him about my project and briefly explained to him what I was doing. I asked him if he had anyone in his contact who was in the CNC machining industry and could give me a quote on sample part. I told him that I needed CNC machining for my project, and all the options in India were extremely expensive. The options from China were also expensive with the added customs. He called someone who was in the CNC industry before me. The conclusion was the fact that I will have to provide them with a technical drawing of the part which was to be machined in aluminium.
+
+The last time I made a drawing for a part was back in September 2025, which was for my [V1 solenoid engine](https://github.com/SunritHazra/VX-Solenoid-Engine/blob/V2-Solenoid-Engine/V2-Solenoid-Engine-Journal.md#292026---retrospective-journal-entry--v1-solenoid-engine). It was not that big of a deal because the parts were extremely simple to manufacture, and they did not require CNC machining. Instead, they just needed lathe machining.
+
+This time, the thing I had to create a drawing of was much more complex, and I was really excited about this. 
+
+I started simply by opening the design and creating a new drawing where I imported the leg, and then I started with the projected views from the base view of the leg. But then I noticed that the thing I imported for the drawing came oriented as in the design. At that time, I did not know how to orient it flat, so it seemed like the best option was to do something else to lay it flat on a design.  I continued by duplicating Z Axis Leg Lower A into a new design, and using the Arrangement Tool to place it flat on the XY plane.
+
+
 
 <img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/83fa5b1b-1ca0-48a9-9017-f441573a8a7f" />
 
@@ -2695,7 +2711,7 @@ Grand Total					 $-   		 $629.64
 
 <img width="2959" height="1458" alt="image" src="https://github.com/user-attachments/assets/70275b56-e7da-4222-a422-f5aad281fd6f" />
 
-the last time i made a drawing was in 2025 september for my v1 solenoid engine parts that i
+
 But then I became tired.
 
 Nothing was journaled from day 42 to 69.
@@ -2765,14 +2781,18 @@ Here's the lapse of today's session: [PATRA-LPS-51-D71](https://lapse.hackclub.c
 
 # Day 72 — 08.09.2026: Journaling
 
-Journaled day #71 
+Journaled day #71 and #70 (partly)
 
 Day #71
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f7cd7595-6cb5-405d-a11e-e53e867ac71e" />
 
-Here's the lapse of today's session: [PATRA-LPS-52-D72]()
+Day #70 (partly)
 
-**Total time spent: 0h 00m**
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1c8458b1-1f47-4908-abae-6b712e2aaa55" />
+
+Here's the lapse of today's session: [PATRA-LPS-52-D72](https://lapse.hackclub.com/timelapse/FMU-NvBEFHSQ)
+
+**Total time spent: 3h 15m**
 
 ---
