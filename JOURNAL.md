@@ -2691,6 +2691,7 @@ Grand Total					 $-   		 $629.64
 
 <img width="2959" height="1458" alt="image" src="https://github.com/user-attachments/assets/70275b56-e7da-4222-a422-f5aad281fd6f" />
 
+the last time i made a drawing was in 2025 september for my v1 solenoid engine parts that i
 But then I became tired.
 
 Nothing was journaled from day 42 to 69.
@@ -2711,18 +2712,46 @@ Here's the lapse of today's session: [PATRA-LPS-50-D70](https://lapse.hackclub.c
 
 # Day 71 — 06.09.2026: [incomplete]
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03c3bf5d-cc33-444c-8e70-9d92d668f88e" />
+Today, I actually wanted to journal the old un-journaled logs as they were piling up like crazy. But, instead, I started with the remaining drawing work of the Z Axis Lower Leg A and got stuck in the loophole again.
 
-<img width="653" height="461" alt="image" src="https://github.com/user-attachments/assets/982954f4-b0d4-406e-a24a-041b68595337" />
+First things first, I actually don't really know how to create a drawing for a complex part like that for CNC machining.
 
-<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/38e6b2ce-d564-4af8-8c35-d15f341d8b34" />
+I started with a simple Google Search:
+**"WHAT IS GEOMETRICAL MISSING THAT CAN CAUSE SOMEONE BEING UNABLE TO GIVE ME QUOTE?"**
 
-<img width="643" height="456" alt="image" src="https://github.com/user-attachments/assets/01a3cd00-0c63-4d72-a779-3495da876a85" />
+And well, the answer confirmed the fact that I really needed to start over from scratch. This meant that automated workflow was an ideal choice for me, even though I was initially unaware of what exact automated process exists, to what extent and how reliable it actually is.
 
-<img width="648" height="459" alt="image" src="https://github.com/user-attachments/assets/f5d8898f-4401-41b7-93af-fd6d53b92c1e" />
+Here's what I did next:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
+1. I searched up a tutorial and found [this](youtube.com/watch?v=NweBvuVYuQo) video. It showed how to create automated drawings.
 
+2. I followed the exact workflow several times and each time, I failed. Every time, I took the image, and uploaded it to Google AI Search for consultation.
+	- The first draft was this, where I did pretty much nothing, except confirming Baseline Dimensions: <img width="655" height="464" alt="image" src="https://github.com/user-attachments/assets/34680783-744e-4048-9038-de3fff56a9e2" />
+	- The next draft was even worse where I selected the wrong parent body orientation, scale, and dimension density: <img width="646" height="458" alt="image" src="https://github.com/user-attachments/assets/539d63b1-bacc-4628-b336-5bc778b98b41" />
+	- Again another failure, which I made as I did not understand what I was actually doing: <img width="648" height="458" alt="image" src="https://github.com/user-attachments/assets/27f06258-eb9b-4801-863b-47d18d239368" />
+	
+3. Then finally, I finally understood what to do. But the first thing which I did was not the projection, but actually editing the Title Block. Editing the title block is extremely crucial because it determines at what orientation, distance, and shape you could place your projected views. It also lets you remove unnecessary information, keeping only what's needed, and also add something that you need. <img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/60b90a8e-6c08-4327-b8b9-edfb5e4177ae" />
+
+4. A drawing can have several sheets. The first sheet, which I made, was again a failure, but the second time, when I started fresh without directly relying on Auto Dimensions from the very beginning, I actually started making sense in my drawing. Repeatedly, the auto dimensions were taking random side of the model, which I did not want. This time, when I manually did that, I took the top orientation of the Z Axis Leg Lower A, then I made all the possible projections. <img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/de16187b-0272-4b9f-b03e-fc805f18efb2" />
+
+5. Next I edited the Borders to make them spaced equidistant from the edges of the page. <img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/45d09801-1868-4790-9d5d-95fae5ac0478" />
+
+6. But then the dimensions looked way too much and there was severe over-dimensioning. But the worst: there were way too many projected views. So I deleted some to clear up the drawing <img width="1365" height="736" alt="image" src="https://github.com/user-attachments/assets/c46b0a2b-c395-4698-9b13-e091fb4e05c4" />
+
+7. I set the dimension density at 20 of 35 datum location as default, as Top Left. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03c3bf5d-cc33-444c-8e70-9d92d668f88e" />
+
+8. I pasted the image in Google and asked what data was missing. It pointed out some, which I gradually fixed and added one by one manually. To do things manually, I used my imagination to think of me as the tip of a 3 axis CNC machine: carefully thinking about what data I need one my one to first form the outer shape, the holes, the pockets and the receding part of the distal joint. Like this, I added several radii and distances crucial for CNC fabrication. I then continued to manually add dimensions one by one and checking them with Google AI Mode.
+	- This is the first iteration: <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/982954f4-b0d4-406e-a24a-041b68595337" />
+	- This is the second iteration: <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/38e6b2ce-d564-4af8-8c35-d15f341d8b34" />
+	- This is the third iteration: <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/01a3cd00-0c63-4d72-a779-3495da876a85" />
+	
+9. By this time, there were way too many dimensions especially for the base view. Thus it seemed sensible to add the bottom view of the Z Axis Leg Lower A. But to do it, I couldn't use projected view. So, I created another base view and rotated it so that the drawing stays clean. I then added the necessary dimensions and again consulted Google for assistance. <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/f5d8898f-4401-41b7-93af-fd6d53b92c1e" />
+
+10. Then finally, with some more review, I had the drawing ready. It seemed fine to me and most probably no missing dimensions. I also edited the Title Block and added some more details like the project title and fixed minor issues. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
+
+With all that done, I saved all the designs, including the failed ones and named them as in the following sequence:
+
+<img width="379" height="442" alt="image" src="https://github.com/user-attachments/assets/b971ceeb-23eb-48cf-b540-b7b57d994940" />
 
 Here's the lapse of today's session: [PATRA-LPS-51-D71](https://lapse.hackclub.com/timelapse/lAy-izM683f_)
 
