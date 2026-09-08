@@ -2579,7 +2579,11 @@ Here're the lapses of today's session: [PATRA-LPS-49-D69-1](https://lapse.hackcl
 
 # Day 70 — 05.09.2026: [incomplete]
 
-Let's pick up where I left off.
+Let's pick up where I left off: Further cutting down the cost of the Kinematic Base Module (KBM), and especially the goods being imported from Jialichuang.
+
+The first thing that came to my mind was unnecessary SLA Resin prints. I decided to print every part in PLA, PLA+, PA6/PA-CF, or PETG which are not being printed in MJF PA12S-HP Nylon. MJF PA12S-HP Nylon possesses multidimensional (isotropic) strength. Unlike traditional 3D printing technologies (like FDM) where parts are significantly weaker along the vertical Z-axis (linear or directional strength). Only the small crucial parts like the belt clamps, motor shaft adapters, etcetera, need isotropic strength and thus will be printed in MJF PA12S-HP Nylon. But a point to be noted is that I will still choose SLA resin printing for the Belt Clamp tops, as they are complex to print and need supports, which can cause a not-so-much smooth surface, which is somewhat crucial. Additionally, they are not that expensive.
+
+Then it was time to start eliminating the remaining SLA prints one by one. Here's what I did, in sequence:
 
 <img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/83fa5b1b-1ca0-48a9-9017-f441573a8a7f" />
 
@@ -2710,7 +2714,7 @@ Here's the lapse of today's session: [PATRA-LPS-50-D70](https://lapse.hackclub.c
 
 ---
 
-# Day 71 — 06.09.2026: [incomplete]
+# Day 71 — 06.09.2026: Re-Drawing the Z Axis Leg Lower A
 
 Today, I actually wanted to journal the old un-journaled logs as they were piling up like crazy. But, instead, I started with the remaining drawing work of the Z Axis Lower Leg A and got stuck in the loophole again.
 
@@ -2759,9 +2763,13 @@ Here's the lapse of today's session: [PATRA-LPS-51-D71](https://lapse.hackclub.c
 
 ---
 
-# Day 72 — 08.09.2026: [incomplete]
+# Day 72 — 08.09.2026: Journaling
 
+Journaled day #71 
 
+Day #71
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f7cd7595-6cb5-405d-a11e-e53e867ac71e" />
 
 Here's the lapse of today's session: [PATRA-LPS-52-D72]()
 
