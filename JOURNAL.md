@@ -2150,7 +2150,7 @@ lots of stuff iforgot
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/112aee38-9f86-42fa-966e-19b0e4244ed9" />
 
-Here's the lapse of today's session: [PATRA-LPS-40-60](https://lapse.hackclub.com/timelapse/td59cmkmuuk6)
+Here's the lapse of today's session: [PATRA-LPS-40-D60](https://lapse.hackclub.com/timelapse/td59cmkmuuk6)
 
 **Total time spent: 3h 30m**
 
@@ -2168,7 +2168,7 @@ fixing 0.00037878 mm offsets
 
 x axis pulley again complete. i have to fix position of connections due to position change by 0.25 mm, mirror to idler and mirror whole system to y. then fix z and then continue on where i left of in day 55.
 
-Here's the lapse of today's session: [PATRA-LPS-41-61](https://lapse.hackclub.com/timelapse/h5Qet2HkMa8K)
+Here's the lapse of today's session: [PATRA-LPS-41-D61](https://lapse.hackclub.com/timelapse/h5Qet2HkMa8K)
 
 **Total time spent: 2h 05m**
 
@@ -2180,7 +2180,7 @@ https://elitetape.com/tapes-for-anti-friction-applications/
 
 FINALLY MADE A MECHANICALLY SENSIBLE BELT CLAMP DESIGN <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/58d6d72b-ac0d-4ed0-8601-15c53b85fcd3" />
 
-Here's the lapse of today's session: [PATRA-LPS-42-62](https://lapse.hackclub.com/timelapse/_ZJzLyDNYPNp)
+Here's the lapse of today's session: [PATRA-LPS-42-D62](https://lapse.hackclub.com/timelapse/_ZJzLyDNYPNp)
 
 **Total time spent: 4h 45m**
 
@@ -2199,7 +2199,7 @@ moving the x and y by 0.25 mm apart causes the z axis too to move that much apar
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ec86520-7dd0-405b-904f-0f107b0535af" />
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb41116b-e988-4dbf-8d30-a4b250d4a3a7" />2256.938
 
-Here's the lapse of today's session: [PATRA-LPS-43-63](https://lapse.hackclub.com/timelapse/EYsn6-oXwp8n)
+Here's the lapse of today's session: [PATRA-LPS-43-D63](https://lapse.hackclub.com/timelapse/EYsn6-oXwp8n)
 
 **Total time spent: 4h 40m**
 
@@ -2259,7 +2259,7 @@ fixed several clearances and made them 0.2 mm from 0.4 and 0.3. added fillets fo
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7e8b484d-3cac-4065-8dbc-05f780bdfde2" />
 
-Here's the lapse of today's session: [PATRA-LPS-44-64]()
+Here's the lapse of today's session: [PATRA-LPS-44-D64]()
 
 **Total time spent: 6h 20m**
 
@@ -2291,7 +2291,7 @@ next is end plate holes
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/de7ee697-6b7c-441a-9f45-b099a7fd837f" />
 
-Here's the lapse of today's session: [PATRA-LPS-45-65](https://lapse.hackclub.com/timelapse/5henxAHdVGoH)
+Here's the lapse of today's session: [PATRA-LPS-45-D65](https://lapse.hackclub.com/timelapse/5henxAHdVGoH)
 
 **Total time spent: 3h 15m**
 
@@ -2335,7 +2335,7 @@ https://jlc3dp.com/help/article/3d-printing-design-guideline
 
 oops i forgot to add clearance for the linear block clamps!
 
-Here's the lapse of today's session: [PATRA-LPS-46-66](https://lapse.hackclub.com/timelapse/r_Kl-JPTx5vg)
+Here's the lapse of today's session: [PATRA-LPS-46-D66](https://lapse.hackclub.com/timelapse/r_Kl-JPTx5vg)
 
 **Total time spent: 4h 00m**
 
@@ -2416,7 +2416,7 @@ Kinematic Base Module (KBM)	Aluminium Extrusions	Aluminium 2020 T-Slot Profile E
 
 getting really expensive, i really need to optimize.
 
-Here's the lapse of today's session: [PATRA-LPS-47-67](https://lapse.hackclub.com/timelapse/FNw_Cs9I_1ax)
+Here's the lapse of today's session: [PATRA-LPS-47-D67](https://lapse.hackclub.com/timelapse/FNw_Cs9I_1ax)
 
 **Total time spent: 3h 20m**
 
@@ -2436,7 +2436,7 @@ https://robu.in/product/sla-3d-printing/
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa3770c9-d536-4aed-9b2e-6c532acfc268" />
 
-Here's the lapse of today's session: [PATRA-LPS-48-68](https://lapse.hackclub.com/timelapse/DT-okZpcwg7Q)
+Here's the lapse of today's session: [PATRA-LPS-48-D68](https://lapse.hackclub.com/timelapse/DT-okZpcwg7Q)
 
 **Total time spent: 2h 10m**
 
@@ -2571,7 +2571,7 @@ Miscellaneous
 Grand Total					 $-   		 $638.23 		
 <img width="3018" height="1458" alt="image" src="https://github.com/user-attachments/assets/b0e52a02-31fa-4f99-9fc7-f26f2f7451c9" />
 
-Here're the lapses of today's session: [PATRA-LPS-49-69-1](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK) and [PATRA-LPS-49-69-2](https://lapse.hackclub.com/timelapse/zQSr7ZLNBH7M)
+Here're the lapses of today's session: [PATRA-LPS-49-D69-1](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK) and [PATRA-LPS-49-69-2](https://lapse.hackclub.com/timelapse/zQSr7ZLNBH7M)
 
 **Total time spent: 3h 45m**
 
@@ -2703,7 +2703,7 @@ With the help of PATRA [OLD] v7 and PATRA [OLD] v8 in my Autodesk Fusion, and [P
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/79736694-b48c-4ae8-becc-1df1109990f9" />
 
-Here's the lapse of today's session: [PATRA-LPS-50-70](https://lapse.hackclub.com/timelapse/3X4rEaElD5qQ)
+Here's the lapse of today's session: [PATRA-LPS-50-D70](https://lapse.hackclub.com/timelapse/3X4rEaElD5qQ)
 
 **Total time spent: 3h 45m**
 
@@ -2724,8 +2724,18 @@ Here's the lapse of today's session: [PATRA-LPS-50-70](https://lapse.hackclub.co
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
 
 
-Here's the lapse of today's session: [PATRA-LPS-51-71](https://lapse.hackclub.com/timelapse/lAy-izM683f_)
+Here's the lapse of today's session: [PATRA-LPS-51-D71](https://lapse.hackclub.com/timelapse/lAy-izM683f_)
 
 **Total time spent: 3h 05m**
+
+---
+
+# Day 72 — 08.09.2026: [incomplete]
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-52-D72]()
+
+**Total time spent: 0h 00m**
 
 ---
