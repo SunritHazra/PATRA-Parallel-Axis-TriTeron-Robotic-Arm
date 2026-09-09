@@ -1131,7 +1131,7 @@ I was done with the positioning of the the front two Z axis legs. Now was the ti
 
 By fixing, this is what I mean:
 
-* The lower end of the X and Y axis legs do not not overlap or touch the ninear block.
+* The lower end of the X and Y axis legs do not not overlap or touch the linear block.
 * The elbow of the X and Y legs do not extend much farther out or much in.
 * The elbow height matches the elbow height of the front legs of Z axis.
 * The back legs are positioned similar to [Rudmin's design](https://www.youtube.com/watch?v=6EtXycVGJg4).
