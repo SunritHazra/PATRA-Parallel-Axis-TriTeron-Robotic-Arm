@@ -2476,99 +2476,6 @@ https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20
 
 Direct Comparison OverviewFeatureMJF PA12S-HP NylonFDM PA NylonMechanical PropertiesIsotropic (uniform strength across X, Y, Z axes).Anisotropic (weak Z-axis layer adhesion).Dimensional AccuracyHigh precision (±0.3%); holds tight tolerances easily.Poor; prone to shrinking and warping during printing.Surface FinishSmooth, uniform, and slightly granular; excellent for teeth.Layer lines present; requires post-processing for tight fits.
 
-0									
-Component Category		Item		Quantity	Cost		Total Cost	Source	Link
-Kinematic Base Module (KBM)	Aluminium Extrusions	LCF6-2020-1135 Aluminium 2020 T-Slot Profile Extrusion	 Aluminium 	2	 $3.22 	 ₹ 306.45 	 $6.44 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135
-		HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion	 Aluminium 	2	 $27.28 	 ₹ 2,595.20 	 $54.57 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000
-	End Plates	End Plate Body	 FDM PETG 	2			 $-   		
-		End Plate Connectors	 FDM PETG 	8			 $-   		
-	Linear Guides	MGN15H Linear Guide Rail 1 m		2	 $28.69 	 ₹ 2,729.00 	 $57.38 	 Robu 	https://robu.in/product/mgn15h-linear-guide-rail-1m-2
-		MGN15H Sliding Block		4	 $7.14 	 ₹ 679.00 	 $28.55 	 Robu 	https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
-		Belt Clamp Bottom (X & Y)	 MJF PA12S-HP Nylon 	2	 $2.07 		 $4.14 	 JLC3DP 	
-		Belt Clamp Top (X & Y)	 SLA 9600 Resin 	2	 $1.47 		 $2.94 	 JLC3DP 	
-		Belt Clamp Bottom (Z)	 MJF PA12S-HP Nylon 	1	 $2.01 		 $2.01 	 JLC3DP 	
-		Belt Clamp Top (Z)	 SLA 9600 Resin 	1	 $3.79 		 $3.79 	 JLC3DP 	
-	Tensioning Systems	Belt E-GBN22505GT-150 (X & Y)		2	 $12.89 	 ₹ 1,225.63 	 $25.77 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150
-		Belt E-GBN26005GT-150 (Z)		1	 $14.73 	 ₹ 1,400.77 	 $14.73 	 MISUMI 	https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150
-		Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)		4	 $3.03 		 $12.12 	 JLCMC 	https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12
-		Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)		2	 $3.00 		 $5.99 	 JLCMC 	https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12
-		Pulley Case Left (X)	 FDM PA Nylon 	1			 $-   		
-		Pulley Case Left (Y)	 FDM PA Nylon 	1			 $-   		
-		Pulley Case Left (Z)	 FDM PA Nylon 	1			 $-   		
-		Pulley Case Right (X)	 FDM PA Nylon 	1			 $-   		
-		Pulley Case Right (Y)	 FDM PA Nylon 	1			 $-   		
-		Pulley Case Right (Z)	 FDM PA Nylon 	1			 $-   		
-		Idler Case Left (X)	 FDM PA Nylon 	1			 $-   		
-		Idler Case Left (Y)	 FDM PA Nylon 	1			 $-   		
-		Idler Case Left (Z)	 FDM PA Nylon 	1			 $-   		
-		Idler Case Right (X)	 FDM PA Nylon 	1			 $-   		
-		Idler Case Right (Y)	 FDM PA Nylon 	1			 $-   		
-		Idler Case Right (Z)	 FDM PA Nylon 	1			 $-   		
-		Belt Sheilds (X & Y)	 SLA 9600 Resin 	4	 $3.07 		 $12.28 	 JLC3DP 	
-		Pulley & Idler Case Coupler (Z)	 FDM PETG 	2			 $-   		
-		Bearing Cover	 FDM PETG 	9			 $-   		
-		6901ZZ Bearing (Pack of 4)		3	 $2.51 	 ₹ 239.00 	 $7.54 	 Robu 	https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/
-		WSX-SUS-M12X18-5 Washer		12	 $-   		 $-   	 MISUMI 	https://in.misumi-ec.com/vona2/detail/221004999084?HissuCode=WSX-SUS-M12X18-5
-		Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 	
-		Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 	
-		PTFE Coated Teflon Tape		1	 $4.21 	 ₹ 400.00 	 $4.21 	 Amazon 	https://www.amazon.in/Keiko-adhesive-Release-sealing-purpose/dp/B0DCGGGGGJ?th=1
-	Motors	Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)		2	 $42.88 	 ₹ 4,079.00 	 $85.77 	 Robu 	https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/
-		Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)		1	 $56.76 	 ₹ 5,399.00 	 $56.76 	 Robu 	https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/
-	Fasteners	M3 X 12mm High Tensile(12.9) Black oxide Grub Screw (Dia. 3mm, Length 12mm)		30	 ₹ 0.02 	 ₹ 2.00 	 $0.63 	 OnlyScrews 	https://onlyscrews.in/products/m3-x-12mm-high-tensile12-9-black-oxide-grub-screw-dia-3mm-length-12mm
-		M3 X 12mm Hex (Allen) CSK SS 304 Screw (Dia. 3mm, Length 12mm)		25	 $0.02 	 ₹ 1.80 	 $0.47 	 OnlyScrews 	https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20?_pos=1&_sid=1040a6d00&_ss=r
-		Socket Head High Tensile(12.9) Black oxide screw (Dia. 5mm, Length 10mm)		15	 $0.03 	 ₹ 2.40 	 $0.38 	 OnlyScrews 	https://onlyscrews.in/products/m5-x-10mm-hex-allen-socket-head-high-tensile12-9-black-anodized-screw
-		M3 X 5mm 3D Printing Brass Threaded Slant Knurled Inserts (Dia. 3mm, Length 5mm)		40	 $0.05 	 ₹ 4.60 	 $1.93 	 OnlyScrews 	https://onlyscrews.in/products/m3-x-5mm-3d-printing-brass-threaded-inserts-dia-3mm-length-5mm
-					 $-   		 $-   		
-					 $-   		 $-   		
-					 $-   		 $-   		
-	Total						 $396.08 		
-TriTeron Robot Module (TRM)		MSB8-30 Screw		15	 $0.84 		 $12.60 		https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30
-		EMLC-S1-N-M6 Nut		100	 $0.02 		 $1.65 		https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6
-		SS304 M8 Washer		100	 $0.02 		 $1.90 		https://onlyscrews.in/products/m8-washer-ss304?currency=INR&country=IN&variant=49592314691897&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=Inderans_Campaign&utm_content=Other_than_fasteners_wala_copy&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SS13C7O8clb3n7juN0NJicBD&gclid=Cj0KCQjwrZTRBhDSARIsAHidYff_2voIe-8RPEu9AA21EZff0GSSyk4MWjjptkDVLWuZe4Rjuu5uqCkaAtCuEALw_wcB
-		608ZZ Bearing		25	 $0.65 		 $16.25 		https://robu.in/product/608rs-rubber-sealed-ball-bearing-miniature-bearing-8-x-22-x-7-mm-2pcs/?gad_source=1&gad_campaignid=20387462343&gbraid=0AAAAADvLFWcUP3CknhSW9eUY6CQlfupzk&gclid=Cj0KCQjwrZTRBhDSARIsAHidYfd0S1D73ieG7aGP_yzNHDVsqFkIBv0Nb17ZW9C3qtAqVlHfgalc-asaAqjfEALw_wcB
-									
-									
-	Total						 $32.40 		
-Electronics		Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)		3	 $37.31 	 ₹ 3,549.00 	 $111.93 	 Robu 	https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/
-		Teensy 4.1 Development Board		1	 $37.31 	 ₹ 3,549.00 	 $37.31 	 Robu 	https://robu.in/product/buy-teensy-4-1-development-board/?gad_source=1&gad_campaignid=17413441824&gbraid=0AAAAADvLFWfXLdA6AANHs5Ve4AQK9bfZ8&gclid=Cj0KCQjw2OnUBhC2ARIsACKyfaFzWoNclj3oNfiAD4EIvs_Ez1LKw9-ygCR7iBL90tSr9sch6fNVC1IaAk0PEALw_wcB
-		"Mean Well 	LRS-600-48v"		1	 $39.97 	 ₹ 3,802.00 	 $39.97 		https://www.tradeindia.com/products/lrs-600-48v-meanwell-power-supply-c10893421.html
-					 $-   		 $-   		
-					 $-   		 $-   		
-					 $-   		 $-   		
-					 $-   		 $-   		
-					 $-   		 $-   		
-					 $-   		 $-   		
-	Total						 $189.21 		
-Shipping, Taxes, and Customs					 misumi 		 $114.11 		
-					 tax 		 $20.54 		
-					 total 		 $134.65 		
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-							 $20.54 		
-Miscellaneous									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-									
-		Total			 $-   				
-Grand Total					 $-   		 $638.23 		
 <img width="3018" height="1458" alt="image" src="https://github.com/user-attachments/assets/b0e52a02-31fa-4f99-9fc7-f26f2f7451c9" />
 
 Here're the lapses of today's session: [PATRA-LPS-49-D69-1](https://lapse.hackclub.com/timelapse/XvbWNlTVEHHK) and [PATRA-LPS-49-69-2](https://lapse.hackclub.com/timelapse/zQSr7ZLNBH7M)
@@ -2577,25 +2484,37 @@ Here're the lapses of today's session: [PATRA-LPS-49-D69-1](https://lapse.hackcl
 
 ---
 
-# Day 70 — 05.09.2026: [incomplete]
+# Day 70 — 05.09.2026: Cutting Down Cost, Drawing Z Axis Leg Lower A & Journaling
 
 Let's pick up where I left off: Further cutting down the cost of the Kinematic Base Module (KBM), and especially the goods being imported from Jialichuang.
 
 The first thing that came to my mind was unnecessary SLA Resin prints. I decided to print every part in PLA, PLA+, PA6/PA-CF, or PETG which are not being printed in MJF PA12S-HP Nylon. MJF PA12S-HP Nylon possesses multidimensional (isotropic) strength. Unlike traditional 3D printing technologies (like FDM) where parts are significantly weaker along the vertical Z-axis (linear or directional strength). Only the small crucial parts like the belt clamps, motor shaft adapters, etcetera, need isotropic strength and thus will be printed in MJF PA12S-HP Nylon. But a point to be noted is that I will still choose SLA resin printing for the Belt Clamp tops, as they are complex to print and need supports, which can cause a not-so-much smooth surface, which is somewhat crucial. Additionally, they are not that expensive.
 
-I noticed that there were 4 Belt shields, each 0.5 meter in length, for two 1 meter long Belt Sheild Groups. I further divided them to length 250 mm, so that they are printable in my Elegoo Centauri Carbon using PLA/PETG. I will then apply PTFE Coated Teflon Tape on the surface to prevent belt wear as the clearance is less than 1 mm.
+I noticed that there were 4 Belt shields, each 0.5 meter in length, for two 1 meter long Belt Sheild Groups. I further divided them to length 250 mm using split tool
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/83fa5b1b-1ca0-48a9-9017-f441573a8a7f" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/460a0f78-bd26-420e-b05d-a38ccea5ef01" />
+
+I did that to make sure they are printable in my Elegoo Centauri Carbon using PLA/PETG. I will then apply PTFE Coated Teflon Tape on the surface to prevent belt wear as the clearance is less than 1 mm.
 
 I immediately checked the print cost and print time in Orca Slicer, which came to be $2.34 and 2h41m, respectively. I was just about to print them when I realised I had to toggle the settings for a strong and smooth print. I thought that I could do it later, after the 4040 extrusion arrives, so that I can check the clearances in a shorter stretch of say 100 mm, not 2000 mm, which would be the case if I printed them. 
 
 <img width="1365" height="730" alt="image" src="https://github.com/user-attachments/assets/e839fcf1-6dd1-4204-ae9f-4e3ff29e5f92" />
 
+This is the BOM so far:
+
+<img width="2959" height="1458" alt="image" src="https://github.com/user-attachments/assets/70275b56-e7da-4222-a422-f5aad281fd6f" />
+
 Then I suddenly remembered that I had to make a drawing. Here is some context:
 
-On 02.09.2026, I had a talk with my school director. I told him about my project and briefly explained to him what I was doing. I asked him if he had anyone in his contact who was in the CNC machining industry and could give me a quote on sample part. I told him that I needed CNC machining for my project, and all the options in India were extremely expensive. The options from China were also expensive with the added customs. He called someone who was in the CNC industry before me. The conclusion was the fact that I will have to provide them with a technical drawing of the part which was to be machined in aluminium.
+On **02.09.2026**, I had a talk with my school director. I told him about my project and briefly explained to him what I was doing. I asked him if he had anyone in his contact who was in the CNC machining industry and could give me a quote on sample part. I told him that I needed CNC machining for my project, and all the options in India were extremely expensive. The options from China were also expensive with the added customs. He called someone who was in the CNC industry before me. The conclusion was the fact that I will have to provide them with a technical drawing of the part which was to be machined in aluminium.
 
 The last time I made a drawing for a part was back in September 2025, which was for my [V1 solenoid engine](https://github.com/SunritHazra/VX-Solenoid-Engine/blob/V2-Solenoid-Engine/V2-Solenoid-Engine-Journal.md#292026---retrospective-journal-entry--v1-solenoid-engine). It was not that big of a deal because the parts were extremely simple to manufacture, and they did not require CNC machining. Instead, they just needed lathe machining.
 
 This time, the thing I had to create a drawing of was much more complex, and I was really excited about this. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d2559781-66c2-4b67-a705-e5e6450f2ba5" />
 
 I started simply by opening the design and creating a new drawing where I imported the leg, and then I started with the projected views from the base view of the leg. But then I noticed that the thing I imported for the drawing came oriented as in the design. At that time, I did not know how to orient it flat, so it seemed like the best option was to do something else to lay it flat on a design.  I continued by duplicating Z Axis Leg Lower A into a new design, and using the Arrangement Tool to place it flat on the XY plane.
 
@@ -2610,27 +2529,12 @@ Here's how I made the drawing:
 7. Deleted the new projected view to give more space for dimensions.
 8. Aggressively deleted the Title Block and Borders for literally no reason.
 9. Struggled to being back a new Title Block and ended up designing my own one. <img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/5b381b6b-3853-420c-950d-d1437d06e1e2" />
-10. Further edited the Title Block to remove unwanted details.
-11. Added another base view, same as the one I deleted before.
+10. Further edited the Title Block to remove unwanted details. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3a211d63-1eeb-4086-85c9-9fc652d449be" />
+11. Added another base view, same as the one I deleted before. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4532925-d0a4-4aae-9702-ff27350bd6c1" />
 
-
-<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/83fa5b1b-1ca0-48a9-9017-f441573a8a7f" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/460a0f78-bd26-420e-b05d-a38ccea5ef01" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2dea93fe-6baa-47ae-92e5-499b507210f8" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d2559781-66c2-4b67-a705-e5e6450f2ba5" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3a211d63-1eeb-4086-85c9-9fc652d449be" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4532925-d0a4-4aae-9702-ff27350bd6c1" />
+Now, finally the drawing is complete after a few more tweaks (at least that's what I thought back then).
 
 <img width="1024" height="663" alt="1788604893301-039b357a-4560-4843-9b33-af57f98d26be_1" src="https://github.com/user-attachments/assets/f605704d-a8bf-44e2-9374-3423e0b41b9d" />
-
-This is the BOM so far:
-
-<img width="2959" height="1458" alt="image" src="https://github.com/user-attachments/assets/70275b56-e7da-4222-a422-f5aad281fd6f" />
 
 But then I became bored and tired at the same time. Then, suddenly I remembered: nothing was journaled from day #42 to #69.
 
@@ -2703,12 +2607,26 @@ Day #71
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f7cd7595-6cb5-405d-a11e-e53e867ac71e" />
 
-Day #70 (partly)
+Day #70
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1c8458b1-1f47-4908-abae-6b712e2aaa55" />
 
 Here's the lapse of today's session: [PATRA-LPS-52-D72](https://lapse.hackclub.com/timelapse/FMU-NvBEFHSQ)
 
 **Total time spent: 3h 15m**
+
+---
+
+# Day 73 — 09.09.2026: Journaling
+
+Journaled day #70
+
+#70
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-52-D73]()
+
+**Total time spent: 1h 05m**
 
 ---
