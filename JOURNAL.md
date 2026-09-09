@@ -2552,11 +2552,11 @@ Here's the lapse of today's session: [PATRA-LPS-50-D70](https://lapse.hackclub.c
 
 # Day 71 — 06.09.2026: Re-Drawing the Z Axis Leg Lower A
 
-Today, I actually wanted to journal the old un-journaled logs as they were piling up like crazy. But, instead, I started with the remaining drawing work of the Z Axis Lower Leg A and got stuck in the loophole again.
+Today, I actually wanted to journal the old un-journaled logs as they were piling up like crazy. But, instead, I remembered that the drawing I had created on 05.09.2026 (yesterday), was absolutely unfabricateable, as I used Ordinate instead of Base Dimensions.
 
-First things first, I actually don't really know how to create a drawing for a complex part like that for CNC machining.
+To be honest, I actually don't really know how to create a drawing for a complex part like that for CNC machining. What I did yesterday was majority guess work and intuition.
 
-I started with a simple Google Search:
+I started with a simple Google Search using the drawing made yesterday:
 **"WHAT IS GEOMETRICAL MISSING THAT CAN CAUSE SOMEONE BEING UNABLE TO GIVE ME QUOTE?"**
 
 And well, the answer confirmed the fact that I really needed to start over from scratch. This meant that automated workflow was an ideal choice for me, even though I was initially unaware of what exact automated process exists, to what extent and how reliable it actually is.
@@ -2623,9 +2623,9 @@ Journaled day #70
 
 #70
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c1a216d2-77f3-460e-91ca-c95f4ae6d9eb" />
 
-
-Here's the lapse of today's session: [PATRA-LPS-52-D73]()
+Here's the lapse of today's session: [PATRA-LPS-53-D73](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR)
 
 **Total time spent: 1h 05m**
 
