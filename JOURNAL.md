@@ -2593,6 +2593,10 @@ With all that done, I saved all the designs, including the failed ones and named
 
 <img width="379" height="442" alt="image" src="https://github.com/user-attachments/assets/b971ceeb-23eb-48cf-b540-b7b57d994940" />
 
+This is how the drawing looks at last:
+
+<img width="3509" height="2480" alt="Z Axis Leg Lower A Drawing v3" src="https://github.com/user-attachments/assets/9aa9e2c4-848f-4c2f-9cad-fe3aaf0b22e2" />
+
 Here's the lapse of today's session: [PATRA-LPS-51-D71](https://lapse.hackclub.com/timelapse/lAy-izM683f_)
 
 **Total time spent: 3h 05m**
