@@ -5,7 +5,7 @@ Description: A Hybrid robot architecture of a kinematically linear 3 DOF paralle
 Created on: 02-05-2026
 Overall Progress: "63%"
 KBM Progress: "91%"
-TRM Progress: "61%"
+TRM Progress: "62%"
 RAM Progress: "0%"
 ---
 
