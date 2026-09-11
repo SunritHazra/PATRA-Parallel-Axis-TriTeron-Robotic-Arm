@@ -2707,6 +2707,44 @@ Day #69
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f03f71c6-19bc-4a9b-a3d1-5b84f4c839cc" />
 
+Just our of curiosity, I wanted to see the mountain of work I have left behind. These are the days containing an [incomplete] or missing journal body tag:
+
+* Day 29 (TriTeron Robot Module (TRM) Progress — Part 8)
+* Day 30 (TriTeron Robot Module (TRM) Progress — Part 9)
+* Day 31 (TriTeron Robot Module (TRM) Progress — Part 10)
+* Day 36 (TriTeron Robot Module (TRM) Progress — Part 15)
+* Day 37 (Research on the Robotic Arm)
+* Day 41 (Writing Past Missed Journals)
+* Day 42 (Fixing the Broken Dimensions)
+* Day 43 (Working on the KBM)
+* Day 44 (Working on the Z Axis Tensioning System)
+* Day 45 (IDK)
+* Day 46 (IDK)
+* Day 47 (IDK)
+* Day 48 (COOKING)
+* Day 49 (BAKING)
+* Day 50 (BOILING)
+* Day 51 (STEAMING)
+* Day 52 (SIZZLING)
+* Day 53 (FRYING)
+* Day 54 (idk)
+* Day 55 (idk)
+* Day 56 (idk)
+* Day 57 (idk)
+* Day 58 (idk)
+* Day 59 (idk)
+* Day 60 (idk)
+* Day 61 (idk)
+* Day 62 (idk)
+* Day 63 (idk)
+* Day 64 (idk)
+* Day 65 (idk)
+* Day 66 (idkk)
+* Day 67 (idkkk)
+* Day 68 (idkkk)
+
+I really really need to journal more.
+
 Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2]()
 
 **Total time spent: 0h 00m**
