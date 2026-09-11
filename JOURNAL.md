@@ -2442,45 +2442,84 @@ Here's the lapse of today's session: [PATRA-LPS-48-D68](https://lapse.hackclub.c
 
 ---
 
-# Day 69 — 04.09.2026: idkkkk [incomplete]
+# Day 69 — 04.09.2026: Cost Optimizing & Updating the BOM
 
 In order to further reduce the cost of goods being imported from Jialichuang, I have decided to replace all the unnecessary SLA resin prints with FDM prints with material ranging from PLA+, PETG to PA.
 
-This meant that I will now have to readjust several things in the model before I upload the same models on my Slicer and hit print.
+This decision was made primarily because each half of the 6 Pulley/Idler Cases, cost $6 each, without customs. This totaled to a whopping $72 ($6 * 2 * 6), just like that, even without the customs added. My first and foremost instinct was to use my own printer. This meant that I will now have to readjust several things in the model before I upload the same models on my Slicer and hit print.
 
-1. **M3 Screw Hole Clearences:** As they are being replaced by heat set inserts from the previous cold pressed ones, changes are needed. SLA prints need cold pressed inserts and thus need +0.2 mm clearance. Even though the inserts themselves are same, I will have to reduce the clearance from +0.2 mm to -0.2 mm. Therefore, I will have to decrease the diameter of the holes by 0.2 mm - (-0.2) mm = 0.4 mm. I am using [this](https://onlyscrews.in/products/m3-x-5mm-brass-threaded-inserts-dia-3mm-length-5mm) brass insert from Only Screws.
+1. **Bottom M3 Screw Hole Clearances:** As they are being replaced by heat set inserts from the previous cold pressed ones, changes are needed. SLA prints need cold pressed inserts and thus need +0.2 mm clearance. Even though the inserts themselves are same, I will have to reduce the clearance from +0.2 mm to -0.2 mm. Therefore, I will have to decrease the diameter of the holes by 0.2 mm - (-0.2) mm = 0.4 mm. I am using [this](https://onlyscrews.in/products/m3-x-5mm-brass-threaded-inserts-dia-3mm-length-5mm) brass insert from Only Screws.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c026903-2227-4ac1-8419-1b6eb2f6eb5d" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c026903-2227-4ac1-8419-1b6eb2f6eb5d" />
 
 2. **M5 Screw Holes Depth:** There were 4 M5 screw holes for each motor. As I can't print the threads reliably, I will have to use Brass threaded inserts for the holes. This part is a bit tricky as I can't used the Nominal diameter * 2.5 thread rule, as the deepest I can go is 11 mm (instead of 12.5 mm), due to geometric constraints. But there are no 11 mm brass inserts, so I had to choose to make the hole 10 mm deep instead of 11 mm.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eff1173d-03b3-4648-8ffd-c164c51a6427" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eff1173d-03b3-4648-8ffd-c164c51a6427" />
 
 3. **M5 Screw Holes Clearances:** As I need heat pressed inserts, I set the hole diameter to 6.2 mm. Previously, there was M5 threads modeled here. I am using [this](https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts) brass insert from Only Screws.
    
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d45c192-92d9-40dc-ade5-ba8f7d3a1a20" />
 
-This decision was made primarily because each half of the 6 Pulley/Idler Cases, cost $6 each, without customs. This totaled to a whopping $72 ($6*2*6), just like that, even without the customs added. My first and foremost instinct was to use my own printer, where I chose the material after doing a deep dive into the pros and cons of different 3D printing materials. I looked at PA-CF, PLA-CF, PETG, PETG-CF, and finally chose PA Nylon.
+4. **Side M3 Screw Hole Depth & Clearances:** These holes are for securing the two sides of the case. I first deleted all the holes then I created 
 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87211425-3e41-48ce-8704-028d6cf020f6" />
 
+5. **Side M3 Screw Hole Chamfer (Side):** I set the chamfer for the holes at 1.4 mm depth and width.
+	
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/327ac6a7-bba5-416a-a9ac-1fc9670142ad" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87211425-3e41-48ce-8704-028d6cf020f6" />
+My designs commonly incorporate countersunk screws, I have relied mostly on AI replies. I just realised that this little mistake can ruin all my prints that incorporate chamfers. Always, I am confused with the chamfers, so this time I thought of sketching the screw and screw hole cross section in Fusion. Then, later printing a sample screw hole, of the most sound design.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/327ac6a7-bba5-416a-a9ac-1fc9670142ad" />
+I made three holes side by side:
+
+* Two with the settings I have been using, and had used, respectively. One with the optimized design.
+* Two of the three designs failed. Only the optimized one passed.
+
+I revolved the trustable design to make a 3D body.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1c8cdce6-da1a-4728-97bb-3ae3c5cae3f8" />
 
+And it was time to put it to the test, by printing it.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8ccf40a1-aa2f-4e6d-bf39-80cb93666d56" />
+
+This is how the cross section looks like.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/023288c2-15b8-4cc9-aa49-08c31c06ab55" />
 
-https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20
+And well, this is how the print turned out. Flawless fit, but the screw sticks out less than a millimeter, which is not good. I need it to be completely flush against the surface. The design won't work if I stack flat surfaces on the screws. Unless I:
+
+1. Change the chamfer width and depth of the outer edge of the countersunk screw.
+2. Move the chamfered face down by, say, 0.5 mm, or a different number. This can make the total screw length more tricky.
+3. Add a little hole on the smooth surfaced parts that directly sit on the holes, where the screw head sticks out.
+4. Drop chamfered screws and use more predictable button head screws like [this](https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20), by modelling 90 degree hubs for screws.
+
+I am still not sure about this. I will have to do research on each one, and more importantly, try each one.
+
+Moving next from confusion, I choose the filament material after doing a deep dive into the pros and cons of different 3D printing materials.
+
+During the research, I sliced the pulley cases to have a rough cost estimate on printing with PETG.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e004ea60-b0db-4da9-a6b3-1b5386536966" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ee16ed2-3c75-40fd-ac11-cd370a1acd38" />
 
-Direct Comparison OverviewFeatureMJF PA12S-HP NylonFDM PA NylonMechanical PropertiesIsotropic (uniform strength across X, Y, Z axes).Anisotropic (weak Z-axis layer adhesion).Dimensional AccuracyHigh precision (±0.3%); holds tight tolerances easily.Poor; prone to shrinking and warping during printing.Surface FinishSmooth, uniform, and slightly granular; excellent for teeth.Layer lines present; requires post-processing for tight fits.
+This is what I can conclude.
+
+Direct Comparison Overview
+
+| Feature | MJF PA12 | HP NylonFDM PA Nylon  |
+| --- | --- | --- |
+| Mechanical Properties | Isotropic uniform strength across X Y Z axes | Anisotropic weak Z axis layer adhesion  |
+| Dimensional Accuracy | High precision 0.3 holds tight tolerances easily | Poor prone to shrinking and warping during printing  |
+| Surface Finish | Smooth uniform and slightly granular excellent for teeth | Layer lines present requires post processing for tight fits  |
+
+I looked at PA-CF, PLA-CF, PETG, PETG-CF, and finally chose PA Nylon. I then added the dev board and power supply to bring the BOM closer to reality. The electronic components I added are as follows:
+
+1. **[Teensy 4.1 Development Board](https://robu.in/product/buy-teensy-4-1-development-board/) from Robu:** It costs ₹ 3,549.00 ($37.56 that time).
+2. **[Mean Well LRS-600-48v](https://www.tradeindia.com/products/lrs-600-48v-meanwell-power-supply-c10893421.html) from Trade India:** It costs ₹ 3,802.00 ($40.24 that time).
+
+This is how the updated BOM looks:
 
 <img width="3018" height="1458" alt="image" src="https://github.com/user-attachments/assets/b0e52a02-31fa-4f99-9fc7-f26f2f7451c9" />
 
@@ -2572,28 +2611,41 @@ Here's what I did next:
 1. I searched up a tutorial and found [this](youtube.com/watch?v=NweBvuVYuQo) video. It showed how to create automated drawings.
 
 2. I followed the exact workflow several times and each time, I failed. Every time, I took the image, and uploaded it to Google AI Search for consultation.
-	- The first draft was this, where I did pretty much nothing, except confirming Baseline Dimensions: <img width="655" height="464" alt="image" src="https://github.com/user-attachments/assets/34680783-744e-4048-9038-de3fff56a9e2" />
-	- The next draft was even worse where I selected the wrong parent body orientation, scale, and dimension density: <img width="646" height="458" alt="image" src="https://github.com/user-attachments/assets/539d63b1-bacc-4628-b336-5bc778b98b41" />
-	- Again another failure, which I made as I did not understand what I was actually doing: <img width="648" height="458" alt="image" src="https://github.com/user-attachments/assets/27f06258-eb9b-4801-863b-47d18d239368" />
+	- The first draft was this, where I did pretty much nothing, except confirming Baseline Dimensions:
+ 		<img width="655" height="464" alt="image" src="https://github.com/user-attachments/assets/34680783-744e-4048-9038-de3fff56a9e2" />
+	- The next draft was even worse where I selected the wrong parent body orientation, scale, and dimension density:
+ 		<img width="646" height="458" alt="image" src="https://github.com/user-attachments/assets/539d63b1-bacc-4628-b336-5bc778b98b41" />
+	- Again another failure, which I made as I did not understand what I was actually doing:
+ 		<img width="648" height="458" alt="image" src="https://github.com/user-attachments/assets/27f06258-eb9b-4801-863b-47d18d239368" />
 	
-3. Then finally, I finally understood what to do. But the first thing which I did was not the projection, but actually editing the Title Block. Editing the title block is extremely crucial because it determines at what orientation, distance, and shape you could place your projected views. It also lets you remove unnecessary information, keeping only what's needed, and also add something that you need. <img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/60b90a8e-6c08-4327-b8b9-edfb5e4177ae" />
+3. Then finally, I finally understood what to do. But the first thing which I did was not the projection, but actually editing the Title Block. Editing the title block is extremely crucial because it determines at what orientation, distance, and shape you could place your projected views. It also lets you remove unnecessary information, keeping only what's needed, and also add something that you need. 
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/60b90a8e-6c08-4327-b8b9-edfb5e4177ae" />
 
-4. A drawing can have several sheets. The first sheet, which I made, was again a failure, but the second time, when I started fresh without directly relying on Auto Dimensions from the very beginning, I actually started making sense in my drawing. Repeatedly, the auto dimensions were taking random side of the model, which I did not want. This time, when I manually did that, I took the top orientation of the Z Axis Leg Lower A, then I made all the possible projections. <img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/de16187b-0272-4b9f-b03e-fc805f18efb2" />
+4. A drawing can have several sheets. The first sheet, which I made, was again a failure, but the second time, when I started fresh without directly relying on Auto Dimensions from the very beginning, I actually started making sense in my drawing. Repeatedly, the auto dimensions were taking random side of the model, which I did not want. This time, when I manually did that, I took the top orientation of the Z Axis Leg Lower A, then I made all the possible projections.
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/de16187b-0272-4b9f-b03e-fc805f18efb2" />
 
-5. Next I edited the Borders to make them spaced equidistant from the edges of the page. <img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/45d09801-1868-4790-9d5d-95fae5ac0478" />
+5. Next I edited the Borders to make them spaced equidistant from the edges of the page.  
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/45d09801-1868-4790-9d5d-95fae5ac0478" />
 
-6. But then the dimensions looked way too much and there was severe over-dimensioning. But the worst: there were way too many projected views. So I deleted some to clear up the drawing <img width="1365" height="736" alt="image" src="https://github.com/user-attachments/assets/c46b0a2b-c395-4698-9b13-e091fb4e05c4" />
+6. But then the dimensions looked way too much and there was severe over-dimensioning. But the worst: there were way too many projected views. So I deleted some to clear up the drawing.  
+	<img width="1365" height="736" alt="image" src="https://github.com/user-attachments/assets/c46b0a2b-c395-4698-9b13-e091fb4e05c4" />
 
-7. I set the dimension density at 20 of 35 datum location as default, as Top Left. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03c3bf5d-cc33-444c-8e70-9d92d668f88e" />
+7. I set the dimension density at 20 of 35 datum location as default, as Top Left.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03c3bf5d-cc33-444c-8e70-9d92d668f88e" />
 
 8. I pasted the image in Google and asked what data was missing. It pointed out some, which I gradually fixed and added one by one manually. To do things manually, I used my imagination to think of me as the tip of a 3 axis CNC machine: carefully thinking about what data I need one my one to first form the outer shape, the holes, the pockets and the receding part of the distal joint. Like this, I added several radii and distances crucial for CNC fabrication. I then continued to manually add dimensions one by one and checking them with Google AI Mode.
-	- This is the first iteration: <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/982954f4-b0d4-406e-a24a-041b68595337" />
-	- This is the second iteration: <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/38e6b2ce-d564-4af8-8c35-d15f341d8b34" />
-	- This is the third iteration: <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/01a3cd00-0c63-4d72-a779-3495da876a85" />
+	- This is the first iteration:
+		<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/982954f4-b0d4-406e-a24a-041b68595337" />
+	- This is the second iteration:
+		<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/38e6b2ce-d564-4af8-8c35-d15f341d8b34" />
+	- This is the third iteration:
+		<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/01a3cd00-0c63-4d72-a779-3495da876a85" />
 	
-9. By this time, there were way too many dimensions especially for the base view. Thus it seemed sensible to add the bottom view of the Z Axis Leg Lower A. But to do it, I couldn't use projected view. So, I created another base view and rotated it so that the drawing stays clean. I then added the necessary dimensions and again consulted Google for assistance. <img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/f5d8898f-4401-41b7-93af-fd6d53b92c1e" />
+9. By this time, there were way too many dimensions especially for the base view. Thus it seemed sensible to add the bottom view of the Z Axis Leg Lower A. But to do it, I couldn't use projected view. So, I created another base view and rotated it so that the drawing stays clean. I then added the necessary dimensions and again consulted Google for assistance.
+	<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/f5d8898f-4401-41b7-93af-fd6d53b92c1e" />
 
-10. Then finally, with some more review, I had the drawing ready. It seemed fine to me and most probably no missing dimensions. I also edited the Title Block and added some more details like the project title and fixed minor issues. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
+10. Then finally, with some more review, I had the drawing ready. It seemed fine to me and most probably no missing dimensions. I also edited the Title Block and added some more details like the project title and fixed minor issues.
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
 
 With all that done, I saved all the designs, including the failed ones and named them as in the following sequence:
 
@@ -2641,11 +2693,21 @@ Here's the lapse of today's session: [PATRA-LPS-53-D73](https://lapse.hackclub.c
 
 ---
 
-# Day 74 — 11.09.2026: 
+# Day 74 — 11.09.2026: Researching on Print Filament & Journaling
 
+Today as I was journaling day #69, I came across the decision I made back then: using PA-CF for printing the pulley and idler cases. I still get it that it was a wonderful filament and it by itself prevents belt wear pretty good. But, the cost was too much to bear. Looking at some more options like PLA-CF, ABS-GF, ABS-HF, PLA-HF and PETG-CF, I chose to use PETG-CF. I don't need high temperature resistance more than rigidity and strength.
 
+PETG-CF itself was quite cheap, but thanks to crazy customs maybe, the cost is ridiculous in most sites. I found a reasonable price in [3D Master India](https://3dmasterindia.in/product/elegoo-carbon-fiber-petg-filament-black-1kg/?srsltid=AfmBOopAwQI3m084wMjB5dR5WAvgTmA4XG1KtMEJiToUiWxFLAs1Qwe-HJk).
 
-Here's the lapse of today's session: [PATRA-LPS-54-D74]()
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/40db9700-8ea2-4826-8aec-921d29e70e6a" /> 
+
+Journaled day #69 (full)
+
+Day #69
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f03f71c6-19bc-4a9b-a3d1-5b84f4c839cc" />
+
+Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2]()
 
 **Total time spent: 0h 00m**
 
