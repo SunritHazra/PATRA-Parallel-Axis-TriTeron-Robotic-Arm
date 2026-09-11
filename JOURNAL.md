@@ -2444,19 +2444,25 @@ Here's the lapse of today's session: [PATRA-LPS-48-D68](https://lapse.hackclub.c
 
 # Day 69 — 04.09.2026: idkkkk [incomplete]
 
-In order to further reduce the cost of goods being imported from Jialichuang, I have decided to replace all the SLA resin prints with FDM prints ranging from PLA+, PETG to PA.
+In order to further reduce the cost of goods being imported from Jialichuang, I have decided to replace all the unnecessary SLA resin prints with FDM prints with material ranging from PLA+, PETG to PA.
 
-This meant that I will now have to readjust the clearances as they are being replaced by heat set inserts from cold pressed ones. Even though the inserts themselves are same, I will have to reduce the clearance from +0.2 mm to -0.2 mm. Therefore, 0.2 mm - (-0.2) mm = 0.4 mm. 
+This meant that I will now have to readjust several things in the model before I upload the same models on my Slicer and hit print.
+
+1. **M3 Screw Hole Clearences:** As they are being replaced by heat set inserts from the previous cold pressed ones, changes are needed. SLA prints need cold pressed inserts and thus need +0.2 mm clearance. Even though the inserts themselves are same, I will have to reduce the clearance from +0.2 mm to -0.2 mm. Therefore, I will have to decrease the diameter of the holes by 0.2 mm - (-0.2) mm = 0.4 mm. I am using [this](https://onlyscrews.in/products/m3-x-5mm-brass-threaded-inserts-dia-3mm-length-5mm) brass insert from Only Screws.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c026903-2227-4ac1-8419-1b6eb2f6eb5d" />
 
+2. **M5 Screw Holes Depth:** There were 4 M5 screw holes for each motor. As I can't print the threads reliably, I will have to use Brass threaded inserts for the holes. This part is a bit tricky as I can't used the Nominal diameter * 2.5 thread rule, as the deepest I can go is 11 mm (instead of 12.5 mm), due to geometric constraints. But there are no 11 mm brass inserts, so I had to choose to make the hole 10 mm deep instead of 11 mm.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eff1173d-03b3-4648-8ffd-c164c51a6427" />
 
-https://onlyscrews.in/products/m3-x-5mm-brass-threaded-inserts-dia-3mm-length-5mm
-
-https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
-
+3. **M5 Screw Holes Clearances:** As I need heat pressed inserts, I set the hole diameter to 6.2 mm. Previously, there was M5 threads modeled here. I am using [this](https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts) brass insert from Only Screws.
+   
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d45c192-92d9-40dc-ade5-ba8f7d3a1a20" />
+
+This decision was made primarily because each half of the 6 Pulley/Idler Cases, cost $6 each, without customs. This totaled to a whopping $72 ($6*2*6), just like that, even without the customs added. My first and foremost instinct was to use my own printer, where I chose the material after doing a deep dive into the pros and cons of different 3D printing materials. I looked at PA-CF, PLA-CF, PETG, PETG-CF, and finally chose PA Nylon.
+
+
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87211425-3e41-48ce-8704-028d6cf020f6" />
 
