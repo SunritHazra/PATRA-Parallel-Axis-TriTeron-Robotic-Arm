@@ -624,7 +624,7 @@ Thus I redrew the sketch and brought it lower, and things improved a bit.
 
 It still operlaps. I guess this is all for today, next day I will continue this.
 
-**Total time spent: 3h 30m**
+**Total time spent: 4h 30m**
 
 ---
 
@@ -803,7 +803,7 @@ Followed by that, I mirrored my components to see how the system looks, though I
 
 Then I made some more changes to the name and hiecarchial structure of the components before signing off.
 
-**Total time spent: 3h 05m**
+**Total time spent: 3h 25m**
 
 ---
 
@@ -1563,7 +1563,7 @@ But, anyways, here's how the tripteron looks like now:
 
 Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
 
-**Total time spent: 3h 20m**
+**Total time spent: 4h 20m**
 
 ---
 
@@ -2747,6 +2747,6 @@ I really really need to journal more.
 
 Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2]()
 
-**Total time spent: 0h 00m**
+**Total time spent: 3h 40m**
 
 ---
