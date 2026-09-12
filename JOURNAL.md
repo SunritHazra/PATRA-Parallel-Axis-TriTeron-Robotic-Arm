@@ -1146,7 +1146,7 @@ Then it was the time to work on the X and Y axis mounts, which was quite tricky 
 
 With that done, I started writing past incomplete journals of older days, and added summary for journals of days #1 to #10, simply because I was tired.
 
-Here's the lapse of today's session: [Well, well, it failed]
+Here's the lapse of today's session: [PATRA-LPS-4-D24]()
 
 **Total time spent: 1h 30m**
 
@@ -1182,7 +1182,7 @@ The sketch was for creating a body that intercets with the extended mid-point of
 
 I had some problems with positioning the sketch correctly. At times it was 1.5 mm off and the sketch between the lower leg and the linear block didn't line up. But while fixing that my time was over.
 
-Here are the lapses of today's session: [PATRA-LPS-4-D25-1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285) and [PATRA-LPS-4-D25-2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
+Here are the lapses of today's session: [PATRA-LPS-5-D25-1](https://lapse.hackclub.com/timelapse/XQaZ_Rl9L285) and [PATRA-LPS-5-D25-2](https://lapse.hackclub.com/timelapse/zi7MiJX0X9Cf)
 
 **Total time spent: 3h 20m**
 
@@ -1229,7 +1229,7 @@ The first two didn't take much time, but the third one took a lot of time to ach
 
 But yeah, I was indeed able to achieve normal movement in the triteron.
 
-[lapse](https://lapse.hackclub.com/timelapse/oC5sY39XrQ18)
+[PATRA-LPS-6-D26](https://lapse.hackclub.com/timelapse/oC5sY39XrQ18)
 
 **Total time spent: 1h 45m**
 
@@ -1302,7 +1302,7 @@ Now, let me explain my Tool Head design:
 
 With that done, I was testing the movement of the tripteron, or more appropriately, playing with my digitally made triteron and also checking if angles are okay, movements make sense, and if it is flexible enough to bend in different angles.
 
-Here's the lapse of today's session: [PATRA-LPS-6-D27](https://lapse.hackclub.com/timelapse/srgx05NYIPdJ)
+Here's the lapse of today's session: [PATRA-LPS-7-D27](https://lapse.hackclub.com/timelapse/srgx05NYIPdJ)
 
 **Total time spent: 1h 00m**
 
@@ -1310,59 +1310,58 @@ Here's the lapse of today's session: [PATRA-LPS-6-D27](https://lapse.hackclub.co
 
 # Day 28 — 31.05.2026: TriTeron Robot Module (TRM) Progress — Part 7
 
-In today's short session, I added one more design elements to the Tool Head.
+In today's short session, I added some design elements and started modelling a fork and clevis joint as in [Rudmin's design](https://www.youtube.com/shorts/74T0LF2l5Ck).
 
-Firstly, I made fillets in 4 sharp edges under the Tool Head.
+For the design elements, here's what I did:
 
-So, it went from this:
+1. I made fillets in 4 sharp edges under the Tool Head. So, it went from this:
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1bcce337-590e-4964-99fc-9839c2e9fd54" />
+	To this:
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cd5f307a-f0af-4e93-9159-7e22c1a98aa2" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1bcce337-590e-4964-99fc-9839c2e9fd54" />
+2. I added a pocket on each side of the Tool Head in order to reduce material usage and mass. This design element, which was inspired from the Tool Head of [Rowan's Tripteron](https://www.youtube.com/watch?v=io4S9amExNM&t=1s), also made the design look better than before. I also added fillets in the internal edges of the pocket to improve the design. So, it went from this:
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0baf591d-b81f-4fa3-bc55-b2e9f4af3637" />
+	To this:
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/af27709b-435a-452f-80b7-07bc542075e5" />
 
-To this:
+But then, it made me wonder if Rudmin's design of for and clevis joint for legs will be better for the system. Unlike Rudmin, Rowan has used distal joints for the system. For the Z axis legs, I noticed that I can't rotate them much, as the legs easily overlap if the angle goes over 30 degrees. Thus, it seemed like I seemed like I needed to use clevis joint.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cd5f307a-f0af-4e93-9159-7e22c1a98aa2" />
+For the fork and clevis joint, here's what I did:
 
-Secondly, I made extrusions on both left and right of the Tool Head by extruding in a sketch on the sides of the Tool Head, and adding fillets. This made sure it uses less filament, and of course, looks better.
+1. I started modelling a from this mirrord geometry of the pre-existing leg.
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb47c686-c2e4-443b-8419-14740291def6" />
 
-So, it went from this:
+2. I turned it into this:
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7bda38c3-2899-46e4-8a9a-075073129543" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0baf591d-b81f-4fa3-bc55-b2e9f4af3637" />
-
-To this:
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/af27709b-435a-452f-80b7-07bc542075e5" />
-
-But then, I wondered that Rudmin's design of clevis joint for legs will be better for the system. For the two front legs, I noticed that the angle of rotation is not much high, and the legs easily overlap if the angle goes over 30 degrees. Thus, it seemed like I seemed like I needed to use clevis joint.
-
-So, I started modelling a fork of the clevis joint for leg. Starting from this mirrord architecture of the pre-existing leg.
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb47c686-c2e4-443b-8419-14740291def6" />
-
-I turned it into this:
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7bda38c3-2899-46e4-8a9a-075073129543" />
-
-But it is not yet completed. I will complete this the next day.
+It is not yet completed. I will complete this the next day.
 
 At last, this is how the triteron looks:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/336a41aa-2f9b-46e7-8f2a-d78c0f5852be" />
 
-Here's the lapse of today's session: [PATRA-LPS-7-D28](https://lapse.hackclub.com/timelapse/AqGtmyhMh9QV)
+Here's the lapse of today's session: [PATRA-LPS-8-D28](https://lapse.hackclub.com/timelapse/AqGtmyhMh9QV)
 
-**Total time spent: 0h 20m**
+**Total time spent: 0h 45m**
 
 ---
 
 # Day 29 — 01.06.2026: TriTeron Robot Module (TRM) Progress — Part 8
 
-Today I continued modelling the fork of the clevis joint from the day before, and also modeled the tang of the clevis joint for the leg. But I also dropped the whole idea for using the clevis joint for the front legs.
+Today I continued modelling the fork of the clevis joint from the day before.
+
+The joint has two parts:
+
+1. Yoke: This is the U-shaped or forked body with two parallel prongs and aligned holes, which I started modelling yesterday.
+2. Tang: The flat or looped mating piece that fits inside the U-shaped prongs and is secured by the pin, which I will model today.
+
+First I continued to model the the yoke that I had started modelling yesterday.
 
 Using split body, extrusions and facial offsets, I was able to achieve a mechanically sane fork.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/203c00ec-21d5-45c0-9e44-541810209755" />
 
-Then it was time to model the tang.
+Then it was time to model the tang. //and also modeled the tang of the clevis joint for the leg. But I also dropped the whole idea for using the clevis joint for the front legs.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7143e603-d600-4d8d-9c20-0eed25de1eb4" />
 
@@ -1372,15 +1371,15 @@ Then I got the perfect idea.
 
 [...to be continued]
 
-[lapse](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
+[PATRA-LPS-9-D29](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
 
-**Total time spent: 1h 50m**
+**Total time spent: 2h 10m**
 
 ---
 
 # Day 30 — 02.06.2026: TriTeron Robot Module (TRM) Progress — Part 9
 
-[lapse](https://lapse.hackclub.com/timelapse/_aOokRs_SLGK)
+[PATRA-LPS-10-D30](https://lapse.hackclub.com/timelapse/_aOokRs_SLGK)
 
 **Total time spent: 1h 02m**
 
@@ -1388,7 +1387,7 @@ Then I got the perfect idea.
 
 # Day 31 — 03.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
 
-[lapse](https://lapse.hackclub.com/timelapse/cPrT8Rbqh_sX)
+[PATRA-LPS-11-D31](https://lapse.hackclub.com/timelapse/cPrT8Rbqh_sX)
 
 **Total time spent: 4h 20m**
 
@@ -1455,7 +1454,7 @@ I added rigid joint for the first washer (after struggling to delete the pre-exi
 
 Yes, it was a perfect fit, and the fastening system was completed. But before I could proceed, time was over for today's session.
 
-Here's the lapse of today's session: [PATRA-LPS-11-D32](https://lapse.hackclub.com/timelapse/0scjCOx6vKE7)
+Here's the lapse of today's session: [PATRA-LPS-12-D32](https://lapse.hackclub.com/timelapse/0scjCOx6vKE7)
 
 **Total time spent: 3h 30m**
 
@@ -1487,7 +1486,7 @@ Since I had worked quite a lot on my design, there was a high chance that I was 
 
 I can now copy this new logic to the other mounted joints (including the tool head) and complete the triteron just except for the double joints.
 
-Here's the lapse of today's session: [PATRA-LPS-12-D33](https://lapse.hackclub.com/timelapse/1AzmvcisTlWN)
+Here's the lapse of today's session: [PATRA-LPS-13-D33](https://lapse.hackclub.com/timelapse/1AzmvcisTlWN)
 
 **Total time spent: 1h 50m**
 
@@ -1561,7 +1560,7 @@ But, anyways, here's how the tripteron looks like now:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c1db48ba-c4e4-4622-8c12-8fb6650436ea" />
 
-Here's the lapse of today's session: [PATRA-LPS-13-D34](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
+Here's the lapse of today's session: [PATRA-LPS-14-D34](https://lapse.hackclub.com/timelapse/nWiG3ZvdcpSs)
 
 **Total time spent: 4h 20m**
 
@@ -1592,7 +1591,7 @@ Here's what I ended up with:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/162c38a3-4bda-4a03-9bec-28a4b0007b97" />
 
-Here's the lapse of today's session: [PATRA-LPS-14-D35](https://lapse.hackclub.com/timelapse/kdLlRkzxfTa4)
+Here's the lapse of today's session: [PATRA-LPS-15-D35](https://lapse.hackclub.com/timelapse/kdLlRkzxfTa4)
 
 **Total time spent: 3h 25m**
 
@@ -1602,7 +1601,7 @@ Here's the lapse of today's session: [PATRA-LPS-14-D35](https://lapse.hackclub.c
 
 I started by fixing some structural and mechanical errors that I noticed with the depth of NUTCRACKER.
 
-Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.com/timelapse/1kYZRIteUWKL)
+Here's the lapse of today's session: [PATRA-LPS-16-D36](https://lapse.hackclub.com/timelapse/1kYZRIteUWKL)
 
 **Total time spent: 0h 45m**
 
@@ -1612,7 +1611,7 @@ Here's the lapse of today's session: [PATRA-LPS-15-D36](https://lapse.hackclub.c
 
 [incomplete]
 
-Here are the lapses of today's session: [PATRA-LPS-16-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-16-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
+Here are the lapses of today's session: [PATRA-LPS-17-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-17-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
 
 **Total time spent: 3h 00m**
 
@@ -1630,7 +1629,7 @@ Day #22
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/893e5a43-5e4a-4e2a-a2cb-27a4de5a7599" />
 
-Here's the lapse of today's session: [PATRA-LPS-17-D38](https://lapse.hackclub.com/timelapse/6Sx4q91ksQql)
+Here's the lapse of today's session: [PATRA-LPS-18-D38](https://lapse.hackclub.com/timelapse/6Sx4q91ksQql)
 
 **Total time spent: 3h 00m**
 
@@ -1660,7 +1659,7 @@ Day #26 (partly)
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c04849e2-8456-40a7-afae-205e38184f2c" />
 
-Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackclub.com/timelapse/UA4UIbZiE68q), [PATRA-LPS-19-D39-2](https://lapse.hackclub.com/timelapse/aaIH03558pYh) and [PATRA-LPS-19-D39-3]()
+Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackclub.com/timelapse/UA4UIbZiE68q), [PATRA-LPS-19-D39-2](https://lapse.hackclub.com/timelapse/aaIH03558pYh) and [PATRA-LPS-19-D39-3](https://lapse.hackclub.com/timelapse/iAgCZrQ8vZWJ)
 
 **Total time spent: 3h 45m**
 
@@ -2743,10 +2742,24 @@ Just our of curiosity, I wanted to see the mountain of work I have left behind. 
 * Day 67 (idkkk)
 * Day 68 (idkkk)
 
-I really really need to journal more.
+I really really need to journal more. I have decided to journal every single day before I procced with the design. This is because, the older they get, the more I forget. Despite having all of them lapsed, I couldn't ask myself about my own design and how it happened in the future. Also, journaling is extremely necessary for the Forge program.
 
 Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2]()
 
 **Total time spent: 3h 40m**
+
+---
+
+# Day 74 — 11.09.2026: Researching on Print Filament & Journaling
+
+In order to live up to me yesterday's commitment, I journaled the last and first unjournaled days (as of 12.09.2026), which are days #29 and #68.
+
+While journaling 29, i saw poor journaling in 28 so i fixed it.
+
+oh i also synced my lapses with hacktime (important but really tedious)
+
+Here's the lapse of today's session: [PATRA-LPS-55-D75](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR)
+
+**Total time spent: 0h 00m**
 
 ---
