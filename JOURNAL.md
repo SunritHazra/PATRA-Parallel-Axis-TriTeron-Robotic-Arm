@@ -1355,21 +1355,23 @@ The joint has two parts:
 1. Yoke: This is the U-shaped or forked body with two parallel prongs and aligned holes, which I started modelling yesterday.
 2. Tang: The flat or looped mating piece that fits inside the U-shaped prongs and is secured by the pin, which I will model today.
 
-First I continued to model the the yoke that I had started modelling yesterday.
-
-Using split body, extrusions and facial offsets, I was able to achieve a mechanically sane fork.
+First I continued to model the the yoke that I had started modelling yesterday. Using split body, extrusions and facial offsets, I was able to achieve a mechanically sane fork.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/203c00ec-21d5-45c0-9e44-541810209755" />
 
-Then it was time to model the tang. //and also modeled the tang of the clevis joint for the leg. But I also dropped the whole idea for using the clevis joint for the front legs.
+Then it was time to model the tang. To model the tang I used the original design of the leg, that was for the distal joint.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7143e603-d600-4d8d-9c20-0eed25de1eb4" />
 
-But when I imported them into the workspace and tested the movements, it performed even worse. There were overlapping sections at even lower angles.
+But when I imported them into the workspace and tested the movements, it performed even worse than the previous distal joint, and there were overlapping sections at even lower angles.
 
-Then I got the perfect idea.
+Then I got the perfect idea: I used combine cut to cut out a section on the upper leg, so that they don't overlap at even 40 degrees.
 
-[...to be continued]
+Here's how I did it:
+
+1. I first drove the joints below the Tool Head, to a degree where the upper and lower legs overlap.
+2. Used Combine cut to delete the overlapping part from the upper leg, keeping the lower leg the same.
+3. Added 1 mm offset on the newly cut area, for clearence.
 
 [PATRA-LPS-9-D29](https://lapse.hackclub.com/timelapse/ltNZ51iqS6UI)
 
@@ -1379,9 +1381,38 @@ Then I got the perfect idea.
 
 # Day 30 — 02.06.2026: TriTeron Robot Module (TRM) Progress — Part 9
 
+Due to some problems with the design, I had to delete the features of the timeline, where I added the cuts on the upper Z axis legs. So, this time, I did it again, but better.
+
+Here's how I did it.
+
+1. I first drove the joints below the Tool Head, to a degree where the upper and lower legs overlap.
+2. Used Combine cut to delete the overlapping part from the upper leg, keeping the lower leg the same.
+3. Added 1 mm offset on the newly cut area, for clearence.
+4. Added fillets on the internal and external sharp edges of the cut area.
+
+This is how it looks now:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bb85a885-b030-41e7-9b40-208cd0cac308" />
+
+I also had to how they compare to Rowan's design. For that, I copied the legs designed by me and imported in Rowan's design. Visually, there was indeed some difference from close, but the mechanism that I was most worried about, was fine.
+
+The next subject of concern was the leg joints. Honestly, I still couldn't understand what joints Rowan was using. I watched parts of his video several times to figure out what he was using. Upon a google search, I came to know that he was using thrust washer bearings for the joints, instead of normal bearings. I thought of using regular bearings instead of washer bearings, as sourcing reliable washer bearings seemed hard at the moment. Linear bearings could also work, but linear bearings were expensive. This is how a thrust washer bearing looks:
+
+<img width="1024" height="643" alt="image" src="https://github.com/user-attachments/assets/a24ff867-e1ae-4a41-88f1-b25cbae4e7cc" />
+
+But before I could proceed with any changes in the assembly, I noticed that the X and Y proximal joints are off center, so I had to fix them.
+
+For example, this distal joint on the Y axis leg was having an off-centered joint.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5e4d3b10-60aa-4763-970e-23db08884aaa" />
+
+After fixing it, this is how it looked.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9c0b875f-8b95-4ca6-9786-7ba12d44ba97" />
+
 [PATRA-LPS-10-D30](https://lapse.hackclub.com/timelapse/_aOokRs_SLGK)
 
-**Total time spent: 1h 02m**
+**Total time spent: 1h 10m**
 
 ---
 
@@ -2572,9 +2603,12 @@ Here's how I made the drawing:
 6. Chose ordinate dimensions 35 of 35 dimensions because I did not know what option to choose.
 7. Deleted the new projected view to give more space for dimensions.
 8. Aggressively deleted the Title Block and Borders for literally no reason.
-9. Struggled to being back a new Title Block and ended up designing my own one. <img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/5b381b6b-3853-420c-950d-d1437d06e1e2" />
-10. Further edited the Title Block to remove unwanted details. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3a211d63-1eeb-4086-85c9-9fc652d449be" />
-11. Added another base view, same as the one I deleted before. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4532925-d0a4-4aae-9702-ff27350bd6c1" />
+9. Struggled to being back a new Title Block and ended up designing my own one.
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/5b381b6b-3853-420c-950d-d1437d06e1e2" />
+10. Further edited the Title Block to remove unwanted details. 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3a211d63-1eeb-4086-85c9-9fc652d449be" />
+11. Added another base view, same as the one I deleted before.
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4532925-d0a4-4aae-9702-ff27350bd6c1" />
 
 Now, finally the drawing is complete after a few more tweaks (at least that's what I thought back then).
 
@@ -2633,17 +2667,17 @@ Here's what I did next:
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/03c3bf5d-cc33-444c-8e70-9d92d668f88e" />
 
 8. I pasted the image in Google and asked what data was missing. It pointed out some, which I gradually fixed and added one by one manually. To do things manually, I used my imagination to think of me as the tip of a 3 axis CNC machine: carefully thinking about what data I need one my one to first form the outer shape, the holes, the pockets and the receding part of the distal joint. Like this, I added several radii and distances crucial for CNC fabrication. I then continued to manually add dimensions one by one and checking them with Google AI Mode.
-	- This is the first iteration:
+	- This is the first iteration:  
 		<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/982954f4-b0d4-406e-a24a-041b68595337" />
-	- This is the second iteration:
+	- This is the second iteration:  
 		<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/38e6b2ce-d564-4af8-8c35-d15f341d8b34" />
-	- This is the third iteration:
+	- This is the third iteration:  
 		<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/01a3cd00-0c63-4d72-a779-3495da876a85" />
 	
 9. By this time, there were way too many dimensions especially for the base view. Thus it seemed sensible to add the bottom view of the Z Axis Leg Lower A. But to do it, I couldn't use projected view. So, I created another base view and rotated it so that the drawing stays clean. I then added the necessary dimensions and again consulted Google for assistance.
 	<img width="684" height="485" alt="image" src="https://github.com/user-attachments/assets/f5d8898f-4401-41b7-93af-fd6d53b92c1e" />
 
-10. Then finally, with some more review, I had the drawing ready. It seemed fine to me and most probably no missing dimensions. I also edited the Title Block and added some more details like the project title and fixed minor issues.
+10. Then finally, with some more review, I had the drawing ready. It seemed fine to me and most probably no missing dimensions. I also edited the Title Block and added some more details like the project title and fixed minor issues.  
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0416f4b-bb70-4ee0-a93a-4c27197b9b22" />
 
 With all that done, I saved all the designs, including the failed ones and named them as in the following sequence:
@@ -2757,6 +2791,18 @@ In order to live up to me yesterday's commitment, I journaled the last and first
 While journaling 29, i saw poor journaling in 28 so i fixed it.
 
 oh i also synced my lapses with hacktime (important but really tedious)
+
+day 28
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8b11a728-4122-4748-af98-b67631578ecc" />
+
+29
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/41e96698-27b5-452b-a1d1-7ed34377cc01" />
+
+30
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2e19e4a0-b436-47d4-9e60-a85845aeb04a" />
 
 Here's the lapse of today's session: [PATRA-LPS-55-D75](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR)
 
