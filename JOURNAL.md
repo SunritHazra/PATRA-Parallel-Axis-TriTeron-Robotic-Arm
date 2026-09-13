@@ -2271,6 +2271,31 @@ Here's the lapse of today's session: [PATRA-LPS-42-D62](https://lapse.hackclub.c
 
 # Day 63 — 28.08.2026: idk [incomplete]
 
+A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in this system are identical (22 teeth each), the belt path is perfectly symmetrical, simplifying the standard belt length formula to: Total Belt Length = (2 * Center Distance) + (Number of Pulley Teeth * Pitch).
+
+* Initial Geometry: The layout for this specific case dictates a center-to-center distance of 1067.0 mm, derived from a 1000.0 mm aluminum extrusion plus two half-lengths of the 67.0 mm pulley/idler cases.
+* Length Calculation: This design results in a total straight section length of 2134.0 mm (2 * 1067.0 mm) and a wrapped section length of 110.0 mm (22 teeth * 5.0 mm), combining for a total belt length of 2244.0 mm.
+* Teeth Consequence: Dividing this total length by the 5.0 mm pitch yields a non-integer count of 448.8 teeth, which is physically impossible for a closed-loop timing belt.
+
+As a direct consequence of adjusting the target to a physical loop of exactly 449 teeth for this specific setup, the entire physical assembly must shift to maintain proper belt tension without slack.
+
+* Required Length: Specifying a discrete 449-tooth belt establishes a fixed, non-negotiable total belt length of 2245.0 mm (449 teeth * 5.0 mm).
+* Distance Adjustment: Subtracting the constant 110.0 mm pulley wrap leaves 2135.0 mm for the straight sections, forcing the center-to-center distance to increase to 1067.5 mm (2135.0 mm / 2).
+* Structural Impact: To accommodate this wider center distance while using the same 67.0 mm idler cases, the physical aluminum extrusion for this build must be lengthened by 1.0 mm, growing from 1000.0 mm to 1001.0 mm.
+
+Data Summary Table
+
+| Parameter | Configuration 1 (Previous) | Configuration 2 (Current / Consequence) |
+|---|---|---|
+| Belt Profile & Pitch | GT5 (5.0 mm) | GT5 (5.0 mm) |
+| Pulley Teeth Count | 22 teeth | 22 teeth |
+| Aluminum Extrusion Length | 1000.0 mm | 1001.0 mm |
+| Center-to-Center Distance | 1067.0 mm | 1067.5 mm |
+| Straight Section Length | 2134.0 mm | 2135.0 mm |
+| Wrapped Section Length | 110.0 mm | 110.0 mm |
+| Total Belt Length | 2244.0 mm | 2245.0 mm |
+| Final Belt Teeth Count | 448.8 teeth (Fractional) | 449.0 teeth (Whole) |
+
 i checked if the belt lock i designed yesterday was printable or not. so, 
 
 - 0.00037878
@@ -2350,11 +2375,41 @@ Here's the lapse of today's session: [PATRA-LPS-44-D64]()
 
 # Day 65 — 30.08.2026: idk [incomplete]
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
+Now it was time to also update the Z axis belt as I was successful in eliminating decimal belt tooth for the Z axis as well. Due to my previous decision of increasing the length of the pulley and idler cases by 0.25 mm both sides, things got better.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4e054cdd-bfaa-4729-834c-0f84c124fe5d" />
+A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in this system are identical (20 teeth each), the belt path is perfectly symmetrical, simplifying the standard belt length formula to: Total Belt Length = (2 * Center Distance) + (Number of Pulley Teeth * Pitch).
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4089b63d-cedc-41a4-bfdc-369a512a7193" />
+* **Before:** The layout for this specific case dictates a center-to-center distance of 1201 mm, derived from a 1000.0 mm aluminum extrusion plus two full-lengths of the 67 mm pulley/idler cases, plus two half-length of 67 mm pulley/idler cases.
+	* **Length Calculation:** This design results in a total straight section length of 2402 mm (2 * 1201 mm) and a wrapped section length of 100 mm (20 teeth * 5.0 mm), combining for a total belt length of 2502 mm.
+	* **Teeth Consequence:** Dividing this total length by the 5 mm pitch yields a non-integer count of 500.4 teeth, which is physically impossible for a closed-loop timing belt. This is the reason why I had to add a distance of 0.4 tooth (2 mm) in between the two middle teeth of the clamp.
+
+* **After:** This became center-to-center distance of 1202.50 mm, derived from a 1000.0 mm aluminum extrusion plus two full-lengths of the 67.5 mm pulley/idler cases, plus two half-length of 67.5 mm pulley/idler case, as I increased pulley/idler case distance 0.25 mm both sides (0.5 mm total).
+	* **Length Calculation:** This design results in a total straight section length of 2405 mm (2 * 1202.50 mm) and a wrapped section length of 100 mm (20 teeth * 5.0 mm), combining for a total belt length of 2505 mm.
+	* **Teeth Consequence:** Dividing this total length by the 5 mm pitch yields an integer count of 501 teeth, which is finally physically possible without adding any distance between the last and first teeth, for the clamp.
+
+**Data Summary Table:**
+
+| Parameter | Configuration 1 (Previous) | Configuration 2 (Current)|
+|---|---|---|
+| Belt Profile & Pitch | GT5 (5.0 mm) | GT5 (5.0 mm) |
+| Pulley Teeth Count | 20 teeth | 20 teeth |
+| Aluminum Extrusion Length | 1000 mm | 1000 mm |
+| Center-to-Center Distance | 1201 mm | 1202.50 mm |
+| Straight Section Length | 2402 mm | 2405 mm |
+| Wrapped Section Length | 100 mm | 100 mm |
+| Total Belt Length | 2502 mm | 2505 mm |
+| Final Belt Teeth Count | 500.4 teeth (Fractional) | 501 teeth (Whole) |
+
+This meant that I no longer needed the clamp with 2 mm gap in the middle. To achieve 501 teeth I just need to buy more teeth belt and then cut it. Here's the process I followed to eradicate the 2 mm gap in the middle:
+
+1. I split the existing Belt Clamp Bottom Z in half using XZ plane to reveal the inner belt grooves after moving it. 
+2. Created a sketch on the split part and copied the groove next to the groove before the gap at 5 mm pitch. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
+3. Extruded the right part of the sketch to create a new face for extrusion cut. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4e054cdd-bfaa-4729-834c-0f84c124fe5d" />
+4. Extruded and cut the gap of the body <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4089b63d-cedc-41a4-bfdc-369a512a7193" />
+
+
+
+
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7af6abe7-c9c6-40cd-ab7b-63d953b41a37" />
 
@@ -2646,6 +2701,15 @@ I immediately checked the print cost and print time in Orca Slicer, which came t
 
 <img width="1365" height="730" alt="image" src="https://github.com/user-attachments/assets/e839fcf1-6dd1-4204-ae9f-4e3ff29e5f92" />
 
+One more important change I made to the BOM was that I wrote down the budget for each section. Here's a breakdown:
+
+1. Kinematic Base Module (KBM): $400
+2. TriTeron Robot Module (TRM): $200
+3. Electronics: $350
+4. Shipping & Taxes: $50
+
+This keeps my total budget for the prototype as exactly $1000.
+
 This is the BOM so far:
 
 <img width="2959" height="1458" alt="image" src="https://github.com/user-attachments/assets/70275b56-e7da-4222-a422-f5aad281fd6f" />
@@ -2918,7 +2982,7 @@ Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackcl
 
 # Day 76 — 13.09.2026: Journaling
 
-Journaled day #31, #36, #65, #66 and #68 (full)
+Journaled day #31, #36, #65 (partly) and #68 (full)
 
 Day #31
 
@@ -2928,13 +2992,9 @@ Day #36
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5a43fa15-9130-4024-8bfd-f727e81e976a" />
 
-Day #65
+Day #65 (partly)
 
-
-
-Day #66
-
-
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/da25f9a7-27e4-45f5-8611-89b829ccaca8" />
 
 Day #68 (full)
 
@@ -2967,9 +3027,11 @@ After today, these days are left to be journaled:
 * Day 62
 * Day 63
 * Day 64
+* Day 65 (partly)
+* Day 66
 
-Here's the lapse of today's session: [PATRA-LPS-56-D76]()
+Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.com/timelapse/YCfkx4a_ljDg)
 
-**Total time spent: 3h 40m**
+**Total time spent: 5h 45m**
 
 ---
