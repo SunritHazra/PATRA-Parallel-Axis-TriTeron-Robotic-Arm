@@ -1418,7 +1418,42 @@ After fixing it, this is how it looked.
 
 # Day 31 — 03.06.2026: TriTeron Robot Module (TRM) Progress — Part 10
 
-[PATRA-LPS-11-D31](https://lapse.hackclub.com/timelapse/cPrT8Rbqh_sX)
+Today's target was to fix the joints, as they were not aligned properly and were asymmetrical. Yesterday's decision was to use regular bearings, so I also worked on that.
+
+I spent the first few minutes fighting in Fusion, and aligning different parts of the assembly. There was some problems in the upstream features, especially Capture Position, that was causing a lot of problems. There were severe problems with the joints in the design. 
+
+With the problems fixed, I was finally able to proceed with something more meaningful: the joints. For the joints, I thought of using 3 608ZZ Bearings for each leg. 
+
+Here's what I did next to procced and optimize my design for the bearings:
+
+1. **Fixing the Bearing Hub Radius & Depth:** I changed the diameter of the bearing hubs from 25 mm to 22 mm, made sure the depth is 7 mm.
+	Previously the hub was 25 mm in diameter
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bef812bc-6824-44ac-9c0b-19a24a09c962" />
+	Then I made it 22 mm in diameter
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/050c8025-422d-4563-9052-1da7af97d5e8" />
+
+2. **Imported 608ZZ Bearing from McMaster-Carr:** I went to McMaster-Carr in Fusion and then imported a bearing with size matching exactly with a 608ZZ Bearing. 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/122201d3-16bd-4489-bf83-bb04732db904" />
+
+3. **Re-structuring and Renaming Browser Legs:** I noticed that in the browser, there was no hierarchy for the legs. So, I renamed and restructured them in this order: in the parent components there will be ***X***, ***Y***, or ***Z***, followed by ***Axis Leg*** and either ***Upper*** or ***Lower***. For Z axis, there is also ***A***, or ***B*** followed by that depending on the side. The side of the X axis is ***A*** and the side of the Y axis is ***B***. Here is how the structure looks:  
+	<img width="300" height="489" alt="image" src="https://github.com/user-attachments/assets/0b89bb6e-17a9-4161-a211-971c24b0da33" />
+
+4. **Re-structuring and Renaming Browser Leg Joints:** For the naming and hierarchical system, I had to put the internal combustion engine of my brain, through a hard time. But I somehow came up with this: There will be three parent components; ***X***, ***Y***, or ***Z*** with ***Axis Leg Joints***. Under them, there will be ***608 Bearing*** followed by axis letter (***X***, ***Y***, or ***Z***), upper or lower leg denoted by ***U*** or ***L***; and then a ***1*** if the bearing is on the top of the proximal joint side; ***2*** if on the bottom of the proximal joint side; and ***3*** if on the distal joint side. But for Z axis legs, after ***Z***, there was either ***A*** or ***B*** in the name to denote the side. For example, the highlighted bearing in [this](https://github.com/user-attachments/assets/70a2de85-348d-4215-bd50-a5bd40e32229) image is **608 Bearing YL1**, while [this](https://github.com/user-attachments/assets/21ddf0ea-e346-4ab6-ab8c-33ca7e392b64) is **608 Bearing ZAU3**. Here is how the structure looks:
+	<img width="300" height="514" alt="image" src="https://github.com/user-attachments/assets/d9e4a896-d6a2-480c-9340-a890047156f7" />
+
+5. **Joining Bearings:** After the bearings were named and arranged into a sequence, I used Joint tool to assemble them in the correct places. I encountered some problems in the way with the timeline, but it was minor, so I was able to easily fix it. This is how it looks after assembling:
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/586ea472-45a7-41e2-af66-d996dcd74c46" />
+
+With all that done, next part was the fasteners: shoulder bolts, nuts and washers. But I was not sure about the way things will come together. I even watched Rowan's tripteron assembly. Here's how I found them:
+
+1. **Shoulder Bolt:** I started by searching in Only Screws, but I didn't find what I needed. Then I looked in JLCMC instead, and the options were better. I chose [E-GBN23005GT-150](https://jlcmc.com/product/s/E02/EDLP/iso-7379-gb-t-5281-hex-socket-shoulder-screw-(set-screw)?k=EDLP-S1-B-d8-L30&productModelNumber=EDLP-S1-B-d8-L30) for proximal joints from JLCMC and imported in the design in Fusion. And for distal joints, I chose [EDLP-S1-B-d8-L35](https://jlcmc.com/product/s/E02/EDLP/iso-7379-gb-t-5281-hex-socket-shoulder-screw-(set-screw)?k=EDLP-S1-B-d8-L35&productModelNumber=EDLP-S1-B-d8-L35).
+
+2. **Nut:** I was not sure what size nut I needed. I first thought I needed M6, then M8 and then again M8. There was [this](https://onlyscrews.in/products/m6-nyloc-nuts-ss304) DIN982 M6 nut Only Screws. But there was no M8 nut on Only Screws. For the M8 screw, I found this [EMLC-S1-N-M8](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M8&productModelNumber=EMLC-S1-N-M8) on JLCMC. And for M6 I found [EMLC-S1-N-M6](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6), also on JLCMC.
+
+3. **Washer:** Finding the washer was easier than I thought. I found [SS304 M8 Washer](https://onlyscrews.in/products/m8-washer-ss304?currency=INR&country=IN&variant=49592314691897&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=Inderans_Campaign&utm_content=Other_than_fasteners_wala_copy&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SS13C7O8clb3n7juN0NJicBD&gclid=Cj0KCQjwrZTRBhDSARIsAHidYff_2voIe-8RPEu9AA21EZff0GSSyk4MWjjptkDVLWuZe4Rjuu5uqCkaAtCuEALw_wcB) from Only Screws.
+Here's the lapse of today's session: [PATRA-LPS-11-D31](https://lapse.hackclub.com/timelapse/cPrT8Rbqh_sX)
+
+After that I assembled them into a set after exporting them and importing them in Fusion. For the washer, I created a sketch in Fusion, and extruded it. I also carved out a geometry in the Z Axis Mount.
 
 **Total time spent: 4h 20m**
 
@@ -1630,11 +1665,29 @@ Here's the lapse of today's session: [PATRA-LPS-15-D35](https://lapse.hackclub.c
 
 # Day 36 — 08.06.2026: TriTeron Robot Module (TRM) Progress — Part 15
 
-I started by fixing some structural and mechanical errors that I noticed with the depth of NUTCRACKER.
+Today's session aimed at transitioning the progress from the tripteron to the robotic arm, by integrating the first axis (base) of the robotic arm in the Tool Head of the TriTeron. But I didn't know how to even het started with designing a robotic arm. So it seemed obvious to search in the internet for guides.
+
+But before I went on to explore the guides, I started by fixing some structural and mechanical errors that I noticed with the depth of NUTCRACKER, that was inconsistent for the Tool Head. To fix the problem I had to go back in the timeline and change some positions and alignments of the negative space that I modeled (NUTCRACKER).
+
+Once that was fixed, I dived into the arm. But, before I could model, I have to imagine, study and understand the whole mechanism. Here's the content I exploded in sequence:
+
+- The very first website that I found was [this](https://robotsguide.com/robots/meca500) which had an interactive model that helped me understand the mechanism better.
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a3042287-d1a2-44e0-bd89-cf55a0944ef7" />
+	
+- Next I searched up and found [this](https://milvus.io/ai-quick-reference/what-is-a-robotic-arm-and-how-does-it-function) and briefly read it.
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e0ee3393-9906-4adb-9f42-d196eadcc129" />
+	
+- I searched in Google how to make the first axis of a robotic arm, but didn't find any guide.
+
+Just then I suddenly remembered that I already had the model of Meca500 sitting in my Fusion library. I thought of studying it in the 3D space to understand better. That's when the concept of harmonic drives appeared before me, which was really fascinating. I watched a YouTube tutorial for a minute and kind of understood what I had to do.
+
+I then tried to cut a section and hollow the tool head to fit in the base of the robotic arm inside the tool head. But then again, there was upstream timeline issues especially because of accidental Capture Positions that caused the Tool Head to be asymmetrical and off-center. I tried my best fixing it by using split body and mirror tool.
+
+But after the problem was fixed, today's session was over.
 
 Here's the lapse of today's session: [PATRA-LPS-16-D36](https://lapse.hackclub.com/timelapse/1kYZRIteUWKL)
 
-**Total time spent: 0h 45m**
+**Total time spent: 1h 25m**
 
 ---
 
@@ -2421,7 +2474,7 @@ Here's the lapse of today's session: [PATRA-LPS-47-D67](https://lapse.hackclub.c
 
 ---
 
-# Day 68 — 02.09.2026: 
+# Day 68 — 02.09.2026: Updating BOM & Cost Cutting
 
 The KBM was getting really expensive. But that's not a big problem itself, but the fact the Forge won't pay my customs, was in itself a nightmare. My total cost of imported merchandise from Jialichuang had already reached **$110.16**. This meant that the total CIF value with included shipping, would have significantly more import duties and GST. Thus landing the digits of the customs amount in a crazy territory.
 
@@ -2431,16 +2484,54 @@ But after exporting them and importing in Orca Slicer, the default orientation w
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b5296af-2f47-47ab-bd88-748a1fb90472" />
 
+This is how the print came for the sample.
+
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/f6765e2c-f082-4acd-8ba1-5e5e0f87c27a" />
+
+Obviously, I was going to choose the laid down design over the upright one, so I arranged it like this and hit print.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/227e2567-d009-4843-9684-7ea8b20f0a40" />
 
+This is how the print came:
 
+<img width="1280" height="960" alt="image" src="https://github.com/user-attachments/assets/b05e6913-573f-4f36-816c-25fd8dcd28a7" />
 
+Next I noticed that the BOM for the KBM was still not complete as the Fasteners were yet not added in the BOM. Here's what I added:
 
+1. M3 x 12mm High Tensile (12.9) Black Oxide Grub Screw
+	* Quantity: 30
+	* Unit Price: ₹2.00
+	* Total Price: ₹60.00 / $0.63
+	* Vendor: OnlyScrews
+	* Link: [Product Page](https://onlyscrews.in/products/m3-x-12mm-high-tensile12-9-black-oxide-grub-screw-dia-3mm-length-12mm)
+2. M3 x 12mm Hex (Allen) CSK SS 304 Screw
+	* Quantity: 25
+	* Unit Price: ₹1.80
+	* Total Price: ₹45.00 / $0.48
+	* Vendor: OnlyScrews
+	* Link: [Product Page](https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20?_pos=1&_sid=1040a6d00&_ss=r)
+3. M5 x 10mm Hex (Allen) Socket Head High Tensile (12.9) Black Oxide Screw
+	* Quantity: 15
+	* Unit Price: ₹2.40
+	* Total Price: ₹36.00 / $0.38
+	* Vendor: OnlyScrews
+	* Link: [Product Page](https://onlyscrews.in/products/m5-x-10mm-hex-allen-socket-head-high-tensile12-9-black-anodized-screw)
+4. M3 x 5mm 3D Printing Brass Threaded Slant Knurled Insert
+	* Quantity: 40
+	* Unit Price: ₹4.60
+	* Total Price: ₹184.00 / $1.95
+	* Vendor: OnlyScrews
+	* Link: [Product Page](https://onlyscrews.in/products/m3-x-5mm-3d-printing-brass-threaded-inserts-dia-3mm-length-5mm)
 
+This is the part updated in the BOM:
 
-https://robu.in/product/sla-3d-printing/
+<img width="2784" height="106" alt="image" src="https://github.com/user-attachments/assets/f4d2e798-b4a7-4e11-9c17-e9e46b51624f" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4af398de-599c-429a-a759-962d874a9bf0" />
+After that I made a big change in the BOM by introducing a column for physical materials. This was necessary especially for the 3D printed parts, where I mention the material along with the printing technology like SLA, MJF or FDM.
+
+To further cut down cost, I reconsidered my choices with the [Rtelligent T60S Closed-loop Stepper Motor Driver](https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/) asking Google AI mode if it was overpriced. I decided to keep it because I realised I couldn't cut down on that.
+
+Then what came to mind was the SLA prints. I wondered if local SLA printing will be cheaper or not. So, I went to [Robu](https://robu.in/product/sla-3d-printing/) to see it myself. And the price was absolutely crazy: **₹3833 (over $40)**. JLC3DP with added shipping and customs will be cheaper than this.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa3770c9-d536-4aed-9b2e-6c532acfc268" />
 
@@ -2720,39 +2811,39 @@ Day #69
 
 Just our of curiosity, I wanted to see the mountain of work I have left behind. These are the days containing an [incomplete] or missing journal body tag:
 
-* Day 29 (TriTeron Robot Module (TRM) Progress — Part 8)
-* Day 30 (TriTeron Robot Module (TRM) Progress — Part 9)
-* Day 31 (TriTeron Robot Module (TRM) Progress — Part 10)
-* Day 36 (TriTeron Robot Module (TRM) Progress — Part 15)
-* Day 37 (Research on the Robotic Arm)
-* Day 41 (Writing Past Missed Journals)
-* Day 42 (Fixing the Broken Dimensions)
-* Day 43 (Working on the KBM)
-* Day 44 (Working on the Z Axis Tensioning System)
-* Day 45 (IDK)
-* Day 46 (IDK)
-* Day 47 (IDK)
-* Day 48 (COOKING)
-* Day 49 (BAKING)
-* Day 50 (BOILING)
-* Day 51 (STEAMING)
-* Day 52 (SIZZLING)
-* Day 53 (FRYING)
-* Day 54 (idk)
-* Day 55 (idk)
-* Day 56 (idk)
-* Day 57 (idk)
-* Day 58 (idk)
-* Day 59 (idk)
-* Day 60 (idk)
-* Day 61 (idk)
-* Day 62 (idk)
-* Day 63 (idk)
-* Day 64 (idk)
-* Day 65 (idk)
-* Day 66 (idkk)
-* Day 67 (idkkk)
-* Day 68 (idkkk)
+* Day 29
+* Day 30
+* Day 31
+* Day 36
+* Day 37
+* Day 41
+* Day 42
+* Day 43
+* Day 44
+* Day 45
+* Day 46
+* Day 47
+* Day 48
+* Day 49
+* Day 50
+* Day 51
+* Day 52
+* Day 53
+* Day 54
+* Day 55
+* Day 56
+* Day 57
+* Day 58
+* Day 59
+* Day 60
+* Day 61
+* Day 62
+* Day 63
+* Day 64
+* Day 65
+* Day 66
+* Day 67
+* Day 68
 
 I really really need to journal more. I have decided to journal every single day before I procced with the design. This is because, the older they get, the more I forget. Despite having all of them lapsed, I couldn't ask myself about my own design and how it happened in the future. Also, journaling is extremely necessary for the Forge program.
 
@@ -2764,11 +2855,7 @@ Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackcl
 
 # Day 75 — 12.09.2026: Journaling
 
-In order to live up to me yesterday's commitment, I journaled today.
-
-While journaling 29, i saw poor journaling in day #28 so i fixed it.
-
-oh i also synced my lapses with hacktime (important but really tedious)
+In order to live up to me yesterday's commitment, I journaled today. While journaling 29, i saw poor journaling in day #28 so i fixed it. I also synced my lapses with Hacktime (important but really tedious).
 
 Day #28
 
@@ -2790,7 +2877,98 @@ Day #68 (partly)
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9a6aed0e-dd6f-455c-a0e4-3153689ecc3a" />
 
+After today, these days are left to be journaled:
+
+* Day 31
+* Day 36
+* Day 37
+* Day 41
+* Day 42
+* Day 43
+* Day 44
+* Day 45
+* Day 46
+* Day 47
+* Day 48
+* Day 49
+* Day 50
+* Day 51
+* Day 52
+* Day 53
+* Day 54
+* Day 55
+* Day 56
+* Day 57
+* Day 58
+* Day 59
+* Day 60
+* Day 61
+* Day 62
+* Day 63
+* Day 64
+* Day 65
+* Day 66
+* Day 68 (partly)
+
 Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR) and [PATRA-LPS-55-D75-2](https://lapse.hackclub.com/timelapse/Ef9ur-75vopq)
+
+**Total time spent: 3h 40m**
+
+---
+
+# Day 76 — 13.09.2026: Journaling
+
+Journaled day #31, #36, #65, #66 and #68 (full)
+
+Day #31
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/feb5eb68-57fd-4a39-a547-db08e91e7a7f" />
+
+Day #36
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5a43fa15-9130-4024-8bfd-f727e81e976a" />
+
+Day #65
+
+
+
+Day #66
+
+
+
+Day #68 (full)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4f8fb892-971f-4114-b718-dac43a1ce36f" />
+
+After today, these days are left to be journaled:
+
+* Day 37
+* Day 41
+* Day 42
+* Day 43
+* Day 44
+* Day 45
+* Day 46
+* Day 47
+* Day 48
+* Day 49
+* Day 50
+* Day 51
+* Day 52
+* Day 53
+* Day 54
+* Day 55
+* Day 56
+* Day 57
+* Day 58
+* Day 59
+* Day 60
+* Day 61
+* Day 62
+* Day 63
+* Day 64
+
+Here's the lapse of today's session: [PATRA-LPS-56-D76]()
 
 **Total time spent: 3h 40m**
 
