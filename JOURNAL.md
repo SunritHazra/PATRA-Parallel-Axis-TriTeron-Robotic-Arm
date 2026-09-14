@@ -3,10 +3,13 @@ Title: PATRA (Parallel Axis TriTeron Robotic Arm)
 Author: Sunrit Hazra
 Description: A Hybrid robot architecture of a kinematically linear 3 DOF parallel axis triteron system and a 6 DOF serial robotic arm.
 Created on: 02-05-2026
-Overall Progress: "63%"
-KBM Progress: "91%"
-TRM Progress: "62%"
-RAM Progress: "0%"
+Started on: 10-04-2026
+Kinematic Base Module (KBM) Progress: "91%"
+TriTeron Robot Module (TRM) Progress: "62%"
+Robotic Arm Module (RAM) Progress: "1%"
+Electronic Components Progress: "10%"
+Overall Progress: "41%"
+PC (Laptop) Used: ASUS Vivobook 15 X540UAR
 ---
 
 # Day 0: Flashback
@@ -2373,7 +2376,7 @@ Here's the lapse of today's session: [PATRA-LPS-44-D64]()
 
 ---
 
-# Day 65 — 30.08.2026: idk [incomplete]
+# Day 65 — 30.08.2026: Optimizing the Design for the Lengthened Pulley/Idler Cases
 
 Now it was time to also update the Z axis belt as I was successful in eliminating decimal belt tooth for the Z axis as well. Due to my previous decision of increasing the length of the pulley and idler cases by 0.25 mm both sides, things got better.
 
@@ -2402,30 +2405,51 @@ A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in t
 
 This meant that I no longer needed the clamp with 2 mm gap in the middle. To achieve 501 teeth I just need to buy more teeth belt and then cut it. Here's the process I followed to eradicate the 2 mm gap in the middle:
 
-1. I split the existing Belt Clamp Bottom Z in half using XZ plane to reveal the inner belt grooves after moving it. 
-2. Created a sketch on the split part and copied the groove next to the groove before the gap at 5 mm pitch. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
-3. Extruded the right part of the sketch to create a new face for extrusion cut. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4e054cdd-bfaa-4729-834c-0f84c124fe5d" />
-4. Extruded and cut the gap of the body <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4089b63d-cedc-41a4-bfdc-369a512a7193" />
+1. I split the existing Belt Clamp Bottom Z in half using XZ plane to reveal the inner belt grooves after moving it.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fc2a1b4-098c-4335-8985-3152be917379" />
 
+2. Created a sketch on the split part and copied the groove next to the groove before the gap at 5 mm pitch.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
 
+3. Extruded the right part of the sketch to create a new face for extrusion cut.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4e054cdd-bfaa-4729-834c-0f84c124fe5d" />
 
+4. Extruded and cut the gap of the body.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4089b63d-cedc-41a4-bfdc-369a512a7193" />
 
+5. Moved one part and merged them into a single body using the Combine tool.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7af6abe7-c9c6-40cd-ab7b-63d953b41a37" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7af6abe7-c9c6-40cd-ab7b-63d953b41a37" />
+6. Mirrored the part using the XZ plane to create this.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d9a4029e-3c95-4012-bb50-c567ce74ed24" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d9a4029e-3c95-4012-bb50-c567ce74ed24" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/501dd772-5b76-47f7-bec7-0031bd727bf0" />
-
-next is end plate holes
+Next thing I have to work on is the End Plate holes. The section analysis shows that the holes have stayed as they are but as I increased the length by 0.25 mm both side of the pulley/idler case, the holes look like shifted back.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/633a13cd-c356-4293-b3fb-3624fe6fe2fd" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f8907e7b-f54b-4b71-8ba6-a295c2569dd2" />
+To fix it, here is what I did:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c074d0b2-73d9-46c4-87a2-d4d907055c5b" />
+1. Split the body from the near middle using a construction offset plane and then moved a part 0.75 mm outwards.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f8907e7b-f54b-4b71-8ba6-a295c2569dd2" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e322d4f-ca63-4bb3-8610-991584892d63" />
+2. To keep the total length unchanged, I moved the faces of the end of plate back by 0.75 mm.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c074d0b2-73d9-46c4-87a2-d4d907055c5b" />
+
+3. I then joined the parts by bridging the gap using extrude tool.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e322d4f-ca63-4bb3-8610-991584892d63" />
+
+4. I split the other part of the body as well due to misalignment.  
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/c3b7790e-0d80-4497-b49b-6410aee62873" />
+
+5. Moved it 0.25 mm away from the body to align the hole.  
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7d4b8ea9-118c-4463-8ddf-05dc89c0e35c" />
+
+6. Bridged the gap using extrusion.  
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/f4cde3e3-9be8-4c9d-915b-5a45bce1d9fd" />
+
+Followed by this, I mirrored the geometry to the other end plate and connectors. I also renamed some components in the Browser and checked the positions of the vertices in the design, especially in the end plates.
+
+This is the overall look of the Kinematic Base Module.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/de7ee697-6b7c-441a-9f45-b099a7fd837f" />
 
@@ -2982,7 +3006,7 @@ Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackcl
 
 # Day 76 — 13.09.2026: Journaling
 
-Journaled day #31, #36, #65 (partly) and #68 (full)
+Journaled days #31, #36, #65 (partly) and #68 (full)
 
 Day #31
 
@@ -3033,5 +3057,19 @@ After today, these days are left to be journaled:
 Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.com/timelapse/YCfkx4a_ljDg)
 
 **Total time spent: 5h 45m**
+
+---
+
+# Day 77 — 14.09.2026: Journaling [incomplete]
+
+Journaled days #65 (full), # 66
+
+Day #65
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dec669e3-9dd0-4c97-aa50-38914e6f2a53" />
+
+Here's the lapse of today's session: [PATRA-LPS-57-D77]()
+
+**Total time spent: 0h 00m**
 
 ---
