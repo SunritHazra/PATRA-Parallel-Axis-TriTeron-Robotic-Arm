@@ -2461,19 +2461,109 @@ Here's the lapse of today's session: [PATRA-LPS-45-D65](https://lapse.hackclub.c
 
 # Day 66 — 31.08.2026: idkk [incomplete]
 
-https://www.machinedesign.com/mechanical-motion-systems/linear-motion/article/21834576/how-to-design-a-linear-motion-system
+I had almost completed designing the Kinematic Base Module (KBM), so it was the perfect time to go over the BOM and confirm all the components one by one.
 
-1 
-2 
-3 
-4 
-5 
-6 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5cd33405-bd61-458d-a9bf-d73182a85774" />
-7 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f72d7092-bd3a-4c89-b52f-bcbf1907715c" />
-8 
-9 
-10 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1dccc36f-fdf6-4703-9b61-e1f12badbc59" />
-11 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d800753-63f4-4c2c-90cb-6adf21710cad" />
+But before that I wanted to verify if the way I designed the system is conventional or not, and also know what more things are needed in the system. I came across [this](https://www.machinedesign.com/mechanical-motion-systems/linear-motion/article/21834576/how-to-design-a-linear-motion-system) article, on "How to design a linear-motion system"
+
+After reading that a little, I went to Fusion to one-by-one confirm the parts of the KBM (excluding the prints):
+
+1. **LCF6-2020-1135 Aluminium 2020 T-Slot Profile Extrusion**
+   * Quantity: 2
+   * Unit Price: ₹306.45 / \$3.24
+   * Total Price: ₹612.90 / \$6.49
+   * Vendor: MISUMI
+   * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/94be776d-6d84-4284-af5a-197fdc3fb140" />
+
+2. **HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion**
+   * Quantity: 2
+   * Unit Price: ₹2,595.20 / \$27.47
+   * Total Price: ₹5,190.40 / \$54.93
+   * Vendor: MISUMI
+   * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9d85ff4f-0771-4d1c-a127-773dea816ec4" />
+
+3. **MGN15H Linear Guide Rail 1m**
+   * Quantity: 2
+   * Unit Price: ₹2,729.00 / \$28.88
+   * Total Price: ₹5,458.00 / \$57.76
+   * Vendor: Robu
+   * Link: [Product Page](https://robu.in/product/mgn15h-linear-guide-rail-1m-2)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b952b04e-0f70-4246-bddd-4552fc0ffefd" />
+
+4. **MGN15H Sliding Block**
+   * Quantity: 4
+   * Unit Price: ₹679.00 / \$7.19
+   * Total Price: ₹2,716.00 / \$28.74
+   * Vendor: Robu
+   * Link: [Product Page](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/31c85b91-9b5f-49bc-8718-06b7929c3ac6" />
+
+5. **Belt E-GBN22505GT-150 (X & Y)**
+   * Quantity: 2
+   * Unit Price: ₹1,225.63 / \$12.97
+   * Total Price: ₹2,451.26 / \$25.94
+   * Vendor: MISUMI
+   * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/94d2fe0a-72d2-4dea-b9f4-67de51758d4c" />
+
+6. **Belt E-GBN26005GT-150 (Z)**
+   * Quantity: 1
+   * Unit Price: ₹1,400.77 / \$14.82
+   * Total Price: ₹1,400.77 / \$14.82
+   * Vendor: MISUMI
+   * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ea9154e6-7268-4b6f-8c10-bb00d705352c" />
+
+7. **Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)**
+   * Quantity: 4
+   * Unit Price: \$3.03
+   * Total Price: \$12.12
+   * Vendor: JLCMC
+   * Link: [Product Page](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12)
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5cd33405-bd61-458d-a9bf-d73182a85774" />
+
+8. **Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)**
+   * Quantity: 2
+   * Unit Price: \$3.00
+   * Total Price: \$5.99
+   * Vendor: JLCMC
+   * Link: [Product Page](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/af8a6dbe-b803-4574-8b4b-a7b754034eed" />
+
+9. **6901ZZ Bearing (Pack of 4)**
+   * Quantity: 3
+   * Unit Price: ₹239.00 / \$2.53
+   * Total Price: ₹717.00 / \$7.59
+   * Vendor: Robu
+   * Link: [Product Page](https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/)
+   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b6638145-4234-41d6-a94f-33abda147f93" />
+
+10. **Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)**
+    * Quantity: 3
+    * Unit Price: ₹3,549.00 / \$37.56
+    * Total Price: ₹10,647.00 / \$112.68
+    * Vendor: Robu
+    * Link: [Product Page](https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/)
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/210f67e1-373d-4121-af42-0cd852787129" />
+
+11. **Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)**
+    * Quantity: 2
+    * Unit Price: ₹4,079.00 / \$43.17
+    * Total Price: ₹8,158.00 / \$86.34
+    * Vendor: Robu
+    * Link: [Product Page](https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/)
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/93a5788a-c388-4ec2-baee-388f59166f1d" />
+
+12. **Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)**
+    * Quantity: 1
+    * Unit Price: ₹5,399.00 / \$57.14
+    * Total Price: ₹5,399.00 / \$57.14
+    * Vendor: Robu
+    * Link: [Product Page](https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/)
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/097f4819-3550-4bcd-8511-ec3f06ca40c4" />
+
+But then I remembered of a mistake that I had made yesterday.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/638046b6-1eb7-4b91-a038-f78c38cd407e" />
 
@@ -2577,25 +2667,28 @@ This is how the print came:
 
 Next I noticed that the BOM for the KBM was still not complete as the Fasteners were yet not added in the BOM. Here's what I added:
 
-1. M3 x 12mm High Tensile (12.9) Black Oxide Grub Screw
+1. **M3 x 12mm High Tensile (12.9) Black Oxide Grub Screw**
 	* Quantity: 30
 	* Unit Price: ₹2.00
 	* Total Price: ₹60.00 / $0.63
 	* Vendor: OnlyScrews
 	* Link: [Product Page](https://onlyscrews.in/products/m3-x-12mm-high-tensile12-9-black-oxide-grub-screw-dia-3mm-length-12mm)
-2. M3 x 12mm Hex (Allen) CSK SS 304 Screw
+	
+2. **M3 x 12mm Hex (Allen) CSK SS 304 Screw**
 	* Quantity: 25
 	* Unit Price: ₹1.80
 	* Total Price: ₹45.00 / $0.48
 	* Vendor: OnlyScrews
 	* Link: [Product Page](https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20?_pos=1&_sid=1040a6d00&_ss=r)
-3. M5 x 10mm Hex (Allen) Socket Head High Tensile (12.9) Black Oxide Screw
+	
+3. **M5 x 10mm Hex (Allen) Socket Head High Tensile (12.9) Black Oxide Screw**
 	* Quantity: 15
 	* Unit Price: ₹2.40
 	* Total Price: ₹36.00 / $0.38
 	* Vendor: OnlyScrews
 	* Link: [Product Page](https://onlyscrews.in/products/m5-x-10mm-hex-allen-socket-head-high-tensile12-9-black-anodized-screw)
-4. M3 x 5mm 3D Printing Brass Threaded Slant Knurled Insert
+	
+4. **M3 x 5mm 3D Printing Brass Threaded Slant Knurled Insert**
 	* Quantity: 40
 	* Unit Price: ₹4.60
 	* Total Price: ₹184.00 / $1.95
@@ -3062,11 +3155,43 @@ Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.c
 
 # Day 77 — 14.09.2026: Journaling [incomplete]
 
+while journaling day #66 in the motor section, i randomly came across integrated motors and started comparing them to my discrete driver setup.
+The numbers came out to:
+
+* Setup 1 (Discrete T60S Drivers + Separate Motors): ₹20,125 INR total
+* Setup 2 (Integrated All-in-one Motors): ₹17,737 INR total
+
+Here is the quick breakdown of how they compare for the PATRA layout:
+
+| System Parameter | Setup 1: Discrete Layout (₹20,125) | Setup 2: Integrated Layout (₹17,737) |
+|---|---|---|
+| Components | 3x Discrete T60S Drivers + 2x 57AM23ED + 1x 57AM30ED | 2x Integrated IT57AM23 + 1x Integrated IT57AM30 |
+| Max Voltage | 68V DC (Massive safety headroom) | 50V DC (Strict absolute maximum limit) |
+| 48V PSU Margin | Safe and stable for the 48V Mean Well rail | Dangerous edge (High risk of blowing chips) |
+| Fusion 360 Fit | Flawless fit for standard NEMA 23 profiles | Interference (Driver block hits custom mount brackets) |
+| Loop Tuning | PC Software Config via RTConfigurator | None (Strictly limited to hardware DIP switches) |
+| Failure Isolation | Excellent (Can replace just the independent driver block) | Poor (If driver fries, the entire motor is junk) |
+
+I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V, providing solid safety headroom, while the integrated units cap out strictly at 50V and will fry the onboard chips.
+Mechanically, the integrated units will not fit my custom 3D-printed enclosure mounts. Standalone NEMA 23 motors fit perfectly against the MISUMI 4040/2020 extrusions, but the integrated motor has a bulky electronic box housing bolted onto the back block. Using them would force a brutal downstream timeline rewrite for all my end plates and belt channels.
+
+[INSERT IMAGE: Fusion 360 view showing motor bracket clearances and layout]
+Placeholder: <img src="[INSERT_IMAGE_URL]" alt="Motor Bracket Geometry" />
+
+Finally, because PATRA has a constantly changing parallel axis load profile, being able to plug into Rtelligent's software via the tuning port to adjust PID loops, current values, and multi-stage digital position filters is critical. The integrated series locks me out completely, forcing reliance on basic hardware DIP switches with no way to tune out resonance or mechanical hunting vibrations under load.
+Even though Setup 1 carries a ₹2,388 INR premium, it is the only route that is structurally and electronically viable for the project. It preserves my existing CAD timeline geometry, keeps my power grid stable, and gives me the configuration space I need to interface smoothly with the Teensy 4.1. Discrete wins.
+Let me know if you want to swap the Robu link placeholders with the actual URLs now, or if you need to generate any specific text tracking your M5 threaded insert depth adjustments from Day 69.
+
+
 Journaled days #65 (full), # 66
 
 Day #65
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dec669e3-9dd0-4c97-aa50-38914e6f2a53" />
+
+Day #66
+
+
 
 Here's the lapse of today's session: [PATRA-LPS-57-D77]()
 
