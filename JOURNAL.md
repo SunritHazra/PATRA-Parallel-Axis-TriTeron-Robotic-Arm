@@ -2563,7 +2563,24 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
     * Link: [Product Page](https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/)
 	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/097f4819-3550-4bcd-8511-ec3f06ca40c4" />
 
-But then I remembered of a mistake that I had made yesterday.
+Then I made two major changes to the BOM:
+
+1. **Added Cost as INR with Updatable Exchange Rate:** As we all know there are huge fluctuations in the USD INR exchange rate, it was not sensible to change the INR to USD when I add them in the BOM, and write the price down. A better way is to actually write the price in INR if prices are in INR, and use the value of a certain cell to divide it by the exchange rate. This can be done by keeping a cell with USD INR exchange rate and then update the value if needed.
+
+2. **Added Parent-Components in each Module:** It was getting really confusing with so many parts, so I added the parent components (like Tensioning Systems, TriTeron Tool Head) just below the module components (KBM, TRM, RAM) in the BOM. This improved the overall structure and introduced the existing hierarchy of Fusion in the BOM as well, making it easy to look at components for sourcing. But one important thing to note is that there is no "Fasteners" in the Fusion design, but I have added it in the BOM.
+
+Here is the hierarchy of KBM for clarification:
+
+- **Kinematic Base Module (KBM)**
+	- Aluminum Extrusions
+	- End Plates
+	- Linear Guides
+	- Tensioning System
+	- Motors
+
+I don't know if I have mentioned this before or not, but this is based on the assembly sequence I imagined in my Cerebrum. First the extrusions, then end plates, then linear guides, then the tensioning systems, and then finally the motors.
+
+Next I wanted to add all the 3D print files in the design from the top to down (as in Fusion Browser). As there was no 3D print files in the Aluminum Extrusions, I was about to start the confirmation directly from End Plates, but then I noticed a slight mistake with the model and made a clever realization after my model got flagged for Printing Risk in JLC3DP.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/638046b6-1eb7-4b91-a038-f78c38cd407e" />
 
@@ -3155,13 +3172,14 @@ Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.c
 
 # Day 77 — 14.09.2026: Journaling [incomplete]
 
-while journaling day #66 in the motor section, i randomly came across integrated motors and started comparing them to my discrete driver setup.
+While journaling day #66 in the motor section, I randomly came across integrated motors and started comparing them to my discrete driver setup.
+
 The numbers came out to:
 
 * Setup 1 (Discrete T60S Drivers + Separate Motors): ₹20,125 INR total
 * Setup 2 (Integrated All-in-one Motors): ₹17,737 INR total
 
-Here is the quick breakdown of how they compare for the PATRA layout:
+After asking Google which one was better this distinction came out:
 
 | System Parameter | Setup 1: Discrete Layout (₹20,125) | Setup 2: Integrated Layout (₹17,737) |
 |---|---|---|
@@ -3173,28 +3191,61 @@ Here is the quick breakdown of how they compare for the PATRA layout:
 | Failure Isolation | Excellent (Can replace just the independent driver block) | Poor (If driver fries, the entire motor is junk) |
 
 I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V, providing solid safety headroom, while the integrated units cap out strictly at 50V and will fry the onboard chips.
-Mechanically, the integrated units will not fit my custom 3D-printed enclosure mounts. Standalone NEMA 23 motors fit perfectly against the MISUMI 4040/2020 extrusions, but the integrated motor has a bulky electronic box housing bolted onto the back block. Using them would force a brutal downstream timeline rewrite for all my end plates and belt channels.
 
-[INSERT IMAGE: Fusion 360 view showing motor bracket clearances and layout]
-Placeholder: <img src="[INSERT_IMAGE_URL]" alt="Motor Bracket Geometry" />
+Rtelligent IT57AM23 https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-23nm-holding-torque-it57am23/
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/255a68e6-977c-4216-83b2-be1a0c458855" />
+
+Rtelligent IT57AM30 https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-30nm-holding-torque-it57am30/
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6f29bb9d-fc1c-4cd9-b5d7-215ceeee3e2b" />
 
 Finally, because PATRA has a constantly changing parallel axis load profile, being able to plug into Rtelligent's software via the tuning port to adjust PID loops, current values, and multi-stage digital position filters is critical. The integrated series locks me out completely, forcing reliance on basic hardware DIP switches with no way to tune out resonance or mechanical hunting vibrations under load.
-Even though Setup 1 carries a ₹2,388 INR premium, it is the only route that is structurally and electronically viable for the project. It preserves my existing CAD timeline geometry, keeps my power grid stable, and gives me the configuration space I need to interface smoothly with the Teensy 4.1. Discrete wins.
-Let me know if you want to swap the Robu link placeholders with the actual URLs now, or if you need to generate any specific text tracking your M5 threaded insert depth adjustments from Day 69.
+Even though Setup 1 carries a ₹2,388 INR premium, it is the only route that is structurally and electronically viable for the project. It preserves my existing CAD timeline geometry, keeps my power grid stable, and gives me the configuration space I need to interface smoothly with the Teensy 4.1.
 
+The previous configuration though ₹2,388 more expensive, was actually better.
 
-Journaled days #65 (full), # 66
+Journaled days #65 (full), and #66 (partly)
 
 Day #65
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dec669e3-9dd0-4c97-aa50-38914e6f2a53" />
 
-Day #66
+Day #66 (partly)
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/af5a04d4-897e-487d-978f-16815c5f1f7b" />
 
+After today, these days are left to be journaled:
 
-Here's the lapse of today's session: [PATRA-LPS-57-D77]()
+* Day #37
+* Day #41
+* Day #42
+* Day #43
+* Day #44
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+* Day #66 (partly)
 
-**Total time spent: 0h 00m**
+Here's the lapse of today's session: [PATRA-LPS-57-D77](https://lapse.hackclub.com/timelapse/8T-JtHAdSQJ7)
+
+**Total time spent: 3h 40m**
 
 ---
