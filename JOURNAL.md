@@ -2463,15 +2463,15 @@ Here's the lapse of today's session: [PATRA-LPS-45-D65](https://lapse.hackclub.c
 
 https://www.machinedesign.com/mechanical-motion-systems/linear-motion/article/21834576/how-to-design-a-linear-motion-system
 
-1
-2
-3
-4
-5
+1 
+2 
+3 
+4 
+5 
 6 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5cd33405-bd61-458d-a9bf-d73182a85774" />
 7 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f72d7092-bd3a-4c89-b52f-bcbf1907715c" />
 8 
-9
+9 
 10 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1dccc36f-fdf6-4703-9b61-e1f12badbc59" />
 11 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d800753-63f4-4c2c-90cb-6adf21710cad" />
 
@@ -2899,39 +2899,39 @@ Day #69
 
 Just our of curiosity, I wanted to see the mountain of work I have left behind. These are the days containing an [incomplete] or missing journal body tag:
 
-* Day 29
-* Day 30
-* Day 31
-* Day 36
-* Day 37
-* Day 41
-* Day 42
-* Day 43
-* Day 44
-* Day 45
-* Day 46
-* Day 47
-* Day 48
-* Day 49
-* Day 50
-* Day 51
-* Day 52
-* Day 53
-* Day 54
-* Day 55
-* Day 56
-* Day 57
-* Day 58
-* Day 59
-* Day 60
-* Day 61
-* Day 62
-* Day 63
-* Day 64
-* Day 65
-* Day 66
-* Day 67
-* Day 68
+* Day #29
+* Day #30
+* Day #31
+* Day #36
+* Day #37
+* Day #41
+* Day #42
+* Day #43
+* Day #44
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+* Day #65
+* Day #66
+* Day #67
+* Day #68
 
 I really really need to journal more. I have decided to journal every single day before I procced with the design. This is because, the older they get, the more I forget. Despite having all of them lapsed, I couldn't ask myself about my own design and how it happened in the future. Also, journaling is extremely necessary for the Forge program.
 
@@ -2967,36 +2967,36 @@ Day #68 (partly)
 
 After today, these days are left to be journaled:
 
-* Day 31
-* Day 36
-* Day 37
-* Day 41
-* Day 42
-* Day 43
-* Day 44
-* Day 45
-* Day 46
-* Day 47
-* Day 48
-* Day 49
-* Day 50
-* Day 51
-* Day 52
-* Day 53
-* Day 54
-* Day 55
-* Day 56
-* Day 57
-* Day 58
-* Day 59
-* Day 60
-* Day 61
-* Day 62
-* Day 63
-* Day 64
-* Day 65
-* Day 66
-* Day 68 (partly)
+* Day #31
+* Day #36
+* Day #37
+* Day #41
+* Day #42
+* Day #43
+* Day #44
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+* Day #65
+* Day #66
+* Day #68 (partly)
 
 Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR) and [PATRA-LPS-55-D75-2](https://lapse.hackclub.com/timelapse/Ef9ur-75vopq)
 
@@ -3026,33 +3026,33 @@ Day #68 (full)
 
 After today, these days are left to be journaled:
 
-* Day 37
-* Day 41
-* Day 42
-* Day 43
-* Day 44
-* Day 45
-* Day 46
-* Day 47
-* Day 48
-* Day 49
-* Day 50
-* Day 51
-* Day 52
-* Day 53
-* Day 54
-* Day 55
-* Day 56
-* Day 57
-* Day 58
-* Day 59
-* Day 60
-* Day 61
-* Day 62
-* Day 63
-* Day 64
-* Day 65 (partly)
-* Day 66
+* Day #37
+* Day #41
+* Day #42
+* Day #43
+* Day #44
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+* Day #65 (partly)
+* Day #66
 
 Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.com/timelapse/YCfkx4a_ljDg)
 
