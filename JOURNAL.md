@@ -2596,7 +2596,7 @@ Next I wanted to add all the 3D print files in the design from the top to down (
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/976b0b3e-e5ce-4950-9781-f975f75a915e" />
 
-
+The problem is that 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/638046b6-1eb7-4b91-a038-f78c38cd407e" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/890f444b-4278-40e0-b319-3777153857f1" />
