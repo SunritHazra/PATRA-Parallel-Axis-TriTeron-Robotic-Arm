@@ -2473,6 +2473,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹612.90 / \$6.49
    * Vendor: MISUMI
    * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/94be776d-6d84-4284-af5a-197fdc3fb140" />
 
 2. **HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion**
@@ -2481,6 +2482,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹5,190.40 / \$54.93
    * Vendor: MISUMI
    * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9d85ff4f-0771-4d1c-a127-773dea816ec4" />
 
 3. **MGN15H Linear Guide Rail 1m**
@@ -2489,6 +2491,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹5,458.00 / \$57.76
    * Vendor: Robu
    * Link: [Product Page](https://robu.in/product/mgn15h-linear-guide-rail-1m-2)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b952b04e-0f70-4246-bddd-4552fc0ffefd" />
 
 4. **MGN15H Sliding Block**
@@ -2497,6 +2500,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹2,716.00 / \$28.74
    * Vendor: Robu
    * Link: [Product Page](https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/31c85b91-9b5f-49bc-8718-06b7929c3ac6" />
 
 5. **Belt E-GBN22505GT-150 (X & Y)**
@@ -2505,6 +2509,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹2,451.26 / \$25.94
    * Vendor: MISUMI
    * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/94d2fe0a-72d2-4dea-b9f4-67de51758d4c" />
 
 6. **Belt E-GBN26005GT-150 (Z)**
@@ -2513,6 +2518,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹1,400.77 / \$14.82
    * Vendor: MISUMI
    * Link: [Product Page](https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ea9154e6-7268-4b6f-8c10-bb00d705352c" />
 
 7. **Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)**
@@ -2521,6 +2527,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: \$12.12
    * Vendor: JLCMC
    * Link: [Product Page](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12)
+   
    <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5cd33405-bd61-458d-a9bf-d73182a85774" />
 
 8. **Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)**
@@ -2529,6 +2536,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: \$5.99
    * Vendor: JLCMC
    * Link: [Product Page](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/af8a6dbe-b803-4574-8b4b-a7b754034eed" />
 
 9. **6901ZZ Bearing (Pack of 4)**
@@ -2537,6 +2545,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
    * Total Price: ₹717.00 / \$7.59
    * Vendor: Robu
    * Link: [Product Page](https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/)
+   
    <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b6638145-4234-41d6-a94f-33abda147f93" />
 
 10. **Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)**
@@ -2545,6 +2554,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
     * Total Price: ₹10,647.00 / \$112.68
     * Vendor: Robu
     * Link: [Product Page](https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/)
+	
 	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/210f67e1-373d-4121-af42-0cd852787129" />
 
 11. **Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)**
@@ -2553,6 +2563,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
     * Total Price: ₹8,158.00 / \$86.34
     * Vendor: Robu
     * Link: [Product Page](https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/)
+	
 	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/93a5788a-c388-4ec2-baee-388f59166f1d" />
 
 12. **Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)**
@@ -2561,6 +2572,7 @@ After reading that a little, I went to Fusion to one-by-one confirm the parts of
     * Total Price: ₹5,399.00 / \$57.14
     * Vendor: Robu
     * Link: [Product Page](https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/)
+	
 	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/097f4819-3550-4bcd-8511-ec3f06ca40c4" />
 
 Then I made two major changes to the BOM:
@@ -2581,6 +2593,9 @@ Here is the hierarchy of KBM for clarification:
 I don't know if I have mentioned this before or not, but this is based on the assembly sequence I imagined in my Cerebrum. First the extrusions, then end plates, then linear guides, then the tensioning systems, and then finally the motors.
 
 Next I wanted to add all the 3D print files in the design from the top to down (as in Fusion Browser). As there was no 3D print files in the Aluminum Extrusions, I was about to start the confirmation directly from End Plates, but then I noticed a slight mistake with the model and made a clever realization after my model got flagged for Printing Risk in JLC3DP.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/976b0b3e-e5ce-4950-9781-f975f75a915e" />
+
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/638046b6-1eb7-4b91-a038-f78c38cd407e" />
 
