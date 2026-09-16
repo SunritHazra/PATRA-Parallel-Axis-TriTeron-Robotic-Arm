@@ -3197,7 +3197,7 @@ The numbers came out to:
 * Setup 2 (Integrated All-in-one Motors): ₹17,737 INR total
 
 After asking Google which one was better this distinction came out:
-
+(written by ai. i will change this)
 | System Parameter | Setup 1: Discrete Layout (₹20,125) | Setup 2: Integrated Layout (₹17,737) |
 |---|---|---|
 | Components | 3x Discrete T60S Drivers + 2x 57AM23ED + 1x 57AM30ED | 2x Integrated IT57AM23 + 1x Integrated IT57AM30 |
