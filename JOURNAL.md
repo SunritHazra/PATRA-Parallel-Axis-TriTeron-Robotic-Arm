@@ -1,7 +1,7 @@
 ---
 Title: PATRA (Parallel Axis TriTeron Robotic Arm)
 Author: Sunrit Hazra
-Description: An open-spurce 9 DOF hybrid robot architecture of a kinematically linear 3 DOF parallel axis triteron system and a 6 DOF serial robotic arm.
+Description: An open-source nine degrees of freedom hybrid robot architecture of a kinematically linear three degrees-of-freedom triple axis manipulator system and a six degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
 Kinematic Base Module (KBM) Progress: "91%"
