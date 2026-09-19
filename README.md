@@ -6,7 +6,7 @@
 
  The project focuses not only on the final robot, but also on documenting the engineering process used to develop it. Its development records include mechanical design iterations, kinematic calculations, component selection, manufacturing constraints, sourcing decisions, and design-for-manufacturing (DFM) studies.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/595b11b4-895e-46de-bdb0-0ff063add276" />
+<img width="1366" height="733" alt="PATRA Phase 1" src="https://github.com/user-attachments/assets/c9071fa8-9407-444e-9aa6-5c4eab8c5069" />
 
  ## System architecture
 
