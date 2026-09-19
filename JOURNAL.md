@@ -1,17 +1,21 @@
 ---
+Title: "PATRA (Parallel Axis TriTeron Robotic Arm)"
+Author: "Sunrit Hazra"
+Description: "An open-source nine degrees of freedom hybrid robot architecture of a kinematically linear three degrees-of-freedom triple axis manipulator system and a six degrees-of-freedom serial robotic arm."
+Created on: "2026-05-02"
+PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
+---
 
-Title: PATRA (Parallel Axis TriTeron Robotic Arm)
-Author: Sunrit Hazra
-Description: An open-source nine degrees of freedom hybrid robot architecture of a kinematically linear three degrees-of-freedom triple axis manipulator system and a six degrees-of-freedom serial robotic arm.
-Created on: 02-05-2026
-Started on: 10-04-2026
+Progress:
+
+---
+Started on: "10-04-2026"
 Kinematic Base Module (KBM) Progress: "91%"
 TriTeron Robot Module (TRM) Progress: "62%"
 Robotic Arm Module (RAM) Progress: "1%"
 Electronic Components Progress: "10%"
 Overall Progress: "41%"
-PC (Laptop) Used: ASUS Vivobook 15 X540UAR
-
+Note: "There are several incomplete journals, containing an [incomplete] tag. Kindly take them as under-construction and don't judge the project on its basis." 
 ---
 
 # Day 0: Flashback
@@ -1938,7 +1942,7 @@ comparison
 
 https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion-driven/
 
-Here's the lapse of today's session: [PATRA-LPS-26-D46](PATRA-LPS-26-D46)
+Here's the lapse of today's session: [PATRA-LPS-26-D46](https://lapse.hackclub.com/timelapse/grXv6KJjtiJW)
 
 **Total time spent: 5h 10m**
 
@@ -3062,7 +3066,7 @@ Just our of curiosity, I wanted to see the mountain of work I have left behind. 
 
 I really really need to journal more. I have decided to journal every single day before I procced with the design. This is because, the older they get, the more I forget. Despite having all of them lapsed, I couldn't ask myself about my own design and how it happened in the future. Also, journaling is extremely necessary for the Forge program.
 
-Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2]()
+Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2](https://lapse.hackclub.com/timelapse/qqMeSTM1PuAL)
 
 **Total time spent: 3h 40m**
 
@@ -3125,7 +3129,7 @@ After today, these days are left to be journaled:
 * Day #66
 * Day #68 (partly)
 
-Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR) and [PATRA-LPS-55-D75-2](https://lapse.hackclub.com/timelapse/Ef9ur-75vopq)
+Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackclub.com/timelapse/_7Ws1jnbmd8j) and [PATRA-LPS-55-D75-2](https://lapse.hackclub.com/timelapse/Ef9ur-75vopq)
 
 **Total time spent: 3h 40m**
 
@@ -3187,7 +3191,7 @@ Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.c
 
 ---
 
-# Day 77 — 14.09.2026: Journaling [incomplete]
+# Day 77 — 14.09.2026: Journaling & Reconsidering Motor Setup
 
 While journaling day #66 in the motor section, I randomly came across integrated motors and started comparing them to my discrete driver setup.
 
@@ -3197,17 +3201,17 @@ The numbers came out to:
 * Setup 2 (Integrated All-in-one Motors): ₹17,737 INR total
 
 After asking Google which one was better this distinction came out:
-(written by ai. i will change this)
+
 | System Parameter | Setup 1: Discrete Layout (₹20,125) | Setup 2: Integrated Layout (₹17,737) |
 |---|---|---|
 | Components | 3x Discrete T60S Drivers + 2x 57AM23ED + 1x 57AM30ED | 2x Integrated IT57AM23 + 1x Integrated IT57AM30 |
-| Max Voltage | 68V DC (Massive safety headroom) | 50V DC (Strict absolute maximum limit) |
-| 48V PSU Margin | Safe and stable for the 48V Mean Well rail | Dangerous edge (High risk of blowing chips) |
-| Fusion 360 Fit | Flawless fit for standard NEMA 23 profiles | Interference (Driver block hits custom mount brackets) |
+| Max Voltage | 68V DC | 50V DC |
+| 48V PSU Margin | Safe and stable for PSU | Dangerous edge for PSU |
+| Location | Need to be placed somewhere else in a case | Stays at the back of the motors |
 | Loop Tuning | PC Software Config via RTConfigurator | None (Strictly limited to hardware DIP switches) |
 | Failure Isolation | Excellent (Can replace just the independent driver block) | Poor (If driver fries, the entire motor is junk) |
 
-I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V, providing solid safety headroom, while the integrated units cap out strictly at 50V and will fry the onboard chips.
+I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V instead. Thus providing solid safety headroom.
 
 Rtelligent IT57AM23 https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-23nm-holding-torque-it57am23/
 
@@ -3267,12 +3271,26 @@ Here's the lapse of today's session: [PATRA-LPS-57-D77](https://lapse.hackclub.c
 
 ---
 
-# Day 78 — 19.10.2026: [incomplete]
+# Day 78 — 19.10.2026: Almost Completing the BOM [incomplete]
 
+Just two days prior to my exam I thought of almost completing the Bill of Materials. I made several changes to the existing BOM.
+	
+<img width="2187" height="1216" alt="image" src="https://github.com/user-attachments/assets/6692d489-9fe0-4a05-aa95-1ec85da8ad22" />
 
+I also classified my project into three distinct phases:
+
+1. PATRA Phase 1: KBM + TRM with no CNC machined parts. Budget $1000. High confidence on budget as it is mostly calculated.
+2. PATRA Phase 2: KBM + TRM with CNC machined parts Budget $2000 (extra $1000). Budget is made up of realistic estimates and online quote averages.
+3. PATRA Phase 3: KBM + TRM + RAM with CNC machined parts after testing with 3d printed parts. Budget $5000 (extra $3000). Budget is pure estimate.
+
+Created a new phase one file:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/28cb7c59-ea07-493a-ac84-0efa363861a8" />
+
+I also fixed some broken lapses. Thanks to fellow Hack Clubber duck for helping me find it out.
 
 Here's the lapse of today's session: [PATRA-LPS-58-D78]()
 
-**Total time spent: 2h 10m**
+**Total time spent: 3h 00m**
 
 ---
