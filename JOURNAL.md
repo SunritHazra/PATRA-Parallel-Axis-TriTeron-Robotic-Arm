@@ -3267,26 +3267,12 @@ Here's the lapse of today's session: [PATRA-LPS-57-D77](https://lapse.hackclub.c
 
 ---
 
-# Day 78 — 19.10.2026: Almost Completing the BOM [incomplete]
+# Day 78 — 19.10.2026: [incomplete]
 
-Just two days prior to my exam I thought of almost completing the Bill of Materials. I made several changes to the existing BOM.
-	
-<img width="2187" height="1216" alt="image" src="https://github.com/user-attachments/assets/6692d489-9fe0-4a05-aa95-1ec85da8ad22" />
 
-I also classified my project into three distinct phases:
-
-1. PATRA Phase 1: KBM + TRM with no CNC machined parts. Budget $1000. High confidence on budget as it is mostly calculated.
-2. PATRA Phase 2: KBM + TRM with CNC machined parts Budget $2000 (extra $1000). Budget is made up of realistic estimates and online quote averages.
-3. PATRA Phase 3: KBM + TRM + RAM with CNC machined parts after testing with 3d printed parts. Budget $5000 (extra $3000). Budget is pure estimate.
-
-Created a new phase one file:
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/28cb7c59-ea07-493a-ac84-0efa363861a8" />
-
-I also fixed some broken lapses. Thanks to fellow Hack Clubber duck for helping me find it out.
 
 Here's the lapse of today's session: [PATRA-LPS-58-D78]()
 
-**Total time spent: 3h 00m**
+**Total time spent: 2h 10m**
 
 ---
