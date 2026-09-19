@@ -3284,10 +3284,12 @@ Created a new phase one file:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/28cb7c59-ea07-493a-ac84-0efa363861a8" />
 
+I reviewed my Emergent Ventures proposal and finalized it.
+
 I also fixed some broken lapses. Thanks to fellow Hack Clubber duck for helping me find it out.
 
-Here's the lapse of today's session: [PATRA-LPS-58-D78]()
+Here's the lapse of today's session: [PATRA-LPS-58-D78](https://lapse.hackclub.com/timelapse/J5WCGaXc-DjG)
 
-**Total time spent: 3h 00m**
+**Total time spent: 5h 00m**
 
 ---
