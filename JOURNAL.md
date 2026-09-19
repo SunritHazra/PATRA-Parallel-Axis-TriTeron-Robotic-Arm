@@ -1938,7 +1938,7 @@ comparison
 
 https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion-driven/
 
-Here's the lapse of today's session: [PATRA-LPS-26-D46](https://lapse.hackclub.com/timelapse/grXv6KJjtiJW)
+Here's the lapse of today's session: [PATRA-LPS-26-D46](PATRA-LPS-26-D46)
 
 **Total time spent: 5h 10m**
 
@@ -3062,7 +3062,7 @@ Just our of curiosity, I wanted to see the mountain of work I have left behind. 
 
 I really really need to journal more. I have decided to journal every single day before I procced with the design. This is because, the older they get, the more I forget. Despite having all of them lapsed, I couldn't ask myself about my own design and how it happened in the future. Also, journaling is extremely necessary for the Forge program.
 
-Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2](https://lapse.hackclub.com/timelapse/qqMeSTM1PuAL)
+Here're the lapses of today's session: [PATRA-LPS-54-D74-1](https://lapse.hackclub.com/timelapse/JHAkLwwLItsD) and [PATRA-LPS-54-D74-2]()
 
 **Total time spent: 3h 40m**
 
@@ -3125,7 +3125,7 @@ After today, these days are left to be journaled:
 * Day #66
 * Day #68 (partly)
 
-Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackclub.com/timelapse/_7Ws1jnbmd8j) and [PATRA-LPS-55-D75-2](https://lapse.hackclub.com/timelapse/Ef9ur-75vopq)
+Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackclub.com/timelapse/hbXuvaWEzDlR) and [PATRA-LPS-55-D75-2](https://lapse.hackclub.com/timelapse/Ef9ur-75vopq)
 
 **Total time spent: 3h 40m**
 
@@ -3187,7 +3187,7 @@ Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.c
 
 ---
 
-# Day 77 — 14.09.2026: Journaling & Reconsidering Motor Setup
+# Day 77 — 14.09.2026: Journaling [incomplete]
 
 While journaling day #66 in the motor section, I randomly came across integrated motors and started comparing them to my discrete driver setup.
 
@@ -3197,17 +3197,17 @@ The numbers came out to:
 * Setup 2 (Integrated All-in-one Motors): ₹17,737 INR total
 
 After asking Google which one was better this distinction came out:
-
+(written by ai. i will change this)
 | System Parameter | Setup 1: Discrete Layout (₹20,125) | Setup 2: Integrated Layout (₹17,737) |
 |---|---|---|
 | Components | 3x Discrete T60S Drivers + 2x 57AM23ED + 1x 57AM30ED | 2x Integrated IT57AM23 + 1x Integrated IT57AM30 |
-| Max Voltage | 68V DC | 50V DC |
-| 48V PSU Margin | Safe and stable for PSU | Dangerous edge for PSU |
-| Location | Need to be placed somewhere else in a case | Stays at the back of the motors |
+| Max Voltage | 68V DC (Massive safety headroom) | 50V DC (Strict absolute maximum limit) |
+| 48V PSU Margin | Safe and stable for the 48V Mean Well rail | Dangerous edge (High risk of blowing chips) |
+| Fusion 360 Fit | Flawless fit for standard NEMA 23 profiles | Interference (Driver block hits custom mount brackets) |
 | Loop Tuning | PC Software Config via RTConfigurator | None (Strictly limited to hardware DIP switches) |
 | Failure Isolation | Excellent (Can replace just the independent driver block) | Poor (If driver fries, the entire motor is junk) |
 
-I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V instead. Thus providing solid safety headroom.
+I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V, providing solid safety headroom, while the integrated units cap out strictly at 50V and will fry the onboard chips.
 
 Rtelligent IT57AM23 https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-23nm-holding-torque-it57am23/
 
