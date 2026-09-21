@@ -11,7 +11,7 @@ Robotic Arm Module (RAM) Progress: "1%"
 Electronic Components Progress: "10%"
 Overall Progress: "41%"
 PC (Laptop) Used: ASUS Vivobook 15 X540UAR
-Note: "There are several incomplete journals, containing an [incomplete] tag. Kindly take them as under-construction and don't judge the project on its basis." 
+Important Note: "There are several incomplete journals, containing an [incomplete] tag. Kindly take them as under-construction and don't judge the project on its basis." 
 
 ---
 
