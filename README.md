@@ -1,6 +1,6 @@
 # PATRA: Parallel Axis TriTeron Robotic Arm
 
- **PATRA (Parallel Axis TriTeron Robotic Arm)** is an open-source robotic system developed by Sunrit Hazra as part of the Hack Club Forge program. The project combines a three-degree-of-freedom (3-DOF) parallel-axis mechanism, based on the TriTeron concept, with a six-degree-of-freedom (6-DOF) serial robotic arm.
+ **PATRA (Parallel Axis TriTeron Robotic Arm)** is an open-source robotic system developed by Sunrit Hazra as part of the **Hack Club Forge** program. The project combines a three-degree-of-freedom (3-DOF) parallel-axis mechanism, based on the TriTeron concept, with a six-degree-of-freedom (6-DOF) serial robotic arm.
 
  The system is designed to provide approximately 1 metre of linear movement while carrying a target payload of 2 kg. Unlike a conventional industrial seventh-axis system, which generally provides a single additional translational degree of freedom, PATRA uses a three-axis parallel mechanism to move the robotic arm across a larger workspace.
 
