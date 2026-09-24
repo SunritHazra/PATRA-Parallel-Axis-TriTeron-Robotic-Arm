@@ -13,7 +13,7 @@ Overall Progress: "41%"
 PC (Laptop) Used: ASUS Vivobook 15 X540UAR
 Important Note: "There are several incomplete journals, containing an [incomplete] tag. Kindly take them as under-construction and don't judge the project on its basis." 
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA, Emergent Ventures"
-Helped by: "Dan Rudmin (Zaber Technologies Inc.), Rowan Hunt (Not an Engineer)"
+Helped by: "Dan Rudmin (Zaber Technologies Inc.), Rowan Hunt (Not An Engineer)"
 
 ---
 
