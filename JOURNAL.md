@@ -1708,9 +1708,9 @@ Here's the lapse of today's session: [PATRA-LPS-16-D36](https://lapse.hackclub.c
 
 ---
 
-# Day 37 — 16.06.2026: Research on the Robotic Arm
+# Day 37 — 16.06.2026: Research on the Robotic Arm [incomplete]
 
-[incomplete]
+
 
 Here are the lapses of today's session: [PATRA-LPS-17-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-17-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
 
@@ -1796,11 +1796,9 @@ Here's the lapse of today's session: [PATRA-LPS-20-D40](https://lapse.hackclub.c
 
 ---
 
-# Day 41 — 22.06.2026: Writing Past Missed Journals
+# Day 41 — 22.06.2026: Writing Past Missed Journals [incomplete]
 
 Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.com/timelapse/CF6H7YTcu3rX)
-
-[incomplete]
 
 **Total time spent: 0h 30m**
 
@@ -3593,8 +3591,38 @@ Alongside the journaling, I also added supports for motors, which will prevent t
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/86de543e-bd9d-4bce-9ebc-12cb1e270345" />
 
+After today, these days are left to be journaled:
+
+* Day #37
+* Day #41
+* Day #42
+* Day #43
+* Day #44
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
 Here's the lapse of today's session: [PATRA-LPS-59-D79](https://lapse.hackclub.com/timelapse/JpZZQGepYBA-)
 
 **Total time spent: 4h 50m**
 
 ---
+
+# Day 80 — 06.10.2026: 
