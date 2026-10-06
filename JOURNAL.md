@@ -1708,17 +1708,41 @@ Here's the lapse of today's session: [PATRA-LPS-16-D36](https://lapse.hackclub.c
 
 ---
 
-# Day 37 — 16.06.2026: Research on the Robotic Arm [incomplete]
+# Day 37 — 16.06.2026: Research on the Robotic Arm & Journaling
 
+Today's session was about the research for the robotic arm prior to its development. I have never built a 6 DoF robotic arm before. So, I had a lot to learn about. I honestly had no idea how and where to start from. I understood how a robotic arm worked, but to make it, I had to know piece by piece where everything goes.
 
+On the last session, I did some research on robotic arm and even started making changes to the tool head. But honestly, I was not sure of what to do. So, I decided to look at the assembly of a robotic arm, specifically the first axis, which is the base. I asked Gemini and Google AI to suggest me how to do it, and learn from sources available on the internet. I looked at the first joint of the Mecademic Meca500 as well. 
+
+I found this very helpful image, that helped me understand what's actually inside a robotic and arm, especially the J1 axis.
+
+<img width="601" height="465" alt="image" src="https://github.com/user-attachments/assets/00982bd2-8e66-4112-83e7-e920fb8a0f73" />
+
+This is when I came across reduction gears and their types like harmonic drives (strain wave gears), cycloidal drives, and planetary gears. As I came across those terms, I read about them and found out that even a small 1:100 ratio harmonic reducer easily costs above $1000. This completely obliterated my $500 budget. I had no way to create a robotic arm with repeatability even as near as the Meca500 which costs nearly $17,000.
+
+That's when I told Gemini that my budget was $500. It suggested to study open-source projects like Chis Annin's AR3/AR4, and use 3D printed reducers. I visited [this](https://anninrobotics.com/?srsltid=AU7gw4WvadCKGb7SmFR21GSa32zT4K--aYFWro0ZE4hX9_rZg5PPhz1U) site and looked at the numbers and realised that this costs nearly $2000, which is four times my budget. I also visited [the repo](https://github.com/Annin-Robotics/ar4_ros_driver). 
+
+<img width="1366" height="767" alt="image" src="https://github.com/user-attachments/assets/f9291aa8-7843-4582-bd6e-bec5cd72e4bf" />
+
+Of course, I was not looking forward to buy it, but since it is an open-source project, I expected the cost to represent the actual price of making that. Added with customs on parts, it seemed like the cost for the arm could reach over $2800. I needed to choose a motor for the first axis. I decided to choose equivalent of the [J1 motor 17HS15-1684D-EG10-AR4](https://www.omc-stepperonline.com/nema-17-stepper-motor-with-high-precision-gearbox-gear-ratio-10-1-magnetic-encoder-1000ppr-4000cpr-17hs15-1684d-eg10-ar4) used in the AR4. But I didn't find any equivalent, that could at least give me a cost with the customs included or without any. I also looked at [PAROL6](https://github.com/Source-Robotics/PAROL6-Desktop-robot-arm) which costs from $1500 for DIY parts to beyond $4200 for a fully assembled unit from [Source Robotics](https://source-robotics.com/). 
+
+Then without thinking too much about the cost, I decided to actually start building. So, I imported a NEMA 23 of length 76 mm and created a new design in Fusion for the robotic arm. For the harmonic reducer, I was thinking of 3D printing it. I found [this](https://cults3d.com/en/3d-model/tool/3d-printed-nema-23-strain-wave-gear-harmonic-drive?srsltid=AU7gw4Vz6yzDp2YuxYMDzJequ8GJrG8rhCzQnUTZiu4mZjdzcvdn7gwb) model that I can print for NEMA 23. But then suddenly I realised that it was a lot better to visualize how a harmonic drive works before actually working on it. I not only watched a YouTube but I also read about it in Wikipedia.
+
+But, even after all that, I felt like I knew nothing. So, I asked Gemini to make a plan for me. I never read it.
+
+I also journaled day #21 (partly)
+
+Day #21
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/90342024-8061-48ab-89eb-2856495c4808" />
 
 Here are the lapses of today's session: [PATRA-LPS-17-D37-1](https://lapse.hackclub.com/timelapse/zAi2jDNiKqpI) and [PATRA-LPS-17-D37-2](https://lapse.hackclub.com/timelapse/Pgd6fTYl6KDr)
 
-**Total time spent: 3h 00m**
+**Total time spent: 3h 15m**
 
 ---
 
-# Day 38 — 17.06.2026: Writing Past Missed Journals
+# Day 38 — 17.06.2026: Journaling
 
 Journaled the days #21 and #22 (partly).
 
@@ -1736,7 +1760,7 @@ Here's the lapse of today's session: [PATRA-LPS-18-D38](https://lapse.hackclub.c
 
 ---
 
-# Day 39 — 18.06.2026: Writing Past Missed Journals
+# Day 39 — 18.06.2026: Journaling
 
 Journaled the days #22 (full), #23, #24, #25 (partly) and #26 (partly).
 
@@ -1766,7 +1790,7 @@ Here are the lapses of today's session: [PATRA-LPS-19-D39-1](https://lapse.hackc
 
 ---
 
-# Day 40 — 20.06.2026: Writing Past Missed Journals
+# Day 40 — 20.06.2026: Journaling
 
 Journaled the days #25, #26, #27, #28 and #29.
 
@@ -1796,7 +1820,13 @@ Here's the lapse of today's session: [PATRA-LPS-20-D40](https://lapse.hackclub.c
 
 ---
 
-# Day 41 — 22.06.2026: Writing Past Missed Journals [incomplete]
+# Day 41 — 22.06.2026: Journaling
+
+Journaled day #29
+
+Day #29 (partly)
+
+<img width="1365" height="731" alt="image" src="https://github.com/user-attachments/assets/4b1becd9-5eeb-44b8-8a35-9a9120d000ac" />
 
 Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.com/timelapse/CF6H7YTcu3rX)
 
@@ -1804,27 +1834,37 @@ Here's the lapse of today's session: [PATRA-LPS-21-D41](https://lapse.hackclub.c
 
 ---
 
-# Day 42 — 18.07.2026: Fixing the Broken Dimensions [incomplete]
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c7d347d-5a53-4090-8d1a-cdf71db3ba13" />
+# Day 42 — 18.07.2026: Fixing the Broken Dimensions of the TriTeron Robot Module (TRM)
 
 Throughout the design, there were broken dimensions. There were asymmetrical bodies, off center midpoints, asymmetrical angles and off center components. I was not aware of the asymmetries in existence in the design, so I had decided to fix every dimension one-by-one as I discover them in real time.
 
-1. The first one I fixed was the Tool Head, which had asymmetrical dimensions and off center position. The width of the Tool head was supposed to be 100 mm but it was actually 100.09016915 mm. This made the body asymmetrical and had potential for various issues in future for downstream features for sketches and modifications. In order to fix this, I first split the Tool Head body into two parts using the XZ plane as the splitting tool. Then I extruded out the bigger side by the dimension which was the average of their asymmetry, then moved the wider and thinner side to reach the XZ plane at exact coordinates. Then finally I combined them and adjusted the bodies in the Browser. This was caused most likely due to accidental upstream Capture Positions after having dragged them out of position accidentally.  
+1. **Asymmetrical Tool Head:** The first one I fixed was the Tool Head, which had asymmetrical dimensions and off center position. The width of the Tool head was supposed to be 100 mm but it was actually 100.09016915 mm. This made the body asymmetrical and had potential for various issues in future for downstream features for sketches and modifications. In order to fix this, I first split the Tool Head body into two parts using the XZ plane as the splitting tool. Then I extruded out the bigger side by the dimension which was the average of their asymmetry, then moved the wider and thinner side to reach the XZ plane at exact coordinates. Then finally I combined them and adjusted the bodies in the Browser. This was caused most likely due to accidental upstream Capture Positions after having dragged them out of position accidentally.  
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f19d21e-3ccd-4697-8760-e6ba84fcf4d2" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f19d21e-3ccd-4697-8760-e6ba84fcf4d2" />
+		
+2. **Asymmetrical Distance between X and Y Upper Legs and Tool Head Flat Face:** Next was the distance between the Y Upper Leg to the Tool Head lower left back face. It was supposed to be exactly 1 mm but in the design the distance is 0.93620373 mm, unlike the X Upper leg, which had exact 1 mm distance. To fix this, I went back in timeline and tried to find at what point were the distances disrupted. I found the Position Capture feature but it caused various Errors and Warnings downstream (of course). After deleting several different Capture Positions and seeing what they do, I found the culprit and fixed the problem. But even after finding the culprit, it wasn't going to solve the problem, so I decided to fix one side of the problem, which means: deleting the x-axis legs and duplicating the Y axis legs using the Mirror Tool to mimic the correct distance, making the whole system symmetrical. I had only deleted the X axis legs, not their joints, but I was not going to use them because the joints were not in the right position. I had to find a way to work with those and position them correctly. For that, I first removed the joints and then used joints manually to position them correctly with the mirrored legs. 
 
-2. Next was the distance between the Y Upper Leg to the Tool Head lower left back face. It was supposed to be exactly 1 mm but in the design the distance is 0.93620373 mm, unlike the X Upper leg, which had exact 1 mm distance. To fix this, I went back in timeline and tried to find at what point were the distances disrupted. I found the Position Capture feature but it caused various Errors and Warnings downstream (of course).
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/265e7d62-c907-48f8-8384-6bba19f9d5dc" />
 
+3. **Off-center Distal Joints in X and Y Legs:** While working with the asymmetrical distance between the X and Y upper legs of the toolhead flat face, I noticed that the connection between the upper and lower parts of the X and Y legs is was off-center. In order to fix this problem, I went back in the timeline to check when exactly it happened. When I was unsuccessful in finding out when it happened, I took the present design and then removed some joints in the lower part of the leg and X and Y axis Mount. After that, I added new joints between the parts where the problem was, and then I continued adding the joints that I had removed. 
 
+	<img width="1364" height="733" alt="image" src="https://github.com/user-attachments/assets/a1176344-0d3b-45de-b892-72fd23411512" />
 
+4. **Horizontal Asymmetry in the position of the X and Y Axis Mounts:** When I was fixing the opt center distal joints, in that part, there was another problem that came up, which was the asymmetrical positioning of the X and Y mounts. To fix this problem, I first tried moving it and then seeing how it affects the position of the overall TriTeron. I tried locking some parts of the TriTeron down so that only the parts that were asymmetrical would move, but it did not work. I even tried changing the angles between the joints of the TriTeron, but it did not work. After that, I used part of the solution of the first problem and the second problem, which was mirroring the correct part and deleting the old part, and then having everything fixed. 
 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ecbb1d55-116f-460a-aa91-e5334fb5176a" />
 
+5. **Asymmetrical Distance between the Two Vertical Ends of the NUTCRACKER Negative Body:** The distance between the two ends of the negative body is supposed to be exactly 9.5 mm but I noticed that instead the distance was 9.501 mm. It felt like I could just reduce the distance by 0.001 mm but the problem was deeper than that. The distance between the two ends of the nut itself was supposed to be 6 mm but it was 6.001 mm so I had to fix this. I did this by moving the faces. I had also tried to alter the geometry of the NUTCRACKER itself by going back in the timeline, but it did not work well. Also, there were unnecessary splits in the hole, which I fixed by deletion in the Tool Head. 
 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a72e7a24-f4d2-45f7-9934-36e1a29cae47" />
 
+These five problems might seem quite small and insignificant to solve because they were only visual problems that didn't even bother to get noticed by our eyes in themselves (without actually scrolling inside and seeing the positions themselves and actually looking at the nanoscopic coordinates of the part). The reason why I fixed this was because I wanted my design to be completely flawless, to make sure no timeline errors occur in future.
 
+At the same time, the problems might seem quite simple as well to solve, but let me tell you, all of these five problems were solved more than once. In the process, I faced a lot of issues, and I had to repeat things and solved all problem not separately but together. And every single time it felt like everything was falling apart, but I still managed to fix most of the things that I could manage to notice.
 
+By the end of the day, this is how the design looks:
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0c7d347d-5a53-4090-8d1a-cdf71db3ba13" />
 
 Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.com/timelapse/DzR0y5DWGWK2)
 
@@ -1834,7 +1874,7 @@ Here's the lapse of today's session: [PATRA-LPS-22-D42](https://lapse.hackclub.c
 
 # Day 43 — 01.08.2026: Working on the KBM (Kinematic Base Module) [incomplete]
 
-Today was the day I decided to visit my age-long pending project and work on it just to escape late-night **Zeigarnik effects**. I had decided to first complete my other projects, and then continue this project non-stop, but I couldn't. So here I am.
+Today was the day I decided to visit my age-long pending project and work on it just to escape late-night **Zeigarnik effects**, as my Internal Assessment Exams were over. I had decided to first complete my other projects, and then continue this project non-stop, but I couldn't. So here I am.
 
 Anyways, today I am noting down some of the big decisions I have made in my mind after the last working day:
 
@@ -1844,9 +1884,15 @@ Anyways, today I am noting down some of the big decisions I have made in my mind
 
 3. **Stepper Motor Adjustments:** First let's review the stepper motor configuration which was decided earlier: Two [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) for each X & Y axes and one [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) for the Z axis. I then momentarily decided to go for all three [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) without thinking much about anything but the torque. But today, I did some research and then I decided to use closed-loop stepper motors for my system, even if it meant losing torque. I have made the decision of using Two [Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor](https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/) for each X & Y axes and one [Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor](https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/) for the Z axis. This increases the cost but ensures more precise movements.
 
-* studying linear guide using https://www.traceparts.com/en/product/item-industrietechnik-gmbh-linear-unit-gsf-8-40-r10?CatalogPath=ITEM%3A1001374067&Product=30-12112020-084688
-* used https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED for 3 nm motor model
-* https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED for 2.3 nm
+I also decided to go through the entire process of revision the Kinematic Base Module (KBM) and model whatever is left. I knew there was a lot of things left.
+
+The very first thing I did was studying a real linear actuator's inside, because till date I was not sure how to create the tensioning system. All of the parts were just floating in air. Looking thoroughly at the [Linear Unit GSF 8 40 R10](https://www.traceparts.com/en/product/item-industrietechnik-gmbh-linear-unit-gsf-8-40-r10?CatalogPath=ITEM%3A1001374067&Product=30-12112020-084688) opened my eyes like never before. I thoroughly studied the pulley/idler part and how it is held in position. Before today's session I had also watched some videos about assembly of linear actuators. Both combined taught me how to make my own. I also tried to copy and model the coupler as there was no reliable system to connect the pulley/idler case to the 4040 and 2020 extrusions.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/01b9ce06-7ac6-4cb3-ab21-0d0d49e6ee0a" />
+
+Next, I deployed the decision I had made about changing the open-loop motors to closed-loop by using:
+- [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis.
+- [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis.
 
 Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.com/timelapse/bNyyjAI7nMCC)
 
@@ -3625,4 +3671,68 @@ Here's the lapse of today's session: [PATRA-LPS-59-D79](https://lapse.hackclub.c
 
 ---
 
-# Day 80 — 06.10.2026: 
+# Day 80 — 06.10.2026: Journaling & Working on Motors
+
+I have a confession to make. I have spent a lot of time journaling in this project. Yet, I am always in a huge debt of journaling. And there is a very logical reason behind that. I do not perceive journaling to be a real progress, though I understand its importance. Due to this, I maximize the time spent in a session with actual work done. Journaling needs a lot of mental bandwidth. I really need High Bandwidth Memory (HBM) more than NVDIA. Especially the older the day is, the more the more I have to think about what I actually did. Even though it is true that there are lapses for most of the days, it still requires a lot of thinking. Even in parallel, when I open Fusion Timeline, I struggle to find the time when I did that. Even if I find it, still, there's a lot of thinking involved. 
+
+This is the reason why I have decided to stop any more progress, at least any more significant progress, before I am free from the debt of journaling. Journaling is extremely important to keep track of all my decisions. All of those days where I have not journaled are a really big burden. I don't want to be indebted by journaling. So I am deciding from now on that for every single session from now I will write down all of the important decisions I took real time, and then, after the session, put it all together.
+
+Journaled days #37, #41, #42 and #43
+
+Day #37
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f8b29a7d-0519-4d64-8580-77b2bc88ee9d" />
+
+Day #41
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/47688eae-e48c-4d5d-96ff-00e56b5288ed" />
+
+Day #42
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7a5cfd11-48d4-4726-9603-7ea31e411386" />
+
+Day #43
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/de679c69-6681-4272-ad73-07bb6895e0c0" />
+
+While journaling, I also fixed the problem I was facing on the last day. Which was the wrongly positioned motors. It was not possible to move them without disrupting the timeline. So, I removed the motors. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8ec9c6c5-f3b6-4779-980a-ba9342852a1d" />
+
+And imported new models, added appearance, and used them instead.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/76122c65-0972-4624-b4bb-a99ed7fb8dc0" />
+
+I also continued modelling the support structure for the motors, and achieved this design.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/17696cca-d531-4f20-ac4c-f59cbfd79552" />
+
+After today, these days are left to be journaled:
+
+* Day #44
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
+Here's the lapse of today's session: [PATRA-LPS-60-D80](https://lapse.hackclub.com/timelapse/6VuvPVunCxcQ)
+
+**Total time spent: 5h 20m**
+
+---
