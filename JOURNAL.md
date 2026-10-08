@@ -1890,9 +1890,9 @@ The very first thing I did was studying a real linear actuator's inside, because
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/01b9ce06-7ac6-4cb3-ab21-0d0d49e6ee0a" />
 
-Next, I deployed the decision I had made about changing the open-loop motors to closed-loop by using:
-- [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis.
+Next, I also found the closed-loop Stepper Servo models from Traceparts:
 - [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis.
+- [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis.
 
 Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.com/timelapse/bNyyjAI7nMCC)
 
@@ -1901,6 +1901,14 @@ Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.c
 ---
 
 # Day 44 — 02.08.2026: Working on the Z Axis Tensioning System [incomplete]
+
+The previous session involved making major decisions involving the Kinematic Base Module (KBM). This session involves major changes specifically for the **Z Axis Tensioning System**, by making a deep dive specifically confirm all the parts of this system, which some minor but important changes to the X and Y Axis Tensioning System.
+
+The very first thing I did was downloading the the [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis, and [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis. Then I imported them and placed them inside the design with the correct orientation, and added appearance.
+
+The next thing I did was, revising my decision about changing the X and Y axis motors from [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) to [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) and changing the Z axis motor from [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) to [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED). I knew that the former ones are open-loop and the newer ones are closed-loop, which some better holding torque.
+
+[i found that this is the first time i noticed that the clamp needs more teeth for x and y axis. after fixing that, i went for the z axis clamp]
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65aebca3-7c3d-40bd-8b3c-14c42c3d984b" />
 
@@ -3739,7 +3747,13 @@ Here's the lapse of today's session: [PATRA-LPS-60-D80](https://lapse.hackclub.c
 
 # Day 81 — 08.10.2026: Journaling
 
+I noticed that in the TriTeron, there are floating components.
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99ade5ab-e09a-4638-a764-b73443a6147d" />
+
+At a close inspection, I saw that somehow the washers are misplaced in a way that their positions in a specific Distal Joint set corresponds to the an other one in position
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a095bd84-e63d-4989-a50f-a57659b83189" />
 
 Here's the lapse of today's session: [PATRA-LPS-61-D81]()
 
