@@ -1,4 +1,5 @@
 ---
+
 Title: (PATRA Parallel Axis TriTeron Robotic Arm)
 Author: Sunrit Hazra
 Description: An open-source nine degrees of freedom hybrid robot architecture of a kinematically linear three degrees-of-freedom triple axis manipulator system and a six degrees-of-freedom serial robotic arm.
@@ -13,6 +14,7 @@ PC (Laptop) Used: ASUS Vivobook 15 X540UAR
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA, Emergent Ventures"
 Helped by: "Dan Rudmin (Zaber Technologies Inc.), Rowan Hunt (Not An Engineer)"
 Important Note: "There are several incomplete journals, containing an [incomplete] tag. Kindly take them as under-construction and don't judge the project on its basis."
+
 ---
 
 
@@ -3747,16 +3749,48 @@ Here's the lapse of today's session: [PATRA-LPS-60-D80](https://lapse.hackclub.c
 
 # Day 81 — 08.10.2026: Journaling
 
-I noticed that in the TriTeron, there are floating components.
+Journaled day #44 partly.
+
+Day #44
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/9712afb0-ee7a-4ae7-ad89-5f7534a56a77" />
+
+I noticed that in the TriTeron, there are some floating components, that must be fixed.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99ade5ab-e09a-4638-a764-b73443a6147d" />
 
-At a close inspection, I saw that somehow the washers are misplaced in a way that their positions in a specific Distal Joint set corresponds to the an other one in position
+At a closer inspection, I noticed that somehow the washers are misplaced in a way that their positions in a specific Distal Joint Set corresponds exactly to the an other washer in position. I tried looking into the timeline to see when it even happened. I tried removing components and adding new washers in the design as a copy, but it had its own problems.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a095bd84-e63d-4989-a50f-a57659b83189" />
 
-Here's the lapse of today's session: [PATRA-LPS-61-D81]()
+My practical exams still weren't over, so I had to stop.
 
-**Total time spent: 0h 00m**
+After today, these days are left to be journaled:
+
+* Day #44 (partly)
+* Day #45
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
+Here's the lapse of today's session: [PATRA-LPS-61-D81](https://lapse.hackclub.com/timelapse/NfYOcsd-JYDs)
+
+**Total time spent: 1h 05m**
 
 ---
