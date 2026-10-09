@@ -1986,7 +1986,7 @@ Here's what I did next:
 
 5. The 2.5 mm thick washers were too thick to fit between the bearings and pulleys. So, I had to find thinner ones.
 
-I then asked Google AI about my design. It said that the fact that the motor shaft hardly reaches the middle of the adapter, is a major flaw. To fix it I might had to use keyed adapters to extend the shaft and then use the adapter.
+I then asked Google AI about my design. It said that the fact that the motor shaft hardly reaches the middle of the adapter, is a major bottleneck. To fix it I might had to use keyed adapters or shaft couplers to extend the shaft and then use the adapter.
 
 Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.com/timelapse/VxiPyruOoxIk)
 
@@ -1994,21 +1994,24 @@ Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.c
 
 ---
 
-# Day 45 — 03.08.2026: IDK [incomplete]
+# Day 45 — 03.08.2026: Searching for Shaft Adapters & Shaft Couplers
 
-https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/ fail
+Today's agenda was to find the right coupler or adapter or whatever, and complete the motor part of the tensioning system as soon as possible.
 
-https://jlcmc.com/product/s/C01/CXJL/stainless-steel-high-rigidity-parallel-cut-beam-coupling-screw-fixing-screw-clamping-type
+Previously, I came to know that I had to use shaft couplers to extend the motor's shaft. But I wanted to use something like [this](https://www.amazon.in/Stepper-Adapter-Turbine-Reducer-0-31inch/dp/B09G6GW7XF) instead. This example shown is extremely overpriced, so I tried finding something similar in MISUMI and JLCMC.
 
-https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult 3 NM
+I looked at different linear actuators, as I was confused about what to do. I couldn't reliable connect the motor to the pulley as the motor's shaft is too short. But to extend it, I have to use couplers or adapters. But I didn't find any such actuator. Most of them have the adapter integrated into their design. I searched, asked AI, read datasheets, surfed for products that could potentially match, but I couldn't find what I was expecting. Maybe I was just not sure enough of what I wanted to even achieve.
 
-https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult 2.3 NM
+But after this, my brain was introduced the world of shaft couplers where each coupler is rate for a specific speed range (rpm), torque range, rigidity/flexibility, and of course a specific size and material for so many different applications. This ocean of choices added more to my preexisting confusion. But during the probably aimless surfing, here are the notable things I have found:
 
-misumi ai is crazy good. it comletely obliterated me. what i searched for hours, it found in seconds.
+1. Found [this](https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/) in Robu.in. Can't use, max torque rating too low (1.5 Nm)
+2. Found [this](https://jlcmc.com/product/s/C01/CXJL/stainless-steel-high-rigidity-parallel-cut-beam-coupling-screw-fixing-screw-clamping-type) in JLCMC.
+3. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 3 Nm motor.
+4. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 2.3 Nm motor.
 
-https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10 3 Nm 2.3 Nm both
+After all that crazy searching, I had had enough. I asked MISUMI AI to to do the job for me. And I found out that it is crazy good. It completely obliterated my endless searching, by finding exactly what I was looking for, as cheap as possible. What I searched for hours, it found in seconds. It found [this](https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10) for both 3 Nm and 2.3 Nm motors.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1fc6b16c-b004-4e69-a8d4-8bff42b8c651" />
+This session achieved something very little, but was not less hard worked than most others. But it indeed was more frustrating than most of the sessions till date.
 
 Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.com/timelapse/3knULGqZZzTa)
 
@@ -3315,7 +3318,7 @@ Here's the lapse of today's session: [PATRA-LPS-56-D76](https://lapse.hackclub.c
 
 ---
 
-# Day 77 — 14.09.2026: Journaling [incomplete]
+# Day 77 — 14.09.2026: Journaling & Reconsidering Motor Layouts
 
 While journaling day #66 in the motor section, I randomly came across integrated motors and started comparing them to my discrete driver setup.
 
@@ -3325,25 +3328,25 @@ The numbers came out to:
 * Setup 2 (Integrated All-in-one Motors): ₹17,737 INR total
 
 After asking Google which one was better this distinction came out:
-(written by ai. i will change this)
+
 | System Parameter | Setup 1: Discrete Layout (₹20,125) | Setup 2: Integrated Layout (₹17,737) |
 |---|---|---|
 | Components | 3x Discrete T60S Drivers + 2x 57AM23ED + 1x 57AM30ED | 2x Integrated IT57AM23 + 1x Integrated IT57AM30 |
-| Max Voltage | 68V DC (Massive safety headroom) | 50V DC (Strict absolute maximum limit) |
-| 48V PSU Margin | Safe and stable for the 48V Mean Well rail | Dangerous edge (High risk of blowing chips) |
+| Max Voltage | 50V DC (Strict hardware limit) | 50V DC (Strict hardware limit) |
+| 48V PSU Margin | High Risk (Only 2V headroom; prone to back-EMF spikes) | High Risk (Only 2V headroom; prone to back-EMF spikes) |
 | Fusion 360 Fit | Flawless fit for standard NEMA 23 profiles | Interference (Driver block hits custom mount brackets) |
-| Loop Tuning | PC Software Config via RTConfigurator | None (Strictly limited to hardware DIP switches) |
-| Failure Isolation | Excellent (Can replace just the independent driver block) | Poor (If driver fries, the entire motor is junk) |
+| Loop Tuning | Software config via RTConfigurator | None (Strictly limited to physical DIP switches) |
+| Failure Isolation | Excellent (Can replace just the independent driver block) | Poor (If driver fries, the entire motor must be replaced) |
 
 I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is a massive risk. Fast deceleration profiles on our heavy ~5 kg KBM frame will generate back-EMF voltage spikes. The discrete T60S handles up to 68V, providing solid safety headroom, while the integrated units cap out strictly at 50V and will fry the onboard chips.
 
-Rtelligent IT57AM23 https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-23nm-holding-torque-it57am23/
+The integrated motors are as follows:
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/255a68e6-977c-4216-83b2-be1a0c458855" />
+1. Integrated motor for Rtelligent 57AM23ED is [Rtelligent IT57AM23](https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-23nm-holding-torque-it57am23/)
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/255a68e6-977c-4216-83b2-be1a0c458855" />
 
-Rtelligent IT57AM30 https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-30nm-holding-torque-it57am30/
-
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6f29bb9d-fc1c-4cd9-b5d7-215ceeee3e2b" />
+2. Integrated motor for Rtelligent 57AM30ED is [Rtelligent IT57AM30](https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-30nm-holding-torque-it57am30/)
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6f29bb9d-fc1c-4cd9-b5d7-215ceeee3e2b" />
 
 Finally, because PATRA has a constantly changing parallel axis load profile, being able to plug into Rtelligent's software via the tuning port to adjust PID loops, current values, and multi-stage digital position filters is critical. The integrated series locks me out completely, forcing reliance on basic hardware DIP switches with no way to tune out resonance or mechanical hunting vibrations under load.
 Even though Setup 1 carries a ₹2,388 INR premium, it is the only route that is structurally and electronically viable for the project. It preserves my existing CAD timeline geometry, keeps my power grid stable, and gives me the configuration space I need to interface smoothly with the Teensy 4.1.
@@ -3839,11 +3842,7 @@ Here's the lapse of today's session: [PATRA-LPS-61-D81](https://lapse.hackclub.c
 
 # Day 82 — 09.10.2026: Journaling & Fixing Floating Washers 
 
-I started by fixing the problem I left on the table yesterday. I looked at the problem from a different angle today: the angle of versions.
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/583fdb18-d8dd-43a3-99b0-450c731d4f33" />
-
-I opened the version 5 and saw that my current unsaved version 6 has almost no changes except for the fact the former one had no problems. So, I unhesitantly clicked on **"Don't Save"** and deleted the unsaved and problematic file.
+I started by fixing the problem I left on the table yesterday. I looked at the problem from a different angle today: the angle of versions. I opened the version 5 and saw that my current unsaved version 6 has almost no changes except for the fact the former one had no problems. So, I unhesitantly clicked on **"Don't Save"** and deleted the unsaved and problematic file.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/805c820b-54e8-4b24-ad2d-79fd57330bc5" />
 
@@ -3853,10 +3852,40 @@ Day #44 (full)
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/842a6c4a-dd2e-4592-92ac-ae06893b8ed8" />
 
+Day #77
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b6301c2a-374e-458a-947c-21cc71bc03b5" />
+
+Day #45
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a54d6e75-cf3a-450e-86f1-6ce991bdfdb2" />
+
+After today, these days are left to be journaled:
+
+* Day #46
+* Day #47
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
 Here's the lapse of today's session: [PATRA-LPS-62-D82]()
 
 **Total time spent: 0h 00m**
 
 ---
 
-note: i should add a fillet on the 90 degree corners of the clamps.
+**note: i should add a fillet on the 90 degree corners of the clamps.**
