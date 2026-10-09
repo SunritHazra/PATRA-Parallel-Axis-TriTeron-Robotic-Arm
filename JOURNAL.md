@@ -1893,8 +1893,8 @@ The very first thing I did was studying a real linear actuator's inside, because
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/01b9ce06-7ac6-4cb3-ab21-0d0d49e6ee0a" />
 
 Next, I also found the closed-loop Stepper Servo models from Traceparts:
-- [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis.
-- [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis.
+- [Rtelligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis.
+- [Rtelligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis.
 
 Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.com/timelapse/bNyyjAI7nMCC)
 
@@ -1902,53 +1902,91 @@ Here's the lapse of today's session: [PATRA-LPS-23-D43](https://lapse.hackclub.c
 
 ---
 
-# Day 44 — 02.08.2026: Working on the Z Axis Tensioning System [incomplete]
+# Day 44 — 02.08.2026: Working on the Z Axis Tensioning System
 
 The previous session involved making major decisions involving the Kinematic Base Module (KBM). This session involves major changes specifically for the **Z Axis Tensioning System**, by making a deep dive specifically confirm all the parts of this system, which some minor but important changes to the X and Y Axis Tensioning System.
 
-The very first thing I did was downloading the the [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis, and [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis. Then I imported them and placed them inside the design with the correct orientation, and added appearance.
+The very first thing I did was downloading the the [Rtelligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) for the X and Y axis, and [Rtelligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED) for the Z axis. Then I imported them and placed them inside the design with the correct orientation, and added appearance. 
 
-The next thing I did was, revising my decision about changing the X and Y axis motors from [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) to [Retilligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) and changing the Z axis motor from [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) to [Retilligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED). I knew that the former ones are open-loop and the newer ones are closed-loop, which some better holding torque.
+The next thing I did was, revising my decision about changing the X and Y axis motors from [NEMA23 PR57HS76-2804-05 18.9kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft) to [Rtelligent 57AM23ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am23ed?CatalogPath=TRACEPARTS%3ATP09005002005002&Product=90-21102022-022115&PartNumber=57AM23ED) and changing the Z axis motor from [NEMA23 PR57HS112-4204-01 31kg-cm Stepper Motor](https://robu.in/product/nema23-pr57hs112-4204-01-31kg-cm-stepper-motor-round-type-shaft/) to [Rtelligent 57AM30ED](https://www.traceparts.com/en/product/shenzhen-rtelligent-technology-coltd-stepping-servo-motor-57am30ed?CatalogPath=SHENZHEN_317938087%3ARTELLIGENT.010.040&Product=90-21102022-022125&PartNumber=57AM30ED). I knew that the former ones are open-loop and the newer ones are closed-loop, which some better holding torque. I also went through the linear guiders section of [this](https://www.hepcomotion.in/wp-content/uploads/2023/03/Hepco-FPL-Linear-Actuators-01-UK_Web.pdf) product catalouge.
 
-[i found that this is the first time i noticed that the clamp needs more teeth for x and y axis. after fixing that, i went for the z axis clamp]
+Previously I had noticed that the X and Y (probably Z as well) axis clamps need more teeth grooves to grip on to the belt. There were 8 teeth on a single clamp. I increased that to 10 by adding one on both side. After making changes to the X and Y clamps, I also fixed the Z axis clamp.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65aebca3-7c3d-40bd-8b3c-14c42c3d984b" />
+With the length of the clamp increased, this is how it looks:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b4faccc-fc3b-460b-bcff-1b71eebf8d0e" />
 
+And this is how it looks from under:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65aebca3-7c3d-40bd-8b3c-14c42c3d984b" />
+
+Next, I decided to choose the drivers for the motors. After searching and going through [this](https://www.rtelligentglobal.com/uploads/Rtelligent-T42ST60ST86S-Closed-Loop-Stepper-Driver-User-Manual-V4.1.pdf) datasheet and [this](https://rtelligentglobal.com/uploads/RTELLIGENT-STEPPER-PRODUCT-CATALOGUE-2024V1.0.pdf) product catalouge, I found that I had two options:
+
+- [Rtelligent T60](https://robu.in/product/rtelligent-t60-closed-loop-stepper-driver-18-68vdc-6a-for-stepper-motors-below-nema-24/): more expensive, standard generation, looks rubbish green.
+- [Rtelligent T60S](https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/): cheaper, upgraded generation, looks fantastic black.
+
+The choice was obvious. I chose the second one. But I knew this may change, as the design was not yet finalized. 
+
 <img width="975" height="688" alt="image" src="https://github.com/user-attachments/assets/229f4a75-f8de-41e4-a5f0-61f43c59842a" />
 
-https://www.rtelligentglobal.com/uploads/Rtelligent-T42ST60ST86S-Closed-Loop-Stepper-Driver-User-Manual-V4.1.pdf
+With the drivers chosen, I updated the BOM:
 
-Component Category	Item	Quantity	Cost	Total Cost	Side Note	Link
-Kinematic Base Module (KBM)	Aluminium 2020 T-Slot Profile Extrusion — 1 metre LCF6-2020-1000	1	 $2.82 	 $2.82 		https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1000
-	Aluminium 4040 T-Slot Profile Extrusion — 1 metre LCF8-4040-1000	2	 $8.78 	 $17.56 		https://in.misumi-ec.com/vona2/detail/110310647549?HissuCode=LCF8-4040-1000
-	MGN15H Linear Guide Rail — 1 metre	2	 $21.64 	 $43.28 		https://robu.in/product/mgn15h-linear-guide-rail-1m-2
-	Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)	2	 $40.74 	 $81.48 		https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/
-	Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)	1	 $53.95 	 $53.95 		https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/
-	MGN15H Sliding Block	4	 $7.18 	 $28.72 		https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail
-	Pulley CBYL-AH1-5GT150-32-A-N-d22 (X & Y)	2	 $3.39 	 $6.78 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22
-	Idler CBYL-AH1-5GT150-32-A-H-d22 (X & Y)	2	 $2.91 	 $5.81 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-H-d22&productModelNumber=CBYL-AH1-5GT150-32-A-H-d22
-	Belt E-GBN23005GT-150 (X & Y)	2	 $12.94 	 $25.88 		https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN23005GT-150
-	Pulley CBYL-AH1-5GT150-20-A-N-d12 (Z)	1	 $2.57 	 $2.57 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12
-	Idler CBYL-AH1-5GT150-18-A-H-d16 (Z)	1	 $1.98 	 $1.98 		https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16
-	Belt E-GBN26005GT-150 (Z)	1	 $14.54 	 $14.54 		https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150
-	Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)	3	 $35.48 	 $106.44 		https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/
-						
-						
-						
-	Total			 $391.81 		
+| Component Category          | Item                                                             | Quantity | Cost     | Total Cost | Side Note | Link                                                                                                                                       |
+|-----------------------------|------------------------------------------------------------------|----------|----------|------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Kinematic Base Module (KBM) | Aluminium 2020 T-Slot Profile Extrusion — 1 metre LCF6-2020-1000 | 1        |  $2.82   |  $2.82     |           | https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1000                                                                |
+|                             | Aluminium 4040 T-Slot Profile Extrusion — 1 metre LCF8-4040-1000 | 2        |  $8.78   |  $17.56    |           | https://in.misumi-ec.com/vona2/detail/110310647549?HissuCode=LCF8-4040-1000                                                                |
+|                             | MGN15H Linear Guide Rail — 1 metre                               | 2        |  $21.64  |  $43.28    |           | https://robu.in/product/mgn15h-linear-guide-rail-1m-2                                                                                      |
+|                             | Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y)     | 2        |  $40.74  |  $81.48    |           | https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/                                                               |
+|                             | Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)           | 1        |  $53.95  |  $53.95    |           | https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/                                                               |
+|                             | MGN15H Sliding Block                                             | 4        |  $7.18   |  $28.72    |           | https://robu.in/product/sliding-block-for-mgn15h-linear-guide-rail                                                                         |
+|                             | Pulley CBYL-AH1-5GT150-32-A-N-d22 (X & Y)                        | 2        |  $3.39   |  $6.78     |           | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-N-d22&productModelNumber=CBYL-AH1-5GT150-32-A-N-d22 |
+|                             | Idler CBYL-AH1-5GT150-32-A-H-d22 (X & Y)                         | 2        |  $2.91   |  $5.81     |           | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-32-A-H-d22&productModelNumber=CBYL-AH1-5GT150-32-A-H-d22 |
+|                             | Belt E-GBN23005GT-150 (X & Y)                                    | 2        |  $12.94  |  $25.88    |           | https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN23005GT-150                                                              |
+|                             | Pulley CBYL-AH1-5GT150-20-A-N-d12 (Z)                            | 1        |  $2.57   |  $2.57     |           | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12 |
+|                             | Idler CBYL-AH1-5GT150-18-A-H-d16 (Z)                             | 1        |  $1.98   |  $1.98     |           | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-18-A-H-d16&productModelNumber=CBYL-AH1-5GT150-18-A-H-d16 |
+|                             | Belt E-GBN26005GT-150 (Z)                                        | 1        |  $14.54  |  $14.54    |           | https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150                                                              |
+|                             | Rtelligent T60S Closed-loop Stepper Motor Driver (X, Y & Z)      | 3        |  $35.48  |  $106.44   |           | https://robu.in/product/rtelligent-t60s-closed-loop-stepper-driver/                                                                        |
+|                             |                                                                  |          |          |            |           |                                                                                                                                            |
+|                             |                                                                  |          |          |            |           |                                                                                                                                            |
+|                             |                                                                  |          |          |            |           |                                                                                                                                            |
+|                             | Total                                                            |          |          |  $391.81   |           |                                                                                                                                            |
+
+Updated BOM:
+
 <img width="2559" height="282" alt="image" src="https://github.com/user-attachments/assets/1e14cbf6-ea91-434d-b14a-fcc6ad5999b1" />
+
+Then, I modelled the shaft adapter of the motor, making sure the inner dimensions and shape match that of the motor shaft and the outer dimensions match the inner dimensions and shape of the pulleys and idlers.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a00e0baf-b493-455b-9580-5af2e81eac26" />
 
-https://onlyscrews.in/products/6001-2rs-rubber-sealed-ball-bearing-12x28x8?currency=INR&country=IN&variant=50982218662201&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=inderans_campaign&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SRD-kNwjXRWwyYJwLecjvJ7G&gclid=CjwKCAjw1bvTBhBbEiwAzbP8L88XPdembQI0erqY38rix0JGeQduw_Pal1aXQlCeZCx5qRt33s1SbhoCfLoQAvD_BwE
+The next important thing was the motor assembly. Here's what I had versus what I had to achieve:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/85d16270-7165-4503-b313-77badff3bb57" />
+- **What I had**: I had nothing but pulleys and idlers floating in air, while in contact with the motors, with an 8 mm D-type to 12 mm N-type shaft adapter, asymmetrically.
 
-<img width="900" height="1272" alt="image" src="https://github.com/user-attachments/assets/52bb06ad-70c7-4b37-b142-b6190bdb8bb7" />
+- **What I had to achieve**: I had to find a way where the linear actuator could rotate on its own without the motor, if the linear blocks are manually moved. This meant that the belt could not rely on on the tension of the pulley attached to it alone. I had to make a system where I could just attach the motor to the system flawlessly by just fastening four screws. The system I described is a backdrivable, motor-ready, belt-driven linear actuator (or linear stage), exactly like the **Zaber LC40 Series** (specifically the belt-driven LC40B or LC40C models).
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d32b63e6-7fbb-4bc6-8468-4f519492a1d6" />
+In order to achieve what I had to, I started first by rewatching what Rowan did in his tripteron, then I looked at the **LC40B1000** model which I had downloaded from Zaber earlier and **[Linear Unit GSF 8 40 R10](https://www.item24.com/en-au/linear-unit-gsf-8-40-r10-65598)** from Item24, for reference.
+
+Then I had the idea to use pillow block bearings and attach them to the pulley/idler case walls to prevent the pulleys and idlers from floating mid-air. The bore had to be 12 mm in diameter as the outer diameterof the shaft was also 12 mm. I found [this](https://onlyscrews.in/products/kp001-inner-ball-mounted-pillow-block-insert-bearing-for-12mm-bore?utm_source=google&utm_medium=cpc&utm_campaign=Inderans_Campaign&utm_content=Other_than_fasteners_wala_copy&gad_source=1&gad_campaignid=22618541726&gbraid=0AAAAA9sP2STGNk4475GGc6HGnFMyoe5DE&gclid=CjwKCAjwoaLWBhAWEiwAnyitu1tXe_g3XHX9j7ufCCIsJ6hT4KSTcsjvFpZr54QvpEv6aLgnsiW7LxoCpXMQAvD_BwE) on OnlyScrews. 
+
+But it didn't seem that good, and was expensive for a bearing where I could attempt to use regular ball bearings, and not pillow block ones. So, I looked for regular ball bearings in McMASTER-CARR, inside Autodesk Fusion. I found out that I can use [6001 bearings](https://onlyscrews.in/products/6001-2rs-rubber-sealed-ball-bearing-12x28x8?currency=INR&country=IN&variant=50982218662201&stkn=6e84ebfba1b8&utm_source=google&utm_medium=cpc&utm_campaign=inderans_campaign&gad_source=1&gad_campaignid=22229905346&gbraid=0AAAAA9sP2SRD-kNwjXRWwyYJwLecjvJ7G&gclid=CjwKCAjw1bvTBhBbEiwAzbP8L88XPdembQI0erqY38rix0JGeQduw_Pal1aXQlCeZCx5qRt33s1SbhoCfLoQAvD_BwE) for this, which I found on OnlyScrews.
+
+Here's what I did next:
+
+1. I changed the design of the pulley case to resemble the pulley case that of the **Linear Unit GSF 8 40 R10**.
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/5c09407f-d60e-4b9d-92b7-892f7e67126b" />
+
+2. I attached the 6001 bearings along the pulley and on the extended shaft adapter. And 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/85d16270-7165-4503-b313-77badff3bb57" />
+
+3. I also added walls, making sure that only the outer race of the bearings touch the walls, and the inner race doesn't rub against it. 
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/5985cb6a-a973-4f57-9891-573d01b3ea47" />
+
+4. Next I searched for washers in OnlyScrews and MISUMI. I needed washers with inner diameter about 13 mm, and exact thickness of 2.5 mm. There will be two washers. In MISUMI I found [WSI-SUS-M12](https://in.misumi-ec.com/vona2/detail/221000551972?HissuCode=WSI-SUS-M12), with the perfect dimensions. [This](https://github.com/user-attachments/assets/52bb06ad-70c7-4b37-b142-b6190bdb8bb7) is the datasheet.
+
+5. The 2.5 mm thick washers were too thick to fit between the bearings and pulleys. So, I had to find thinner ones.
+
+I then asked Google AI about my design. It said that the fact that the motor shaft hardly reaches the middle of the adapter, is a major flaw. To fix it I might had to use keyed adapters to extend the shaft and then use the adapter.
 
 Here's the lapse of today's session: [PATRA-LPS-24-D44](https://lapse.hackclub.com/timelapse/VxiPyruOoxIk)
 
@@ -3350,6 +3388,7 @@ After today, these days are left to be journaled:
 * Day #63
 * Day #64
 * Day #66 (partly)
+* Day #77 (partly)
 
 Here's the lapse of today's session: [PATRA-LPS-57-D77](https://lapse.hackclub.com/timelapse/8T-JtHAdSQJ7)
 
@@ -3674,6 +3713,7 @@ After today, these days are left to be journaled:
 * Day #62
 * Day #63
 * Day #64
+* Day #77 (partly) 
 
 Here's the lapse of today's session: [PATRA-LPS-59-D79](https://lapse.hackclub.com/timelapse/JpZZQGepYBA-)
 
@@ -3740,6 +3780,7 @@ After today, these days are left to be journaled:
 * Day #62
 * Day #63
 * Day #64
+* Day #77 (partly)
 
 Here's the lapse of today's session: [PATRA-LPS-60-D80](https://lapse.hackclub.com/timelapse/6VuvPVunCxcQ)
 
@@ -3747,7 +3788,7 @@ Here's the lapse of today's session: [PATRA-LPS-60-D80](https://lapse.hackclub.c
 
 ---
 
-# Day 81 — 08.10.2026: Journaling
+# Day 81 — 08.10.2026: Journaling & Attempting to Fix Floating Washers
 
 Journaled day #44 partly.
 
@@ -3788,9 +3829,34 @@ After today, these days are left to be journaled:
 * Day #62
 * Day #63
 * Day #64
+* Day #77 (partly) 
 
 Here's the lapse of today's session: [PATRA-LPS-61-D81](https://lapse.hackclub.com/timelapse/NfYOcsd-JYDs)
 
 **Total time spent: 1h 05m**
 
 ---
+
+# Day 82 — 09.10.2026: Journaling & Fixing Floating Washers 
+
+I started by fixing the problem I left on the table yesterday. I looked at the problem from a different angle today: the angle of versions.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/583fdb18-d8dd-43a3-99b0-450c731d4f33" />
+
+I opened the version 5 and saw that my current unsaved version 6 has almost no changes except for the fact the former one had no problems. So, I unhesitantly clicked on **"Don't Save"** and deleted the unsaved and problematic file.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/805c820b-54e8-4b24-ad2d-79fd57330bc5" />
+
+Then I journaled days #44 (full), 
+
+Day #44 (full)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/842a6c4a-dd2e-4592-92ac-ae06893b8ed8" />
+
+Here's the lapse of today's session: [PATRA-LPS-62-D82]()
+
+**Total time spent: 0h 00m**
+
+---
+
+note: i should add a fillet on the 90 degree corners of the clamps.
