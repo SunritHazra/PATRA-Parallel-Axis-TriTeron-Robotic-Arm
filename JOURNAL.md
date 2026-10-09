@@ -3882,6 +3882,25 @@ After today, these days are left to be journaled:
 * Day #63
 * Day #64
 
+But I wanted to also address the pending problems with the KBM. It was the screws, specifically the countersunk chamfers and the inserts that stopped me from completing the KBM completely.
+
+Here's what I did:
+
+- I first fixed the 4 holes for the motor mount. So, I deleted those.
+  <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1f40509d-7eb9-473e-9237-d79956263891" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0eee580-6f5e-4794-83b0-7232ef61e802" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9052eb39-ef7d-47af-9847-9798e88c76fd" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/531c4d63-1e73-43b3-b780-70fa402d15d8" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9357efa4-71b9-49a5-9995-ae5dcb10cb1d" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/43e6d727-a521-4811-8cb0-49d664741dd7" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/20ed5682-751e-4034-89c4-907ffe6b5d36" />
+
 Here's the lapse of today's session: [PATRA-LPS-62-D82]()
 
 **Total time spent: 0h 00m**
