@@ -3914,51 +3914,93 @@ Here's the lapse of today's session: [PATRA-LPS-62-D82](https://lapse.hackclub.c
 
 ---
 
-# Day 82 — 09.10.2026: 
+# Day 83 — 10.10.2026: 
 
-
+Yesterday's session ended at the step where I was adressing the missing things in the Kinematic Base Module (KBM). Today I did a lot of the next steps, instead of journaling.
 
 first i added m5 brass inserts.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/24cf8abd-11a1-4c91-ba09-4ed07b6822e7" />
+Here's what I did:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1ae876b-88da-46c4-973a-c0a8f9642e1d" />
+1. **Adding M5x10 mm brass inserts (continued from last session):**
+	- The center of the insert and the hole, did not match. This meant that it was misplaced in the last session.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/24cf8abd-11a1-4c91-ba09-4ed07b6822e7" />
+	- I used the Join tool to place it correctly. Then I copied it to make total four inserts.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1ae876b-88da-46c4-973a-c0a8f9642e1d" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5dcd1f70-3b02-41c4-8d9c-a0b4368df048" />
+2. **Adding M3x10 mm brass inserts:** 
+	- I first closed the holes, as they were threaded.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5dcd1f70-3b02-41c4-8d9c-a0b4368df048" />
+	- Then I made the hole 4.4 mm in diameter as the insert is 4.8 mm. I also 0.2 mm chamfer, making the outermost edge 4.8 mm in diameter.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2489300e-c70c-47f4-8855-df54a360a54c" />
+	- But due to that wide hole, the walls became too thin. So, I moved the holes 1 mm far from center.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e7c28d4-81a4-4c1b-b692-583812695c5d" />
+	- I then extruded out my own inserts, as OnlyScrews had no STEP files.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/29843e3a-04cd-445a-93ec-9f6612d740c4" />
+	- Added threads for the inserts I made.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5bddd210-4fcd-4eb1-8104-6592103ae725" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/59001b05-8d7e-46b8-8ada-0cb6572c4a36" />
+3. **Adding M3x6 mm brass inserts:**
+	- For the screws under, I first thought of length 5 mm. But I changed it to 6 as I had space. I made the depth 6 mm and kept the diameter at 4 mm, as the insert was 4.4 mm.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e545c1a0-8845-44df-aba4-9e4f6ea50cbe" />
+	- I then extruded out three inserts.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c1387c1d-c4dc-401a-8d54-4575d93a833d" />
+  	- I added 0.2 mm chamfers to the edges of the hole, making the outermost diameter at 4.4 mm.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3216add1-d099-4b78-871d-24ff8606436c" />
+	- Then I added threads and copied it for the other side too.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/98c41682-3787-45d7-b5b7-dc93b4eff176" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2489300e-c70c-47f4-8855-df54a360a54c" />
+After this, I also thought of adding the screws for this. But while searching for screws, I discovered that only SS304 screws had STEP files, and the mild steel ones had no datasheet or STEP files. I first thought of making the screw 35 mm, where 20 mm is on the outer half of the pulley/idler case and the rest 15 mm is inside the other. But I made the inside 10 mm instead, as the longest SS304 M3 screw was 30 mm, which is covering 20 mm + 10 mm (not 15 mm). I was not sure about the mild steel screw's dimensions, so I chose SS304 30 mm. Still, 10 mm depth is fine as per the thread depth rule for M3. This forced me to change both the hole depth and the insert length from 15 mm to 10 mm.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e7c28d4-81a4-4c1b-b692-583812695c5d" />
+4. **Adding M3x30 mm countersunk screws:**
+	- I downloaded [this](https://cdn.shopify.com/s/files/1/0871/5295/1609/files/CSK_M3x30mm.step?v=1753269088) STEP from OnlyScrews and imported it in the design.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7583c7df-d573-4fb2-aa78-854f6ac519f9" />
+	- Then I remembered that I forgot to move the holes 1 mm away from the center for the other half of the case. So I did that.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc88ee64-6e76-4a93-9a89-1f578a27ad43" />
+	- With that done, I copied the screw and use circular pattern to copy it total 8 times in the correct position.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a4806f14-945b-49be-b1ff-0a59c45cd880" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/29843e3a-04cd-445a-93ec-9f6612d740c4" />
+After making and adding so many new bodies and components, I arranged them inside the browser, placing each insert inside the Bodies folder of that case, making sure I don't need joints, and have them arranged nicely in the design. I made a separate component for the eight M3x30 mm screws.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5bddd210-4fcd-4eb1-8104-6592103ae725" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c1387c1d-c4dc-401a-8d54-4575d93a833d" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/98c41682-3787-45d7-b5b7-dc93b4eff176" />
-
-c
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7583c7df-d573-4fb2-aa78-854f6ac519f9" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc88ee64-6e76-4a93-9a89-1f578a27ad43" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a4806f14-945b-49be-b1ff-0a59c45cd880" />
-
-yay
+With this, all fasteners needed for the X/Y pulley/idler was done. I can now mirror this to the idlers, then to the Y axis.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/37db4a0f-c218-4995-97b5-5c00cb7e099b" />
 
-.
+This is how it looks after copying it to all the others. Now, only the Z axis fasteners are left. Here's how it looks so far:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/703820c5-e11f-4d07-8c0d-25c749969df8" />
 
-Here's the lapse of today's session: [PATRA-LPS-62-D82](https://lapse.hackclub.com/timelapse/SN3cpATvOXLr)
+5. **
 
-**Total time spent: 5h 20m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1c156ab0-faae-4798-aea5-b1077ad2902e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57e78a08-44e3-42d8-b4fc-d6c5cd7cf000" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/67e083c1-66ec-4e23-80d5-089b449b9550" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5f2813e-0a6f-4aa0-82ba-df844d3e9032" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ac81823-ceee-4e68-b3eb-7f3fa75799ad" />
+
+.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1cfc510f-4e0d-49d2-b91b-dd45c1016eac" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b4153b65-293b-43bb-9258-9b31655f2e27" />
+
+Here's the lapse of today's session: [PATRA-LPS-63-D83](https://lapse.hackclub.com/timelapse/PrdOEF78XoIv)
+
+**Total time spent: 7h 20m**
+
+---
+
+# Day 84 — 11.10.2026: 
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-64-D84]()
+
+**Total time spent: 0h 00m**
 
 ---
 
