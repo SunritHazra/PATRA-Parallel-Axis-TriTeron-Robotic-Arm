@@ -3996,7 +3996,33 @@ Here's the lapse of today's session: [PATRA-LPS-63-D83](https://lapse.hackclub.c
 
 # Day 84 — 11.10.2026: 
 
+ergggnegk
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c6997d8a-7f61-490f-b04b-5936734fc71d" />
+
+*
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b55f1e8-eb04-4987-9cc4-767373dabee4" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cb5e8b85-0093-4b06-b815-89d32dc766f1" />
+
+-
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a043b5c8-4e23-4264-9115-89a8a438a449" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05174f4e-420c-4545-a556-d830980ec9ee" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/efd8a70d-9355-4fc6-bb51-14bbb70359ea" />
+
+https://in.misumi-ec.com/vona2/detail/110310155069/
+
+https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.?srsltid=AU7gw4Vd9_aNitAyfD12HaMzP5zCUV7tcC-1-wHLzchhiQF0Ccttno6P
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0f4eeab-5381-4148-aac9-d161553fc17c" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/716efc80-69a0-42c2-b2c6-464037acf1ea" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0a278c54-a724-46eb-a719-8b9b3d54b65a" />
 
 Here's the lapse of today's session: [PATRA-LPS-64-D84]()
 
