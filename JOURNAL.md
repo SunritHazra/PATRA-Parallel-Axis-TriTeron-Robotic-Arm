@@ -4024,9 +4024,9 @@ https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0a278c54-a724-46eb-a719-8b9b3d54b65a" />
 
-Here's the lapse of today's session: [PATRA-LPS-64-D84]()
+Here's the lapse of today's session: [PATRA-LPS-64-D84](https://lapse.hackclub.com/timelapse/5wXoN12hrMMv)
 
-**Total time spent: 0h 00m**
+**Total time spent: 4h 00m**
 
 ---
 
