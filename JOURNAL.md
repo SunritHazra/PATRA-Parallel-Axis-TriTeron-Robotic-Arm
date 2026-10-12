@@ -3863,27 +3863,44 @@ Day #45
 I also wanted address the pending problems with the KBM, which was the countersunk chamfers and the inserts that stopped me from completing the KBM. Here's what I did:
 
 1. **Fixing the M5 motor mounts:**
+   
 	- The first thing I did was deleting the holes as they had wrong position due to the previous motors that were not placed right.
+
   		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1f40509d-7eb9-473e-9237-d79956263891" />
+		
 	- Then I created a new sketch with projection of the newly and correctly placed motors. I kept the hole diameter at 6 mm as the heat set insert is 6.4 mm.
+
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5b60b2bb-18ee-48e4-b036-992e90fd6cfb" />
+		
 	- Then I extruded the hole 10 mm inside and added 0.2 mm chamfers, making the the outermost diameter of the chamfer 6.4 mm.
+
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/591db845-de23-4273-aad9-566d489d6ef9" />
 
 2. **Fixing the M3 pulley case mounts:**
 	- I had to know the exact chamfer value, so, I downloaded [this](https://cdn.shopify.com/s/files/1/0871/5295/1609/files/CSK_M3x6mm.step?v=1753268015) STEP file from OnlyScrews.
+
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0eee580-6f5e-4794-83b0-7232ef61e802" />
+		
 	- I made a cylinder with 3.4 mm hole in it, and tested with chamfer of different values. 1.3 mm deep and 1.3 mm wide chamfer was the best.
+
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9052eb39-ef7d-47af-9847-9798e88c76fd" />
+		
 	- I also did a section analysis to see if this is this is actually correct.
+
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/531c4d63-1e73-43b3-b780-70fa402d15d8" />
+		
 	- As I knew the value, I applied it in the design.
+
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/43e6d727-a521-4811-8cb0-49d664741dd7" />
 
 3. **Adding M5 brass inserts:**
+
 	- There was [this](https://cdn.shopify.com/s/files/1/0871/5295/1609/files/BI_M5x10.step?v=1746464097) STEP file for the 10 mm M5 brass insert in OnlyScrew, which I downloaded.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9357efa4-71b9-49a5-9995-ae5dcb10cb1d" />
+		
 	- I then placed it inside the design as well.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/20ed5682-751e-4034-89c4-907ffe6b5d36" />
 
 After today, these days are left to be journaled:
@@ -3914,7 +3931,7 @@ Here's the lapse of today's session: [PATRA-LPS-62-D82](https://lapse.hackclub.c
 
 ---
 
-# Day 83 — 10.10.2026: 
+# Day 83 — 10.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 1
 
 Yesterday's session ended at the step where I was adressing the missing things in the Kinematic Base Module (KBM). Today I did a lot of the next steps, instead of journaling.
 
@@ -3923,41 +3940,69 @@ first i added m5 brass inserts.
 Here's what I did:
 
 1. **Adding M5x10 mm brass inserts for X and Y axes (continued from last session):**
+
 	- The center of the insert and the hole, did not match. This meant that it was misplaced in the last session.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/24cf8abd-11a1-4c91-ba09-4ed07b6822e7" />
+		
 	- I used the Join tool to place it correctly. Then I copied it to make total four inserts.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1ae876b-88da-46c4-973a-c0a8f9642e1d" />
 
-2. **Adding M3x10 mm brass inserts for X and Y axes:** 
+2. **Adding M3x10 mm brass inserts for X and Y axes:**
+
 	- I first closed the holes, as they were threaded.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5dcd1f70-3b02-41c4-8d9c-a0b4368df048" />
+		
 	- Then I made the hole 4.4 mm in diameter as the insert is 4.8 mm. I also 0.2 mm chamfer, making the outermost edge 4.8 mm in diameter.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2489300e-c70c-47f4-8855-df54a360a54c" />
+		
 	- But due to that wide hole, the walls became too thin. So, I moved the holes 1 mm far from center.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e7c28d4-81a4-4c1b-b692-583812695c5d" />
+		
 	- I then extruded out my own inserts, as OnlyScrews had no STEP files.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/29843e3a-04cd-445a-93ec-9f6612d740c4" />
+		
 	- Added threads for the inserts I made.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5bddd210-4fcd-4eb1-8104-6592103ae725" />
 
 3. **Adding M3x6 mm brass inserts for X and Y axes:**
+
 	- For the screws under, I first thought of length 5 mm. But I changed it to 6 as I had space. I made the depth 6 mm and kept the diameter at 4 mm, as the insert was 4.4 mm.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e545c1a0-8845-44df-aba4-9e4f6ea50cbe" />
+		
 	- I then extruded out three inserts.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c1387c1d-c4dc-401a-8d54-4575d93a833d" />
+		
   	- I added 0.2 mm chamfers to the edges of the hole, making the outermost diameter at 4.4 mm.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3216add1-d099-4b78-871d-24ff8606436c" />
+		
 	- Then I added threads and copied it for the other side too.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/98c41682-3787-45d7-b5b7-dc93b4eff176" />
 
 After this, I also thought of adding the screws for this. But while searching for screws, I discovered that only SS304 screws had STEP files, and the mild steel ones had no datasheet or STEP files. I first thought of making the screw 35 mm, where 20 mm is on the outer half of the pulley/idler case and the rest 15 mm is inside the other. But I made the inside 10 mm instead, as the longest SS304 M3 screw was 30 mm, which is covering 20 mm + 10 mm (not 15 mm). I was not sure about the mild steel screw's dimensions, so I chose SS304 30 mm. Still, 10 mm depth is fine as per the thread depth rule for M3. This forced me to change both the hole depth and the insert length from 15 mm to 10 mm.
 
 4. **Adding M3x30 mm countersunk screws for X and Y axes:**
+
 	- I downloaded [this](https://cdn.shopify.com/s/files/1/0871/5295/1609/files/CSK_M3x30mm.step?v=1753269088) STEP from OnlyScrews and imported it in the design.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7583c7df-d573-4fb2-aa78-854f6ac519f9" />
+		
 	- Then I remembered that I forgot to move the holes 1 mm away from the center for the other half of the case. So I did that.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc88ee64-6e76-4a93-9a89-1f578a27ad43" />
+		
 	- With that done, I copied the screw and use circular pattern to copy it total 8 times in the correct position.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a4806f14-945b-49be-b1ff-0a59c45cd880" />
 
 After making and adding so many new bodies and components, I arranged them inside the browser, placing each insert inside the Bodies folder of that case, making sure I don't need joints, and have them arranged nicely in the design. I made a separate component for the eight M3x30 mm screws.
@@ -3975,39 +4020,65 @@ With the X and Y axes done, I next addressed the Z axis.
 5. **Adding M5x10 mm brass inserts and fixing M3 holes for Z axis:**
 
 	- The inserts were already arranged the way I needed them. So, I copied the inserts into the correct places.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1c156ab0-faae-4798-aea5-b1077ad2902e" />
+		
 	- I created a sketch with correct position of the M3 holes where they are 1 mm far from center, and correct position for M5 holes.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57e78a08-44e3-42d8-b4fc-d6c5cd7cf000" />
+		
 	- The holes weren't correct and were threaded. So, I first deleted the M5 holes and extruded in correct holes with 6 mm diameter and 0.2 mm chamfer.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/67e083c1-66ec-4e23-80d5-089b449b9550" />
+		
 	- Then I extruded in the 3.4 mm M3 clearance holes, making sure there are 6 holes, not 8 (due to the case shape)
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5f2813e-0a6f-4aa0-82ba-df844d3e9032" />
+		
 	- Added 1.3 mm wide and 1.3 mm deep clearance on the edges.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ac81823-ceee-4e68-b3eb-7f3fa75799ad" />
 
 6. **Adding M3x10 mm brass inserts for Z axis:** 
 
 	- First I got rid of the threaded holes using extrusions.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1cfc510f-4e0d-49d2-b91b-dd45c1016eac" />
+		
 	- Then I used my previous sketch to extrude in correct holes. I also added 0.2 mm chamfers.
+	
 		<img width="1365" height="731" alt="image" src="https://github.com/user-attachments/assets/e90333ae-b4c3-44c3-b099-4b2ed11dafd9" />
+		
   	- Next I copied the inserts and arranged them in Browser.
+	
    		<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/36c8a0cc-0b31-4e1e-b1db-466654c4ecd9" />
 
 7. **Adding M3x6 mm brass inserts for Z axis:**
+
 	- I first made the hole from 5 mm deep to 6 mm, and added chamfers.
+	
 		<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/56f684c2-d5c8-443a-ae13-a4cb4edf3934" />
+		
 	- Next I copied the inserts from the other case and then duplicated it for the other side too.
+	
 		<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/2f1b730f-9278-41b4-8d7c-26e0f5f221e9" />
+		
 	- But then I noticed missing chamfers on some sides, so i fixed it by adding 0.2 mm chamfers.
+	
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b4153b65-293b-43bb-9258-9b31655f2e27" />
 
 8. **Adding M3x30 mm countersunk screws for Z axis:**
+
 	- I copied in the screws from the other case.
+	
 		<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/8f1fab7c-7041-40ff-afe3-a667ff33e558" />
+		
 	- Deleted the extra two screws on the side.
+	
 	  	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/482994d4-39e3-484b-bfff-9342b0c65ff3" />
+		
 	- Copied the screws to the other side. But I hadn't fixed the idlers yet.
+	
 		<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/5e2ede81-2062-482a-a2f2-83559a3e7b86" />
 
 The idler case of the Z axis tensioning system is yet to be fixed. But so far, the other pulley/idler cases are done with their inserts and screws. Arranging the components in Browser was also left.
@@ -4018,35 +4089,71 @@ Here's the lapse of today's session: [PATRA-LPS-63-D83](https://lapse.hackclub.c
 
 ---
 
-# Day 84 — 11.10.2026: 
+# Day 84 — 11.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 2
 
-ergggnegk
+The very first thing I did was arranging the components from last session in the Browser, and copying the Z axis pulley to the idler.
+
+With that done, I decided to continue with the Motor Supports. Motor support was modeled, but the design didn't look any good. I wanted a design that would match the rest of PATRA. So, I deleted the feet extension, which I added for stability. I deleted that because it can't trip as it would hold the motor's mass. I also added a combine cut with facial offset on the intersecting face for the back of the motor.
+
+Thus, this is how it looked before:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/17581344-cc6e-4987-8328-3b0f10c16e0c" />
+
+And this is how it looks after:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/17c3edac-9862-4cf2-a6ab-73bd8f6aec42" />
+
+I copied this to make sure that there are three of them for each axis. For the Y axis, I used mirror tool. This is how it looks from beneath:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c6997d8a-7f61-490f-b04b-5936734fc71d" />
 
-*
+While taking the screenshot for the under-view, I noticed the chamfers for countersunk screws, which was most likely wrong. This is because back then, I was assuming the dimensions. But now I know what chamfer dimensions are needed.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b55f1e8-eb04-4987-9cc4-767373dabee4" />
+Here's what I did next:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cb5e8b85-0093-4b06-b815-89d32dc766f1" />
+- I first deleted call the chamfers.
 
--
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b55f1e8-eb04-4987-9cc4-767373dabee4" />
+	
+- Then I added the 1.3 mm chamfers.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a043b5c8-4e23-4264-9115-89a8a438a449" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cb5e8b85-0093-4b06-b815-89d32dc766f1" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05174f4e-420c-4545-a556-d830980ec9ee" />
+But then I noticed that I was using connectors to connect the End Plate and the 4040 extrusions. But I realised that I can integrate the connectors into the End Plate itself, without making them seperate and printing them seperately.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/efd8a70d-9355-4fc6-bb51-14bbb70359ea" />
+- I used extrusion to fill the gap between the holes and the outer face.
 
-https://in.misumi-ec.com/vona2/detail/110310155069/
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a043b5c8-4e23-4264-9115-89a8a438a449" />
+	
+- Then I used combine tool to combine the connectors and the End Plate into a single body.
 
-https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.?srsltid=AU7gw4Vd9_aNitAyfD12HaMzP5zCUV7tcC-1-wHLzchhiQF0Ccttno6P
+  	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05174f4e-420c-4545-a556-d830980ec9ee" />
+	
+- Next I noticed that the connector bodies are 0.1 mm high up in air. So, using extrude I fixed that.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0f4eeab-5381-4148-aac9-d161553fc17c" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/efd8a70d-9355-4fc6-bb51-14bbb70359ea" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/716efc80-69a0-42c2-b2c6-464037acf1ea" />
+But I made devastating realization then. Actually, I can't just print the connectors. The width which is 5.5 mm is too thin and weak to house a M3 brass insert with is nearly 4.4 mm in diameter. But, I can't even buy them are the hole pitch won't match the 29.5 mm pitch of the screw for the pulley/idler cases. Additionally, they are quite hard to find and very expensive on most sites. That's why before, I thought of printing them. I can't even print the threads as it won't be reliable.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0a278c54-a724-46eb-a719-8b9b3d54b65a" />
+I searched for straight line connectors in MISMUMI, and I found [this](https://in.misumi-ec.com/vona2/detail/110310155069/). I found what I was looking for after a long search, but the pitch didn't match, obviously.
+
+But, I got the perfect idea to use M2 screws instead of M3. But, I still needed to use inserts. So, I search in OnlyScrews. They had M2x6 mm inserts with 3.8 mm outer diameter. 3.8 mm outer diameter leaves only 0.85 mm both sides, which will most likely fail.
+
+I then started looking for slimmer M2 inserts, and after a long search, I found [this](https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.?srsltid=AU7gw4Vd9_aNitAyfD12HaMzP5zCUV7tcC-1-wHLzchhiQF0Ccttno6P) 3.5 mm outer diameter insert on Robokits.
+
+- Once I was certain about the dimensions of the insert, I created a new sketch and drew all the correct dimensions of the diameters. Then I extruded it in.
+	
+- Then I added 1.3 mm chamfers for the M3 holes, and 0.2 mm chamfers for the M2 insert holes, after making the M2 brass insert holes' inner diameter 3.1 mm.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d0f4eeab-5381-4148-aac9-d161553fc17c" />
+	
+- Next I extruded the brass inserts.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/716efc80-69a0-42c2-b2c6-464037acf1ea" />
+	
+- Then I added threads to the inserts.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0a278c54-a724-46eb-a719-8b9b3d54b65a" />
 
 Here's the lapse of today's session: [PATRA-LPS-64-D84](https://lapse.hackclub.com/timelapse/5wXoN12hrMMv)
 
@@ -4054,19 +4161,99 @@ Here's the lapse of today's session: [PATRA-LPS-64-D84](https://lapse.hackclub.c
 
 ---
 
-# Day 85 — 12.10.2026: 
+# Day 85 — 12.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 3
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8bc26337-f6dc-4702-9c0a-c6360d43d1f2" />
+I continued exactly where I left off yesterday. The screws were left to be added in the design. So, I added those.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4315bd14-df68-47ee-8449-8db0ec641cff" />
+**Adding M3x12 mm countersunk screws for endplates:**
 
-https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm 
+- I first imported [this](https://cdn.shopify.com/s/files/1/0871/5295/1609/files/CSK_M3x12mm.step?v=1753268797) STEP file from OnlyScrews into the design and placed it one hole using Joint.
 
-https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm for motors
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8bc26337-f6dc-4702-9c0a-c6360d43d1f2" />
 
-https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm for connectors to 4040
+- Then I copied it first using Rectangular Pattern, then simple copy and paste.
 
-Here's the lapse of today's session: [PATRA-LPS-65-D85]()
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4315bd14-df68-47ee-8449-8db0ec641cff" />
+
+After that was done, I was supposed to add screws for the connectors next. I needed M2x14 mm socket head screw, but I found none. After spending some time searching, [this](https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm) is closest thing I found to what I needed. It is 12 mm, not 14 mm. 
+
+Next was screws for the motors. I initially thought of 15 mm socket head screws. But there was no M5x15 mm socket head but [this](https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm) Philips button head screw.
+
+Next, I updated the BOM. Here are the things I added to the BOM:
+
+1. **M5 x 10mm brass threaded inserts**
+   	* Quantity: 15
+    * Unit Price: ₹4.60
+	* Total Price: ₹69.00 / $0.72
+	* Vendor: OnlyScrews
+	* Link: [Product Page](https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts)
+	
+2. **Brass Insert M3x10 mm**
+	* Quantity: 50
+	* Unit Price: ₹3.60
+   	* Total Price: ₹180.00 / $1.08
+   	* Vendor: OnlyScrews
+   	* Link: [Product Page](https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts)
+	  
+3. **Brass Insert M3x6 mm**
+	* Quantity: 48
+    * Unit Price: ₹4.80
+   	* Total Price: ₹230.40 / $2.00
+   	* Vendor: OnlyScrews
+   	* Link: [Product Page](https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm)
+	  
+4. **Pan Head Screw M5x15 mm**
+	* Quantity: 15
+   	* Unit Price: ₹1.60
+   	* Total Price: ₹24.00 / $0.25
+   	* Vendor: OnlyScrews
+   	* Link: [Product Page](https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm)
+	
+5. **Countersunk Screw M3x30 mm**
+	* Quantity: 50
+   	* Unit Price: ₹3.80
+   	* Total Price: ₹190.00 / $1.98
+   	* Vendor: OnlyScrews
+   	* Link: [Product Page](https://onlyscrews.in/products/hex-allen-csk-ss-304-screw-dia-3mm-length-30mm)
+	
+6. **Countersunk Screw M3x12 mm**
+	* Quantity: 48
+	* Unit Price: ₹1.80
+	* Total Price: ₹86.40 / $0.15
+   	* Vendor: OnlyScrews
+   	* Link: [Product Page](https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20)
+	
+7. **Socket Head M2x12 mm**
+	* Quantity: 20
+   	* Unit Price: ₹4.00
+   	* Total Price: ₹80.00 / $0.83
+	* Vendor: OnlyScrews
+    * Link: [Product Page](https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm)
+
+This was the updated section of the BOM:
+
+| Brass Insert M5x10 mm      | 4*3 = 12       | 15 |  $0.05  |  ₹ 4.60  |  $0.72  |  OnlyScrews  | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                        |
+|----------------------------|----------------|----|---------|----------|---------|--------------|------------------------------------------------------------------------------------------------------------------------|
+| Brass Insert M3x10 mm      | 8*4 + 6*2 = 44 | 50 |  $0.04  |  ₹ 3.60  |  $1.88  |  OnlyScrews  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                        |
+| Brass Insert M3x6 mm       | 6*6 = 36       | 40 |  $0.05  |  ₹ 4.80  |  $2.00  |  OnlyScrews  | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                          |
+| Pan Head Screw M5x15 mm    | 4*3 = 12       | 15 |  $0.02  |  ₹ 1.60  |  $0.25  |  OnlyScrews  | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm |
+| Countersunk Screw M3x30 mm | 8*4 + 6*2 = 44 | 50 |  $0.04  |  ₹ 3.80  |  $1.98  |  OnlyScrews  | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                |
+| Countersunk Screw M3x12 mm | 6*6 = 36       | 40 |  $0.02  |  ₹ 1.80  |  $0.75  |  OnlyScrews  | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                  |
+| Socket Head M2x12 mm       | 4*4 = 16       | 20 |  $0.04  |  ₹ 4.00  |  $0.83  |  OnlyScrews  | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                        |
+
+But still, the screws for the Linear Rails and other parts are still left. But for the tensioning system, the screws are done.
+
+Here're the lapses of today's session: [PATRA-LPS-65-D85-1](https://lapse.hackclub.com/timelapse/uW1uWNp6xbwo) and [PATRA-LPS-64-D84-2](https://lapse.hackclub.com/timelapse/fa5BPyqrjwpY)
+
+**Total time spent: 5h 20m**
+
+---
+
+# Day 86 — 13.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 4
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-66-D86]()
 
 **Total time spent: 0h 00m**
 
