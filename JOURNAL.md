@@ -4032,7 +4032,15 @@ Here's the lapse of today's session: [PATRA-LPS-64-D84](https://lapse.hackclub.c
 
 # Day 85 — 12.10.2026: 
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8bc26337-f6dc-4702-9c0a-c6360d43d1f2" />
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4315bd14-df68-47ee-8449-8db0ec641cff" />
+
+https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm 
+
+https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm for motors
+
+https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm for connectors to 4040
 
 Here's the lapse of today's session: [PATRA-LPS-65-D85]()
 
