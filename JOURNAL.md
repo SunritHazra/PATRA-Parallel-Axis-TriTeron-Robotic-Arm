@@ -4030,4 +4030,14 @@ Here's the lapse of today's session: [PATRA-LPS-64-D84](https://lapse.hackclub.c
 
 ---
 
+# Day 85 — 12.10.2026: 
+
+
+
+Here's the lapse of today's session: [PATRA-LPS-65-D85]()
+
+**Total time spent: 0h 00m**
+
+---
+
 **note: i should add a fillet on the 90 degree corners of the clamps.**
