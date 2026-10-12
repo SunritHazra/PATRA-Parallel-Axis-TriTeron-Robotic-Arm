@@ -3922,13 +3922,13 @@ first i added m5 brass inserts.
 
 Here's what I did:
 
-1. **Adding M5x10 mm brass inserts (continued from last session):**
+1. **Adding M5x10 mm brass inserts for X and Y axes (continued from last session):**
 	- The center of the insert and the hole, did not match. This meant that it was misplaced in the last session.
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/24cf8abd-11a1-4c91-ba09-4ed07b6822e7" />
 	- I used the Join tool to place it correctly. Then I copied it to make total four inserts.
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1ae876b-88da-46c4-973a-c0a8f9642e1d" />
 
-2. **Adding M3x10 mm brass inserts:** 
+2. **Adding M3x10 mm brass inserts for X and Y axes:** 
 	- I first closed the holes, as they were threaded.
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5dcd1f70-3b02-41c4-8d9c-a0b4368df048" />
 	- Then I made the hole 4.4 mm in diameter as the insert is 4.8 mm. I also 0.2 mm chamfer, making the outermost edge 4.8 mm in diameter.
@@ -3940,7 +3940,7 @@ Here's what I did:
 	- Added threads for the inserts I made.
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5bddd210-4fcd-4eb1-8104-6592103ae725" />
 
-3. **Adding M3x6 mm brass inserts:**
+3. **Adding M3x6 mm brass inserts for X and Y axes:**
 	- For the screws under, I first thought of length 5 mm. But I changed it to 6 as I had space. I made the depth 6 mm and kept the diameter at 4 mm, as the insert was 4.4 mm.
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e545c1a0-8845-44df-aba4-9e4f6ea50cbe" />
 	- I then extruded out three inserts.
@@ -3952,7 +3952,7 @@ Here's what I did:
 
 After this, I also thought of adding the screws for this. But while searching for screws, I discovered that only SS304 screws had STEP files, and the mild steel ones had no datasheet or STEP files. I first thought of making the screw 35 mm, where 20 mm is on the outer half of the pulley/idler case and the rest 15 mm is inside the other. But I made the inside 10 mm instead, as the longest SS304 M3 screw was 30 mm, which is covering 20 mm + 10 mm (not 15 mm). I was not sure about the mild steel screw's dimensions, so I chose SS304 30 mm. Still, 10 mm depth is fine as per the thread depth rule for M3. This forced me to change both the hole depth and the insert length from 15 mm to 10 mm.
 
-4. **Adding M3x30 mm countersunk screws:**
+4. **Adding M3x30 mm countersunk screws for X and Y axes:**
 	- I downloaded [this](https://cdn.shopify.com/s/files/1/0871/5295/1609/files/CSK_M3x30mm.step?v=1753269088) STEP from OnlyScrews and imported it in the design.
 		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7583c7df-d573-4fb2-aa78-854f6ac519f9" />
 	- Then I remembered that I forgot to move the holes 1 mm away from the center for the other half of the case. So I did that.
@@ -3970,23 +3970,47 @@ This is how it looks after copying it to all the others. Now, only the Z axis fa
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/703820c5-e11f-4d07-8c0d-25c749969df8" />
 
-5. **
+With the X and Y axes done, I next addressed the Z axis.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1c156ab0-faae-4798-aea5-b1077ad2902e" />
+5. **Adding M5x10 mm brass inserts and fixing M3 holes for Z axis:**
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57e78a08-44e3-42d8-b4fc-d6c5cd7cf000" />
+	- The inserts were already arranged the way I needed them. So, I copied the inserts into the correct places.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1c156ab0-faae-4798-aea5-b1077ad2902e" />
+	- I created a sketch with correct position of the M3 holes where they are 1 mm far from center, and correct position for M5 holes.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57e78a08-44e3-42d8-b4fc-d6c5cd7cf000" />
+	- The holes weren't correct and were threaded. So, I first deleted the M5 holes and extruded in correct holes with 6 mm diameter and 0.2 mm chamfer.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/67e083c1-66ec-4e23-80d5-089b449b9550" />
+	- Then I extruded in the 3.4 mm M3 clearance holes, making sure there are 6 holes, not 8 (due to the case shape)
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5f2813e-0a6f-4aa0-82ba-df844d3e9032" />
+	- Added 1.3 mm wide and 1.3 mm deep clearance on the edges.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ac81823-ceee-4e68-b3eb-7f3fa75799ad" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/67e083c1-66ec-4e23-80d5-089b449b9550" />
+6. **Adding M3x10 mm brass inserts for Z axis:** 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5f2813e-0a6f-4aa0-82ba-df844d3e9032" />
+	- First I got rid of the threaded holes using extrusions.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1cfc510f-4e0d-49d2-b91b-dd45c1016eac" />
+	- Then I used my previous sketch to extrude in correct holes. I also added 0.2 mm chamfers.
+		<img width="1365" height="731" alt="image" src="https://github.com/user-attachments/assets/e90333ae-b4c3-44c3-b099-4b2ed11dafd9" />
+  	- Next I copied the inserts and arranged them in Browser.
+   		<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/36c8a0cc-0b31-4e1e-b1db-466654c4ecd9" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ac81823-ceee-4e68-b3eb-7f3fa75799ad" />
+7. **Adding M3x6 mm brass inserts for Z axis:**
+	- I first made the hole from 5 mm deep to 6 mm, and added chamfers.
+		<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/56f684c2-d5c8-443a-ae13-a4cb4edf3934" />
+	- Next I copied the inserts from the other case and then duplicated it for the other side too.
+		<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/2f1b730f-9278-41b4-8d7c-26e0f5f221e9" />
+	- But then I noticed missing chamfers on some sides, so i fixed it by adding 0.2 mm chamfers.
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b4153b65-293b-43bb-9258-9b31655f2e27" />
 
-.
+8. **Adding M3x30 mm countersunk screws for Z axis:**
+	- I copied in the screws from the other case.
+		<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/8f1fab7c-7041-40ff-afe3-a667ff33e558" />
+	- Deleted the extra two screws on the side.
+	  	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/482994d4-39e3-484b-bfff-9342b0c65ff3" />
+	- Copied the screws to the other side. But I hadn't fixed the idlers yet.
+		<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/5e2ede81-2062-482a-a2f2-83559a3e7b86" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1cfc510f-4e0d-49d2-b91b-dd45c1016eac" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b4153b65-293b-43bb-9258-9b31655f2e27" />
+The idler case of the Z axis tensioning system is yet to be fixed. But so far, the other pulley/idler cases are done with their inserts and screws. Arranging the components in Browser was also left.
 
 Here's the lapse of today's session: [PATRA-LPS-63-D83](https://lapse.hackclub.com/timelapse/PrdOEF78XoIv)
 
