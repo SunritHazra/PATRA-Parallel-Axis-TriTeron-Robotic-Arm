@@ -2018,7 +2018,7 @@ Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.c
 
 ---
 
-# Day 46 — 04.08.2026: Working on Z Tensioning System Pulley Case
+# Day 46 — 04.08.2026: Working on Z Tensioning System Pulley Case — Part 1
 
 The hunt for shaft couplers continue. I came across several promising candidates for the coupler, but in the end, I couldn't settle on any.
 
@@ -2104,17 +2104,54 @@ Here's the lapse of today's session: [PATRA-LPS-26-D46](https://lapse.hackclub.c
 
 ---
 
-# Day 47 — 05.08.2026: IDK [incomplete]
+# Day 47 — 05.08.2026: Working on Z Tensioning System Pulley Case — Part 2
+
+I started by validating the design which I created last day. When that was done, the next thing I had to worry about was the belt return path, especially the X and Y belt return path. This is what the current belt return path looks like:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/361fc7d5-4c85-46fd-a16f-1ec04ccbb204" />
 
-https://in.misumi-ec.com/vona2/detail/110302684350/?KWSearch=aluminium%20extrusions&searchFlow=results2products&list=PageSearchResult
+I really needed a workaround as there was a high possibility of belt wear as there was not much space for the belt. The belt was supposed to travel 1000 mm inside the aluminum extrusions. That's when I considered my 4040 extrusion choices. That's when I came across [this](https://in.misumi-ec.com/vona2/detail/110302684350/?KWSearch=aluminium%20extrusions&searchFlow=results2products&list=PageSearchResult) extrusion from MISUMI, which could provide a proper return path for the belt.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e36a5e1c-e824-4ac7-b98d-dd3aed8b4998" />
 
+But one more option which appeared, was using UHMW tape on the surface where the belt could rub against. This made sure I don't change the extrusion and end up spending way more. But looking at the prices of the tape made me realize that either way I have to spend a lot of money on this.
+
+Moving aside from the decision fatigue, I remembered that the coupler was left to be modeled from last day. So, I started with that next. I needed a rigid way to connect the pulley/idler case to the 4040 and 2020 aluminum extrusions.
+
+This is what the pulley case looks like now.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9c4e8f8a-34e0-4616-9b10-222f3decfa21" />
 
-https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12&_t=1785996787271&spm=overseas-fa-pc.homepage.hint.1&up_spm=Jlcpcb.Loginpage.1003
+Here's what I did next.
+
+- I extruded in part of the case to house a coupler.
+- Then from another sketch, I extruded out a coupler similar to that of the other linear guide.
+
+Then, this is the deign I achieved:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/30f91d0f-cf96-44a5-bb89-9ac6b0b3c069" />
+
+But before I continued with the design, I thought of refining the existing design of the pulley case instead. Like this:
+
+- I added fillets on the sharp corners inside the pulley case
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/36ade463-0247-4af3-b566-b2d240fa6a98" />
+
+- I added face offset on this face to make the wall 1 mm thicker
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/deaa37cc-f38d-49ff-9fe5-e109e3ea83a0" />
+
+- Then I added fillets on the internal edges of the case.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7baf42bb-2b2f-4235-be99-dfa06d1fb38e" />
+
+After that was done, I did a section analysis to check the design. Then I first mirrored the body to make other half of the pulley case, then again I mirrored the full component to make the idler case. I also copied the other components like shaft adapter, bearings, pulley to idler, etcetera.
+
+I will be using [this](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12&_t=1785996787271&spm=overseas-fa-pc.homepage.hint.1&up_spm=Jlcpcb.Loginpage.1003) pulley for both pulley and idler in the Z axis tensioning system.
+
+I now had to take the similar design to the X and Y tensioning system as well. So I copied the Z pulley case to position it where the X pulley case is supposed to be.
+
+First impressions after doing the copying, the pulley is way too big. So, I used offset to make space for the pulley.
 
 Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.com/timelapse/FEMEhu7VLqJm)
 
@@ -4319,7 +4356,13 @@ And then I extruded the sketch.
 
 I journaled days #46, #
 
+Day #46
+
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f1a1b9f5-1f8e-4fe1-bd88-c592636738a5" />
+
+Day #47
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dda5484c-6170-4b3d-acf1-62425019a6de" />
 
 Here's the lapse of today's session: [PATRA-LPS-66-D86]()
 
