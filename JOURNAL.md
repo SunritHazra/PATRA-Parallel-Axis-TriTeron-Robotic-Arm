@@ -2161,6 +2161,12 @@ Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.c
 
 # Day 48 — 06.08.2026: COOKING [incomplete]
 
+I had to find a way to make the belt pass under the 4040 extrusion, and have pulley as small as possible. The smallest pulley diameter depends on the sum of the stack height of the linear rail, the linear block, and the depth of the return belt inside the 4040 extrusion. The distance between the bottom of the linear rail and the belt's top path was 20.30 mm. The 4040 extrusion goes under that, and the belt passes in between.
+
+But to make the pulley smaller, I got the idea to raise the height of the pulley/idler cases. This would reduce the diameter of the pulley/idler needed significantly. I had also imported [HFS5-4040-1000](https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000) in the place of the previous 4040 extrusion for direct comparison.
+
+To execute this plan, I created a new sketch to validate my design strategy:
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32caa474-5f12-4dbc-8806-e7989578b1fd" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0e20449e-5278-46a2-8fe7-ef7fc2e82110" />
@@ -4334,7 +4340,7 @@ This was the updated section of the BOM:
 
 But still, the screws for the Linear Rails and other parts are still left. But for the tensioning system, the screws are done.
 
-Here're the lapses of today's session: [PATRA-LPS-65-D85-1](https://lapse.hackclub.com/timelapse/uW1uWNp6xbwo) and [PATRA-LPS-64-D84-2](https://lapse.hackclub.com/timelapse/fa5BPyqrjwpY)
+Here're the lapses of today's session: [PATRA-LPS-65-D85-1](https://lapse.hackclub.com/timelapse/uW1uWNp6xbwo) and [PATRA-LPS-65-D85-2](https://lapse.hackclub.com/timelapse/fa5BPyqrjwpY)
 
 **Total time spent: 5h 20m**
 
@@ -4364,7 +4370,27 @@ Day #47
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dda5484c-6170-4b3d-acf1-62425019a6de" />
 
-Here's the lapse of today's session: [PATRA-LPS-66-D86]()
+After today, these days are left to be journaled:
+
+* Day #48
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
+Here're the lapses of today's session: [PATRA-LPS-66-D86-1](https://lapse.hackclub.com/timelapse/q7r-0WpErT2k) and [PATRA-LPS-66-D86-2]()
 
 **Total time spent: 0h 00m**
 
