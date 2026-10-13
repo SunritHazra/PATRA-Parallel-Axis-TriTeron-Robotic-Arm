@@ -2045,7 +2045,7 @@ comparison
 
 https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion-driven/
 
-Here's the lapse of today's session: [PATRA-LPS-26-D46](PATRA-LPS-26-D46)
+Here's the lapse of today's session: [PATRA-LPS-26-D46](https://lapse.hackclub.com/timelapse/grXv6KJjtiJW)
 
 **Total time spent: 5h 10m**
 
@@ -2479,7 +2479,7 @@ fixed several clearances and made them 0.2 mm from 0.4 and 0.3. added fillets fo
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7e8b484d-3cac-4065-8dbc-05f780bdfde2" />
 
-Here's the lapse of today's session: [PATRA-LPS-44-D64]()
+Here's the lapse of today's session: [PATRA-LPS-44-D64](https://lapse.hackclub.com/timelapse/zQO9Jc_WOjpT)
 
 **Total time spent: 6h 20m**
 
@@ -4232,14 +4232,15 @@ Next, I updated the BOM. Here are the things I added to the BOM:
 
 This was the updated section of the BOM:
 
-| Brass Insert M5x10 mm      | 4*3 = 12       | 15 |  $0.05  |  ₹ 4.60  |  $0.72  |  OnlyScrews  | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                        |
-|----------------------------|----------------|----|---------|----------|---------|--------------|------------------------------------------------------------------------------------------------------------------------|
-| Brass Insert M3x10 mm      | 8*4 + 6*2 = 44 | 50 |  $0.04  |  ₹ 3.60  |  $1.88  |  OnlyScrews  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                        |
-| Brass Insert M3x6 mm       | 6*6 = 36       | 40 |  $0.05  |  ₹ 4.80  |  $2.00  |  OnlyScrews  | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                          |
-| Pan Head Screw M5x15 mm    | 4*3 = 12       | 15 |  $0.02  |  ₹ 1.60  |  $0.25  |  OnlyScrews  | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm |
-| Countersunk Screw M3x30 mm | 8*4 + 6*2 = 44 | 50 |  $0.04  |  ₹ 3.80  |  $1.98  |  OnlyScrews  | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                |
-| Countersunk Screw M3x12 mm | 6*6 = 36       | 40 |  $0.02  |  ₹ 1.80  |  $0.75  |  OnlyScrews  | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                  |
-| Socket Head M2x12 mm       | 4*4 = 16       | 20 |  $0.04  |  ₹ 4.00  |  $0.83  |  OnlyScrews  | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                        |
+| Item                       | Quantity | Cost(USD) | Cost(INR) | Total Cost |  Vendor      | Link                                                                                                                   |
+|----------------------------|----------|-----------|-----------|------------|--------------|------------------------------------------------------------------------------------------------------------------------|
+| Brass Insert M5x10 mm      | 15       |  $0.05    |  ₹ 4.60   |  $0.72     |  OnlyScrews  | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                        |
+| Brass Insert M3x10 mm      | 50       |  $0.04    |  ₹ 3.60   |  $1.88     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                        |
+| Brass Insert M3x6 mm       | 40       |  $0.05    |  ₹ 4.80   |  $2.00     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                          |
+| Pan Head Screw M5x15 mm    | 15       |  $0.02    |  ₹ 1.60   |  $0.25     |  OnlyScrews  | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm |
+| Countersunk Screw M3x30 mm | 50       |  $0.04    |  ₹ 3.80   |  $1.98     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                |
+| Countersunk Screw M3x12 mm | 40       |  $0.02    |  ₹ 1.80   |  $0.75     |  OnlyScrews  | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                  |
+| Socket Head M2x12 mm       | 20       |  $0.04    |  ₹ 4.00   |  $0.83     |  OnlyScrews  | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                        |
 
 But still, the screws for the Linear Rails and other parts are still left. But for the tensioning system, the screws are done.
 
@@ -4251,7 +4252,9 @@ Here're the lapses of today's session: [PATRA-LPS-65-D85-1](https://lapse.hackcl
 
 # Day 86 — 13.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 4
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fb63e90f-b2b8-4caa-aa14-810137f16d3f" />
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/569cff35-fb8b-437b-850e-76cc4ff4c563" />
 
 Here's the lapse of today's session: [PATRA-LPS-66-D86]()
 
