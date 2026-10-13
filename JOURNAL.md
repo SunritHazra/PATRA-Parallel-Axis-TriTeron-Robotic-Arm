@@ -2159,7 +2159,7 @@ Here's the lapse of today's session: [PATRA-LPS-27-D47](https://lapse.hackclub.c
 
 ---
 
-# Day 48 — 06.08.2026: COOKING [incomplete]
+# Day 48 — 06.08.2026: Reconsidering the X & Y Belt Path
 
 I had to find a way to make the belt pass under the 4040 extrusion, and have pulley as small as possible. The smallest pulley diameter depends on the sum of the stack height of the linear rail, the linear block, and the depth of the return belt inside the 4040 extrusion. The distance between the bottom of the linear rail and the belt's top path was 20.30 mm. The 4040 extrusion goes under that, and the belt passes in between.
 
@@ -2167,7 +2167,30 @@ But to make the pulley smaller, I got the idea to raise the height of the pulley
 
 To execute this plan, I created a new sketch to validate my design strategy:
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/44a3637e-6cf1-4b45-89d8-9a6318bb6753" />
+
+In this sketch:
+
+- I made sure that the center of the pulley and idler stay at the same point, with only change in height.
+- Also, the upper part of the belt was left unchanged. As the pulley became smaller, the case's center rose higher.
+- The height depended on the the diameter of the pulley and idler as well.
+- There was 20 teeth pulley used for Z axis tensioning system, and I used 22 teeth pulley for X and Y axis tensioning system.
+
+According to this sketch, I need to move the pulley/idler case by 7.495 mm higher, I have to use 22 teeth pulley/idler, and I might need to replace the previous aluminum extrusion with [HFS5-4040-1000](https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000), because this has more space in between. Due to these changes, the belt return path was directly going inside the old 4040 extrusion.
+
+This is how the pulley/idler case looks after moving it 7.495 mm higher.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32caa474-5f12-4dbc-8806-e7989578b1fd" />
+
+Then I used the sketch to create a new belt, and added a internal face offset of 1.73 mm for excluding the belt teeth. I also made face offsets to make the internal shapes align closer to the belt path.
+
+I also added [this](https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12) pulley/idler to the design and placed it in the ends of the belt.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/447c9a73-6b26-4520-9e5b-2366059712d5" />
+
+Next I had to validate the belt clearances inside the 4040 extrusion body, researched on the linear rails, extrusions and devboard I could use on this project.
+
+After copying the new extrusion and deleting the old one, I modeled a new component called end plate. This is how it looks now.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0e20449e-5278-46a2-8fe7-ef7fc2e82110" />
 
@@ -4360,7 +4383,7 @@ And then I extruded the sketch.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/569cff35-fb8b-437b-850e-76cc4ff4c563" />
 
-I journaled days #46, #
+I journaled days #46, #47, and #48.
 
 Day #46
 
@@ -4370,9 +4393,12 @@ Day #47
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dda5484c-6170-4b3d-acf1-62425019a6de" />
 
+Day #48
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fa1116b5-5840-4987-92fc-a74598106e50" />
+
 After today, these days are left to be journaled:
 
-* Day #48
 * Day #49
 * Day #50
 * Day #51
@@ -4390,9 +4416,9 @@ After today, these days are left to be journaled:
 * Day #63
 * Day #64
 
-Here're the lapses of today's session: [PATRA-LPS-66-D86-1](https://lapse.hackclub.com/timelapse/q7r-0WpErT2k) and [PATRA-LPS-66-D86-2]()
+Here're the lapses of today's session: [PATRA-LPS-66-D86-1](https://lapse.hackclub.com/timelapse/q7r-0WpErT2k) and [PATRA-LPS-66-D86-2](https://lapse.hackclub.com/timelapse/-lW0wZMilQFT)
 
-**Total time spent: 0h 00m**
+**Total time spent: 5h 35m**
 
 ---
 
