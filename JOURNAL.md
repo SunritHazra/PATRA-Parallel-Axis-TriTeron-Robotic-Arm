@@ -2006,8 +2006,7 @@ But after this, my brain was introduced the world of shaft couplers where each c
 
 1. Found [this](https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/) in Robu.in. Can't use, max torque rating too low (1.5 Nm)
 2. Found [this](https://jlcmc.com/product/s/C01/CXJL/stainless-steel-high-rigidity-parallel-cut-beam-coupling-screw-fixing-screw-clamping-type) in JLCMC.
-3. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 3 Nm motor.
-4. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 2.3 Nm motor.
+3. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 2.3 and 3 Nm motor.
 
 After all that crazy searching, I had had enough. I asked MISUMI AI to to do the job for me. And I found out that it is crazy good. It completely obliterated my endless searching, by finding exactly what I was looking for, as cheap as possible. What I searched for hours, it found in seconds. It found [this](https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10) for both 3 Nm and 2.3 Nm motors.
 
@@ -2019,35 +2018,89 @@ Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.c
 
 ---
 
-# Day 46 — 04.08.2026: IDK [incomplete]
+# Day 46 — 04.08.2026: Working on Z Tensioning System Pulley Case
 
-https://in.misumi-ec.com/vona2/detail/110310701639/
+The hunt for shaft couplers continue. I came across several promising candidates for the coupler, but in the end, I couldn't settle on any.
+
+I found [this](https://in.misumi-ec.com/vona2/detail/110310701639?HissuCode=E-LMPO40L32-8-10) in MISUMI but I couldn't think of any way how and where I could place it in the KBM. It was way too large.
+
+This is how the design was. There was this bearing and the coupler.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1fc6b16c-b004-4e69-a8d4-8bff42b8c651" />
 
+And the pulley goes here.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4b8ae59b-f3b1-4c51-8929-9c783716e44f" />
 
-https://jlcmc.com/product/s/B18/BNQ-JHB8/guide-rail-embedded-linear-actuator-base-width-82mm
+So, I thought of looking at linear guides with STEP files, to see how they deal with the problems I was facing. I found out that they don't use couplers, and if they do, the motor is placed further behind. Here are the linear guides I explored:
 
-https://jlcmc.com/product/s/B18/BNQ-JHB8/guide-rail-embedded-linear-actuator-base-width-82mm?_t=1785849904834&spm=overseas-fa-pc.homepage.hint.1&up_spm=Jlcpcb.Loginpage.1003
+1. Found [this](https://jlcmc.com/product/s/B18/BNQ-JHB8/guide-rail-embedded-linear-actuator-base-width-82mm) on JLCMC.
+2. Found [this](https://in.misumi-ec.com/vona2/detail/110310701639/) on MISUMI
+3. Found [this](https://jlcmc.com/product/s/B18/BNQ-JHB8/guide-rail-embedded-linear-actuator-base-width-82mm?_t=1785849904834&spm=overseas-fa-pc.homepage.hint.1&up_spm=Jlcpcb.Loginpage.1003) on JLCMC.
+
+I imported the [E-LMPO40L32-8-10](https://in.misumi-ec.com/vona2/detail/110310701639?HissuCode=E-LMPO40L32-8-10) into Fusion to see if I could place it somewhere.
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/8e05b063-8c3d-4471-939c-ae0fbb7c6550" />
+
+But it was way too big to be placed anywhere without making major changes to the KBM, which I didn't want. I knew for sure that I needed a say to connect the motor's what to the highlighted part.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8507844b-2ef7-45e4-b34a-4bf21bb1d017" />
 
+So, I decided to instead use Combine cut to use the geometry of the motor shaft. I could fabricate my own shaft as I couldn't find one. This is the cross-section view of the plan I executed.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cb5713ef-7846-4b98-a249-dd2ae959803e" />
 
-https://in.misumi-ec.com/vona2/detail/221004999084/?CategorySpec=00000230674%3A%3Amig00000001861896%2C%0900000230734%3A%3Amig00000001861547%2C%0900000230786%3A%3Amig00000001826448%2C&list=PageCategory the washer 0.5 mm thick
+I needed to use thinner washers to make that design successful. I found [this](https://in.misumi-ec.com/vona2/detail/221004999084/?CategorySpec=00000230674%3A%3Amig00000001861896%2C%0900000230734%3A%3Amig00000001861547%2C%0900000230786%3A%3Amig00000001826448%2C&list=PageCategory) washer which is 0.5 mm thick, but this is quite expensive.
 
-[incomplete]
+Then I also started modelling the Z axis pulley/idler case. Here's what I did:
 
-should i use omega module for the z axis belt clamp?<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b625564-ec6a-498b-89fb-23e91746da52" />
+- First I changed the appearance to Metal Flake (Black)
 
-comparison 
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4d981a3-c103-4be2-a62a-5b9b10f5b5a5" />
 
-https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion-driven/
+- Then I closed all of the holes.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b8b1653d-e35c-4a7a-884e-cb847bba3cf0" />
+
+- Next I created this sketch to check the motor alignment and create a shape similar to the pulley case of [this](https://www.traceparts.com/en/product/item-industrietechnik-gmbh-linear-unit-gsf-8-40-r10?CatalogPath=ITEM%3A1001374067&Product=30-12112020-084688) linear actuator.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ec1ed255-c311-4e9c-8e39-f2b649a92308" />
+
+- Then I extruded the shape.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/83a9c335-4a2b-4443-b08c-f207ddff22b2" />
+
+- Next I created this sketch, to fill up more space inside the case keeping the belt path clear.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5291591c-374c-4e23-a073-ad089ab1d8bb" />
+
+- This is how it looks after extrusion.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f4946677-4834-4563-b1ce-bfe6f74644b8" />
+
+- Next I modeled the washers, and carved out a section for the coupler.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6bf57ad9-e4bc-4bbd-83c3-bfc97622edb7" />
+
+- Made some chamfers to make sure that the belt doesn't wear out.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/36f7205b-c20b-48dc-bc0b-da4ca06897b1" />
+
+As I was feeling burned out trying to fix things, I decided to play my roles as materials engineer instead of a mechanical engineer. Specifically, I saw what material I can print my pulley/idler case with. After a bit of research, the best candidate that appeared was MJF PA12S-HP Nylon, from JLC3DP. But it was more expensive than resin printing in JLC3DP, and vastly more expensive than normal FDM printing with PLA/PETG. I read [this](https://05d34394-ee75-421b-b25c-2692ee29c572.filesusr.com/ugd/8e7ac9_372f34ece2a0447382c6164aafcd4157.pdf) data sheet for more information.
+
+When searching things, I came across [this](https://www.linearmotiontips.com/belt-driven-actuators-for-a-wide-range-of-applications/) article about applications of belt driven linear actuators. Should I use an Omega shape to clamp my Z axis belt at the Z axis clamp?
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0b625564-ec6a-498b-89fb-23e91746da52" />
+
+But what they have done here is different actually.
+
+<img width="446" height="442" alt="image" src="https://github.com/user-attachments/assets/d623e70a-64cd-409d-a40f-5bc30a5736db" />
+
+I also read about the differences between belt driven and pinion driven linear actuator, [here](https://www.linearmotiontips.com/linear-actuators-belt-driven-vs-rack-and-pinion-driven/).
 
 Here's the lapse of today's session: [PATRA-LPS-26-D46](https://lapse.hackclub.com/timelapse/grXv6KJjtiJW)
 
-**Total time spent: 5h 10m**
+**Total time spent: 5h 15m**
 
 ---
 
@@ -4252,9 +4305,21 @@ Here're the lapses of today's session: [PATRA-LPS-65-D85-1](https://lapse.hackcl
 
 # Day 86 — 13.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 4
 
+I still wasn't out of yesterday's flow state, so I started with mechanical design first. But deep down, I knew I had to journal sooner or later to get out of this debt. So, after a few minutes of addressing the screw holes for connectors in the 4040 extrusions, I journaled.
+
+As, I previously thought of using M3 screws for the connectors, the holes has 3.4 mm clearance diameter.
+
+So, I created a new sketch with 2.4 mm clearance diameter.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fb63e90f-b2b8-4caa-aa14-810137f16d3f" />
 
+And then I extruded the sketch.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/569cff35-fb8b-437b-850e-76cc4ff4c563" />
+
+I journaled days #46, #
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f1a1b9f5-1f8e-4fe1-bd88-c592636738a5" />
 
 Here's the lapse of today's session: [PATRA-LPS-66-D86]()
 
