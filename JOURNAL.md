@@ -5,11 +5,11 @@ Author: Sunrit Hazra
 Description: An open-source nine degrees of freedom hybrid robot architecture of a kinematically linear three degrees-of-freedom triple axis manipulator system and a six degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Kinematic Base Module (KBM) Progress: "91%"
+Kinematic Base Module (KBM) Progress: "95%"
 TriTeron Robot Module (TRM) Progress: "62%"
 Robotic Arm Module (RAM) Progress: "1%"
 Electronic Components Progress: "10%"
-Overall Progress: "41%"
+Overall Progress: "42%"
 PC (Laptop) Used: ASUS Vivobook 15 X540UAR
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA, Emergent Ventures"
 Helped by: "Dan Rudmin (Zaber Technologies Inc.), Rowan Hunt (Not An Engineer)"
