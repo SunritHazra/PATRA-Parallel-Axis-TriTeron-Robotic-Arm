@@ -17,7 +17,6 @@ Important Note: "There are several incomplete journals, containing an [incomplet
 
 ---
 
-
 # Day 0: Flashback
 
 A random day in December of 2025, I was scrolling through my YouTube feed, when I came across this [video](https://www.youtube.com/shorts/74T0LF2l5Ck) with TriTeron Robot concept. The mechanics were immediately impressive — a clean parallel axis system with a movement profile I hadn't seen in a hobbyist build before. The logical extension was obvious: mount a robotic arm on the head, and you get something that combines the workspace coverage of a gantry with the dexterity of a serial arm, which is really cool.
@@ -2208,7 +2207,9 @@ The very first thing which I did here was the motor M5 screws, which I had to ma
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a57e5d77-c9cb-43b1-b5d5-07717c67d80b" />
 
-And I already knew this, and after asking Google, this belief became stronger; the Math Rule for Plastic Threads to secure a structural component directly into 3D printed plastic or resin without it stripping, you must follow the standard engineering formula: **Thread Depth = Screw Diameter $\times$ 2.5**.
+And I already knew this, and after asking Google, this belief became stronger; the Math Rule for Plastic Threads to secure a structural component directly into 3D printed plastic or resin without it stripping, you must follow the standard engineering formula:
+
+	**Thread Depth = Screw Diameter x 2.5**.
 	
 Another depressing discovery I made, which I was fearing earlier, was the fact that my belt clearances are way too low. I had to ensure more clearance for the belt according to Google AI. The fact that the belt clearance was barely 1 mm above and besides the belt was quite alarming. According to Google AI, I had to at least make it more than 2 mm or 2.5 mm for better clearance, since my belt is more than 1 mm long.
 
@@ -2292,21 +2293,57 @@ Here's the lapse of today's session: [PATRA-LPS-29-D49](https://lapse.hackclub.c
 
 ---
 
-# Day 50 — 08.08.2026: BOILING [incomplete]
+# Day 50 — 08.08.2026: Adding Screw Holes for the X Axis Tensioning System Pulley
 
-https://jlcmc.com/product/s/T02/TPLH/euro-20-series-connection-accessories-slotted-connector
+First things first, I made some new decisions about the height of the X, Y, and Z pulley and idler cases. The decision was that I wanted to change the distance of the X and Y tensioning system pulley and idlers from 7.495 mm to 7.5 mm, just to round them off. I also decided to raise the height of the Z-axis tensioning system pulley and idler from 0 to 7.5 mm to keep them at the same level and just to make things look better. Due to the changes made, I also had to raise the belt for the Z-axis, due to which there was a much larger space under the return belt of the Z-axis sensing system. Thus, I decided to add one more 2020 extrusion under it. There are now two extrusions: one that goes under the return belt of the existing system and one that goes between.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ed7d0cbf-6c9e-46b7-b30a-f9b97781a242" />
+Once the height of the tensioning system was sorted, I started looking into the X and Y belts that had no teeth in them, so I added the teeth like this:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8bba3897-076f-4add-a5a4-7b95df473e7b" />
+- I had previously extracted a single tooth from the Z-axis belt.
+- I used that tooth and replicated it using the pattern on path feature
+- And then I combined the whole thing into a single body. 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc89c6b5-a315-460b-8256-1cfb31876304" />
+I also made some changes to the design of the end plates, where I raised the parts that the tensioning system pulley and idlers were not resting on. I also added space for the 2020 extrusion that goes under.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc5017ee-f22a-4df3-a734-853f341c3663" />
+Then I frantically started searching for a way by which I can reliably connect the X and Y axes pulley/idler cases to the 4040 extrusion. The best place to look for a solution was in MISUMI, as they had all related accessories for the 4040 extrusion. Even after a long search, I wasn't able to find something that I could integrate into the design of the pulley and idler case. I went to JLCMC to search for something like a straight-line connector that connects both 2020 extrusions and 4040 extrusions, and that's when I found [this](https://jlcmc.com/product/s/T02/TPLH/euro-20-series-connection-accessories-slotted-connector).
+
+Though it would work quite well and it would be reliable to use, I did not actually want to source any more components from JLCPCB because I was extremely scared of the customs that could be levied on me. Forge is not going to pay any of my customs, so instead I decided to take another approach that is still reliable, at least for the 3D-printed version of this. And more importantly, the 4040 extrusion was from MISUMI, and sourcing a connector from JLCPCB would have been unreliable because the dimensions most likely wouldn't match. Due to the reasons combined, I didn't actually go into downloading the model and seeing if they would be compatible with each other.
+
+So instead, I decided to model my own connectors with custom screw pitch. Here's how I did that: 
+
+- On the upper and lower rails, I created a sketch and made 4 shapes with 0.15 mm clearance from all sides.
+	
+	<img width="1365" height="731" alt="image" src="https://github.com/user-attachments/assets/2dd2a83a-3ef7-4ad9-bd7e-2a95fb1ae676" />
+	
+- I made those shapes cut into the pulley of the X axis tensioning system and the end plate as well.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ed7d0cbf-6c9e-46b7-b30a-f9b97781a242" />
+
+- Made another sketch for holes, under the end plate. I made sure that the holes that I make do not hole through any other hole inside the pulley case. 
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/89afbc35-6b84-4b86-b3a8-5a7dbcd978fe" />
+
+- I made three holes under the end plate that lined up exactly on the center of the holes I had cut through. I made sure that two holes go through connectors, and one hole goes directly through the end plate and connects to the pulley.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8bba3897-076f-4add-a5a4-7b95df473e7b" />
+
+- I repositioned those holes, making sure that they are equidistant from each other.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc5017ee-f22a-4df3-a734-853f341c3663" />
+
+There was one more issue which I encountered while making extrusions for the connectors and trying to combine them using the combine tool. I discovered that the pulley case was misplaced by 0.001 mm from the center along the X axis. I fixed that by moving the x-axis pulley case 0.001 mm towards the center in the X axis.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1bd79197-d83b-4e7e-a068-7c8e7fbf4ccd" />
 
+I even tried to see what would happen if I made the hole all the way through the pulley case, and according to the sectional analysis, it would hole through the belt.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7a6a9494-d02f-40ae-9af7-204ac8012181" />
+
+Next, I remembered that I also had to connect the two halves of the pulley idler case. I got the idea to use screws for this. So, I created a new sketch and extruded it in.
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/412f8eaf-832b-4b58-886d-67b6f17dfb2d" />
+
+Using several section analyses, I made sure that it doesn't hold through anything critical.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7916ac7f-6412-4300-b5fc-92d59f7b234e" />
 
@@ -2316,13 +2353,19 @@ https://jlcmc.com/product/s/T02/TPLH/euro-20-series-connection-accessories-slott
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b41cdc99-9a77-4524-8584-08e6b3e8733e" />
 
+After adding thread to the holes, things look all sorted out. 
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e5971a96-96c7-4558-ab30-c0359240476e" />
 
-https://onlyscrews.in/products/m3-nut-ss-304?_pos=1&_sid=938b14185&_ss=r
+I also searched for the nuts that I could use for this hole, and after searching in OnlyScrews, I found [this](https://onlyscrews.in/products/m3-nut-ss-304?_pos=1&_sid=938b14185&_ss=r). Besides, I also added thread to the holes underneath. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ade5e42a-90d7-44a7-bf3e-697bb1763b66" />
 
+I also added chamfers on the M3 holes as I was going to use countersunk screw.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/238e3d03-8f5a-4893-a087-4c60c9b0cd96" />
+
+This is what the x-axis pulley case looks like from different sides:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8068fe00-b347-4018-befa-4a47fa1d21d8" />
 
@@ -2332,6 +2375,12 @@ https://onlyscrews.in/products/m3-nut-ss-304?_pos=1&_sid=938b14185&_ss=r
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a8e0e243-96a7-414e-8292-aa171405ce78" />
 
+But even after all of that hard work, I was really heartbroken when I saw there was a printing risk in the model, in JLC3DP. 
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/a53a29ed-4e35-454a-87e5-e9bc8f7d3710" />
+
+But parallel to all of this CAD that I did today, one worrying discovery I made was that M3 threads printed in 9600 Resin using SLA printing was way too unreliable. This discovery was strengthened by the fact that most of the printing risks involved in the model were related to the threads. I was instead supposed to use something called brass threaded inserts instead, which is not only suitable for FDM prints, but also SLA prints.
+
 Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.com/timelapse/KziIqj5W50kG)
 
 **Total time spent: 6h 10m**
@@ -2339,6 +2388,8 @@ Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.c
 ---
 
 # Day 51 — 08.08.2026: STEAMING [incomplete]
+
+In the last session, I had modeled the connector holes needed for the connectors. In this session, I modelled the connectors themselves. I did this by simply extruding a sketch from the last session and then using same other sketches to make the holes. 
 
 https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729
 
@@ -4490,12 +4541,10 @@ Day #49
 
 Day #50
 
-
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68e0b61d-82f0-41ac-9852-ddd066744988" />
 
 After today, these days are left to be journaled:
 
-* Day #49
-* Day #50
 * Day #51
 * Day #52
 * Day #53
