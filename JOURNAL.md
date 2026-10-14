@@ -19,7 +19,7 @@ Important Note: "There are several incomplete journals, containing an [incomplet
 
 # Day 0: Flashback
 
-A random day in December of 2025, I was scrolling through my YouTube feed, when I came across this [video](https://www.youtube.com/shorts/74T0LF2l5Ck) with TriTeron Robot concept. The mechanics were immediately impressive — a clean parallel axis system with a movement profile I hadn't seen in a hobbyist build before. The logical extension was obvious: mount a robotic arm on the head, and you get something that combines the workspace coverage of a gantry with the dexterity of a serial arm, which is really cool.
+A random day in December of 2025, I was scrolling through my YouTube feed, when I came across [this](https://www.youtube.com/shorts/74T0LF2l5Ck) video with TriTeron Robot concept. The mechanics were immediately impressive — a clean parallel axis system with a movement profile I hadn't seen in a hobbyist build before. The logical extension was obvious: mount a robotic arm on the head, and you get something that combines the workspace coverage of a gantry with the dexterity of a serial arm, which is really cool.
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ff8585a7-c18c-4249-9e0b-f1dbca4265bf" />
 
