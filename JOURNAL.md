@@ -2200,33 +2200,91 @@ Here's the lapse of today's session: [PATRA-LPS-28-D48](https://lapse.hackclub.c
 
 ---
 
-# Day 49 — 07.08.2026: BAKING [incomplete]
+# Day 49 — 07.08.2026: Refining Internal Structure of the X & Z Pulley Cases
+
+The bare-bone structure of the pulley and idler case was already modeled in the last sessions. This session covered modeling of the internal structure of the pulley cases that was altered by the screw threads that pass through it and the belt path clearance. At almost every step, I was making the walls too thin, and I had to make sure that the walls stay as thick as possible. Also, there is maximum thread engagement, and there is enough clearance for the belt to pass through. I wish I was a four-dimensional creature at this stage because I couldn't look into the other parts unless I was doing a sectional analysis. Every time I did a sectional analysis, I discovered that the wall is too thin to work with. 
+
+The very first thing which I did here was the motor M5 screws, which I had to make at least 12.5 mm deep to make it reliable. Instead, I couldn't go deeper than 10 mm. Just look what happens if I make it 10 mm deep:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a57e5d77-c9cb-43b1-b5d5-07717c67d80b" />
 
-The Math Rule for Plastic ThreadsTo secure a structural component directly into 3D printed plastic or resin without it stripping, you must follow the standard engineering formula:\(\text{Thread\ Depth}=\text{Screw\ Diameter}\times 2.5\)
+And I already knew this, and after asking Google, this belief became stronger; the Math Rule for Plastic Threads to secure a structural component directly into 3D printed plastic or resin without it stripping, you must follow the standard engineering formula: **Thread Depth = Screw Diameter $\times$ 2.5**.
+	
+Another depressing discovery I made, which I was fearing earlier, was the fact that my belt clearances are way too low. I had to ensure more clearance for the belt according to Google AI. The fact that the belt clearance was barely 1 mm above and besides the belt was quite alarming. According to Google AI, I had to at least make it more than 2 mm or 2.5 mm for better clearance, since my belt is more than 1 mm long.
 
-the belt clearances are absolutely insufficient
+I also had to connect the two halves of the pulley/idler case, for which I extended the screw till the very back, so that with just four M5 screws I can connect both the motors and the two halves of the pulley/idler case. 
+
+What a weird loop I was stuck in: if I had to increase the belt clearance, I actually had to go and increase the distance between the top surface of the belt and the pulley case. But I cannot because the screw walls are way too thin. If I increase the clearance, then I could just end up eating up all the space that the screw thread needs. 
+
+This selected section analysis proves my point:
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/3ae405b0-9e71-461f-b18b-cf368a0b586c" />
+
+And this sectional analysis as well:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0834b834-0b6b-499e-8ccf-d689e3befd0b" />
 
+The wall is way too thin, and I can't think of any possible way to fix this. Driving the screws 40 mm deep gives you more than enough thread engagement, but a 0.5 mm thin wall is dangerously thin for an SLA resin print. The cross-section shows that, the screw threads are cutting directly into the printed material. In SLA resin, this thin wall will cause immediate mechanical failure.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a8aa32b7-6639-495c-b590-5fa4571b067e" />
+
+But instead of assuming that this was unprintable, I actually went to JLC3Dp to check if there are any printing risks. And obviously, there were a lot of printing risks. Exactly in those parts where I mentally flagged them 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b809bd65-4f58-445f-b180-d8ff1e656f27" />
 
+I even thought of doing something like this, where there is no thread in the bottom part of the screw, and it looks something like this:
+
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/ea043567-8aaf-410d-834b-903326281f6b" />
+
+I even thought of using threadless screws like this, where there would be no thread and there would be no mechanical failure, even if the walls were thin. I could make the walls as thin as 0.8 mm, and yet the thing would work perfectly fine. But I don't know, actually, if this would even work, and there was a high risk of failure. 
+
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/f43c6e05-884c-4ff4-8d73-16ab596b570e" />
+
+One more option I had was using grub screws or blind screws for the internal structure of the motor, but I also dropped that idea.
+
+Then I got the perfect idea, which I needed to fix this. I went back into the timeline when I was actually designing the internal structure of the Z-axis tensioning system pulley case on day #47. Instead of making the M5 screw all the way though, I can make it go only 10 mm in, and make the walls thicker by decreasing the clearance between the sides of the belt and the case. This won't be much of a problem as the pulley is flanged and this is right after the belt exits the pulley, so there will be no sag. Here're the changes I made to the design:
+
+- Using face offsets, I extended these faces.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/73aa6f5d-0a4d-4bb2-ac34-682427b19725" />
+
+- Extended the part where the pulley dosen't reach.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c9402a24-3134-439e-a66c-55ff461b47ed" />
+
+- One more offset and I had this face
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b73214d-0ed5-4819-bb57-1a21bd4053aa" />
+
+- I repeated the same process below
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2c7933ea-432a-4a42-8c60-e3350ab74b0b" />
+
+- Then I added fillets to all the new edges.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b5d4ff94-1883-450d-b45a-745451fc7a2f" />
+
+- Repeated the same fillets on the top
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/483c3e0e-8852-4660-9cbe-93f603ee86b9" />
+
+I went back and forth the timeline like a billion times. I basically solved a problem which I thought would take me 10 minutes, in hours. This is the Z axis tensioning system pulley case after I made all the changes:
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ea19be39-7b6c-4282-b39f-5c6708e2ac26" /> z axis 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b686c1fd-7899-4146-9351-d4d98829f3cd" /> x axis
+I repeated the same process for the X pulley case as well. The is the X axis tensioning system pulley case:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/035ec80e-dfa1-4e5f-8e8b-fb729fe9269c" /> fixed it!
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b686c1fd-7899-4146-9351-d4d98829f3cd" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2be58f80-7e64-41ae-b32b-52e14bf7bfe3" /> success!
+With the fixes made, the cross-section proves that the problem is now finally solved, as the walls are not much thin.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2be58f80-7e64-41ae-b32b-52e14bf7bfe3" />
+
+Cross-section from another side:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f6675f64-2de8-449b-b7b7-3751d8c35b42" />
 
-went back and forth the timeline like a billion times...
-
-i solved a problem which i thought would take me 10 minutes, in hours.
+I uploaded the new case to JLC3DP to check printability. It was a success.
 
 Here's the lapse of today's session: [PATRA-LPS-29-D49](https://lapse.hackclub.com/timelapse/flC0-x5OA8DZ)
 
@@ -4369,7 +4427,7 @@ Here're the lapses of today's session: [PATRA-LPS-65-D85-1](https://lapse.hackcl
 
 ---
 
-# Day 86 — 13.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part 4
+# Day 86 — 13.10.2026: Addressing Missing Parts of Kinematic Base Module (KBM) — Part & Journaling
 
 I still wasn't out of yesterday's flow state, so I started with mechanical design first. But deep down, I knew I had to journal sooner or later to get out of this debt. So, after a few minutes of addressing the screw holes for connectors in the 4040 extrusions, I journaled.
 
@@ -4419,6 +4477,43 @@ After today, these days are left to be journaled:
 Here're the lapses of today's session: [PATRA-LPS-66-D86-1](https://lapse.hackclub.com/timelapse/q7r-0WpErT2k) and [PATRA-LPS-66-D86-2](https://lapse.hackclub.com/timelapse/-lW0wZMilQFT)
 
 **Total time spent: 5h 35m**
+
+---
+
+# Day 87 — 14.10.2026: Journaling
+
+Journaled days #49, #50, 
+
+Day #49
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b5d3082b-d5df-4842-9a6d-3bbe6c4cb234" />
+
+Day #50
+
+
+
+After today, these days are left to be journaled:
+
+* Day #49
+* Day #50
+* Day #51
+* Day #52
+* Day #53
+* Day #54
+* Day #55
+* Day #56
+* Day #57
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
+Here's the lapses of today's session: [PATRA-LPS-67-D87]()
+
+**Total time spent: 0h 00m**
 
 ---
 
