@@ -2387,21 +2387,51 @@ Here's the lapse of today's session: [PATRA-LPS-30-D50](https://lapse.hackclub.c
 
 ---
 
-# Day 51 — 08.08.2026: STEAMING [incomplete]
+# Day 51 — 08.08.2026: Modelling 4040 Extrusion Connectors & Fixing Nanoscopic Dimensional Errors
 
-In the last session, I had modeled the connector holes needed for the connectors. In this session, I modelled the connectors themselves. I did this by simply extruding a sketch from the last session and then using same other sketches to make the holes. 
+Today's session was one of the longest sessions out of all the days I have spent on PATRA. There might be longer days in the future, but I'm sure about the fact that this day was a lot, lot, lot more frustrating than I initially thought it would be. 
 
-https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729
+Anyways, in the last session, I had modeled the connector holes needed for the connectors. In this session, I modelled the connectors themselves. 
 
-i have decided to drill my own holes.
+Here's how I did it:
 
-0.00037878
+- I extruded a sketch that I used to make the holes for the connectors from the last session, for both end plate connector and pulley/idler connector.
+- For the holes I used the sketch using which I made holes, in the last session. The distance between the M3 screw holes was 29.5 mm.
+- I also added threads inside the holes, for both end plate connector and pulley/idler connector.
+
+This is how the connector underneath looks:
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/5080f49b-3cf5-4e98-afb5-06433d2dbf71" />
+
+This the connector for the pulley/idler case looks:
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/487d7cfe-1e67-4cd2-9540-253432373743" />
+
+Once the connector was modelled, I tried comparing with the options available in JLCMC for straight line connectors. By looking at the model that was available in JLCMC, I realized that I had to also secure the connector to the 4040 extrusion and the end plates using that thing, but with screw threads.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/12ebc1fe-f40c-4974-97cc-419b204cd70f" />
+
+To secure the connectors, I had to drill holes into 4040 extrusions. MISUMI offers options to drill, but I couldn't find the options to drill where I needed it. So, I was really confused about what to do the holes. 
+
+But while dealing with the holes that needed to be made on the 4040 extrusion for securing the connectors, I also wondered what I would do about the holes that are needed to secure the linear guide (the 1 m MG15H linear guide) to the 4040 extrusion. This was because I cannot use T nuts for my extrusion because of the shape of it. I didn't know what screw size I needed, and I also didn't know what the screw pitch was, so I started looking for models since I cannot find any model in my Fusion workspace for the MGN1H linear guide. And that's when I found [this](https://www.traceparts.com/en/product/hiwin-technologies-corp-mgn15h?Product=90-07042020-029729).
+
+But I got a really good idea. I suddenly remembered that I had an impact drill from iBell, and without thinking much about it, I decided to drill my own holes. The only thing I knew was the fact that it was powerful enough to drill through 5 mm of aluminum. 
+
+Alongside all of this, I also copied the X and Z pulley cases and made other pulley idler cases for X, Y, and Z-axis tensioning systems. I also added clearance to the shaft adapters and various parts inside the pulle/idler cases. 
+
+After I had dealt with the problem of drilling holes, the next thing I had to focus on was how to get rid of nanoscopic dimensional errors which I discovered while dealing with clearances. To be specific, every shape inside the pulley/idler case was off by 0.00037878 mm. And being the perfectionist I am, I had to fix it. Not because I was worried about the fact that it would print wrong, or about the fact that I was addicted to round numbers, but because of the fact that in Fusion even that tiny number, mattered for body splits and extrusions. I had already faced these microscopic or nanoscopic errors before. That made me frustrated every single time when I couldn't get an extrusion right, and there were unnecessary face splits on a face that was supposed to be all flat in a body. And at least for the sake of this model, I wanted everything to be correct. Obviously, I knew that 3D printers are not going to face any problem due to those errors. I was not at all worried about that, nor was I worried about the CNC, but I was worried about the effects on the future design. A small error in past becomes a big problem in the future.
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/adca2d93-e279-45ae-9ebf-0a186791fc78" />
+
+Trying to fix all this was like a marathon of frustration. I went back in the timeline to those days when I started making the pulley case to see when exactly I made the mistake. But even the tiniest changes I made back in the timeline cause huge effects later on downstream, and I had to go back and forth again trying to undo whatever I did. I even tried moving the faces negative 0.00037878 mm.
 
 <img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/bf0c64ad-b5ce-4aae-aee7-a61f91d83466" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6f2c3f46-9dfd-4ba4-8df7-402e570deb73" /> 71
+And it actually seemed to work.
 
-it failed after all that
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6f2c3f46-9dfd-4ba4-8df7-402e570deb73" />
+
+It failed after all that, and I don't even know why. A thunderclap indeed for my patience. I had to undo everything I did, as it caused downstream errors.
 
 Here's the lapse of today's session: [PATRA-LPS-31-D51](https://lapse.hackclub.com/timelapse/jGC2hN65Zw76)
 
@@ -4533,7 +4563,7 @@ Here're the lapses of today's session: [PATRA-LPS-66-D86-1](https://lapse.hackcl
 
 # Day 87 — 14.10.2026: Journaling
 
-Journaled days #49, #50, 
+Journaled days #49, #50, #51, 
 
 Day #49
 
@@ -4543,9 +4573,12 @@ Day #50
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/68e0b61d-82f0-41ac-9852-ddd066744988" />
 
+Day #51
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8832d2b5-9a07-4e95-a044-f769b0480593" />
+
 After today, these days are left to be journaled:
 
-* Day #51
 * Day #52
 * Day #53
 * Day #54
