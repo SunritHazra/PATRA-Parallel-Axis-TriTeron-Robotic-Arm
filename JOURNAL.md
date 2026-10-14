@@ -2439,17 +2439,37 @@ Here's the lapse of today's session: [PATRA-LPS-31-D51](https://lapse.hackclub.c
 
 ---
 
-# Day 52 — 11.08.2026: SIZZLING [incomplete]
+# Day 52 — 11.08.2026: Partitioning PATRA & Working on the X and Y Tensioning System
 
-restructured the project in fusion: partition of PATRA modules
+I always had the eternal habit of addressing what caught my attention first. For this day, the first thing that caught my attention was the unchamfered body of the Tool Head. Quite unrelated to what I was doing these days, but I was hell-bent to address this issue.
 
-i realised i cannot tap the aluminium extrusions using my impact drill. so i will drill a smoorth hole and use grub screw and nut to make a lock nut. since the nut wont fit, i have to make the hole deeper and since the screw must slide in i have to make the hole clearance 3.4 mm. i need to use nut with glue.
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3ee7836a-0ec6-4df8-976c-4127d3eebfb2" />
+
+First thing I did was I looked at older versions for the same errors. This was version 14. Version 10 from 4th August, 2026 was the last version with the correct tool head. This discovery taught me something very important: The current way meant that if any problem occurred at one of the main components of PATRA, I would have to go back and forth in the older versions to fix them. For example, the version 10 has Unresolved Components. I can't even use it for the newer version.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/483f9953-28d8-423a-940e-83406a47f34c" />
+
+A better approach would be to seperate PATRA into three different modules:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/98fe9023-6627-45ee-a9e8-01fb31fdb798" />
+
+1. Kinematic Base Module (KBM)
+2. TriTeron Robot Module (TRM)
+3. Robotic Arm Module (RAM)
+
+Therefore, I partitioned the project into those three dominions/modules, in Autodesk Fusion.
+
+<img width="397" height="417" alt="image" src="https://github.com/user-attachments/assets/831186c4-2d3b-4f25-8f4f-5461c93c0f5a" />
+
+I realised I cannot tap the aluminium extrusions using my impact drill. So i will drill a smoorth hole and use grub screw and nut to make a lock nut. since the nut wont fit, I have to make the hole deeper. Since the screw must slide in I have to make the hole clearance 3.4 mm.
+
+I made the holes deeper using extrude, and removed the threads.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/66ca6ff1-bda6-44b3-b026-451f0c846544" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/259ca747-a503-4642-9d0a-ed9275b5686e" />
+After I mirrored the X axis tensioning system to Y, I had completed modelling most of tensioning system X and Y.
 
-completed tensioning system X and Y
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/259ca747-a503-4642-9d0a-ed9275b5686e" />
 
 Here's the lapse of today's session: [PATRA-LPS-32-D52](https://lapse.hackclub.com/timelapse/8NUdodbSSm-M)
 
@@ -2457,23 +2477,41 @@ Here's the lapse of today's session: [PATRA-LPS-32-D52](https://lapse.hackclub.c
 
 ---
 
-# Day 53 — 11.08.2026: FRYING [incomplete]
+# Day 53 — 12.08.2026: Working on the Z Axis Tensioning System
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2724f7c5-6bd8-4b3c-b457-4683daa2af05" />
+Last day the X and Y tensioning system was done. Now, it was time for the Z axis tensioning system. So, I started with the first thing I could think of which was incomplete.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da4c89c0-3495-4ac0-952d-a6c3cd56a753" />
+That one thing was the coupler that I had left incomplete. Here's what I did to complete the coupler:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/868ed83c-fc60-4a49-bb2a-e27b3c4b4241" />
+- I made a sketch on the face of the existing coupler, with projection of the 2020 extrusion. I then added clearances on 4 channels.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05e2b40a-a2b9-4001-aa3a-3bed7be30f80" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2724f7c5-6bd8-4b3c-b457-4683daa2af05" />
+
+- Then I extruded the shape of the channels I modeled.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da4c89c0-3495-4ac0-952d-a6c3cd56a753" />
+
+- I did the same for the sketch below for the end plate.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/868ed83c-fc60-4a49-bb2a-e27b3c4b4241" />
+
+- Then I extruded the sketch I made. I also added holes.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05e2b40a-a2b9-4001-aa3a-3bed7be30f80" />
+
+This is how the end plate now looks from below:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0017fedf-72e4-49a6-82d4-67a2dddbb68a" />
 
+After copying the end plate 1 to the other end plate, and adding holes on the 2020 extrusion, and adding holes on the Z axis pulley and idler case, this is how the whole KBM without the tensioning system looks:
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9ba2470d-61fc-4234-a897-ee242fd859f7" />
+
+And this is how the KBM looks.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1a872747-66d8-407c-b86f-f5c171a52821" />
 
-all belts left to fix length. clamp left to fix and control electronics.
+But now all belts are left to be fixed for their length that is causing fractional tooth. Moreover, belt clamps are left to be fixed alongside the control electronics.
 
 Here's the lapse of today's session: [PATRA-LPS-33-D53](https://lapse.hackclub.com/timelapse/9bSi1olp-o0V)
 
@@ -4563,7 +4601,7 @@ Here're the lapses of today's session: [PATRA-LPS-66-D86-1](https://lapse.hackcl
 
 # Day 87 — 14.10.2026: Journaling
 
-Journaled days #49, #50, #51, 
+Journaled days #49, #50, #51, #52 and #53.
 
 Day #49
 
@@ -4577,10 +4615,16 @@ Day #51
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8832d2b5-9a07-4e95-a044-f769b0480593" />
 
+Day #52
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/96519f70-ae86-463e-8eec-4b653c25e085" />
+
+Day #53
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dd297a30-22cc-48ae-8518-00c782e2354d" />
+
 After today, these days are left to be journaled:
 
-* Day #52
-* Day #53
 * Day #54
 * Day #55
 * Day #56
@@ -4593,9 +4637,9 @@ After today, these days are left to be journaled:
 * Day #63
 * Day #64
 
-Here's the lapses of today's session: [PATRA-LPS-67-D87]()
+Here's the lapses of today's session: [PATRA-LPS-67-D87](https://lapse.hackclub.com/timelapse/LjDu3gUB8yXM)
 
-**Total time spent: 0h 00m**
+**Total time spent: 5h 30m**
 
 ---
 
