@@ -4643,4 +4643,4 @@ Here's the lapses of today's session: [PATRA-LPS-67-D87](https://lapse.hackclub.
 
 ---
 
-**note: i should add a fillet on the 90 degree corners of the clamps.**
+**note: i should add a fillet on the 90 degree corners of the clamps. i have to add m2 inserts from robokits to bom.**
