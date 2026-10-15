@@ -2519,19 +2519,39 @@ Here's the lapse of today's session: [PATRA-LPS-33-D53](https://lapse.hackclub.c
 
 ---
 
-# Day 54 — 14.08.2026: idk [incomplete]
+# Day 54 — 14.08.2026: Reconsidering Belt Slot Length & Setting up the TriTeron Robot Module (TRM)
+
+I had worked enough on the pulley Euler cases, and now it was time to give attention to the X, Y, and Z tensioning system belts and their clamps. On the partition day, I worked on the KBM. Now, I worked on the TRM, too. But when I pressed "Compute Unresolved", things went crazy.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/55785cfb-3407-4669-96c2-12336cc40858" />
 
-https://www.instructables.com/Low-cost-linear-actuator/
+Originally, I had chosen the size of the pulley and idler cases based on the dimensions of the NEMA 23. NEMA 23 is 57 mm by 57 mm, and I kept 5 mm of space on all sides, making it 67 mm by 67 mm. Due to this, the distance between the slots of the belt is exactly 1067 mm for the X and Y axis belts. To me, those dimensions didn't matter much back then because I wasn't aware of the fact that this length could give birth to fractional teeth.
+
+The Math Breakdown:
+
+• Belt Pitch: 5 mm for GT5.
+• Pulley Teeth (N): 22 teeth.
+• Center Distance (C): 1067 mm.
+• Formula: N_belt = ((2 * C) / Pitch) + N
+• Result: ((2 * 1067) / 5) + 22 = 448.8 teeth.
+
+This was a serious problem as glass fiber belt's cant stay stretched permanently without destroying themselves. The most clever solution which appeared to me was, I would use a length adjustable clamp instead of a rigid one. But the question was, how. I searched in Google obviously, and I found [this](https://www.instructables.com/Low-cost-linear-actuator/) project where a guy made his own linear actuator.
+
+That's when I came across shaft driven roller gantry blocks again, but this time, I actually noticed it and compared it to linear blocks. I learned that MGN15H is much more precise, but more expensive than it. Nor does MGN15H compress or flex under load. I was already at the better and more expensive option.
+
+<img width="1365" height="736" alt="image" src="https://github.com/user-attachments/assets/1e06d191-24cf-434c-a320-f29022bd1b24" />
+
+Without thinking much, I saved this for later, and moved to focus on the things that I had the ability to address at the moment.
+
+To bypass the compute unresolved, I used the command **LinkMgr.RemoveAll**. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c82ab49e-631b-4d99-8402-b6dd54ed7605" />
 
-LinkMgr.RemoveAll 
+And, it worked, eventually.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/04458dfa-3ff0-4b04-bfa9-6eff7aeaf744" />
 
-triteron lacks symmetry. i need to fix it after i am done with the kbm
+After I had set up the TriTeron Robot Module (TRM) as a separate module, with all resolved components, I went for a symmetry check on the legs of the TriTeron Legs. And, I found out that the TriTeron lacks symmetry. I need to fix it after I am done with the KBM.
 
 Here're the lapses of today's session: [PATRA-LPS-34-D54-1](https://lapse.hackclub.com/timelapse/t8QozcNFFXst) and [PATRA-LPS-34-D54-2](https://lapse.hackclub.com/timelapse/o06ITPcUajZR)
 
@@ -2539,13 +2559,29 @@ Here're the lapses of today's session: [PATRA-LPS-34-D54-1](https://lapse.hackcl
 
 ---
 
-# Day 55 — 17.08.2026: idk [incomplete]
+# Day 55 — 17.08.2026: Adding Missing Nuts to the TriTeron
 
-https://onlyscrews.in/products/m5-nyloc-nuts-mild-steel-with-zinc-plating-dia-5mm
+I started by trying to fix the asymmetry which I discovered on the last day. Yes I was aware of the fact that I had decided to address the KBM first, and then go for the TRM. But, I wasn't able to stand asymmetry, nor was I able to think of any way I could fix the problems with the belt length in the KBM.
 
-https://fabory.partcommunity.com/3d-cad-models/sso/din-982-prevailing-torque-type-hexagon-nuts-with-non-metallic-insert-high-type-fabory?info=fabory%2F3_nuts%2Fdin_982.prj&cwid=6698
+I compared both mass and their positions using Properties and sketches. 
+
+<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/43322c7e-95ed-48f7-a3bf-2b3262adc384" />
+
+During this, I noticed missing nuts on the distal joints. So, I searched up those with nylon, i.e., nylonic nuts. I found [this](https://onlyscrews.in/products/m5-nyloc-nuts-mild-steel-with-zinc-plating-dia-5mm) on OnlyScrews. But since it had no model, I sourced my model from [this](https://fabory.partcommunity.com/3d-cad-models/sso/din-982-prevailing-torque-type-hexagon-nuts-with-non-metallic-insert-high-type-fabory?info=fabory%2F3_nuts%2Fdin_982.prj&cwid=6698) site.
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b699b278-db71-4673-9aac-9c4e83ce6f30" />
+
+Then I imported the model and added it in the distal joints, after making sure the nut is compatible with the shoulder bolts. For making sure, I went through the datasheet for once.
+
+While doing this, I also noticed that there are nuts missing inside of the mounts. So, I added the nuts there as well.
+
+I also added a little notch on the X and Y leg mounts for clearence.
+
+<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/2a85357b-3dbb-48d8-b66a-eef9acd7b83c" />
+
+Also added fillets to it.
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/24893e7e-c56a-4ada-a5fb-d3f884d7f76f" />
 
 Here's the lapse of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.com/timelapse/kbW8ePVyZFrs)
 
@@ -2553,25 +2589,70 @@ Here's the lapse of today's session: [PATRA-LPS-35-D55](https://lapse.hackclub.c
 
 ---
 
-# Day 56 — 20.08.2026: idk [incomplete]
+# Day 56 — 20.08.2026: Working on the Way to Connect the KBM to the TRM
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e9ea4d68-517d-49fe-b3f1-7fba2c125fd1" />
+Today's session was mostly about designing the transition between the X, Y, and Z linear blocks and the X, Y, and Z-axis leg mounts of the TriTeron, respectively.
+
+But firstly, I hadn't applied any clearance to holes for the nuts in the TriTeron Leg Mounts. So, I added a clearance of 0.2 mm, on all sides as this will be printed in SLA resin.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1835e88c-096f-4942-9bb2-0a8c4dfb7453" />
 
-this <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d8f6124-655c-4c4f-a3d8-98685227275a" /> became 
+Little by little, I realised that my plans weren't realistic because I thought of using threads inside the SLA prints, and I also thought of not using any clearance initially. I thought of connecting the TriTeron to the KBM using the leg mounts and countersunk screws, but now I realize that I cannot thread the linear blocks, as this will cause cross-threading. The best option here was to completely get rid of all the threads in the parts and instead use brass inserts only where it is needed. Except for that, I should use a 3.4 mm clearance hole for M3 screws. Due to this, decided to connect the XYZ-axis TriTeron leg mounts directly to the X, Y, Z clamps using longer screws.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87814527-9410-478f-a008-f21703762987" />
+Here's what I had before I executed the plan:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3f1f842e-af4f-4d31-95b2-3fa476e4851b" />
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d8f6124-655c-4c4f-a3d8-98685227275a" />
 
-https://jlc3dp.com/blog/threaded-inserts-3d-printing
+To execute this plan, here's what I did:
 
-https://au.rs-online.com/web/content/discovery/ideas-and-advice/grub-screw-guide?srsltid=AfmBOopNiwtA8NfJS_XdWebTBMCbxxgH9OgqusFrMrq0L6IpBoOuXclu
+1. I first removed all of the chamfers on the X, Y, and Z-axis linear blocks. I also made the holes 3.4 mm in diameter. And thus the threads were all removed automatically. This will eliminate any chances of cross-threading. This is how it looked after (section analysis):
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a41f0bb7-25a5-43d6-953b-78166f4f9141" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/87814527-9410-478f-a008-f21703762987" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fbf552c5-fe0a-42d2-a4c4-9fd6d3f35d4e" />
+	But after this, I faced the negative consequences of the partition. The linear blocks from KBM and the leg mounts from the TRM were supposed to be connected. But due to the partition, they were now completely separate files. There was a possibility that the two shapes where each one connects won't match, and it was hard to check even they match.
+
+	But I started with the Z axis leg mount anyway. I had both the TRM and the KBM designs open in Fusion. I checked the dimensions of each of the designs at the part where they both connect, and I saw that there are some irregularities in the connection and some dimensional errors.
+
+2. I made a new sketch on the bottom of the Z TriTeron Leg Mount, and made new holes for the mount by copying the shapes on the Z axis linear block clamp.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9618756e-4349-4346-b047-0aa33eca3c2a" />
+
+3. Then I extruded those holes, and this is how the Z leg mount looks now. 
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3f1f842e-af4f-4d31-95b2-3fa476e4851b" />
+
+	Next I had to use threaded inserts for the parts. Since I was using LC3DP service for printing this in SLA 9600 Resin, I read [this](https://jlc3dp.com/blog/threaded-inserts-3d-printing) and [this](https://au.rs-online.com/web/content/discovery/ideas-and-advice/grub-screw-guide?srsltid=AfmBOopNiwtA8NfJS_XdWebTBMCbxxgH9OgqusFrMrq0L6IpBoOuXclu) to learn about using brass inserts in prints. I learned that there are two types of inserts:
+
+	- Heat pressed inserts for FDM prints using PLA, PETG, PA, etcetera. They need negative clearance of 0.4 mm, so we make the holes smaller.
+	- Cold pressed inserts for SLA prints using 9600 Resin, 8001 Resin, etcetera. They need positive clearance of 0.4 mm, so we make the holes bigger. 
+
+	Heat pressed inserts grip by melt the plastic, and cold pressed inserts need super glue.
+
+	I had made up my mind for doing SLA prints, so I needed to adjust my dimensions of the holes for cold-pressed inserts, by making the holes 0.2 mm bigger and using super glue.
+
+4. With reference to the previous sketch I had made, I made a new sketch where I made holes for glass inserts with 5 outer diameter holes. The outer diameter of the hole was 5.5 mm because of [this](https://onlyscrews.in/products/m3-x-15mm-brass-threaded-inserts-copy) brass insert, with 4.8 mm outer diameter.
+
+   <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/92b75b21-9e24-4c4e-b0ae-2ebd9589e8c5" />
+
+	While doing this, I realised that I needed a 30 mm long insert for the taller side of the mount. But the tallest insert was 15 mm. I wanted to stack two of them to make it to 30 mm, it is would have caused cross-threading and would have been unreliable.
+
+5. I then decided to use a brass insert on the top for the longer side, and I even added those. But to prevent cross-threading, I will make sure I add those after the bottom ones are well secured with glue. This is the section analysis:
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/93677313-4217-4d95-84c3-45232c049a05" />
+
+But this is also likely to fail. So, I dropped using double inserts for a single hole on the longer side.
+
+6. So, I then extruded the inserts, and adjusted the clearances by increasing them from 5 - 4.8 = 0.2 to 0.4, so that the brass inserts actually enter and I can use super glue to secure them firmly. I have decided to use either button head hex screws or socket head screws for these. Also, I will keep the upper 15 mm of the hole empty and rely on the threads instead.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a41f0bb7-25a5-43d6-953b-78166f4f9141" />
+
+	This is how the cross section looks now.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fbf552c5-fe0a-42d2-a4c4-9fd6d3f35d4e" />
+
+7. But alas, I made another important realization. There was literally no need to use any brass inserts because there are already threaded holes inside the MGN15H linear blocks. If I used any brass inserts, it would have caused cross-threading, they are all are supposed to be connected using a single screw.
+
+But I was tired enough already to continue working on this.
 
 Here's the lapse of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.com/timelapse/N6d0BsuXTSuq)
 
@@ -2579,25 +2660,89 @@ Here's the lapse of today's session: [PATRA-LPS-36-D56](https://lapse.hackclub.c
 
 ---
 
-# Day 57 — 21.08.2026: idk [incomplete]
+# Day 57 — 21.08.2026: Working on the TRM Z Leg Mount & KBM Z Belt
+
+Just like yesterday, today's session was about working on both the KBM and the TRM at the same time. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d482092b-f524-4793-951a-8575c80bfa2b" />
 
-working both on the kbm and the trm
+Due to the problems that I had faced yesterday, I decided to completely get rid of all brass threaded inserts in the Z leg mount. Instead, I did this:
 
-i decided to completely drop the idea of brass inserts to prevent cross threading. instad did this:
+- Using face offset, I changed the hole diameter for the brass inserts to 3.4 mm, for the long side.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/31bd0284-db5b-43ca-8062-388948495b8d" /> len 30 + 15 = 45
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eef62c81-70b9-4428-b889-e5a39d73f87f" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a5e0346-94b4-4a38-8b56-ee8711112774" /> len 15 + 10 = 25
+- Then using extrude, I made the hole straight, as there was no need of any inserts, for the long side.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3983920a-dc1f-41a2-8777-08c62c45878b" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2beab45a-5ae4-40f1-93b1-8c2bbd84cc5b" />
 
-but to make assembly confinient i am adding a m5 screw under the z axis mount
+- I added 1.3 mm equal chamfer on the edges as I was going to use countersunk screws, for the long side.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afd41b27-f286-4777-a932-377e30734ef3" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/781f5b87-72d5-4452-90dc-c94b29a5d2b9" />
 
-i worked on the linear blocks and deleted the chamfers and added teeth to z axis belt
+- Using face offset, I change the hole diameter for the brass inserts to 3.4 mm for the short side
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5cb0d5c3-9a8f-458c-8dd3-d9391c05a68a" />
+
+- I made the holes above the screw holes for the shorter side bigger so that there is space for the screw head. 
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aafcf367-992f-49cf-9b9b-69f13020bf93" />
+
+- Then I added camphor to the edges for the short side.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/48c165a1-8e2d-426b-8a5e-1160cb9db52a" />
+
+Next I calculated the screw length required for the long side and the short side:
+
+* Long Side screw length: 30 mm + 15 mm. Here, 30 mm is the Z leg mount long side of the TRM, and the rest 15 mm goes into the Z linear block of the KBM.
+* Short Side screw length: 10 mm + 25 mm. Here, 10 mm is the Z leg mount short side of the TRM, and the rest 15 mm does into the Z linear block of the KBM.
+
+To make the assembly more convenient, I am adding one M5 screw under the clamp that I can screw in and then screw the other countersunk screws. Here's what I did for this:
+
+- I made a hole in the center in the old sketch below the Z leg mount that I used to make the holes before.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/62d3b096-28c3-4d10-8363-f964a1e9e6ff" />
+
+- Then I made a 10 mm deep hole into the Z leg mount.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f06c319f-ca16-4bdc-bcf7-c7bdcbdfc61d" />
+
+	I noticed that I had forgotten to remove the M3 brass inserts. So, I removed those.
+
+- Then I extruded out the brass insert.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/21934f77-6649-484e-a7fb-5053e63e0cef" />
+
+- Lastly, I added brass appearance and threads.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afd41b27-f286-4777-a932-377e30734ef3" />
+
+I was then done with the Z leg mount. The next logical step was to probably work on the X and then the Y leg mount. But, I instead had one more thing to do: working on the belt length to fix fractional teeth. So, first I confirmed if I even have fractional teeth in the first place. I used the following sites to calculate belt length and other metrics:
+
+1. orientalmotor.com/motor-sizing/beltConveyor-sizing.html
+2. universalbelting.com/calculators/
+3. infinitybelting.com/conveyor-system-calculators
+4. meiyaprecision.com/timing-pulley-and-belt-calculator/
+
+The math breakdown of the belt calculation for the Z axis tensioning system:
+
+• Belt Pitch: 5 mm for GT5.
+• Pulley Teeth (N): 20 teeth.
+• Center Distance (C): 1134 mm.
+• Formula: N_belt = ((2 * C) / Pitch) + N
+• Result: ((2 * 1134) / 5) + 20 = 473.6 teeth.
+
+The Z belt already had modeled teeth. But I wanted to see if I give 5 mm pitch to the teeth, would they actually have a distance of 0.6 teeth between the first and the last. 0.6 teeth means 3 mm, as the pitch is 5 mm.
+
+Expectation: If I add 473 teeth using pattern on path with 5 mm pitch/spacing, I will have the last tooth 3 mm from the first tooth.
+
+What I did: I placed one tooth 3 / 2 = 1.5 mm from the center and for the pattern, I needed the belt loop length. I struggled to calculate it at first, as I had rounded off pi to two digits after decimal, instead of 8 digits, in the pulley/idler, which would have been more accurate.
+
+Reality: My belt loop length was off, the distance didn't come 3 mm and thus my expectations didn't become reality.
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/77c037dc-b4a6-4da7-8314-a98aa424c4ca" />
+
+But anyways, I kept the teeth of the belt and used the combine tool to combine the 473 teeth and the pre-existing belt body. This is how it looks now.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f92847f-5c26-4fee-9e84-ec0c7698a984" />
 
@@ -4640,6 +4785,42 @@ After today, these days are left to be journaled:
 Here's the lapses of today's session: [PATRA-LPS-67-D87](https://lapse.hackclub.com/timelapse/LjDu3gUB8yXM)
 
 **Total time spent: 5h 30m**
+
+---
+
+# Day 88 — 15.10.2026: Journaling
+
+Journaled days #54, #55, #56, and #57
+
+Day #54
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4a4eab26-ae77-48ff-93d9-90acfcbe7c45" />
+
+Day #55
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7e9d83c9-ea39-4d6f-abe2-70e0785a6f2e" />
+
+Day #56
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/86b5752f-f995-47da-bef7-c5cf5ef3a18e" />
+
+Day #57
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b128127e-f7f4-4685-b4f6-30bf528a2481" />
+
+After today, these days are left to be journaled:
+
+* Day #58
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
+Here's the lapses of today's session: [PATRA-LPS-68-D88]()
+
+**Total time spent: 0h 00m**
 
 ---
 
