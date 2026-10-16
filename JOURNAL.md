@@ -1,4 +1,4 @@
----
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/af331a41-66ac-413c-8189-ed640a6c7bcb" />---
 
 Title: (PATRA Parallel Axis TriTeron Robotic Arm)
 Author: Sunrit Hazra
@@ -2529,11 +2529,11 @@ Originally, I had chosen the size of the pulley and idler cases based on the dim
 
 The Math Breakdown:
 
-• Belt Pitch: 5 mm for GT5.
-• Pulley Teeth (N): 22 teeth.
-• Center Distance (C): 1067 mm.
-• Formula: N_belt = ((2 * C) / Pitch) + N
-• Result: ((2 * 1067) / 5) + 22 = 448.8 teeth.
+• Belt Pitch: 5 mm for GT5.  
+• Pulley Teeth (N): 22 teeth.  
+• Center Distance (C): 1067 mm.  
+• Formula: N_belt = ((2 * C) / Pitch) + N.  
+• Result: ((2 * 1067) / 5) + 22 = 448.8 teeth.  
 
 This was a serious problem as glass fiber belt's cant stay stretched permanently without destroying themselves. The most clever solution which appeared to me was, I would use a length adjustable clamp instead of a rigid one. But the question was, how. I searched in Google obviously, and I found [this](https://www.instructables.com/Low-cost-linear-actuator/) project where a guy made his own linear actuator.
 
@@ -2726,11 +2726,11 @@ I was then done with the Z leg mount. The next logical step was to probably work
 
 The math breakdown of the belt calculation for the Z axis tensioning system:
 
-• Belt Pitch: 5 mm for GT5.
-• Pulley Teeth (N): 20 teeth.
-• Center Distance (C): 1201 mm.
-• Formula: N_belt = ((2 * C) / Pitch) + N
-• Result: ((2 * 1201) / 5) + 20 = 500.4 teeth.
+• Belt Pitch: 5 mm for GT5.  
+• Pulley Teeth (N): 20 teeth.  
+• Center Distance (C): 1201 mm.  
+• Formula: N_belt = ((2 * C) / Pitch) + N.  
+• Result: ((2 * 1201) / 5) + 20 = 500.4 teeth.  
 
 The Z belt already had modeled teeth. But I wanted to see if I give 5 mm pitch to the teeth, would they actually have a distance of 0.4 teeth between the first and the last. 0.4 teeth means 2 mm, as the pitch is 5 mm.
 
@@ -2798,10 +2798,10 @@ For the pattern, I placed the last tooth 2513.935 - 7 mm from the first one. Due
 
 Next, it was time to place the belt and the clamp to see if their profiles match, using:
 
-- Distances between each tooth profile: Matched
-- Width of the belt and the clamp: Matched
-- Distance between the last and the first tooth: Matched
-- Coordinates of the clamp and the belt: Matched
+- Distances between each tooth profile: Matched  
+- Width of the belt and the clamp: Matched  
+- Distance between the last and the first tooth: Matched  
+- Coordinates of the clamp and the belt: Matched  
 
 Followed by this, I worked on the upper clamp of the Z axis tensioning system. Here's what I did:
 
@@ -2895,7 +2895,108 @@ Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.c
 
 ---
 
-# Day 59 — 23.08.2026: idk [incomplete]
+# Day 59 — 23.08.2026: Fixing Nanoscopic Dimensional Errors & Eliminating Fractional Teeth in X Belt
+
+Today I time travelled two days back. Thanks to my dear laptop.
+
+I had picked up exactly where I left off yesterday. I had created a new sketch where I was about to project the geometry of the Z-axis belt onto the sketch, and during that time, my Autodesk Fusion crashed. 
+
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/c369a650-3e59-4bc9-a6f6-221a25a52420" />
+
+I simply lost all of my progress that I had made yesterday and the day before, and I time traveled back two days. At that time, I had two options:
+
+1. Do exactly what I did before.
+2. Focus more on the things first that will have more influence on the future.
+
+I chose the second one instead, probably because I wasn't even sure about exactly what I did in those two days. But even though I chose the second option, I was definitely going to keep my instincts of addressing what I see with my own eyes first. Thus, I deleted the countersunk chamfers for the X, Y, and Z clamps.
+
+But immediately after that, I noticed a huge problem. The thing was that, just out of pure curiosity, I wanted to see what the exact distance was between the two innermost points of the Z clamp 1 and 2. I honestly don't know what that was supposed to be, but I'm pretty sure that it was not supposed to be 27.00000898 mm, which it was.
+
+<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/2ebbdcd9-3634-4ea0-a7a6-d9f7a3194e0c" />
+
+When I saw this, my first instinct was not to immediately go and solve this somehow. My first instinct actually was, "Why did this even happen?" Was it that Fusion was itself making some stupid errors, some nanoscopic stupid errors? Because I don't really remember myself moving a body 1 nm from one point to the other, intentionally. Or it could be that my fingers are way too sensitive, that they make nanoscopic changes, and my eyes don't even catch it.
+
+Whatever it was, I had to fix it again, not because of 3D printing tolerances or CNC tolerances, but because of the fact that this is going to cause serious problems later on in the future. This is because Fusion sees even a 1 nm thick body as a solid and even renders the face with its own edges.
+
+At those times, my brain and, of course, the pixels in my computer couldn't display those nanoscopic dimensions so that I could understand: "Oh, this is not a 2D object. It is actually a 3D one." It has happened many times, and again I have to fix it. 
+
+Here is exactly how I fixed those nanoscopic dimensional errors:
+
+1. **Fixing the position of the Z-axis linear block 1 and 2:** Due to the existing joints, the Z-axis block had only two directions to move: linearly along the linear guide, back and forth. My first instinct was to actually go and see what the position of a point on either of the Z blocks was. I had to make sure that it is a whole number and that it absolutely does not have any nanoscopic decimal.
+
+Coordinates of a vertex on the Z Linear Block 1:
+
+X Position: -134.80028288 mm
+Y Position: 30.00 mm
+Z Position: 53.00 mm
+
+I moved the full component to make the position:
+
+X Position: -135.00 mm
+Y Position: 30.00 mm
+Z Position: 53.00 mm
+
+Also did the same with the other Linear Block.
+
+But then I noticed more nanoscopically wrong dimensions, and then I decided to make a new linear block entirely, after saving a copy of the old one as a body. Here's how:
+
+- I created a new sketch on the MGN15H linear block body, with a center-rectangle of dimensions 35 mm by 58.8 mm.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/2837eb4e-2c52-48b6-a7e5-01270048b3c4" />
+
+- I made a 19 mm wide rectangle that passes horizontally from the center, for belt clearance.
+
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/d6475a17-e867-4a4e-a963-752b7086ad28" />
+
+- I made 3.4 mm clearance holes on the existing projected holes of the MGN15H linear block.
+
+	<img width="1365" height="729" alt="image" src="https://github.com/user-attachments/assets/8bdc628f-a510-4dc0-84af-e3ff2a31879c" />
+		
+- Then I extruded the highlighted parts of the sketch, representing the walls of the block.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/a479036b-5d9b-4e6c-9626-45273d61351d" />
+
+- Then I made a new sketch on the wall and then extruded it.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/b5ccf90c-cf27-4f5e-aa67-88f2a158c0e5" />
+
+With chamfers and fillets added, the body now looks exactly like the linear block while I tossed into the trash can, but this one has the right dimensions.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9f1bb331-bd53-464f-b659-02d4a480b8f1" />
+
+I then added appearance and copied it to the other linear blocks, obviously. But while doing this, I again came across the dimensional error of 0.00037878, when I was calculating the belt length for the X axis tensioning system, while checking dimensions of the X axis lower belt clamp. That's when I got the perfect idea to completely get rid of fractional teeth.
+
+To determine the number of teeth, we have the following variables:
+
+• Belt Pitch
+• Pulley Teeth
+• Center Distance
+
+I cannot change the pulley teeth nor the belt pitch. The only thing I could change here is the center distance. The center distance for the X- and Y-axis tensioning system was exactly 1067 mm. According to the math, if I changed that to 1067.5 mm, I would have exactly 449 teeth. No more fractional teeth.
+
+The length was determined by the following things:
+
+1. The length of aluminum extrusion
+2. The length of the pulley
+3. The length of the idler
+
+I am absolutely not going to change the length of the aluminum extrusion. I instead chose to change the length of the pulley and the idler symmetrically. 1067.5 - 1067 = 0.5 mm. If we divide it into two, we get 0.25 mm. If we increase the length of the pulley and the idler cases by 0.25 mm towards the center of the tensioning systems, they would be placed 0.25 mm each outwards. Due to this, we would have no more fractional tooth and exactly 449 teeth. 
+
+The math was revolutionary, and I just realized that all my efforts with the fractional teeth adjustable clamp were in vain. But then I also earned the privilege to achieve two goals with a single CAD operation. The other goal was getting rid of that 0.00037878. So, instead of moving the X axis tensioning system pulley 0.25 mm away from the center on the X axis, I moved it 0.25037878 mm (0.25 + 0.00037878).
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/bf8bc328-aa68-4814-9265-beb358e776f6" />
+
+This completely eliminated the number 0.00037878 mm from the body, by cancellation. I simply then moved the faces of the body -0.00037878 mm to cancel their positions out. I then also moved the pulley, washers, bearings, and the bearing cover as well that way.
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/76c7cf09-3e18-494d-874b-11db4205dfb7" />
+
+With this, I finally got rid of the number 0.00037878.
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/e4891df9-4e4e-46ff-9a4f-3b60511f2a82" />
+
+After that, I went on to redesign the belt clamp lower of the X axis tensioning system. But I got stuck with the thickness of the clamp. I was supposed to make it like 10 mm, but I barely had 0.5 mm thickness available. To increase the thickness I had to increase the height of the belt by increasing the height of the end plates, and thus the entire tensioning system.
+
+In the end, I searched about UHMW tape that I would like to apply on the linear blocks to prevent belt wear.
 
 Here's the lapse of today's session: [PATRA-LPS-39-D59](https://lapse.hackclub.com/timelapse/ccsG_HzJn3z3)
 
@@ -4978,15 +5079,18 @@ Here's the lapses of today's session: [PATRA-LPS-68-D88](https://lapse.hackclub.
 
 # Day 89 — 16.10.2026: Journaling
 
-Journaled days #58 (full), 
+Journaled days #58 (full), #59
 
 Day #58 (full)
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e7f5e23f-fe80-4aff-bfe3-d910fef9accb" />
 
+Day #59
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f7016905-6691-48a8-b816-a74a56ea7323" />
+
 After today, these days are left to be journaled:
 
-* Day #59
 * Day #60
 * Day #61
 * Day #62
