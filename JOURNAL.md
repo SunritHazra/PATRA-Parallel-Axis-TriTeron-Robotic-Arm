@@ -5167,4 +5167,16 @@ Here's the lapses of today's session: [PATRA-LPS-69-D89](https://lapse.hackclub.
 
 ---
 
+# Day 89 — 17.10.2026: Journaling
+
+Journaled days 
+
+
+
+Here's the lapses of today's session: [PATRA-LPS-70-D90]()
+
+**Total time spent: 0h 00m**
+
+---
+
 **note: i should add a fillet on the 90 degree corners of the clamps.**
