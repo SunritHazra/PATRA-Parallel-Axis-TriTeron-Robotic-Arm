@@ -2728,15 +2728,15 @@ The math breakdown of the belt calculation for the Z axis tensioning system:
 
 • Belt Pitch: 5 mm for GT5.
 • Pulley Teeth (N): 20 teeth.
-• Center Distance (C): 1134 mm.
+• Center Distance (C): 1201 mm.
 • Formula: N_belt = ((2 * C) / Pitch) + N
-• Result: ((2 * 1134) / 5) + 20 = 473.6 teeth.
+• Result: ((2 * 1201) / 5) + 20 = 500.4 teeth.
 
-The Z belt already had modeled teeth. But I wanted to see if I give 5 mm pitch to the teeth, would they actually have a distance of 0.6 teeth between the first and the last. 0.6 teeth means 3 mm, as the pitch is 5 mm.
+The Z belt already had modeled teeth. But I wanted to see if I give 5 mm pitch to the teeth, would they actually have a distance of 0.4 teeth between the first and the last. 0.4 teeth means 2 mm, as the pitch is 5 mm.
 
-Expectation: If I add 473 teeth using pattern on path with 5 mm pitch/spacing, I will have the last tooth 3 mm from the first tooth.
+Expectation: If I add 500 teeth using pattern on path with 5 mm pitch/spacing, I will have the last tooth 2 mm from the first tooth.
 
-What I did: I placed one tooth 3 / 2 = 1.5 mm from the center and for the pattern, I needed the belt loop length. I struggled to calculate it at first, as I had rounded off pi to two digits after decimal, instead of 8 digits, in the pulley/idler, which would have been more accurate.
+What I did: I placed one tooth 2 / 2 = 1 mm from the center and for the pattern, I needed the belt loop length. I struggled to calculate it at first, as I had rounded off pi to two digits after decimal, instead of 8 digits, in the pulley/idler, which would have been more accurate.
 
 Reality: My belt loop length was off, the distance didn't come 3 mm and thus my expectations didn't become reality.
 
@@ -2754,13 +2754,49 @@ Here's the lapse of today's session: [PATRA-LPS-37-D57](https://lapse.hackclub.c
 
 # Day 58 — 22.08.2026: idk [incomplete]
 
+I didn't get my hands on the adjustable belt clamp in the last session, which I was originally supposed to get my hands on.
+
+According to the math I did yesterday, I was supposed to have a 5 + 2 = 7 mm gap between the first and the last tooth in my Z belt if I cut it due to the fractional tooth problem. The most logical thing here was to actually make a clamp for that exact dimension, where there is an additional 3 mm gap between the first and the two centermost teeth. 
+
+Here is exactly how I did that. 
+
+- First, I deleted all of the screw threads and the holes in the Z clamp. 
+
+	img
+
+- Next, I created a new sketch where I bisected the Z clamp into two parts.
+
+	img
+
+- I then excluded one half of the belt clamp.
+
+	img
+
+- I use that extruded part to split the clamp body into two halves.
+
+	img
+
+- Then I extruded inside and deleted the extra part.
+
+	img
+
+- Lastly, I moved one part of the half 2 mm away from the other.
+
+	img
+
+After that was done, I created a new sketch to redo what I did in the last session and failed. In the sketch, I used two teeth, and I made sure that the pitch between those two teeth is exactly 7 mm. The midpoint of the distance is on the Z-axis of the Fusion workspace. 
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e22644e8-fe95-4985-867f-94f6155f6d75" />
 
-outer loop length is 2513.935 mm
+I properly found out what that the outer loop length of the belt was 2513.935 mm. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/16a0c4f2-65cb-4b70-9113-d05a1d61b92d" />
 
+For the pattern, I placed the last tooth 2513.935 - 7 mm from the first one. Due to the decimals, the pitch was not a round 5 mm. But this was not a problem, since this is only design.
+
 <img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/cee96fb9-97b5-4dc1-b42c-ad172d23e1a0" />
+
+Next, it was time to place the belt and the clamp to see if their profiles match. And they did match.
 
 Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.com/timelapse/CEqqbFVMyiMs)
 
@@ -4580,7 +4616,7 @@ I searched for straight line connectors in MISMUMI, and I found [this](https://i
 
 But, I got the perfect idea to use M2 screws instead of M3. But, I still needed to use inserts. So, I search in OnlyScrews. They had M2x6 mm inserts with 3.8 mm outer diameter. 3.8 mm outer diameter leaves only 0.85 mm both sides, which will most likely fail.
 
-I then started looking for slimmer M2 inserts, and after a long search, I found [this](https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.?srsltid=AU7gw4Vd9_aNitAyfD12HaMzP5zCUV7tcC-1-wHLzchhiQF0Ccttno6P) 3.5 mm outer diameter insert on Robokits.
+I then started looking for slimmer M2 inserts, and after a long search, I found [this](https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.) 3.5 mm outer diameter insert on Robokits.
 
 - Once I was certain about the dimensions of the insert, I created a new sketch and drew all the correct dimensions of the diameters. Then I extruded it in.
 	
@@ -4632,39 +4668,46 @@ Next, I updated the BOM. Here are the things I added to the BOM:
 2. **Brass Insert M3x10 mm**
 	* Quantity: 50
 	* Unit Price: ₹3.60
-   	* Total Price: ₹180.00 / $1.08
+   	* Total Price: ₹180.00 / $1.88
    	* Vendor: OnlyScrews
    	* Link: [Product Page](https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts)
 	  
 3. **Brass Insert M3x6 mm**
-	* Quantity: 48
+	* Quantity: 40
     * Unit Price: ₹4.80
    	* Total Price: ₹230.40 / $2.00
    	* Vendor: OnlyScrews
    	* Link: [Product Page](https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm)
-	  
-4. **Pan Head Screw M5x15 mm**
+
+4. **Brass Insert M2x5 mm [25 pcs]**
+	* Quantity: 1
+	* Unit Price: ₹63.00
+	* Total Price: ₹63.00 / $0.66
+	* Vemdor: OnlyScrews
+	* Link: [Product Page](https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.)
+	
+5. **Pan Head Screw M5x15 mm**
 	* Quantity: 15
    	* Unit Price: ₹1.60
    	* Total Price: ₹24.00 / $0.25
    	* Vendor: OnlyScrews
    	* Link: [Product Page](https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm)
 	
-5. **Countersunk Screw M3x30 mm**
+6. **Countersunk Screw M3x30 mm**
 	* Quantity: 50
    	* Unit Price: ₹3.80
    	* Total Price: ₹190.00 / $1.98
    	* Vendor: OnlyScrews
    	* Link: [Product Page](https://onlyscrews.in/products/hex-allen-csk-ss-304-screw-dia-3mm-length-30mm)
 	
-6. **Countersunk Screw M3x12 mm**
+7. **Countersunk Screw M3x12 mm**
 	* Quantity: 48
 	* Unit Price: ₹1.80
 	* Total Price: ₹86.40 / $0.15
    	* Vendor: OnlyScrews
    	* Link: [Product Page](https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20)
 	
-7. **Socket Head M2x12 mm**
+8. **Socket Head M2x12 mm**
 	* Quantity: 20
    	* Unit Price: ₹4.00
    	* Total Price: ₹80.00 / $0.83
@@ -4673,15 +4716,16 @@ Next, I updated the BOM. Here are the things I added to the BOM:
 
 This was the updated section of the BOM:
 
-| Item                       | Quantity | Cost(USD) | Cost(INR) | Total Cost |  Vendor      | Link                                                                                                                   |
-|----------------------------|----------|-----------|-----------|------------|--------------|------------------------------------------------------------------------------------------------------------------------|
-| Brass Insert M5x10 mm      | 15       |  $0.05    |  ₹ 4.60   |  $0.72     |  OnlyScrews  | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                        |
-| Brass Insert M3x10 mm      | 50       |  $0.04    |  ₹ 3.60   |  $1.88     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                        |
-| Brass Insert M3x6 mm       | 40       |  $0.05    |  ₹ 4.80   |  $2.00     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                          |
-| Pan Head Screw M5x15 mm    | 15       |  $0.02    |  ₹ 1.60   |  $0.25     |  OnlyScrews  | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm |
-| Countersunk Screw M3x30 mm | 50       |  $0.04    |  ₹ 3.80   |  $1.98     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                |
-| Countersunk Screw M3x12 mm | 40       |  $0.02    |  ₹ 1.80   |  $0.75     |  OnlyScrews  | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                  |
-| Socket Head M2x12 mm       | 20       |  $0.04    |  ₹ 4.00   |  $0.83     |  OnlyScrews  | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                        |
+| Item                          | Quantity | Cost(USD) | Cost(INR) | Total Cost |  Vendor      | Link                                                                                                                   |
+|-------------------------------|----------|-----------|-----------|------------|--------------|------------------------------------------------------------------------------------------------------------------------|
+| Brass Insert M5x10 mm         | 15       |  $0.05    |  ₹ 4.60   |  $0.72     |  OnlyScrews  | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                        |
+| Brass Insert M3x10 mm         | 50       |  $0.04    |  ₹ 3.60   |  $1.88     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                        |
+| Brass Insert M3x6 mm          | 40       |  $0.05    |  ₹ 4.80   |  $2.00     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                          |
+| Brass Insert M2x5 mm [25 pcs] | 1        |  $0.66    |  ₹ 63.80  |  $0.66     |  Robokits    | https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs. |
+| Pan Head Screw M5x15 mm       | 15       |  $0.02    |  ₹ 1.60   |  $0.25     |  OnlyScrews  | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm |
+| Countersunk Screw M3x30 mm    | 50       |  $0.04    |  ₹ 3.80   |  $1.98     |  OnlyScrews  | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                |
+| Countersunk Screw M3x12 mm    | 40       |  $0.02    |  ₹ 1.80   |  $0.75     |  OnlyScrews  | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                  |
+| Socket Head M2x12 mm          | 20       |  $0.04    |  ₹ 4.00   |  $0.83     |  OnlyScrews  | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                        |
 
 But still, the screws for the Linear Rails and other parts are still left. But for the tensioning system, the screws are done.
 
@@ -4790,7 +4834,7 @@ Here's the lapses of today's session: [PATRA-LPS-67-D87](https://lapse.hackclub.
 
 # Day 88 — 15.10.2026: Journaling
 
-Journaled days #54, #55, #56, and #57
+Journaled days #54, #55, #56, #57 and #58 (partly)
 
 Day #54
 
@@ -4808,9 +4852,13 @@ Day #57
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/b128127e-f7f4-4685-b4f6-30bf528a2481" />
 
+Day #58 (partly)
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7e82268b-e25f-4d12-8324-33d68987adfb" />
+
 After today, these days are left to be journaled:
 
-* Day #58
+* Day #58 (partly)
 * Day #59
 * Day #60
 * Day #61
@@ -4818,10 +4866,33 @@ After today, these days are left to be journaled:
 * Day #63
 * Day #64
 
-Here's the lapses of today's session: [PATRA-LPS-68-D88]()
+Here's the lapses of today's session: [PATRA-LPS-68-D88](https://lapse.hackclub.com/timelapse/B87cJ20xdBof)
+
+**Total time spent: 4h 20m**
+
+---
+
+# Day 89 — 16.10.2026: Journaling
+
+Journaled days #58 (full), 
+
+Day #58 (full)
+
+
+
+After today, these days are left to be journaled:
+
+* Day #59
+* Day #60
+* Day #61
+* Day #62
+* Day #63
+* Day #64
+
+Here's the lapses of today's session: [PATRA-LPS-69-D89]()
 
 **Total time spent: 0h 00m**
 
 ---
 
-**note: i should add a fillet on the 90 degree corners of the clamps. i have to add m2 inserts from robokits to bom.**
+**note: i should add a fillet on the 90 degree corners of the clamps.**
