@@ -82,7 +82,7 @@ I learned the foundational concepts needed to make this project. Here's what I c
 4. Studied industrial systems such as the Zaber LC40 family to understand professional design approaches.
 5. Built a stronger technical foundation by learning about drive systems, torque requirements, modularity, and parallel robotics.
 
-**Total time spent: 6h 0m**
+**Total time spent: 6h 00m**
 
 ---
 
@@ -162,7 +162,7 @@ For a rough picture of how I did the CAD throughout today, [here](https://drive.
 4. Started modelling the primary structural framework using aluminium extrusions.
 5. Used existing designs as educational references while preparing for future modifications.
 
-**Total time spent: 8h 12m**
+**Total time spent: 8h 10m**
 
 ---
 
@@ -2719,10 +2719,10 @@ To make the assembly more convenient, I am adding one M5 screw under the clamp t
 
 I was then done with the Z leg mount. The next logical step was to probably work on the X and then the Y leg mount. But, I instead had one more thing to do: working on the belt length to fix fractional teeth. So, first I confirmed if I even have fractional teeth in the first place. I used the following sites to calculate belt length and other metrics:
 
-1. orientalmotor.com/motor-sizing/beltConveyor-sizing.html
-2. universalbelting.com/calculators/
-3. infinitybelting.com/conveyor-system-calculators
-4. meiyaprecision.com/timing-pulley-and-belt-calculator/
+1. [Oriental Motor](orientalmotor.com/motor-sizing/beltConveyor-sizing.html)
+2. [Universal Belting](universalbelting.com/calculators/)
+3. [Infinity Belting](infinitybelting.com/conveyor-system-calculators)
+4. [Meiya Precision](meiyaprecision.com/timing-pulley-and-belt-calculator/)
 
 The math breakdown of the belt calculation for the Z axis tensioning system:
 
@@ -2752,39 +2752,39 @@ Here's the lapse of today's session: [PATRA-LPS-37-D57](https://lapse.hackclub.c
 
 ---
 
-# Day 58 — 22.08.2026: idk [incomplete]
+# Day 58 — 22.08.2026: Working on the Z Axis Clamp
 
-I didn't get my hands on the adjustable belt clamp in the last session, which I was originally supposed to get my hands on.
+I didn't get my hands on the adjustable belt clamp in the last session, which I was originally supposed to get my hands on. So, I instead worked on a non-adjustable rigid clamp which a mechanically sane design.
 
 According to the math I did yesterday, I was supposed to have a 5 + 2 = 7 mm gap between the first and the last tooth in my Z belt if I cut it due to the fractional tooth problem. The most logical thing here was to actually make a clamp for that exact dimension, where there is an additional 3 mm gap between the first and the two centermost teeth. 
 
-Here is exactly how I did that. 
+Here is exactly how I did that:
 
 - First, I deleted all of the screw threads and the holes in the Z clamp. 
 
-	img
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/5e49093a-a894-4246-9533-0c7fb3d81060" />
 
 - Next, I created a new sketch where I bisected the Z clamp into two parts.
 
-	img
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/0f6f71ac-e494-4604-9d0b-39441426e88c" />
 
 - I then excluded one half of the belt clamp.
 
-	img
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/54bd9e77-1c93-412e-82e1-6523032e1125" />
 
 - I use that extruded part to split the clamp body into two halves.
 
-	img
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/7152d79b-89d0-466e-b22c-90004a740d8a" />
 
 - Then I extruded inside and deleted the extra part.
 
-	img
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/e58db4e1-1229-44bb-b96c-5925558f3e4f" />
 
-- Lastly, I moved one part of the half 2 mm away from the other.
+- Lastly, I moved the halves 1 mm apart from each other (2 mm total).
 
-	img
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/28146db2-4ee7-4f00-803a-001b86c5cb4a" />
 
-After that was done, I created a new sketch to redo what I did in the last session and failed. In the sketch, I used two teeth, and I made sure that the pitch between those two teeth is exactly 7 mm. The midpoint of the distance is on the Z-axis of the Fusion workspace. 
+After joining the two parts using extrude, I created a new sketch to redo what I did in the last session and failed. In the sketch, I used two teeth, and I made sure that the pitch between those two teeth is exactly 7 mm. The midpoint of the distance is on the Z-axis of the Fusion workspace. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e22644e8-fe95-4985-867f-94f6155f6d75" />
 
@@ -2796,7 +2796,98 @@ For the pattern, I placed the last tooth 2513.935 - 7 mm from the first one. Due
 
 <img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/cee96fb9-97b5-4dc1-b42c-ad172d23e1a0" />
 
-Next, it was time to place the belt and the clamp to see if their profiles match. And they did match.
+Next, it was time to place the belt and the clamp to see if their profiles match, using:
+
+- Distances between each tooth profile: Matched
+- Width of the belt and the clamp: Matched
+- Distance between the last and the first tooth: Matched
+- Coordinates of the clamp and the belt: Matched
+
+Followed by this, I worked on the upper clamp of the Z axis tensioning system. Here's what I did:
+
+1. **Adjusting Upper Clamp Height & Infill:**
+
+	The belt has risen in height because of the increase in height of the Z axis pulley/idler case due to the end plates. As the belt rose, the clamp must too. So, I lifted the lower parts of the Z upper clamp by 8.065 mm
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/400d95e9-7827-4281-b7f9-6b626de81667" />
+
+	There was a hole inside the upper clamp.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/51d80c79-786b-4375-beb3-9db701692e57" />
+
+	I deleted it as it was unnecessary.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/9acb3196-66ed-4dfb-8df7-8613e53d414b" />
+
+1. **Increasing Length of the Z Axis Upper Clamp:**
+
+	Before day #44 there was 8 teeth on the X, Y and Z lower clamps. On day, I increased that to 10 teeth, thus increasing the clamp length. Today, on day #58, I further added a distance of 2 mm between the 5th and 6th tooth, thus increasing the distance further. In all of this, there was no change made to the upper clamp of Z axis, so it obviously was a lot shorter than the lower one.
+
+	I extended the two sides of the Z upper belt clamp.
+
+	First side:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/327edb8b-1377-4d47-b962-9d58d508e4a9" />
+
+	Second side:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1de3bfcb-4d8f-4fba-a241-6dadf4cb25f7" />
+
+	In order to make the two ends symmetrical, I used extrusions, face offsets, delete faces, and split bodies.
+
+3. **Combining the Z Linear Blocks, Z Blet Clamp Top & Linear Block Unifier:**
+
+	Previously, there were three parts on the Z linear block:
+
+	1. Linear Block Z 1 on the X rail
+	2. Linear Block Z 2 on the Y rail
+	3. Linear Block Unifier
+
+	But for assembly convivence, I combined the upper into a single body.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4191f2f4-0108-4027-9433-88227199d99f" />
+
+4. **Making the Combined Body Symmetrical:**
+
+   The combined body was not symmetrical, so I drew a sketch on the upper plate and then on the face divided it into two parts.
+
+   <img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/13e6c064-c87d-4464-a46e-79de6599cda9" />
+
+   Then I extruded out part of the sketch.
+
+   <img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/14b35cc5-6ca2-427b-bbde-55ed1111286f" />
+
+   I used the new face created to split the body into two parts.
+
+   <img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/33c9d9d2-ae2b-4e23-b7c6-eb9413996a2a" />
+
+   I used one side of it to mirror and then deleted the other side.
+
+   <img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/702518ca-74cf-4b30-9de4-6a9ea8dea871" />
+
+The upper clamp was dealt with. It was then turn for the lower clamp. The thing that was left in the lower clamp was the clearance. There was no clearance in the clamp, and if the print was slightly larger, the belt teeth would not fit in. If you see the section analysis, you can see that there is no clearance:
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/809cead6-36df-4497-81b1-849b3c01dc97" />
+
+I thought it would be very simple to add clearance to the teeth. I would just select the teeth, and using face offsets, I would make it bigger, but it was not as simple as I thought. When I tried doing that, it failed repeatedly, so I created a new sketch on Z-axis lower clamp. I tried looking into the issue, and I found out that the geometry of the belt teeth was such that I cannot simply increase the clearance for the teeth. If I did so, it would create negative geometry on the edges of the teeth. And if I did that, the object would no longer be a solid, and thus it cannot exist.
+
+As I was unsuccessful in adding clearance to the teeth of the belt clamp, the most obvious workaround was to import a belt clamp from the internet to see how it is done. But no matter how much I searched it, I couldn't find anything that I wanted. 
+
+But then somehow I got the perfect idea to make the belt clamp with proper clearance. Here's how I did it:
+
+- First, I added 0.05 mm of offset on the tooth, and the shape became like this, which was the problem.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/c7dad06b-58ba-40c1-98c8-aa22714e9964" />
+
+- Next, I extended the larger circle below the topmost small circle, and I deleted the topmost small circle.
+
+	<img width="1365" height="730" alt="image" src="https://github.com/user-attachments/assets/f06cb5cb-353d-4e21-9c4e-b9e22736a2ba" />
+
+- I use the break tool to delete the unnecessary parts of the circle that I extended. 
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/99dbf5b2-0cb2-4af5-8f4d-4b9cbb55ccd4" />
+
+And by this, a mechanically sane design of a single tooth for the belt clamp was done. I then simply copied this tooth 9 more times, making sure that there is an extra 2 mm gap (7 mm pitch) between the fifth and the sixth (the two centermost teeth). I extruded the sketch to make the new teeth, adjusted the overall length, and added screws, before placing it under the Z upper clamp.
 
 Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.com/timelapse/CEqqbFVMyiMs)
 
@@ -3488,18 +3579,31 @@ I started simply by opening the design and creating a new drawing where I import
 Here's how I made the drawing:
 
 1. I first created a new drawing, using Automated Drawing.
+
 2. Then added another base view in Home orientation and deleted the generated ones.
+
 3. Changed the base view orientation to Top.
+
 4. Projected 4 views all around the parent view.
+
 5. Added a new project view for the 3d view.
+
 6. Chose ordinate dimensions 35 of 35 dimensions because I did not know what option to choose.
+
 7. Deleted the new projected view to give more space for dimensions.
+
 8. Aggressively deleted the Title Block and Borders for literally no reason.
-9. Struggled to being back a new Title Block and ended up designing my own one.  
+
+9. Struggled to being back a new Title Block and ended up designing my own one.
+
 	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/5b381b6b-3853-420c-950d-d1437d06e1e2" />
-10. Further edited the Title Block to remove unwanted details.  
+	
+10. Further edited the Title Block to remove unwanted details.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3a211d63-1eeb-4086-85c9-9fc652d449be" />
-11. Added another base view, same as the one I deleted before.  
+	
+11. Added another base view, same as the one I deleted before.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d4532925-d0a4-4aae-9702-ff27350bd6c1" />
 
 Now, finally the drawing is complete after a few more tweaks (at least that's what I thought back then).
@@ -4878,7 +4982,7 @@ Journaled days #58 (full),
 
 Day #58 (full)
 
-
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e7f5e23f-fe80-4aff-bfe3-d910fef9accb" />
 
 After today, these days are left to be journaled:
 
@@ -4889,7 +4993,7 @@ After today, these days are left to be journaled:
 * Day #63
 * Day #64
 
-Here's the lapses of today's session: [PATRA-LPS-69-D89]()
+Here's the lapses of today's session: [PATRA-LPS-69-D89]() (started lapse late. worked 30 mins before started it.)
 
 **Total time spent: 0h 00m**
 
