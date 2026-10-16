@@ -2994,7 +2994,7 @@ With this, I finally got rid of the number 0.00037878.
 
 <img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/e4891df9-4e4e-46ff-9a4f-3b60511f2a82" />
 
-After that, I went on to redesign the belt clamp lower of the X axis tensioning system. But I got stuck with the thickness of the clamp. I was supposed to make it like 10 mm, but I barely had 0.5 mm thickness available. To increase the thickness I had to increase the height of the belt by increasing the height of the end plates, and thus the entire tensioning system.
+After that, I went on to redesign the belt clamp lower of the X axis tensioning system. But I got stuck with the thickness of the clamp. I was supposed to make it like 6 mm, but I barely had 0.5 mm thickness available. To increase the thickness I had to increase the height of the belt by increasing the height of the end plates, and thus the entire tensioning system.
 
 In the end, I searched about UHMW tape that I would like to apply on the linear blocks to prevent belt wear.
 
@@ -3004,15 +3004,74 @@ Here's the lapse of today's session: [PATRA-LPS-39-D59](https://lapse.hackclub.c
 
 ---
 
-# Day 60 — 25.08.2026: idk [incomplete]
+# Day 60 — 25.08.2026: Designing Belt Sheilds
 
-https://in.misumi-ec.com/vona2/detail/110300140370/?list=PageCategory
+I started with the problem I left on the table yesterday: too thin clamp. To fix this, I had to deal with the things that are related to this. What's related to this? Literally everything in the entire tensioning system, the end plates and the aluminum extrusions.
 
-https://www.phidgets.com/productfiles/TRM4227/TRM4227_0/Documentation/TRM4227_0Mechanical.pdf
+I've always wanted an aluminum extrusion with an integrated MGN15H rails, but I never found one except on Amazon. The prices were absurd on Amazon. This is what I'm talking about. Not literally, but the concept is the same. 
 
-lots of stuff iforgot
+<img width="1000" height="753" alt="image" src="https://github.com/user-attachments/assets/c1b4ab41-461c-459c-87e5-6d9931b7eb98" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/112aee38-9f86-42fa-966e-19b0e4244ed9" />
+But not JLCMC or Misumi had it or anything like it, so I had to choose other workarounds. 
+
+I just had to increase the height of the entire tensioning system, just like I said in the last session. It was really hard to do because the higher I moved the tensioning system belts for the X and Y tensioning system, the closer the belt return path was to the 4040 extrusions' inner walls. I wanted to keep clearance, and I couldn't use UHMW tape due to the shape of it. Just look at the shape: it is sharp, and it would not just cause belt wear if the belt rubs against it. It would cause the belt to cut. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4219d477-ff5b-4239-9668-1c580463fbe9" />
+
+But I believed that I could find a workaround, so to increase the thickness of the belt clamp for the X and Y tensioning system, I moved the entire belt up by 1.5 mm.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4388f5ec-5398-4d3b-bf3b-9de95aabf269" />
+
+I can't anymore rely on clearance to prevent belt wear (or belt cut), so instead I must use something like UHMW tape. There is no surface to apply UHMW tape on to, so I must use UHMW Guide Rail Shields instead. I found [this](https://in.misumi-ec.com/vona2/detail/110300140370?HissuCode=NLK-1000) on MISUMI. These can be a very good solution to my problem but they are crazy expensive, like $100 each.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/41d0b754-5396-477b-9824-d2daf96a1f20" />
+
+I had found [this](https://www.phidgets.com/productfiles/TRM4227/TRM4227_0/Documentation/TRM4227_0Mechanical.pdf) datasheet for GT5 15mm belt. The material is LY12 (2024-T6), which is a specific grade and temper of a high-strength, heat-treatable aluminum-copper-magnesium alloy. The thickness is about 8 mm total. I can't make my clamp even half as thick, despite the fact that I would fabricate it out of nylon.
+
+I created a new sketch where I thought of creating some kind of a belt shield to cover with UHMW tape and prevent belt wear. I was basically thinking of making my own UHMW guide rail shields instead of buying them from MISUMI.
+
+Here's what I did next:
+
+- I projected the belt's cross section first
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/1aa2ffe8-fab8-477a-886d-3418f921a98e" />
+
+- Then I created a rectangle around the return belt.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/9723ccf5-dff0-4ed0-9344-16026749b5b2" />
+
+- To make the shape fit into the insides of the 4040 extrusion, I made more rectangles around the center, even reaching the circles.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/6c26984d-94d7-41d8-9578-0e4ace34d982" />
+
+- I kept only the upper part which was necessary
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/b1f12365-f7a2-4754-b916-db740d3fb0fd" />
+
+- Then I added clearence along the edges.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/1d423344-f97d-4d68-a95c-4a8e5aec9d9e" />
+
+- After several visits back and forth in timeline, I removed the sides, keeping the minimal shape.
+
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/c4f03734-ace7-448c-934c-7baa52ca19ea" />
+
+- After extruding it 500 mm, I uploaded it in JLC3DP to check printability.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/112aee38-9f86-42fa-966e-19b0e4244ed9" />
+
+- Since the design passed without being flagged, I added two beam like extensions to give it strength.
+
+  	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/51d04176-30b3-4244-9d5e-4535e37c7d1a" />
+
+Kindly note that the process that I followed was explained in a very, very straightforward and simplified way, with only the net changes. What do I mean by net changes? I mean that I did not capture myself going back and forth in the timeline, changing the variables like the height of the belt, the offsets, and the belt's shape. I only captured what was finalized. As a matter of fact, my model was flagged for printing risk twice before being successful. 
+
+As the belt shield was completed, I copied it and arranged the components in the Browser. I need 2 meters of belt shield as there are 2 1 meter aluminum extrusions. It can be fabricated in two ways:
+
+1. FDM in my printer: 8 250 mm Belt Sheilds
+2. SLA from JLC3DP: 4 500 mm Belt Sheilds
+
+I saved my designs in Browser as the second one. This means I made 4 500 mm belt shields. 2 for the X axis tensioning system, and the other 2 for the Y axis tensioning system.
 
 Here's the lapse of today's session: [PATRA-LPS-40-D60](https://lapse.hackclub.com/timelapse/td59cmkmuuk6)
 
@@ -5079,7 +5138,7 @@ Here's the lapses of today's session: [PATRA-LPS-68-D88](https://lapse.hackclub.
 
 # Day 89 — 16.10.2026: Journaling
 
-Journaled days #58 (full), #59
+Journaled days #58 (full), #59, and #60.
 
 Day #58 (full)
 
@@ -5089,17 +5148,22 @@ Day #59
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f7016905-6691-48a8-b816-a74a56ea7323" />
 
+Day #60
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5fd38299-0e98-4efd-b225-5a8218723838" />
+
 After today, these days are left to be journaled:
 
-* Day #60
 * Day #61
 * Day #62
 * Day #63
 * Day #64
 
-Here's the lapses of today's session: [PATRA-LPS-69-D89]() (started lapse late. worked 30 mins before started it.)
+Note: Started Lapse late. I started working 30 minutes before, already.
 
-**Total time spent: 0h 00m**
+Here's the lapses of today's session: [PATRA-LPS-69-D89](https://lapse.hackclub.com/timelapse/o1DvW-_qGENh)
+
+**Total time spent: 6h 20m**
 
 ---
 
