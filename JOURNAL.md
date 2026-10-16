@@ -5167,7 +5167,7 @@ Here's the lapses of today's session: [PATRA-LPS-69-D89](https://lapse.hackclub.
 
 ---
 
-# Day 89 — 17.10.2026: Journaling
+# Day 90 — 17.10.2026: Journaling
 
 Journaled days 
 
