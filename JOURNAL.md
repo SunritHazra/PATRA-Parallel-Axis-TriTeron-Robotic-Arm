@@ -1,4 +1,4 @@
-<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/af331a41-66ac-413c-8189-ed640a6c7bcb" />---
+---
 
 Title: (PATRA Parallel Axis TriTeron Robotic Arm)
 Author: Sunrit Hazra
