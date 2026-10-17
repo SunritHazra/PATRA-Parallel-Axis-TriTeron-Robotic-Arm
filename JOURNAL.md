@@ -10,7 +10,7 @@ TriTeron Robot Module (TRM) Progress: "62%"
 Robotic Arm Module (RAM) Progress: "1%"
 Electronic Components Progress: "10%"
 Overall Progress: "42%"
-PC (Laptop) Used: ASUS Vivobook 15 X540UAR
+PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA, Emergent Ventures"
 Helped by: "Dan Rudmin (Zaber Technologies Inc., Canada), Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA)"
 
