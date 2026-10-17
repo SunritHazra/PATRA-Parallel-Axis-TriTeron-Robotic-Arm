@@ -3476,15 +3476,25 @@ Here's the lapse of today's session: [PATRA-LPS-43-D63](https://lapse.hackclub.c
 
 # Day 64 — 29.08.2026: idk [incomplete]
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ef2cb31-8433-4e18-8174-b01951bbbe6d" />
+First, I dealt with the Z belt clamp:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3da1e42a-dc7d-432c-9e3b-15676d40ac1c" />
+- To eliminate the extra 2 mm between the two centermost teeth in the Z belt clamp lower. Here's how the clamp looks after elimination:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d7e74ccf-03ce-4508-b30a-be1b5b9b1d99" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ef2cb31-8433-4e18-8174-b01951bbbe6d" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a5466b4-8217-44f1-ae41-230ec3b74bd1" />
+- As the profile was confirmed, I executed it using extrude: 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/583ee793-b448-4548-8ee3-b75ab6efb345" />
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d7e74ccf-03ce-4508-b30a-be1b5b9b1d99" />
+
+Next, dealt with the X/Y belt clamp:
+
+- I had a final look and confirmed the design.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a5466b4-8217-44f1-ae41-230ec3b74bd1" />
+
+- The sketch was confirmed, so I kept it as is.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/583ee793-b448-4548-8ee3-b75ab6efb345" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8e3938d6-c808-421c-9a19-37a8e6fd0d01" />
 
@@ -5537,7 +5547,7 @@ Here's the lapse of today's session: [PATRA-LPS-69-D89](https://lapse.hackclub.c
 
 # Day 90 — 17.10.2026: Journaling
 
-Journaled days #61, #62, #63, and #64.
+Journaled days #61, #62, #63, and #64 (partly).
 
 Day #61
 
@@ -5553,15 +5563,17 @@ Day #63
 
 Day #64
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6c30948c-f98b-4831-ac89-0eee7dde0848" />
 
+Besides, using Grammarly, I grammar-checked days #1 all the way to #90, except day #64. Fixed many things from days #52 to #60.
 
-Besides, using Grammarly, I grammar-checked days #1 all the way to #90. Fixed many things from days #52 to #60.
+After today, only one day left to be journaled.
 
-After today, none of the days are left to be journaled. I am finally free of the journal debt!
+* Day #64 (partly)
 
-Here's the lapse of today's session: [PATRA-LPS-70-D90]()
+Here's the lapse of today's session: [PATRA-LPS-70-D90](https://lapse.hackclub.com/timelapse/jlPXhm_LF2zE)
 
-**Total time spent: 0h 00m**
+**Total time spent: 7h 10m**
 
 ---
 
