@@ -2896,7 +2896,7 @@ Here's the lapse of today's session: [PATRA-LPS-38-D58](https://lapse.hackclub.c
 
 ---
 
-# Day 59 — 23.08.2026: Fixing Nanoscopic Dimensional Errors & Eliminating Fractional Teeth in X Belt
+# Day 59 — 23.08.2026: Fixing Nanoscopic Dimensional Errors & Eliminating Fractional Teeth in X Axis Belt
 
 Today I time-travelled two days back. Thanks to my dear laptop.
 
@@ -2982,6 +2982,34 @@ The length was determined by the following things:
 3. The length of the idler
 
 I am absolutely not going to change the length of the aluminum extrusion. I instead chose to change the length of the pulley and the idler symmetrically. 1067.5 - 1067 = 0.5 mm. If we divide it into two, we get 0.25 mm. If we increase the length of the pulley and the idler cases by 0.25 mm towards the center of the tensioning system, they would be placed 0.25 mm each outwards. Due to this, we would have no more fractional teeth and exactly 449 teeth. 
+
+A more detailed explanation of the same concept: 
+
+A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in this system are identical (22 teeth each), the belt path is perfectly symmetrical, simplifying the standard belt length formula to: Total Belt Length = (2 * Center Distance) + (Number of Pulley Teeth * Pitch).
+
+* Initial Geometry: The layout for this specific case dictates a center-to-center distance of 1067.0 mm, derived from a 1000.0 mm aluminum extrusion plus two half-lengths of the 67.0 mm pulley/idler cases.
+* Length Calculation: This design results in a total straight section length of 2134.0 mm (2 * 1067.0 mm) and a wrapped section length of 110.0 mm (22 teeth * 5.0 mm), combining for a total belt length of 2244.0 mm.
+* Teeth Consequence: Dividing this total length by the 5.0 mm pitch yields a non-integer count of 448.8 teeth, which is physically impossible for a closed-loop timing belt.
+
+As a direct consequence of adjusting the target to a physical loop of exactly 449 teeth for this specific setup, the entire physical assembly must shift to maintain proper belt tension without slack.
+
+* Required Length: Specifying a discrete 449-tooth belt establishes a fixed, non-negotiable total belt length of 2245.0 mm (449 teeth * 5.0 mm).
+* Distance Adjustment: Subtracting the constant 110.0 mm pulley wrap leaves 2135.0 mm for the straight sections, forcing the center-to-center distance to increase to 1067.5 mm (2135.0 mm / 2).
+* Structural Impact: To accommodate this wider center distance while using the same 1000 mm aluminium extrusions, the pueelys/idlers must be increased in length by 0.25 mm on both sides.
+
+Data Summary Table
+
+| Parameter | Configuration 1 (Previous) | Configuration 2 (Current / Consequence) |
+|---|---|---|
+| Belt Profile & Pitch | GT5 (5.0 mm) | GT5 (5.0 mm) |
+| Pulley Teeth Count | 22 teeth | 22 teeth |
+| Aluminum Extrusion Length | 1000.0 mm | 1000.0 mm |
+| Center-to-Center Distance | 1067.0 mm | 1067.5 mm |
+| Straight Section Length | 2134.0 mm | 2135.0 mm |
+| Wrapped Section Length | 110.0 mm | 110.0 mm |
+| Total Belt Length | 2244.0 mm | 2245.0 mm |
+| Final Belt Teeth Count | 448.8 teeth (Fractional) | 449.0 teeth (Whole) |
+
 
 The math was revolutionary, and I just realized that all my efforts with the fractional teeth adjustable clamp were in vain. But then I also earned the privilege of achieving two goals with a single CAD operation. The other goal was getting rid of that 0.00037878. So, instead of moving the X axis tensioning system pulley 0.25 mm away from the center on the X axis, I moved it 0.25037878 mm (0.25 + 0.00037878).
 
@@ -3092,7 +3120,7 @@ Anyways, speaking of the displacement, which is 1.5 mm, I first moved the pulley
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4d775008-05b5-40d9-9bf0-9aca100c7ed7" />
 
-I had previously moved the pulley case 0.25 mm away from the horizontal center. There was a gap of 0.25 mm due to this. Something had to fill in the space. So, I simply extended the pulley case both side by 0.25 mm. Previously, the length was 67 mm, and the height was also 67 mm. The length now became 67.5 mm, and the height was kept at 67 mm.
+I had previously moved the pulley case 0.25 mm away from the horizontal center. There was a gap of 0.25 mm due to this. Something had to fill in the space. So, I simply extended the pulley case on both sides by 0.25 mm. Previously, the length was 67 mm, and the height was also 67 mm. The length now became 67.5 mm, and the height was kept at 67 mm.
 
 <img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/1854caa7-07e7-44e8-b0c2-a7c106034eeb" />
 
@@ -3203,7 +3231,7 @@ The next part was applying a reasonable amount of clearance, like 0.2 mm, withou
 
 	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/b8207dfc-f56d-4e92-904d-67ca7e060f89" />
 
-- Copied this to one side 5 times, and mirrored the whole to the other side.
+- Copied this to one side 5 times and mirrored the whole to the other side.
 
 	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/4a4f6cc1-b5ac-49ab-b7d2-25181b85ab18" />
 
@@ -3363,43 +3391,82 @@ Here's the lapse of today's session: [PATRA-LPS-42-D62](https://lapse.hackclub.c
 
 ---
 
-# Day 63 — 28.08.2026: idk [incomplete]
+# Day 63 — 28.08.2026: Eliminating Fractional Teeth in Z Axis Belt
 
-A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in this system are identical (22 teeth each), the belt path is perfectly symmetrical, simplifying the standard belt length formula to: Total Belt Length = (2 * Center Distance) + (Number of Pulley Teeth * Pitch).
+I continued exactly where I left off yesterday.
 
-* Initial Geometry: The layout for this specific case dictates a center-to-center distance of 1067.0 mm, derived from a 1000.0 mm aluminum extrusion plus two half-lengths of the 67.0 mm pulley/idler cases.
-* Length Calculation: This design results in a total straight section length of 2134.0 mm (2 * 1067.0 mm) and a wrapped section length of 110.0 mm (22 teeth * 5.0 mm), combining for a total belt length of 2244.0 mm.
-* Teeth Consequence: Dividing this total length by the 5.0 mm pitch yields a non-integer count of 448.8 teeth, which is physically impossible for a closed-loop timing belt.
+I checked whether the Z Belt clamp lower, which I designed yesterday, had any printing risks.
 
-As a direct consequence of adjusting the target to a physical loop of exactly 449 teeth for this specific setup, the entire physical assembly must shift to maintain proper belt tension without slack.
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/22fab9d7-91cb-4700-a5c4-7febf00f0f90" />
 
-* Required Length: Specifying a discrete 449-tooth belt establishes a fixed, non-negotiable total belt length of 2245.0 mm (449 teeth * 5.0 mm).
-* Distance Adjustment: Subtracting the constant 110.0 mm pulley wrap leaves 2135.0 mm for the straight sections, forcing the center-to-center distance to increase to 1067.5 mm (2135.0 mm / 2).
-* Structural Impact: To accommodate this wider center distance while using the same 67.0 mm idler cases, the physical aluminum extrusion for this build must be lengthened by 1.0 mm, growing from 1000.0 mm to 1001.0 mm.
+The result, sadly, wasn't in my favour. It had a printing risk. But it was solvable because the risks were with the walls in the extreme horizontal ends and along the M3 screw clearance hole walls. I went back in the timeline to when I was designing the lower clamp. Here's how I fixed it:
+
+- I copied the tooth 5 mm away from it, placing it outside.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/231af6d5-7c76-40c2-8648-a7978753e4da" />
+
+- Then, instead of abruptly ending the belt, I extended it 0.5 mm to the point where it reaches the other tooth.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/7860c1c1-b22e-4994-85d7-809920c7be30" />
+
+- This made the walls thicker by 0.5 mm each side and thus the clamp longer in length, from 52 mm to 53 mm.
+
+	<img width="1360" height="725" alt="image" src="https://github.com/user-attachments/assets/98faf182-46c3-43de-a108-9e08e7ca2133" />
+
+- I edited the other sketch from yesterday too, extending the 52 mm length to 53 mm.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/e4d16d4f-4e81-4aff-82c0-f3d8c4d80cc1" />
+
+- Due to this, I also had to adjust the screw hole positions.
+
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/4cac1062-e0eb-4a65-a9b4-fa56d296979f" />
+
+After a few more tweaks back and forth in the timeline, it was fixed.
+
+I checked the height of the clamp and the belt.
+
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/a1f519fd-8de1-4e7e-9304-5ff5327da63a" />
+
+After I was done with the Z belt clamp, I started with the X and Y belt clamps. So, I designed a new clamp with 10 teeth, with no extra pitch in the center, the same clearance shape of 0.2 mm, 0.5 mm walls on two ends, and a 5 mm height. Then I made the clamp body the same way I did with the Z belt clamp.
+
+But then, out of nowhere, 0.00037878 mm appeared again in the coordinates of the X axis pulley. It was normal at this point. I eliminated it again, as always, by means of translational neutralisation by moving it. I also increased the height of the end plates from 7.5 mm to 9 mm, due to the 1.5 mm belt height displacement on day #60. Besides, I did some more repetitive work: Adjusting the end plate and pulley/idler connectors for the 0.25 mm position changes.
+
+I then created a new sketch to inspect the actual center distance for the Z axis tensioning system, and making a new belt with the updated lengths.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/566534f3-09c7-498e-b130-598b0a4be5ea" />
+
+With the sketch completed, I extruded out a new belt.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ec86520-7dd0-405b-904f-0f107b0535af" />
+
+But then I made an eye-opening, clever realization: Moving the X and Y axis tensioning system pulley by 0.25 mm, and lengthening it 0.25 mm on both sides, causes the Z axis to move that much apart. Adding 0.25 mm length on both sides for the Z axis tensioning system idler and pulley renders a whole number of teeth for the Z axis belt, eliminating the fractional 500.4. Let me explain:
+
+A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in this system are identical (20 teeth each), the belt path is perfectly symmetrical, simplifying the standard belt length formula to: Total Belt Length = (2 * Center Distance) + (Number of Pulley Teeth * Pitch).
+
+* Initial Geometry: The layout for this specific case dictates a center-to-center distance of 1201.0 mm, derived from a 1000.0 mm aluminum extrusion plus two half-lengths of the 67.0 mm pulley/idler cases, plus two full lengths of 67.0 mm pulley/idler cases.
+* Length Calculation: This design results in a total straight section length of 2402.0 mm (2 * 1201.0 mm) and a wrapped section length of 100.0 mm (20 teeth * 5.0 mm), combining for a total belt length of 2502.0 mm.
+* Teeth Consequence: Dividing this total length by the 5.0 mm pitch yields a non-integer count of 500.4 teeth, which is physically impossible for a closed-loop timing belt.
+
+As a direct consequence of adjusting the target to a physical loop of exactly 501 teeth for this specific setup, the entire physical assembly must shift to maintain proper belt tension without slack.
+
+* Required Length: Specifying a discrete 501-tooth belt establishes a fixed, non-negotiable total belt length of 2505.0 mm (501 teeth * 5.0 mm).
+* Distance Adjustment: Subtracting the constant 100.0 mm pulley wrap leaves 2405.0 mm for the straight sections, forcing the center-to-center distance to increase to 1202.5 mm (2405.0 mm / 2).
+* Structural Impact: To accommodate this wider center distance while using the same 1000 mm aluminium extrusions, the pueelys/idlers must be increased in length by 0.25 mm on both sides.
 
 Data Summary Table
 
 | Parameter | Configuration 1 (Previous) | Configuration 2 (Current / Consequence) |
 |---|---|---|
 | Belt Profile & Pitch | GT5 (5.0 mm) | GT5 (5.0 mm) |
-| Pulley Teeth Count | 22 teeth | 22 teeth |
-| Aluminum Extrusion Length | 1000.0 mm | 1001.0 mm |
-| Center-to-Center Distance | 1067.0 mm | 1067.5 mm |
-| Straight Section Length | 2134.0 mm | 2135.0 mm |
-| Wrapped Section Length | 110.0 mm | 110.0 mm |
-| Total Belt Length | 2244.0 mm | 2245.0 mm |
-| Final Belt Teeth Count | 448.8 teeth (Fractional) | 449.0 teeth (Whole) |
+| Pulley Teeth Count | 20 teeth | 20 teeth |
+| Aluminum Extrusion | 1000.0 mm | 1000.0 mm |
+| Center-to-Center Distance | 1201.0 mm | 1202.5 mm |
+| Straight Section Length | 2402.0 mm | 2405.0 mm |
+| Wrapped Section Length | 100.0 mm | 100.0 mm |
+| Total Belt Length | 2502.0 mm | 2505.0 mm |
+| Final Belt Teeth Count | 500.4 teeth (Fractional) | 501.0 teeth (Whole) |
 
-i checked if the belt lock i designed yesterday was printable or not. so, 
-
-- 0.00037878
-
-moving the x and y by 0.25 mm apart causes the z axis too to move that much apart.
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/566534f3-09c7-498e-b130-598b0a4be5ea" />
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ec86520-7dd0-405b-904f-0f107b0535af" />
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eb41116b-e988-4dbf-8d30-a4b250d4a3a7" />2256.938
+Due to this new realization, I had to eliminate the extra 2 mm distance between the two centermost teeth in the Z belt clamp lower, next.
 
 Here's the lapse of today's session: [PATRA-LPS-43-D63](https://lapse.hackclub.com/timelapse/EYsn6-oXwp8n)
 
@@ -3496,22 +3563,28 @@ A GT5 profile timing belt has a tooth pitch of 5.0 mm. Because both pulleys in t
 
 This meant that I no longer needed the clamp with a 2 mm gap in the middle. To achieve 501 teeth, I just needed to buy more teeth belt and then cut it. Here's the process I followed to eradicate the 2 mm gap in the middle:
 
-1. I split the existing Belt Clamp Bottom Z in half using XZ plane to reveal the inner belt grooves after moving it.  
+1. I split the existing Belt Clamp Bottom Z in half using XZ plane to reveal the inner belt grooves after moving it.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fc2a1b4-098c-4335-8985-3152be917379" />
 
-2. Created a sketch on the split part and copied the groove next to the groove before the gap at a 5 mm pitch.  
+2. Created a sketch on the split part and copied the groove next to the groove before the gap at a 5 mm pitch.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/afa09fcc-664c-4a9e-bd8d-90df8251b7d3" />
 
-3. Extruded the right part of the sketch to create a new face for the extrusion cut.  
+3. Extruded the right part of the sketch to create a new face for the extrusion cut.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4e054cdd-bfaa-4729-834c-0f84c124fe5d" />
 
-4. Extruded and cut the gap in the body.  
+4. Extruded and cut the gap in the body.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4089b63d-cedc-41a4-bfdc-369a512a7193" />
 
-5. Moved one part and merged it into a single body using the Combine tool.  
+5. Moved one part and merged it into a single body using the Combine tool.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7af6abe7-c9c6-40cd-ab7b-63d953b41a37" />
 
-6. Mirrored the part using the XZ plane to create this.  
+6. Mirrored the part using the XZ plane to create this.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d9a4029e-3c95-4012-bb50-c567ce74ed24" />
 
 The next thing I have to work on is the End Plate holes. The section analysis shows that the holes have stayed as they are, but as I increased the length by 0.25 mm on both sides of the pulley/idler case, the holes look like they shifted back.
@@ -3520,22 +3593,28 @@ The next thing I have to work on is the End Plate holes. The section analysis sh
 
 To fix it, here is what I did:
 
-1. Split the body near the middle using a construction offset plane and then moved a part 0.75 mm outwards.  
+1. Split the body near the middle using a construction offset plane and then moved a part 0.75 mm outwards.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f8907e7b-f54b-4b71-8ba6-a295c2569dd2" />
 
-2. To keep the total length unchanged, I moved the faces at the end of the plate back by 0.75 mm.  
+2. To keep the total length unchanged, I moved the faces at the end of the plate back by 0.75 mm.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c074d0b2-73d9-46c4-87a2-d4d907055c5b" />
 
-3. I then joined the parts by bridging the gap using the Extrude tool.  
+3. I then joined the parts by bridging the gap using the Extrude tool.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1e322d4f-ca63-4bb3-8610-991584892d63" />
 
-4. I split the other part of the body as well due to misalignment.  
+4. I split the other part of the body as well due to misalignment.
+
 	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/c3b7790e-0d80-4497-b49b-6410aee62873" />
 
-5. Moved it 0.25 mm away from the body to align the hole.  
+5. Moved it 0.25 mm away from the body to align the hole.
+
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7d4b8ea9-118c-4463-8ddf-05dc89c0e35c" />
 
-6. Bridged the gap using extrusion.  
+6. Bridged the gap using extrusion.
+
 	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/f4cde3e3-9be8-4c9d-915b-5a45bce1d9fd" />
 
 Following this, I mirrored the geometry to the other end plate and connectors. I also renamed some components in the Browser and checked the positions of the vertices in the design, especially in the end plates.
@@ -3903,7 +3982,7 @@ My designs commonly incorporate countersunk screws; I have relied mostly on AI r
 
 I made three holes side by side:
 
-* Two with the settings I have been using, and had used, respectively. One with the optimized design.
+* Two with the settings I have been using and had used, respectively. One with the optimized design.
 * Two of the three designs failed. Only the optimized one passed.
 
 I revolved the trustworthy design to make a 3D body.
@@ -3923,7 +4002,7 @@ And well, this is how the print turned out. Flawless fit, but the screw sticks o
 1. Change the chamfer width and depth of the outer edge of the countersunk screw.
 2. Move the chamfered face down by, say, 0.5 mm, or a different number. This can make the total screw length more tricky.
 3. Add a little hole on the smooth-surfaced parts that directly sit on the holes where the screw head sticks out.
-4. Drop chamfered screws and use more predictable button head screws like [this](https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20), by modelling 90 degree hubs for screws.
+4. Drop chamfered screws and use more predictable button head screws like [this](https://onlyscrews.in/products/hex-allen-button-head-m3-x-6-screw-pack-of-20), by modelling 90-degree hubs for screws.
 
 I am still not sure about this. I will have to research each one and, more importantly, try each one.
 
@@ -5470,13 +5549,13 @@ Day #62
 
 Day #63
 
-
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ccafbc45-2ae4-4c1d-b899-4a39334428a6" />
 
 Day #64
 
 
 
-Besides, using Grammarly, I grammar-checked days #1 all the way to #90.
+Besides, using Grammarly, I grammar-checked days #1 all the way to #90. Fixed many things from days #52 to #60.
 
 After today, none of the days are left to be journaled. I am finally free of the journal debt!
 
