@@ -12,8 +12,7 @@ Electronic Components Progress: "10%"
 Overall Progress: "42%"
 PC (Laptop) Used: ASUS Vivobook 15 X540UAR
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA, Emergent Ventures"
-Helped by: "Dan Rudmin (Zaber Technologies Inc.), Rowan Hunt (Not An Engineer)"
-Important Note: "There are several incomplete journals, containing an [incomplete] tag. Kindly take them as under-construction and don't judge the project on its basis."
+Helped by: "Dan Rudmin (Zaber Technologies Inc., Canada), Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA)"
 
 ---
 
@@ -2922,7 +2921,7 @@ At those times, my brain and, of course, the pixels in my computer couldn't disp
 
 Here is exactly how I fixed those nanoscopic dimensional errors:
 
-1. **Fixing the position of the Z-axis linear block 1 and 2:** Due to the existing joints, the Z-axis block had only two directions to move: linearly along the linear guide, back and forth. My first instinct was to actually go and see what the position of a point on either of the Z blocks was. I had to make sure that it is a whole number and that it absolutely does not have any nanoscopic decimal.
+Due to the existing joints, the Z-axis block had only two directions to move: linearly along the linear guide, back and forth. My first instinct was to actually go and see what the position of a point on either of the Z blocks was. I had to make sure that it is a whole number and that it absolutely does not have any nanoscopic decimal.
 
 Coordinates of a vertex on the Z Linear Block 1:
 
@@ -3064,7 +3063,7 @@ Here's what I did next:
 
   	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/51d04176-30b3-4244-9d5e-4535e37c7d1a" />
 
-Kindly note that the process that I followed was explained in a very, very straightforward and simplified way, with only the net changes. What do I mean by net changes? I mean that I did not capture myself going back and forth in the timeline, changing the variables like the height of the belt, the offsets, and the belt's shape. I only captured what was finalized. As a matter of fact, my model was flagged for printing risk twice before being successful. 
+Kindly note that the process that I followed was explained in a very, very straightforward and simplified way, with only the net changes. What do I mean by net changes? I mean that I did not capture myself going back and forth in the timeline, changing the variables like the height of the belt, the offsets, and the belt's shape. I only captured what was finalized. As a matter of fact, my model was flagged for printing risk twice before being successful, and I first lifted the 2.5 mm, then down 0.5 mm, then again down 0.5 mm.
 
 As the belt shield was completed, I copied it and arranged the components in the Browser. I need 2 meters of belt shield as there are 2 1 meter aluminum extrusions. It can be fabricated in two ways:
 
@@ -3079,17 +3078,61 @@ Here's the lapse of today's session: [PATRA-LPS-40-D60](https://lapse.hackclub.c
 
 ---
 
-# Day 61 — 26.08.2026: idk [incomplete]
+# Day 61 — 26.08.2026: Lengthening Pulley/Idler Cases & Getting Rid of Nanoscopic Dimensional Errors
+
+On day #59, I was successful in getting rid of the 0.00037878 errors, mostly. But due to the changes made in the position of the belt, which was net 1.5 mm rise in height, I also had to move the entire tensioning system up by 1.5 mm.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5c3aa9b0-75b4-4909-b76f-32e72474c9a1" />
 
+Kindly note that the value 1.5 mm was the net change. Before it even happened, due to the changes of last days, it was 1.762 mm, 1.462 mm, etcetera. The values depended on the thickness of the belt shields, clearance between the belt profile and the belt shields, and the thickness of the belt clamp.
+
+Anyways, speaking of the displacement, which is 1.5 mm, I first moved the pulley case up by 1.5 mm, before any other part of the tensioning system.
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4d775008-05b5-40d9-9bf0-9aca100c7ed7" />
 
-fixing 0.00037878 mm offsets
+I had previously moved the pulley case 0.25 mm far from the horizontal center. There was a gap of 0.25 mm due to this. Somethings had to fill in the space. So, I simply extended the pulley case both side by 0.25 mm. Previously, the length was 67 mm, and the height was also 67 mm. The length now became 67.5 mm and the height was kept at 67 mm.
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/1854caa7-07e7-44e8-b0c2-a7c106034eeb" />
+
+As the pulley was pushed back, the connector holes were off by 0.25 mm by the X axis, and by 1.5 mm by the Z axis. Thus I did this:
+
+- Using split body, I cut off the two connectors.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/9b7ccbd2-3b06-42db-a045-b84a06ea240a" />
+
+- I moved the connectors down by 1.5 mm.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/1c0f0d9a-3ef6-4d0e-afda-024d2468e1df" />
+
+- Then 0.25 mm towards the center of the 4040 aluminum extrusion.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/e64e2658-925a-4eff-89ec-37f819a8862a" />
+
+- To bride the gap, I used offset face and moved the face 0.25 mm away from the center.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/2b249140-2aef-421b-bfd0-8c4cc92d3c49" />
+
+- Using the combine tool, I combined the respective connector with their respective side.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/6e298d3a-805a-4626-99b8-1797c1c1a213" />
+
+I did all of this with with idler case as well, simultaneously.
+
+Despite the efforts of day #59, the 0.00037878 mm dimensional errors remained.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9643e368-d5d8-45d0-bad6-48e6c7a0c321" />
 
-x axis pulley again complete. i have to fix position of connections due to position change by 0.25 mm, mirror to idler and mirror whole system to y. then fix z and then continue on where i left of in day 55.
+To fix it, I did this:
+
+- Moved the outer faces of the pulley case away from the center by 0.00037878 mm.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/f61d1ab6-796d-43fb-8098-2fbbeb6a1e44" />
+
+- Moved the entire pulley case body 0.00037878 mm towards the center.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/b557e0a4-e33f-4d55-bce2-fea56b3f4fe1" />
+
+With this, the X axis pulley is again near completion. I had to mirror the pulley to to idler, and then mirror whole tensioning system to Y tensioning system.
 
 Here's the lapse of today's session: [PATRA-LPS-41-D61](https://lapse.hackclub.com/timelapse/h5Qet2HkMa8K)
 
@@ -5169,9 +5212,17 @@ Here's the lapses of today's session: [PATRA-LPS-69-D89](https://lapse.hackclub.
 
 # Day 90 — 17.10.2026: Journaling
 
-Journaled days 
+Journaled days #61, 
 
+Day #61
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d5bc5d5c-e9a1-479d-ac2a-8608edb1c286" />
+
+After today, these days are left to be journaled:
+
+* Day #62
+* Day #63
+* Day #64
 
 Here's the lapses of today's session: [PATRA-LPS-70-D90]()
 
