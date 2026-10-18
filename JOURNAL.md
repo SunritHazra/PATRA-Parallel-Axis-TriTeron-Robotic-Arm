@@ -5580,3 +5580,5 @@ Here's the lapse of today's session: [PATRA-LPS-70-D90](https://lapse.hackclub.c
 **To Do:**
 1. Add a fillet on the 90-degree corners of the clamps.
 2. Choose T60 motor drivers over T60S.
+
+---
