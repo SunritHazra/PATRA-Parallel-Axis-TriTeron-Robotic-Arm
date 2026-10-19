@@ -1996,15 +1996,25 @@ Today's agenda was to find the right coupler or adapter or whatever, and complet
 
 Previously, I came to know that I had to use shaft couplers to extend the motor's shaft. But I wanted to use something like [this](https://www.amazon.in/Stepper-Adapter-Turbine-Reducer-0-31inch/dp/B09G6GW7XF) instead. This example shown is extremely overpriced, so I tried finding something similar in MISUMI and JLCMC.
 
-I looked at different linear actuators, as I was confused about what to do. I couldn't reliable connect the motor to the pulley as the motor's shaft is too short. But to extend it, I have to use couplers or adapters. But I didn't find any such actuator. Most of them have the adapter integrated into their design. I searched, asked AI, read datasheets, surfed for products that could potentially match, but I couldn't find what I was expecting. Maybe I was just not sure enough of what I wanted to even achieve.
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/92820174-260d-4fe5-b833-8819a7745fce" />
 
-But after this, my brain was introduced the world of shaft couplers where each coupler is rate for a specific speed range (rpm), torque range, rigidity/flexibility, and of course a specific size and material for so many different applications. This ocean of choices added more to my preexisting confusion. But during the probably aimless surfing, here are the notable things I have found:
+I looked at different linear actuators, as I was confused about what to do. I couldn't reliably connect the motor to the pulley, as the motor's shaft is too short. But to extend it, I have to use couplers or adapters. But I didn't find any such actuator. Most of them have the adapter integrated into their design. I searched, asked AI, read datasheets, surfed for products that could potentially match, but I couldn't find what I was expecting. Maybe I was just not sure enough of what I wanted to even achieve.
 
-1. Found [this](https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/) in Robu.in. Can't use, max torque rating too low (1.5 Nm)
-2. Found [this](https://jlcmc.com/product/s/C01/CXJL/stainless-steel-high-rigidity-parallel-cut-beam-coupling-screw-fixing-screw-clamping-type) in JLCMC.
-3. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 2.3 and 3 Nm motor.
+But after this, my brain was introduced to the world of shaft couplers, where each coupler is rated for a specific speed range (rpm), torque range, rigidity/flexibility, and, of course, a specific size and material for so many different applications. This ocean of choices added more to my preexisting confusion. But during the probably aimless surfing, here are the notable things I have found:
 
-After all that crazy searching, I had had enough. I asked MISUMI AI to to do the job for me. And I found out that it is crazy good. It completely obliterated my endless searching, by finding exactly what I was looking for, as cheap as possible. What I searched for hours, it found in seconds. It found [this](https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10) for both 3 Nm and 2.3 Nm motors.
+1. Found [this](https://robu.in/product/flexible-coupling-enclasp-metel-bellow-coupling-od25mm-x-l32mm-bore8x8mm-zrb-25x32/) in Robu.in. Can't use; max torque rating is too low (1.5 Nm)
+
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f86d1014-2d7b-462f-9e45-ad8e4d2042a4" />
+
+3. Found [this](https://jlcmc.com/product/s/C01/CXJL/stainless-steel-high-rigidity-parallel-cut-beam-coupling-screw-fixing-screw-clamping-type) in JLCMC.
+
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/edb453f6-491e-43dd-aa6c-28c978d893b3" />
+
+4. Found [this](https://in.misumi-ec.com/vona2/detail/110310701009/?KWSearch=coupling&searchFlow=results2products&list=PageSearchResult) in MISUMI for 2.3 and 3 Nm motors.
+
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/000a9fd2-a8cd-4702-aafc-cc3ce3ef63f2" />
+
+After all that crazy searching, I had had enough. I asked MISUMI AI to do the job for me. And I found out that it is crazy good. It completely obliterated my endless searching by finding exactly what I was looking for, as cheaply as possible. What I searched for hours, it found in seconds. It found [this](https://in.misumi-ec.com/vona2/detail/110310702179/?HissuCode=E-LMCPSS34-8-10) for both 3 Nm and 2.3 Nm motors.
 
 This session achieved something very little, but was not less hard worked than most others. But it indeed was more frustrating than most of the sessions till date.
 
@@ -2016,7 +2026,7 @@ Here's the lapse of today's session: [PATRA-LPS-25-D45](https://lapse.hackclub.c
 
 # Day 46 — 04.08.2026: Working on Z Tensioning System Pulley Case — Part 1
 
-The hunt for shaft couplers continue. I came across several promising candidates for the coupler, but in the end, I couldn't settle on any.
+The hunt for shaft couplers continues. I came across several promising candidates for the coupler, but in the end, I couldn't settle on any.
 
 I found [this](https://in.misumi-ec.com/vona2/detail/110310701639?HissuCode=E-LMPO40L32-8-10) in MISUMI but I couldn't think of any way how and where I could place it in the KBM. It was way too large.
 
@@ -5711,13 +5721,19 @@ Here's the lapse of today's session: [PATRA-LPS-70-D90](https://lapse.hackclub.c
 
 # Day 91 — 19.10.2026: Journaling
 
-Journaled day #64 (full)
+Journaled day #64 (full).
 
 Day #64
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/17552fc5-34d5-4407-a27a-687c12b52d5f" />
 
 With this, not a single day is left to be journaled. I am finally free of my journal debt!
+
+Day #45 lacked images, so it didn't meet the entry requirements for Forge. So, I had to add images.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f6611bef-f5b3-41e9-a1cf-fe0a94238376" />
+
+Witch this, all entries meet requirements for Forge.
 
 Here's the lapse of today's session: [PATRA-LPS-71-D91](https://lapse.hackclub.com/timelapse/jlPXhm_LF2zE)
 
