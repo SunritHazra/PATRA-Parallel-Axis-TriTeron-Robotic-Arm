@@ -3389,7 +3389,7 @@ Here's the lapse of today's session: [PATRA-LPS-42-D62](https://lapse.hackclub.c
 
 ---
 
-# Day 63 — 28.08.2026: Eliminating Fractional Teeth in Z Axis Belt
+# Day 63 — 28.08.2026: Eliminating Fractional Teeth in Z Axis Tensioning System
 
 I continued exactly where I left off yesterday.
 
@@ -3472,67 +3472,199 @@ Here's the lapse of today's session: [PATRA-LPS-43-D63](https://lapse.hackclub.c
 
 ---
 
-# Day 64 — 29.08.2026: idk [incomplete]
+# Day 64 — 29.08.2026: Redesigning Clamps, Belts and Couplers
 
-First, I dealt with the Z belt clamp:
+The Z axis clamp that I designed yesterday was complete in terms of design, but its position was not quite right. It is important as the position determines the thickness of the clamp and also alters the upper clamp body. Here's how I made sure that the clamp's Z axis position is exactly adjacent to the belt profile, down to nanometers:
 
-- To eliminate the extra 2 mm between the two centermost teeth in the Z belt clamp lower. Here's how the clamp looks after elimination:
+- This is the clamp sketch for the Z axis tensioning system:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4ef2cb31-8433-4e18-8174-b01951bbbe6d" />
 
-- As the profile was confirmed, I executed it using extrude: 
+- I moved the clamp up by 1.59204374 mm. I got the number from the distance between the vertices on the two bodies.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/8cb0853e-e983-4998-8c6c-fb8b0cb40aa3" />
+
+- The clamp is now directly adjacent to the belt.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/804aff14-ebee-4b4f-ab7e-0c0746a88a00" />
+
+- As the profile was confirmed, I executed it using extrude:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d7e74ccf-03ce-4508-b30a-be1b5b9b1d99" />
 
-Next, dealt with the X/Y belt clamp:
+- I used this to make a fresh new sketch for the clamp:
 
-- I had a final look and confirmed the design.
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/0c58daf8-482b-4e30-8a72-28c919bcb6e3" />
+
+Next was the time for the X and Y axis clamp:
+
+- This is the clamp sketch for the X and Y axis tensioning system:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a5466b4-8217-44f1-ae41-230ec3b74bd1" />
 
-- The sketch was confirmed, so I kept it as is.
+- Similar to the CA axis tensioning system clamp, I made a new sketch.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/25af2315-0b90-4c79-8a46-938a413eaae1" />
+
+- After extruding the sketch, I have a better clamp. I also extruded 0.25 mm down to make it flush against the MGN15H linear block.
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/583ee793-b448-4548-8ee3-b75ab6efb345" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8e3938d6-c808-421c-9a19-37a8e6fd0d01" />
+- The clamp is now directly adjacent to the belt.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8e3938d6-c808-421c-9a19-37a8e6fd0d01" />
+
+The next part was the X and Y upper clamp:
+
+- I had the same old sketch, which I used to create the blue-highlighted shape.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/ce6d5eab-bc9b-4e40-a7fd-d300368ddbdd" />
+
+-  I used Split Body to cut the old upper clamp into two parts.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/9470e132-c0d6-4fca-950b-72cce8cae58c" />
+
+- I deleted the lower part of the upper clamp and then extruded the highlighted sketch and joined it with the upper clamp's upper part.
+
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/4ac4dd06-2ae3-47bc-83da-2ed06babaaee" />
+
+- The distance between the ceiling of the upper clamp and the trench of the lower clamp is supposed to be 4 mm, but even here there is a problem of nanoscopic dimensional error.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/4134cb41-ed34-49d0-9265-0134b591754d" />
+
+- I extended these two highlighted parts and connected them to the upper belt clamp.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/205b6688-a1c8-4d15-a7d0-bb6841c533c3" />
+
+This is how the upper clamp for the X and Y tensioning system looks from below. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a96bec37-a382-4819-98ea-2f13add993a5" />
 
-fixed asymmetry in the base plate and changed z clamp screw size from m3 to m2
-
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/94d03611-21e0-442a-a512-db2edf063e16" />
+On day #62, I had modeled a new plate for the Z axis upper clamp, but today, on a closer inspection of the dimensions, I realized that it was not symmetrical in shape. I also had to redo the holes because I changed the hole positions for the X, Y, and Z axis lower clamps.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fa58e3b7-95ce-4c2f-857d-29c80ed20828" />
 
+To fix the symmetry, I have used the mirror tool. And after applying the chamfers in the same fashion as I did on the #62, this is what it looks like:
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c6a5c3db-439d-4707-a488-43d181cddb18" />
+
+After the plate was done for the Z axis, I also modeled with the exact same dimensions for the X axis as well, just making sure that there is no shape bridging the gap between. After extruding it and applying chamfers in the same fashion as I did in the step before, this is what it looks like:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9feabea5-0bb1-4f1e-94f1-75640173d7c1" />
 
-<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/b165b081-fb7f-4df2-9fb4-a30353b46a4a" />
+But even at this point, the X axis belt had no teeth, so I projected two teeth onto the existing X axis belt profile. Here's how I added the teeth:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/769c5f93-f315-4e68-9cae-4a015d26fa13" />
+- I first extruded out a single tooth.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c978cd91-e8f8-4ead-936d-0f65363cb2c9" />
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/b165b081-fb7f-4df2-9fb4-a30353b46a4a" />
+
+- Then, using Pattern on Path, I copied it at a distance of 2256.938-5 449 times.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/769c5f93-f315-4e68-9cae-4a015d26fa13" />
+
+- Using the Combine tool, I combined the teeth and the belt into a single body.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c978cd91-e8f8-4ead-936d-0f65363cb2c9" />
+	
+With this, the Z axis tensioning system belt is done. And this is what the entire KBM looks like:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/20f7fb46-314c-4223-b924-d7eea1c00760" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3dfb058-2dcb-451e-b808-ba501c0d77ed" />1134 became 1135
+Next, I addressed a few things I had forgotten:
+
+1. **Length of the 2020 extrusions:**  I hadn't updated the length of the 2020 extrusions. As the pulley/idler cases were 0.5 mm longer (0.25 mm on each side), this added a distance of 0.5 * 2 = 1 mm to the overall length of the 2020 extrusions. The extrusions were previously 1134 mm, which now became 1135 mm. I extruded 0.5 mm on each side of the extrusions.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3dfb058-2dcb-451e-b808-ba501c0d77ed" />
+
+2. **Height of the parts inside the Z axis pulley/idler cases:** One more thing that was left out was the height increase of 1.5 mm for the parts inside the Z axis tensioning system pulley/idler. Using the Move tool, I moved the parts like washers, bearings, pulleys, and idlers 1.5 mm up.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5c625372-7819-4272-9c8c-d56ff8e6324c" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/464c10c8-2a5c-4d38-84ee-e48b212eca8f" />
+3. **Remodeling the Z axis tensioning system couplers:** This is something which I had in my mind. There were numerous dimensional errors in the coupler, even though it looked flawless. To fix it, here's what I did:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3888fa2d-c772-4ec6-805f-54555c65ec72" />
+- I created a new sketch on the 2020 extrusion face.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3888fa2d-c772-4ec6-805f-54555c65ec72" />
+
+- Cut a 12.5 mm deep hole into the two sides of the case.
+
+	<img width="1365" height="730" alt="image" src="https://github.com/user-attachments/assets/a42005c5-55ae-499d-b46f-37c259444802" />
+
+- From the sketch, I first extruded the four connectors. 
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/e50bb28a-6a81-445b-ac01-c4fe9c3cdf9b" />
+
+- Then the flat part of the U-shaped part.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/a8ebf1b6-5b93-480b-83e5-86666a483117" />
+
+- And then, finally, the walls of the U-shaped part.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/6d9c2a88-3305-45d0-b461-a824e50fbc71" />
+
+- I combined the whole part. 
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/3a919c2b-9f1b-4297-8400-f11ff56c30ba" />
+
+- Added camphers.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/43c15c1e-b728-46a5-93e4-605c363ee433" />
+
+- Added fillets.
+
+	<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/7fed0940-582e-446d-9402-0719e6e23867" />
+
+- Added hoes using extrude cut.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/b57235d0-094d-4256-b378-4bcd6510498b" />
+
+- Then I finally added threads.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/facb5ace-16e9-4e2e-9a41-e26359ad095c" />
+
+With this, I successfully modeled a dimensionally correct coupler for the Z axis sensing system.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/61f023a8-d6f0-4b1d-ab64-4a381d87f827" />
 
+After this, I added the holes in the correct position based on the coupler on the pulley case and added chamfers for the countersunk screw. This is how it looks with the pulley case:
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/295db8a9-c47f-4fe8-b13e-d9d9cc9aab38" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1710a2cf-074d-4c51-9a36-8fb97f60fc68" />
+I had forgotten to add clearances, so I added them:
+
+1. Coupler: I forgot to add clearance before. I added 0.2 mm clearance.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/1c85f1b1-0a71-4f86-9490-ac86aad441b6" />
+
+2. Shaft Adapters: Previously, it was 0.4 mm diameter clearance. I changed that to 0.2 mm.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/fd791189-7ed5-4ac4-9303-ddd258b8bc0f" />
+
+3. Bearing Covers: For some reason, their diameters were randomized. So, ensuring a diameter clearance of 0.2 mm, I made the outer diameter 39.8 mm.
+
+	<img width="1365" height="735" alt="image" src="https://github.com/user-attachments/assets/bd27fe44-f102-40b1-b8c6-e84f56129bd4" />
+
+It was then time for the Z axis belt. Here's how I modeled it:
+
+- I created a new sketch with the projected Z axis pulley/idler, and a 1202.5 mm long, with a 31.8309886 mm diameter. 
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/82fe0d0c-6ee9-4843-9b7a-53d3a25ee60f" />
+
+	The diameter was calculated from the formula 20 * 5 / pi, where 20 is the number of teeth, and 5 is the pitch.
+
+- I used the slot to draw a 3.8 mm thick belt, with one slot 1.9 mm larger in diameter and the other 1.9 mm smaller.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/170ebf60-a2ee-4b88-a1ca-040715dec493" />
+
+- Then I extruded the sketch 15 mm wide.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1710a2cf-074d-4c51-9a36-8fb97f60fc68" />
+
+After positioning it 1.5 mm up, adding the teeth in a similar way I did today with the Z belt, and Appearance, this is how the belt looks:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bc933f7a-2b32-4f7f-b8b1-e4aebe6f0634" />
 
-fixed several clearances and made them 0.2 mm from 0.4 and 0.3. added fillets for the ensioning systems
+Lastly, I added fillets for the exit point edges in the peulley/idler cases in all tensioning systems.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7e8b484d-3cac-4065-8dbc-05f780bdfde2" />
 
@@ -4053,7 +4185,7 @@ Let's pick up where I left off: Further cutting down the cost of the Kinematic B
 
 The first thing that came to my mind was unnecessary SLA Resin prints. I decided to print every part in PLA, PLA+, PA6/PA-CF, or PETG, which are not being printed in MJF PA12S-HP Nylon. MJF PA12S-HP Nylon possesses multidimensional (isotropic) strength. Unlike traditional 3D printing technologies (like FDM), where parts are significantly weaker along the vertical Z axis (linear or directional strength). Only the small crucial parts like the belt clamps, motor shaft adapters, etcetera, need isotropic strength and thus will be printed in MJF PA12S-HP Nylon. But a point to be noted is that I will still choose SLA resin printing for the Belt Clamp tops, as they are complex to print and need supports, which can cause a not-so-smooth surface, which is somewhat crucial. Additionally, they are not that expensive.
 
-I noticed that there were 4 Belt shields, each 0.5 meter in length, for two 1 meter long Belt Sheild Groups. I further divided them to a length of 250 mm using a split tool
+I noticed that there were 4 Belt shields, each 0.5 meter in length, for two 1 meter long Belt Sheild Groups. I further divided them to a length of 250 mm using a split tool.
 
 <img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/83fa5b1b-1ca0-48a9-9017-f441573a8a7f" />
 
@@ -4380,7 +4512,7 @@ Here're the lapses of today's session: [PATRA-LPS-55-D75-1](https://lapse.hackcl
 
 # Day 76 — 13.09.2026: Journaling
 
-Journaled days #31, #36, #65 (partly) and #68 (full).
+Journaled days #31, #36, #65 (partly), and #68 (full).
 
 Day #31
 
@@ -4459,9 +4591,11 @@ I learned that running integrated motors at 48V on the Mean Well LRS-600-48V is 
 The integrated motors are as follows:
 
 1. Integrated motor for Rtelligent 57AM23ED is [Rtelligent IT57AM23](https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-23nm-holding-torque-it57am23/)
+
 	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/255a68e6-977c-4216-83b2-be1a0c458855" />
 
 2. Integrated motor for Rtelligent 57AM30ED is [Rtelligent IT57AM30](https://robu.in/product/rtelligent-integrated-closed-loop-stepper-motor-57mm-flange-30nm-holding-torque-it57am30/)
+
 	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6f29bb9d-fc1c-4cd9-b5d7-215ceeee3e2b" />
 
 Finally, because PATRA has a constantly changing parallel axis load profile, being able to plug into Rtelligent's software via the tuning port to adjust PID loops, current values, and multi-stage digital position filters is critical. The integrated series locks me out completely, forcing reliance on basic hardware DIP switches with no way to tune out resonance or mechanical hunting vibrations under load.
@@ -5565,13 +5699,29 @@ Day #64
 
 Besides, using Grammarly, I grammar-checked days #1 all the way to #90, except day #64. Fixed many things from days #52 to #60.
 
-After today, only one day left to be journaled.
+After today, only one day is left to be journaled, after today.
 
 * Day #64 (partly)
 
 Here's the lapse of today's session: [PATRA-LPS-70-D90](https://lapse.hackclub.com/timelapse/jlPXhm_LF2zE)
 
 **Total time spent: 7h 10m**
+
+---
+
+# Day 91 — 19.10.2026: Journaling
+
+Journaled day #64 (full)
+
+Day #64
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/17552fc5-34d5-4407-a27a-687c12b52d5f" />
+
+With this, not a single day is left to be journaled. I am finally free of my journal debt!
+
+Here's the lapse of today's session: [PATRA-LPS-71-D91](https://lapse.hackclub.com/timelapse/jlPXhm_LF2zE)
+
+**Total time spent: 0h 00m**
 
 ---
 
