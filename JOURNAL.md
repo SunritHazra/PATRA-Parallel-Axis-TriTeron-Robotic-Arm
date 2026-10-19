@@ -5741,7 +5741,7 @@ These days, while I have been journaling, I have noticed a very big problem with
 
 Thus, I updated the bill of materials, removed the Rtelligent T60S, and I replaced it with this:
 
-**Rtelligent T60 Closed-loop Stepper Motor Driver (X, Y & Z)**
+* **Rtelligent T60 Closed-loop Stepper Motor Driver (X, Y & Z)**
    	* Quantity: 3
     * Unit Price: ₹ 4,039.00 
 	* Total Price: $127.79
