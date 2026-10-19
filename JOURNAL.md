@@ -5721,7 +5721,7 @@ Here's the lapse of today's session: [PATRA-LPS-70-D90](https://lapse.hackclub.c
 
 ---
 
-# Day 91 — 19.10.2026: Journaling
+# Day 91 — 19.10.2026: Journaling & Reconsidering Motor Driver Choices
 
 Journaled day #64 (full).
 
@@ -5735,16 +5735,65 @@ Day #45 lacked images, so it didn't meet the entry requirements for Forge. So, I
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f6611bef-f5b3-41e9-a1cf-fe0a94238376" />
 
-Witch this, all entries meet requirements for Forge.
+With this, all entries meet the requirements for Forge.
 
-Here's the lapse of today's session: [PATRA-LPS-71-D91](https://lapse.hackclub.com/timelapse/jlPXhm_LF2zE)
+These days, while I have been journaling, I have noticed a very big problem with my electronic system in this project. It is about the Rtelligent T60 and T60S motor drivers. On day #44, I chose the Rtelligent T60S over the T60 without looking at the rated voltage. For maximum performance, I am going to use the power supply, Mean Well LRS-600-48V, which was already confirmed before. But the problem here is that the Rtelligent T60S supports 18 to 50 V DC power supply. 48 V is technically within that range, but it does not provide any safety headroom. It is much better to instead use the Rtelligent T60, which supports 18 to 68 V DC. 
 
-**Total time spent: 0h 00m**
+Thus, I updated the bill of materials, removed the Rtelligent T60S, and I replaced it with this:
 
----
+**Rtelligent T60 Closed-loop Stepper Motor Driver (X, Y & Z)**
+   	* Quantity: 3
+    * Unit Price: ₹ 4,039.00 
+	* Total Price: $127.79
+	* Vendor: Robu
+	* Link: [Product Page](https://robu.in/product/rtelligent-t60-closed-loop-stepper-driver-18-68vdc-6a-for-stepper-motors-below-nema-24/)
 
-**To Do:**
-1. Add a fillet on the 90-degree corners of the clamps.
-2. Choose T60 motor drivers over T60S.
+Looking at the BOM, I suddenly remembered that I was now using genuine HIWIN components. The vendor I am sourcing from has the MGN15H linear block with black-colored ends, so instead of keeping my model green and red at the ends, I made it matte black. 
+
+So it went from this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/69aaf8bf-9f9d-4446-b1bd-d3831200debe" />
+
+To this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2a07173f-cf01-410c-940f-8a0c8d8b825f" />
+
+Once that was done, I made another change that I should have made long ago: Adding fillets on the 90-degree edge of the belt clamps.
+
+Here's how I did it:
+
+- I created a new sketch on the teeth plane of the X axis belt clamp lower
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0237f506-fb36-4131-b80d-15c3646c16a7" />
+
+- I copied one tooth out of the shape.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b5883be7-e883-408a-b906-c6c400074881" />
+
+- Next, I projected the clamp itself to mark the outlines.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/506b2076-0afa-4f1b-8a54-8a300784520b" />
+
+- Bridged the gap with straight lines, and I had this shape:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/66b8986a-5dd8-43a6-a5fa-1ff4cd14cf7f" />
+
+- Did the same on the opposite side as well.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f57f08e9-179b-4807-b72a-26a0c8326e9b" />-
+
+- I extruded the extreme ends of the sketch, and I used the join tool.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aceecdc8-7095-455f-a455-d027e8a01612" />
+
+- But after combining them, I noticed that there is unnecessary randomness in the dimensions, which must be solved.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/edf8f175-66c7-4fb2-9ff3-5b538ae36ab5" />
+
+Kindly know that when I was starting to work in Fusion today, due to some problems, I had to close the design, and due to this, I lost progress up to day #85. I have to start over again the next day.
+
+Here's the lapse of today's session: [PATRA-LPS-71-D91](https://lapse.hackclub.com/timelapse/bvvssjpO0AF4)
+
+**Total time spent: 5h 00m**
 
 ---
