@@ -5758,7 +5758,7 @@ To this:
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2a07173f-cf01-410c-940f-8a0c8d8b825f" />
 
-Once that was done, I made another change that I should have made long ago: Adding fillets on the 90-degree edge of the belt clamps.
+Once that was done, I made another change I should have made long ago: adding fillets to the 90-degree edge of the belt clamps.
 
 Here's how I did it:
 
@@ -5790,10 +5790,178 @@ Here's how I did it:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/edf8f175-66c7-4fb2-9ff3-5b538ae36ab5" />
 
-Kindly know that when I was starting to work in Fusion today, due to some problems, I had to close the design, and due to this, I lost progress up to day #85. I have to start over again the next day.
+Please note that when I started working in Fusion today, due to some problems, I had to close the design, and as a result, I lost progress up to day #85. I have to start over again the next day.
 
 Here's the lapse of today's session: [PATRA-LPS-71-D91](https://lapse.hackclub.com/timelapse/bvvssjpO0AF4)
 
 **Total time spent: 5h 00m**
+
+---
+
+# Day 92 — 20.10.2026: Fixing the X, Y & Z Belt Clamps
+
+I picked up exactly where I left off yesterday: fixing the uneven X and Y belt clamp. Here's how:
+
+- I created a midplane on the body first.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2c5c1d78-f8de-4472-8fc9-f5dda547e885" />
+
+- Used Split Body to split the body.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3b54a416-6749-4977-83b1-8e0ee2d47e11" />
+
+- I copied and moved the upper filleted and flat part of the crests 5 mm on both sides.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/50285e96-20a8-423e-9efb-4929aea617fc" />
+
+- This is how uneven the shape is.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/74490c7d-91a3-46e8-adee-f8e851254d54" />
+
+- Drew a dead-straight line connecting the crests of the far ends.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5b157d3b-fc80-4420-927a-75a90cb003a6" />
+
+- Due to some problems, Extrude wasn't working on the sketch, so I instead used Split Body to cut the uneven parts.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a6b59685-eea8-490b-ae27-33d66fd9d032" />
+
+- The extra uneven side was sliced off, but I also discovered uneven crest heights for the teeth.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b894e28-1426-4b6d-8a8b-d2747ee37c77" />
+
+- Even in individual crests, the Z position doesn't match.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7fa60129-53db-4717-a11c-3420070e017b" />
+
+I then decided to make a new clamp, wondering why I always have to start over. But I needed to inspect the source of the problem. And just as I suspected, the teeth profile itself was crooked. Because one the height of one side of the profile was 2.12753874 mm, while the other was 2.13 mm. The second one is accurate, as the height of a tooth is 1.93 mm. With 0.2 mm clearance added, it is 2.13 mm. Fixing the teeth was crucial, so here's how I did it:
+
+- I made a vertical line in the center and used Break on the valley arc.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6dca3ad2-a19d-4b14-95f8-d8c5c8cd7ce8" />
+
+- Next, first deleted the wrong side completely, leaving only the correct one.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32ec1319-b858-4367-b554-e3645c6d9d4a" />
+
+- Used Mirror to mirror the right side of the deleted one.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3261ec4e-d041-40b5-9859-073a3b7cf4a3" />
+
+- Deleted the projected arcs and the mirror line. Dimensions are accurate.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2b64c9a-34bd-4a1e-94ff-176a40dc0b54" />
+
+I then finally had the ability to create a new clamp with the correct dimensions. Here's what I did:
+
+- On the same sketch, I copied the tooth to a distance of 5 mm.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5ac66ddf-84ad-44cb-ba45-0d41c8864e29" />
+
+- Drew a line on the centre of the clamp.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5d61f887-550f-4c7c-8815-f8fa03ec44d0" />
+
+- Placed the two teeth in the centre by moving them -20.00974711 mm.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cf01e1c1-ad08-42e2-afcf-72ebd4e1ef59" />
+
+- Used the Rectangular Pattern to copy it 10 times.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0d7dd210-e987-4d88-9418-cb0c6d8a7262" />
+
+- Added curved ends to both sides.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57fe6cac-978b-46e0-93cc-fb71bf11f20f" />
+
+- Joined all the missing lines.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0526cb18-113c-4420-b4ef-2468dd4731aa" />
+
+- Then I extruded the belt profile.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8c4f2b68-eabc-41ec-88a2-8cb9724a0956" />
+
+- Split the body of the previous clamp, deleting the teeth.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2f4abc69-d322-4345-abfd-78b775529f25" />
+
+- Extruded the clamp 5 mm up to give it more height to cut.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bfed4c5a-9cb4-4590-8a77-04b0b2a7d683" />
+
+- Used Split Body to cut the extra geometry.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e0c465cd-e299-44bf-9da4-dc73bbfd00d3" />
+
+- Extruded the clamp to the extra length added on both sides.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6cbdccd8-3d18-4f25-8619-da368515ad30" />
+
+- Used the Construct plane to mirror it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/502790ee-e4ae-46df-b722-468952175b77" />
+
+But during this, I captured the reason behind probably every single dimensional error. I extruded this correctly, but the teeth profile I made is still 51.64655384 mm long, while the old clamp is 51.64854897 mm. I don't seem to find the reason why. The logic is simple: if Fusion rounds off extruded features, why does it see a body, face, or edge as thick as a tenth of a nanometer as a separate body, face, or edge?
+
+I wasn't going to take any risks, so I completely deleted the old clamp body, or whatever of it was remaining, and did this: 
+
+- I used the sketch that I used to make the new teeth profile to extrude a new body and join it with the teeth profile on both sides.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/48f4f9b8-a68e-4a68-ac26-101a6eb3def6" />
+
+- I added holes in the correct places.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2e9c3829-30b3-4026-a9c5-8ab033955d0d" />
+
+- After removing the old clamp, adding appearance, and arranging the bodies in the Browser, this is how it looks:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a7bb0b85-7439-4f63-b481-54801a2a937d" />
+
+As the clamp is now slightly longer, I must readjust the clearances.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/63378291-32e6-44c5-9776-077752e3d903" />
+
+This is how it looks with the correct clearances:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/62113896-5626-45ae-a2da-b715c2796b76" />
+
+Next, it was time to fix the Z-axis tensioning system bottom clamp. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f668ba7d-9f3a-4cf4-9f30-c3fddc977bab" />
+
+Here's how I did it:
+
+- Using Split Body, I isolated the teeth profile.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6a57fbaa-cd06-4c1d-992c-cb8bfd0390e3" />
+
+- After copying the X clamp bottom, I did the same.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1bc1c97b-ca47-4c09-8b2a-24513d832ce8" />
+
+- Moved the teeth profile to the place of the Z bottom clamp teeth profile.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e80d5f35-dde7-48c6-8c7d-da823d5344da" />
+
+- Extruded the teeth profile to the bottom of the Z bottom clamp.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/29f66bf2-301b-4f98-b371-02640268731a" />
+
+- Combined the bodies.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6453cf1b-4e4f-4f1c-82bc-cb2125f30750" />
+
+- Using Offset Face, I made the faces deeper by 0.5 mm.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/044e0bef-ab6d-4399-96fe-a15f3cb58be2" />
+
+- After extruding the remaining faces, the clamp is complete.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9465bd57-d3bd-4885-842e-8ca67b24414d" />
+
+Here's the lapse of today's session: [PATRA-LPS-72-D92](https://lapse.hackclub.com/timelapse/Uy8AiN9iMsvQ)
+
+**Total time spent: 3h 00m**
 
 ---
