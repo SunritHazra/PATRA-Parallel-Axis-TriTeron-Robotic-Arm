@@ -5786,11 +5786,11 @@ Here's how I did it:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aceecdc8-7095-455f-a455-d027e8a01612" />
 
-- But after combining them, I noticed that there is unnecessary randomness in the dimensions, which must be solved.
+- But after combining them, I noticed that there is unnecessary randomness in the dimensions, which must be addressed.
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/edf8f175-66c7-4fb2-9ff3-5b538ae36ab5" />
 
-Please note that when I started working in Fusion today, due to some problems, I had to close the design, and as a result, I lost progress up to day #85. I have to start over again the next day.
+Please note that when I started working in Fusion today, due to some problems, I had to close the design, and as a result, I lost progress up to day #86. I have to start over again the next day.
 
 Here's the lapse of today's session: [PATRA-LPS-71-D91](https://lapse.hackclub.com/timelapse/bvvssjpO0AF4)
 
@@ -5963,5 +5963,124 @@ Here's how I did it:
 Here's the lapse of today's session: [PATRA-LPS-72-D92](https://lapse.hackclub.com/timelapse/Uy8AiN9iMsvQ)
 
 **Total time spent: 3h 00m**
+
+---
+
+# Day 93 — 20.10.2026: Rigidly Connecting the Aluminium Extrusions
+
+I wanted to speedrun to complete the Kinematic Base Module strategically. So, I decided to live through the assembly process to see what connects to what and fill all the missing gaps in the system. These are the components in the KBM:
+
+- Aluminium Extrusions
+- End Plates
+- Linear Guides
+- Tensioning System
+- Motors
+- Supports
+
+I have arranged them on the basis of assembly sequence. This meant that I was going to start from the most fundamental component of the KBM: the aluminium extrusions.
+
+These are the aluminium extrusions.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e0d3ddff-0178-4914-9398-02f1554d51f8" />
+
+There are:
+
+- Two 4040 extrusions (HFS5-4040-1000)
+- Two 2020 extrusions (LCF6-2020-1135)
+
+But I realised that there was nothing in the assembly to connect them rigidly. I didn't want the entire system to rely on the End Plates. So, I had to find a way to connect these extrusions, like this:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa132bba-654d-448b-b2d3-d23a760a8ebf" />
+
+I needed a way to connect the 2020 extrusions with the 4040 extrusions side by side, but I could not find a reliable way to connect them side by side anywhere on the internet; they have different profile sizes. But I got a really good idea to connect the lower 2020 extrusions with the 4040 extrusions. I could make my own custom side-by-side connector, and here's how I did it. 
+
+- I created a new sketch on the 2020 and 4040 extrusion profiles.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9f39b064-9db0-4f58-8ff0-63f402616a07" />
+
+- Sketched a new connector profile with 0.2 mm clearance.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f4f1de64-8c08-4446-a0e3-1c4898284a9e" />
+
+- I extruded the connector at a length of 25 mm, but I was still not sure how I could connect the 4040 extrusions rigidly with that.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5b8befa5-3350-4a76-bf50-bc3cc8794499" />
+
+One very good way to rigidly connect them would be to drill a 100 mm hole through the 4040 and 2020 extrusions and connect them all with a single bolt. The problem is that I don't have a drilling jig for extrusions, and I cannot even tap holes inside my own house. Misumi is not providing the holes where I need them, nor do I have any drilling jig nearby. I was very confused at that point.
+
+Then I suddenly remembered that I had forgotten to change the M3 holes to M2 holes for the aluminum extrusions, so I did that.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc11c7d7-2261-4ac4-a7ab-4a914f3c514d" />
+
+After doing that, I got a really good idea that I could technically connect everything without a single screw. It won't even be visible and would make the system much stronger. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2bd28621-5848-4a52-be71-d1d1e9ab73cf" />
+
+In this sketch, which I have created, the Z-axis return belt gets shielded from all four sides. The 4040 extrusions are now rigidly connected to the upper 2020 extrusions, and the two more blocks that I created in the step before directly connect the lower 2020 extrusion with the 4040 extrusion. There are 0.2 mm clearances all around, and I've also added fillets on the internal corners of the walls for the Z return belt. 
+
+The following shape, with added screws and nuts, would make the overall system extremely strong, even though it will be 3D printed:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/129dfd5e-5a23-44b1-b734-3bc81193817e" />
+
+I'll obviously make sure that the 3D print is done with maximum density and with top filaments like PETG-CF. It is extremely easy to make my own custom 3D-printed bracket for the aluminum extrusions, but I believe that it is extremely hard to tap the aluminum extrusions so that I could reliably connect the custom brackets. This was my biggest roadblock. 
+
+I could use this shape for the extended part for the two 2020 extrusions:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/389029cc-dd47-46b6-b5c9-4b5c95a1ce9e" />
+
+I also added fillets to the entry points and exit points for the belt. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6c311b5a-855f-4bab-9f19-17ccbe103e15" />
+
+I also deleted unnecessary faces that made the shape much more dimensionally accurate and printable. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9625dabb-e1c4-4173-a12a-a8f1ed5aa4ca" />
+
+By the very end, I actually wanted to model all of the screw holes needed in the 4040 and 2020 aluminium extrusions, due to which I also did something which I should have done a long time ago: adding the screw holes for the linear guides on the flat face of the 4040 extrusion. Here's exactly how I did it:
+
+- I created a new sketch and projected the flat faces of the 4040 extrusion that were facing up.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0281ecf6-ee8d-4308-9d7e-54756e352d39" />
+
+- Then I added 3.5 mm holes with a distance of 40 mm between them, making sure that the first hole is 20 mm away from the edge. 
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d559b26-aca7-4c6b-a01e-72e487a0b2f7" />
+
+- Using a rectangular pattern, I copied it 25 times on each extrusion face.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0fab221c-0677-478c-873b-56e715f2eeb2" />
+
+- Then I extruded it to cut the holes in the extrusions.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/eecaeb05-ad8f-4ee7-bceb-2c03ab8d5775" />
+
+With this, the holes are finally added on the 4040 extrusion faces. Next, I needed to find a way to connect the linear guide to the extrusion reliably. It was hard because of the fact that I cannot use drop-in T-nuts, as I am placing it dead center on the flat face of the 4040 extrusion. But after speaking with Google AI, it recommended that I use rivet nuts.
+
+But one more problem arose: I can absolutely not have the linear guide sit not flush against the flat face. If I used regular rivet nuts, it meant it would be 0.5 to 1 mm higher up on the face. If I wanted it to sit flush, I had to use countersunk rivet nuts, but to use countersunk rivet nuts, I had to drill countersunk holes. Drilling holes in the first place is hard for me, let alone countersinking them to use countersunk rivet nuts. 
+
+So far, I understood something: it is extremely easy to make your own custom brackets, but altering a metal aluminum extrusion, when you only have a 3D printer with no jig, CNC, or a machinery lab hardware, is extremely difficult, especially as a student.
+
+At this point, I had realised:
+
+- 2 mm thick aluminium is way too thin to grip the linear guide rail by thread, let alone the entire linear guide, tripteron, and later the robotic arm.
+- No tool would reach past 70 mm from either side of the extrusions, so I can't fasten the nuts if I drill clearance holes into the flat face.
+- Using rivet nuts is structurally sound, but it would raise the linear rails and make the entire thing above it unstable.
+- Countersunk rivet nuts need a rigid and dedicated jig for the chamfers on the extrusion, and the wall is just 2 mm thick.
+
+It seemed that the best way to clear this roadblock was to actually speak to professional, real engineers, not AI.
+
+I also started worrying about the holes that are passing through vertically to connect the end plates to the 4040 extrusions. I didn't know if it would be reliable or if I could actually drill those holes by hand. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dba5b5e1-2542-4ae6-a694-467467a90ae4" />
+
+Yeah, but it is indeed true that I had the ability to print some kind of alignment block that I could use to drill the holes on the extrusions. I can't even possibly change the position of the linear guides to make them positioned directly on the hollow profile so that I could use T-nuts. That way, I would have to redesign the entire TriTeron. 
+
+After all this thinking, I decided to arrange the components that I created today in the browser, and that was the end of today's session. I saved the kinematic base module in Fusion. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e34e5868-1848-4a25-959d-10f5a4ff8930" />
+
+Here's the lapse of today's session: [PATRA-LPS-73-D93](https://lapse.hackclub.com/timelapse/Iya6jc8WFlgv)
+
+**Total time spent: 5h 00m**
 
 ---
