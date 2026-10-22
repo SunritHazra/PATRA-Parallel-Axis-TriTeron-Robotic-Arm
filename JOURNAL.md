@@ -5966,7 +5966,7 @@ Here's the lapse of today's session: [PATRA-LPS-72-D92](https://lapse.hackclub.c
 
 ---
 
-# Day 93 — 20.10.2026: Rigidly Connecting the Aluminium Extrusions
+# Day 93 — 21.10.2026: Rigidly Connecting the Aluminium Extrusions
 
 I wanted to speedrun to complete the Kinematic Base Module strategically. So, I decided to live through the assembly process to see what connects to what and fill all the missing gaps in the system. These are the components in the KBM:
 
@@ -6022,7 +6022,7 @@ The following shape, with added screws and nuts, would make the overall system e
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/129dfd5e-5a23-44b1-b734-3bc81193817e" />
 
-I'll obviously make sure that the 3D print is done with maximum density and with top filaments like PETG-CF. It is extremely easy to make my own custom 3D-printed bracket for the aluminum extrusions, but I believe that it is extremely hard to tap the aluminum extrusions so that I could reliably connect the custom brackets. This was my biggest roadblock. 
+I'll obviously make sure that the 3D print is done with maximum density and with top filaments like PETG-CF. It is extremely easy to make my own custom 3D-printed bracket for the aluminum extrusions, but I believe that it is extremely hard to tap the aluminum extrusions so that I can reliably connect the custom brackets. This was my biggest roadblock. 
 
 I could use this shape for the extended part for the two 2020 extrusions:
 
@@ -6067,13 +6067,11 @@ At this point, I had realised:
 - Using rivet nuts is structurally sound, but it would raise the linear rails and make the entire thing above it unstable.
 - Countersunk rivet nuts need a rigid and dedicated jig for the chamfers on the extrusion, and the wall is just 2 mm thick.
 
-It seemed that the best way to clear this roadblock was to actually speak to professional, real engineers, not AI.
-
-I also started worrying about the holes that are passing through vertically to connect the end plates to the 4040 extrusions. I didn't know if it would be reliable or if I could actually drill those holes by hand. 
+I also started worrying about the holes that are passing through vertically to connect the end plates to the 4040 extrusions. I wasn't sure they'd be reliable or that I could actually drill those holes by hand. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dba5b5e1-2542-4ae6-a694-467467a90ae4" />
 
-Yeah, but it is indeed true that I had the ability to print some kind of alignment block that I could use to drill the holes on the extrusions. I can't even possibly change the position of the linear guides to make them positioned directly on the hollow profile so that I could use T-nuts. That way, I would have to redesign the entire TriTeron. 
+Yeah, but it is indeed true that I had the ability to print some kind of alignment block that I could use to drill the holes on the extrusions. I can't even change the position of the linear guides to align them directly with the hollow profile so I can use T-nuts. That way, I would have to redesign the entire TriTeron. 
 
 After all this thinking, I decided to arrange the components that I created today in the browser, and that was the end of today's session. I saved the kinematic base module in Fusion. 
 
@@ -6082,5 +6080,81 @@ After all this thinking, I decided to arrange the components that I created toda
 Here's the lapse of today's session: [PATRA-LPS-73-D93](https://lapse.hackclub.com/timelapse/Iya6jc8WFlgv)
 
 **Total time spent: 5h 00m**
+
+---
+
+# Day 94 — 22.10.2026: Reinforcing the Linear Guide & Connecting the Belt Shields
+
+I had my mind set on completing this today. So, I started exactly with the problem that annoyed me yesterday: how to reinforce the 2 mm thick aluminum face so that it can hold the mass and doesn't creep under any derivatives of motion for the phase one triteron.
+
+But then I realized that there was nothing holding the belt shields in place. That's when I had the idea that I could use a backing bar under the 2 mm flat face that could reinforce the MGN15H linear guide's M3 screw threads, and also hold the belt shields in position. To give more thread engagement for the 25 M3 screws for the linear guide rail and to also hold the belt shields in place without falling or requiring any friction
+
+I created a new sketch on the 4040 extrusion face and projected the belt shields onto it. Then I added 0.2 mm clearance to the region in the middle. This is the shape I got:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5aefe6d1-162a-451a-afba-98d6d03bf849" />
+
+Then I got these two new shapes after extruding it:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32075e51-6414-4984-b29e-d8765422750a" />
+
+Here's how I executed the plan then:
+
+- I created a new sketch on the face, and then I made a 4 mm wide and 8 mm deep hole for the 4.5 mm outer-diameter brass insert.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/47eeff8d-7725-421e-8123-8f8cbc438c00" />
+
+- I made another 5 mm hole around it to make sure that, while inserting the heat set inserts, the walls do not form.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c76ffdb6-352e-45c2-b33b-8e75f24041ea" />
+
+- Then I added 0.2 mm clearance on the edge, making the outer diameter 4.4 mm.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/37f8ab1b-b4dd-48d9-a15f-42f39dbba195" />
+
+With this, I hope a mechanically sensible design was created, and I just had to repeat this with all the other 49 screws on the belt shields. 
+
+- After trying the Rectangular Pattern, which failed, I created an offset plane 40 mm in length.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3bebe7c2-4875-4d34-91a0-99ada608b3e8" />
+
+- I split the face and used a rectangular pattern to duplicate it 25 times.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/21674814-ff5e-4d86-95c2-eb8f53c98eac" />
+
+But this means that I can no longer divide my belt shields into four 250 mm strips because that would cut through the screw holes. I combined everything into one 1-meter-long combination of belt shields and linear rail backing bar. 
+
+I also modeled the [this](https://onlyscrews.in/products/m3-x-8mm-brass-threaded-inserts) insert, like this:
+
+- I extruded the sketch circle 8 mm.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/241c1761-c154-4ff3-999f-d11bae527fd4" />
+
+- Added threads and used a rectangular pattern to copy 25 times in total.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a0fe735-bdc9-48b6-9121-cf8c53344849" />
+
+Since I cannot print these at a length of 1,000 mm in my 3D printer, I must divide them into equal parts so that I can print them and connect them later during assembly. Previously, I had divided them into four parts, with each being 250 mm. If I do that this time also, the screw threads will be cut in half. I have decided to cut it into 200 mm parts instead, so that there are five of them, and in that case, it does not cut through any screw hole. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8369a882-35e2-4a22-8a7f-af0bf1d5a920" />
+
+But I still do need a way by which I can connect the belt shield. Or do I? Because I can just rely on the screws, PTFE Teflon tape, and super glue alone.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bd83e75b-dbc4-4192-89d0-4c6719d063fd" />
+
+Just a reminder: the belt shields are still belt shields, as they are completely smooth from below. Additionally, I'm going to add PTFE Teflon tape to it. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1f955ec4-2e8b-4daf-90b6-cbe631fae2c5" />
+
+To connect them, I created a 3 mm diameter hole with a 5 mm length on each belt shield, for a total of 10 mm. Inside that, I will use a 2.8 mm pin that will connect them using super glue. 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ab65bc1d-dcb1-46d4-9d65-962e4ccca6ee" />
+
+After duplicating and arranging the components, I finally had a way to connect the belt shields and reinforce the linear rail.
+
+Yesterday, I added the supports for the aluminum extrusions without any screws. Since the parts will be 3D printed and will be threaded, I must use brass inserts on the prints. I saved this for the next day.
+
+Here's the timelapse of today's session: [PATRA-LPS-74-D94](https://lapse.hackclub.com/timelapse/k7AYJeDsgy7a)
+
+**Total time spent: 5h 20m**
 
 ---
