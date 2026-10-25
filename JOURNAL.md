@@ -6139,7 +6139,7 @@ But I still do need a way by which I can connect the belt shield. Or do I? Becau
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bd83e75b-dbc4-4192-89d0-4c6719d063fd" />
 
-Just a reminder: the belt shields are still belt shields, as they are completely smooth from below. Additionally, I'm going to add PTFE Teflon tape to it. 
+Just a reminder: the belt shields are still belt shields, since they are completely smooth on the underside. Additionally, I'm going to add PTFE Teflon tape to it. 
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1f955ec4-2e8b-4daf-90b6-cbe631fae2c5" />
 
@@ -6154,5 +6154,15 @@ Yesterday, I added the supports for the aluminum extrusions without any screws. 
 Here's the timelapse of today's session: [PATRA-LPS-74-D94](https://lapse.hackclub.com/timelapse/k7AYJeDsgy7a)
 
 **Total time spent: 5h 20m**
+
+---
+
+# Day 95 — 23.10.2026: 
+
+
+
+Here's the timelapse of today's session: [PATRA-LPS-75-D95]()
+
+**Total time spent: 0h 00m**
 
 ---
