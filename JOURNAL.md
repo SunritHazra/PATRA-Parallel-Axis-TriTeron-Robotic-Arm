@@ -6157,12 +6157,85 @@ Here's the timelapse of today's session: [PATRA-LPS-74-D94](https://lapse.hackcl
 
 ---
 
-# Day 95 — 23.10.2026: 
+# Day 95 — 23.10.2026: Emergent Ventures Interview & Fixing Lead-in Chamfers
 
+On 23 October,_2026, I received an email from the *Senior Manager ** of ** Emergent Ventures ** ,*"Keelan 0'Carroll ** , who told me that Dr. Shruti Rajagopalan has reviewed my Emergent Ventures application and would like to speak with me on 23 October 2026 at 9:50 PM.. Since Forge was funding phase 1, Dr. Rajagopalan suggested me to reapply after the phase 1 is completed.
 
+Due to the new parts added in the last session, it was now time to add them to the bill of materials as well.
 
-Here's the timelapse of today's session: [PATRA-LPS-75-D95]()
+1. **Brass Inserts:** I started first with the brass inserts, and I knew the exact dimensions, which were M3x8 mm. So, I chose [this] (https://onlyscrews.in/products/s3-x-8mm-brass-threaded-inserts) insert for the 50 screws, where there
+are 25 on each 1 meter MGN15H linear guide.
 
-**Total time spent: 0h 00m**
+2. "Screws:*. In the last session, due to the newly modeled backing bar, there was scope to make the screws go 2 m + 8 mm = 10 mm deep into the threads, where 2 m is the aluminium face that would just act as a clearance hole, and
+the 8 mm is brass inserts that would act as real threads. This is the stack:
+
+* The thickness of the web where the screw sits (the bottom portion beneath the countersink step) is approximately 4.5 m.
+* The thickness of the top flat face of the 4040 extrusion is 2 mm.
+* The depth of the brass insert is 8 mm.
+
+This gives the thread to be ideally 14.5 m. But there are no 14.5 mm long screws, nor even 14 mm, nor even 15 mm on OnlyScrews. Moreover, the inserts are blind-ended, so I can't protrude them by 0.5 mm to make the screw length 15
+mm. So I must use a 12 m length M3 socket head screw, and I chose [this](https://onlyscrews.in/products/hex-allen-socket-head-m3-x-12-screw-pack-of-20).
+
+I have made a mistake. Actually, I have been making mistakes since day #82. It was with the chamfers. I suddenly became suspicious about the way I have been adjusting my model's holes for heat-set brass inserts (for FDM prints). After
+confronting Google AI, there was indeed something wrong. I read [this](https://www.accu.co.uk/p/488-threaded-insert-hole-size-charts-for-3d-printing-pla-petg-resin#Heat-Set) and [this](https://www.sovo13d.com/blogs/news/3d-printing-
+with-heat-set-inserts-design-strong-screw-bosses-that-last) article, and found out two things:
+
+1. Making the pilot hole 0.4 mm smaller in diameter than the maximum outer diameter of the brass insert was appropriate for M3. I learned this from the first website.
+2. Making the lead-in chamfer for the pilot hole 0.2 mm is not appropriate, and I should instead make it 0.5 m. I learned this from the second website.
+
+This meant that I had to change the lead-in chamfers from 0.2 mm to 0.5 mm. I started in the order of the main components.
+
+- Aluminium Extrusions
+- End Plates
+- Linear Guides
+- Tensioning System
+- Motors
+- Supports
+
+Aluminium extrusions have no inserts. So, I started by fixing the lead-in chamfers of the pilot holes for the inserts in the End Plates. I noticed that there were no lead-in chamfers at all. So, I added 0.5 mm lead-in chamfers.
+
+- Fixed the End Plate 1:
+
+	<ing width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3f005c4f-4150-4b7e-b88a-68cd774d86c7" />
+
+- Fixed the End Plate 2:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4340316e-5c71-429e-8e77-d465420233d5" />
+
+Next were the linear guides, which had no inserts either, so I moved to the tensioning system.
+
+- Fixed the X axis tensioning system pulley M5 insert holes.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d07aadc-d3a6-46ea-a6fe-d78320663def" />
+
+- Fixed the X axis tensioning system pulley M3 insert holes (above).
+
+	<ing width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fded8d3-a623-4f0a-b055-d5856a5e664d" />
+
+- Fixed the X axis tensioning system pulley M3 insert holes (below).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9e5b6e15-4834-41ed-b498-9eb96c7190fc" />
+
+I then noticed something that I was not only supposed to fix long ago, but also was supposed to notice a long time ago: the thermoplastic threaded hole for the pulley connectors still exists.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/62d091a4-479c-4399-a3e9-0b67588d18f4" />
+
+To fix it, I first deleted the holes, making them 3.086 mm in radius. The hole was M3 before.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90360bdc-3f4c-450d-bfe7-07816fc9c937" />
+
+Then I made the hole 0.343 m smaller in diameter, making the diameter 2.4 mm, which is for an M2 clearance hole.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/@3b272bc-ab12-4451-94a9-275fe446c654" />
+
+I then repeated the entire sequence of fixing the lead-in chamfers for the X axis tensioning system idler and then for the Y and Z tensioning system.
+
+Here's the timelapse of today's session: [PATRA-LPS-75-D95](https://lapse.hackclub.com/timelapse/XBFkoH_gEvF6)
+
+**Total time spent: 3h 45m**
 
 ---
+
+
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ae542b1c-4881-4b61-9080-41c56db522cc" />
