@@ -6159,11 +6159,11 @@ Here's the timelapse of today's session: [PATRA-LPS-74-D94](https://lapse.hackcl
 
 # Day 95 — 23.10.2026: Emergent Ventures Interview & Fixing Lead-in Chamfers
 
-On 23 October,_2026, I received an email from the *Senior Manager ** of ** Emergent Ventures ** ,*"Keelan 0'Carroll ** , who told me that Dr. Shruti Rajagopalan has reviewed my Emergent Ventures application and would like to speak with me on 23 October 2026 at 9:50 PM.. Since Forge was funding phase 1, Dr. Rajagopalan suggested me to reapply after the phase 1 is completed.
+On 23 October_2026, I received an email from the *Senior Manager ** of ** Emergent Ventures, Keelan O'Carroll, who told me that Dr. Shruti Rajagopalan has reviewed my Emergent Ventures application and would like to speak with me on 23 October 2026 at 9:50 PM. Since Forge was funding phase 1, Dr. Rajagopalan suggested that I reapply after phase 1 is completed.
 
 Due to the new parts added in the last session, it was now time to add them to the bill of materials as well.
 
-1. **Brass Inserts:** I started first with the brass inserts, and I knew the exact dimensions, which were M3x8 mm. So, I chose [this] (https://onlyscrews.in/products/s3-x-8mm-brass-threaded-inserts) insert for the 50 screws, where there
+1. **Brass Inserts:** I started with the brass inserts first, and I knew the exact dimensions, which were M3x8 mm. So, I chose [this] (https://onlyscrews.in/products/s3-x-8mm-brass-threaded-inserts) insert for the 50 screws, where there
 are 25 on each 1 meter MGN15H linear guide.
 
 2. "Screws:*. In the last session, due to the newly modeled backing bar, there was scope to make the screws go 2 m + 8 mm = 10 mm deep into the threads, where 2 m is the aluminium face that would just act as a clearance hole, and
@@ -6228,7 +6228,7 @@ Then I made the hole 0.343 m smaller in diameter, making the diameter 2.4 mm, wh
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/@3b272bc-ab12-4451-94a9-275fe446c654" />
 
-I then repeated the entire sequence of fixing the lead-in chamfers for the X axis tensioning system idler and then for the Y and Z tensioning system.
+I then repeated the entire sequence of fixing the lead-in chamfers for the X axis tensioning system idler and then for the Y and Z tensioning systems.
 
 Here's the timelapse of today's session: [PATRA-LPS-75-D95](https://lapse.hackclub.com/timelapse/XBFkoH_gEvF6)
 
@@ -6236,6 +6236,66 @@ Here's the timelapse of today's session: [PATRA-LPS-75-D95](https://lapse.hackcl
 
 ---
 
+# Day 96 — 24.10.2026: Retrieving Day #95 & Fixing Lead-in Chamfers
 
+Yesterday, my laptop crashed due to some errors. I lost all of the progress of day #95 on the journal. So, using the lapse, I retrieved the journal of day #95. 
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/4f80a30f-679e-448e-bc63-815001fb49c6" />
+
+Then I also noticed that I had copied the pulley cases to the idler cases with the M5 motor holes. So, I also fixed that.
+
+Besides, I also created 3.1 mm holes (since the M2 insert outer diameter is 3.5 mm) for the brass inserts for the aluminum extrusion supports and added 0.5 mm lead-in chamfers.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/ae542b1c-4881-4b61-9080-41c56db522cc" />
+
+Here's how I made the next changes to the aluminum extrusions:
+
+- I made 2.4 mm M2 clearance holes in the 2020 and 4040 extrusion supports, using the same sketch.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f46e7888-1ca4-4740-8153-40bbe39b0a90" />
+
+- Deleted unnecessary holes in the lower 2020 extrusion using Extrude.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4211b623-08ab-4aa5-b5ab-c2113dca3acf" />
+
+For the Z return belt support, I created a new sketch on top of the top 2020 extrusion, drew 3.1 mm and 2.4 mm holes, and extruded it.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a7003158-c90e-462c-aebf-5f90080fff0c" />
+
+But I also realised that I don't need inserts for the lower connector supports, as they go through. So, I removed the hole and made it 2.4 mm in diameter.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3bb66e23-4315-4640-ba69-3da3376c2184" />
+
+While doing this, it felt like there was no need for the Z Return Belt Supports because they don't carry any loads, nor do they space things apart. The only thing they do is to hold the upper 2020 extrusion in place, which can be shifted to the other supports. Moreover, to secure them, holes must be dug into the end plates and both of the 2020 extrusions. Thus, I removed the component.
+
+Therefore, in the same sketch, I did this:
+
+- Drew a new shape on the projected face of 4040 TO 2020 & Z Return Belt Support 1: one 2.4 mm diameter circle and another 3.1 mm diameter circle.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b37fa3e8-ffa2-4024-b86e-f0c38bb5c4a8" />
+
+- Extruded the 3.1 mm diameter hole.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/32285d34-00aa-4c8b-91f8-8d0a15ee49dd" />
+
+- Added a 0.5 mm lead-in chamfer.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2709c0f0-1d18-4c6a-a686-80493a39eb5b" />
+
+- Extruded the 2.4 mm circle to make a clearance hole through the upper 2020 extrusion.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6c8e8bbe-4431-4468-af89-c64c11b78a81" />
+
+Since the changes made were all on one side, I had to cut the extrusions from the middle, remove the other far end, and mirror the correct one.
+
+Next I just had to add the screws and inserts to the BOM. But since 100 mm M2 screws are not easily found, I am going to used threaded rods
+
+And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
+
+I am left with the simulations, which I will do once the TRM is also modelled fully.
+
+Here's the timelapse of today's session: [PATRA-LPS-76-D96](https://lapse.hackclub.com/timelapse/PJpuuAisIbBg)
+
+**Total time spent: 2h 15m**
+
+---
