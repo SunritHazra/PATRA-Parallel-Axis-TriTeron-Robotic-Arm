@@ -6157,9 +6157,9 @@ Here's the timelapse of today's session: [PATRA-LPS-74-D94](https://lapse.hackcl
 
 ---
 
-# Day 95 — 23.10.2026: Emergent Ventures Interview & Fixing Lead-in Chamfers
+# Day 95 — 25.10.2026: Emergent Ventures Interview & Fixing Lead-in Chamfers
 
-On 23 October_2026, I received an email from the *Senior Manager ** of ** Emergent Ventures, Keelan O'Carroll, who told me that Dr. Shruti Rajagopalan has reviewed my Emergent Ventures application and would like to speak with me on 23 October 2026 at 9:50 PM. Since Forge was funding phase 1, Dr. Rajagopalan suggested that I reapply after phase 1 is completed.
+On 23 October 2026, I received an email from the *Senior Manager ** of ** Emergent Ventures, Keelan O'Carroll, who told me that Dr. Shruti Rajagopalan has reviewed my Emergent Ventures application and would like to speak with me on 23 October 2026 at 9:50 PM. Since Forge was funding phase 1, Dr. Rajagopalan suggested that I reapply after phase 1 is completed.
 
 Due to the new parts added in the last session, it was now time to add them to the bill of materials as well.
 
@@ -6194,7 +6194,7 @@ This meant that I had to change the lead-in chamfers from 0.2 mm to 0.5 mm. I st
 
 Aluminium extrusions have no inserts. So, I started by fixing the lead-in chamfers of the pilot holes for the inserts in the End Plates. I noticed that there were no lead-in chamfers at all. So, I added 0.5 mm lead-in chamfers.
 
-- Fixed the End Plate 1:
+- Fixed End Plate 1:
 
 	<ing width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3f005c4f-4150-4b7e-b88a-68cd774d86c7" />
 
@@ -6236,7 +6236,7 @@ Here's the timelapse of today's session: [PATRA-LPS-75-D95](https://lapse.hackcl
 
 ---
 
-# Day 96 — 24.10.2026: Retrieving Day #95 & Fixing Lead-in Chamfers
+# Day 96 — 26.10.2026: Retrieving Day #95 & Fixing Lead-in Chamfers
 
 Yesterday, my laptop crashed due to some errors. I lost all of the progress of day #95 on the journal. So, using the lapse, I retrieved the journal of day #95. 
 
@@ -6293,6 +6293,16 @@ Next I just had to add the screws and inserts to the BOM. But since 100 mm M2 sc
 And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
 
 I am left with the simulations, which I will do once the TRM is also modelled fully.
+
+Here's the timelapse of today's session: [PATRA-LPS-76-D96](https://lapse.hackclub.com/timelapse/PJpuuAisIbBg)
+
+**Total time spent: 2h 15m**
+
+---
+
+# Day 97 — 27.10.2026: 
+
+
 
 Here's the timelapse of today's session: [PATRA-LPS-76-D96](https://lapse.hackclub.com/timelapse/PJpuuAisIbBg)
 
