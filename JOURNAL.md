@@ -6288,9 +6288,7 @@ Therefore, in the same sketch, I did this:
 
 Since the changes made were all on one side, I had to cut the extrusions from the middle, remove the other far end, and mirror the correct one.
 
-Next I just had to add the screws and inserts to the BOM. But since 100 mm M2 screws are not easily found, I am going to used threaded rods
-
-And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
+Next, I just had to add the screws and inserts to the BOM. But since 100 mm M2 screws are not easily found, I am going to use threaded rods for this. Or, I could use 45 mm socket head screws, but it needs tapping in the lower 2020 extrusion, which is not easy.
 
 I am left with the simulations, which I will do once the TRM is also modelled fully.
 
@@ -6300,12 +6298,16 @@ Here's the timelapse of today's session: [PATRA-LPS-76-D96](https://lapse.hackcl
 
 ---
 
-# Day 97 — 27.10.2026: 
+# Day 97 — 27.10.2026: Checking Interference of Kinematic Base Module Components (KBM)
 
+In today's short session, which I somehow managed to bring into existence in the midst of my busy day, I ran Interference Checks to verify the design of the KBM. What I found was some simple components: duplicated bodies, same bodies with duplicates in the same place, and some 3 mm diameter holes in the end plates, which I had to change to 3.4 mm. Nothing more. 
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a7b18888-0da7-4ac5-92cf-5b72b9be3750" />
 
-Here's the timelapse of today's session: [PATRA-LPS-76-D96](https://lapse.hackclub.com/timelapse/PJpuuAisIbBg)
+And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
 
-**Total time spent: 2h 15m**
+Here's the timelapse of today's session: [PATRA-LPS-77-D97]()
+
+**Total time spent: 1h 35m**
 
 ---
