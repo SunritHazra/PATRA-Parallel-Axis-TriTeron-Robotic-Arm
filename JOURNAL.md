@@ -6306,7 +6306,7 @@ In today's short session, which I somehow managed to bring into existence in the
 
 And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
 
-Here's the timelapse of today's session: [PATRA-LPS-77-D97]()
+Here's the timelapse of today's session: [PATRA-LPS-77-D97]( )
 
 **Total time spent: 1h 35m**
 
