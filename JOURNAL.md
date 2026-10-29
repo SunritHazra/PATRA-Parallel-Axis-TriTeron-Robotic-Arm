@@ -6306,8 +6306,18 @@ In today's short session, which I somehow managed to bring into existence in the
 
 And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
 
-Here's the timelapse of today's session: [PATRA-LPS-77-D97]( )
+Here's the timelapse of today's session: [PATRA-LPS-77-D97](https://lapse.hackclub.com/timelapse/0wXElB-4YuQh)
 
-**Total time spent: 1h 35m**
+**Total time spent: 1h 45m**
+
+---
+
+# Day 98 — 29.10.2026: 
+
+
+
+Here's the timelapse of today's session: [PATRA-LPS-78-D98]()
+
+**Total time spent: 0h 00m**
 
 ---
