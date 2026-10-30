@@ -6316,8 +6316,9 @@ Here's the timelapse of today's session: [PATRA-LPS-77-D97](https://lapse.hackcl
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f7da278b-1aca-4c49-bfa6-3f8badef54e6" />
 
-Here's the timelapse of today's session: [PATRA-LPS-78-D98]()
+Here's the timelapse of today's session: [PATRA-LPS-78-D98](https://lapse.hackclub.com/timelapse/9u6eOiT4jvUJ)
 
 **Total time spent: 1h 40m**
 
 ---
+
