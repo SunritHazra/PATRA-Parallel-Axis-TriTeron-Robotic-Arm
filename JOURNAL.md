@@ -6550,11 +6550,11 @@ The schematic is now in a much better state, though. I believe that the next ste
 
 This is how the schematic looks by the end of the session:
 
-<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/1b6b61e4-f844-48be-98d2-f58cdff629ec" />
+<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/1dc9aad4-7be5-464c-bd52-2a09bd8d78fd" />
 
-Here's the timelapse of today's session: [PATRA-LPS-80-D100]()
+Here's the timelapse of today's session: [PATRA-LPS-80-D100](https://lapse.hackclub.com/timelapse/WjYCJ-lryNd5)
 
-**Total time spent: 5h 30m**
+**Total time spent: 4h 45m**
 
 ---
 
