@@ -6469,9 +6469,13 @@ I checked the [converter datasheet](https://www.mornsun-power.com/public/uploads
 
 This also meant I had to be careful about grounding. The converter isolates its input and output, so the primary-side return and secondary logic ground must remain separate. The Teensy and 74HCT245 belong on the isolated 5V side. The driver optocoupler inputs use this logic-side ground as their return. I must not accidentally bridge it to the 48V supply's negative rail.
 
-[IMAGE PLACEHOLDER: Updated power supply section with URB4805S-3WR3]
+<img width="661" height="400" alt="image" src="https://github.com/user-attachments/assets/d28a84f2-1a03-41f9-9753-0af243e456e9" />
 
 There was also a small BOM issue. The LCSC listing I found, **C53159146**, identified the part under the EVISUN name, while my schematic called it MORNSUN. The model number appeared to match, but I still needed to reconcile the manufacturer information before ordering. I didn't want the schematic and BOM referring to potentially different parts.
+
+This is how the schematic looks now, with added Rectangles to separate components:
+
+<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/e89760b8-c459-490e-b063-7e95243636d3" />
 
 I then continued refining the 74HCT245 section. The six pulse and direction signals remained separate, while the seventh channel carried the shared enable signal. The mapping stayed the same:
 
@@ -6492,8 +6496,6 @@ I added six **10kΩ pull-down resistors** on the Teensy side, one for each pulse
 The remaining transceiver connections were also accounted for: pin 20 to +5V, pin 10 to logic GND, pin 1 (DIR) to +5V, and pin 19 (/OE) to GND. I grounded the unused A8 input and left B8 unconnected.
 
 One question remained, though. The exact [Rtelligent T60 V2.0 user manual](https://www.rbautomate.com/documents/rtelligent-t60-user-manual.pdf) specifies that the input signals can operate from 3.3V upwards. That means the 74HCT245 might not actually be necessary. I retained it for now rather than removing it before verifying the electrical requirements and current draw of the driver inputs.
-
-[IMAGE PLACEHOLDER: 74HCT245 with six pull-down resistors and signal connections]
 
 I also added the decoupling capacitors around the logic circuitry. The **74HCT245** and Teensy received local 100nF and 10µF capacitors. The converter received its input and output capacitors too, following the datasheet recommendations. I retained the 100µF output capacitor, which was within the converter's stated capacitive-load limit.
 
@@ -6545,6 +6547,10 @@ I ran through the schematic for electrical errors as well. The DRC came back cle
 There are still a few things to verify before ordering. The 74HCT245's output-current capability needs to be checked against the T60's optocoupler input requirements. The fuse's current and DC voltage ratings need to be confirmed. I also need to review the Teensy's USB power arrangement when it is powered externally, and decide whether to bring the drivers' ALM signals back to the controller. They aren't implemented in the current schematic.
 
 The schematic is now in a much better state, though. I believe that the next step is to finish checking the components and connections, then move into PCB layout. The isolation barrier between the 48V input side and the logic side needs to remain intact throughout.
+
+This is how the schematic looks by the end of the session:
+
+<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/1b6b61e4-f844-48be-98d2-f58cdff629ec" />
 
 Here's the timelapse of today's session: [PATRA-LPS-80-D100]()
 
