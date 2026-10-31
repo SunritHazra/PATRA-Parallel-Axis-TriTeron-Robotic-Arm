@@ -6322,3 +6322,233 @@ Here's the timelapse of today's session: [PATRA-LPS-78-D98](https://lapse.hackcl
 
 ---
 
+# Day 99 — 30.10.2026: Drawing the Schematic
+
+Today I started working on the electronics for PATRA's Phase 1 Kinematic Base Module. The plan was to make a carrier PCB connecting a **Teensy 4.1** to three Rtelligent T60 stepper drivers. One controller, three axes, and hopefully a reasonably straightforward PCB.
+
+I started by looking at the controller itself. The Teensy 4.1 seemed like a good fit, but I still wanted to compare it against a few alternatives: STM32F4/F7 boards, the Raspberry Pi Pico 2, and the ESP32-S3. I even tried Google's AI Mode without personalisation to get a more generic comparison. After going through the options, I stuck with the Teensy 4.1. Three-axis pulse generation was a major consideration, and I didn't see enough reason to switch platforms. Basically, the Teensy 4.1 was already perfect.
+
+The Teensy 4.1 is a high-performance development board built around the NXP iMXRT1062 ARM Cortex-M7 processor. 
+
+<img width="685" height="632" alt="image" src="https://github.com/user-attachments/assets/b5e1a9c9-b4d3-4fdd-9bba-14b432d11870" />
+
+Then I started searching for datasheets for the T60 drivers on the Rtelligent website. That's when I learned that there were three different versions in the T60 family:
+
+- **T60 V2.0:** Standard 2-phase closed-loop stepper driver for motors below 60mm, including NEMA 24.
+- **T60PLUS V3.0:** An upgraded version of the T60 series.
+- **T60S:** Part of the newer T-S generation, with 2D and 3D sub-variants.
+
+I was supposed to use the Rtelligent T60 V2.0. I couldn't find exactly what I was looking for on the manufacturer's website, but I did find [this manual](https://www.rbautomate.com/documents/rtelligent-t60-user-manual.pdf).
+
+Next came the logic-level question. The Teensy operates at 3.3V, and I needed to understand how that would interface with the T60 inputs. Google AI recommended a **74HCT245** bus transceiver for level shifting, along with a separate converter to generate 5V. I went with that arrangement for the first schematic.
+
+One thing I didn't know at the time was that the T60 V2.0 inputs are specified as accepting 3.3V to 24V control signals. So the assumption that I absolutely needed a 5V level shifter was questionable. I only caught the significance of this after reviewing the design later.
+
+This was also my first time using EasyEDA Pro. I'd only watched a 10-minute tutorial before starting. I had experience with KiCad, but for the potential EasyEDA sponsorship, I decided to jump straight into Pro without even using the Standard edition.
+
+First, I had to import the **Teensy 4.1-ALL** into the schematic. This took a surprisingly long time because I couldn't find the component. I was working in a sort of half-offline mode. Switching to online mode gave me access to the Public and Standard Edition Public parts, and I could finally pick the board from the many available options.
+
+<img width="1361" height="734" alt="image" src="https://github.com/user-attachments/assets/060db589-00bb-4040-ac3e-f8d8bb4a630b" />
+
+Next came the component list. I selected female headers for the three driver connections so that the cables could plug directly into the PCB without leaving exposed male pins. I also started checking the LCSC part numbers instead of blindly trusting the suggested BOM.
+
+And that's where things started getting messy.
+
+The **74HCT245** part I had selected had very low stock, so I needed an alternative. Then I checked the **LM2596S-5.0** entry and realised I'd selected the bare regulator IC, not a complete buck converter module. That meant adding an inductor, diode, capacitors, and the rest of the surrounding circuitry. I didn't want to wire all those passive components.
+
+I looked for an integrated converter instead. The **Mornsun K7805-2000R3** came up, but its maximum input voltage was only **36V**. PATRA's main supply is 48V. So that wasn't going to work directly either. I hadn't caught that before selecting it.
+
+Anyway, I moved on to the schematic.
+
+I mapped the Teensy's GPIO pins to the three axes:
+
+- GPIO 0 and 1: X-axis pulse and direction
+- GPIO 3 and 4: Y-axis pulse and direction
+- GPIO 6 and 7: Z-axis pulse and direction
+- GPIO 2: Shared enable signal
+
+The 74HCT245 would sit between the Teensy and the driver connectors. I configured its direction pin for A-to-B operation and tied its output-enable pin low, keeping the outputs permanently enabled.
+
+I started connecting the signals, but made a fairly annoying mistake with the net labels. I'd used generic `PUL` and `DIR` labels across all three axes. EasyEDA treats identical net labels as the same electrical net, so I was effectively connecting the axes. Not what I wanted.
+
+I corrected the labels to give every axis its own signals:
+
+`PUL_X`, `DIR_X`, `PUL_Y`, `DIR_Y`, `PUL_Z`, `DIR_Z` and `ENA`.
+
+Here's the Teensy-to-transceiver mapping:
+
+| Teensy GPIO | Signal | 74HCT245 input |
+|---|---|---|
+| 0 | PUL_X | A1, Pin 2 |
+| 1 | DIR_X | A2, Pin 3 |
+| 3 | PUL_Y | A3, Pin 4 |
+| 4 | DIR_Y | A4, Pin 5 |
+| 6 | PUL_Z | A5, Pin 6 |
+| 7 | DIR_Z | A6, Pin 7 |
+| 2 | ENA | A7, Pin 8 |
+
+For the 74HCT245 configuration, I connected VCC (Pin 20) to +5V and GND (Pin 10) to the logic ground. I tied **DIR (Pin 1)** high for A-to-B operation and **G#/OE (Pin 19)** low to keep the outputs enabled.
+
+The B-side outputs were labelled separately:
+
+- B1 (Pin 18): `PUL_X_5V`
+- B2 (Pin 17): `DIR_X_5V`
+- B3 (Pin 16): `PUL_Y_5V`
+- B4 (Pin 15): `DIR_Y_5V`
+- B5 (Pin 14): `PUL_Z_5V`
+- B6 (Pin 13): `DIR_Z_5V`
+- B7 (Pin 12): `ENA_5V`
+
+<img width="997" height="557" alt="image" src="https://github.com/user-attachments/assets/3b1abdb8-9d8e-4d85-a0fa-3cf92330c74c" />
+
+There was another issue in the signal mapping that I only caught during the later review. A6, which should have been `DIR_Z`, was also labelled `PUL_Z` in the schematic. That meant the Z-axis pulse and direction signals were tied together. A pretty bad one to miss. It needed correcting before the PCB could be considered ready.
+
+Then I moved on to the power supply and driver interfaces.
+
+For the first version, I connected the 48V input terminal block to the main power rails, added the power filtering section, and wired the K7805 module into the schematic. Its input was connected to the incoming 48V supply, with its output providing the +5V logic rail.
+
+Looking back, that converter selection was wrong for a 48V input. I hadn't resolved that yet.
+
+The three 6-pin driver headers were wired with the same pinout:
+
+| Header pin | Connection |
+|---|---|
+| 1 | PUL+ |
+| 2 | PUL- |
+| 3 | DIR+ |
+| 4 | DIR- |
+| 5 | ENA+ |
+| 6 | ENA- |
+
+P1 received the X-axis signals, P2 the Y-axis signals, and P3 the Z-axis signals. All three headers shared the enable signal. The negative pulse, direction, and enable terminals were connected to the common logic ground.
+
+I was still a little confused about the shared enable arrangement. The idea was to use one Teensy output to enable all three drivers, rather than dedicate a separate GPIO to each one. The 74HCT245's B7 output would branch to all three ENA+ terminals, with their ENA- terminals returning to ground. I asked about the arrangement, but didn't fully get my head around it that day.
+
+This is how the schematic looks so far:
+
+<img width="967" height="534" alt="image" src="https://github.com/user-attachments/assets/f9967f40-29ba-4dc7-af52-bbedb8e29d96" />
+
+After this, I added ceramic and electrolytic capacitors:
+
+- C1, C2: 100 nF ceramic capacitors between +48V and -48V, and +5V and GND, respectively, of PRWM1.
+- U4, U5: 10 uF electrolytic capacitors between VIN and GND of U1, and VCC and G# of U2.
+
+After doing that and rearranging the components, this is how it looks:
+
+<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/9501435b-1b96-40d3-b0ff-94884a00e6c3" />
+
+Then I placed all the No Connect flags and ran DRC. There was one error: 
+
+**The pin of the component TEENSY 4.1- ALL does not correspond to the pad (Pin has no corresponding pad : 68. 69. 70. 71. 72. 73): $112**
+
+At some point, I also had to change the Teensy board symbol because there was an error in the BOM that I couldn't understand. I replaced it and rewired the connections. The exact cause of the mismatch still needed investigation, but the original symbol wasn't working with the board representation I was using.
+
+Later, I understood the reason: This error occurs because the schematic symbol "TEENSY 4.1- ALL" contains internal or extended software-defined pins (numbered 68 to 73) that don't map to physical landing pads on the standard Teensy 4.1 PCB footprint.
+
+After rewiring, this was the updated schematic:
+
+<img width="927" height="576" alt="image" src="https://github.com/user-attachments/assets/aa34f3d3-71ad-4d00-8ebe-abed34132645" />
+
+By the end of the session, I had the first proper version of the carrier-board schematic. The signal mapping and driver headers were in place, and the power section had been started. But there were already a few things to revisit: the converter's input-voltage limit, the Z-axis signal labels, and whether the 5V level shifter was even necessary.
+
+Not exactly a smooth start. Especially considering I had to learn my way around a completely new EDA tool at the same time.
+
+Here's the timelapse of today's session: [PATRA-LPS-79-D99](https://lapse.hackclub.com/timelapse/xYiHAdmYg09e)
+
+**Total time spent: 5h 30m**
+
+---
+
+# Day 100 — 31.10.2026: Refining the Electronics Schematic
+
+Back to the carrier PCB today. Yesterday's schematic was a decent starting point, but the power supply section needed a rethink. The K7805-2000R3 I had selected couldn't take the 48V input. I needed a converter that could.
+
+I moved to the **MORNSUN URB4805S-3WR3**, an isolated DC-DC converter that takes the 48V rail and provides 5V for the logic circuitry. Its input range is 18–75V, with a regulated 5V output rated for up to 600mA. That made it suitable for the 48V supply I was using.
+
+I checked the [converter datasheet](https://www.mornsun-power.com/public/uploads/pdf/URB4805S-3WR3.pdf) and wired its pins into the schematic. Pin 1 goes to -48V, pin 2 to +48V, and pin 3 (CTRL) is left floating, which enables the converter. On the output side, pin 6 provides +5V and pin 7 provides the isolated logic ground. Pins 5 and 8 are left unconnected.
+
+This also meant I had to be careful about grounding. The converter isolates its input and output, so the primary-side return and secondary logic ground must remain separate. The Teensy and 74HCT245 belong on the isolated 5V side. The driver optocoupler inputs use this logic-side ground as their return. I must not accidentally bridge it to the 48V supply's negative rail.
+
+[IMAGE PLACEHOLDER: Updated power supply section with URB4805S-3WR3]
+
+There was also a small BOM issue. The LCSC listing I found, **C53159146**, identified the part under the EVISUN name, while my schematic called it MORNSUN. The model number appeared to match, but I still needed to reconcile the manufacturer information before ordering. I didn't want the schematic and BOM referring to potentially different parts.
+
+I then continued refining the 74HCT245 section. The six pulse and direction signals remained separate, while the seventh channel carried the shared enable signal. The mapping stayed the same:
+
+| Teensy GPIO | Signal | 74HCT245 input |
+| ----------- | ------ | -------------- |
+| GPIO 0      | PUL_X  | A1             |
+| GPIO 1      | DIR_X  | A2             |
+| GPIO 3      | PUL_Y  | A3             |
+| GPIO 4      | DIR_Y  | A4             |
+| GPIO 6      | PUL_Z  | A5             |
+| GPIO 7      | DIR_Z  | A6             |
+| GPIO 2      | ENA    | A7             |
+
+I added six **10kΩ pull-down resistors** on the Teensy side, one for each pulse and direction input. These keep the inputs from floating when the corresponding GPIO pins aren't actively driving them. I had to be careful about where these resistors went. They belong between the 3.3V-side signal inputs and logic ground, not on the level-shifted 5V outputs.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/79a78e11-06d6-4917-9b25-a611f2ec8f4c" />
+
+The remaining transceiver connections were also accounted for: pin 20 to +5V, pin 10 to logic GND, pin 1 (DIR) to +5V, and pin 19 (/OE) to GND. I grounded the unused A8 input and left B8 unconnected.
+
+One question remained, though. The exact [Rtelligent T60 V2.0 user manual](https://www.rbautomate.com/documents/rtelligent-t60-user-manual.pdf) specifies that the input signals can operate from 3.3V upwards. That means the 74HCT245 might not actually be necessary. I retained it for now rather than removing it before verifying the electrical requirements and current draw of the driver inputs.
+
+[IMAGE PLACEHOLDER: 74HCT245 with six pull-down resistors and signal connections]
+
+I also added the decoupling capacitors around the logic circuitry. The **74HCT245** and Teensy received local 100nF and 10µF capacitors. The converter received its input and output capacitors too, following the datasheet recommendations. I retained the 100µF output capacitor, which was within the converter's stated capacitive-load limit.
+
+The main 48V input section got some attention as well. I added a fuse in series with the incoming positive supply line. I didn't want the board to have an unprotected power input. The exact fuse rating still needs to be selected based on the circuit's expected current, wiring, and DC voltage requirements.
+
+I also added four test points:
+
+- +48V
+- -48V
+- Isolated +5V
+- Logic GND
+
+These should make it much easier to probe the power rails while testing the board.
+
+This is the **31TC15A250V** fuse added to the **XYEEK500-5.08-2P**:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2df4abeb-2322-4650-b0b5-1e2d3464631a" />
+
+These are the RH-5001 test points added to +48V, -48V, +5V and GND:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c1403e95-4a80-47c0-a8ec-a2604a62a9a5" />
+
+With those changes, the schematic was getting much closer to a complete carrier board. The three driver headers, Teensy, transceiver, converter and supporting components were now represented together. Each driver connector still carries PUL+, PUL-, DIR+, DIR-, ENA+ and ENA-. The pulse and direction signals are independent for each axis, while ENA is shared across all three drivers.
+
+I also had to keep track of the actual components that would make up the board. The current component list is below. This is a working BOM, not yet the final procurement list.
+
+**Current component list**
+
+| No. | Quantity | Comment          | Designator        | Footprint                          | Value  | Manufacturer Part      | Manufacturer  | Supplier Part | Supplier | LCSC Price | Category                                                |
+|-----|----------|------------------|-------------------|------------------------------------|--------|------------------------|---------------|---------------|----------|------------|---------------------------------------------------------|
+| 1   |          | Teensy 4.1       |                   | TEENSY4.1 - KB                     |        | Teensy 4.1             | PJRC          |               |          |            |                                                         |
+| 2   | 4        | 100nF            | C1,C2,C5,C7       | C0805                              | 100nF  | CC0805KRX7R9BB104      | YAGEO(国巨)     | [C49678](https://www.lcsc.com/product-detail/C49678.html?s_z=n_q_C49678&globalKeyword=C49678)        | LCSC     |            | Capacitors:Multilayer Ceramic Capacitors MLCC - SMD/SMT |
+| 3   | 2        | 100uF            | C3,C4             | CAP-TH_BD10.0-P5.00-D1.0-FD        | 100uF  | ERS1KM101G16OT         | AISHI(艾华集团)   | [C106679](https://www.lcsc.com/product-detail/C106679.html?s_z=n_q_C106679&globalKeyword=C106679)       | LCSC     |            | Capacitors:Aluminum Electrolytic Capacitors - Leaded    |
+| 4   | 2        | 10uF             | C6,C8             | CAP-SMD_BD6.3-L6.6-W6.6-FD         | 10uF   | RVT1H100M0605 10UF 50V | DMBJ(振宝佳)     | [C970657](https://www.lcsc.com/product-detail/C970657.html?s_z=n_q_C970657&globalKeyword=C970657)       | LCSC     |            | Capacitors:Aluminum Electrolytic Capacitors - SMD       |
+| 5   | 1        | 31TC15A250V      | F1                | FUSE-TH_BD4.0-L11.0-P15.00-D0.6    |        | 31TC15A250V            | Hongda(泓达)    | [C529662](https://www.lcsc.com/product-detail/C529662.html?s_z=n_q_C529662&globalKeyword=C529662)       | LCSC     |            | Circuit Protection:Disposable fuses                     |
+| 6   | 3        | 2.54-1*6P母       | P1,P2,P3          | HDR-TH_6P-P2.54-V-F                |        | 2.54-1*6P母             | BOOMELE(博穆精密) | [C40877](https://www.lcsc.com/product-detail/C40877.html?s_z=n_q_C40877&globalKeyword=C40877)        | LCSC     |            | Connectors:Female Headers                               |
+| 7   | 1        | 250kHz           | PWRM1             | PWRM-TH_URBXXXXS-3WR3              | 250kHz | URB4805S-3WR3          | EVISUN(易成)    | [C53159146](https://www.lcsc.com/product-detail/C53159146.html?s_z=n_q_C53159146&globalKeyword=C53159146)     | LCSC     |            | Power Modules:Isolated Power Modules                    |
+| 8   | 6        | 10kΩ             | R1,R2,R3,R4,R5,R6 | R0805                              | 10kΩ   | 0805W8F1002T5E         | UNI-ROYAL(厚声) | [C17414](https://www.lcsc.com/product-detail/C17414.html?s_z=n_q_C17414&globalKeyword=C17414)        | LCSC     |            | Resistors:Chip Resistor - Surface Mount                 |
+| 9   | 4        | RH-5001          | TP1,TP2,TP3,TP4   | TEST-TH_BD2.54-P1.4_BLACK          |        | RH-5001                | 荣和            | [C5199801](https://www.lcsc.com/product-detail/C5199801.html?s_z=n_q_C5199801&globalKeyword=C5199801)      | LCSC     |            | Connectors:Test Points / Test Rings                     |
+| 10  | 1        | 74HCT245D        | U2                | SOIC-20_L12.8-W7.5-P1.27-LS10.3-BL |        | 74HCT245D              | MDD(辰达半导体)    | [C55073441](https://www.lcsc.com/product-detail/C55073441.html?s_z=n_q_C55073441&globalKeyword=C55073441)     | LCSC     |            | Logic:Buffers, Drivers, Receivers, Transceivers         |
+| 11  | 1        | XYEEK500-5.08-2P | U3                | CONN-TH_XYEEK500-5.08-2P           |        | XYEEK500-5.08-2P       | XINLAIYA(新莱亚) | [C557689](https://www.lcsc.com/product-detail/C557689.html?s_z=n_q_C557689&globalKeyword=C557689)       | LCSC     |            | Connectors:Screw Terminal Blocks                        |
+
+I still need to export the actual EasyEDA BOM and check the LCSC part numbers, package sizes, quantities, and manufacturer details. In particular, the converter listing needs reconciliation, and the fuse, test points, and some passive components need proper procurement entries.
+
+<img width="1365" height="305" alt="image" src="https://github.com/user-attachments/assets/3b70a7fd-85f6-428f-a297-162ae3c27260" />
+
+I ran through the schematic for electrical errors as well. The DRC came back clean, which was encouraging. But a clean DRC doesn't mean the circuit is automatically correct. It checks electrical-rule consistency, not whether every component choice, voltage level, and connection will work in the real circuit.
+
+There are still a few things to verify before ordering. The 74HCT245's output-current capability needs to be checked against the T60's optocoupler input requirements. The fuse's current and DC voltage ratings need to be confirmed. I also need to review the Teensy's USB power arrangement when it is powered externally, and decide whether to bring the drivers' ALM signals back to the controller. They aren't implemented in the current schematic.
+
+The schematic is now in a much better state, though. I believe that the next step is to finish checking the components and connections, then move into PCB layout. The isolation barrier between the 48V input side and the logic side needs to remain intact throughout.
+
+Here's the timelapse of today's session: [PATRA-LPS-80-D100]()
+
+**Total time spent: 5h 30m**
+
+---
+
