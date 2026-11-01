@@ -6306,15 +6306,88 @@ In today's short session, which I somehow managed to bring into existence in the
 
 And with this, almost everything possible in the Kinematic Base Module that could be modelled before physically looking at the aluminum extrusions was done. If there was anything left, it would either be very minor or a fundamental change in the design that can only be discovered when I have started with the assembly.
 
+But for one final check, I did begin computing a full interference check on the entire design at once. But it never ended.
+
 Here's the timelapse of today's session: [PATRA-LPS-77-D97](https://lapse.hackclub.com/timelapse/0wXElB-4YuQh)
 
 **Total time spent: 1h 45m**
 
 ---
 
-# Day 98 — 29.10.2026: 
+# Day 98 — 29.10.2026: Checking Interferences & Adding X and Y Leg Mount Screws
+
+The interference results from the compute started at the end of day #97 arrived sometime on 28th October, 2026. Out of 274 interferences, 4 were genuine problems with the position. The interferences were:
+
+1. 147: WSX-SUS-M12X18-5 Washer:9 | Idler Shaft X:1
+2. 260: Pulley Shaft Z:1 | Rtelligent 57AM30ED:1
+3. 270: Idler Case Left Z:1 - Body1 | Coupler Z:3
+4. 274: Idler Case Right Z:1 - Body1 | Coupler Z:3
+
+The first one was a simply misplaced washer that never rose 1.5 mm up. I tried a lot to move the body component, but it didn't work. Even the Autodesk Assistant tried. The second one was rotated pulley shaft, nothing much. The last two were microscopic interferences due to dimensional errors.
+
+The first one:
+
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/6771907b-f1d1-40d7-a0a1-05d87a14a9b1" />
+
+The second one:
+
+<img width="1365" height="732" alt="image" src="https://github.com/user-attachments/assets/609f01cc-7325-474d-80e4-5836b379bd16" />
+
+I honestly wasted a lot of time trying to find those problems and trying to fix them, as I wanted to eliminate all failure points.
+
+After this, I shifted to making real progress in the TriTeron Robot Module. The Z Leg Mount was complete, but the X and Y mounts were still floating with no way to connect them to the X and Y Upper Clamp of the Kinematic Base Module. So, I did this:
+
+- Created a new sketch under the TriTeron
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/705d834d-960b-4417-ada5-d174d498ccf2" />
+
+- Projected the Y axis leg mount.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/c43fb2ba-0e32-4ace-87f6-5528f5b96ccd" />
+
+- Created a 33 by 33 mm square around it.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/700b764f-af0a-4e72-9408-3a814d2a86f8" />
+
+- Extruded it out by 6 mm.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/8e02fb8d-3abe-4558-b18d-f7c39a1b3e3d" />
+
+But it didn't work due to Fusion's crazy dimensional errors. Turns out, despite using the Snap feature, the shape I drew wasn't 33 mm, but 33.000049 or something. There was absolutely no reason for this. Shapes drawn in thin air using Snap were themselves the reason for these nanoscopic dimensional errors that always cause macroscopic frustration, as Fusion registers even a 1 nm thick face as a solid. Fusion gives it its own body, or at least a face with undefinable edges.
+
+- Nevertheless, I continued by creating a Centre Rectangle and extruding it 6 mm into the mount.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c95ed7f5-82c3-4398-b893-a48869d94f6c" />
+
+- Then I deleted the nanoscopically thin random edges and bodies registered by Fusion.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/23062161-8597-4c8b-b9fe-0ac1aaffae4b" />
+
+- Next, I extruded out 6 mm of the sketch and joined it with the mount.
+
+	<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/aa4ca3b2-3859-4782-bf6a-0dbc4255fc56" />
+
+- Added 2.5 mm fillets on the edges.
+
+	<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/4b8fb4ba-ea7f-4b24-9887-e8ec45e5b35f" />
+
+- Added four 3.4 mm clearance holes with a 25 mm center-to-center distance.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5e4a4110-7d99-4f83-b2dc-7f3417ccef06" />
+
+- Added 1.3 mm chamfers for the countersunk screws.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7d434635-131e-41f7-96f4-b39187ac3f82" />
+
+- Mirrored the Y clamp to the X and deleted the old one.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/20ba68d0-bc24-4949-a893-2448c76cea54" />
+
+And that was all for today's session. With this, the TRM has been fully modeled.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f7da278b-1aca-4c49-bfa6-3f8badef54e6" />
+
+But it doesn't mean that there might not be any problems.
 
 Here's the timelapse of today's session: [PATRA-LPS-78-D98](https://lapse.hackclub.com/timelapse/9u6eOiT4jvUJ)
 
@@ -6558,3 +6631,94 @@ Here's the timelapse of today's session: [PATRA-LPS-80-D100](https://lapse.hackc
 
 ---
 
+# Day 101 — 01.11.2026: 
+
+The very first thing I did today was to do an interference check on the TRM. Turns out, I still had a lot to work on. There was no clearance in the leg-bearing housing, and the new part of the mount that I created on day #98 was interfering.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a29998a-41f1-4d80-a069-28ea3f6ff46d" />
+
+I couldn't raise the platform of the mount. So, I must do something else. To fix this, here's what I did:
+
+- Using Split Body, I split the X upper belt clamp.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d04d43d0-f6e1-4dc1-96b1-a9e634361257" />
+
+- Then, I created new component from the body and then imported in the TRM design.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fa4f4c3f-7877-43f0-96d6-ae10638af92c" />
+
+- While trying to place the part under the X Leg Mount, I realised that it was misplaced.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3ea5a20-62d5-4377-a412-59a497222981" />
+
+Now, I realised that the problems were much bigger. Out of curiosity, I decided to see the exact position of the centermost point under the Z axs leg mount. 
+
+<img width="288" height="373" alt="image" src="https://github.com/user-attachments/assets/a0b731a6-37e1-467c-b29f-18bb98659ef4" />
+
+The dimensions were:
+
+X Position: **166.00038726 mm**
+Y Position: **0.01026147 mm**
+Z Position: **68.49999977 mm**
+
+The dimensions were supposed to be:
+
+X Position: **165.60 mm**
+Y Position: **0.0 mm**
+Z Position: **68.50 mm**
+
+This was really concerning, as it could be the underlying reason behind all the dimensional errors in the TRM. I wish I had worked more on the TRM. There were also similar problems with the X leg mount. I fixed them by moving them.
+
+During this, I realised that the Clamp plate of the X and Y axis tensioning system was 3 mm in height, whereas the clamp plate of the Z axis tensioning system was 2.5 mm in height. I adjusted it by moving it 0.5 mm down and extruding and cutting the lower part.
+
+Then I extruded the lower face of the X and Y leg clamp to delete the part I had created on day #98.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1a90d881-7e90-4e60-a002-8fa0fa6879b8" />
+
+Fusion's moving and joint mechanisms are fundamentally broken. Moving one object on one axis also moves it randomly on other axes as well. Align tool doesn't work most of the time. Join tool doesn't connect the bodies, but positions the body some micrometers randomly. All the problems related to the leg angles and positions must have arisen from this.
+
+I created a new X leg mount and changed to Direct Modelling, deleting the Parametric History.
+
+Then I did this:
+
+- Split the Z upper clamp.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e61e4530-e3e1-41e8-8ba5-30820133330a" />
+
+- I moved the part to the TRM.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1dc63531-fe6e-421e-8f1e-173f41cf13d0" />
+
+- After positioning the bodies, I combined them.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/43479963-b6cd-4290-85f6-f14721f6f92f" />
+
+- Extruded out the remaining sections using a sketch.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6a598cbd-cd2a-4b9a-b6e3-8da2911f282a" />
+
+- Split the unnecessary bodies.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d1634abc-0ceb-4149-8e14-7daee4b615cc" />
+
+- Removed the unnecessary bodies.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/44210061-5f4e-4e03-ae43-2fc5b313da07" />
+
+- Combined the bodies that were removed unintentionally.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a2c6a7ba-40d0-43fd-9b70-255fa947fca8" />
+
+- Using Face Offsets, caved in the internal faces of the body by 3 mm to match the design of the clamp plate.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4c2cc06d-759c-4be4-a9e8-a01bbdc7914c" />
+
+I then started rejoining the legs.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4f2af6f7-5370-41e8-aac2-ce4fe8046984" />
+
+Here's the timelapse of today's session: [PATRA-LPS-81-D101]()
+
+**Total time spent: 0h 00m**
+
+---
