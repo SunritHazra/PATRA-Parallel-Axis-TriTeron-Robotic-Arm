@@ -6631,7 +6631,7 @@ Here's the timelapse of today's session: [PATRA-LPS-80-D100](https://lapse.hackc
 
 ---
 
-# Day 101 — 01.11.2026: 
+# Day 101 — 01.11.2026: Reviewing the TriTeron Robot Module
 
 The very first thing I did today was to do an interference check on the TRM. Turns out, I still had a lot to work on. There was no clearance in the leg-bearing housing, and the new part of the mount that I created on day #98 was interfering.
 
@@ -6717,7 +6717,39 @@ I then started rejoining the legs.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4f2af6f7-5370-41e8-aac2-ce4fe8046984" />
 
-Here's the timelapse of today's session: [PATRA-LPS-81-D101]()
+Halfway through the revolute joints, the session ended.
+
+Here's the timelapse of today's session: [PATRA-LPS-81-D101](https://lapse.hackclub.com/timelapse/uu1TbUXsFDH7)
+
+**Total time spent: 5h 10m**
+
+---
+
+# Day 102 — 02.11.2026: 
+
+I picked up exactly where I left off yesterday.
+
+The joints were all applied.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/621e0a14-aaeb-4db4-8633-8605755c91ca" />
+
+Now it has 12 prismatic joints by means of revolute joints. I also added slider joints using a grounded 0.1 mm by 0.1 mm by 0.1 mm cube in the design workspace.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/307936ef-13ee-4202-8936-1c86b6570948" />
+
+Since the movements had no limit, the movements were a little crazy.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1fb7afc-edc1-472e-bba0-6aeeb9f1892a" />
+
+Saved KBM v9 with very minor changes.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da8e6cf9-98e0-4296-aa30-e27d2f962c62" />
+
+Saved TRM v7 with very minor changes.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1d695854-b3f0-4138-9b64-1e2f506f8f4e" />
+
+Here's the timelapse of today's session: [PATRA-LPS-82-D102]()
 
 **Total time spent: 0h 00m**
 
