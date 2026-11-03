@@ -6840,3 +6840,13 @@ Here's the timelapse of today's session: [PATRA-LPS-82-D102](https://lapse.hackc
 **Total time spent: 3h 35m**
 
 ---
+
+started by arranging the components in the pcb in this way:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/387dec75-6563-4080-b0a6-d34d771053d5" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/913a9921-fc89-4f38-a8dd-f17bb4e16d7c" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b13831b-8611-41be-86e8-a5a08bc81432" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ab075d-6487-4b0f-a1f9-dda2ba4f77d3" />
