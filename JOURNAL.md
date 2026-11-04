@@ -1,4 +1,4 @@
----
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/06109a3b-ba6b-486a-94cf-e3d8308224d9" />---
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
@@ -6859,12 +6859,58 @@ Here's the timelapse of today's session: [PATRA-LPS-83-D103](https://lapse.hackc
 
 ---
 
-# Day 104 — 04.11.2026: 
+# Day 104 — 04.11.2026: Routing the PCB
 
+https://jlcpcb.com/blog/ai-tools-for-pcb-design
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/58251ef9-2fac-4983-b0bb-b35edf45e821" /> first iteration
 
-Here's the timelapse of today's session: [PATRA-LPS-84-D104]()
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b93bb88e-5ad8-454f-98fb-9e9097cc5cca" /> 
 
-**Total time spent: 0h 00m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1511046c-0756-4960-b664-850ec97e7760" /> front with prohibited region
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9882174f-a02c-46bf-bfd3-286e4254126e" /> back with prohibited region
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5d25de7a-56b1-43b9-8639-9828e63318c6" /> smaller keep out zone (back)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2aa8bc9d-a35c-440c-baa1-31ea347f887b" /> smaller keep out zone (front)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9cfe2ca7-0852-4e6e-b07f-5abc27a4e0c7" /> front after rebuilding zones and fixing tp1 and 2 pos
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/97a748ba-1532-407a-aefb-ddccb626b24f" /> back after rebuilding zones and fixing tp1 and 2 pos
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/110d275c-c71b-4ef9-bf6e-05a91b70efcc" /> after rerouting with correct thickness and deleting unnecessary gnd (front)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/831e9981-86b1-4104-9016-6e77887c499b" /> after rerouting with correct thickness and deleting unnecessary gnd (back)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e86f33e7-4d89-4baf-a7bc-4baeabe2099f" /> after rerouting the 48 pins to make them shorter (front)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2390177-56ba-47e2-8a86-3594cfeb8d4d" /> after rerouting the 48 pins to make them shorter (back)
+
+downloaded 3d model from https://grabcad.com/library/teensy-4-1-development-board-1
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c370b19-3de6-42c3-aead-3263ae3a2554" /> pcb 3d
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc964a9e-238f-40b3-b351-0f1f2bb84085" /> pcb 2d
+
+i then fixed the naming on silkscreen for components
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5218603e-a5c5-41ed-a2b7-6919a422bbe5" /> added silkscreen text and rearranged some components
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/36744b62-9704-4e17-b89e-9fe4e66083ac" /> back
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bafd490a-e9ce-4b2d-abd7-bd4cc9858a94" /> added details back
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9a003918-04e9-48f8-8773-15d7c51ae1b5" /> added details front
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90b9b782-6d09-4398-a01d-41cbb1c9c39a" /> saved to cart
+
+checked drc 30+ times throughout.
+
+next i have to think abt the connectors, case for the electronic components, missing things in kbm (flagged by vector) and improvements in trm mobility (suggested by vector)
+
+Here's the timelapse of today's session: [PATRA-LPS-84-D104](https://lapse.hackclub.com/timelapse/VQIapankJ2nn)
+
+**Total time spent: 6h 25m**
 
 ---
