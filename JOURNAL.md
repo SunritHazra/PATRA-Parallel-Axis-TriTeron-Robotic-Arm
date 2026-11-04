@@ -6833,7 +6833,7 @@ Since a new leg mount was being modeled, I added clearance to prevent rubbing th
 
 Next, I added 0.2 mm clearance in the diameter of the bearing hubs of the legs using Vector.
 
-I asked Vector to validate my dseign and propose better ones. Let's see what it does.
+I asked Vector to validate my design and propose better ones. Let's see what it does.
 
 Here's the timelapse of today's session: [PATRA-LPS-82-D102](https://lapse.hackclub.com/timelapse/2GpTUFbC3s_z)
 
@@ -6841,18 +6841,30 @@ Here's the timelapse of today's session: [PATRA-LPS-82-D102](https://lapse.hackc
 
 ---
 
-started by arranging the components in the pcb in this way:
+# Day 103 — 03.11.2026: Placing Components in PCB
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/387dec75-6563-4080-b0a6-d34d771053d5" />
+Arranging the components on the PCB in these ways:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/913a9921-fc89-4f38-a8dd-f17bb4e16d7c" />
+1. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/387dec75-6563-4080-b0a6-d34d771053d5" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b13831b-8611-41be-86e8-a5a08bc81432" />
+2. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/913a9921-fc89-4f38-a8dd-f17bb4e16d7c" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ab075d-6487-4b0f-a1f9-dda2ba4f77d3" />
+3. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b13831b-8611-41be-86e8-a5a08bc81432" />
+
+4. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ab075d-6487-4b0f-a1f9-dda2ba4f77d3" />
 
 Here's the timelapse of today's session: [PATRA-LPS-83-D103](https://lapse.hackclub.com/timelapse/ngqNkFv2ohi-)
 
 **Total time spent: 2h 35m**
+
+---
+
+# Day 104 — 04.11.2026: 
+
+
+
+Here's the timelapse of today's session: [PATRA-LPS-84-D104]()
+
+**Total time spent: 0h 00m**
 
 ---
