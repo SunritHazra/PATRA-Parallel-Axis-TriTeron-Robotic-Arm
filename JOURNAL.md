@@ -6773,11 +6773,11 @@ Today was the day to put it to the test, so I told it to summarize TRM v7 model 
 
 [This](https://heyvector.co/share/3f6e24fe55da2a9958d2f134c3ad7ea6) is the chat. It said:
 
-"Every leg's six bearings are exactly parallel and the paired bearings are coaxial, which is the hard part of a tripteron.
+"Every leg's six bearings are exactly parallel, and the paired bearings are coaxial, which is the hard part of a tripteron.
 Kinematics are clean: the head moves linearly with the carriages and the Jacobian is well conditioned (cond ≈ 1.42). Now interference.
 Yes, it's good enough for a PLA prototype once you fix the three items below. The kinematics are correct, and the printed parts never collide anywhere in the workspace."
 
-**The concept is mathematically sound.** The head moves exactly linearly with the three carriages, it can't rotate, and there are no singularities inside the reach limits. Your fixes check out: every leg now has 1.000 mm clearance to its mount and to the Tool Head, and the X/Y mounts have working sliders. **The 22.2 mm pockets are not applied yet.** Your Move/Copy command and then an "Info" dialog in Fusion blocked my script both times, and I didn't dismiss your dialog.
+**The concept is mathematically sound.** The head moves exactly linearly with the three carriages; it can't rotate, and there are no singularities inside the reach limits. Your fixes check out: every leg now has 1.000 mm clearance to its mount and to the Tool Head, and the X/Y mounts have working sliders. **The 22.2 mm pockets are not applied yet.** Your Move/Copy command and then an "Info" dialog in Fusion blocked my script both times, and I didn't dismiss your dialog.
 
 The math:
 
@@ -6804,7 +6804,7 @@ So in practice:
 
 **3. Mobility.** The textbook Kutzbach formula gives \(6(13-15-1)+15 = -3\). That number is misleading for this kind of mechanism. I set up the full loop equations from the measured joint axes and computed their rank, which gives:
 - **3 DOF**, and **0 DOF with the motors locked**.
-- **6 redundant constraints**: 3 because three legs all lock rotation, and 3 because Z-B duplicates Z-A.
+- **6 redundant constraints**: 3 because the three legs all lock rotation, and 3 because Z-B duplicates Z-A.
 
 The redundancy is why the parts have to be accurate. You already have the pocket axes parallel to 0.0000°.
 
@@ -6850,3 +6850,9 @@ started by arranging the components in the pcb in this way:
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b13831b-8611-41be-86e8-a5a08bc81432" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ab075d-6487-4b0f-a1f9-dda2ba4f77d3" />
+
+Here's the timelapse of today's session: [PATRA-LPS-83-D103](https://lapse.hackclub.com/timelapse/ngqNkFv2ohi-)
+
+**Total time spent: 2h 35m**
+
+---
