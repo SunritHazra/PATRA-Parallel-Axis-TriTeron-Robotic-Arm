@@ -1,4 +1,4 @@
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2a631b01-5940-44d1-b323-627d44f01328" />---
+---
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
