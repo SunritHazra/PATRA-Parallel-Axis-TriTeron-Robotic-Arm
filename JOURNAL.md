@@ -6915,7 +6915,7 @@ Here's the timelapse of today's session: [PATRA-LPS-84-D104](https://lapse.hackc
 
 ---
 
-# Day 105 — 05.11.2026: 
+# Day 105 — 05.11.2026: Making Electronics Case
 
 Added 
 
@@ -6937,8 +6937,10 @@ Added
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc2a5654-49db-4dad-ac88-b7c526e95636" /> added walls (XY)
 
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7c809051-afc9-49d0-8516-95a87c6dcca2" /> BAREONES STACKUP ARCHITECTURE
+
 Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 
-**Total time spent: 6h 25m**
+**Total time spent: 3h 35m**
 
 ---
