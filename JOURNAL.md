@@ -1,4 +1,4 @@
----
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2a631b01-5940-44d1-b323-627d44f01328" />---
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
@@ -6831,9 +6831,9 @@ Since a new leg mount was being modeled, I added clearance to prevent rubbing th
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/445f31f9-e55e-45c0-9e5a-543e38523448" />
 
-Next, I added 0.2 mm clearance in the diameter of the bearing hubs of the legs using Vector.
+Next, I added 0.2 mm clearance to the bearing hub diameters on the legs using Vector.
 
-I asked Vector to validate my design and propose better ones. Let's see what it does.
+I asked Vector to validate my design and propose better ones by redesigning the tripteron with the same mount size by altering the tool head and the leg lengths.
 
 Here's the timelapse of today's session: [PATRA-LPS-82-D102](https://lapse.hackclub.com/timelapse/2GpTUFbC3s_z)
 
@@ -6910,6 +6910,34 @@ checked drc 30+ times throughout.
 next i have to think abt the connectors, case for the electronic components, missing things in kbm (flagged by vector) and improvements in trm mobility (suggested by vector)
 
 Here's the timelapse of today's session: [PATRA-LPS-84-D104](https://lapse.hackclub.com/timelapse/VQIapankJ2nn)
+
+**Total time spent: 6h 25m**
+
+---
+
+# Day 105 — 05.11.2026: 
+
+Added 
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da071592-62fb-4941-941b-17039fdcd58b" /> pcba
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8999b34c-8408-4aac-aa2b-00d8fef49722" /> driver
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/81c6a3ed-80d3-490e-9487-09c5184498bc" /> psu
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/62037e5a-3aa5-459e-b769-7d1baee871e5" /> drivers stackup
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f90a441-b857-4c18-a355-95b5f90c73af" /> arrangement 1
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fc27c85-cdb7-4fa0-bf15-51752c23e880" /> added walls (XY) before
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/439702c7-52c8-4f4e-9339-b1f66bbf178d" /> added walls (XY) after
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/95f54ebe-f4c3-425b-a947-be04f164453d" /> added walls (XZ)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc2a5654-49db-4dad-ac88-b7c526e95636" /> added walls (XY)
+
+Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 
 **Total time spent: 6h 25m**
 
