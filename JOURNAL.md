@@ -6944,3 +6944,13 @@ Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 **Total time spent: 3h 35m**
 
 ---
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/64938b35-d9bd-430f-8186-a02d7fac9047" /> arrangement 2
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05a8d8a8-7cf3-4857-90a6-becabbcc45db" /> arrangement 3
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/006a06f7-920b-4133-8b23-5a9b9d8f61b8" /> arrangement 4
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/73355e1b-d8fe-4a6a-8768-cf83d2c06c21" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c525958f-f712-492e-87e0-8e8bd19daf2e" />
