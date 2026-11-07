@@ -6945,6 +6945,8 @@ Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 
 ---
 
+# Day 106 — 06.11.2026: 
+
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/64938b35-d9bd-430f-8186-a02d7fac9047" /> arrangement 2
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05a8d8a8-7cf3-4857-90a6-becabbcc45db" /> arrangement 3
@@ -6954,3 +6956,29 @@ Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/73355e1b-d8fe-4a6a-8768-cf83d2c06c21" />
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c525958f-f712-492e-87e0-8e8bd19daf2e" />
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/885c7cb4-d3f2-4db5-9735-1a701246527e" /> added screw hubs for pcb
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2ada4e7d-9ca0-419b-9330-813c9fe48604" /> added screw hubs for drivers
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/54e36ce3-d9a4-438b-8406-4fbd11d3de63" /> spaced out the drivers
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/789212a2-98ac-4d21-889c-20b45f05b4e9" /> added 0.5 mm lean-in chamfers
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6d1da890-980b-464c-ae41-20b9349f008b" />
+
+Here's the timelapse of today's session: [PATRA-LPS-86-D106]()
+
+**Total time spent: 2h 45m**
+
+---
+
+# Day 107 — 07.11.2026:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4c3fd072-7ca6-428e-a629-f39fb45b721e" /> mirrored the system to ensure
+
+Here's the timelapse of today's session: [PATRA-LPS-87-D107]()
+
+**Total time spent: 0h 00m**
+
+---
