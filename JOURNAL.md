@@ -7,11 +7,11 @@ Started on: 10-04-2026
 Updated on: 31-10-2026
 Phase 1 Kinematic Base Module Progress: "98%"
 Phase 1 TriTeron Robot Module Progress: "95%"
-Phase 1 Electronic Components Progress: "90%"
-Phase 1 PATRA Overall Design Progress: "95%"
+Phase 1 Motion Control Module Progress: "95%"
+Phase 1 PATRA Overall Design Progress: "96%"
 PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA"
-Helped by: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
+Credits: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
 ---
 
 # Day 0: Flashback
@@ -6945,7 +6945,7 @@ Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 
 ---
 
-# Day 106 — 06.11.2026: 
+# Day 106 — 06.11.2026: Establishing the Motion Control Module — Part 1
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/64938b35-d9bd-430f-8186-a02d7fac9047" /> arrangement 2
 
@@ -6967,18 +6967,36 @@ Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6d1da890-980b-464c-ae41-20b9349f008b" />
 
-Here's the timelapse of today's session: [PATRA-LPS-86-D106]()
+Here's the timelapse of today's session: [PATRA-LPS-86-D106](https://lapse.hackclub.com/timelapse/s5Aozt3D0w4H)
 
 **Total time spent: 2h 45m**
 
 ---
 
-# Day 107 — 07.11.2026:
+# Day 107 — 07.11.2026: Establishing the Motion Control Module — Part 2
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4c3fd072-7ca6-428e-a629-f39fb45b721e" /> mirrored the system to ensure
 
-Here's the timelapse of today's session: [PATRA-LPS-87-D107]()
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2b55d747-1b20-415a-9809-2bbfcf04e827" />
 
-**Total time spent: 0h 00m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa8a20cb-5657-4272-990f-065d441c3247" /> added chamfers
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fbefacc-46d9-4c3b-b720-c86db9a475b7" /> added fillets
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bb4f235c-5133-4071-944d-b72bf2765cec" /> named it as motion control module (mcm)
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5b5795a3-8f08-49ea-93e3-ac9787e29ac8" /> added fillets
+
+fasteners
+
+https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts
+
+https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
+
+https://onlyscrews.in/products/m4-x-10mm-brass-threaded-inserts
+
+Here's the timelapse of today's session: [PATRA-LPS-87-D107](https://lapse.hackclub.com/timelapse/RRZ-AD_VYn5_)
+
+**Total time spent: 2h 10m**
 
 ---
