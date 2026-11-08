@@ -7001,7 +7001,7 @@ Here's the timelapse of today's session: [PATRA-LPS-87-D107](https://lapse.hackc
 
 ---
 
-# Day 108 — 08.11.2026: Updating BOM by 1:45 i have 2:00
+# Day 108 — 08.11.2026: Updating BOM
 
 was editing the bom. noticed inserts to be added. saw insert length changed in design.
 
@@ -7055,8 +7055,32 @@ sliced
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3106b667-d5f1-4d87-b09c-ed0671996026" /> plate 2
 
-Here's the timelapse of today's session: [PATRA-LPS-88-D108]()
+i mixed lcsc and robu.in components to get as cheap as possible.
 
-**Total time spent: 0h 00m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6dc0f194-21b5-42c6-a245-ffcf8889490b" />
+
+after listing somethings in robu.in
+
+Merchandise Total		$7.21
+Shipping Fee			$6.61 singapore post
+Handling Fee			$3
+Merchandise Discount	-$0.99
+Total					$15.83
+
+cost in robu is $0.62 excl teensy. $38 with teensy
+
+for the wires, i need to buy:
+
+3 × C2-030 motor power cables
+3 × B1-030 encoder cables
+3 × six-conductor driver signal cables
+48V power distribution wiring
+48V PCB supply wiring
+1 × USB cable
+AC mains and protective-earth wiring
+
+Here's the timelapse of today's session: [PATRA-LPS-88-D108](https://lapse.hackclub.com/timelapse/4JuZTETsDzOF)
+
+**Total time spent: 4h 20m**
 
 ---
