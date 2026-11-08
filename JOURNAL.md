@@ -6993,10 +6993,70 @@ https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts
 
 https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
 
-https://onlyscrews.in/products/m4-x-10mm-brass-threaded-inserts
+https://onlyscrews.in/products/hex-allen-csk-m4-x-20-screw-pack-of-20
 
 Here's the timelapse of today's session: [PATRA-LPS-87-D107](https://lapse.hackclub.com/timelapse/RRZ-AD_VYn5_)
 
 **Total time spent: 2h 10m**
+
+---
+
+# Day 108 — 08.11.2026: Updating BOM by 1:45 i have 2:00
+
+was editing the bom. noticed inserts to be added. saw insert length changed in design.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dddf26db-46f1-4850-8ca1-91b6498dddc6" /> made the m3 ocb inserts hole 12.5 mm to 10 mm
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90a7c98e-77df-43f0-bba1-c69b4cbd1e31" /> cut upper m5 holes to make them 10 mm from 2.5
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/749b431c-bca2-4958-9c2f-84876280b167" /> cut lower m5 holes from 7.5 mm to 10
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9a1dbaf7-bba1-4cc8-badc-a1835b10f0c9" /> added 2.5 mm fillets on psu screw hubs for strength
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/88ff59b0-846a-4352-866d-f163e0fd4ae8" /> made thicker the pcb holes by 1 mm.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/52e4e600-aedb-401d-bd58-e3e0976f8720" /> added hole for side cable
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90f0866a-3f2a-42bb-8580-f79e32596dfa" /> added 2.5 mm chamfer in psu side
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2bf45cf5-747d-4924-86a6-530084717f85" /> added cylindrical extrusions for placement
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4957d5f7-d842-4381-b396-056dfd10fd61" /> 0.2 mm clearance
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2effc26c-e4ee-4e2a-9ba4-3b70da9ca965" /> added for the psu section as well
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cf72617a-2171-40e8-8095-35bc951f226b" /> added cylindrical extrusions
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dce0e942-8e93-4d34-a4b2-82d2477623c3" /> added 0.2 mm clearance
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3b6f375-9ab2-43b7-ac7f-db9f7d54de30" /> MCM ready for fabrication.
+
+i was aware all the time about the wire jungle i will be creating. but i got to try my best to make this look like a prototype.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5d6cd83-238e-4891-8c93-7a4f1e2ff70f" /> jlcpcb cart
+
+exporting pcb/pcba
+
+1. pcb from jlc and components from lcsc
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d7575c8-2100-454f-8a8c-862b60aba1b0" /> $10 - 10 usd coupon
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9d7b20c6-602a-4820-bbaf-14366d42ad06" /> $10.55 + $7.62 singapore post + $3 handling - $1.08 merch discount
+
+2. pcba frm jlcpdc
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6ea6dd25-238a-45dc-8092-9abb318437c1" /> $103.94 with shipping (e-post) (10 USD coupon)
+
+sliced
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05d5f3a0-b3f2-41a5-8897-2932e83f849d" /> all plate info
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/34c15e6b-8ec0-439c-8463-3f9fcf2ec667" /> plate 1
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3106b667-d5f1-4d87-b09c-ed0671996026" /> plate 2
+
+Here's the timelapse of today's session: [PATRA-LPS-88-D108]()
+
+**Total time spent: 0h 00m**
 
 ---
