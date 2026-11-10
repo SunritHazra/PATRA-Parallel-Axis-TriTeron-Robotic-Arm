@@ -7098,3 +7098,27 @@ Here's the timelapse of today's session: [PATRA-LPS-89-D109](https://lapse.hackc
 **Total time spent: 1h 35m**
 
 ---
+
+# Day 109 — 10.12.2026: 
+
+In order to further reduce cost, as always, 
+
+Also got a quote for the pulleys:
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8610e990-3232-4ce8-acf2-de349f6c7311" />
+
+so the price changed from [this] to [this].
+
+i added them to the cart and now i had the ability to calculate correct shipping.e-post was $16.86 while ups was $9.76. i didn't want surprise customs
+
+<img width="800" height="510" alt="image" src="https://github.com/user-attachments/assets/e16f78ca-75da-460c-b933-70f75533995a" />
+
+ merchendise total is $14.42
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1102d50e-def4-4c39-8f8e-15696ef04e4d" />
+
+Here's the timelapse of today's session: [PATRA-LPS-90-D110](https://lapse.hackclub.com/timelapse/Nzu3h6q0Q1XT)
+
+**Total time spent: 0h 00m**
+
+---
