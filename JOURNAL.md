@@ -1,5 +1,4 @@
 ---
-
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
@@ -13,7 +12,6 @@ Phase 1 PATRA Overall Design Progress: "96%"
 PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA"
 Credits: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
-
 ---
 
 # Day 0: Flashback
@@ -7084,5 +7082,19 @@ AC mains and protective-earth wiring
 Here's the timelapse of today's session: [PATRA-LPS-88-D108](https://lapse.hackclub.com/timelapse/4JuZTETsDzOF)
 
 **Total time spent: 4h 20m**
+
+---
+
+# Day 109 — 09.12.2026: 
+
+most wires in robu were out of stock and way too beyond my needs. i will thus source the wires locally.
+
+replaced the old ptfe teflon coated tape (PTFE Coated Teflon Tape		1	 $4.21 	 ₹ 400.00 	 $4.21 	 Amazon 	https://www.amazon.in/Keiko-adhesive-Release-sealing-purpose/dp/B0DCGGGGGJ?th=1) with https://www.desertcart.in/products/346216072-apt-uhmw-ultra-high-molecular-weight-polyethylene-tape-resists-abrasion
+
+replaced EMLC-S1-N-M6 Nut		100	 $0.02 	 ₹ 4.60 	 $1.65 	 JLCMC 	https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6 with DIN 982 M6 Nut		20	 $0.04 	 ₹ 3.80 	 $0.81 	 OnlyScrews 	https://onlyscrews.in/products/m6-nyloc-nuts-ss304
+
+Here's the timelapse of today's session: [PATRA-LPS-89-D109](https://lapse.hackclub.com/timelapse/Nzu3h6q0Q1XT)
+
+**Total time spent: 1h 35m**
 
 ---
