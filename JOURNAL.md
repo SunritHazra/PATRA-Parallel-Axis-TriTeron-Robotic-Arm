@@ -1,4 +1,5 @@
 ---
+
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
@@ -12,6 +13,7 @@ Phase 1 PATRA Overall Design Progress: "96%"
 PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA"
 Credits: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
+
 ---
 
 # Day 0: Flashback
