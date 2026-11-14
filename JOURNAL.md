@@ -6879,15 +6879,65 @@ Here's the timelapse of today's session: [PATRA-LPS-82-D102](https://lapse.hackc
 
 # Day 103 — 03.11.2026: Placing Components in PCB
 
-Arranging the components on the PCB in these ways:
+With the schematic of the board complete, I had the ability to proceed with the PCB, starting with the component placement first.
 
-1. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/387dec75-6563-4080-b0a6-d34d771053d5" />
+For reference, I studied [this](ranczlab.github.io/RPM/wiring/wiring/) board. I also took help from ChatGPT for clarification on the keep-out zones needed.
 
-2. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/913a9921-fc89-4f38-a8dd-f17bb4e16d7c" />
+I was supposed to have two zones or domains:
 
-3. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b13831b-8611-41be-86e8-a5a08bc81432" />
+- **Domain A:** 48V primary side, before the isolated converter.
 
-4. <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ab075d-6487-4b0f-a1f9-dda2ba4f77d3" />
+	| Designator | Component        | BOM details          | Function                                |
+	| ---------- | ---------------- | -------------------- | --------------------------------------- |
+	| C3, C4     | 100µF capacitors | C106679              | Converter input filtering               |
+	| F1         | Fuse             | C529662, 31CT15A250V | 48V input protection                    |
+	| PWRM1      | URB4805S-3WR3    | C53159146            | Isolated DC-DC converter, primary input |
+
+- **Domain B:** Isolated 5V secondary side, after the converter.
+
+	| Designator     | Component        | BOM details            | Function                         |
+	| -------------- | ---------------- | ---------------------- | -------------------------------- |
+	| C1, C2, C5, C7 | 100nF capacitors | C49678                 | Logic decoupling                 |
+	| C6, C8         | 10µF capacitors  | C970657                | Logic/converter output filtering |
+	| P1, P2, P3     | Six-pin headers  | C40877                 | X, Y, Z driver interfaces        |
+	| R1–R6          | 10kΩ resistors   | C17414                 | Signal pull-downs                |
+	| TP1–TP4        | Test points      | C5199801               | Power-rail measurements          |
+	| U1             | Teensy 4.1       | Teensy4.1-KB footprint | Main controller                  |
+	| U2             | 74HCT245D        | C55073441              | Signal transceiver               |
+	| U3             | XYEEK500-5.08-2P | C557689                | **Needs identification**         |
+
+There could be one important exception: **TP1 and TP2 could belong to Domain A, while TP3 and TP4 could belong to Domain B**, as the schematic assigns them to +48V, -48V, +5V, and Logic GND in that order. So, we can conclude:
+
+| Domain A             | Domain B               |
+| -------------------- | ---------------------- |
+| C3, C4               | C1, C2, C5, C6, C7, C8 |
+| F1                   | P1, P2, P3             |
+| PWRM1 primary pins   | PWRM1 secondary pins   |
+| TP1, TP2             | R1–R6                  |
+| U3				   | U1, U2                 |
+|                      | TP3, TP4               |
+
+The converter itself is a boundary component. I wouldn't put its entire footprint exclusively in Domain A or B. Its input pins face Domain A; its output pins face Domain B. I had to maintain the manufacturer's required isolation clearance around the physical separation between those pins.
+
+The next step was arranging the components on the PCB. Here're the attempts I made:
+
+1. **First Attempt:** For the top side, placed the TP1, TP2, TP3, and TP4 side by side on the topmost left corner, U3, F1, C3, and C4 together on the top left side with PRWM1 on the top right side with C1, C2, C5, and C7 below it, and U2 with the resistors in the top extreme right. For the bottom side, I placed U1 on the left, C6 and C8 on the right, with P1, P2, and P3 in the bottommost portion. There were no board boundaries or screw holes.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/387dec75-6563-4080-b0a6-d34d771053d5" />
+
+2. **Second Attempt:** First, I drew the board boundaries, making the board 50 mm in breadth and 80 mm in length, and added M3 screw holes. Keep the position of the U3, F1, C3, C4, U1, PRWM1, C1, C2, C5, and C7 the same or almost the same. Moved the TP1, TP2, TP3, and TP4 beside the P3, and brought P1, P2, and P3 closer to each other. Exchanged the positions of C6 and C8 on the bottom side with the top, and U2 with the resistors from the top to the bottom. 
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/913a9921-fc89-4f38-a8dd-f17bb4e16d7c" />
+
+3. **Third Attempt:** Rotated the PRWM1 90° and also rotated the C6 and C8 and moved them to the top right of the board, and brought C1, C2, C5, and C7 closer to each other. This was done to emphasize the keep-out zone and keep domains A and B separate from each other, but it was a bad attempt. 
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7b13831b-8611-41be-86e8-a5a08bc81432" />
+
+4. **Fourth Attempt:** Move the PRWM1 to the previous position, which was in the second attempt. Placed the C6 and C8 below the PRWM1, arranged C1, C2, C5, and C7 in a straight line, and moved them to the extreme right side. Besides, I arranged almost all of the other components to set their positions symmetrically with respect to each other and position them in whole-number coordinates. 
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65ab075d-6487-4b0f-a1f9-dda2ba4f77d3" />
+
+And that was pretty much everything for today's session.
 
 Here's the timelapse of today's session: [PATRA-LPS-83-D103](https://lapse.hackclub.com/timelapse/ngqNkFv2ohi-)
 
@@ -6897,53 +6947,115 @@ Here's the timelapse of today's session: [PATRA-LPS-83-D103](https://lapse.hackc
 
 # Day 104 — 04.11.2026: Routing the PCB
 
-https://jlcpcb.com/blog/ai-tools-for-pcb-design
+After arranging the components yesterday, I finally started routing the PCB in EasyEDA Pro. I began with the first routing iteration, connecting the components according to the schematic and working out how the tracks would fit across the two copper layers.
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/58251ef9-2fac-4983-b0bb-b35edf45e821" /> first iteration
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/d2522701-21ed-4916-be63-fa4e06997802" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b93bb88e-5ad8-454f-98fb-9e9097cc5cca" /> 
+One of the most important considerations was maintaining electrical isolation between the 48V input and the 5V logic supply. The **URB4805S-3WR3 DC-DC converter** provides galvanic isolation, so the primary and secondary sides must remain electrically separate on the PCB as well.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1511046c-0756-4960-b664-850ec97e7760" /> front with prohibited region
+The keepout region is necessary for several reasons:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9882174f-a02c-46bf-bfd3-286e4254126e" /> back with prohibited region
+1. **Creepage:** Prevents conductive paths from forming along the PCB surface between the two isolated domains.
+2. **Clearance:** Maintains sufficient separation through air between conductive parts.
+3. **Copper pours:** Prevents automatically generated copper zones from entering the isolation area.
+4. **Routing:** Prevents tracks and vias from accidentally bridging the primary and secondary sides.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5d25de7a-56b1-43b9-8639-9828e63318c6" /> smaller keep out zone (back)
+There are two possible ways to enforce this separation:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2aa8bc9d-a35c-440c-baa1-31ea347f887b" /> smaller keep out zone (front)
+* **Copper keepout:** Define prohibited copper regions on both PCB layers. This is the approach I used.
+* **Physical isolation slot:** Add a routed slot through the PCB to increase the creepage distance across its surface.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9cfe2ca7-0852-4e6e-b07f-5abc27a4e0c7" /> front after rebuilding zones and fixing tp1 and 2 pos
+So, I started routing, and here's how I did it:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/97a748ba-1532-407a-aefb-ddccb626b24f" /> back after rebuilding zones and fixing tp1 and 2 pos
+1. For starters, I routed the entire PCB first, and this is basically my first iteration. This was just a sanity check of the PCB. Without adding any isolation between the 48V input and the 5V logic supply, which I had planned earlier, I tried to DFM-check it with JLCDFM.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/110d275c-c71b-4ef9-bf6e-05a91b70efcc" /> after rerouting with correct thickness and deleting unnecessary gnd (front)
+	* PCB front after routing all pins.
+	
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b93bb88e-5ad8-454f-98fb-9e9097cc5cca" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/831e9981-86b1-4104-9016-6e77887c499b" /> after rerouting with correct thickness and deleting unnecessary gnd (back)
+	* PCB in JLCDFM check.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e86f33e7-4d89-4baf-a7bc-4baeabe2099f" /> after rerouting the 48 pins to make them shorter (front)
+		<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/58251ef9-2fac-4983-b0bb-b35edf45e821" /> 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2390177-56ba-47e2-8a86-3594cfeb8d4d" /> after rerouting the 48 pins to make them shorter (back)
+2. I added prohibited copper regions around the converter's isolation boundary on both the front and back layers.
 
-downloaded 3d model from https://grabcad.com/library/teensy-4-1-development-board-1
+	* PCB front with a prohibited region:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c370b19-3de6-42c3-aead-3263ae3a2554" /> pcb 3d
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1511046c-0756-4960-b664-850ec97e7760" /> 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc964a9e-238f-40b3-b351-0f1f2bb84085" /> pcb 2d
+	* PCB back with a prohibited region:
 
-i then fixed the naming on silkscreen for components
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9882174f-a02c-46bf-bfd3-286e4254126e" /> 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5218603e-a5c5-41ed-a2b7-6919a422bbe5" /> added silkscreen text and rearranged some components
+3. The initial keepout region was larger than necessary, so I reduced its size on both layers to make better use of the available routing area.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/36744b62-9704-4e17-b89e-9fe4e66083ac" /> back
+	* PCB front with a smaller keepout zone:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bafd490a-e9ce-4b2d-abd7-bd4cc9858a94" /> added details back
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2aa8bc9d-a35c-440c-baa1-31ea347f887b" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9a003918-04e9-48f8-8773-15d7c51ae1b5" /> added details front
+	* PCB back with a smaller keepout zone:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90b9b782-6d09-4398-a01d-41cbb1c9c39a" /> saved to cart
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5d25de7a-56b1-43b9-8639-9828e63318c6" />
 
-checked drc 30+ times throughout.
+4. After adjusting the keepout, I rebuilt the copper zones. I also repositioned TP1 and TP2 so that both test points were on the 48V input side (domain A).
 
-next i have to think abt the connectors, case for the electronic components, missing things in kbm (flagged by vector) and improvements in trm mobility (suggested by vector)
+	* PCB front after rebuilding zones and fixing TP1 and TP2 positions:
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9cfe2ca7-0852-4e6e-b07f-5abc27a4e0c7" />
+
+	* PCB back after rebuilding zones and fixing TP1 and TP2 positions:
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/97a748ba-1532-407a-aefb-ddccb626b24f" />
+
+5. I went through the routing again, corrected the trace widths, and removed unnecessary GND connections. I checked both layers while making these changes.
+
+	* PCB front after rerouting with correct trace thickness and deleting unnecessary GND:
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/110d275c-c71b-4ef9-bf6e-05a91b70efcc" />
+
+	* PCB back after rerouting with correct trace thickness and deleting unnecessary GND:
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/831e9981-86b1-4104-9016-6e77887c499b" />
+
+6. I then revisited the +48V and -48V connections. Their original routes could be shortened, so I rerouted them to make the paths more direct.
+
+	* PCB front after rerouting the +48V, and -48V pins to make them shorter:
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e86f33e7-4d89-4baf-a7bc-4baeabe2099f" />
+
+	* PCB front after rerouting the +48V, and -48V pins to make them shorter:
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2390177-56ba-47e2-8a86-3594cfeb8d4d" />
+
+Once I had worked through the routing, I wanted to inspect the physical arrangement of the PCB. I downloaded a 3D model of the Teensy 4.1 from [here](https://grabcad.com/library/teensy-4-1-development-board-1) in GrabCAD and imported it into EasyEDA. This allowed me to inspect the board with the actual Teensy model in place.
+
+This is how the PCB looks in 3D view:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c370b19-3de6-42c3-aead-3263ae3a2554" />
+
+This is how the PCB looks in 2D view:
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/fc964a9e-238f-40b3-b351-0f1f2bb84085" />
+
+After that, I worked on the silkscreen. I corrected component names, rearranged a few components, and added text and other details to the front side of the PCB.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5218603e-a5c5-41ed-a2b7-6919a422bbe5" />
+
+I added some more details to the back layer about the project name, phase, month, year, and my name
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bafd490a-e9ce-4b2d-abd7-bd4cc9858a94" />
+
+And then to the front.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9a003918-04e9-48f8-8773-15d7c51ae1b5" />
+
+Throughout the session, I checked the Design Rule Check (DRC) more than 30 times, making corrections and checking the board again. DRC helps identify issues such as clearance violations, track-width violations and unconnected nets, although it cannot independently verify electrical correctness or guarantee that the isolation requirements are satisfied.
+
+After the layout work, I saved the PCB to my JLCPCB cart.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90b9b782-6d09-4398-a01d-41cbb1c9c39a" />
+
+There are still a few things to work on before the electronics are ready. I need to look into the connectors and design an enclosure for the electronics. Vector also flagged some missing items in the KBM and suggested improvements to TRM mobility. Those are still pending.
 
 Here's the timelapse of today's session: [PATRA-LPS-84-D104](https://lapse.hackclub.com/timelapse/VQIapankJ2nn)
 
@@ -6951,55 +7063,107 @@ Here's the timelapse of today's session: [PATRA-LPS-84-D104](https://lapse.hackc
 
 ---
 
-# Day 105 — 05.11.2026: Making Electronics Case
+# Day 105 — 05.11.2026: Working on the Motion Control Module (MCM) — Part 1
 
-Added 
+There had to be some kind of case or a platform on which I would be able to mount the power supply, the motor drivers, and the printed circuit board assembly. I would then be able to connect them with wires and control the kinematic base module after connecting it to my laptop.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da071592-62fb-4941-941b-17039fdcd58b" /> pcba
+And this time, I didn't even have a rough idea of how to arrange those motor drivers, power supply, and the printed circuit board assembly. In fact, I didn't even have an idea how big those motor drivers actually were.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8999b34c-8408-4aac-aa2b-00d8fef49722" /> driver
+But first things first, I imported all of the components into the design one by one:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/81c6a3ed-80d3-490e-9487-09c5184498bc" /> psu
+* The first one was the printed circuit board assembly 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/62037e5a-3aa5-459e-b769-7d1baee871e5" /> drivers stackup
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da071592-62fb-4941-941b-17039fdcd58b" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f90a441-b857-4c18-a355-95b5f90c73af" /> arrangement 1
+* The second one was the Rtelligent T60 stepper servo motor driver, which I, of course, copied thrice.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fc27c85-cdb7-4fa0-bf15-51752c23e880" /> added walls (XY) before
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8999b34c-8408-4aac-aa2b-00d8fef49722" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/439702c7-52c8-4f4e-9339-b1f66bbf178d" /> added walls (XY) after
+* The third one was the Mean Well LRS-600-48 power supply unit.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/95f54ebe-f4c3-425b-a947-be04f164453d" /> added walls (XZ)
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/81c6a3ed-80d3-490e-9487-09c5184498bc" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc2a5654-49db-4dad-ac88-b7c526e95636" /> added walls (XY)
+Honestly, I couldn't decide. How do I even place the motor drivers? I consulted Google AI, and I decided to place them side by side like this:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7c809051-afc9-49d0-8516-95a87c6dcca2" /> BAREONES STACKUP ARCHITECTURE
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/62037e5a-3aa5-459e-b769-7d1baee871e5" />
 
-Here's the timelapse of today's session: [PATRA-LPS-85-D105]()
+Then I placed the PSU at the bottom, these three above it, and then, at the top, the printed circuit board assembly. This was the bare-bones stack-up architecture.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5f90a441-b857-4c18-a355-95b5f90c73af" />
+
+One by one, I added the walls like this:
+
+* Added walls (XY) before
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fc27c85-cdb7-4fa0-bf15-51752c23e880" />
+
+* Added walls (XY) after
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/439702c7-52c8-4f4e-9339-b1f66bbf178d" />
+
+* Added walls (XZ)
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/95f54ebe-f4c3-425b-a947-be04f164453d" />
+
+* Added walls (XY)
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dc2a5654-49db-4dad-ac88-b7c526e95636" />
+
+And this is pretty much the case which I came up with.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7c809051-afc9-49d0-8516-95a87c6dcca2" />
+
+Here's the timelapse of today's session: [PATRA-LPS-85-D105](https://lapse.hackclub.com/timelapse/2YgpavfAciAk)
 
 **Total time spent: 3h 35m**
 
 ---
 
-# Day 106 — 06.11.2026: Establishing the Motion Control Module — Part 1
+# Day 106 — 06.11.2026: Working on the Motion Control Module (MCM) — Part 2
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/64938b35-d9bd-430f-8186-a02d7fac9047" /> arrangement 2
+I made a hard realization. The architecture which I created yesterday would most likely trap a lot of heat, and have issues with the wiring. I had to start over again and make a new layout. 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05a8d8a8-7cf3-4857-90a6-becabbcc45db" /> arrangement 3
+Since there was an odd number of motor drivers, I couldn't stack them by dividing them into equal numbers. I first placed them side by side, all three of them, so that all of the pins get access.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/006a06f7-920b-4133-8b23-5a9b9d8f61b8" /> arrangement 4
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/64938b35-d9bd-430f-8186-a02d7fac9047" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/73355e1b-d8fe-4a6a-8768-cf83d2c06c21" />
+Then I moved one motor driver and stacked it on top of the first one, rotated the PSU 90°, and placed it on its side.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05a8d8a8-7cf3-4857-90a6-becabbcc45db" />
+
+And that's it. That's how I got the perfect arrangement, I guess. Without further ado, I started adding walls and laid out the structure for the case. 
+
+- This is how it looks from the left side:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/006a06f7-920b-4133-8b23-5a9b9d8f61b8" />
+
+- This is how it looks from the right side:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/73355e1b-d8fe-4a6a-8768-cf83d2c06c21" />
+
+To prevent heat, since the PSU and the drivers will get hot, I distanced the PSU from the drivers.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c525958f-f712-492e-87e0-8e8bd19daf2e" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/885c7cb4-d3f2-4db5-9735-1a701246527e" /> added screw hubs for pcb
+The next steps were about adding the mounting holes for the components. Here's how I did it:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2ada4e7d-9ca0-419b-9330-813c9fe48604" /> added screw hubs for drivers
+1. Added screw hubs for the PCB: There were 4 M3 holes adjusted for brass inserts.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/54e36ce3-d9a4-438b-8406-4fbd11d3de63" /> spaced out the drivers
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/885c7cb4-d3f2-4db5-9735-1a701246527e" /> 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/789212a2-98ac-4d21-889c-20b45f05b4e9" /> added 0.5 mm lean-in chamfers
+2. Added screw hubs for drivers: There were 3x 4 M5 holes adjusted for brass inserts.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2ada4e7d-9ca0-419b-9330-813c9fe48604" /> 
+
+I also spaced out the drivers to reduce head during operation.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/54e36ce3-d9a4-438b-8406-4fbd11d3de63" />
+
+Since I was using inserts for the mounts, I added 0.5 mm lead-in chamfers too.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/789212a2-98ac-4d21-889c-20b45f05b4e9" />
+
+The next step was to add mounting holes for the PSU as well.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6d1da890-980b-464c-ae41-20b9349f008b" />
 
@@ -7009,27 +7173,33 @@ Here's the timelapse of today's session: [PATRA-LPS-86-D106](https://lapse.hackc
 
 ---
 
-# Day 107 — 07.11.2026: Establishing the Motion Control Module — Part 2
+# Day 107 — 07.11.2026: Working on the Motion Control Module (MCM) — Part 3
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4c3fd072-7ca6-428e-a629-f39fb45b721e" /> mirrored the system to ensure
+I had not noticed this earlier, but in the previous arrangement that I had created yesterday, the PCB could not be properly wired, as the motor driver gets in the way. So I made some changes. I mirrored the case in place and flipped the upper motor driver, PCB, and PSU horizontally.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4c3fd072-7ca6-428e-a629-f39fb45b721e" />
+
+I also sliced part of the case to see how it would print if it is flipped to one side.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2b55d747-1b20-415a-9809-2bbfcf04e827" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa8a20cb-5657-4272-990f-065d441c3247" /> added chamfers
+After this, I adjusted the height and the position of the screw hubs with the ceiling several times to make sure that the screw properly goes through an empty space so that I can fasten the PSU screws. Using the sketch, I added the M4 screw holes for the PSU. 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fbefacc-46d9-4c3b-b720-c86db9a475b7" /> added fillets
+<img width="1365" height="733" alt="image" src="https://github.com/user-attachments/assets/b058f8ce-23ea-42d9-b04e-9740eb56b85f" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/bb4f235c-5133-4071-944d-b72bf2765cec" /> named it as motion control module (mcm)
+I then added chamfers to the case as a design element.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/5b5795a3-8f08-49ea-93e3-ac9787e29ac8" /> added fillets
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/aa8a20cb-5657-4272-990f-065d441c3247" />
 
-fasteners
+Also added fillets to the base of the screw hubs.
 
-https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3fbefacc-46d9-4c3b-b720-c86db9a475b7" />
 
-https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts
+In the end, I also decided to look for all of the fasteners I needed for the MCM, and these are the fasteners that I need:
 
-https://onlyscrews.in/products/hex-allen-csk-m4-x-20-screw-pack-of-20
+1. [This](https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts) for the M3 screw hubs of PCB mount.
+2. [This](https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts) for the M5 screw hubs of motor drivers.
+3. [This](https://onlyscrews.in/products/hex-allen-csk-m4-x-20-screw-pack-of-20) is for the countersunk screw for the PSU mount.
 
 Here's the timelapse of today's session: [PATRA-LPS-87-D107](https://lapse.hackclub.com/timelapse/RRZ-AD_VYn5_)
 
@@ -7037,75 +7207,136 @@ Here's the timelapse of today's session: [PATRA-LPS-87-D107](https://lapse.hackc
 
 ---
 
-# Day 108 — 08.11.2026: Updating BOM
+# Day 108 — 08.11.2026: Finalising MCM Design & Updating BOM
 
-was editing the bom. noticed inserts to be added. saw insert length changed in design.
+Over the days, I had been making several new additions to Phase 1 of PATRA by making a new module called the Motion Control System (MCM). Today was the day to update the bill of materials by adding all of the new components and making the overall budget more realistiC and close to completion.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dddf26db-46f1-4850-8ca1-91b6498dddc6" /> made the m3 ocb inserts hole 12.5 mm to 10 mm
+But just when I was about to get started with editing the BOM, I found out that the depth of the screw hubs is wrong in the design. I had to fix those, but the reason it happened is because I had been moving the faces of the case of MCM several times, and I didn't just look inside the holes where the brass inserts were supposed to go.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90a7c98e-77df-43f0-bba1-c69b4cbd1e31" /> cut upper m5 holes to make them 10 mm from 2.5
+Here's what I fixed:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/749b431c-bca2-4958-9c2f-84876280b167" /> cut lower m5 holes from 7.5 mm to 10
+- Made the M3 PCB insert holes from 12.5 mm deep to 10 mm deep.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9a1dbaf7-bba1-4cc8-badc-a1835b10f0c9" /> added 2.5 mm fillets on psu screw hubs for strength
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dddf26db-46f1-4850-8ca1-91b6498dddc6" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/88ff59b0-846a-4352-866d-f163e0fd4ae8" /> made thicker the pcb holes by 1 mm.
+- Cut the upper M5 holes to make them 2.5 mm deep to 10 mm deep.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/52e4e600-aedb-401d-bd58-e3e0976f8720" /> added hole for side cable
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90a7c98e-77df-43f0-bba1-c69b4cbd1e31" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90f0866a-3f2a-42bb-8580-f79e32596dfa" /> added 2.5 mm chamfer in psu side
+- Cut the lower M5 holes from 7.5 mm deep to 10 mm deep.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2bf45cf5-747d-4924-86a6-530084717f85" /> added cylindrical extrusions for placement
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/749b431c-bca2-4958-9c2f-84876280b167" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4957d5f7-d842-4381-b396-056dfd10fd61" /> 0.2 mm clearance
+Besides, I also made some more changes to make the design stronger:
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2effc26c-e4ee-4e2a-9ba4-3b70da9ca965" /> added for the psu section as well
+- Added 2.5 mm fillets on PSU screw hubs for strength.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cf72617a-2171-40e8-8095-35bc951f226b" /> added cylindrical extrusions
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9a1dbaf7-bba1-4cc8-badc-a1835b10f0c9" /> 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dce0e942-8e93-4d34-a4b2-82d2477623c3" /> added 0.2 mm clearance
+- Made PCB holes thicker by 1 mm.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3b6f375-9ab2-43b7-ac7f-db9f7d54de30" /> MCM ready for fabrication.
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/88ff59b0-846a-4352-866d-f163e0fd4ae8" /> 
 
-i was aware all the time about the wire jungle i will be creating. but i got to try my best to make this look like a prototype.
+- Added a 2.5 mm chamfer on the PSU side.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5d6cd83-238e-4891-8c93-7a4f1e2ff70f" /> jlcpcb cart
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/90f0866a-3f2a-42bb-8580-f79e32596dfa" />
 
-exporting pcb/pcba
+During this, I also noticed that some of the pins on the side of one motor driver were being covered, so I had to add a hole for that.
 
-1. pcb from jlc and components from lcsc
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/52e4e600-aedb-401d-bd58-e3e0976f8720" />
 
-	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2d7575c8-2100-454f-8a8c-862b60aba1b0" /> $10 - 10 usd coupon
+Next came the part where I had to finalize the design, but I couldn't keep the design as it is because I wouldn't be able to print it without too many supports. I decided to make some slices in the body, print them, and connect them later using super glue. And I knew exactly where I had to make those slices, but just to make sure that the part connects flawlessly together without any misplacement, I had to add cylindrical extrusions for placement. 
 
-	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9d7b20c6-602a-4820-bbaf-14366d42ad06" /> $10.55 + $7.62 singapore post + $3 handling - $1.08 merch discount
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/2bf45cf5-747d-4924-86a6-530084717f85" />
 
-2. pcba frm jlcpdc
+And of course, I also had to add 0.2 mm of clearance to the cylindrical regions.
 
-	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6ea6dd25-238a-45dc-8092-9abb318437c1" /> $103.94 with shipping (e-post) (10 USD coupon)
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4957d5f7-d842-4381-b396-056dfd10fd61" />
 
-sliced
+I did something similar for the PSU section as well. 
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05d5f3a0-b3f2-41a5-8897-2932e83f849d" /> all plate info
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cf72617a-2171-40e8-8095-35bc951f226b" />
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/34c15e6b-8ec0-439c-8463-3f9fcf2ec667" /> plate 1
+And of course, this time I also had to add 0.2 mm clearance.
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3106b667-d5f1-4d87-b09c-ed0671996026" /> plate 2
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dce0e942-8e93-4d34-a4b2-82d2477623c3" />
 
-i mixed lcsc and robu.in components to get as cheap as possible.
+And with this, the motion control module is ready for fabrication.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3b6f375-9ab2-43b7-ac7f-db9f7d54de30" />
+
+And I should confess that I was aware all the time of the fact that I would end up with a jungle of wires if I kept the thing as it is now. I knew that the wires would go all over the place, but since this is a prototype, I also have to try my best to make sure it looks like a prototype. I honestly didn't want to spend too much time designing the motion control module. In fact, initially I just thought of keeping the motor drivers, PSU, and the PCB on the floor and connecting them, but I guess what I'm doing right now is actually better. 
+
+I then started with the bill of materials. And first things first, I confirmed the JLCPCB cart from JLCONE.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/c5d6cd83-238e-4891-8c93-7a4f1e2ff70f" />
+
+Just now, when I was doing this, I made a realization that I also had to order the PCB components from LCSC or somewhere else. Out of curiosity, I also thought I should compare my options of buying from LCSC directly and buying a soldered PCBA from JLCPCB. For this, I exported the BOM from EasyEDA Pro in JLCONE, and here is the comparison between the two options:
+
+1. **PCB from JLCPCB and components from LCSC:**
+
+	- JLCPCB Cart: $2 PCB, $8 E-POST Shipping. Total: $10. I had a $10 coupon, making the cost $0.
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8a626ca6-ea48-4dee-8054-7c3561202046" />
+
+	- LCSC Cart: $10.55 Merch, $7.62 Singapore Post + $3 Handling Fee. Total: $21.17. I was getting a $7.08 Merch Discount, making the cost $20.09.
+	
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9d7b20c6-602a-4820-bbaf-14366d42ad06" />
+
+	- Total expense with no discount or coupon is $31.17. But with a coupon and discount, it is $20.09.
+	
+2. **PCBA from JLCPCB (excluding the Teensy 4.1):**
+
+	- $84.01 PCBA, $19.53 E-Post shipping. Total: $103.54. I have a $10 coupon here too, making the cost $93.54.
+	
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6ea6dd25-238a-45dc-8092-9abb318437c1" /> 
+
+The choice here was obvious; it was the first option. But I had the confidence in myself to bring the cost down from $31.17 to a much lower amount.
+
+I then sliced the three bodies of the Motion Control Module Case, which took two plates for my Elegoo Centauri Carbon. I will be printing them in Elegoo PLA PRO White.
+
+- All plate info:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/05d5f3a0-b3f2-41a5-8897-2932e83f849d" />
+
+- Plate 1 info:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/34c15e6b-8ec0-439c-8463-3f9fcf2ec667" />
+
+- Plate 2 info:
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3106b667-d5f1-4d87-b09c-ed0671996026" />
+
+To further reduce the cost of the components for the PCB, I decided to source some parts from LCSC and some parts from Robu to get the final price as cheap as possible by avoiding customs and shipping costs. So, I mixed LCSC and Robu components to get PCB components as cheaply as possible.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6dc0f194-21b5-42c6-a245-ffcf8889490b" />
 
-after listing somethings in robu.in
+After doing this, this is the cart of LCSC:
 
-Merchandise Total		$7.21
-Shipping Fee			$6.61 singapore post
-Handling Fee			$3
-Merchandise Discount	-$0.99
-Total					$15.83
+* Merchandise Total		$7.21
+* Shipping Fee			$6.61 (Singapore Post)
+* Handling Fee			$3
+* Merchandise Discount	-$0.99
+* Total					$15.83
 
-cost in robu is $0.62 excl teensy. $38 with teensy
+Meanwhile, the cost in Robu is $0.62, excluding the Teensy 4.1, and $38 with the Teensy 4.1.
 
-for the wires, i need to buy:
+Here is the Printed Circuit Board Section of the BOM:
+
+| Printed Circuit Board Assembly | PATRA_PCB_PCB1_20261104_233009                             |   | 5 | $0.40  |            | $2.00  | JLCPCB |
+|                                | CL21B104KBCNFNC 100 nF 50 V                                |   | 4 | $0.01  | ₹ 1.08     | $0.05  | Robu   | https://robu.in/product/cl21b104kbcnfnc-samsang-50v-100nf-x7r-%25c2%25b110-0805-multilayer-ceramic-capacitors-mlcc-smd-smt-rohs/ |
+|                                | VES100M1HTR-0605-LELON-10uF 50V ±20% SMD                   |   | 2 | $0.04  | ₹ 3.71     | $0.08  | Robu   | https://robu.in/product/ves100m1htr-0605-lelon-10uf-50v-%C2%B120-smdd6-3xl5-3mm-aluminum-electrolytic-capacitors-smd-rohs/       |
+|                                | FH2.54-09-06PZD-XUNPU-Plugin,1x6 Pin 2.54mm Female Headers |   | 3 | $0.15  | ₹ 14.00    | $0.45  | Robu   | https://robu.in/product/fh2-54-09-06pzd-xunpu-plugin1x6-pin-2-54mm-female-headers-rohs/                                          |
+|                                | EVISUN URB4805S-3WR3                                       |   | 1 | $3.67  |            | $3.67  | LCSC   | https://www.lcsc.com/product-detail/C53159146.html                                                                               |
+|                                | UNI-ROYAL 0805W8F1002T5E [100 pcs]                         |   | 1 | $0.34  |            | $0.34  | LCSC   | https://www.lcsc.com/product-detail/C17414.html                                                                                  |
+|                                | ronghe RH-5001 [5 pcs]                                     |   | 1 | $0.40  |            | $0.40  | LCSC   | https://www.lcsc.com/product-detail/C5199801.html                                                                                |
+|                                | NEXPERIA 74HCT245D                                         |   | 1 | $0.34  | ₹ 32.00    | $0.34  | Robu   | https://robu.in/product/74hct245d653-nexperia-transceiver-74hct245-4-5-v-to-5-5-v-soic-20/                                       |
+|                                | XINLAIYA XYEEK500-5.08-2P [5 pcs]                          |   | 1 | $1.02  |            | $1.02  | LCSC   | https://www.lcsc.com/product-detail/C557689.html                                                                                 |
+|                                | Hongda 31TC15A250V [5 pcs]                                 |   | 1 | $0.79  |            | $0.79  | LCSC   | https://www.lcsc.com/product-detail/C529662.html                                                                                 |
+|                                | ERS1KM101G16OT 100uF 100V                                  |   | 2 | $0.08  | ₹ 8.00     | $0.17  | Robu   | https://robu.in/product/ers1km101g16ot-aishi-100uf-100v-%C2%B120-plugind10xl16mm-aluminum-electrolytic-capacitors-leaded-rohs/   |
+|                                | Teensy 4.1 Development Board                               |   | 1 | $37.65 | ₹ 3,549.00 | $37.65 | Robu   | https://robu.in/product/buy-teensy-4-1-development-board/                                                                        |
+
+But I also had to buy wires. For the wires, I need to buy the following:
 
 3 × C2-030 motor power cables
 3 × B1-030 encoder cables
@@ -7121,13 +7352,23 @@ Here's the timelapse of today's session: [PATRA-LPS-88-D108](https://lapse.hackc
 
 ---
 
-# Day 109 — 09.12.2026: 
+# Day 109 — 09.12.2026: Updated the BOM
 
-most wires in robu were out of stock and way too beyond my needs. i will thus source the wires locally.
+The things left to add in the last session were the wires. Most wires in Robu were out of stock and way beyond my needs in length. But before continuing to find the wires, I noticed that the PTFE Teflon coated tape was not suitable for preventing belt wear. So, I instead chose [this](https://www.desertcart.in/products/346216072-apt-uhmw-ultra-high-molecular-weight-polyethylene-tape-resists-abrasion), which costs 1994 INR on Desertcart, after looking at a lot of different options.
 
-replaced the old ptfe teflon coated tape (PTFE Coated Teflon Tape		1	 $4.21 	 ₹ 400.00 	 $4.21 	 Amazon 	https://www.amazon.in/Keiko-adhesive-Release-sealing-purpose/dp/B0DCGGGGGJ?th=1) with https://www.desertcart.in/products/346216072-apt-uhmw-ultra-high-molecular-weight-polyethylene-tape-resists-abrasion
+For information, this tape is thicker than I need. So, I need to strip it down to 16 mm as per my needs.
 
-replaced EMLC-S1-N-M6 Nut		100	 $0.02 	 ₹ 4.60 	 $1.65 	 JLCMC 	https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6 with DIN 982 M6 Nut		20	 $0.04 	 ₹ 3.80 	 $0.81 	 OnlyScrews 	https://onlyscrews.in/products/m6-nyloc-nuts-ss304
+I also replaced the [EMLC-S1-N-M6 Nut](https://jlcmc.com/product/s/E04/EMLC/anti-loosening-nut?k=EMLC-S1-N-M6&productModelNumber=EMLC-S1-N-M6) from JLCMC with [DIN 982 M6 Nut](https://onlyscrews.in/products/m6-nyloc-nuts-ss304) from OnlyScrews.
+
+Then I added these two wires to the cart, leaving the other ones to be sourced locally. I added the [DB9 Male Screw Terminal to RS232 RS485 Conversion Board](https://robu.in/product/db9-male-screw-terminal-rs232-rs485-conversion-board/) to connect it to the motor DB9 cables and use it as a breakout board.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/cbd09e0d-5cc8-4a29-af7b-5e30849e1d96" />
+
+| Wires | DB9 Male Screw Terminal to RS232 RS485 Conversion Board |   | 3 | $0.84 | ₹ 79.00 | $2.51 | Robu | https://robu.in/product/db9-male-screw-terminal-rs232-rs485-conversion-board/       |
+|       | 16AWG High Quality Ultra Flexible Silicone Wire - Black |   | 1 | $0.52 | ₹ 49.00 | $0.52 | Robu | https://robu.in/product/high-quality-ultra-flexible-16awg-silicone-wire-305m-black/ |
+|       | 16AWG High Quality Ultra Flexible Silicone Wire - Red   |   | 1 | $0.52 | ₹ 49.00 | $0.52 | Robu | https://robu.in/product/high-quality-ultra-flexible-16awg-silicone-wire-305m-red/   |
+
+Lastly, I noticed that I had forgotten to add the pulleys to the JLCPCB cart. For getting the right shipping cost estimate, I had to add those to cart. But, I only had the option to demand Manual Quote at the moment.
 
 Here's the timelapse of today's session: [PATRA-LPS-89-D109](https://lapse.hackclub.com/timelapse/Nzu3h6q0Q1XT)
 
@@ -7135,30 +7376,28 @@ Here's the timelapse of today's session: [PATRA-LPS-89-D109](https://lapse.hackc
 
 ---
 
-# Day 110 — 10.12.2026: 
+# Day 110 — 10.12.2026: Updating BOM
 
-In order to further reduce cost, as always, 
+In order to further reduce costs, as always, I decided to print the upper and lower clamps in my own printer instead of ordering from JLC3DP, as I originally thought.
 
-Also got a quote for the pulleys:
+Also got a quote for the pulleys.
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/8610e990-3232-4ce8-acf2-de349f6c7311" />
 
-so the price changed from [this] to [this].
-
-i added them to the cart and now i had the ability to calculate correct shipping.e-post was $16.86 while ups was $9.76. i didn't want surprise customs
+I added them to the cart, and now I had the ability to calculate the correct shipping. E-Post was $16.86, while UPS was $9.76. I didn't want surprise customs, so I chose E-POST.
 
 <img width="800" height="510" alt="image" src="https://github.com/user-attachments/assets/e16f78ca-75da-460c-b933-70f75533995a" />
 
- merchendise total is $14.42
+So, the merchandise total is $14.42.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/1102d50e-def4-4c39-8f8e-15696ef04e4d" />
 
-i then found out that jlcmc an jlc3dp orders cant be combined. sadly, i must order them seperately and pay extra for shipping
+But then I found out that JLMC and JLC3DP orders can't be combined. Sadly, I must order them separately and pay extra for shipping. So, here is the cost breakdown I added to the BOM:
 
-1. jlcpcb: 8 usd for e-post
-2. jlcmc: 11.30 usd for e-post
+1. JLCPCB: 8 USD for E-Post
+2. JLCMC: 11.30 USD for E-Post
 
-final bom:
+Final BOM:
 
 | Parallel Axis TriTeron Robotic Arm BOM |                                |                                                              |                      |          |            |            |            |                 |                                                                                                                                            |
 |----------------------------------------|--------------------------------|--------------------------------------------------------------|----------------------|----------|------------|------------|------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -7272,15 +7511,165 @@ Here's the timelapse of today's session: [PATRA-LPS-90-D110](https://lapse.hackc
 
 ---
 
-# Day 111 — 14.12.2026:
+# Day 111 — 14.12.2026: Journaling & Updating BOM
 
-i missed out these on day #110
+Journaled days #102 (partly), #103, #104, #105, #106, #107, #108, and #110.
+
+Day #102
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/769d2c23-78a8-417d-8e11-8baa1d0ae242" />
+
+Day #103
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1ff58084-d1aa-4535-b8ee-0d615be6e09f" />
+
+Day #104
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/5b013aa2-4af6-4dbd-90b4-d4756c1ea8f5" />
+
+Day #105
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/952f375f-1e4b-4898-8cd3-4960dc6cb2c5" />
+
+Day #106
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/841da005-0129-4989-b237-f4b2fd441c89" />
+
+Day #107
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/2349e484-ce9d-4454-a924-fae45f651af1" />
+
+Day #108
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fc74e2bc-cec6-4b5c-8160-8c8b07ee6838" />
+
+Day #109
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3111ea09-7617-418c-98b2-7b15176022fb" />
+
+Day #110
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e2abfe3f-5ebd-4c9c-b329-fcfe495d890c" />
+
+I missed out these on day #110 to add them to BOM:
 
 Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 
 Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 
 
-Here's the timelapse of today's session: [PATRA-LPS-91-D111]()
+There is no workaround for the shafts. I forgot to add them, and I must add them. So, I added them.
 
-**Total time spent: 0h 00m**
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/72ff26f9-d358-433a-8e30-34added083fa" />
+
+Final BOM:
+
+| Parallel Axis TriTeron Robotic Arm BOM |                                |                                                              |                      |          |            |            |            |                 |                                                                                                                                            |
+|----------------------------------------|--------------------------------|--------------------------------------------------------------|----------------------|----------|------------|------------|------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Component Category                     |                                | Item                                                         | Print Material       | Quantity | Cost (USD) | Cost (INR) | Total Cost | Vendor          | Link                                                                                                                                       |
+| Kinematic Base Module (KBM)            | Aluminium Extrusions           | LCF6-2020-1135 Aluminium 2020 T-Slot Profile Extrusion       |                      | 2        | $3.25      | ₹ 306.45   | $6.50      | MISUMI          | https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135                                                                |
+|                                        |                                | HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion       |                      | 2        | $27.53     | ₹ 2,595.20 | $55.06     | MISUMI          | https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000                                                                |
+|                                        | End Plates                     | End Plate                                                    | FDM PLA PRO (Silver) | 2        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        | Linear Guides                  | HIWIN MGN15H Linear Rail 1 m                                 |                      | 2        | $90.17     | ₹ 8,499.00 | $180.33    | novo3D          | https://novo3d.in/hiwin-mgn15-linear-guide-rail/                                                                                           |
+|                                        |                                | HIWIN MGN15H Sliding Block                                   |                      | 4        | $19.09     | ₹ 1,799.00 | $76.34     | Industrybuying  | https://www.industrybuying.com/linear-guides-hiwin-BEA.LIN.820966212                                                                       |
+|                                        |                                | Belt Clamp Bottom (X & Y)                                    | FDM PETG-CF (Black)  | 2        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Belt Clamp Top (X & Y)                                       | FDM PLA PRO (Silver) | 2        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Belt Clamp Bottom (Z)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Belt Clamp Top (Z)                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        | Tensioning Systems             | Belt E-GBN22505GT-150 (X & Y)                                |                      | 2        | $13.00     | ₹ 1,225.63 | $26.01     | MISUMI          | https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150                                                              |
+|                                        |                                | Belt E-GBN26005GT-150 (Z)                                    |                      | 1        | $14.86     | ₹ 1,400.77 | $14.86     | MISUMI          | https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150                                                              |
+|                                        |                                | Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)            |                      | 4        | $2.03      |            | $8.13      | JLCMC           | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12 |
+|                                        |                                | Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)                |                      | 2        | $2.14      |            | $4.27      | JLCMC           | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12 |
+|                                        |                                | Pulley Case Left (X)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley Case Left (Y)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley Case Left (Z)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley Case Right (X)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley Case Right (Y)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley Case Right (Z)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Idler Case Left (X)                                          | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Idler Case Left (Y)                                          | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Idler Case Left (Z)                                          | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Idler Case Right (X)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Idler Case Right (Y)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Idler Case Right (Z)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Belt Sheilds (X & Y)                                         | FDM PLA PRO (Silver) | 10       | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Belt Sheild Connectors (X & Y)                               | FDM PLA PRO (Silver) | 8        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley & Idler Case Coupler (Z)                              | FDM PETG-CF (Black)  | 2        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Bearing Cover                                                | FDM PETG (White)     | 9        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | 6901ZZ Bearing (Pack of 4)                                   |                      | 3        | $2.54      | ₹ 239.00   | $7.61      | Robu            | https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/                                                      |
+|                                        |                                | WSX-SUS-M12X18-5 Washer                                      | FDM PETG (White)     | 12       | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Pulley Shaft (X, Y & Z)                                      | MJF PA12S-HP Nylon   | 3        | $0.99      |            | $2.97      | JLC3DP          |                                                                                                                                            |
+|                                        |                                | Idler Shaft (X, Y & Z)                                       | MJF PA12S-HP Nylon   | 3        | $1.32      |            | $3.96      | JLC3DP          |                                                                                                                                            |
+|                                        | Motors                         | Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y) |                      | 2        | $43.27     | ₹ 4,079.00 | $86.55     | Robu            | https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/                                                               |
+|                                        |                                | Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)       |                      | 1        | $57.28     | ₹ 5,399.00 | $57.28     | Robu            | https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/                                                               |
+|                                        | Fasteners                      | Brass Insert M5x10 mm                                        |                      | 12       | $0.05      | ₹ 4.60     | $0.59      | OnlyScrews      | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Brass Insert M3x10 mm                                        |                      | 44       | $0.04      | ₹ 3.60     | $1.68      | OnlyScrews      | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Brass Insert M3x6 mm                                         |                      | 36       | $0.05      | ₹ 4.80     | $1.83      | OnlyScrews      | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                                              |
+|                                        |                                | Brass Insert M2x5 mm [25 pcs]                                |                      | 1        | $0.67      | ₹ 63.00    | $0.67      | Robokits        | https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.                     |
+|                                        |                                | Brass Insert M3x8 mm                                         |                      | 10       | $0.03      | ₹ 3.00     | $0.32      | OnlyScrews      | https://onlyscrews.in/products/m3-x-8mm-brass-threaded-inserts                                                                             |
+|                                        |                                | Pan Head Screw M5x15 mm                                      |                      | 12       | $0.02      | ₹ 1.60     | $0.20      | OnlyScrews      | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm                     |
+|                                        |                                | Countersunk Screw M3x30 mm                                   |                      | 44       | $0.04      | ₹ 3.80     | $1.77      | OnlyScrews      | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                                    |
+|                                        |                                | Countersunk Screw M3x12 mm                                   |                      | 36       | $0.02      | ₹ 1.80     | $0.69      | OnlyScrews      | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                                      |
+|                                        |                                | Socket Head M2x12 mm                                         |                      | 16       | $0.04      | ₹ 4.00     | $0.68      | OnlyScrews      | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                                            |
+|                                        |                                | Socket Head M3x12 mm                                         |                      | 50       | $0.04      | ₹ 3.40     | $1.80      | OnlyScrews      | https://onlyscrews.in/products/hex-allen-socket-head-m3-x-12-screw-pack-of-20                                                              |
+|                                        |                                | Total                                                        |                      |          |            |            | $540.11    | Budget = $550   |                                                                                                                                            |
+| TriTeron Robot Module (TRM)            | Leg Mounts                     | X Axis Mount                                                 | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Y Axis Mount                                                 | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Z Axis Mount                                                 | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        | Legs                           | X Axis Leg Upper                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | X Axis Leg Lower                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Y Axis Leg Upper                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Y Axis Leg Upper                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Y Axis Leg Lower                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Upper A                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Lower A                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Upper B                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Lower B                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        | Leg Joints                     | MSB8-30 Screw                                                |                      | 15       | $0.85      | ₹ 80.00    | $12.73     | MISUMI          | https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30                                                                       |
+|                                        |                                | DIN 982 M6 Nut                                               |                      | 20       | $0.04      | ₹ 3.80     | $0.81      | OnlyScrews      | https://onlyscrews.in/products/m6-nyloc-nuts-ss304                                                                                         |
+|                                        |                                | SS304 M8 Washer                                              |                      | 20       | $0.02      | ₹ 4.60     | $0.38      | OnlyScrews      | https://onlyscrews.in/products/m8-washer-ss304                                                                                             |
+|                                        |                                | 608ZZ Bearing                                                |                      | 25       | $0.65      | ₹ 4.60     | $16.25     | Robu            | https://robu.in/product/608rs-rubber-sealed-ball-bearing-miniature-bearing-8-x-22-x-7-mm-2pcs/                                             |
+|                                        | Tool Head                      | Tool Head                                                    | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Total                                                        |                      |          |            |            | $30.17     | Budget = $50    |                                                                                                                                            |
+| Motion Control System (MCM)            | Power & Motion                 | Rtelligent T60 Closed-loop Stepper Motor Driver (X, Y & Z)   |                      | 3        | $42.85     | ₹ 4,039.00 | $128.55    | Robu            | https://robu.in/product/rtelligent-t60-closed-loop-stepper-driver-18-68vdc-6a-for-stepper-motors-below-nema-24/                            |
+|                                        |                                | Mean Well LRS-600-48                                         |                      | 1        | $40.34     | ₹ 3,802.00 | $40.34     | Trade India     | https://www.tradeindia.com/products/lrs-600-48v-meanwell-power-supply-c10893421.html                                                       |
+|                                        | Printed Circuit Board Assembly | PATRA_PCB_PCB1_20261104_233009                               |                      | 5        | $0.40      |            | $2.00      | JLCPCB          |                                                                                                                                            |
+|                                        |                                | CL21B104KBCNFNC 100 nF 50 V                                  |                      | 4        | $0.01      | ₹ 1.08     | $0.05      | Robu            | https://robu.in/product/cl21b104kbcnfnc-samsang-50v-100nf-x7r-%25c2%25b110-0805-multilayer-ceramic-capacitors-mlcc-smd-smt-rohs/           |
+|                                        |                                | VES100M1HTR-0605-LELON-10uF 50V ±20% SMD                     |                      | 2        | $0.04      | ₹ 3.71     | $0.08      | Robu            | https://robu.in/product/ves100m1htr-0605-lelon-10uf-50v-%C2%B120-smdd6-3xl5-3mm-aluminum-electrolytic-capacitors-smd-rohs/                 |
+|                                        |                                | FH2.54-09-06PZD-XUNPU-Plugin,1x6 Pin 2.54mm Female Headers   |                      | 3        | $0.15      | ₹ 14.00    | $0.45      | Robu            | https://robu.in/product/fh2-54-09-06pzd-xunpu-plugin1x6-pin-2-54mm-female-headers-rohs/                                                    |
+|                                        |                                | EVISUN URB4805S-3WR3                                         |                      | 1        | $3.67      |            | $3.67      | LCSC            | https://www.lcsc.com/product-detail/C53159146.html                                                                                         |
+|                                        |                                | UNI-ROYAL 0805W8F1002T5E [100 pcs]                           |                      | 1        | $0.34      |            | $0.34      | LCSC            | https://www.lcsc.com/product-detail/C17414.html                                                                                            |
+|                                        |                                | ronghe RH-5001 [5 pcs]                                       |                      | 1        | $0.40      |            | $0.40      | LCSC            | https://www.lcsc.com/product-detail/C5199801.html                                                                                          |
+|                                        |                                | NEXPERIA 74HCT245D                                           |                      | 1        | $0.34      | ₹ 32.00    | $0.34      | Robu            | https://robu.in/product/74hct245d653-nexperia-transceiver-74hct245-4-5-v-to-5-5-v-soic-20/                                                 |
+|                                        |                                | XINLAIYA XYEEK500-5.08-2P [5 pcs]                            |                      | 1        | $1.02      |            | $1.02      | LCSC            | https://www.lcsc.com/product-detail/C557689.html                                                                                           |
+|                                        |                                | Hongda 31TC15A250V [5 pcs]                                   |                      | 1        | $0.79      |            | $0.79      | LCSC            | https://www.lcsc.com/product-detail/C529662.html                                                                                           |
+|                                        |                                | ERS1KM101G16OT 100uF 100V                                    |                      | 2        | $0.08      | ₹ 8.00     | $0.17      | Robu            | https://robu.in/product/ers1km101g16ot-aishi-100uf-100v-%C2%B120-plugind10xl16mm-aluminum-electrolytic-capacitors-leaded-rohs/             |
+|                                        |                                | Teensy 4.1 Development Board                                 |                      | 1        | $37.65     | ₹ 3,549.00 | $37.65     | Robu            | https://robu.in/product/buy-teensy-4-1-development-board/                                                                                  |
+|                                        | Wires                          | DB9 Male Screw Terminal to RS232 RS485 Conversion Board      |                      | 3        | $0.84      | ₹ 79.00    | $2.51      | Robu            | https://robu.in/product/db9-male-screw-terminal-rs232-rs485-conversion-board/                                                              |
+|                                        |                                | 16AWG High Quality Ultra Flexible Silicone Wire - Black      |                      | 1        | $0.52      | ₹ 49.00    | $0.52      | Robu            | https://robu.in/product/high-quality-ultra-flexible-16awg-silicone-wire-305m-black/                                                        |
+|                                        |                                | 16AWG High Quality Ultra Flexible Silicone Wire - Red        |                      | 1        | $0.52      | ₹ 49.00    | $0.52      | Robu            | https://robu.in/product/high-quality-ultra-flexible-16awg-silicone-wire-305m-red/                                                          |
+|                                        | Fasteners                      | Brass Insert M5x10 mm                                        |                      | 12       | $0.05      | ₹ 4.60     | $0.59      | OnlyScrews      | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Brass Insert M3x10 mm                                        |                      | 4        | $0.04      | ₹ 3.60     | $0.15      | OnlyScrews      | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Countersunk Screw M4x20 mm                                   |                      | 4        | $0.03      | ₹ 3.20     | $0.14      | OnlyScrews      | https://onlyscrews.in/products/hex-allen-csk-m4-x-20-screw-pack-of-20                                                                      |
+|                                        |                                | Socket Head M3x10 mm                                         |                      | 4        | $0.03      | ₹ 3.20     | $0.14      | OnlyScrews      | https://onlyscrews.in/products/hex-allen-socket-head-m3-x-10-screw-pack-of-20                                                              |
+|                                        |                                | Socket Head M5x10 mm                                         |                      | 12       | $0.04      | ₹ 4.00     | $0.51      | OnlyScrews      | https://onlyscrews.in/products/hex-allen-socket-head-m5-x-10-screw-pack-of-20                                                              |
+|                                        | Case                           | Motion Control Module Case: Body 1                           | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Motion Control Module Case: Body 2                           | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Motion Control Module Case: Body 3                           | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 |                                                                                                                                            |
+|                                        |                                | Total                                                        |                      |          |            |            | $220.91    | Budget = $250   |                                                                                                                                            |
+| Miscellaneous                          | Goods & Services Tax           | MISUMI 18% GST                                               |                      | 1        | $20.73     | ₹ 1,953.96 | $20.73     | MISUMI          |                                                                                                                                            |
+|                                        |                                | Industrybuying 18% GST                                       |                      | 1        | $6.87      | ₹ 647.64   | $6.87      | Industrybuying  |                                                                                                                                            |
+|                                        |                                | Robokits 18% GST                                             |                      | 1        | $0.12      | ₹ 11.34    | $0.12      | Robokits        |                                                                                                                                            |
+|                                        | Shipping                       | JLCCNC Shipping                                              |                      | 1        | $11.30     |            | $11.30     | JLCCNC          |                                                                                                                                            |
+|                                        |                                | JLCPCB & JLC3DP Shipping                                     |                      | 1        | $10.80     |            | $10.80     | JLCPCB & JLC3DP |                                                                                                                                            |
+|                                        |                                | LCSC Shipping                                                |                      | 1        | $6.61      |            | $20.00     | LCSC            |                                                                                                                                            |
+|                                        | Filament                       | Elegoo PETG-CF Black                                         |                      | 1        | $21.21     | ₹ 1,999.00 | $21.21     | 3D Master India | https://3dmasterindia.in/product/elegoo-carbon-fiber-petg-filament-black-1kg/                                                              |
+|                                        |                                | Elegoo PLA PRO Silver                                        |                      | 2        | $11.40     | ₹ 1,075.00 | $22.81     | Robu            | https://robu.in/product/elegoo-pla-pro-filament-1kg-spool-silver/                                                                          |
+|                                        |                                | Elegoo PLA PRO White                                         |                      | 1        | $11.40     | ₹ 1,075.00 | $11.40     | Robu            | https://robu.in/product/elegoo-pla-pro-filament-1kg-spool-white/                                                                           |
+|                                        | UHMW Tape                      | APT 0.75" x 5 Yds 10 Mil UHMW Tape                           |                      | 1        | $21.15     | ₹ 1,994.00 | $21.15     | Desertcart      | https://www.desertcart.in/products/346216072-apt-uhmw-ultra-high-molecular-weight-polyethylene-tape-resists-abrasion                       |
+|                                        |                                | Total                                                        |                      |          |            |            | $146.40    | Budget = $100   |                                                                                                                                            |
+| Grand Total                            |                                |                                                              |                      |          |            |            | $937.58    | Budget = $1000  |                                                                                                                                            |
+Here's the timelapse of today's session: [PATRA-LPS-91-D111](https://lapse.hackclub.com/timelapse/olcPbMdjOpT3)
+
+**Total time spent: 4h 20m**
 
 ---
+
