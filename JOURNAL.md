@@ -6737,29 +6737,29 @@ This is how the tripteron looks with all the joints applied and the bearing fast
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/307936ef-13ee-4202-8936-1c86b6570948" />
 
-The next actionable step was to apply the joint limits to the TriTeron. I had previously applied joints to the TriTeron multiple times, but I never really got deep into the design where I applied the limits. Due to the lack of limits, there was a lot of interference between the moving legs. Once the leg achieved singularity after it was fully extended up in the air, the joints used to invert.
+The next actionable step was to apply the joint limits to the TriTeron. I had previously applied joints to the TriTeron multiple times, but I never really got deep into the design where I applied the limits. Due to the lack of limits, there was a lot of interference between the moving legs. Once the leg achieved singularity after it was fully extended up in the air, the joints inverted.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f1fb7afc-edc1-472e-bba0-6aeeb9f1892a" />
 
 I also thought of using contact sets, but since they were not working and were unreliable for complex joints, I decided to give the limits in the following angles:
 
 - X Distal Joint
-	- Maximum: 
- 	- Minimum: 
- 
+  - Maximum: 54 deg
+  - Minimum: -85 deg
+
 - Y Distal Joint
-	- Maximum: 
- 	- Minimum: 
- 
+  - Maximum: -54 deg
+  - Minimum: 85 deg
+
 - Z Distal Joint A
-	- Maximum: 
-	- Minimum: 
+  - Maximum: 45 deg
+  - Minimum: -115 deg
 
- - Z Distal Joint B
-	- Maximum: 
-	- Minimum: 
+- Z Distal Joint B
+  - Maximum: -45 deg
+  - Minimum: 115 deg
 
-Following this, there was nothing major left to do in the kinematic base module except for very minor changes, where I removed the end plates from the KBM entirely because they were now moved to the TRM, and a plate under the X and Y lower clamp, which I removed. So, I saved KBM v9 with those very minor changes.
+After that, there was nothing major left to do in the kinematic base module except for very minor changes: I removed the base plates from the KBM entirely because they were now moved to the TRM, and I removed a plate under the X and Y lower clamp. So, I saved KBM v9 with those very minor changes.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/da8e6cf9-98e0-4296-aa30-e27d2f962c62" />
 
@@ -6773,42 +6773,72 @@ Today was the day to put it to the test, so I told it to summarize TRM v7 model 
 
 [This](https://heyvector.co/share/3f6e24fe55da2a9958d2f134c3ad7ea6) is the chat. It said:
 
-"Every leg's six bearings are exactly parallel, and the paired bearings are coaxial, which is the hard part of a tripteron.
-Kinematics are clean: the head moves linearly with the carriages and the Jacobian is well conditioned (cond ≈ 1.42). Now interference.
-Yes, it's good enough for a PLA prototype once you fix the three items below. The kinematics are correct, and the printed parts never collide anywhere in the workspace."
+> "Every leg's six bearings are exactly parallel, and the paired bearings are coaxial, which is the hard part of a tripteron.
+>
+> Kinematics are clean: the head moves linearly with the carriages and the Jacobian is well conditioned (cond ≈ 1.42). Now interference.
+>
+> Yes, it's good enough for a PLA prototype once you fix the three items below. The kinematics are correct, and the printed parts never collide anywhere in the workspace."
 
-**The concept is mathematically sound.** The head moves exactly linearly with the three carriages; it can't rotate, and there are no singularities inside the reach limits. Your fixes check out: every leg now has 1.000 mm clearance to its mount and to the Tool Head, and the X/Y mounts have working sliders. **The 22.2 mm pockets are not applied yet.** Your Move/Copy command and then an "Info" dialog in Fusion blocked my script both times, and I didn't dismiss your dialog.
+**The concept is mathematically sound.** The head moves exactly linearly with the three carriages; it can't rotate, and there are no singularities inside the reach limits. 
 
 The math:
 
 All numbers come from the bearing-pocket axes I measured in the model. The rails run along world X.
 
 **1. One leg passes on one number.** Each leg is three revolute joints with parallel axes along a unit vector \(n_i\). That chain lets the head:
+
 - slide freely in the plane perpendicular to \(n_i\), and
 - rotate only about \(n_i\).
 
 So leg \(i\) transfers just one quantity from its carriage to the head, the motion along \(n_i\). A carriage moving \(\Delta q_i\) along the rail \(e_x\) gives:
-\[ n_i \cdot \Delta p = n_i \cdot (\Delta q_i\, e_x) = n_{ix}\,\Delta q_i \]
+
+\[
+n_i \cdot \Delta p = n_i \cdot (\Delta q_i\, e_x) = n_{ix}\,\Delta q_i
+\]
 
 **2. Three legs together.** Your axes are:
+
 - \(n_X = (-0.500, -0.708, 0.500)\), at 60° to the rails
 - \(n_Y = (-0.500, 0.708, 0.500)\), the mirror of \(n_X\)
 - \(n_Z = (0.707, 0, 0.707)\), at 45° to the rails
 
 None of them is parallel to another, so each leg also blocks the two rotations perpendicular to its own axis. Between them, all rotation is locked. Stacking the three equations gives \(N\,\Delta p = D\,\Delta q\), which solves to:
-\[ \Delta p = \underbrace{\begin{bmatrix}0.25&0.25&0.5\\0.353&-0.353&0\\-0.25&-0.25&0.5\end{bmatrix}}_{J}\Delta q, \qquad \Delta q = \begin{bmatrix}1&1.416&-1\\1&-1.416&-1\\1&0&1\end{bmatrix}\Delta p \]
+
+\[
+\Delta p =
+\underbrace{
+\begin{bmatrix}
+0.25 & 0.25 & 0.5\\
+0.353 & -0.353 & 0\\
+-0.25 & -0.25 & 0.5
+\end{bmatrix}
+}_{J}
+\Delta q,
+\qquad
+\Delta q =
+\begin{bmatrix}
+1 & 1.416 & -1\\
+1 & -1.416 & -1\\
+1 & 0 & 1
+\end{bmatrix}
+\Delta p
+\]
+
 So in practice:
+
 - \(q_Z = x + z\)
 - \(q_X = x + 1.416y - z\)
 - \(q_Y = x - 1.416y - z\)
 
 **3. Mobility.** The textbook Kutzbach formula gives \(6(13-15-1)+15 = -3\). That number is misleading for this kind of mechanism. I set up the full loop equations from the measured joint axes and computed their rank, which gives:
+
 - **3 DOF**, and **0 DOF with the motors locked**.
 - **6 redundant constraints**: 3 because the three legs all lock rotation, and 3 because Z-B duplicates Z-A.
 
 The redundancy is why the parts have to be accurate. You already have the pocket axes parallel to 0.0000°.
 
 **4. Singularities and quality.**
+
 - \(\det N = -1\) and it never changes, so the mechanism can never lose control of the head. This is the "kinematically linear" property.
 - The only singular positions are a leg fully straight (180°) or fully folded (0°), and those are exactly the reach limits.
 - \(J\) is the same everywhere, with condition number 1.42. Resolution and stiffness ratios are therefore uniform across the whole workspace.
@@ -6816,9 +6846,15 @@ The redundancy is why the parts have to be accurate. You already have the pocket
 - Static loads are tiny: \(F_q = J^T F_p\), so 1.5 kg on the head puts only about 3.7 N on the X and Y belts and 7.4 N on the Z belt.
 
 Workspace
+
 - **X (along the rails):** if 1000 mm is each carriage's travel, the stroke is
-  \[ 1000 - 329.5 - 2z - 1.416|y| \text{ mm} \]
+
+  \[
+  1000 - 329.5 - 2z - 1.416|y| \text{ mm}
+  \]
+
   That's **670 mm at the current height**, 790 mm at z = −60 and 590 mm at z = +40. 329.5 mm is the spacing between the Z carriage and the X/Y carriages. If 1000 mm is the rail length instead, subtract the block length as well.
+
 - **Y (across the rails)** depends strongly on height. This assumes elbows kept between 35° and 150°, with z measured from the current head height:
 
 | z (mm) | +40 | +20 | 0 | −20 | −40 | −60 | −100 | −120 |
@@ -7238,7 +7274,10 @@ Here's the timelapse of today's session: [PATRA-LPS-90-D110](https://lapse.hackc
 
 # Day 111 — 14.12.2026:
 
+i missed out these on day #110
 
+Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 
+Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 
 
 Here's the timelapse of today's session: [PATRA-LPS-91-D111]()
 
