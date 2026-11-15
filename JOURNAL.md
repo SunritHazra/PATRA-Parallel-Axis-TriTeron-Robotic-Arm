@@ -4,7 +4,7 @@ Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 31-10-2026
+Updated on: 15-11-2026
 Phase 1 Kinematic Base Module Progress: "98%"
 Phase 1 TriTeron Robot Module Progress: "95%"
 Phase 1 Motion Control Module Progress: "95%"
@@ -7352,7 +7352,7 @@ Here's the timelapse of today's session: [PATRA-LPS-88-D108](https://lapse.hackc
 
 ---
 
-# Day 109 — 09.12.2026: Updated the BOM
+# Day 109 — 09.11.2026: Updated the BOM
 
 The things left to add in the last session were the wires. Most wires in Robu were out of stock and way beyond my needs in length. But before continuing to find the wires, I noticed that the PTFE Teflon coated tape was not suitable for preventing belt wear. So, I instead chose [this](https://www.desertcart.in/products/346216072-apt-uhmw-ultra-high-molecular-weight-polyethylene-tape-resists-abrasion), which costs 1994 INR on Desertcart, after looking at a lot of different options.
 
@@ -7376,7 +7376,7 @@ Here's the timelapse of today's session: [PATRA-LPS-89-D109](https://lapse.hackc
 
 ---
 
-# Day 110 — 10.12.2026: Updating BOM
+# Day 110 — 10.11.2026: Updating BOM
 
 In order to further reduce costs, as always, I decided to print the upper and lower clamps in my own printer instead of ordering from JLC3DP, as I originally thought.
 
@@ -7511,7 +7511,7 @@ Here's the timelapse of today's session: [PATRA-LPS-90-D110](https://lapse.hackc
 
 ---
 
-# Day 111 — 14.12.2026: Journaling & Updating BOM
+# Day 111 — 14.11.2026: Journaling & Updating BOM
 
 Journaled days #102 (partly), #103, #104, #105, #106, #107, #108, and #110.
 
