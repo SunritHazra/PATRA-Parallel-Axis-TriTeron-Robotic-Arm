@@ -1,0 +1,40 @@
+name: Sync XLSX to CSV
+
+on:
+  push:
+    paths:
+      - 'PATRA Phase 1 BOM.xlsx' # Trigger only when this specific file changes
+  workflow_dispatch: # Allows you to run this manually from the Actions tab
+
+permissions:
+  contents: write # Required so the workflow can commit the updated CSV
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pandas openpyxl
+
+      - name: Convert XLSX to CSV
+        run: |
+          python -c "
+          import pandas as pd
+          df = pd.read_excel('PATRA Phase 1 BOM.xlsx')
+          df.to_csv('PATRA Phase 1 BOM.csv', index=False)
+          "
+
+      - name: Commit and push updated CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add PATRA Phase 1 BOM.xlsx
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: sync CSV from XLSX" && git push)
