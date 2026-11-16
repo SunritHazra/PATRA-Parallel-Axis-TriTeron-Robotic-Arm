@@ -7816,13 +7816,13 @@ Here's the timelapse of today's session: [PATRA-LPS-92-D112](https://lapse.hackc
 
 ---
 
-# Day 113 — 16.11.2026: 
+# Day 113 — 16.11.2026: Clearing Discrepancies
 
 I picked up exactly where I left off yesterday. I added the 4 M2 nuts to the BOM and continued exploring the audit to eliminate discrepancies.
 
 Here's what I fixed or verified in the Kinematic Base Module:
 
-- **KBM1:** Tried to fix X Idler placement, which was 1.5 mm below where it was supposed to be. Fusion didn't let me fix it. Not a real threat.
+- **KBM1:** Tried to fix X Idler placement, which was 1.5 mm below where it was supposed to be. Fusion didn't let me fix it. Not a real threat because the washer is already printed, and in the real world, it can't interfere.
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3384def-64a0-41f0-ae04-7fb4e3d41a30" />
 
@@ -7902,12 +7902,49 @@ Here's what I fixed or verified in the Bill of Materials:
 
 - **BOM4:** Y Axis Upper Leg was repeated in the BOM. I deleted one copy of the entry.
 
-- **BOM5:** I had forgotten to add 4040 to 2020 Extrusion Support 1, 2, 3, and 4, 4040 TO 2020 & Z Return Belt Support 1, and 2, X Mount Internal, Y Mount Internal, and Distal Joint Spacers to the BOM. Added those with print material, and quantity.
+- **BOM5:** I had forgotten to add X/Y/Z motor-support blocks, 4040 to 2020 Extrusion Support 1, 2, 3, and 4, 4040 TO 2020 & Z Return Belt Support 1 and 2, X Mount Internal, Y Mount Internal, and Distal Joint Spacers to the BOM. Added those with print material, and quantity.
 
 Besides, I added 4 Socket Head M3x45 mm screws for the KBM, deleted M5 inserts and screws in MCM, and increased the count of M3 inserts and screws.
 
-Here's the timelapse of today's session: [PATRA-LPS-93-D113]()
+To ensure that I don't lose any progress, I saved each module one by one:
 
-**Total time spent: 0h 00m**
+- Saved the Kinematic Base Module (KBM).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8691b4e2-dbae-4f1b-8ecb-f657088e7d7c" />
+
+- Saved the TriTeron Robot Module (TRM).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e9e8c976-d122-4be3-84ce-447e7ca4552a" />
+
+- Saved the Motion Control Module (MCM).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a2fd4a2e-8972-4996-8394-68ae292a800b" />
+
+Then I came up with a better file structure than before, where I decided to include build and design directly under the Phases:
+
+Media
+Phase_1
+	BOM
+	CAD
+	Drawlings
+	PCBA
+	PATRA_Phase_1_Build_Journal.md
+	PATRA_Phase_1_Design_Journal.md
+	README.md
+Phase_2
+Phase_3
+README.md
+
+But then Vector flagged some issues, which I fixed, like the 45 mm fastener reach, X/Y slider ranges, MCM's wrong pilot hole diameter. But there are a few things left on the table:
+
+1. Explain M3x45 mm fastening logic.
+1. Adding tapped holes to MISUMI part number.
+2. Determining the belt tensioning.
+3. Adding all CAD files to repo.
+4. Writing README.md for the repo.
+
+Here's the timelapse of today's session: [PATRA-LPS-93-D113](https://lapse.hackclub.com/timelapse/L75u3vKK_O8M)
+
+**Total time spent: 7h 30m**
 
 ---
