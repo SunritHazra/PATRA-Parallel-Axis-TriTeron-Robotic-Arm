@@ -1,17 +1,19 @@
 ---
+
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 15-11-2026
-Phase 1 Kinematic Base Module Progress: "98%"
-Phase 1 TriTeron Robot Module Progress: "95%"
-Phase 1 Motion Control Module Progress: "95%"
-Phase 1 PATRA Overall Design Progress: "96%"
+Updated on: 16-11-2026
+Phase 1 Kinematic Base Module Progress: "99%"
+Phase 1 TriTeron Robot Module Progress: "98%"
+Phase 1 Motion Control Module Progress: "100%"
+Phase 1 PATRA Overall Design Progress: "99%"
 PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
 Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA"
 Credits: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
+
 ---
 
 # Day 0: Flashback
@@ -7513,7 +7515,7 @@ Here's the timelapse of today's session: [PATRA-LPS-90-D110](https://lapse.hackc
 
 # Day 111 — 14.11.2026: Journaling & Updating BOM
 
-Journaled days #102 (partly), #103, #104, #105, #106, #107, #108, and #110.
+Journaled days #102 (partly), #103, #104, #105, #106, #107, #108, #109, and #110.
 
 Day #102
 
@@ -7551,7 +7553,7 @@ Day #110
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e2abfe3f-5ebd-4c9c-b329-fcfe495d890c" />
 
-I missed out these on day #110 to add them to BOM:
+I missed these on day #110 and added them to BOM:
 
 Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 
 Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 
@@ -7673,3 +7675,239 @@ Here's the timelapse of today's session: [PATRA-LPS-91-D111](https://lapse.hackc
 
 ---
 
+# Day 112 — 15.11.2026: Local Push & Mechanical Audit by Vector
+
+By this day, I was on the verge of completion. I had to individually check the things left in the KBM, TRM, MCM, and push local data to the repo, with a proper file structure.
+
+I started with the file structure first. I had most of the data in my folders, but they lacked structure. So, I created this file structure:
+
+PATRA-Parallel-Axis-TriTeron-Robotic-Arm
+	Media
+	Phase_1
+		Build
+		Design
+			BOM
+			CAD
+			Drawings
+			PCBA
+			JOURNAL.md
+		README.md
+	Phase_2
+	Phase_3
+	References
+
+I included whatever files I had. There were 3 Commits.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/96581000-ae6c-496f-979d-6c9d0ba90c25" />
+
+Meanwhile, I decided to make clever use of AI by making it do the final checks. Told this to Vector: **"Read this. What are the final things left in the Kinematic Base Module, TriTeron Robot Module, and Motion Control Module? Make all the necessary checks across all of the modules. List all the things that are left to be addressed. Take your time, and don't make mistakes."**
+
+Eventually, Vector, using GPT-6 Astra, audited this:
+
+"Mechanical Audit — Remaining Work
+
+I reviewed the mechanical audit of the KBM, TRM, and MCM. I have checked the MCM electronics separately and confirmed that the selected T60 supports 68 VDC. This entry therefore excludes electrical MCM concerns and retains only mechanical findings and related BOM corrections.
+
+These findings refer to the previously inspected KBM v10 recovered, TRM v8 recovered and MCM v3. They are not a fresh verification of subsequent CAD changes. Measured discrepancies are separated from checks that still need completion; an unverified item is not automatically a defective design.
+
+1. Kinematic Base Module
+
+	**Flagged discrepancies:**
+
+	- **X-idler washer placement:** Printed Washer:9 intersects Idler Shaft X. It was approximately \(1.5\,\mathrm{mm}\) too low and \(0.251\,\mathrm{mm}\) displaced along the rail. Re-seat it and check the axial stack.
+	- **Z motor/shaft-adapter collision:** Pulley Shaft Z intersects the 57AM30ED motor model. Correct the D-profile orientation, fit or engagement responsible for the overlap.
+	- **Missing opposite-end support holes:** Lower extrusion Supports 3 and 4 lack the transverse holes present in Supports 1 and 2. Combined upper/Z-return Support 2 lacks the three insert bores present in Support 1.
+	- **Inconsistent shaft-fit dimensions:** X/Y idler shafts measure \(11.8\,\mathrm{mm}\), while the Z idler remains \(12.0\,\mathrm{mm}\). The pulley adapters have \(8.4\,\mathrm{mm}\) motor bores. Confirm the intended fits and manufacturing compensation before ordering the shaft variants.
+	- **Minor Z-coupler overlap:** Two very small overlaps remain between the Z idler cases and coupler. These are low-priority CAD residues, not equivalent to the substantial washer and motor-adapter collisions.
+
+	**Mechanical checks still required:**
+
+	- Define a repeatable belt-tensioning method. Integer tooth counts alone do not establish pretension or allow adjustment for tolerances and creep. The longer purchased belts are intentional cutting stock, not automatically incorrect parts.
+	- Check return-belt clearance with the actual UHMW tape, including shield joints, protruding hardware, sag, tracking and the Z-carriage passage. One sampled bare-CAD gap was approximately \(0.602\,\mathrm{mm}\); nominal 10 mil tape occupies \(0.254\,\mathrm{mm}\).
+	- Finish the extrusion drilling/jig plan, rail alignment, deburring and insert-installation sequence. Verify the delivered profiles and rail/block compatibility.
+	- Finalize the long M2 brace rods/screws, nuts, washers, locking and tool access.
+	- Check motor-support contact, base anchoring, thin connector walls, insert pull-out, bearing/cover retention, shaft torque transfer and belt-clamp retention using the final materials.
+
+2. TriTeron Robot Module
+
+	**Flagged discrepancies:**
+
+	- **Bearing/hardware placement:** At the inspected pose, all 24 bearing axes were displaced approximately \(0.83\text{–}2.13\,\mathrm{mm}\) from their corresponding leg-pocket axes. Representative bearing/leg collisions were confirmed. Re-seat and associate the bearings, washers, spacers, bolts and nuts with the correct moving parts without locking the revolute motion. This is an assembly issue, not a reason to redesign every leg.
+	- **Bearing-seat clearance:** The 24 leg seats still measured nominal \(22.0\,\mathrm{mm}\), despite the journal recording a clearance change. Confirm the desired fit with a printed coupon and actual bearings, then update or explicitly approve the seat dimensions and retention method.
+
+	**Mechanical checks still required:**
+
+	- Register the KBM–TRM interfaces and define the common reference pose. The X/Y hole pitches match at \(25\,\mathrm{mm}\), but their positions differed by approximately \(2\,\mathrm{mm}\) along the rails after registering Z. Because the carriages are movable, this does not prove that the holes are wrong.
+	- Complete the mount-to-block screw schedule, including the tall and short Z-mount stacks, countersunk seating, thread engagement and bottoming clearance.
+	- Establish the safe workspace. All three slider limits were disabled. Check carriage-to-carriage clearance, rail ends, housings, links, hardware, payload and cable sweep, with margin from fully folded/straight configurations. Use the actual joint-axis conventions rather than copying the journal's reversed minimum/maximum entries.
+	- Verify shoulder-screw lengths, locking-nut engagement, washer/race contact, spacer lengths, tightening, backlash and free rotation. Check particularly for binding in the paired Z branches.
+
+3. Motion Control Module — Mechanical Only
+
+	**Flagged discrepancies:**
+
+	- **PCB insert-pocket depth:** The inspected MCM v3 pockets were approximately \(5\,\mathrm{mm}\) deep, whereas the BOM specifies M3×10 inserts. Reconcile the pocket depth and insert length.
+	- **Unequal PCB pilot diameters:** Three pockets measured \(4.4\,\mathrm{mm}\), while one measured \(4.2\,\mathrm{mm}\). Match them to the selected inserts and validated print fit.
+
+	**Mechanical checks still required:**
+
+	- Verify driver and PSU fastener fit, countersunk-head seating, thread engagement and permitted PSU screw penetration against the actual selected hardware.
+	- Check registration-pin fit, glued-joint strength and the assembly sequence under the installed component mass.
+	- Confirm connector, cable-bend and screwdriver clearance, and mechanical service access.
+
+	The three-piece case already exists. It does not need to be treated as an enclosure design task that has not started. No driver-voltage, circuit, firmware or other electrical MCM errors are included here.
+
+4. Mechanical BOM Corrections
+
+	- **M3×8 rail-backing inserts:** The design requires 50 positions, but the audited BOM lists 10 individual inserts. Correct the quantity or identify existing stock/pack quantities.
+	- **M8 washers:** The TRM contains 24, but the BOM lists 20.
+	- **608 bearings:** Reconcile the 608ZZ description with the supplier link naming 608RS bearings in a two-piece pack. Confirm seal type, purchase units and price. The mechanism needs 24 bearings; 25 individual bearings would include one spare.
+	- **Duplicate leg entry:** Remove the repeated Y Axis Leg Upper row.
+	- **Printed subparts:** Explicitly list, or identify within assembly entries, four lower extrusion supports, two combined upper supports, three motor supports, the X/Y Mount Internal pieces and four elbow spacers.
+	- **Missing fastening schedule:** Add the selected brace hardware and KBM–TRM mounting screws.
+	- **Materials and costing:** Confirm white PETG stock for the specified covers/washers and reconcile mechanical hardware prices, purchase units and spares.
+
+	The six MJF shafts and three MCM case bodies are already in the audited BOM and should not be listed as missing.
+
+5. Final Mechanical Release and Validation
+
+	- Freeze a consistent design revision and check off the corrections before generating manufacturing files.
+	- Export only the intended plastic bodies. Several KBM components also contain modeled inserts or fasteners, which must not accidentally be included in print exports.
+	- Re-slice corrected parts with the final materials and orientations; validate critical fits with coupons rather than relying on earlier printability checks.
+	- Define the Phase-1 payload, speed, acceleration, duty cycle, workspace and acceptable deflection/backlash/repeatability. Correct physical material assignments before using CAD mass or structural results; many inspected parts were assigned Steel.
+	- Repair cached references that affect the final parts or assembly. Most severe historical KBM flags belonged to removed components, so not every timeline warning represents a current mechanical defect.
+	- Commission mechanically in stages: free rail/joint movement, belt installation and tensioning, full-range motion, then controlled load, stiffness, repeatability and wear tests.
+
+Overall Result
+
+The basic TRM kinematics passed the instantaneous check: three degrees of freedom, and no remaining mobility with all three carriages locked. The 18 inspected TRM structural/spacer bodies and eight MCM primary bodies had no interference at the inspected pose. These results do not replace hardware-inclusive motion or physical load testing.
+
+The priority is to correct the measured assembly and fit discrepancies, complete the missing holes and mechanical BOM entries, then validate the assembled prototype. The audit does not justify a wholesale redesign of the mechanism."
+
+Besides this, I also had to fix the lack of a nut under the Z lower clamp. The clearance was just 0.935 mm between the upper 2020 extrusion and the bottom face of the lower clamp. I can't use brass inserts, so I decided to use nuts.
+
+Here's how I did it:
+
+- Created a sketch under the lower clamp Z.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/113f108c-2b43-4a7a-9589-7b8d2cf88686" />
+
+- Drew a 4.5 mm diameter hexagon around the circle.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8df1d8f4-f43b-469b-aef0-597bbadfe20f" />
+
+- Added a 0.2 mm offset in the hexagon shape.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/95aa60bb-c9a0-49c4-8523-5716e83020f6" />
+
+- Created a rectangular pattern to copy it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9eadf498-8e84-4622-b065-c7ad1c91a79f" />
+
+- Extruded the shapes by 1.5 mm inward.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3dda605a-1789-44d9-b56d-ffa3a850faac" />
+
+Now I just need to add 4 of [these](https://onlyscrews.in/products/m2-x-3mm-brass-threaded-inserts) nuts to the BOM.
+
+Here's the timelapse of today's session: [PATRA-LPS-92-D112](https://lapse.hackclub.com/timelapse/tKk2-Bwqy92H)
+
+**Total time spent: 2h 35m**
+
+---
+
+# Day 113 — 16.11.2026: 
+
+I picked up exactly where I left off yesterday. I added the 4 M2 nuts to the BOM and continued exploring the audit to eliminate discrepancies.
+
+Here's what I fixed or verified in the Kinematic Base Module:
+
+- **KBM1:** Tried to fix X Idler placement, which was 1.5 mm below where it was supposed to be. Fusion didn't let me fix it. Not a real threat.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3384def-64a0-41f0-ae04-7fb4e3d41a30" />
+
+- **KBM2:** The Z Motor's shaft was in wrong rotation that caused interference. Rotated it to fix.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0a457c5d-db80-4a56-bb62-a1a05551cbcd" />
+
+- **KBM3:**There were no holes on the 2020 and 4040 extrusion supports on the other end. Mirrored to fix it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/872787e1-5f52-4aae-867a-9caf5645bc94" />
+
+- **KBM4:** Idler Shaft Z was supposed to be 11.8 mm in diameter. It was 12 mm. So, I fixed it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b9628c34-2f6c-43e6-9392-e21f4b4eacb2" />
+
+- **KBM5:** I acknowledged that the belts had no way to be tensioned. Must be fixed.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e8852bd9-31e6-4132-bcfb-9f94b089ffad" />
+
+- **KBM6:** Verified that the UHMW tape is 10 mil thick, or 0.254 mm thick, leaving only about 0.348 mm at that location before other thickness/tolerance effects. Besides, the price also changed from 1994 INR to 2000 INR.
+
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6693928d-5502-4a2a-936a-4cb796a7a462" />
+
+- **KBM7:** Confirmed the 4040 extrusion drilling plan. I know a Plywood Machinery Manufacturing Factory that helped me fabricate my V1 Solenoid Engine. One day, I asked them if they could drill M3 holes on 4040 extrusions. They can.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9648fe22-7b79-4416-8803-61a63edfc583" />
+
+- **KBM8:** Day #96 leaves the long M2 threaded-rod versus alternative screw/tapping decision unfinished. I can make it M3 and have MISUMI do the tapping, allowing me to source two of [this](https://onlyscrews.in/products/m3-x-45mm-hex-allen-socket-head-high-tensile12-9-black-oxide-screw-dia-3mm-length-45mm) 45 mm M3 screws for a hole, with a washer. Added 4 to BOM.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f4195bfd-4346-4cc2-a651-d86644c8082e" />
+
+Besides, other flagged errors, like mechanical load paths and serviceability, and Z coupler interferences, are safe to ignore.
+
+Here's what I fixed or verified in the TriTeron Robot Module:
+
+- **TRM1:** The Bearings and the Fastener Sets had no joints. To make sure there is no interference, I added all the joints.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d15a030-8350-4459-a0dc-5e6760a69253" />
+
+- **TRM2:** I don't know how, but the bearing hubs are back to 22 mm in diameter instead of 22.2 mm. Fixed it using offsets.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99760359-37f3-47e5-814f-a1d0967d00fb" />
+
+- **TRM3:** The X and Y Mounts were 2 mm behind on the X axis, or we could say that the X and Y linear blocks were 2 mm ahead on the X axis. They basically didn't line up. So, I moved the blocks 2 mm back.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d30a5e17-7657-4ffe-87d0-d7da64e53b03" />
+
+- **TRM4:** There were no motion limits. I then added motion limits to the X, Y, and Z sliders, where their center could travel 1000 - 58.8 = 941.2 mm. 58.8 mm is the length of the MGN15H linear block. The formula to calculate the maximum or minimum depends on this, which I made: ±[(1000 - 58.8)/2 ± Position on the X-axis]. The plus or minus depends on whether it is the Maximum or Minimum.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9487531c-41ca-4162-a2e0-89288611137e" />
+
+Besides, I also confirmed the shoulder screw lengths, washer thicknesses, and diameters. 
+
+Here's what I fixed or verified in the Motion Control Module:
+
+- **MCM1:** The PCB screw hub depths in the MCM were 5 mm instead of 10 mm. Fixed it using extrusion.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/52e5800b-cbbc-44cc-942f-9384eb9ac479" />
+
+- **MCM2:** [The manual](https://www.scribd.com/document/873287729/closed-loop-stepper-drive) tells that we must use M3 screws for installation. So, I changed the M5 brass insert to M3. Made all the inner diameters 4 mm, which were 4.4 mm and 6 mm before, for M3 and M5, respectively.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65951c84-a296-4cb3-87d5-1a5602e79272" />
+
+- **MCM3:** Verified the length required for the M4 PSU screws. The screws have a selected length of 20 mm. It goes 3 mm inside the PSU, 7 mm inside the screw hub, and 10 mm through the wall. The length is correct as this is a countersunk screw.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57352ce5-c178-4d80-9e0d-10f51e3239b7" />
+
+Besides, I also verified the 68 VDC max voltage and confirmed that I will not be using Homing for the prototype, and left the wiring for the time when I will build this hands on.
+
+Here's what I fixed or verified in the Bill of Materials:
+
+- **BOM1:** I was supposed to add 50 M3x8 mm brass inserts on day #95. But I added only 10 in the BOM. So, I fixed it.
+
+- **BOM2:** TRM has 24 washers. Only 20 are in the BOM. Fixed it.
+
+- **BOM3:** In the BOM, I had listed a 608ZZ bearing, which is better for the tripteron, but listed 6082RS instead. So, I chose [this](https://robu.in/product/miniature-bearings-608zz/) and fixed the price.
+
+- **BOM4:** Y Axis Upper Leg was repeated in the BOM. I deleted one copy of the entry.
+
+- **BOM5:** I had forgotten to add 4040 to 2020 Extrusion Support 1, 2, 3, and 4, 4040 TO 2020 & Z Return Belt Support 1, and 2, X Mount Internal, Y Mount Internal, and Distal Joint Spacers to the BOM. Added those with print material, and quantity.
+
+Besides, I added 4 Socket Head M3x45 mm screws for the KBM, deleted M5 inserts and screws in MCM, and increased the count of M3 inserts and screws.
+
+Here's the timelapse of today's session: [PATRA-LPS-93-D113]()
+
+**Total time spent: 0h 00m**
+
+---
