@@ -5,7 +5,7 @@ Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 16-11-2026
+Updated on: 17-11-2026
 Phase 1 Kinematic Base Module Progress: "99%"
 Phase 1 TriTeron Robot Module Progress: "98%"
 Phase 1 Motion Control Module Progress: "100%"
@@ -7822,7 +7822,7 @@ I picked up exactly where I left off yesterday. I added the 4 M2 nuts to the BOM
 
 Here's what I fixed or verified in the Kinematic Base Module:
 
-- **KBM1:** Tried to fix X Idler placement, which was 1.5 mm below where it was supposed to be. Fusion didn't let me fix it. Not a real threat because the washer is already printed, and in the real world, it can't interfere.
+- **KBM1:** The washer remains misplaced in CAD. It is already printed and will be seated concentrically during assembly, so this CAD-placement discrepancy does not block fabrication.
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3384def-64a0-41f0-ae04-7fb4e3d41a30" />
 
@@ -7890,7 +7890,7 @@ Here's what I fixed or verified in the Motion Control Module:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57352ce5-c178-4d80-9e0d-10f51e3239b7" />
 
-Besides, I also verified the 68 VDC max voltage and confirmed that I will not be using Homing for the prototype, and left the wiring for the time when I will build this hands on.
+Besides, I also verified the 68 VDC max voltage and confirmed that I will not be using Homing for the prototype, and left the wiring for the time when I build this hands on.
 
 Here's what I fixed or verified in the Bill of Materials:
 
@@ -7902,7 +7902,7 @@ Here's what I fixed or verified in the Bill of Materials:
 
 - **BOM4:** Y Axis Upper Leg was repeated in the BOM. I deleted one copy of the entry.
 
-- **BOM5:** I had forgotten to add X/Y/Z motor-support blocks, 4040 to 2020 Extrusion Support 1, 2, 3, and 4, 4040 TO 2020 & Z Return Belt Support 1 and 2, X Mount Internal, Y Mount Internal, and Distal Joint Spacers to the BOM. Added those with print material, and quantity.
+- **BOM5:** I had forgotten to add X/Y/Z motor-support blocks, 4040 to 2020 Extrusion Support 1, 2, 3, and 4, 4040 TO 2020 & Z Return Belt Support 1 and 2, X Mount Internal, Y Mount Internal, and Distal Joint Spacers to the BOM. Added those with print material and quantity.
 
 Besides, I added 4 Socket Head M3x45 mm screws for the KBM, deleted M5 inserts and screws in MCM, and increased the count of M3 inserts and screws.
 
@@ -7926,7 +7926,7 @@ Media
 Phase_1
 	BOM
 	CAD
-	Drawlings
+	Drawings
 	PCBA
 	PATRA_Phase_1_Build_Journal.md
 	PATRA_Phase_1_Design_Journal.md
@@ -7935,16 +7935,68 @@ Phase_2
 Phase_3
 README.md
 
-But then Vector flagged some issues, which I fixed, like the 45 mm fastener reach, X/Y slider ranges, MCM's wrong pilot hole diameter. But there are a few things left on the table:
+But then Vector flagged some issues, which I fixed, like the 45 mm fastener reach, X/Y slider ranges, and MCM's wrong pilot hole diameter. 
 
-1. Explain M3x45 mm fastening logic.
-1. Adding tapped holes to MISUMI part number.
-2. Determining the belt tensioning.
-3. Adding all CAD files to repo.
-4. Writing README.md for the repo.
+But there are a few things left on the table:
+
+1. Explain M3x45 mm fastening logic
+2. Adding tapped holes to the MISUMI and BOM
+3. Determining the belt tensioning
+4. Adding all CAD files to the repo
+5. Writing README.md for the repo
 
 Here's the timelapse of today's session: [PATRA-LPS-93-D113](https://lapse.hackclub.com/timelapse/L75u3vKK_O8M)
 
 **Total time spent: 7h 30m**
+
+---
+
+# Day 114 — 17.11.2026: Clearing Final Discrepancies
+
+Started with what I was left with, following the list of remaining work:
+
+1. **Explain M3x45 mm fastening logic:** The M3 holes are 88 mm across, from the channel of one 4040 extrusion to the other, with the middle point at 44 mm, and are utilized only if the 2020 extrusion has a tapped hole. I can only find 45 mm screws, so I must use washers to bring the screws outward. But standard M3 washers are 0.5 mm thick, and their outer diameter is 7 mm. The channel is 6 mm across at minimum, so it won't fit. I guessed it would be better to print my own washers. Here is what I did:
+
+	1. Created a new sketch
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/798cd0db-71b0-46f0-b073-41843550f053" />
+
+	2. Extruded the sketch.
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4eea2a4f-54d9-421f-b939-bce1b90f689e" />
+
+	3. Copied it to the other positions, 4 times total.
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7fcdc305-2ac4-4e26-aaa5-3b2763a3aa63" />
+
+	Then I structured them in the browser and added them to the BOM.
+	
+3. **Adding tapped holes to the MISUMI and BOM:**
+
+	The first thing I realised was that there was no M5 hole in the coupler Z.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8ea95ef4-cc7e-4059-b059-d82d40f1c5af" />
+
+	I created a 5 mm diameter hole in the couplers.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cef0a68c-7a2b-429f-974c-9ba7e65244bd" />
+
+	But for the configuration, I couldn't confirm what diameter and length MISUMI offers. So, I have to ask the factory now.
+
+5. **Determining the belt tensioning:**
+
+Not Solved
+
+6. **Adding all CAD files to the repo:**
+
+Not Solved
+
+7. **Writing README.md for the repo:**
+
+Not Solved
+
+Here's the timelapse of today's session: [PATRA-LPS-94-D114]()
+
+**Total time spent: 0h 00m**
 
 ---
