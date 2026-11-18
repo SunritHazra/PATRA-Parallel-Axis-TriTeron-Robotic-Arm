@@ -7995,8 +7995,8 @@ Not Solved
 
 Not Solved
 
-Here's the timelapse of today's session: [PATRA-LPS-94-D114]()
+Here's the timelapse of today's session: [PATRA-LPS-94-D114](https://lapse.hackclub.com/timelapse/wwc_wU-R1nBp)
 
-**Total time spent: 0h 00m**
+**Total time spent: 2h 05m**
 
 ---
