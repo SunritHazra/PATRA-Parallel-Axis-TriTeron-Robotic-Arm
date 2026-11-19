@@ -5,7 +5,7 @@ Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 17-11-2026
+Updated on: 19-11-2026
 Phase 1 Kinematic Base Module Progress: "99%"
 Phase 1 TriTeron Robot Module Progress: "98%"
 Phase 1 Motion Control Module Progress: "100%"
@@ -7953,7 +7953,7 @@ Here's the timelapse of today's session: [PATRA-LPS-93-D113](https://lapse.hackc
 
 # Day 114 — 17.11.2026: Clearing Final Discrepancies
 
-Started with what I was left with, following the list of remaining work:
+Started with what I was left with by following the list of remaining work:
 
 1. **Explain M3x45 mm fastening logic:** The M3 holes are 88 mm across, from the channel of one 4040 extrusion to the other, with the middle point at 44 mm, and are utilized only if the 2020 extrusion has a tapped hole. I can only find 45 mm screws, so I must use washers to bring the screws outward. But standard M3 washers are 0.5 mm thick, and their outer diameter is 7 mm. The channel is 6 mm across at minimum, so it won't fit. I guessed it would be better to print my own washers. Here is what I did:
 
@@ -7981,11 +7981,11 @@ Started with what I was left with, following the list of remaining work:
 
 	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cef0a68c-7a2b-429f-974c-9ba7e65244bd" />
 
-	But for the configuration, I couldn't confirm what diameter and length MISUMI offers. So, I have to ask the factory now.
+	But for the configuration, I couldn't confirm what diameter and length MISUMI offers. So, I am not going to configure the MISUMI part number unless I have spoken with their customer service. But I know where and what size holes I need.
 
 5. **Determining the belt tensioning:**
 
-Not Solved
+	I had no idea what to do about this. Vector suggested: "For your KBM, I recommend a screw-adjustable idler carrier—one independently adjustable carrier for each belt. Move the idler pulley, shaft and both bearings together, while keeping the outer housing fixed."
 
 6. **Adding all CAD files to the repo:**
 
@@ -7998,5 +7998,17 @@ Not Solved
 Here's the timelapse of today's session: [PATRA-LPS-94-D114](https://lapse.hackclub.com/timelapse/wwc_wU-R1nBp)
 
 **Total time spent: 2h 05m**
+
+---
+
+# Day 115 — 18.11.2026: 
+
+https://www.aluflex.com/wp-content/uploads/PDF-Montageinstruktion-skenstyrning-PMI.pdf
+
+
+
+Here's the timelapse of today's session: [PATRA-LPS-94-D115]()
+
+**Total time spent: 0h 00m**
 
 ---
