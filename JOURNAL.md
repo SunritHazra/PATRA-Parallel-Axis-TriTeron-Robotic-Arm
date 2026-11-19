@@ -6,13 +6,12 @@ Description: An open-source nine-degrees-of-freedom hybrid robot architecture of
 Created on: 02-05-2026
 Started on: 10-04-2026
 Updated on: 19-11-2026
-Phase 1 Kinematic Base Module Progress: "99%"
-Phase 1 TriTeron Robot Module Progress: "98%"
+Phase 1 Kinematic Base Module Progress: "99.5%"
+Phase 1 TriTeron Robot Module Progress: "100%"
 Phase 1 Motion Control Module Progress: "100%"
-Phase 1 PATRA Overall Design Progress: "99%"
+Phase 1 PATRA Overall Design Progress: "99.84%"
 PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
-Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA"
-Credits: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
+Credits: Forge YSWS — Hack Club (USA), JLCPCB/EasyEDA (China), Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA/Shenzhen, CN), Annie (OmniSim, USA), Dan Rudmin (Zaber Tech, CA), Jeff (Vector, USA)
 
 ---
 
@@ -8003,12 +8002,53 @@ Here's the timelapse of today's session: [PATRA-LPS-94-D114](https://lapse.hackc
 
 # Day 115 — 18.11.2026: 
 
-https://www.aluflex.com/wp-content/uploads/PDF-Montageinstruktion-skenstyrning-PMI.pdf
+I started today's session by reading in detail what Vector had suggested for fixing the belt tensioning. It recommended a screw-adjustable idler carrier for each belt, where the pulley, shaft, and bearings move together inside a redesigned housing. That meant changing all six pulley and idler cases, which I did not want to do.
 
+So I read [this](https://www.aluflex.com/wp-content/uploads/PDF-Montageinstruktion-skenstyrning-PMI.pdf) datasheet, and suggested something much simpler instead. Since I am going to cut the belts anyway, what if I just change the distance between the fifth and sixth teeth of the clamp?
 
+Vector checked the math and showed what actually happens:
+
+1. Bringing the two cut ends closer together (making the middle gap less than 5 mm) stretches the rest of the belt and increases tension.
+2. Keeping the normal 5 mm pitch inside each gripping side preserves the teeth engagement and the MGN15H mounting holes.
+3. Reducing the gap too much makes the cut belt ends collide with each other.
+4. It is a fixed-preload clamp, not something I can adjust after printing.
+
+It made sense, so I told Vector to work on a parametric fixed-gap clamp block where I can change that middle gap in Fusion.
+
+While Vector was running in Fusion, I opened the Bill of Materials and added a new status column for all the parts so I can keep track of everything:
+
+• Commercial parts and electronics: "Not Purchased"
+• Shipping and taxes: "Not Paid"
+• 3D printed parts: "Fabricated" or "Not Fabricated"
+
+But then, I decided that I am not going to work on this belt-tensioning issue any further for now.
+
+Here is why:
+
+1. I already have a 3D printer at home, allowing me to fabricate new parts whenever I want.
+2. I am going to build this physically in late March or April, not right now, obviously because of ICSE.
+3. If I face any tensioning problems during assembly, I can easily change the parameter and reprint the small clamp.
+
+Right now, uploading the CAD files, writing the README, and submitting the project matter more than fixing an issue I can solve myself months later. And honestly, I am quite annoyed by the fact that I am to completion and yet I can't submit. Whatever model Vector will make will be saved for when I build Phase 1 and realise that the tensioning is wrong.
+
+The next step was to add the CAD files. I started with the TRM and MCM. I saved both as v10 and v5, respectively. 
+
+Then I made 3 new folders under CAD:
+
+1. Kinematic Base Module
+2. TriTeron Robot Module
+3. Motion Control Module
+
+Then I began exporting the .f3d (except in MCM), .step, and .3mf (one body per file) files under each, starting with TRM, MCM, Linear Rail, MGN15H Linear Blocks, and then KBM at last.
+
+After this, there were this many files under each folder:
+
+1. **Kinematic Base Module v12:** Total 357 files. 355 were .3mf files. I deleted all Ball Bearings, Screws, Washers, Aluminium Extrusions, Rtelligent Motors, Belts, Pulleys/Idlers, and Inserts. Only 70 files left in total. All .3mf files are print files.
+2. **TriTeron Robot Module v10:** Total 453 files. 451 were .3mf files. I deleted all Ball Bearings and Fasteners. Only 17 files left in total. All .3mf files are print files. All .3mf files are print files.
+3. **Motion Control Module v5:** Total 1003 files. 1002 were .3mf files. I deleted the entire PCB, the Mean Well LRS-600-48, and the three Rtelligent T60s. Only 4 files left in total. All .3mf files are print files.
 
 Here's the timelapse of today's session: [PATRA-LPS-94-D115]()
 
-**Total time spent: 0h 00m**
+**Total time spent: 0h 00m** + 20 min
 
 ---
