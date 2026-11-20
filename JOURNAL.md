@@ -8201,8 +8201,52 @@ With this, all local files were pushed to GitHub.
 
 After this, only the README remained. But I was too exhausted to write the README. But I had to anyway.
 
-Here's the timelapse of today's session: [PATRA-LPS-96-D116]()
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a89113d8-5a9e-401c-bcf1-c32da8e38d57" />
 
-**Total time spent: 3h 30m**
+Then I added these images to the README as well as the media folder.
+
+patra-phase-1.png to PATRA_Phase_1_v2.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e40fa831-8dfe-472c-9fce-a4087219fab3" />
+
+kbm.png to Kinematic_Base_Module.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/48f6972a-d0d3-4c57-9df9-b14fa96ffb5b" />
+
+trm.png to TriTeron_Robot_Module.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/682015fd-fd57-4295-9a1c-e7d57dcdf7fe" />
+
+mcm.png to Motion_Control_Module.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0beae347-ddb9-4f56-b5c8-ca3c14906215" />
+
+shematic.png to Schematic_PATRA_Phase1_PCB.png
+
+<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/fa5e2e8c-5b3d-42bb-821a-32e82cc9a791" />
+
+pcb-front.png to PATRA_Phase1_PCB_Front.png
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/02ec54e2-8258-4684-b070-e223714a4140" />
+
+pcb-back.png to PATRA_Phase1_PCB_Back.png
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0969379b-23d7-4fde-a926-d8ff1ffb96dc" />
+
+pcba.png to PATRA_Phase1_PCBA.png
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7f6f28a1-0e75-4b45-aaca-d489032ab19e" />
+
+Then, I pushed all the images to GitHub.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b09dfa3a-114d-43c5-8755-7d97e69f6092" />
+
+Finally, committed the README too, with images.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1099fef3-5820-4c3b-8945-34718faf629d" />
+
+Here's the timelapse of today's session: [PATRA-LPS-96-D116](https://lapse.hackclub.com/timelapse/IDIXN17Ku4p4)
+
+**Total time spent: 4h 15m**
 
 ---
