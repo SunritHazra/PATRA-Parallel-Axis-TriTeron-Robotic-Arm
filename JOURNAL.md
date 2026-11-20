@@ -8000,7 +8000,7 @@ Here's the timelapse of today's session: [PATRA-LPS-94-D114](https://lapse.hackc
 
 ---
 
-# Day 115 — 18.11.2026: Uploading CAD to Repository
+# Day 115 — 19.11.2026: Finalising Phase 1 Design & Downloading CAD Locally
 
 I started today's session by reading in detail what Vector had suggested for fixing the belt tensioning. It recommended a screw-adjustable idler carrier for each belt, where the pulley, shaft, and bearings move together inside a redesigned housing. That meant changing all six pulley and idler cases, which I did not want to do.
 
@@ -8051,9 +8051,9 @@ Combined all the modules into the Phase 1 PATRA file and saved it as v2.
 
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8d52d7ca-d176-4dfc-9e04-57f2350d2e87" />
 
-Exported this under the CAD folder as .usdz and .step file. Deleted the PATRA Phase 1 v1.step. Tried to push all CAD files (except **Kinematic_Base_Module\Kinematic Base Module (KBM) v12.f3d**, **PATRA Phase 1 v2.step**, **Kinematic Base Module (KBM) v12_Kinematic Base Module (KBM) v12_Supports_1_Aluminum Extrusion Support Blocks_1_4040 TO 2020 & Z Return Belt Supports_1_4040 TO 2020 & Z Return Belt Support 1_1_Body1.3mf**, and **Kinematic Base Module (KBM) v12_ Kinematic Base Module (KBM) v12_Supports_1_Aluminum Extrusion Support Blocks_1_4 040 TO 2020 & Z Return Belt Supports_1_4040 TO 2020 & Z Return Belt Support 2_1_ Body1.3mf** as first two are over 100 MB and last 2 names are too long) from local folder to repository, but I failed due to the long names. Writing README.md still remains.
+Exported this under the CAD folder as .usdz and .step files. Deleted the PATRA Phase 1 v1.step. Tried to push all CAD files (except **Kinematic_Base_Module\Kinematic Base Module (KBM) v12.f3d**, **PATRA Phase 1 v2.step**, **Kinematic Base Module (KBM) v12_Kinematic Base Module (KBM) v12_Supports_1_Aluminum Extrusion Support Blocks_1_4040 TO 2020 & Z Return Belt Supports_1_4040 TO 2020 & Z Return Belt Support 1_1_Body1.3mf**, and **Kinematic Base Module (KBM) v12_ Kinematic Base Module (KBM) v12_Supports_1_Aluminum Extrusion Support Blocks_1_4 040 TO 2020 & Z Return Belt Supports_1_4040 TO 2020 & Z Return Belt Support 2_1_ Body1.3mf** as first two are over 100 MB and last 2 names are too long) from local folder to repository, but I failed due to the long names. Writing README.md still remains.
 
-I would do something about the large files and long named files.
+I would do something about the large files and long-named files.
 
 This is the updated BOM, by the way:
 
@@ -8174,8 +8174,35 @@ This is the updated BOM, by the way:
 | Grand Total                            |                                |                                                              |                      |          |            |            | $932.12    | Budget = $1000  |                |                                                                                                                                            |
 
 
-Here's the timelapse of today's session: [PATRA-LPS-94-D115](https://lapse.hackclub.com/timelapse/IDIXN17Ku4p4)
+Here's the timelapse of today's session: [PATRA-LPS-95-D115](https://lapse.hackclub.com/timelapse/IDIXN17Ku4p4)
 
 **Total time spent: 4h 00m**
+
+---
+
+# Day 116 — 20.11.2026: Uploading CAD to Repository
+
+With the help of Google AI, I solved the problems with the CAD upload.
+
+I installed Git and Git LFS. Then I entered these commands in Git Bash:
+
+	git lfs install
+	git config --global core.longpaths true
+
+Then I opened the Repository from GitHub Desktop in Git Bash and entered these commands:
+
+	git lfs track "Phase_1/CAD/Kinematic_Base_Module/Kinematic Base Module (KBM) v12.f3d"
+	git lfs track "Phase_1/CAD/PATRA Phase 1 v2.step"
+	git add .gitattributes
+
+With this, all local files were pushed to GitHub.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/456104a2-1917-455b-ac0f-aefbfd262b99" />
+
+After this, only the README remained. But I was too exhausted to write the README. But I had to anyway.
+
+Here's the timelapse of today's session: [PATRA-LPS-96-D116]()
+
+**Total time spent: 3h 30m**
 
 ---
