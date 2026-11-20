@@ -1,15 +1,13 @@
-# PATRA — Phase 1
+# PATRA: Phase 1
 
-PATRA (Parallel Axis TriTeron Robotic Arm) is a nine-degree-of-freedom hybrid robotic system combining a three-degree-of-freedom (3-DOF) parallel manipulator with a six-degree-of-freedom (6-DOF) serial robotic arm. The system is designed to combine the workspace coverage and structural advantages of a parallel mechanism with the dexterity and orientation capabilities of a conventional robotic arm.
+PATRA (Parallel Axis TriTeron Robotic Arm) is a nine-degree-of-freedom hybrid robotic system combining a three-degree-of-freedom (3-DOF) parallel manipulator with a six-degree-of-freedom (6-DOF) serial robotic arm. The system is designed to combine the workspace coverage of a parallel mechanism with the dexterity and orientation capabilities of a conventional robotic arm.
+
+![PATRA Phase 1 v2 assembly](Media/PATRA_Phase_1_v2.png)
 
 > [PATRA_Phase_1_Design_Journal.md](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/PATRA_Phase_1_Design_Journal.md)  
 > [PATRA_Phase_1_Build_Journal.md](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/PATRA_Phase_1_Build_Journal.md)
 
-This phase documents the parallel platform and its motion-control system, comprising the Kinematic Base Module (KBM), TriTeron Robot Module (TRM), and Motion Control Module (MCM). The serial robotic arm is planned for a later phase. This is an open-source robotics project by Sunrit Hazra, developed as part of the **Hack Club Forge** YSWS program.
-
-The idea began with a TriTeron video I found in December 2025. I later studied [Dan Rudmin's mechanism at Zaber Technologies][ref-rudmin] and [Rowan Hunt's carriage arrangement][ref-rowan]. I wanted to understand the mechanism well enough to build a version using affordable components and manufacturing methods available to me.
-
-I started development on 10 April 2026. Since then, the work has involved considerably more than assembling purchased CAD models. I have redesigned housings, changed transmission choices, corrected mounting interfaces, and developed a dedicated controller carrier PCB.
+This phase documents the parallel platform and its motion-control system, comprising the Kinematic Base Module (KBM), TriTeron Robot Module (TRM), and Motion Control Module (MCM). The serial robotic arm is planned for a later phase. This is an open-source robotics project by Sunrit Hazra, released under the [MIT licence][ref-licence] and developed as part of the **Hack Club Forge** YSWS program.
 
 ---
 
@@ -26,7 +24,13 @@ I started development on 10 April 2026. Since then, the work has involved consid
 
 ## 1. Project Overview
 
-### 1.1 Scope and Objectives
+### 1.1 Background
+
+The idea began with a TriTeron video I found in December 2025. I later studied [Dan Rudmin's mechanism at Zaber Technologies][ref-rudmin] and [Rowan Hunt's carriage arrangement][ref-rowan]. I wanted to understand the mechanism well enough to build a version using affordable components and manufacturing methods available to me.
+
+I started development on 10 April 2026. Since then, the work has involved considerably more than assembling purchased CAD models. I have redesigned housings, changed transmission choices, corrected mounting interfaces, and developed a dedicated controller carrier PCB.
+
+### 1.2 Scope and Objectives
 
 Phase 1 includes:
 
@@ -36,9 +40,7 @@ Phase 1 includes:
 
 The objectives are to build a working translational prototype, test a **1 kg payload target**, and establish which parts need improvement before introducing machined components or a serial arm.
 
-The current release covers the design and its supporting files. Most purchasing, fabrication, wiring, and physical testing remain ahead. No completed RAM, measured positioning accuracy or demonstrated payload capacity is claimed here.
-
-### 1.2 Principal Specifications
+### 1.3 Principal Specifications
 
 | Item | Current design |
 | --- | --- |
@@ -56,9 +58,9 @@ The current release covers the design and its supporting files. Most purchasing,
 | Controller and supply | Teensy 4.1; Mean Well LRS-600-48 |
 | Design tools | Autodesk Fusion and EasyEDA Pro |
 
-### 1.3 Project Status
+### 1.4 Project Status
 
-Phase 1 has been submitted to Forge Hack Club for review. Development has not yet started. No parts have been ordered yet.
+Phase 1 has been submitted to Hack Club Forge for review. This release covers the design and its supporting files. The physical build has not started, and no parts have been ordered. Nine bearing covers and twelve spacing washers have been printed. No completed RAM, measured positioning accuracy or demonstrated payload capacity is claimed here.
 
 ---
 
@@ -68,9 +70,9 @@ Phase 1 has been submitted to Forge Hack Club for review. Development has not ye
 
 The KBM provides the frame and independently driven carriage positions required by the TRM. All three actuator groups move along the parallel rail direction. The names X, Y, and Z identify those groups, not three perpendicular physical rails.
 
-[kbm]
+![Kinematic Base Module v12](Media/Kinematic_Base_Module.png)
 
-#### 2.1.1 Structure and guidance
+#### 2.1.1 Structure and Guidance
 
 The frame uses MISUMI HFS5-4040-1000 and LCF6-2020-1135 profiles. Two MGN15H rails support four blocks: one for each X/Y carriage and two for the Z carriage. Printed support blocks connect the extrusions and support the motors and return-belt path.
 
@@ -82,53 +84,47 @@ Each actuator has a motor-driven pulley, an idler and a cut belt secured to the 
 
 The assemblies use twelve 6901ZZ bearings, custom pulley and idler shafts, printed housings, covers, and spacing washers. The current BOM assigns the shafts to MJF PA12S-HP nylon and the main housings to PETG-CF.
 
-#### 2.1.3 Extrusion fastening
+#### 2.1.3 Extrusion Fastening
 
-Four M3×45 mm screws and four custom-printed washers form the revised brace-fastening arrangement. The screw seats are inside the extrusion channels, not on the outermost profile faces. The geometry requires the intended tapped holes in the mating profiles. I have identified the hole locations, but will confirm MISUMI's available machining options before finalising the ordering codes.
+Four M3×45 mm screws and four custom-printed washers form the brace-fastening arrangement. The screw seats are inside the extrusion channels, not on the outermost profile faces. The geometry requires tapped holes in the mating profiles.
 
-#### 2.1.4 Return-belt protection
+#### 2.1.4 Return-Belt Protection
 
 UHMW tape is specified over the relevant support surfaces. Its 10 mil thickness is 0.254 mm. The sampled clearance leaves approximately 0.348 mm after one nominal tape layer, before other manufacturing and assembly effects.
-
-[belt-clamp]
 
 ### 2.2 TriTeron Robot Module (TRM)
 
 The TRM connects the three carriage groups to one tool head. Its joint-axis arrangement is intended to permit translation while constraining head rotation.
 
-[trm]
+![TriTeron Robot Module v10](Media/TriTeron_Robot_Module.png)
 
-#### 2.2.1 Linkage arrangement
+#### 2.2.1 Linkage Arrangement
 
 There are four physical two-link branches: X, Y, Z-A and Z-B. Together they contain eight links and twelve revolute joints. The two Z branches share one actuator group; they do not add a fourth independently driven axis.
 
-#### 2.2.2 Bearings and fasteners
+#### 2.2.2 Bearings and Fasteners
 
-The pivot assemblies use twenty-four 608ZZ bearings, twelve MISUMI MSB8-30 shoulder screws, twelve DIN 982 M6 nuts and twenty-four M8 washers. Four printed distal-joint spacers are included separately.
-
-The current arrangement uses two bearings per pivot. The three bearing locations associated with a printed link should not be confused with three nested bearings at every joint.
+The pivot assemblies use twenty-four 608ZZ bearings, twelve MISUMI MSB8-30 shoulder screws, twelve DIN 982 M6 nuts and twenty-four M8 washers. Four printed distal-joint spacers are included separately. Each pivot uses two bearings.
 
 #### 2.2.3 Interfaces
 
 The X and Y mounts connect to the KBM clamp interfaces through their internal mounting pieces. The paired Z linkage attaches to its own mount. The tool head brings the branches together and provides the platform for later fixtures or the RAM.
 
-The bearing seats were corrected to a nominal 22.2 mm diameter for 22 mm bearings. That provides a modelled fit allowance, not a guarantee of the fit produced by a particular printer.
+The bearing seats have a nominal 22.2 mm diameter for 22 mm bearings. That provides a modelled fit allowance, not a guarantee of the fit produced by a particular printer.
 
-[trm-joints]
-
-[leg-drawing]
+![Z-axis lower leg drawing](Drawings/Z%20Axis%20Leg%20Lower%20A%20Drawing%20v3.jpg)
 
 ### 2.3 Motion Control Module (MCM)
 
 The MCM contains the power and control hardware needed to operate the three actuators, with a mounting arrangement that leaves the connectors accessible.
 
-[mcm]
+![Motion Control Module v5](Media/Motion_Control_Module.png)
 
-#### 2.3.1 Power and drivers
+#### 2.3.1 Power and Drivers
 
-A Mean Well LRS-600-48 supplies the system's 48 V rail. Three Rtelligent T60 drivers operate the closed-loop stepper motors. The selected T60 supports up to 68 VDC; this is not the T60S substitution used in an earlier overview.
+A Mean Well LRS-600-48 supplies the system's 48 V rail. Three Rtelligent T60 drivers operate the closed-loop stepper motors. The T60 supports up to 68 VDC.
 
-Motor encoder feedback closes the motor-driver loop. It does not directly measure tool-head position or correct belt stretch, linkage compliance or backlash.
+Motor encoder feedback closes the motor-driver loop. It does not directly measure tool-head position or correct belt stretch, linkage compliance or backlash. The prototype has no automatic homing, so it relies on a manually set reference position and bounded motion commands.
 
 #### 2.3.2 Controller PCB
 
@@ -145,19 +141,21 @@ The Teensy is supplied from the 5 V logic power rail, but its GPIO signals are 3
 
 Each six-pin driver interface carries pulse positive/negative, direction positive/negative, and enable positive/negative. The PCB separates the 48 V input domain from the isolated logic domain; its copper keepouts were part of the layout work.
 
-[schematic]
+The schematic is arranged in six blocks. The 48 V supply enters through a two-way terminal and a fuse, with a test point on each rail. The isolated converter produces the 5 V logic rail, with 100 nF and 100 µF capacitors on its input and output. The Teensy 4.1 generates the pulse, direction and enable signals, and the 74HCT245D buffers them to 5 V. Six 10 kΩ resistors pull the pulse and direction lines to ground. Three six-pin headers carry the 5 V signals to the drivers, with their negative pins tied to logic ground.
 
-[pcb-front]
+![Controller PCB schematic](PCBA/Schematic_PATRA_Phase1_PCB.png)
 
-[pcb-back]
+![Controller PCB, top side](Media/PATRA_Phase1_PCB_Front.png)
 
-[pcba]
+![Controller PCB, bottom side](Media/PATRA_Phase1_PCB_Back.png)
 
-#### 2.3.3 Case and mounting
+![Assembled controller PCB](Media/PATRA_Phase1_PCBA.png)
 
-The case is divided into three printable bodies, with locating features and clearance for assembly. The current fastener selection uses sixteen M3×10 mm inserts and matching screws for the drivers and PCB, plus four M4×20 mm countersunk screws for the PSU.
+#### 2.3.3 Case and Mounting
 
-The PCB insert pockets were corrected to the intended 10 mm depth. Driver mounting was changed from M5 to M3. The case layout was also revised for connector access, screw access and component spacing.
+The case is divided into three printable bodies, with locating features and clearance for assembly. The fastener selection uses sixteen M3×10 mm inserts and matching screws for the drivers and PCB, plus four M4×20 mm countersunk screws for the PSU.
+
+The PCB insert pockets are 10 mm deep, and the drivers mount with M3 screws. The case layout allows for connector access, screw access and component spacing.
 
 ---
 
@@ -188,6 +186,8 @@ The calculation describes the reference path, not an instruction to purchase fac
 
 #### 3.1.2 Fixed-Gap Clamp Principle
 
+Separate parametric clamp templates are kept alongside the installed clamps. Their `FG_XY_Gap` and `FG_Z_Gap` parameters set the separation across the cut belt ends, and both start at 5 mm. The templates have not been physically tested.
+
 For a fixed pitch path $`P`$, retained tooth count $`N`$ and separation $`d`$ between the tooth centres across the cut, the nominal take-up can be represented by:
 
 ```math
@@ -199,8 +199,6 @@ For a fixed pitch path $`P`$, retained tooth count $`N`$ and separation $`d`$ be
 At an unchanged tooth count, reducing the centre gap increases the extension required from the belt. For example, reducing a 5 mm reference gap to 4.5 mm gives $`\Delta\delta=5.0-4.5=0.5\,\mathrm{mm}`$ additional geometric take-up. This is not a specified tension force.
 
 The tooth pitch inside each intact gripping section stays unchanged. The cut faces must still clear each other, the clamps must retain enough engaged teeth, and the cords must not be damaged. Adding teeth is not automatically a way to increase tension.
-
-I deferred further development deliberately. I have a printer at home and can reprint a small clamp when the actual belt and assembly are available. The templates have not undergone a complete parameter-range or physical tension test.
 
 ### 3.2 Carriage-to-Head Kinematics
 
@@ -337,8 +335,6 @@ Earlier scoped static checks found no overlap among eighteen selected TRM printe
 
 No completed structural FEA, thermal simulation, fatigue analysis or physical performance testing is claimed. The numerical work here is kinematic and analytical, while the Fusion work is geometric and joint-based.
 
-[kinematic-analysis]
-
 ---
 
 ## 4. Manufacturing and Budget
@@ -356,8 +352,6 @@ No completed structural FEA, thermal simulation, fatigue analysis or physical pe
 | Controller board | PCB fabrication followed by assembly |
 
 I use an Elegoo Centauri Carbon for home printing. Final orientation, supports, wall count, infill, and fit compensation will be documented during fabrication rather than presented as already validated settings.
-
-[printed-parts]
 
 ### 4.2 Procurement Summary
 
@@ -383,22 +377,26 @@ The total follows the supplied BOM's underlying values; displayed subtotal round
 | [CAD][ref-cad] | Module folders, retained print geometry and combined assembly |
 | [Drawings][ref-drawings] | Available leg drawing and reference image |
 | [PCBA][ref-pcba] | EasyEDA source, schematic image, Gerbers, PCB BOM and STEP references |
-| [Main journal][ref-journal] | Latest development record, including release preparation |
-| [Phase design journal][ref-design-journal] | Phase-specific design record; currently an older copy |
+| [Main journal][ref-journal] | Full development record, including release preparation |
+| [Phase design journal][ref-design-journal] | Phase-specific design record |
 | [Phase build journal][ref-build-journal] | Reserved for fabrication, assembly and testing |
 
 ### 5.2 CAD Versions and Print Exports
 
-| Module | Revision | Retained files | Export formats |
-| --- | --- | ---: | --- |
-| [KBM][ref-kbm-cad] | v12 | 70 | Native Fusion archive, STEP and 3MF geometry |
-| [TRM][ref-trm-cad] | v10 | 17 | Native Fusion archive, STEP and 3MF geometry |
-| [MCM][ref-mcm-cad] | v5 | 4 | STEP and three 3MF case bodies |
-| Combined Phase 1 | v2 | 2 | STEP and USDZ |
+| Module | Revision | Export formats |
+| --- | --- | --- |
+| [KBM][ref-kbm-cad] | v12 | Native Fusion archive, STEP and 3MF geometry |
+| [TRM][ref-trm-cad] | v10 | Native Fusion archive, STEP and 3MF geometry |
+| [MCM][ref-mcm-cad] | v5 | STEP and three 3MF case bodies |
+| Combined Phase 1 | v2 | STEP and USDZ |
 
-> The initial body exports included many bearing, fastener, and electronics bodies. I removed those purchased-part exports so that the retained 3MF files represent intended print geometry. Their quantities and materials must still follow the BOM; file counts are not physical part counts.
+The 3MF files contain printed parts only. Quantities and materials follow the BOM.
 
-### 5.3 Documentation to Be Added
+### 5.3 Git LFS
+
+The KBM v12 native Fusion archive and the combined Phase 1 v2 STEP assembly are stored with [Git LFS][ref-lfs]. Install Git LFS and pull the LFS objects before opening them; without it, they download as small text pointer files.
+
+### 5.4 Documentation to Be Added
 
 | Section | Planned content |
 | --- | --- |
@@ -423,4 +421,22 @@ I did not accept every suggestion. I checked or corrected findings, retained dec
 
 I acknowledge **Dan Rudmin of Zaber Technologies** and **Rowan Hunt of Not An Engineer** for the reference mechanisms and discussions that shaped PATRA. I also thank **Zisheng Li of Anvol**, **Annie of OmniSim**, **Jeff of Vector**, and **Hack Club Forge** for the assistance and opportunities recorded in the journal.
 
----
+### 6.3 Licence
+
+PATRA is open source under the **MIT licence**, copyright 2026 Sunrit Hazra. The [repository licence][ref-licence] gives the terms.
+
+[ref-bom]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/BOM
+[ref-build-journal]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/PATRA_Phase_1_Build_Journal.md
+[ref-cad]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/CAD
+[ref-design-journal]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/PATRA_Phase_1_Design_Journal.md
+[ref-drawings]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/Drawings
+[ref-journal]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/JOURNAL.md
+[ref-kbm-cad]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/CAD/Kinematic_Base_Module
+[ref-lfs]: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage
+[ref-licence]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/LICENSE
+[ref-mcm-cad]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/CAD/Motion_Control_Module
+[ref-pcba]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/PCBA
+[ref-rowan]: https://www.youtube.com/watch?v=io4S9amExNM
+[ref-rudmin]: https://www.youtube.com/watch?v=6EtXycVGJg4
+[ref-trm-cad]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1/CAD/TriTeron_Robot_Module
+[ref-vector-review]: https://heyvector.co/share/3f6e24fe55da2a9958d2f134c3ad7ea6
