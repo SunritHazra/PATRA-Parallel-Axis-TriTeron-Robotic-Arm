@@ -1,149 +1,139 @@
 # PATRA: Parallel Axis TriTeron Robotic Arm
 
- **PATRA (Parallel Axis TriTeron Robotic Arm)** is an open-source robotic system developed by Sunrit Hazra as part of the **Hack Club Forge** program. The project combines a three-degree-of-freedom (3-DOF) parallel-axis mechanism, based on the TriTeron concept, with a six-degree-of-freedom (6-DOF) serial robotic arm.
+PATRA is a nine-degree-of-freedom hybrid robotic system combining a three-degree-of-freedom (3-DOF) parallel manipulator with a six-degree-of-freedom (6-DOF) serial robotic arm. The system is designed to combine the workspace coverage of a parallel mechanism with the dexterity and orientation capabilities of a conventional robotic arm.
 
- The system is designed to provide approximately 1 metre of linear movement while carrying a target payload of 2 kg. Unlike a conventional industrial seventh-axis system, which generally provides a single additional translational degree of freedom, PATRA uses a three-axis parallel mechanism to move the robotic arm across a larger workspace.
+![PATRA Phase 1 v2](Phase_1/Media/PATRA_Phase_1_v2.png)
 
- The project focuses not only on the final robot, but also on documenting the engineering process used to develop it. Its development records include mechanical design iterations, kinematic calculations, component selection, manufacturing constraints, sourcing decisions, and design-for-manufacturing (DFM) studies.
+> [Phase 1 Design Journal](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/JOURNAL.md)  
+> [Phase_1 README](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/README.md)
 
-<img width="1366" height="733" alt="PATRA Phase 1" src="https://github.com/user-attachments/assets/c9071fa8-9407-444e-9aa6-5c4eab8c5069" />
+PATRA is developed in three phases. Phase 1, the parallel platform and its motion-control system, is the current phase. The serial robotic arm is planned for a later phase. This is an open-source robotics project by Sunrit Hazra, released under the [MIT licence][ref-licence] and developed as part of the **Hack Club Forge** YSWS program.
 
- ## System architecture
+I am a 15-year-old student from Kolkata, India, a Hacker from Hack Club, and part of the Hack Club Community. [Hack Club](hackclub.com) is a global nonprofit movement and network for teenagers (ages 13–18) to build software, hardware, and creative projects together. This project was made possible by [Hack Club Forge YSWS (You Ship We Ship)](forge.hackclub.com).
 
- PATRA is divided into three principal modules. This modular arrangement allows individual parts of the system to be designed, manufactured, and tested independently before final integration.
+---
 
- ### Kinematic Base Module
+## Contents
 
- The **Kinematic Base Module (KBM)** forms the structural foundation of the robot. It provides the primary X and Y motion using a dual-axis arrangement approximately one metre in length.
+1. [Project Overview](#1-project-overview)
+2. [System Architecture](#2-system-architecture)
+3. [Development Phases](#3-development-phases)
+4. [Repository](#4-repository)
+5. [AI Assistance and Credits](#5-ai-assistance-and-credits)
 
- The axes use stacked GT5 timing belts driven by high-torque closed-loop stepper motors. Dual MGN15H linear guides are used to support and constrain the moving assemblies.
+---
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/6ba5da5c-0a65-4ccb-80f5-f1cc7587e40d" />
+## 1. Project Overview
 
- ### TriTeron Robot Module
+### 1.1 Background
 
- The **TriTeron Robot Module (TRM)** is the central parallel mechanism of PATRA. It provides three degrees of freedom through a system of mechanically linked members.
+The idea began with [this](https://www.youtube.com/shorts/74T0LF2l5Ck) TriTeron video I found in December 2025. I later studied [Dan Rudmin's mechanism at Zaber Technologies][ref-rudmin] and [Rowan Hunt's carriage arrangement][ref-rowan]. I wanted to understand the mechanism well enough to build a version using affordable components and manufacturing methods available to me. I started development on 10 April 2026.
 
- The design uses custom linkages, 608ZZ ball bearings, and custom timing-belt clamping components. Particular attention was given to the stiffness of the pivot assemblies, since forces acting on the mechanism can introduce bending and positional errors in downstream components.
+### 1.2 Concept
 
-<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8f087050-faa8-4d84-91d0-df4aee05f3d5" />
+A conventional seventh axis moves a robotic arm along one additional rail. PATRA places the arm on a three-axis parallel platform, so the platform positions the arm in X, Y, and Z before the arm's own joints move. The complete architecture has nine actuated degrees of freedom: three from the platform and six from the arm.
 
- ### Robotic Arm Module
+### 1.3 Principal Specifications
 
- The **Robotic Arm Module (RAM)** consists of a separate 6-DOF serial robotic arm mounted on the moving tool head of the parallel mechanism.
+| Item | Phase 1 design |
+| --- | --- |
+| Mechanism | Parallel-axis TriTeron, three actuated translations |
+| Payload | 1 kg target |
+| Guidance | Two 1,000 mm MGN15H rails and four blocks |
+| Belts | 5 mm pitch, 15 mm width |
+| Motors | Two Rtelligent 57AM23ED and one 57AM30ED closed-loop steppers |
+| Motor drivers | Three Rtelligent T60 |
+| Controller and supply | Teensy 4.1; Mean Well LRS-600-48 |
+| Design tools | Autodesk Fusion and EasyEDA Pro |
 
- The serial arm is intended to provide the orientation and fine positioning capabilities that are not provided directly by the three-axis parallel base. Final integration of this module is planned as a later stage of the project.
+### 1.4 Project Status
 
- ## Technical specifications
+Phase 1 has been submitted to Hack Club Forge for review. The physical build has not started, and no parts have been ordered. Phases 2 and 3 have not started. No measured positioning accuracy or demonstrated payload capacity is claimed here.
 
- The motion system was developed around commercially available components and standardized mechanical parts. The current configuration is as follows:
+---
 
- | Parameter | X and Y axes | Z axis |
-| --- | --- | --- |
-| Drive system | Stacked GT5 timing belt | Stacked GT5 central loop |
-| Linear guides | Dual MGN15H guides | Embedded carriage rail system |
-| Motor | Rtelligent 57AM23ED, 2.3 N·m | Rtelligent 57AM30ED, 3 N·m |
-| Motor driver | Rtelligent T60S | Rtelligent T60S |
-| Pulley | 22-tooth GT5 | 20-tooth GT5 |
-| Calculated centre distance | 1067.5 mm | 1202.5 mm |
-| Closed-loop belt length | 449 teeth | 501 teeth |
+## 2. System Architecture
 
-The values represent the mechanical configuration developed during the design process and may change as fabrication and testing continue.
+### 2.1 Kinematic Base Module (KBM)
 
- ## Mechanical design
+The KBM is the fixed base. It uses 4040 and 2020 aluminium extrusions, two MGN15H rails and three belt-driven carriage groups named X, Y and Z. All three groups move along the parallel rail direction.
 
- A major consideration in PATRA's development was the balance between rigidity, cost, manufacturability, and availability of components.
+![Kinematic Base Module v12](Phase_1/Media/Kinematic_Base_Module.png)
 
- The original design considered the use of ball screws for linear movement. Ball screws were subsequently replaced by wide GT5/HTD timing belts. This reduced the mass and cost of the motion system while simplifying fabrication and sourcing.
+### 2.2 TriTeron Robot Module (TRM)
 
- ### Belt-length optimisation
+The TRM connects the three carriage groups to one tool head through eight links and twelve revolute joints. Its joint-axis arrangement is intended to permit translation while constraining head rotation.
 
- The belt-driven architecture introduced a separate geometric constraint. Because the system uses closed-loop timing belts, the physical dimensions of the machine have to correspond to an integer number of belt teeth.
+![TriTeron Robot Module v10](Phase_1/Media/TriTeron_Robot_Module.png)
 
- During development, the nominal 1000 mm rail dimension was therefore adjusted in some areas to approximately 1001 mm. This allowed the calculated centre distances to correspond to commercially available closed-loop belt lengths without relying on excessive belt tensioning or custom clamping arrangements.
+### 2.3 Motion Control Module (MCM)
 
- The X and Y mechanisms use a 449-tooth belt loop, while the Z mechanism uses a 501-tooth loop.
+The MCM contains the power supply, the three motor drivers, and the controller PCB in a three-piece printed case. The PCB carries a Teensy 4.1, an isolated 48 V to 5 V converter, and a 74HCT245D buffer that provides the 5 V pulse, direction, and enable signals for the drivers.
 
- ## Materials and manufacturing
+![Motion Control Module v5](Phase_1/Media/Motion_Control_Module.png)
 
- PATRA was designed with small-scale manufacturing constraints in mind. Much of the development was carried out with the limitations of student-level fabrication and locally available components in India.
+![Controller PCB schematic](Phase_1/PCBA/Schematic_PATRA_Phase1_PCB.png)
 
- Large structural housings were designed for fused deposition modelling (FDM) rather than relying exclusively on industrial manufacturing processes. PETG with carbon-fibre reinforcement was selected for several structural components where increased stiffness was desirable.
+![Controller PCB, top side](Phase_1/Media/PATRA_Phase1_PCB_Front.png)
 
- For components subjected to higher loads or multidirectional stresses, the design uses industrial MJF-printed PA12 nylon. Custom belt-tooth locking components are an example of parts where this manufacturing method was considered preferable to conventional FDM printing.
+![Controller PCB, bottom side](Phase_1/Media/PATRA_Phase1_PCB_Back.png)
 
- This approach allowed the design to use more expensive manufacturing processes selectively rather than applying them to the entire machine.
+![Assembled controller PCB](Phase_1/Media/PATRA_Phase1_PCBA.png)
 
- ## Bearing and pivot design
+### 2.4 Robotic Arm Module (RAM)
 
- The linkages of the TriTeron mechanism use 608ZZ ball bearings in their pivot assemblies.
+The RAM is the planned six-degree-of-freedom serial arm that mounts on the TRM tool head. It has not been designed yet and belongs to Phase 3.
 
- The pivot arrangement was revised during development to improve rigidity and reduce unwanted movement. The current design uses three nested bearings together with Misumi MSB8 shoulder screws. The arrangement is intended to constrain the linkage while reducing the transmission of bending loads into downstream components.
+---
 
- The pivot geometry was treated as a structural component rather than simply a rotational joint, since small amounts of play at these locations can become significant when propagated through the parallel mechanism.
+## 3. Development Phases
 
- ## Kinematics and simulation
+| Phase | Scope | Purpose | Status |
+| --- | --- | --- | --- |
+| [Phase 1][ref-phase1] | KBM, TRM and MCM, with 3D-printed custom parts | Show that the mechanism works and find its weak points | Design released, build pending |
+, [Phase 2][ref-phase2] | The same platform with selected CNC-machined parts | Make the platform stiff and repeatable enough to carry an arm | Planned |
+| [Phase 3][ref-phase3] | RAM mounted on the platform | Complete the nine-degree-of-freedom robot | Planned |
 
- Kinematic analysis forms a significant part of the PATRA development process. The geometry of the parallel mechanism requires the relationship between actuator movement and tool-head position to be considered as a coupled system rather than as three independent linear axes.
+The Phase 1 BOM estimate is USD 932.12 against a USD 1,000 allocation. The [Phase 1 README][ref-phase1-readme] covers the design details, calculations, materials, and budget.
 
- Multiple kinematic configurations and structural arrangements are being evaluated during development. Stress and motion simulations are used to identify potential weaknesses before fabrication.
+---
 
- The project documentation records changes to the mechanical geometry alongside the calculations that motivated them, allowing later versions of the design to be compared with earlier configurations.
+## 4. Repository
 
- ## Development methodology
+| Location | Contents |
+| --- | --- |
+| [JOURNAL.md][ref-journal] | Full development record |
+| [Phase_1][ref-phase1] | README, journals, BOM, CAD, drawings, media and PCBA files |
+| [Phase_2][ref-phase2] | Reserved for Phase 2 |
+| [Phase_3][ref-phase3] | Reserved for Phase 3 |
+| [LICENSE][ref-licence] | MIT licence |
 
- The project follows an iterative engineering process rather than treating the initial CAD model as a final design.
+Two large Phase 1 CAD files are stored with [Git LFS][ref-lfs]. Install Git LFS and pull the LFS objects before opening them.
 
- Design changes have been made in response to several factors, including:
+---
 
- - component availability;
-- manufacturing limitations;
-- belt geometry;
-- structural stiffness;
-- material selection;
-- cost;
-- assembly requirements; and
-- results from kinematic and structural analysis.
+## 5. AI Assistance and Credits
 
- This process is documented in the project's engineering journal. The journal records design changes, calculation errors, parameter revisions, fabrication difficulties, and other decisions made during development.
+### 5.1 AI Assistance
 
- ## Development roadmap
+I used ChatGPT, Claude, Grok, Gemini, Google AI, and Vector for research, explanations, calculation review, and documentation. I did not accept every suggestion. I checked or corrected findings and retained decisions I had already verified. This README was polished with AI assistance.
 
- PATRA is being developed in several stages:
+### 5.2 Credits
 
- 1. **Conceptual sourcing and kinematic layout**
-2. **Kinematic Base Module geometry development**
-3. **Kinematic and structural simulation**
-4. **Fabrication of the KBM and TRM**
-5. **Electrical system and controller PCB development**
-6. **Integration of the 6-DOF robotic arm**
+I acknowledge **Dan Rudmin of Zaber Technologies** and **Rowan Hunt of Not An Engineer** for the reference mechanisms and discussions that shaped PATRA. I also thank **Zisheng Li of Anvol**, **Annie of OmniSim**, **Jeff of Vector**, and **Hack Club Forge** for the assistance and opportunities recorded in the journal.
 
- The stages are intended to allow the mechanical platform to be tested independently before the more complex serial arm is integrated.
+### 5.3 Licence
 
- ## Engineering documentation
+PATRA is open source under the **MIT licence**, copyright 2026 Sunrit Hazra. The [repository licence][ref-licence] gives the terms.
 
- A central part of the project is its engineering journal, which is maintained alongside the design files.
+[ref-journal]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/JOURNAL.md
+[ref-lfs]: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage
+[ref-licence]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/LICENSE
+[ref-phase1]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_1
+[ref-phase1-readme]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/README.md
+[ref-phase2]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_2
+[ref-phase3]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_3
+[ref-rowan]: https://www.youtube.com/watch?v=io4S9amExNM
+[ref-rudmin]: https://www.youtube.com/watch?v=6EtXycVGJg4
 
- The journal documents the development process on a day-to-day basis, including changes to structural dimensions, corrections to calculations, modifications to the parametric CAD model, sourcing decisions, and manufacturing problems.
-
- The documentation is intended to make the project reproducible and to provide a reference for students and other developers interested in parallel robotic mechanisms and low-cost robotic manufacturing.
-
- ## Open-source development
-
- PATRA is intended as an open-source robotics project. Its documentation covers both the final design and the intermediate engineering work used to reach it.
-
- The repository is intended to contain the mechanical design files, calculations, manufacturing information, and development journal required to understand and reproduce the system.
-
- Further documentation is planned for installation and assembly procedures, software and hardware dependencies, manufacturing settings, a bill of materials, and the project's applicable open-source licences.
-
- ## Project status
-
- PATRA remains an actively developed project. The stated dimensions, payload, and performance characteristics represent the current design targets unless explicitly identified as experimentally verified results.
-
- The mechanical base and TriTeron mechanism are being developed as independently testable modules, with electrical integration and the final serial robotic arm planned for later stages.
-
- ## Credits
-
- PATRA was developed by **Sunrit Hazra** as part of the **Hack Club Forge** program.
-
- The project acknowledges **Dan Rudmin of Zaber Technologies** and **Rowan Hunt of Not An Engineer** for design discussions and foundational insights that influenced the development process.
+---

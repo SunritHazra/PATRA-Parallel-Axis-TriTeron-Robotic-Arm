@@ -8257,6 +8257,30 @@ Today's day went as a very pivotal moment for the history of this project, becau
 
 But before that, I wrote a short README for the full PATRA project, not only for a specific phase.
 
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f5b3a9f1-ed51-437d-a90d-00fb29ab75e2" />
+
+I then moved this journal under the Phase_1 folder and renamed it to PATRA_Phase_1_Design_Journal.md, and copied this journal's entire text to a new file named JOURNAL.md, which I pasted directly under the repository. I did this because later on, this won't be the only journal. There will be build journals and design journals for different phases, too. So, proper structuring is important. A file named JOURNAL.md will exist because it is where Forge shows the journal on [the site](https://forge.hackclub.com/projects/58). Later on, when Forge is over, I will remove that JOURNAL.md entirely and switch my logs to Web Devlog. This also ensures all my commit history is preserved as well.
+
+Ran the AI check.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ab57a7b9-808d-471b-a481-7b16dd60d7f6" />
+
+Finally, submitted the project to Forge.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dd21ca25-3507-42f6-a277-55f7d6d06c6e" />
+
+Here's the timelapse of today's session: [PATRA-LPS-97-D117](https://lapse.hackclub.com/timelapse/DjzZNlD7R2FL)
+
+**Total time spent: 0h 45m**
+
+---
+
+# Day 116 — 20.11.2026: Uploading CAD to Repository
+
+Today's day went as a very pivotal moment for the history of this project, because I submitted the project to [Forge](forge.hackclub.com) on this day.
+
+But before that, I wrote a short README for the full PATRA project, not only for a specific phase.
+
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f5b3a9f1-ed51-437d-a90d-00fb25ab75e2" />
 
 I then moved this journal under the Phase_1 folder and renamed it to PATRA_Phase_1_Design_Journal.md, and copied this journal's entire text to a new file named JOURNAL.md, which I pasted directly under the repository. I did this because later on, this won't be the only journal. There will be build journals and design journals for different phases, too. So, proper structuring is important. A file named JOURNAL.md will exist because it is where Forge shows the journal on [the site](https://forge.hackclub.com/projects/58). Later on, when Forge is over, I will remove that JOURNAL.md entirely and switch my logs to Web Devlog. This also ensures all my commit history is preserved as well.
