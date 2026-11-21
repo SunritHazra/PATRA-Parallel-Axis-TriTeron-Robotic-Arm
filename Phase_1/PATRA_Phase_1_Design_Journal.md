@@ -1,17 +1,18 @@
 ---
+
 Title: Parallel Axis TriTeron Robotic Arm (PATRA)  
 Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 15-11-2026
-Phase 1 Kinematic Base Module Progress: "98%"
-Phase 1 TriTeron Robot Module Progress: "95%"
-Phase 1 Motion Control Module Progress: "95%"
-Phase 1 PATRA Overall Design Progress: "96%"
+Updated on: 20-11-2026
+Phase 1 Kinematic Base Module Progress: "100%"
+Phase 1 TriTeron Robot Module Progress: "100%"
+Phase 1 Motion Control Module Progress: "100%"
+Phase 1 PATRA Overall Design Progress: "100%"
 PC (Laptop) Used: "ASUS Vivobook 15 X540UAR"
-Potential Sponsors: "Hack Club Forge, JLCPCB/EasyEDA"
-Credits: "Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA / Shenzhen, China), Annie (OmniSim, USA), Dan Rudmin (Zaber Technologies Inc., Canada), Jeff (Vector, USA)"
+Credits: Forge YSWS — Hack Club (USA), JLCPCB/EasyEDA (China), Rowan Hunt (Not An Engineer, Australia), Zisheng Li (Anvol, USA/Shenzhen, CN), Annie (OmniSim, USA), Dan Rudmin (Zaber Tech, CA), Jeff (Vector, USA)
+
 ---
 
 # Day 0: Flashback
@@ -7513,7 +7514,7 @@ Here's the timelapse of today's session: [PATRA-LPS-90-D110](https://lapse.hackc
 
 # Day 111 — 14.11.2026: Journaling & Updating BOM
 
-Journaled days #102 (partly), #103, #104, #105, #106, #107, #108, and #110.
+Journaled days #102 (partly), #103, #104, #105, #106, #107, #108, #109, and #110.
 
 Day #102
 
@@ -7551,7 +7552,7 @@ Day #110
 
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e2abfe3f-5ebd-4c9c-b329-fcfe495d890c" />
 
-I missed out these on day #110 to add them to BOM:
+I missed these on day #110 and added them to BOM:
 
 Pulley Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.10 		 $3.30 	 JLC3DP 
 Idler Shaft (X, Y & Z)	 MJF PA12S-HP Nylon 	3	 $1.46 		 $4.38 	 JLC3DP 
@@ -7673,3 +7674,535 @@ Here's the timelapse of today's session: [PATRA-LPS-91-D111](https://lapse.hackc
 
 ---
 
+# Day 112 — 15.11.2026: Local Push & Mechanical Audit by Vector
+
+By this day, I was on the verge of completion. I had to individually check the things left in the KBM, TRM, MCM, and push local data to the repo, with a proper file structure.
+
+I started with the file structure first. I had most of the data in my folders, but they lacked structure. So, I created this file structure:
+
+PATRA-Parallel-Axis-TriTeron-Robotic-Arm
+	Media
+	Phase_1
+		Build
+		Design
+			BOM
+			CAD
+			Drawings
+			PCBA
+			JOURNAL.md
+		README.md
+	Phase_2
+	Phase_3
+	References
+
+I included whatever files I had. There were 3 Commits.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/96581000-ae6c-496f-979d-6c9d0ba90c25" />
+
+Meanwhile, I decided to make clever use of AI by making it do the final checks. Told this to Vector: **"Read this. What are the final things left in the Kinematic Base Module, TriTeron Robot Module, and Motion Control Module? Make all the necessary checks across all of the modules. List all the things that are left to be addressed. Take your time, and don't make mistakes."**
+
+Eventually, Vector, using GPT-6 Astra, audited this:
+
+"Mechanical Audit — Remaining Work
+
+I reviewed the mechanical audit of the KBM, TRM, and MCM. I have checked the MCM electronics separately and confirmed that the selected T60 supports 68 VDC. This entry therefore excludes electrical MCM concerns and retains only mechanical findings and related BOM corrections.
+
+These findings refer to the previously inspected KBM v10 recovered, TRM v8 recovered and MCM v3. They are not a fresh verification of subsequent CAD changes. Measured discrepancies are separated from checks that still need completion; an unverified item is not automatically a defective design.
+
+1. Kinematic Base Module
+
+	**Flagged discrepancies:**
+
+	- **X-idler washer placement:** Printed Washer:9 intersects Idler Shaft X. It was approximately \(1.5\,\mathrm{mm}\) too low and \(0.251\,\mathrm{mm}\) displaced along the rail. Re-seat it and check the axial stack.
+	- **Z motor/shaft-adapter collision:** Pulley Shaft Z intersects the 57AM30ED motor model. Correct the D-profile orientation, fit or engagement responsible for the overlap.
+	- **Missing opposite-end support holes:** Lower extrusion Supports 3 and 4 lack the transverse holes present in Supports 1 and 2. Combined upper/Z-return Support 2 lacks the three insert bores present in Support 1.
+	- **Inconsistent shaft-fit dimensions:** X/Y idler shafts measure \(11.8\,\mathrm{mm}\), while the Z idler remains \(12.0\,\mathrm{mm}\). The pulley adapters have \(8.4\,\mathrm{mm}\) motor bores. Confirm the intended fits and manufacturing compensation before ordering the shaft variants.
+	- **Minor Z-coupler overlap:** Two very small overlaps remain between the Z idler cases and coupler. These are low-priority CAD residues, not equivalent to the substantial washer and motor-adapter collisions.
+
+	**Mechanical checks still required:**
+
+	- Define a repeatable belt-tensioning method. Integer tooth counts alone do not establish pretension or allow adjustment for tolerances and creep. The longer purchased belts are intentional cutting stock, not automatically incorrect parts.
+	- Check return-belt clearance with the actual UHMW tape, including shield joints, protruding hardware, sag, tracking and the Z-carriage passage. One sampled bare-CAD gap was approximately \(0.602\,\mathrm{mm}\); nominal 10 mil tape occupies \(0.254\,\mathrm{mm}\).
+	- Finish the extrusion drilling/jig plan, rail alignment, deburring and insert-installation sequence. Verify the delivered profiles and rail/block compatibility.
+	- Finalize the long M2 brace rods/screws, nuts, washers, locking and tool access.
+	- Check motor-support contact, base anchoring, thin connector walls, insert pull-out, bearing/cover retention, shaft torque transfer and belt-clamp retention using the final materials.
+
+2. TriTeron Robot Module
+
+	**Flagged discrepancies:**
+
+	- **Bearing/hardware placement:** At the inspected pose, all 24 bearing axes were displaced approximately \(0.83\text{–}2.13\,\mathrm{mm}\) from their corresponding leg-pocket axes. Representative bearing/leg collisions were confirmed. Re-seat and associate the bearings, washers, spacers, bolts and nuts with the correct moving parts without locking the revolute motion. This is an assembly issue, not a reason to redesign every leg.
+	- **Bearing-seat clearance:** The 24 leg seats still measured nominal \(22.0\,\mathrm{mm}\), despite the journal recording a clearance change. Confirm the desired fit with a printed coupon and actual bearings, then update or explicitly approve the seat dimensions and retention method.
+
+	**Mechanical checks still required:**
+
+	- Register the KBM–TRM interfaces and define the common reference pose. The X/Y hole pitches match at \(25\,\mathrm{mm}\), but their positions differed by approximately \(2\,\mathrm{mm}\) along the rails after registering Z. Because the carriages are movable, this does not prove that the holes are wrong.
+	- Complete the mount-to-block screw schedule, including the tall and short Z-mount stacks, countersunk seating, thread engagement and bottoming clearance.
+	- Establish the safe workspace. All three slider limits were disabled. Check carriage-to-carriage clearance, rail ends, housings, links, hardware, payload and cable sweep, with margin from fully folded/straight configurations. Use the actual joint-axis conventions rather than copying the journal's reversed minimum/maximum entries.
+	- Verify shoulder-screw lengths, locking-nut engagement, washer/race contact, spacer lengths, tightening, backlash and free rotation. Check particularly for binding in the paired Z branches.
+
+3. Motion Control Module — Mechanical Only
+
+	**Flagged discrepancies:**
+
+	- **PCB insert-pocket depth:** The inspected MCM v3 pockets were approximately \(5\,\mathrm{mm}\) deep, whereas the BOM specifies M3×10 inserts. Reconcile the pocket depth and insert length.
+	- **Unequal PCB pilot diameters:** Three pockets measured \(4.4\,\mathrm{mm}\), while one measured \(4.2\,\mathrm{mm}\). Match them to the selected inserts and validated print fit.
+
+	**Mechanical checks still required:**
+
+	- Verify driver and PSU fastener fit, countersunk-head seating, thread engagement and permitted PSU screw penetration against the actual selected hardware.
+	- Check registration-pin fit, glued-joint strength and the assembly sequence under the installed component mass.
+	- Confirm connector, cable-bend and screwdriver clearance, and mechanical service access.
+
+	The three-piece case already exists. It does not need to be treated as an enclosure design task that has not started. No driver-voltage, circuit, firmware or other electrical MCM errors are included here.
+
+4. Mechanical BOM Corrections
+
+	- **M3×8 rail-backing inserts:** The design requires 50 positions, but the audited BOM lists 10 individual inserts. Correct the quantity or identify existing stock/pack quantities.
+	- **M8 washers:** The TRM contains 24, but the BOM lists 20.
+	- **608 bearings:** Reconcile the 608ZZ description with the supplier link naming 608RS bearings in a two-piece pack. Confirm seal type, purchase units and price. The mechanism needs 24 bearings; 25 individual bearings would include one spare.
+	- **Duplicate leg entry:** Remove the repeated Y Axis Leg Upper row.
+	- **Printed subparts:** Explicitly list, or identify within assembly entries, four lower extrusion supports, two combined upper supports, three motor supports, the X/Y Mount Internal pieces and four elbow spacers.
+	- **Missing fastening schedule:** Add the selected brace hardware and KBM–TRM mounting screws.
+	- **Materials and costing:** Confirm white PETG stock for the specified covers/washers and reconcile mechanical hardware prices, purchase units and spares.
+
+	The six MJF shafts and three MCM case bodies are already in the audited BOM and should not be listed as missing.
+
+5. Final Mechanical Release and Validation
+
+	- Freeze a consistent design revision and check off the corrections before generating manufacturing files.
+	- Export only the intended plastic bodies. Several KBM components also contain modeled inserts or fasteners, which must not accidentally be included in print exports.
+	- Re-slice corrected parts with the final materials and orientations; validate critical fits with coupons rather than relying on earlier printability checks.
+	- Define the Phase-1 payload, speed, acceleration, duty cycle, workspace and acceptable deflection/backlash/repeatability. Correct physical material assignments before using CAD mass or structural results; many inspected parts were assigned Steel.
+	- Repair cached references that affect the final parts or assembly. Most severe historical KBM flags belonged to removed components, so not every timeline warning represents a current mechanical defect.
+	- Commission mechanically in stages: free rail/joint movement, belt installation and tensioning, full-range motion, then controlled load, stiffness, repeatability and wear tests.
+
+Overall Result
+
+The basic TRM kinematics passed the instantaneous check: three degrees of freedom, and no remaining mobility with all three carriages locked. The 18 inspected TRM structural/spacer bodies and eight MCM primary bodies had no interference at the inspected pose. These results do not replace hardware-inclusive motion or physical load testing.
+
+The priority is to correct the measured assembly and fit discrepancies, complete the missing holes and mechanical BOM entries, then validate the assembled prototype. The audit does not justify a wholesale redesign of the mechanism."
+
+Besides this, I also had to fix the lack of a nut under the Z lower clamp. The clearance was just 0.935 mm between the upper 2020 extrusion and the bottom face of the lower clamp. I can't use brass inserts, so I decided to use nuts.
+
+Here's how I did it:
+
+- Created a sketch under the lower clamp Z.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/113f108c-2b43-4a7a-9589-7b8d2cf88686" />
+
+- Drew a 4.5 mm diameter hexagon around the circle.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8df1d8f4-f43b-469b-aef0-597bbadfe20f" />
+
+- Added a 0.2 mm offset in the hexagon shape.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/95aa60bb-c9a0-49c4-8523-5716e83020f6" />
+
+- Created a rectangular pattern to copy it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9eadf498-8e84-4622-b065-c7ad1c91a79f" />
+
+- Extruded the shapes by 1.5 mm inward.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3dda605a-1789-44d9-b56d-ffa3a850faac" />
+
+Now I just need to add 4 of [these](https://onlyscrews.in/products/m2-x-3mm-brass-threaded-inserts) nuts to the BOM.
+
+Here's the timelapse of today's session: [PATRA-LPS-92-D112](https://lapse.hackclub.com/timelapse/tKk2-Bwqy92H)
+
+**Total time spent: 2h 35m**
+
+---
+
+# Day 113 — 16.11.2026: Clearing Discrepancies
+
+I picked up exactly where I left off yesterday. I added the 4 M2 nuts to the BOM and continued exploring the audit to eliminate discrepancies.
+
+Here's what I fixed or verified in the Kinematic Base Module:
+
+- **KBM1:** The washer remains misplaced in CAD. It is already printed and will be seated concentrically during assembly, so this CAD-placement discrepancy does not block fabrication.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d3384def-64a0-41f0-ae04-7fb4e3d41a30" />
+
+- **KBM2:** The Z Motor's shaft was in wrong rotation that caused interference. Rotated it to fix.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0a457c5d-db80-4a56-bb62-a1a05551cbcd" />
+
+- **KBM3:**There were no holes on the 2020 and 4040 extrusion supports on the other end. Mirrored to fix it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/872787e1-5f52-4aae-867a-9caf5645bc94" />
+
+- **KBM4:** Idler Shaft Z was supposed to be 11.8 mm in diameter. It was 12 mm. So, I fixed it.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b9628c34-2f6c-43e6-9392-e21f4b4eacb2" />
+
+- **KBM5:** I acknowledged that the belts had no way to be tensioned. Must be fixed.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e8852bd9-31e6-4132-bcfb-9f94b089ffad" />
+
+- **KBM6:** Verified that the UHMW tape is 10 mil thick, or 0.254 mm thick, leaving only about 0.348 mm at that location before other thickness/tolerance effects. Besides, the price also changed from 1994 INR to 2000 INR.
+
+	<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/6693928d-5502-4a2a-936a-4cb796a7a462" />
+
+- **KBM7:** Confirmed the 4040 extrusion drilling plan. I know a Plywood Machinery Manufacturing Factory that helped me fabricate my V1 Solenoid Engine. One day, I asked them if they could drill M3 holes on 4040 extrusions. They can.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9648fe22-7b79-4416-8803-61a63edfc583" />
+
+- **KBM8:** Day #96 leaves the long M2 threaded-rod versus alternative screw/tapping decision unfinished. I can make it M3 and have MISUMI do the tapping, allowing me to source two of [this](https://onlyscrews.in/products/m3-x-45mm-hex-allen-socket-head-high-tensile12-9-black-oxide-screw-dia-3mm-length-45mm) 45 mm M3 screws for a hole, with a washer. Added 4 to BOM.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f4195bfd-4346-4cc2-a651-d86644c8082e" />
+
+Besides, other flagged errors, like mechanical load paths and serviceability, and Z coupler interferences, are safe to ignore.
+
+Here's what I fixed or verified in the TriTeron Robot Module:
+
+- **TRM1:** The Bearings and the Fastener Sets had no joints. To make sure there is no interference, I added all the joints.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3d15a030-8350-4459-a0dc-5e6760a69253" />
+
+- **TRM2:** I don't know how, but the bearing hubs are back to 22 mm in diameter instead of 22.2 mm. Fixed it using offsets.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/99760359-37f3-47e5-814f-a1d0967d00fb" />
+
+- **TRM3:** The X and Y Mounts were 2 mm behind on the X axis, or we could say that the X and Y linear blocks were 2 mm ahead on the X axis. They basically didn't line up. So, I moved the blocks 2 mm back.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/d30a5e17-7657-4ffe-87d0-d7da64e53b03" />
+
+- **TRM4:** There were no motion limits. I then added motion limits to the X, Y, and Z sliders, where their center could travel 1000 - 58.8 = 941.2 mm. 58.8 mm is the length of the MGN15H linear block. The formula to calculate the maximum or minimum depends on this, which I made: ±[(1000 - 58.8)/2 ± Position on the X-axis]. The plus or minus depends on whether it is the Maximum or Minimum.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/9487531c-41ca-4162-a2e0-89288611137e" />
+
+Besides, I also confirmed the shoulder screw lengths, washer thicknesses, and diameters. 
+
+Here's what I fixed or verified in the Motion Control Module:
+
+- **MCM1:** The PCB screw hub depths in the MCM were 5 mm instead of 10 mm. Fixed it using extrusion.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/52e5800b-cbbc-44cc-942f-9384eb9ac479" />
+
+- **MCM2:** [The manual](https://www.scribd.com/document/873287729/closed-loop-stepper-drive) tells that we must use M3 screws for installation. So, I changed the M5 brass insert to M3. Made all the inner diameters 4 mm, which were 4.4 mm and 6 mm before, for M3 and M5, respectively.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/65951c84-a296-4cb3-87d5-1a5602e79272" />
+
+- **MCM3:** Verified the length required for the M4 PSU screws. The screws have a selected length of 20 mm. It goes 3 mm inside the PSU, 7 mm inside the screw hub, and 10 mm through the wall. The length is correct as this is a countersunk screw.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/57352ce5-c178-4d80-9e0d-10f51e3239b7" />
+
+Besides, I also verified the 68 VDC max voltage and confirmed that I will not be using Homing for the prototype, and left the wiring for the time when I build this hands on.
+
+Here's what I fixed or verified in the Bill of Materials:
+
+- **BOM1:** I was supposed to add 50 M3x8 mm brass inserts on day #95. But I added only 10 in the BOM. So, I fixed it.
+
+- **BOM2:** TRM has 24 washers. Only 20 are in the BOM. Fixed it.
+
+- **BOM3:** In the BOM, I had listed a 608ZZ bearing, which is better for the tripteron, but listed 6082RS instead. So, I chose [this](https://robu.in/product/miniature-bearings-608zz/) and fixed the price.
+
+- **BOM4:** Y Axis Upper Leg was repeated in the BOM. I deleted one copy of the entry.
+
+- **BOM5:** I had forgotten to add X/Y/Z motor-support blocks, 4040 to 2020 Extrusion Support 1, 2, 3, and 4, 4040 TO 2020 & Z Return Belt Support 1 and 2, X Mount Internal, Y Mount Internal, and Distal Joint Spacers to the BOM. Added those with print material and quantity.
+
+Besides, I added 4 Socket Head M3x45 mm screws for the KBM, deleted M5 inserts and screws in MCM, and increased the count of M3 inserts and screws.
+
+To ensure that I don't lose any progress, I saved each module one by one:
+
+- Saved the Kinematic Base Module (KBM).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8691b4e2-dbae-4f1b-8ecb-f657088e7d7c" />
+
+- Saved the TriTeron Robot Module (TRM).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/e9e8c976-d122-4be3-84ce-447e7ca4552a" />
+
+- Saved the Motion Control Module (MCM).
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/a2fd4a2e-8972-4996-8394-68ae292a800b" />
+
+Then I came up with a better file structure than before, where I decided to include build and design directly under the Phases:
+
+Media
+Phase_1
+	BOM
+	CAD
+	Drawings
+	PCBA
+	PATRA_Phase_1_Build_Journal.md
+	PATRA_Phase_1_Design_Journal.md
+	README.md
+Phase_2
+Phase_3
+README.md
+
+But then Vector flagged some issues, which I fixed, like the 45 mm fastener reach, X/Y slider ranges, and MCM's wrong pilot hole diameter. 
+
+But there are a few things left on the table:
+
+1. Explain M3x45 mm fastening logic
+2. Adding tapped holes to the MISUMI and BOM
+3. Determining the belt tensioning
+4. Adding all CAD files to the repo
+5. Writing README.md for the repo
+
+Here's the timelapse of today's session: [PATRA-LPS-93-D113](https://lapse.hackclub.com/timelapse/L75u3vKK_O8M)
+
+**Total time spent: 7h 30m**
+
+---
+
+# Day 114 — 17.11.2026: Clearing Final Discrepancies
+
+Started with what I was left with by following the list of remaining work:
+
+1. **Explain M3x45 mm fastening logic:** The M3 holes are 88 mm across, from the channel of one 4040 extrusion to the other, with the middle point at 44 mm, and are utilized only if the 2020 extrusion has a tapped hole. I can only find 45 mm screws, so I must use washers to bring the screws outward. But standard M3 washers are 0.5 mm thick, and their outer diameter is 7 mm. The channel is 6 mm across at minimum, so it won't fit. I guessed it would be better to print my own washers. Here is what I did:
+
+	1. Created a new sketch
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/798cd0db-71b0-46f0-b073-41843550f053" />
+
+	2. Extruded the sketch.
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/4eea2a4f-54d9-421f-b939-bce1b90f689e" />
+
+	3. Copied it to the other positions, 4 times total.
+
+		<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7fcdc305-2ac4-4e26-aaa5-3b2763a3aa63" />
+
+	Then I structured them in the browser and added them to the BOM.
+	
+3. **Adding tapped holes to the MISUMI and BOM:**
+
+	The first thing I realised was that there was no M5 hole in the coupler Z.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8ea95ef4-cc7e-4059-b059-d82d40f1c5af" />
+
+	I created a 5 mm diameter hole in the couplers.
+
+	<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/cef0a68c-7a2b-429f-974c-9ba7e65244bd" />
+
+	But for the configuration, I couldn't confirm what diameter and length MISUMI offers. So, I am not going to configure the MISUMI part number unless I have spoken with their customer service. But I know where and what size holes I need.
+
+5. **Determining the belt tensioning:**
+
+	I had no idea what to do about this. Vector suggested: "For your KBM, I recommend a screw-adjustable idler carrier—one independently adjustable carrier for each belt. Move the idler pulley, shaft and both bearings together, while keeping the outer housing fixed."
+
+6. **Adding all CAD files to the repo:**
+
+Not Solved
+
+7. **Writing README.md for the repo:**
+
+Not Solved
+
+Here's the timelapse of today's session: [PATRA-LPS-94-D114](https://lapse.hackclub.com/timelapse/wwc_wU-R1nBp)
+
+**Total time spent: 2h 05m**
+
+---
+
+# Day 115 — 19.11.2026: Finalising Phase 1 Design & Downloading CAD Locally
+
+I started today's session by reading in detail what Vector had suggested for fixing the belt tensioning. It recommended a screw-adjustable idler carrier for each belt, where the pulley, shaft, and bearings move together inside a redesigned housing. That meant changing all six pulley and idler cases, which I did not want to do.
+
+So I read [this](https://www.aluflex.com/wp-content/uploads/PDF-Montageinstruktion-skenstyrning-PMI.pdf) datasheet, and suggested something much simpler instead. Since I am going to cut the belts anyway, what if I just change the distance between the fifth and sixth teeth of the clamp?
+
+Vector checked the math and showed what actually happens:
+
+1. Bringing the two cut ends closer together (making the middle gap less than 5 mm) stretches the rest of the belt and increases tension.
+2. Keeping the normal 5 mm pitch inside each gripping side preserves the teeth engagement and the MGN15H mounting holes.
+3. Reducing the gap too much makes the cut belt ends collide with each other.
+4. It is a fixed-preload clamp, not something I can adjust after printing.
+
+It made sense, so I told Vector to work on a parametric fixed-gap clamp block where I can change that middle gap in Fusion.
+
+While Vector was running in Fusion, I opened the Bill of Materials and added a new status column for all the parts so I can keep track of everything:
+
+• Commercial parts and electronics: "Not Purchased"
+• Shipping and taxes: "Not Paid"
+• 3D printed parts: "Fabricated" or "Not Fabricated"
+
+But then, I decided that I am not going to work on this belt-tensioning issue any further for now.
+
+Here is why:
+
+1. I already have a 3D printer at home, allowing me to fabricate new parts whenever I want.
+2. I am going to build this physically in late March or April, not right now, obviously because of ICSE.
+3. If I face any tensioning problems during assembly, I can easily change the parameter and reprint the small clamp.
+
+Right now, uploading the CAD files, writing the README, and submitting the project matter more than fixing an issue I can solve myself months later. And honestly, I am quite annoyed by the fact that I am to completion and yet I can't submit. Whatever model Vector will make will be saved for when I build Phase 1 and realise that the tensioning is wrong.
+
+The next step was to add the CAD files. I started with the TRM and MCM. I saved both as v10 and v5, respectively. 
+
+Then I made 3 new folders under CAD:
+
+1. Kinematic Base Module
+2. TriTeron Robot Module
+3. Motion Control Module
+
+Then I began exporting the .f3d (except in MCM), .step, and .3mf (one body per file) files under each, starting with TRM, MCM, Linear Rail, MGN15H Linear Blocks, and then KBM at last.
+
+After this, there were this many files under each folder:
+
+1. **Kinematic Base Module v12:** Total 357 files. 355 were .3mf files. I deleted all Ball Bearings, Screws, Washers, Aluminium Extrusions, Rtelligent Motors, Belts, Pulleys/Idlers, and Inserts. Only 70 files left in total. All .3mf files are print files.
+2. **TriTeron Robot Module v10:** Total 453 files. 451 were .3mf files. I deleted all Ball Bearings and Fasteners. Only 17 files left in total. All .3mf files are print files. All .3mf files are print files.
+3. **Motion Control Module v5:** Total 1003 files. 1002 were .3mf files. I deleted the entire PCB, the Mean Well LRS-600-48, and the three Rtelligent T60s. Only 4 files left in total. All .3mf files are print files.
+
+Combined all the modules into the Phase 1 PATRA file and saved it as v2.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/8d52d7ca-d176-4dfc-9e04-57f2350d2e87" />
+
+Exported this under the CAD folder as .usdz and .step files. Deleted the PATRA Phase 1 v1.step. Tried to push all CAD files (except **Kinematic_Base_Module\Kinematic Base Module (KBM) v12.f3d**, **PATRA Phase 1 v2.step**, **Kinematic Base Module (KBM) v12_Kinematic Base Module (KBM) v12_Supports_1_Aluminum Extrusion Support Blocks_1_4040 TO 2020 & Z Return Belt Supports_1_4040 TO 2020 & Z Return Belt Support 1_1_Body1.3mf**, and **Kinematic Base Module (KBM) v12_ Kinematic Base Module (KBM) v12_Supports_1_Aluminum Extrusion Support Blocks_1_4 040 TO 2020 & Z Return Belt Supports_1_4040 TO 2020 & Z Return Belt Support 2_1_ Body1.3mf** as first two are over 100 MB and last 2 names are too long) from local folder to repository, but I failed due to the long names. Writing README.md still remains.
+
+I would do something about the large files and long-named files.
+
+This is the updated BOM, by the way:
+
+| Parallel Axis TriTeron Robotic Arm BOM |                                |                                                              |                      |          |            |            |            |                 |                |                                                                                                                                            |
+|----------------------------------------|--------------------------------|--------------------------------------------------------------|----------------------|----------|------------|------------|------------|-----------------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| Component Category                     |                                | Item                                                         | Print Material       | Quantity | Cost (USD) | Cost (INR) | Total Cost | Vendor          | Status         | Link                                                                                                                                       |
+| Kinematic Base Module (KBM)            | Aluminium Extrusions           | LCF6-2020-1135 Aluminium 2020 T-Slot Profile Extrusion       |                      | 2        | $3.28      | ₹ 306.45   | $6.56      | MISUMI          | Not Purchased  | https://in.misumi-ec.com/vona2/detail/110311047509?HissuCode=LCF6-2020-1135                                                                |
+|                                        |                                | HFS5-4040-1000 Aluminium 4040 V-Slot Profile Extrusion       |                      | 2        | $27.77     | ₹ 2,595.20 | $55.54     | MISUMI          | Not Purchased  | https://in.misumi-ec.com/vona2/detail/110302684530?HissuCode=HFS5-4040-1000                                                                |
+|                                        | End Plates                     | End Plate                                                    | FDM PLA PRO (Silver) | 2        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Linear Guides                  | HIWIN MGN15H Linear Rail 1 m                                 |                      | 2        | $90.95     | ₹ 8,499.00 | $181.89    | novo3D          | Not Purchased  | https://novo3d.in/hiwin-mgn15-linear-guide-rail/                                                                                           |
+|                                        |                                | HIWIN MGN15H Sliding Block                                   |                      | 4        | $19.25     | ₹ 1,799.00 | $77.00     | Industrybuying  | Not Purchased  | https://www.industrybuying.com/linear-guides-hiwin-BEA.LIN.820966212                                                                       |
+|                                        |                                | Belt Clamp Bottom (X & Y)                                    | FDM PETG-CF (Black)  | 2        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Belt Clamp Top (X & Y)                                       | FDM PLA PRO (Silver) | 2        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Belt Clamp Bottom (Z)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Belt Clamp Top (Z)                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Tensioning Systems             | Belt E-GBN22505GT-150 (X & Y)                                |                      | 2        | $13.12     | ₹ 1,225.63 | $26.23     | MISUMI          | Not Purchased  | https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN22505GT-150                                                              |
+|                                        |                                | Belt E-GBN26005GT-150 (Z)                                    |                      | 1        | $14.99     | ₹ 1,400.77 | $14.99     | MISUMI          | Not Purchased  | https://in.misumi-ec.com/vona2/detail/110411276379?HissuCode=E-GBN26005GT-150                                                              |
+|                                        |                                | Pulley & Idler CBYL-AH1-5GT150-22-A-N-d12 (X & Y)            |                      | 4        | $2.03      |            | $8.13      | JLCMC           | Not Purchased  | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-22-A-N-d12&productModelNumber=CBYL-AH1-5GT150-22-A-N-d12 |
+|                                        |                                | Pulley & Idler CBYL-AH1-5GT150-20-A-N-d12 (Z)                |                      | 2        | $2.14      |            | $4.27      | JLCMC           | Not Purchased  | https://jlcmc.com/product/s/C03/CBYL/gt5-htd-timing-belt-pulley?k=CBYL-AH1-5GT150-20-A-N-d12&productModelNumber=CBYL-AH1-5GT150-20-A-N-d12 |
+|                                        |                                | Pulley Case Left (X)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Pulley Case Left (Y)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Pulley Case Left (Z)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Pulley Case Right (X)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Pulley Case Right (Y)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Pulley Case Right (Z)                                        | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Idler Case Left (X)                                          | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Idler Case Left (Y)                                          | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Idler Case Left (Z)                                          | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Idler Case Right (X)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Idler Case Right (Y)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Idler Case Right (Z)                                         | FDM PETG-CF (Black)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Belt Sheilds (X & Y)                                         | FDM PLA PRO (Silver) | 10       | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Belt Sheild Connectors (X & Y)                               | FDM PLA PRO (Silver) | 8        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Pulley & Idler Case Coupler (Z)                              | FDM PLA PRO (Silver) | 2        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Bearing Cover                                                | FDM PETG (White)     | 9        | $-         |            | $-         |                 | Fabricated     |                                                                                                                                            |
+|                                        |                                | 6901ZZ Bearing [4 pcs]                                       |                      | 3        | $2.56      | ₹ 239.00   | $7.67      | Robu            | Not Purchased  | https://robu.in/product/6901zz-bearing-12x24x6-shielded-miniature-ball-bearings-4pcs/                                                      |
+|                                        |                                | Washer M3x0.5 mm (Dimensions: WSX-SUS-M12X18-5)              | FDM PETG (White)     | 12       | $-         |            | $-         |                 | Fabricated     |                                                                                                                                            |
+|                                        |                                | Pulley Shaft (X, Y & Z)                                      | MJF PA12S-HP Nylon   | 3        | $0.99      |            | $2.97      | JLC3DP          | Not Purchased  |                                                                                                                                            |
+|                                        |                                | Idler Shaft (X, Y & Z)                                       | MJF PA12S-HP Nylon   | 3        | $1.32      |            | $3.96      | JLC3DP          | Not Purchased  |                                                                                                                                            |
+|                                        |                                | APT 0.75" x 5 Yds 10 Mil UHMW Tape                           |                      | 1        | $21.40     | ₹ 2,000.00 | $21.40     | Desertcart      | Not Purchased  | https://www.desertcart.in/products/346216072-apt-uhmw-ultra-high-molecular-weight-polyethylene-tape-resists-abrasion                       |
+|                                        | Motors                         | Rtelligent 57AM23ED 2.3 Nm Closed-loop Stepper Motor (X & Y) |                      | 2        | $43.65     | ₹ 4,079.00 | $87.30     | Robu            | Not Purchased  | https://robu.in/product/rtelligent-57am23ed-closed-loop-stepper-servo-motor/                                                               |
+|                                        |                                | Rtelligent 57AM30ED 3 Nm Closed-loop Stepper Motor (Z)       |                      | 1        | $57.77     | ₹ 5,399.00 | $57.77     | Robu            | Not Purchased  | https://robu.in/product/rtelligent-57am30ed-closed-loop-stepper-servo-motor/                                                               |
+|                                        | Supports                       | Motor Support Bocks (X, Y & Z)                               | FDM PLA PRO (White)  | 3        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | 4040 to 2020 Extrusion Support 1                             | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | 4040 to 2020 Extrusion Support 2                             | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | 4040 to 2020 Extrusion Support 3                             | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | 4040 to 2020 Extrusion Support 4                             | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | 4040 TO 2020 & Z Return Belt Support 1                       | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | 4040 TO 2020 & Z Return Belt Support 2                       | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Fasteners                      | Brass Insert M5x10 mm                                        |                      | 12       | $0.05      | ₹ 4.60     | $0.59      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m5-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Brass Insert M3x10 mm                                        |                      | 44       | $0.04      | ₹ 3.60     | $1.70      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Brass Insert M3x6 mm                                         |                      | 36       | $0.05      | ₹ 4.80     | $1.85      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m3-x-6mm-3d-printing-brass-threaded-inserts-dia-3mm-length-6mm                                              |
+|                                        |                                | Brass Insert M2x5 mm [25 pcs]                                |                      | 1        | $0.67      | ₹ 63.00    | $0.67      | Robokits        | Not Purchased  | https://robokits.co.in/robot-parts/nut-bolts-standoffs/nuts/m2-x-5-mm-brass-heat-threaded-round-insert-nut-moq-25-pcs.                     |
+|                                        |                                | Brass Insert M3x8 mm                                         |                      | 50       | $0.03      | ₹ 3.00     | $1.61      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m3-x-8mm-brass-threaded-inserts                                                                             |
+|                                        |                                | Pan Head Screw M5x15 mm                                      |                      | 12       | $0.02      | ₹ 1.60     | $0.21      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m5-x-15mm-phillips-pan-head-mild-steel-with-zinc-blue-plating-screw-dia-5mm-length-15mm                     |
+|                                        |                                | Countersunk Screw M3x30 mm                                   |                      | 44       | $0.04      | ₹ 3.80     | $1.79      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m3-x-30mm-hex-allen-csk-ss-304-screw-dia-3mm-length-30mm                                                    |
+|                                        |                                | Countersunk Screw M3x12 mm                                   |                      | 36       | $0.02      | ₹ 1.80     | $0.69      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/hex-allen-csk-m3-x-10-screw-pack-of-20                                                                      |
+|                                        |                                | Socket Head M2x12 mm                                         |                      | 16       | $0.04      | ₹ 4.00     | $0.68      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m2-x-12mm-hex-allen-socket-head-ss-304-screw-dia-2mm-length-12mm                                            |
+|                                        |                                | Socket Head M3x12 mm                                         |                      | 50       | $0.04      | ₹ 3.40     | $1.82      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/hex-allen-socket-head-m3-x-12-screw-pack-of-20                                                              |
+|                                        |                                | Hex Nut M2 x 1.5 mm                                          |                      | 4        | $0.02      | ₹ 1.60     | $0.07      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m2-nut-ss-304                                                                                               |
+|                                        |                                | Socket Head M3x45 mm                                         |                      | 4        | $0.05      | ₹ 4.80     | $0.21      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m3-x-45mm-hex-allen-socket-head-high-tensile12-9-black-oxide-screw-dia-3mm-length-45mm                      |
+|                                        |                                | Washer M3x1 mm                                               | FDM PLA PRO (White)  | 4        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Total                          |                                                              |                      |          |            |            | $567.58    | Budget = $575   |                |                                                                                                                                            |
+| TriTeron Robot Module (TRM)            | Leg Mounts                     | X Axis Mount                                                 | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | X Mount Internal                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Y Axis Mount                                                 | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Y Mount Internal                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Z Axis Mount                                                 | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Legs                           | X Axis Leg Upper                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | X Axis Leg Lower                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Y Axis Leg Upper                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Y Axis Leg Lower                                             | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Upper A                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Lower A                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Upper B                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Z Axis Leg Lower B                                           | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Leg Joints                     | MSB8-30 Screw                                                |                      | 12       | $0.86      | ₹ 80.00    | $10.27     | MISUMI          | Not Purchased  | https://in.misumi-ec.com/vona2/detail/110100143940?HissuCode=MSB8-30                                                                       |
+|                                        |                                | DIN 982 M6 Nut                                               |                      | 12       | $0.04      | ₹ 3.80     | $0.49      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m6-nyloc-nuts-ss304                                                                                         |
+|                                        |                                | SS304 M8 Washer                                              |                      | 24       | $0.05      | ₹ 4.60     | $1.18      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m8-washer-ss304                                                                                             |
+|                                        |                                | 608ZZ Bearing                                                |                      | 24       | $0.17      | ₹ 16.00    | $4.11      | Robu            | Not Purchased  | https://robu.in/product/miniature-bearings-608zz/                                                                                          |
+|                                        |                                | Distal Joint Spacers                                         | FDM PLA PRO (White)  | 4        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Tool Head                      | Tool Head                                                    | FDM PLA PRO (Silver) | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Total                          |                                                              |                      |          |            |            | $16.05     | Budget = $25    |                |                                                                                                                                            |
+| Motion Control System (MCM)            | Power & Motion                 | Rtelligent T60 Closed-loop Stepper Motor Driver (X, Y & Z)   |                      | 3        | $43.22     | ₹ 4,039.00 | $129.66    | Robu            | Not Purchased  | https://robu.in/product/rtelligent-t60-closed-loop-stepper-driver-18-68vdc-6a-for-stepper-motors-below-nema-24/                            |
+|                                        |                                | Mean Well LRS-600-48                                         |                      | 1        | $40.68     | ₹ 3,802.00 | $40.68     | Trade India     | Not Purchased  | https://www.tradeindia.com/products/lrs-600-48v-meanwell-power-supply-c10893421.html                                                       |
+|                                        | Printed Circuit Board Assembly | PATRA_PCB_PCB1_20261104_233009                               |                      | 5        | $0.40      |            | $2.00      | JLCPCB          | Not Purchased  |                                                                                                                                            |
+|                                        |                                | CL21B104KBCNFNC 100 nF 50 V                                  |                      | 4        | $0.01      | ₹ 1.08     | $0.05      | Robu            | Not Purchased  | https://robu.in/product/cl21b104kbcnfnc-samsang-50v-100nf-x7r-%25c2%25b110-0805-multilayer-ceramic-capacitors-mlcc-smd-smt-rohs/           |
+|                                        |                                | VES100M1HTR-0605-LELON-10uF 50V ±20% SMD                     |                      | 2        | $0.04      | ₹ 3.71     | $0.08      | Robu            | Not Purchased  | https://robu.in/product/ves100m1htr-0605-lelon-10uf-50v-%C2%B120-smdd6-3xl5-3mm-aluminum-electrolytic-capacitors-smd-rohs/                 |
+|                                        |                                | FH2.54-09-06PZD-XUNPU-Plugin,1x6 Pin 2.54mm Female Headers   |                      | 3        | $0.15      | ₹ 14.00    | $0.45      | Robu            | Not Purchased  | https://robu.in/product/fh2-54-09-06pzd-xunpu-plugin1x6-pin-2-54mm-female-headers-rohs/                                                    |
+|                                        |                                | EVISUN URB4805S-3WR3                                         |                      | 1        | $3.67      |            | $3.67      | LCSC            | Not Purchased  | https://www.lcsc.com/product-detail/C53159146.html                                                                                         |
+|                                        |                                | UNI-ROYAL 0805W8F1002T5E [100 pcs]                           |                      | 1        | $0.34      |            | $0.34      | LCSC            | Not Purchased  | https://www.lcsc.com/product-detail/C17414.html                                                                                            |
+|                                        |                                | ronghe RH-5001 [5 pcs]                                       |                      | 1        | $0.40      |            | $0.40      | LCSC            | Not Purchased  | https://www.lcsc.com/product-detail/C5199801.html                                                                                          |
+|                                        |                                | NEXPERIA 74HCT245D                                           |                      | 1        | $0.34      | ₹ 32.00    | $0.34      | Robu            | Not Purchased  | https://robu.in/product/74hct245d653-nexperia-transceiver-74hct245-4-5-v-to-5-5-v-soic-20/                                                 |
+|                                        |                                | XINLAIYA XYEEK500-5.08-2P [5 pcs]                            |                      | 1        | $1.02      |            | $1.02      | LCSC            | Not Purchased  | https://www.lcsc.com/product-detail/C557689.html                                                                                           |
+|                                        |                                | Hongda 31TC15A250V [5 pcs]                                   |                      | 1        | $0.79      |            | $0.79      | LCSC            | Not Purchased  | https://www.lcsc.com/product-detail/C529662.html                                                                                           |
+|                                        |                                | ERS1KM101G16OT 100uF 100V                                    |                      | 2        | $0.09      | ₹ 8.00     | $0.17      | Robu            | Not Purchased  | https://robu.in/product/ers1km101g16ot-aishi-100uf-100v-%C2%B120-plugind10xl16mm-aluminum-electrolytic-capacitors-leaded-rohs/             |
+|                                        |                                | Teensy 4.1 Development Board                                 |                      | 1        | $37.98     | ₹ 3,549.00 | $37.98     | Robu            | Not Purchased  | https://robu.in/product/buy-teensy-4-1-development-board/                                                                                  |
+|                                        | Wires                          | DB9 Male Screw Terminal to RS232 RS485 Conversion Board      |                      | 3        | $0.85      | ₹ 79.00    | $2.54      | Robu            | Not Purchased  | https://robu.in/product/db9-male-screw-terminal-rs232-rs485-conversion-board/                                                              |
+|                                        |                                | 16AWG High Quality Ultra Flexible Silicone Wire - Black      |                      | 1        | $0.52      | ₹ 49.00    | $0.52      | Robu            | Not Purchased  | https://robu.in/product/high-quality-ultra-flexible-16awg-silicone-wire-305m-black/                                                        |
+|                                        |                                | 16AWG High Quality Ultra Flexible Silicone Wire - Red        |                      | 1        | $0.52      | ₹ 49.00    | $0.52      | Robu            | Not Purchased  | https://robu.in/product/high-quality-ultra-flexible-16awg-silicone-wire-305m-red/                                                          |
+|                                        | Case                           | Motion Control Module Case: Body 1                           | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Motion Control Module Case: Body 2                           | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        |                                | Motion Control Module Case: Body 3                           | FDM PLA PRO (White)  | 1        | $-         |            | $-         |                 | Not Fabricated |                                                                                                                                            |
+|                                        | Fasteners                      | Brass Insert M3x10 mm                                        |                      | 16       | $0.04      | ₹ 3.60     | $0.62      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/m3-x-10mm-brass-threaded-inserts                                                                            |
+|                                        |                                | Countersunk Screw M4x20 mm                                   |                      | 4        | $0.03      | ₹ 3.20     | $0.14      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/hex-allen-csk-m4-x-20-screw-pack-of-20                                                                      |
+|                                        |                                | Socket Head M3x10 mm                                         |                      | 16       | $0.03      | ₹ 3.20     | $0.55      | OnlyScrews      | Not Purchased  | https://onlyscrews.in/products/hex-allen-socket-head-m3-x-10-screw-pack-of-20                                                              |
+|                                        | Total                          |                                                              |                      |          |            |            | $222.52    | Budget = $250   |                |                                                                                                                                            |
+| Miscellaneous                          | Goods & Services Tax           | MISUMI 18% GST                                               |                      | 1        | $20.91     | ₹ 1,953.96 | $20.91     | MISUMI          | Not Paid       |                                                                                                                                            |
+|                                        |                                | Industrybuying 18% GST                                       |                      | 1        | $6.93      | ₹ 647.64   | $6.93      | Industrybuying  | Not Paid       |                                                                                                                                            |
+|                                        |                                | Robokits 18% GST                                             |                      | 1        | $0.12      | ₹ 11.34    | $0.12      | Robokits        | Not Paid       |                                                                                                                                            |
+|                                        | Shipping                       | JLCCNC Shipping                                              |                      | 1        | $11.30     |            | $11.30     | JLCCNC          | Not Paid       |                                                                                                                                            |
+|                                        |                                | JLCPCB & JLC3DP Shipping                                     |                      | 1        | $10.80     |            | $10.80     | JLCPCB & JLC3DP | Not Paid       |                                                                                                                                            |
+|                                        |                                | LCSC Shipping                                                |                      | 1        | $6.61      |            | $20.00     | LCSC            | Not Paid       |                                                                                                                                            |
+|                                        | Filament                       | Elegoo PETG-CF Black                                         |                      | 1        | $21.39     | ₹ 1,999.00 | $21.39     | 3D Master India | Not Purchased  | https://3dmasterindia.in/product/elegoo-carbon-fiber-petg-filament-black-1kg/                                                              |
+|                                        |                                | Elegoo PLA PRO Silver                                        |                      | 2        | $11.50     | ₹ 1,075.00 | $23.01     | Robu            | Not Purchased  | https://robu.in/product/elegoo-pla-pro-filament-1kg-spool-silver/                                                                          |
+|                                        |                                | Elegoo PLA PRO White                                         |                      | 1        | $11.50     | ₹ 1,075.00 | $11.50     | Robu            | Not Purchased  | https://robu.in/product/elegoo-pla-pro-filament-1kg-spool-white/                                                                           |
+|                                        | Total                          |                                                              |                      |          |            |            | $125.96    | Budget = $150   |                |                                                                                                                                            |
+| Grand Total                            |                                |                                                              |                      |          |            |            | $932.12    | Budget = $1000  |                |                                                                                                                                            |
+
+
+Here's the timelapse of today's session: [PATRA-LPS-95-D115](https://lapse.hackclub.com/timelapse/IDIXN17Ku4p4)
+
+**Total time spent: 4h 00m**
+
+---
+
+# Day 116 — 20.11.2026: Uploading CAD to Repository
+
+With the help of Google AI, I solved the problems with the CAD upload.
+
+I installed Git and Git LFS. Then I entered these commands in Git Bash:
+
+	git lfs install
+	git config --global core.longpaths true
+
+Then I opened the Repository from GitHub Desktop in Git Bash and entered these commands:
+
+	git lfs track "Phase_1/CAD/Kinematic_Base_Module/Kinematic Base Module (KBM) v12.f3d"
+	git lfs track "Phase_1/CAD/PATRA Phase 1 v2.step"
+	git add .gitattributes
+
+With this, all local files were pushed to GitHub.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/456104a2-1917-455b-ac0f-aefbfd262b99" />
+
+After this, only the README remained. But I was too exhausted to write the README. But I had to anyway.
+
+Here's the timelapse of today's session: [PATRA-LPS-96-D116]()
+
+**Total time spent: 3h 30m**
+
+---
