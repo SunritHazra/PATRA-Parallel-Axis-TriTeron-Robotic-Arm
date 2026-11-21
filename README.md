@@ -1,13 +1,15 @@
-# PATRA
+# PATRA: Parallel Axis TriTeron Robotic Arm
 
-PATRA (Parallel Axis TriTeron Robotic Arm) is a nine-degree-of-freedom hybrid robotic system combining a three-degree-of-freedom (3-DOF) parallel manipulator with a six-degree-of-freedom (6-DOF) serial robotic arm. The system is designed to combine the workspace coverage of a parallel mechanism with the dexterity and orientation capabilities of a conventional robotic arm.
+PATRA is a nine-degree-of-freedom hybrid robotic system combining a three-degree-of-freedom (3-DOF) parallel manipulator with a six-degree-of-freedom (6-DOF) serial robotic arm. The system is designed to combine the workspace coverage of a parallel mechanism with the dexterity and orientation capabilities of a conventional robotic arm.
 
-![PATRA Phase 1 v2 assembly](Phase_1/Media/PATRA_Phase_1_v2.png)
+![PATRA Phase 1 v2](Phase_1/Media/PATRA_Phase_1_v2.png)
 
-> [JOURNAL.md](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/JOURNAL.md)
-> [Phase_1/README.md](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/README.md)
+> [Phase 1 Design Journal](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/JOURNAL.md)  
+> [Phase_1 README](https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/blob/main/Phase_1/README.md)
 
 PATRA is developed in three phases. Phase 1, the parallel platform and its motion-control system, is the current phase. The serial robotic arm is planned for a later phase. This is an open-source robotics project by Sunrit Hazra, released under the [MIT licence][ref-licence] and developed as part of the **Hack Club Forge** YSWS program.
+
+I am a 15-year-old student from Kolkata, India, a Hacker from Hack Club, and part of the Hack Club Community. [Hack Club](hackclub.com) is a global nonprofit movement and network for teenagers (ages 13–18) to build software, hardware, and creative projects together. This project was made possible by [Hack Club Forge YSWS (You Ship We Ship)](forge.hackclub.com).
 
 ---
 
@@ -25,11 +27,11 @@ PATRA is developed in three phases. Phase 1, the parallel platform and its motio
 
 ### 1.1 Background
 
-The idea began with a TriTeron video I found in December 2025. I later studied [Dan Rudmin's mechanism at Zaber Technologies][ref-rudmin] and [Rowan Hunt's carriage arrangement][ref-rowan]. I wanted to understand the mechanism well enough to build a version using affordable components and manufacturing methods available to me. I started development on 10 April 2026.
+The idea began with [this](https://www.youtube.com/shorts/74T0LF2l5Ck) TriTeron video I found in December 2025. I later studied [Dan Rudmin's mechanism at Zaber Technologies][ref-rudmin] and [Rowan Hunt's carriage arrangement][ref-rowan]. I wanted to understand the mechanism well enough to build a version using affordable components and manufacturing methods available to me. I started development on 10 April 2026.
 
 ### 1.2 Concept
 
-A conventional seventh axis moves a robotic arm along one additional rail. PATRA places the arm on a three-axis parallel platform, so the platform positions the arm in X, Y and Z before the arm's own joints move. The complete architecture has nine actuated degrees of freedom: three from the platform and six from the arm.
+A conventional seventh axis moves a robotic arm along one additional rail. PATRA places the arm on a three-axis parallel platform, so the platform positions the arm in X, Y, and Z before the arm's own joints move. The complete architecture has nine actuated degrees of freedom: three from the platform and six from the arm.
 
 ### 1.3 Principal Specifications
 
@@ -66,7 +68,7 @@ The TRM connects the three carriage groups to one tool head through eight links 
 
 ### 2.3 Motion Control Module (MCM)
 
-The MCM contains the power supply, the three motor drivers and the controller PCB in a three-piece printed case. The PCB carries a Teensy 4.1, an isolated 48 V to 5 V converter and a 74HCT245D buffer that provides the 5 V pulse, direction and enable signals for the drivers.
+The MCM contains the power supply, the three motor drivers, and the controller PCB in a three-piece printed case. The PCB carries a Teensy 4.1, an isolated 48 V to 5 V converter, and a 74HCT245D buffer that provides the 5 V pulse, direction, and enable signals for the drivers.
 
 ![Motion Control Module v5](Phase_1/Media/Motion_Control_Module.png)
 
@@ -89,10 +91,10 @@ The RAM is the planned six-degree-of-freedom serial arm that mounts on the TRM t
 | Phase | Scope | Purpose | Status |
 | --- | --- | --- | --- |
 | [Phase 1][ref-phase1] | KBM, TRM and MCM, with 3D-printed custom parts | Show that the mechanism works and find its weak points | Design released, build pending |
-| [Phase 2][ref-phase2] | The same platform with selected CNC-machined parts | Make the platform stiff and repeatable enough to carry an arm | Planned |
+, [Phase 2][ref-phase2] | The same platform with selected CNC-machined parts | Make the platform stiff and repeatable enough to carry an arm | Planned |
 | [Phase 3][ref-phase3] | RAM mounted on the platform | Complete the nine-degree-of-freedom robot | Planned |
 
-The Phase 1 BOM estimate is USD 932.12 against a USD 1,000 allocation. The [Phase 1 README][ref-phase1-readme] covers the design details, calculations, materials and budget.
+The Phase 1 BOM estimate is USD 932.12 against a USD 1,000 allocation. The [Phase 1 README][ref-phase1-readme] covers the design details, calculations, materials, and budget.
 
 ---
 
@@ -133,3 +135,5 @@ PATRA is open source under the **MIT licence**, copyright 2026 Sunrit Hazra. The
 [ref-phase3]: https://github.com/SunritHazra/PATRA-Parallel-Axis-TriTeron-Robotic-Arm/tree/main/Phase_3
 [ref-rowan]: https://www.youtube.com/watch?v=io4S9amExNM
 [ref-rudmin]: https://www.youtube.com/watch?v=6EtXycVGJg4
+
+---
