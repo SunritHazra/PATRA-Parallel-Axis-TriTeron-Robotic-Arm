@@ -5,7 +5,7 @@ Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 20-11-2026
+Updated on: 21-11-2026
 Phase 1 Kinematic Base Module Progress: "100%"
 Phase 1 TriTeron Robot Module Progress: "100%"
 Phase 1 Motion Control Module Progress: "100%"
@@ -8201,8 +8201,103 @@ With this, all local files were pushed to GitHub.
 
 After this, only the README remained. But I was too exhausted to write the README. But I had to anyway.
 
-Here's the timelapse of today's session: [PATRA-LPS-96-D116]()
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a89113d8-5a9e-401c-bcf1-c32da8e38d57" />
 
-**Total time spent: 3h 30m**
+Then I added these images to the README as well as the media folder.
+
+PATRA_Phase_1_v2.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e40fa831-8dfe-472c-9fce-a4087219fab3" />
+
+Kinematic_Base_Module.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/48f6972a-d0d3-4c57-9df9-b14fa96ffb5b" />
+
+TriTeron_Robot_Module.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/682015fd-fd57-4295-9a1c-e7d57dcdf7fe" />
+
+Motion_Control_Module.png
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0beae347-ddb9-4f56-b5c8-ca3c14906215" />
+
+Schematic_PATRA_Phase1_PCB.png
+
+<img width="2362" height="1672" alt="image" src="https://github.com/user-attachments/assets/fa5e2e8c-5b3d-42bb-821a-32e82cc9a791" />
+
+PATRA_Phase1_PCB_Front.png
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/02ec54e2-8258-4684-b070-e223714a4140" />
+
+PATRA_Phase1_PCB_Back.png
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/0969379b-23d7-4fde-a926-d8ff1ffb96dc" />
+
+PATRA_Phase1_PCBA.png
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/7f6f28a1-0e75-4b45-aaca-d489032ab19e" />
+
+Then, I pushed all the images to GitHub.
+
+<img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/b09dfa3a-114d-43c5-8755-7d97e69f6092" />
+
+Finally, I also committed the Phase 1 README with images.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1099fef3-5820-4c3b-8945-34718faf629d" />
+
+Here's the timelapse of today's session: [PATRA-LPS-96-D116](https://lapse.hackclub.com/timelapse/IDIXN17Ku4p4)
+
+**Total time spent: 4h 15m**
+<<<<<<< HEAD
+=======
+
+---
+
+# Day 116 — 20.11.2026: Uploading CAD to Repository
+
+Today's day went as a very pivotal moment for the history of this project, because I submitted the project to [Forge](forge.hackclub.com) on this day.
+
+But before that, I wrote a short README for the full PATRA project, not only for a specific phase.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f5b3a9f1-ed51-437d-a90d-00fb25ab75e2" />
+
+I then moved this journal under the Phase_1 folder and renamed it to PATRA_Phase_1_Design_Journal.md, and copied this journal's entire text to a new file named JOURNAL.md, which I pasted directly under the repository. I did this because later on, this won't be the only journal. There will be build journals and design journals for different phases, too. So, proper structuring is important. A file named JOURNAL.md will exist because it is where Forge shows the journal on [the site](https://forge.hackclub.com/projects/58). Later on, when Forge is over, I will remove that JOURNAL.md entirely and switch my logs to Web Devlog. This also ensures all my commit history is preserved as well.
+
+Ran the AI check.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ab57a7b9-808d-471b-a481-7b16dd60d7f6" />
+
+Finally, submitted the project to Forge.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dd21ca25-3507-42f6-a277-55f7d6d06c6e" />
+
+Here's the timelapse of today's session: [PATRA-LPS-97-D117](https://lapse.hackclub.com/timelapse/DjzZNlD7R2FL)
+
+**Total time spent: 0h 45m**
+>>>>>>> 3bcb2e3a6d3af227f894f4f9a1765e2cb22061f0
+
+---
+
+# Day 116 — 20.11.2026: Uploading CAD to Repository
+
+Today's day went as a very pivotal moment for the history of this project, because I submitted the project to [Forge](forge.hackclub.com) on this day.
+
+But before that, I wrote a short README for the full PATRA project, not only for a specific phase.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f5b3a9f1-ed51-437d-a90d-00fb25ab75e2" />
+
+I then moved this journal under the Phase_1 folder and renamed it to PATRA_Phase_1_Design_Journal.md, and copied this journal's entire text to a new file named JOURNAL.md, which I pasted directly under the repository. I did this because later on, this won't be the only journal. There will be build journals and design journals for different phases, too. So, proper structuring is important. A file named JOURNAL.md will exist because it is where Forge shows the journal on [the site](https://forge.hackclub.com/projects/58). Later on, when Forge is over, I will remove that JOURNAL.md entirely and switch my logs to Web Devlog. This also ensures all my commit history is preserved as well.
+
+Ran the AI check.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ab57a7b9-808d-471b-a481-7b16dd60d7f6" />
+
+Finally, submitted the project to Forge.
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/dd21ca25-3507-42f6-a277-55f7d6d06c6e" />
+
+Here's the timelapse of today's session: [PATRA-LPS-97-D117](https://lapse.hackclub.com/timelapse/DjzZNlD7R2FL)
+
+**Total time spent: 0h 45m**
 
 ---
