@@ -5,7 +5,7 @@ Author: Sunrit Hazra
 Description: An open-source nine-degrees-of-freedom hybrid robot architecture of a kinematically linear three-degrees-of-freedom triple-axis manipulator system and a six-degrees-of-freedom serial robotic arm.
 Created on: 02-05-2026
 Started on: 10-04-2026
-Updated on: 21-11-2026
+Updated on: 26-11-2026
 Phase 1 Kinematic Base Module Progress: "100%"
 Phase 1 TriTeron Robot Module Progress: "100%"
 Phase 1 Motion Control Module Progress: "100%"
@@ -72,14 +72,6 @@ I learned the foundational concepts needed to make this project. Here's what I c
 * How can I make my robotic arm modular
 * A little about the LC40 family
 
-**Summary of today's session (Day 1):**
-
-1. Revisited the origins of the TriTeron concept and reviewed key reference projects and videos.
-2. Selected Forge as the platform for developing PATRA after earlier plans did not materialize.
-3. Conducted focused research on kinematics, robotic arms, belts, ball screws, and aluminium extrusions.
-4. Studied industrial systems such as the Zaber LC40 family to understand professional design approaches.
-5. Built a stronger technical foundation by learning about drive systems, torque requirements, modularity, and parallel robotics.
-
 **Total time spent: 6h 00m**
 
 ---
@@ -101,14 +93,6 @@ After writing the draft and building the BOM manually, I pitched in the #forgery
 The most frustrating part of this phase was the overwhelming number of choices. Linear guides alone had dozens of variants across multiple vendors, with no clear basis for choosing one over another without more context. That changed gradually as I got deeper into datasheets. I read a lot of datasheets, as I knew almost nothing about linear guides and how they worked.
 
 I honestly did not understand most of the things I am working on. I spent a lot of time studying new things about linear robotics
-
-**Summary of today's session (Day 2):**
-
-1. Developed the first formal pitch for PATRA based on preliminary planning and research.
-2. Created multiple design sketches and evaluated different architectural possibilities.
-3. Assembled an initial bill of materials with separate budgets for the TriTeron and robotic arm.
-4. Performed extensive component sourcing and feasibility analysis.
-5. Submitted the project for external review to gather technical feedback and validation.
 
 **Total time spent: 5h 00m**
 
@@ -152,14 +136,6 @@ After more hours of iteration:
 
 For a rough picture of how I did the CAD throughout today, [here](https://drive.google.com/file/d/17hyzQvfrPkSDDIoYjY-ttWvvfYUGDrAG/view?usp=sharing) is a timelapse-like video, exploiting the Fusion Timeline. Fusion being parametric saved a lot of time here.
 
-**Summary of today's session (Day 3):**
-
-1. Began CAD development by studying Rowan's carriage-based TriTeron architecture.
-2. Imported reference models and established the Fusion 360 project environment.
-3. Planned a hybrid architecture combining carriage mechanisms with ball-screw actuation.
-4. Started modelling the primary structural framework using aluminium extrusions.
-5. Used existing designs as educational references while preparing for future modifications.
-
 **Total time spent: 8h 10m**
 
 ---
@@ -197,14 +173,6 @@ This is how the thing looks from the left side:
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/3c7e5950-0ebe-4217-807d-f8d1e3b2d580" />
 
 About the pitch, no pitch response yet. So I waited on that before making any major structural decisions on the build.
-
-**Summary of today's session (Day 4):**
-
-1. Experimented with Fusion 360 joints and assembly constraints for motion simulation.
-2. Encountered challenges in achieving correct kinematic relationships between components.
-3. Shifted focus toward refining the structural design rather than motion studies.
-4. Rescaled the mechanism to better fit the intended robotic arm dimensions.
-5. Improved frame symmetry by rebuilding and mirroring major structural elements.
 
 **Total time spent: 5h 50m**
 
@@ -255,14 +223,6 @@ I also did targeted research on the Indian market for the three main structural 
 <img width="1365" height="575" alt="image" src="https://github.com/user-attachments/assets/2846e072-1fa1-45e1-99d3-64ca3d49b956" />
 
 The BOM from today was used directly as the basis for the re-pitch on 30th April.
-
-**Summary of today's session (Day 5):**
-
-1. Reviewed project feedback and reassessed several major design decisions.
-2. Calculated motor torque requirements for the intended payload and motion system.
-3. Evaluated different motor placement strategies and selected remote mounting.
-4. Compared sourcing options from domestic and international suppliers.
-5. Optimized the design around realistic budget and procurement constraints.
    
 **Total time spent: 4h 55m**
 
@@ -352,14 +312,6 @@ Estimated Total
 >	[!Important note]
 >	The sources listed below are indicative, not finalized, as they establish a price baseline using mean market values. The actual sourcing will be determined after approval. Many are very cheap, but the estimated cost is set high.
 
-**Summary of today's session (Day 6):**
-
-1. Investigated CNC manufacturing options for custom robot components.
-2. Requested and compared quotations from multiple fabrication services.
-3. Analyzed manufacturing costs against overall project budget limitations.
-4. Evaluated the practicality of CNC machining versus additive manufacturing.
-5. Decided to prioritize 3D printing for most custom structural components.
-
 **Total time spent: 3h 55m**
 
 ---
@@ -406,14 +358,6 @@ Removing ball screws from the BOM brought the running total down to approximatel
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/f2467ea2-3b5d-42df-a6ee-9e2d4bbf6254" />
 
 One sourcing gap: HTD 5M belts don't appear to be stocked by any Indian e-commerce site I found. IndiaMart has listings, but they require direct vendor contact. Will need to follow up on that.
-
-**Summary of today's session (Day 7):**
-
-1. Revisited the original TriTeron mechanism to improve understanding of its operation.
-2. Discovered how multiple belt loops independently drive different axes.
-3. Corrected earlier misconceptions regarding carriage-based motion systems.
-4. Simplified the architecture by moving away from unnecessarily complex mechanisms.
-5. Updated the bill of materials based on the revised design approach.
 
 **Total time spent: 4h 55m**
 
@@ -465,14 +409,6 @@ Okay, now this is the BOM for the Foundation Structure, for now:
 
 I will continue with this for the next day and start modelling again.
 
-**Summary of today's session (Day 8):**
-
-1. Received approval to continue development and refine the project further.
-2. Finalized important design parameters such as rail dimensions and workspace.
-3. Permanently removed ball screws from the system architecture.
-4. Investigated CAD model availability for selected commercial components.
-5. Began rebuilding the project around verified and practical hardware selections.
-
 **Total time spent: 3h 55m**
 
 ---
@@ -518,14 +454,6 @@ Some important points to be noted:
 * The Good motor choice is based on [NEMA23 PR57HS76](https://robu.in/product/nema23-pr57hs76-2804-05-18-9kg-cm-stepper-motor-d-type-shaft).
 * The Great motor choice is based on [NEMA23 PR57HS112](https://robu.in/product/pro-range-nema23-pr57hs112-3004-03-30-61-kg-cm-hybrid-bipolar-stepper-motor-round-type-shaft).
 
-**Summary of today's session (Day 9):**
-
-1. Restarted CAD development using finalized hardware specifications.
-2. Imported accurate models of rails, extrusions, bearings, and structural parts.
-3. Verified compatibility between sourced components and CAD references.
-4. Constructed a more realistic digital representation of the robot platform.
-5. Established a solid foundation for future mechanical integration work.
-
 **Total time spent: 3h 30m**
 
 ---
@@ -555,14 +483,6 @@ I then dived into a little foreseeing the future. I know that CNC machining is r
 <img width="1366" height="733" alt="image" src="https://github.com/user-attachments/assets/dbc4f73a-2304-47a2-9749-9d6cf7e5e4e5" />
 
 I then made the hard decision to choose only 3D printing for all the parts of my project. I would either print in my future printer, or I would choose MJF or SLA printing from local sources if possible.
-
-**Summary of today's session (Day 10):**
-
-1. Investigated dimensional discrepancies among linear rail suppliers.
-2. Adopted verified HIWIN references to improve modelling accuracy.
-3. Continued evaluating fabrication methods for custom robot parts.
-4. Compared manufacturing services and their pricing structures.
-5. Improved confidence in future fabrication planning and component selection.
 
 **Total time spent: 3h 50m**
 
@@ -8251,7 +8171,7 @@ Here's the timelapse of today's session: [PATRA-LPS-96-D116](https://lapse.hackc
 
 ---
 
-# Day 117 — 21.11.2026: Uploading CAD to Repository
+# Day 117 — 21.11.2026: Submitting Project to Forge
 
 Today's day went as a very pivotal moment for the history of this project, because I submitted the project to [Forge](forge.hackclub.com) on this day.
 
@@ -8271,6 +8191,6 @@ Finally, submitted the project to Forge.
 
 Here's the timelapse of today's session: [PATRA-LPS-97-D117](https://lapse.hackclub.com/timelapse/DjzZNlD7R2FL)
 
-**Total time spent: 0h 45m**
+**Total time spent: 1h 00m**
 
 ---
